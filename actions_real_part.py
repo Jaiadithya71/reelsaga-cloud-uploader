@@ -17,12 +17,12 @@ from actions_state_probe import probe
 
 EP=os.environ.get('REELSAGA_EP','4')
 PART=os.environ.get('REELSAGA_PART','1')
-if (EP in ('6','7') and PART not in ('1','2','3')) or (EP=='4' and PART not in ('1','2','3')) or (EP=='5' and PART not in ('1','2','3','4')) or EP not in ('4','5','6','7'):raise RuntimeError('Unexpected part')
+if (EP in ('6','7','8') and PART not in ('1','2','3')) or (EP=='4' and PART not in ('1','2','3')) or (EP=='5' and PART not in ('1','2','3','4')) or EP not in ('4','5','6','7','8'):raise RuntimeError('Unexpected part')
 MANIFEST=f'hybrid-test/ep{EP}-part{PART}.json'
 
 def validate(item,path):
     import re
-    match=re.fullmatch(r'daddy-ep([4567])-part([1-4])-v1',item.get('id',''))
+    match=re.fullmatch(r'daddy-ep([45678])-part([1-4])-v1',item.get('id',''))
     if not match:raise RuntimeError('Unexpected bounded item')
     ep,part=match.groups();total=4 if ep=='5' else 3
     if int(part)>total or item.get('title')!=f"Daddy's Regret Comes Too Late - Episode {ep} Part {part}/{total} | ReelShort":
