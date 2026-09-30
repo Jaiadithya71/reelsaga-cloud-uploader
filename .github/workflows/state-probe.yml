@@ -2,7 +2,7 @@ name: ReelSaga one-time state and stop probe
 on:
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: reelsaga-canary
   cancel-in-progress: false
@@ -22,6 +22,5 @@ jobs:
       - name: Check encrypted durable state and stopped controls, no video upload
         env:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
-          STATE_READ_DIAGNOSTIC: 'true'
           GH_TOKEN: ${{ github.token }}
         run: python actions_state_probe.py

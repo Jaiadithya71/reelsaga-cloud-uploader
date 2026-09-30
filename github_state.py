@@ -35,10 +35,17 @@ class GitHubState:
         r=self.request('GET',self.url(key),params={'ref':self.branch})
         if r.status==404:return None,None
         if r.status!=200:raise StateError('State read failed HTTP '+str(r.status))
-        if not isinstance(r.data.get('content'),str):raise StateError('State content not JSON-base64')
+        version=r.data.get('sha')
+        if not isinstance(version,str) or not re.fullmatch(r'[0-9a-f]{40}',version):
+            raise StateError('State blob SHA invalid')
+        blob=self.request('GET',self.base+'/git/blobs/'+version)
+        if blob.status!=200 or blob.data.get('encoding')!='base64':
+            raise StateError('State immutable blob unavailable')
         try:
-            raw=base64.b64decode(r.data['content'])
+            raw=base64.b64decode(blob.data['content'])
         except Exception:raise StateError('State base64 decode failed') from None
+        actual=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\x00'+raw).hexdigest()
+        if actual!=version:raise StateError('State blob integrity failed')
         if len(raw)<28:raise StateError('State ciphertext shorter than nonce plus tag')
         try:
             decrypted=self.aes.decrypt(raw[:12],raw[12:],key.encode())
