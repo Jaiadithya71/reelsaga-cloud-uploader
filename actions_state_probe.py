@@ -39,7 +39,15 @@ def main():
         api=Transport(lambda:token,{'api.github.com'})
         backend=GitHubState(api,record['refresh_token'])
         backend.initialize()
-        print(json.dumps(probe(backend,os.environ['GITHUB_RUN_ID']),sort_keys=True))
+        if os.environ.get('STATE_DIAGNOSTIC_ONLY')=='true':
+            key='diagnostic-'+os.environ['GITHUB_RUN_ID']
+            if not backend.compare_and_swap(key,None,{'diagnostic':True}):raise RuntimeError('Diagnostic already claimed')
+            print('State stage: diagnostic create acknowledged')
+            value,version=backend.get(key)
+            if value!={'diagnostic':True}:raise RuntimeError('Diagnostic mismatch')
+            print('Diagnostic encrypted readback passed. No controls or videos changed.')
+        else:
+            print(json.dumps(probe(backend,os.environ['GITHUB_RUN_ID']),sort_keys=True))
     except StateError as exc:
         print('Safe state diagnostic: '+str(exc))
         print('No video uploaded; stopped without retry.')
