@@ -1,5 +1,5 @@
 """One-time live encrypted checkpoint and stop-control test. No video operations."""
-import json,os
+import json,os,base64,hashlib
 from provision_actions import validated_record
 from transport import Transport
 from github_state import GitHubState,StateError
@@ -39,7 +39,16 @@ def main():
         api=Transport(lambda:token,{'api.github.com'})
         backend=GitHubState(api,record['refresh_token'])
         if os.environ.get('STATE_READ_DIAGNOSTIC')=='true':
-            value,version=backend.get('diagnostic-36699697319')
+            key='diagnostic-36699697319'
+            response=backend.request('GET',backend.url(key),params={'ref':backend.branch})
+            raw=base64.b64decode(response.data.get('content',''))
+            blob_sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\x00'+raw).hexdigest()
+            print('Ciphertext Git blob hash matches reported SHA: '+str(blob_sha==response.data.get('sha')))
+            print('Ciphertext byte count: '+str(len(raw)))
+            nonce=os.urandom(12)
+            encrypted=backend.aes.encrypt(nonce,b'local-test',key.encode())
+            print('In-process AES roundtrip passed: '+str(backend.aes.decrypt(nonce,encrypted,key.encode())==b'local-test'))
+            value,version=backend.get(key)
             if value!={'diagnostic':True}:raise RuntimeError('Diagnostic missing or mismatch')
             print('Existing encrypted record readback passed. No writes or controls changed.')
             return

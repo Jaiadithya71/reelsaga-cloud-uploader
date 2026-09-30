@@ -25,3 +25,14 @@ class GitStateTests(unittest.TestCase):
     def test_foreign_keys(self):
         b=GitHubState(Mock(),'mock')
         with self.assertRaises(StateError):b.get('../secret')
+
+    def test_json_content_realistic_newlines(self):
+        calls=[]
+        def request(method,url,**kwargs):
+            calls.append((method,kwargs))
+            if method=='PUT':return Response(201,{'content':{'sha':'x'}},{})
+            encoded=calls[0][1]['json']['content']
+            return Response(200,{'content':encoded[:30]+'\n'+encoded[30:]+'\n','sha':'x','encoding':'base64'},{})
+        b=GitHubState(request,'mock')
+        b.compare_and_swap('example',None,{'diagnostic':True})
+        self.assertEqual(b.get('example')[0],{'diagnostic':True})
