@@ -15,17 +15,21 @@ from controls import Controls,ControlError
 from adapters import YouTube,checked
 from actions_state_probe import probe
 
+EP=os.environ.get('REELSAGA_EP','4')
 PART=os.environ.get('REELSAGA_PART','1')
-if PART not in ('1','2','3'):raise RuntimeError('Unexpected part')
-MANIFEST=f'hybrid-test/ep4-part{PART}.json'
+if (EP=='4' and PART not in ('1','2','3')) or (EP=='5' and PART not in ('1','2','3','4')) or EP not in ('4','5'):raise RuntimeError('Unexpected part')
+MANIFEST=f'hybrid-test/ep{EP}-part{PART}.json'
 
 def validate(item,path):
-    part=item.get('id','').removeprefix('daddy-ep4-part').removesuffix('-v1')
-    if part not in ('1','2','3') or item.get('title')!=f"Daddy's Regret Comes Too Late - Episode 4 Part {part}/3 | ReelShort":
+    import re
+    match=re.fullmatch(r'daddy-ep([45])-part([1-4])-v1',item.get('id',''))
+    if not match:raise RuntimeError('Unexpected bounded item')
+    ep,part=match.groups();total=3 if ep=='4' else 4
+    if int(part)>total or item.get('title')!=f"Daddy's Regret Comes Too Late - Episode {ep} Part {part}/{total} | ReelShort":
         raise RuntimeError('Unexpected bounded item')
     if Path(path).stat().st_size!=item['bytes'] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item['sha256']:
         raise RuntimeError('Media integrity mismatch')
-    if not item['description'].endswith(f'Full episode part {part} of 3.\nAffiliate links: I may earn a commission if you use them.'):
+    if not item['description'].endswith(f'Full episode part {part} of {total}.\nAffiliate links: I may earn a commission if you use them.'):
         raise RuntimeError('Disclosure mismatch')
     for link in ('https://r.reelsgo.tv/QQ4ZMZJHdEOF','https://r.reelsgo.tv/0YyJcJnww2nY'):
         if link not in item['description']:raise RuntimeError('Affiliate mismatch')
@@ -59,7 +63,7 @@ def run(backend,api,item,path):
 def main():
     controls=None
     try:
-        item=json.loads(Path(MANIFEST).read_text());path=f'hybrid-test/ep4-part{PART}.mp4';validate(item,path)
+        item=json.loads(Path(MANIFEST).read_text());path=f'hybrid-test/ep{EP}-part{PART}.mp4';validate(item,path)
         record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
         backend=GitHubState(Transport(lambda:gh,{'api.github.com'}),record['refresh_token']);backend.initialize()
         controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])
