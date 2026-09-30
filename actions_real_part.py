@@ -15,14 +15,17 @@ from controls import Controls,ControlError
 from adapters import YouTube,checked
 from actions_state_probe import probe
 
-MANIFEST='hybrid-test/ep4-part1.json'
+PART=os.environ.get('REELSAGA_PART','1')
+if PART not in ('1','2','3'):raise RuntimeError('Unexpected part')
+MANIFEST=f'hybrid-test/ep4-part{PART}.json'
 
 def validate(item,path):
-    if item.get('id')!='daddy-ep4-part1-v1' or item.get('title')!="Daddy's Regret Comes Too Late - Episode 4 Part 1/3 | ReelShort":
+    part=item.get('id','').removeprefix('daddy-ep4-part').removesuffix('-v1')
+    if part not in ('1','2','3') or item.get('title')!=f"Daddy's Regret Comes Too Late - Episode 4 Part {part}/3 | ReelShort":
         raise RuntimeError('Unexpected bounded item')
     if Path(path).stat().st_size!=item['bytes'] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item['sha256']:
         raise RuntimeError('Media integrity mismatch')
-    if not item['description'].endswith('Full episode part 1 of 3.\nAffiliate links: I may earn a commission if you use them.'):
+    if not item['description'].endswith(f'Full episode part {part} of 3.\nAffiliate links: I may earn a commission if you use them.'):
         raise RuntimeError('Disclosure mismatch')
     for link in ('https://r.reelsgo.tv/QQ4ZMZJHdEOF','https://r.reelsgo.tv/0YyJcJnww2nY'):
         if link not in item['description']:raise RuntimeError('Affiliate mismatch')
@@ -56,7 +59,7 @@ def run(backend,api,item,path):
 def main():
     controls=None
     try:
-        item=json.loads(Path(MANIFEST).read_text());path='hybrid-test/ep4-part1.mp4';validate(item,path)
+        item=json.loads(Path(MANIFEST).read_text());path=f'hybrid-test/ep4-part{PART}.mp4';validate(item,path)
         record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
         backend=GitHubState(Transport(lambda:gh,{'api.github.com'}),record['refresh_token']);backend.initialize()
         controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])

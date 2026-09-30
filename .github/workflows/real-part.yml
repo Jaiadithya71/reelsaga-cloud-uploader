@@ -1,6 +1,13 @@
 name: ReelSaga one real private part
 on:
   workflow_dispatch:
+    inputs:
+      part:
+        description: Daddy Episode 4 part
+        required: true
+        default: "1"
+        type: choice
+        options: ["1", "2", "3"]
 permissions:
   contents: write
 concurrency:
@@ -22,5 +29,6 @@ jobs:
       - name: One private episode part then verified stop
         env:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+          REELSAGA_PART: ${{ inputs.part }}
           GH_TOKEN: ${{ github.token }}
         run: python actions_real_part.py
