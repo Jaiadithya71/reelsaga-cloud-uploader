@@ -7,7 +7,7 @@ on:
         required: true
         default: "short12"
         type: choice
-        options: ["short12", "branded34", "combined12"]
+        options: ["short12", "branded34", "combined12", "covered34"]
 permissions:
   contents: write
 concurrency:
