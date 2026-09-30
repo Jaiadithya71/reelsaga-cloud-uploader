@@ -11,7 +11,7 @@ This is an unconnected, local prototype, not a working uploader or deployment.
 - Store per-platform job state and block duplicate starts or changed metadata.
 - Verify downloaded bytes against SHA256.
 
-Ten offline tests pass. No network writes, credentials, paid services, Drive files or account conversions have been created.
+Ten offline tests pass. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
 
 ## Proposed server-side design
 
@@ -25,8 +25,8 @@ Ten offline tests pass. No network writes, credentials, paid services, Drive fil
 
 ## Owner decisions and access still needed
 
-- Private repository access and destination. Existing AI_Video_Youtube- was not accessible through the current GitHub connection.
-- Chosen Google Drive account and folder. Only SASTRA Drive is connected; personal Drives are not.
+- Repository destination is resolved: this private repository. The owner approved its repo-scoped SSH write key; the private key is stored securely and is not committed.
+- Chosen Google Drive account and folder, then scoped OAuth authorization for the uploader. The uploader will authenticate separately from any existing assistant integrations.
 - Hosting cost approval. Render cron minimum is $1 per service monthly plus runtime. Durable storage and media relay costs remain to quote. No spend is approved.
 - Google Cloud OAuth authorization for the exact YouTube channel and scoped Drive access; project audit for Public API uploads.
 - Owner changes Instagram to Creator/Business and creates/authorizes the Meta app with instagram_business_basic and instagram_business_content_publish. No account changes have been made.

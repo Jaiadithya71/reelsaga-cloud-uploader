@@ -1,7 +1,7 @@
 import unittest
 import importlib.util
 from pathlib import Path
-spec=importlib.util.spec_from_file_location('reelqueue',Path(__file__).parents[1]/'queue.py')
+spec=importlib.util.spec_from_file_location('reelqueue',Path(__file__).parents[1]/'reelqueue.py')
 q=importlib.util.module_from_spec(spec);spec.loader.exec_module(q)
 
 class QueueTests(unittest.TestCase):
