@@ -34,7 +34,8 @@ class GitHubState:
     def get(self,key):
         r=self.request('GET',self.url(key),params={'ref':self.branch})
         if r.status==404:return None,None
-        if r.status!=200:raise StateError('State read failed')
+        if r.status!=200:raise StateError('State read failed HTTP '+str(r.status))
+        if not isinstance(r.data.get('content'),str):raise StateError('State content not JSON-base64')
         try:
             raw=base64.b64decode(r.data['content'])
             record=json.loads(self.aes.decrypt(raw[:12],raw[12:],key.encode()))

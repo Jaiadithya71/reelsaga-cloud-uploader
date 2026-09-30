@@ -2,7 +2,7 @@
 import json,os
 from provision_actions import validated_record
 from transport import Transport
-from github_state import GitHubState
+from github_state import GitHubState,StateError
 from controls import Controls,ControlError
 
 def probe(backend,run_id):
@@ -40,6 +40,10 @@ def main():
         backend=GitHubState(api,record['refresh_token'])
         backend.initialize()
         print(json.dumps(probe(backend,os.environ['GITHUB_RUN_ID']),sort_keys=True))
+    except StateError as exc:
+        print('Safe state diagnostic: '+str(exc))
+        print('No video uploaded; stopped without retry.')
+        raise SystemExit(1) from None
     except Exception:
         print('Live state/stop probe failed. No video uploaded. No automatic retry; secrets not shown.')
         raise SystemExit(1) from None
