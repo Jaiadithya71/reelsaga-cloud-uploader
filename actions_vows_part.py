@@ -17,14 +17,15 @@ from actions_state_probe import probe
 
 EP=os.environ.get('REELSAGA_EP','1')
 PART=os.environ.get('REELSAGA_PART','1')
-if EP!='1' or PART not in ('1','2','3'):raise RuntimeError('Unprepared Vows part')
+COUNTS={'1':3,'2':4,'3':3,'4':5,'5':4,'6':2,'7':3,'8':4,'9':3}
+if EP not in COUNTS or not PART.isdigit() or not 1<=int(PART)<=COUNTS[EP]:raise RuntimeError('Unprepared Vows part')
 MANIFEST=f'vows-prepared/ep{EP}-part{PART}.json'
 
 def validate(item,path):
-    title=f'Gone Before the Vows - Episode {EP} Part {PART}/3 | ReelShort'
+    title=f'Gone Before the Vows - Episode {EP} Part {PART}/{COUNTS[EP]} | ReelShort'
     if item.get('id')!=f'vows-ep{EP}-part{PART}-v1' or item.get('title')!=title:raise RuntimeError('Unexpected Vows item')
     if Path(path).stat().st_size!=item['bytes'] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item['sha256']:raise RuntimeError('Media integrity mismatch')
-    if not item['description'].endswith(f'Full episode part {PART} of 3.\nAffiliate links: I may earn a commission if you use them.'):raise RuntimeError('Disclosure mismatch')
+    if not item['description'].endswith(f'Full episode part {PART} of {COUNTS[EP]}.\nAffiliate links: I may earn a commission if you use them.'):raise RuntimeError('Disclosure mismatch')
     for link in ('https://r.reelsgo.tv/rEvVbK21qnS0','https://r.reelsgo.tv/9bOYe06yBVZr'):
         if link not in item['description']:raise RuntimeError('Affiliate mismatch')
 
