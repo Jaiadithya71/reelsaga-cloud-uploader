@@ -7,7 +7,7 @@ on:
         required: true
         default: "4"
         type: choice
-        options: ["4", "5"]
+        options: ["4", "5", "6"]
       part:
         description: Daddy episode part
         required: true

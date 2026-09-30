@@ -12,6 +12,9 @@ class RealPartTests(unittest.TestCase):
         self.item=json.loads(Path('hybrid-test/ep4-part1.json').read_text())
         self.path='hybrid-test/ep4-part1.mp4'
     def test_manifest(self):validate(self.item,self.path)
+    def test_ep6_bounded_manifests(self):
+        for p in range(1,4):
+            validate(json.loads(Path(f"hybrid-test/ep6-part{p}.json").read_text()),f"hybrid-test/ep6-part{p}.mp4")
     def test_hash_mismatch(self):
         item=dict(self.item,sha256='0'*64)
         with self.assertRaises(RuntimeError):validate(item,self.path)
