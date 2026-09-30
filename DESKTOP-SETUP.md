@@ -43,3 +43,10 @@ Sources:
 https://developers.google.com/identity/protocols/oauth2/native-app
 https://developers.google.com/youtube/v3/docs/channels/list
 https://keyring.readthedocs.io/en/latest/
+
+## Proposed separate Actions transfer
+After scope/repo transfer approval, install/sign into GitHub CLI on the PC and
+run `python provision_actions.py`. It reads OS keyring and pipes credentials to
+`gh secret set` on the exact private uploader repo. GitHub CLI encrypts the secret.
+No token is printed/exported. This helper is not yet live-tested or approved for
+execution. It does not activate the worker or solve backend/Drive/relay gaps.
