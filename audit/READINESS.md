@@ -55,3 +55,9 @@ project or credentials have been created in this preparation slice. No public we
 4. Review the completed application and evidence, then approve submission.
 
 Do not promise a fixed 15-minute total or audit turnaround.
+
+## UI development preview
+`web/index.html` is a local reviewable interface: metadata, audience, Private
+visibility, quality/content acknowledgements and truthful disabled control states.
+Only its local field review works. No connect/upload/pause/revoke/delete button
+performs a real account action. It must not be submitted as a live product demo.

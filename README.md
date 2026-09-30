@@ -59,3 +59,8 @@ An HTTPS transport now rejects foreign origins, redirects and authorization over
 Google refresh/revoke lifecycle and form-only authorization transport are implemented with injected secure storage, grant checks, cached expiry, invalid-grant stop and disabled-on-revocation-failure behavior. These are not wired to production tokens or a durable control store.
 
 A candidate Firestore REST CAS backend now uses create-only/exact-update-time preconditions and fails closed on read/update errors. This is not a selected or created database; IAM transport and billing-off/free-tier validation remain required.
+
+`web/` now contains a responsive local development interface for metadata,
+audience and content/quality acknowledgement review. Real connect/upload and
+account/data controls are disabled and clearly labelled as unconnected.
+No public website is deployed and this preview is not audit evidence.
