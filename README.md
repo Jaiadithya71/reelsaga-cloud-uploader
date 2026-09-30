@@ -11,7 +11,7 @@ This is an unconnected, local prototype, not a working uploader or deployment.
 - Store per-platform job state and block duplicate starts or changed metadata.
 - Verify downloaded bytes against SHA256.
 
-Fifty-five offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
+Sixty-two offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
 
 The durable-state CAS contract and six fault/resumption tests are now included, but no remote backend is connected.
 
@@ -57,3 +57,5 @@ Audit preparation drafts are in `audit/`. Injected operator-control tests now co
 An HTTPS transport now rejects foreign origins, redirects and authorization overrides, uses an injected token provider, and redacts uncertain network errors. It remains unconnected; no real credential flow or API calls have been run.
 
 Google refresh/revoke lifecycle and form-only authorization transport are implemented with injected secure storage, grant checks, cached expiry, invalid-grant stop and disabled-on-revocation-failure behavior. These are not wired to production tokens or a durable control store.
+
+A candidate Firestore REST CAS backend now uses create-only/exact-update-time preconditions and fails closed on read/update errors. This is not a selected or created database; IAM transport and billing-off/free-tier validation remain required.

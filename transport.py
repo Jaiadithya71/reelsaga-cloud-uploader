@@ -27,7 +27,7 @@ class Transport:
             raise RemoteError('Unapproved API origin')
         if json is not None and body is not None:
             raise ValueError('Choose JSON or raw body')
-        if method not in ('GET','POST','PUT'):
+        if method not in ('GET','POST','PUT','PATCH'):
             raise ValueError('Unapproved HTTP method')
         if params:
             url += ('&' if parts.query else '?') + urlencode(params)
