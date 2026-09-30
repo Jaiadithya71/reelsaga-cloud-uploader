@@ -16,6 +16,7 @@ class Worker:
         validate(item,catalog,'UC71kSXnAt6Ipy7KqVVo3mdA','reelsaga3000')
         # Source identity verified every run. A stored username alone is not enough.
         self.check_identity(platform,item)
+        self.ledger.verify_item(item,platform)
         state=self.ledger.resume(item['id'],platform)
         if state=='do_not_create': return state
         if state=='reconcile_manually': raise NeedsReview('Prior write uncertain; no new creation')

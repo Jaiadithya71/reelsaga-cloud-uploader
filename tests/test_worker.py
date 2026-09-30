@@ -3,7 +3,7 @@ import hashlib
 import unittest
 from unittest.mock import Mock
 from worker import Worker, NeedsReview
-from durable_state import DurableLedger
+from durable_state import DurableLedger, Conflict
 from test_durable_state import MemoryCAS
 import test_queue
 fixture=test_queue.QueueTests();fixture.setUp()
@@ -48,3 +48,18 @@ class WorkerTests(unittest.TestCase):
             with self.assertRaises(NeedsReview):w.run(ITEM,'instagram',CATALOG,d)
         self.assertEqual(w.ledger.resume(ITEM['id'],'instagram'),'unclaimed')
         w.drive.download.assert_not_called()
+
+    def test_changed_hash_blocks_saved_session_resume(self):
+        w=self.make();w.ledger.claim(ITEM,'youtube')
+        w.ledger.checkpoint(ITEM['id'],'youtube','uploading',session='saved')
+        item=dict(ITEM,sha256=hashlib.sha256(b'changed').hexdigest())
+        with tempfile.TemporaryDirectory() as d:
+            with self.assertRaises(Conflict):w.run(item,'youtube',CATALOG,d)
+        w.drive.download.assert_not_called();w.youtube.status.assert_not_called()
+    def test_changed_caption_blocks_saved_container_resume(self):
+        w=self.make();w.ledger.claim(ITEM,'instagram')
+        w.ledger.checkpoint(ITEM['id'],'instagram','processing',external_id='saved')
+        item=dict(ITEM,caption=ITEM['caption']+' additional words')
+        with tempfile.TemporaryDirectory() as d:
+            with self.assertRaises(Conflict):w.run(item,'instagram',CATALOG,d)
+        w.instagram.status.assert_not_called();w.instagram.create.assert_not_called()

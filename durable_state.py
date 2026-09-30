@@ -19,9 +19,18 @@ class DurableLedger:
             raise ValueError('Unknown platform')
         return hashlib.sha256((platform + ':' + item_id).encode()).hexdigest()
 
+    @staticmethod
+    def metadata_hash(item):
+        return hashlib.sha256(json.dumps(item, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+
+    def verify_item(self, item, platform):
+        record, _ = self.backend.get(self.key(item['id'], platform))
+        if record and record['metadata_hash'] != self.metadata_hash(item):
+            raise Conflict('Metadata changed after claim')
+
     def claim(self, item, platform):
         key = self.key(item['id'], platform)
-        metadata_hash = hashlib.sha256(json.dumps(item, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+        metadata_hash = self.metadata_hash(item)
         existing, version = self.backend.get(key)
         if existing:
             if existing['metadata_hash'] != metadata_hash:
