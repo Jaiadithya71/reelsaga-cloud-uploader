@@ -16,7 +16,7 @@ from adapters import YouTube,checked
 from actions_state_probe import probe
 
 VARIANT=os.environ.get('REELSAGA_VARIANT','')
-if VARIANT not in ('short12','branded34','combined12','covered34'):raise RuntimeError('Unexpected diagnostic variant')
+if VARIANT not in ('short12','branded34','combined12','covered34','gameui34'):raise RuntimeError('Unexpected diagnostic variant')
 MANIFEST=f'heiress-probes/{VARIANT}.json'
 
 def validate(item,path):
