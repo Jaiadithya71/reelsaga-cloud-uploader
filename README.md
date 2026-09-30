@@ -11,7 +11,9 @@ This is an unconnected, local prototype, not a working uploader or deployment.
 - Store per-platform job state and block duplicate starts or changed metadata.
 - Verify downloaded bytes against SHA256.
 
-Twenty-one offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
+Twenty-seven offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
+
+The durable-state CAS contract and six fault/resumption tests are now included, but no remote backend is connected.
 
 ## Proposed server-side design
 
