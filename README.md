@@ -11,7 +11,7 @@ This is an unconnected, local prototype, not a working uploader or deployment.
 - Store per-platform job state and block duplicate starts or changed metadata.
 - Verify downloaded bytes against SHA256.
 
-Forty offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
+Forty-six offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
 
 The durable-state CAS contract and six fault/resumption tests are now included, but no remote backend is connected.
 
@@ -53,3 +53,5 @@ See [AUTHORIZATION.md](AUTHORIZATION.md) for exact pending taps, narrow Drive sc
 Run `python3 -m unittest discover -s tests -v`.
 
 Audit preparation drafts are in `audit/`. Injected operator-control tests now cover default-off, reviewed enablement and stop-before-revoke. No live disconnect/delete control or public policy is implemented yet.
+
+An HTTPS transport now rejects foreign origins, redirects and authorization overrides, uses an injected token provider, and redacts uncertain network errors. It remains unconnected; no real credential flow or API calls have been run.
