@@ -38,9 +38,15 @@ class GitHubState:
         if not isinstance(r.data.get('content'),str):raise StateError('State content not JSON-base64')
         try:
             raw=base64.b64decode(r.data['content'])
-            record=json.loads(self.aes.decrypt(raw[:12],raw[12:],key.encode()))
+        except Exception:raise StateError('State base64 decode failed') from None
+        if len(raw)<28:raise StateError('State ciphertext shorter than nonce plus tag')
+        try:
+            decrypted=self.aes.decrypt(raw[:12],raw[12:],key.encode())
+        except Exception:raise StateError('State AES-GCM authentication failed') from None
+        try:
+            record=json.loads(decrypted)
             version=r.data['sha']
-        except Exception:raise StateError('State authentication failed') from None
+        except Exception:raise StateError('State decrypted JSON or SHA missing') from None
         if not isinstance(record,dict):raise StateError('Invalid state record')
         return record,version
     def compare_and_swap(self,key,version,record):

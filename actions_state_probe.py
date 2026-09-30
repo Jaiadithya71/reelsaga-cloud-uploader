@@ -38,6 +38,11 @@ def main():
         token=os.environ.pop('GH_TOKEN','')
         api=Transport(lambda:token,{'api.github.com'})
         backend=GitHubState(api,record['refresh_token'])
+        if os.environ.get('STATE_READ_DIAGNOSTIC')=='true':
+            value,version=backend.get('diagnostic-36699697319')
+            if value!={'diagnostic':True}:raise RuntimeError('Diagnostic missing or mismatch')
+            print('Existing encrypted record readback passed. No writes or controls changed.')
+            return
         backend.initialize()
         if os.environ.get('STATE_DIAGNOSTIC_ONLY')=='true':
             key='diagnostic-'+os.environ['GITHUB_RUN_ID']
