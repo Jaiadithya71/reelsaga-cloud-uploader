@@ -35,3 +35,17 @@ class TransportTests(unittest.TestCase):
         t,o=self.make()
         with self.assertRaises(ValueError):t('POST','https://www.googleapis.com/x',json={},body=b'a')
         o.open.assert_not_called()
+
+class TokenFormTests(unittest.TestCase):
+    def test_exact_endpoint_and_no_bearer(self):
+        from transport import GoogleTokenForms
+        o=Mock();o.open.return_value=Result();f=GoogleTokenForms(o)
+        f('https://oauth2.googleapis.com/token',{'grant_type':'refresh_token','refresh_token':'mock'})
+        req=o.open.call_args.args[0]
+        self.assertIsNone(req.get_header('Authorization'))
+        self.assertIn(b'grant_type=refresh_token',req.data)
+    def test_endpoint_query_rejected(self):
+        from transport import GoogleTokenForms
+        o=Mock()
+        with self.assertRaises(RemoteError):GoogleTokenForms(o)('https://oauth2.googleapis.com/revoke?token=secret',{})
+        o.open.assert_not_called()

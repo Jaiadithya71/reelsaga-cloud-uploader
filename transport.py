@@ -57,3 +57,28 @@ class Transport:
                 data={}
             if not isinstance(data,dict):data={}
             return Response(result.code,data,dict(result.headers),raw)
+
+class GoogleTokenForms:
+    """Form-only auth endpoints, separate from bearer-authorized API transport."""
+    def __init__(self, opener=None, timeout=30):
+        self.opener=opener or build_opener(NoRedirect)
+        self.timeout=timeout
+
+    def __call__(self, url, fields):
+        if url not in ('https://oauth2.googleapis.com/token',
+                        'https://oauth2.googleapis.com/revoke'):
+            raise RemoteError('Unapproved authorization endpoint')
+        req=Request(url,data=urlencode(fields).encode(),method='POST',
+                    headers={'Content-Type':'application/x-www-form-urlencoded'})
+        try:
+            result=self.opener.open(req,timeout=self.timeout)
+        except HTTPError as exc:
+            result=exc
+        except Exception:
+            raise RemoteError('Authorization result uncertain; no automatic retry') from None
+        with result:
+            raw=result.read()
+            try:data=json.loads(raw) if raw else {}
+            except (ValueError,UnicodeDecodeError):data={}
+            if not isinstance(data,dict):data={}
+            return Response(result.code,data,dict(result.headers),raw)
