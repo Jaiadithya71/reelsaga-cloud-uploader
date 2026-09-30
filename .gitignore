@@ -5,3 +5,6 @@ __pycache__/
 *.key
 *.sqlite*
 *.mp4
+
+client_secret*.json
+*credentials*.json

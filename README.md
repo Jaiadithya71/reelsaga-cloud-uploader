@@ -11,7 +11,7 @@ This is an unconnected, local prototype, not a working uploader or deployment.
 - Store per-platform job state and block duplicate starts or changed metadata.
 - Verify downloaded bytes against SHA256.
 
-Seventy-three offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
+Seventy-seven offline tests pass. Added injectable Drive queue/download, resumable Private YouTube and Instagram container/publish adapters. The adapter transport is deliberately not connected and has no credentials. A serialized six-hour GitHub Actions preflight workflow is gated OFF by default; it only runs tests/read-only validation, never publishing. The private repository and owner-approved repo-scoped write deploy key are set up. No publishing credentials, paid services, Drive files or account conversions have been created.
 
 The durable-state CAS contract and six fault/resumption tests are now included, but no remote backend is connected.
 
@@ -68,3 +68,5 @@ No public website is deployed and this preview is not audit evidence.
 Explicit runtime activation gate requires real canary, secure storage, live remote CAS and stop-control tests plus owner scope/policy evidence. It is not wired to scheduled execution.
 
 PKCE S256, random state and one-use callback helpers are covered by offline tests. No client/callback type has been selected or registered; no authorization URL for a real app has been issued.
+
+Desktop bootstrap accepts only installed-client config, binds a random loopback port, uses PKCE/state, verifies the exact channel and stores credentials only in a supported native OS keyring. No live Google test or Actions credential transfer exists yet; see DESKTOP-SETUP.md.
