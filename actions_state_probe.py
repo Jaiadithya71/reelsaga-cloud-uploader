@@ -8,10 +8,14 @@ from controls import Controls,ControlError
 def probe(backend,run_id):
     key='probe-'+run_id
     if not backend.compare_and_swap(key,None,{'value':1}):raise RuntimeError('Probe already claimed; stop')
+    print('State stage: create acknowledged')
     record,old=backend.get(key)
+    print('State stage: encrypted readback received')
     if record!={'value':1}:raise RuntimeError('Probe readback mismatch')
     if not backend.compare_and_swap(key,old,{'value':2}):raise RuntimeError('Probe update failed')
+    print('State stage: update acknowledged')
     if backend.compare_and_swap(key,old,{'value':3}):raise RuntimeError('Stale write unexpectedly accepted')
+    print('State stage: stale write rejected')
     controls=Controls(backend,lambda:None)
     controls.set_access(False)
     try:controls.require_enabled()

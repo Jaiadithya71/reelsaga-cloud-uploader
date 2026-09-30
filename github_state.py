@@ -17,7 +17,7 @@ class GitHubState:
         from cryptography.hazmat.primitives.ciphers.aead import AESGCM
         if branch!='reelsaga-canary-state':raise StateError('Unexpected state branch')
         if not key_material:raise StateError('Missing state encryption key')
-        self.request=request
+        self.request=lambda method,url,**kw:request(method,url,headers={'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2026-03-10'},**kw)
         self.branch=branch
         self.key=hashlib.sha256(b'reelsaga-state-v1\x00'+key_material.encode()).digest()
         self.aes=AESGCM(self.key)
