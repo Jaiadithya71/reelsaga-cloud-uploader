@@ -1,7 +1,7 @@
 # Account authorization checklist
 
 No tokens should be pasted into chat, committed, or printed in workflow logs.
-No Google/Meta setup has been submitted. Owner deferred the authorization steps.
+No Google/Meta setup has been submitted in this preparation run. Existing Google project157426279644 (dramacps-youtube-pipeline) was verified live September30: YouTube API enabled, OAuth External/Testing, no clients/scopes/test users. Owner deferred the authorization steps.
 
 ## Google, account jaiadithya2025.71@gmail.com
 

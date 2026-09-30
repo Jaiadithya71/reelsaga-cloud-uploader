@@ -1,14 +1,16 @@
 # Review preparation, not a submitted application
 
 Owner approved preparation September 30, 2026. Final policy practices and audit
-submission still require review. No Google project or credentials have been
-created. No public website/policy or demo access has been published.
+submission still require review. Live Cloud Console verified the existing DramaCPS YouTube Pipeline project
+(157426279644, dramacps-youtube-pipeline), under the 71 account. YouTube Data API
+is enabled. OAuth is External/Testing, no clients/scopes/test users. No new
+project or credentials have been created in this preparation slice. No public website/policy or demo access has been published.
 
 ## Draft application answers
 - Applicant type: individual, if owner confirms. Organization legal name: self.
 - Legal name, legal/contact address, email: awaiting owner confirmation.
 - API client name: ReelSaga Upload Queue (proposed, not containing YouTube).
-- Cloud project number: not created/verified.
+- Cloud project number: 157426279644, live verified September 30 08:58 IST.
 - Primary access URL, privacy URL: pending public hosting after owner review.
 - Public accessibility: private own-account tool; public information pages only.
 - Use case: owner-directed upload of reviewed, source-quality vertical drama
@@ -47,7 +49,7 @@ created. No public website/policy or demo access has been published.
 
 ## One owner checklist, when implementation is ready
 1. Confirm legal name, contact email and the contact/address fields for the form.
-2. Sign into the 71 Google account; create/select a project and authorize the
+2. Sign into the 71 Google account; reuse project157426279644 and authorize the
    exact scopes presented. Confirm the ReelSaga channel, not just the email.
 3. Confirm app-site/domain choice and actual retention/deletion practices.
 4. Review the completed application and evidence, then approve submission.
