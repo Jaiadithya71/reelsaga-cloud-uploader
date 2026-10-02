@@ -16,7 +16,7 @@ DramaCPS remains the primary source: its ReelShort rate is 45% as last checked. 
 
 RS Boost's post-login notice says promotion accounts should be registered in Creator Safelist. It says publishing can start after submission without waiting for review, and unregistered accounts will not receive copyright-related assistance. No social accounts have been submitted yet.
 
-Material check: Bitter Burn is marked English, 61 episodes, first 6 free. Its episode picker exposes Download to Local and Embed. Actual downloaded bytes, resolution and audio remain unverified.
+Material check: Bitter Burn is marked English, 61 episodes, first 6 free. Its episode picker exposes Download to Local and Embed. EP1 was downloaded and full-decoded: 25,931,935 bytes, 1080x1920 H.264 at 24 fps, 66.948 seconds, stereo AAC at 44.1kHz. English speech confirmed from the first 18 seconds. Burned-in ReelShort logos appear at top-left and bottom-right; English subtitles are burned in. Do not remove the logos under the program terms. Watermark acceptance for publishing remains unresolved. SHA256: a25a6e022f25cf0c5e45ccccbf61d7b999273ba43c7d097c62683e5e46a854c9.
 
 Sources:
 - https://cps.reelshort.com/my-earnings (My Account dialog)
