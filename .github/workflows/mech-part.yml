@@ -7,7 +7,7 @@ on:
         required: true
         default: "1"
         type: choice
-        options: ["1", "2"]
+        options: ["1", "2", "3"]
       part:
         description: Mech God episode part
         required: true
