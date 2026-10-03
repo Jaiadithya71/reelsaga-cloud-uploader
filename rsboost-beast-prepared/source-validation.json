@@ -1,0 +1,74 @@
+[
+  {
+    "episode": 1,
+    "parts": 3,
+    "source_seconds": 133.188,
+    "coverage_seconds": 133.188,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 2,
+    "parts": 2,
+    "source_seconds": 108.719,
+    "coverage_seconds": 108.719,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 3,
+    "parts": 3,
+    "source_seconds": 114.564,
+    "coverage_seconds": 114.564,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 4,
+    "parts": 3,
+    "source_seconds": 114.799,
+    "coverage_seconds": 114.799,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 5,
+    "parts": 3,
+    "source_seconds": 130.351,
+    "coverage_seconds": 130.351,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 6,
+    "parts": 1,
+    "source_seconds": 47.322,
+    "coverage_seconds": 47.322,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 7,
+    "parts": 3,
+    "source_seconds": 124.356,
+    "coverage_seconds": 124.356,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 8,
+    "parts": 2,
+    "source_seconds": 93.679,
+    "coverage_seconds": 93.679,
+    "decode_checked": true,
+    "pixel_checked": true
+  },
+  {
+    "episode": 9,
+    "parts": 3,
+    "source_seconds": 128.964,
+    "coverage_seconds": 128.964,
+    "decode_checked": true,
+    "pixel_checked": true
+  }
+]

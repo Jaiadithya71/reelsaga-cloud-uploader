@@ -17,7 +17,7 @@ from actions_state_probe import probe
 
 EP=os.environ.get('REELSAGA_EP','1')
 PART=os.environ.get('REELSAGA_PART','1')
-COUNTS={'1':3,'2':2}
+COUNTS={'1': 3, '2': 2, '3': 3, '4': 3, '5': 3, '6': 1, '7': 3, '8': 2, '9': 3}
 if EP not in COUNTS or not PART.isdigit() or not 1<=int(PART)<=COUNTS[EP]:raise RuntimeError('Unprepared Beast Whisperer part')
 MANIFEST=f'rsboost-beast-prepared/ep{EP}-part{PART}.json'
 
