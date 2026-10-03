@@ -57,27 +57,39 @@ def run(backend,api,item,path):
 
 def main():
     controls=None
+    stage="manifest"
     try:
         item=json.loads(Path(MANIFEST).read_text());path=f'rsboost-beast-prepared/ep{EP}-part{PART}.mp4';validate(item,path)
+        stage="credentials_config"
         record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
+        stage="state_initialize"
         backend=GitHubState(Transport(lambda:gh,{'api.github.com'}),record['refresh_token']);backend.initialize()
+        stage="state_probe"
         controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])
+        stage="google_refresh"
         credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES);token=credential.access_token()
         api=Transport(lambda:token,{'www.googleapis.com'})
+        stage="channel_identity"
         identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data
         if {x.get('id') for x in identity.get('items',[])}!={CHANNEL}:raise RuntimeError('Identity mismatch')
+        stage="item_claim_read"
         if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item already claimed')
+        stage="enable_control"
         controls.set_access(True,verified=True)
+        stage="private_upload"
         result=run(backend,api,item,path)
+        stage="stop_verify"
         controls.set_access(False)
         try:controls.require_enabled()
         except ControlError:pass
         else:raise RuntimeError('Stop did not block access')
+        stage="checkpoint_readback"
         saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))
         if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint mismatch')
         result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)
         print(json.dumps(result,sort_keys=True))
     except Exception:
+        print('Safe failure stage: '+stage)
         print('Real-part upload stopped. Reconcile encrypted ledger and Studio before retry; secrets not shown.')
         raise SystemExit(1) from None
     finally:
