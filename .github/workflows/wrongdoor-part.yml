@@ -1,0 +1,41 @@
+name: ReelSaga one Wrong Door Right Girl source-quality part
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: Wrong Door Right Girl episode
+        required: true
+        default: "1"
+        type: choice
+        options: ["1", "2", "3", "4", "5", "6", "7"]
+      part:
+        description: Wrong Door Right Girl episode part
+        required: true
+        default: "1"
+        type: choice
+        options: ["1", "2", "3", "4", "5"]
+permissions:
+  contents: write
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  private-part:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install cryptography==46.0.5
+      - run: python -m unittest discover -s tests -v
+      - name: One private episode part then verified stop
+        env:
+          REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+          REELSAGA_EP: ${{ inputs.episode }}
+          REELSAGA_PART: ${{ inputs.part }}
+          GH_TOKEN: ${{ github.token }}
+        run: python actions_wrongdoor_part.py
