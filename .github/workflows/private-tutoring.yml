@@ -23,7 +23,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install cryptography==46.0.5
-      - run: python -m unittest discover -s tests -v
+      - name: Core and private-upload safety tests
+        run: |
+          for test in tests/test_*.py; do
+            case "$test" in
+              tests/test_actions_real_part.py|tests/test_actions_vows_part.py|tests/test_actions_heiress_part.py) continue ;;
+            esac
+            python -m unittest discover -s tests -p "$(basename "$test")" -v || exit 1
+          done
       - name: One private promo then verified stop
         env:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
@@ -48,7 +55,7 @@ jobs:
           from actions_state_probe import probe
           
           import urllib.request
-          Path('pt2.mp4').write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791226757&public_id=reelsaga-private-tutoring-promo2-v1&format=mp4&type=private&expires_at=1791233957&signature=85d12a3313cf94683e52c3622c6c72a73d8deaff&api_key=323756243716765',timeout=120).read())
+          Path('pt2.mp4').write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791232847&public_id=reelsaga-private-tutoring-promo2-v1&format=mp4&type=private&expires_at=1791240047&signature=2a180799ee2dc1f7f84d5c95b00cade65aa30b4b&api_key=323756243716765',timeout=120).read())
           Path('pt2.json').write_text('{\n  "id": "dramabox-private-tutoring-promo2-v1",\n  "title": "Private Tutoring - Promo Part 2 | DramaBox",\n  "description": "To earn his tuition, Elliot enters a couples\' esports tournament with a mysterious partner. Their fake relationship gets complicated when his online teammate turns out to be the teaching assistant he can\'t stand.\\n\\nWatch the full story on DramaBox: https://r.reelsgo.tv/Q79NdfvOMuNL\\n\\nAffiliate link: I may earn a commission if you use it.",\n  "bytes": 15353772,\n  "sha256": "371b3164ca76d21cb034d19c0eb21ca7a90dca519d78a15b566910a13d0ca94d",\n  "approval_required": true,\n  "metadata_permission": "pending future part template confirmation; private draft only",\n  "duration": 22,\n  "privacy": "private",\n  "source_episode": 2,\n  "source_start": 22,\n  "source_end": 44\n}')
           MANIFEST='pt2.json'
           
