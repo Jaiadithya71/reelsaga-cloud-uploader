@@ -14,6 +14,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /tests/
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -24,8 +28,8 @@ jobs:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
           GH_TOKEN: ${{ github.token }}
         run: |
-          cat > /tmp/actions_private_tutoring.py <<'PYCODE'
-          """One owner-approved real part, PRIVATE only, then stop for Studio review.
+          cat > /tmp/actions_private_tutoring2.py <<'PYCODE'
+          """One privately prepared promo, PRIVATE only, then stop for Studio review.
           
           Manual dispatch only. Reruns never recreate a claimed upload.
           """
@@ -43,16 +47,16 @@ jobs:
           from actions_state_probe import probe
           
           import urllib.request
-          Path("pt1.mp4").write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791221386&public_id=reelsaga-private-tutoring-promo1-v1&format=mp4&type=private&expires_at=1791307786&signature=96862873373f21dc7d705deebce6a4278ca68bfb&api_key=323756243716765',timeout=120).read())
-          Path("pt1.json").write_text('{"id": "dramabox-private-tutoring-promo1-v1", "title": "Private Tutoring - Promo Part 1 | DramaBox", "description": "To earn his tuition, Elliot enters a couples\' esports tournament with a mysterious partner. Their fake relationship gets complicated when his online teammate turns out to be the teaching assistant he can\'t stand.\\n\\nWatch the full story on DramaBox: https://r.reelsgo.tv/Q79NdfvOMuNL\\n\\nAffiliate link: I may earn a commission if you use it.", "bytes": 18085259, "sha256": "357f881a6313a8e6cb938aa720f04a1334d4e82e8faca07944155e94acde8a3e", "approval_required": false, "metadata_permission": "owner WhatsApp22:56:46 S replying exact22:56:27 title and description", "duration": 34, "privacy": "private"}')
-          MANIFEST='pt1.json'
+          Path('pt2.mp4').write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791226757&public_id=reelsaga-private-tutoring-promo2-v1&format=mp4&type=private&expires_at=1791233957&signature=85d12a3313cf94683e52c3622c6c72a73d8deaff&api_key=323756243716765',timeout=120).read())
+          Path('pt2.json').write_text('{\n  "id": "dramabox-private-tutoring-promo2-v1",\n  "title": "Private Tutoring - Promo Part 2 | DramaBox",\n  "description": "To earn his tuition, Elliot enters a couples\' esports tournament with a mysterious partner. Their fake relationship gets complicated when his online teammate turns out to be the teaching assistant he can\'t stand.\\n\\nWatch the full story on DramaBox: https://r.reelsgo.tv/Q79NdfvOMuNL\\n\\nAffiliate link: I may earn a commission if you use it.",\n  "bytes": 15353772,\n  "sha256": "371b3164ca76d21cb034d19c0eb21ca7a90dca519d78a15b566910a13d0ca94d",\n  "approval_required": true,\n  "metadata_permission": "pending future part template confirmation; private draft only",\n  "duration": 22,\n  "privacy": "private",\n  "source_episode": 2,\n  "source_start": 22,\n  "source_end": 44\n}')
+          MANIFEST='pt2.json'
           
           def validate(item,path):
               expected=json.loads(Path(MANIFEST).read_text())
-              if item!=expected or item['id']!='dramabox-private-tutoring-promo1-v1':raise RuntimeError('Unexpected promo item')
-              if item['title']!='Private Tutoring - Promo Part 1 | DramaBox':raise RuntimeError('Title mismatch')
+              if item!=expected or item['id']!='dramabox-private-tutoring-promo2-v1':raise RuntimeError('Unexpected promo item')
+              if item['title']!='Private Tutoring - Promo Part 2 | DramaBox':raise RuntimeError('Title mismatch')
               if Path(path).stat().st_size!=item['bytes'] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item['sha256']:raise RuntimeError('Media integrity mismatch')
-              if item.get('approval_required') is not False or not item.get('metadata_permission'):raise RuntimeError('Owner approval missing')
+              if item.get('privacy')!='private' or item.get('approval_required') is not True:raise RuntimeError('Private draft gate missing')
           
           def run(backend,api,item,path):
               validate(item,path)
@@ -84,7 +88,7 @@ jobs:
               controls=None
               stage="manifest"
               try:
-                  item=json.loads(Path(MANIFEST).read_text());path='pt1.mp4';validate(item,path)
+                  item=json.loads(Path(MANIFEST).read_text());path='pt2.mp4';validate(item,path)
                   stage="credentials_config"
                   record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
                   stage="state_initialize"
@@ -125,5 +129,5 @@ jobs:
                           raise SystemExit(2) from None
           if __name__=='__main__':main()
           PYCODE
-          cp /tmp/actions_private_tutoring.py actions_private_tutoring.py
-          python actions_private_tutoring.py
+          cp /tmp/actions_private_tutoring2.py actions_private_tutoring2.py
+          python actions_private_tutoring2.py
