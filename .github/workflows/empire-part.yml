@@ -1,4 +1,4 @@
-name: ReelSaga Deadliest Catch private check
+name: ReelSaga Empire private check
 on:
   workflow_dispatch:
 permissions:
@@ -31,12 +31,12 @@ jobs:
             esac
             python -m unittest discover -s tests -p "$(basename "$test")" -v || exit 1
           done
-      - name: One approved private episode part then verified stop
+      - name: One diagnostic private episode part then verified stop
         env:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
           GH_TOKEN: ${{ github.token }}
         run: |
-          cat > actions_deadliest.py <<'PYCODE'
+          cat > actions_empire.py <<'PYCODE'
           """One privately prepared promo, PRIVATE only, then stop for Studio review.
           
           Manual dispatch only. Reruns never recreate a claimed upload.
@@ -55,13 +55,13 @@ jobs:
           from actions_state_probe import probe
           
           import urllib.request
-          Path("deadliest.mp4").write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791283419&public_id=reelsaga-deadliest-ep1-part1-v1&format=mp4&type=private&expires_at=1791290619&signature=f92fe96d2346cbf761b3705083072479ce9c5b4d&api_key=323756243716765',timeout=120).read())
-          Path("deadliest.json").write_text('{"id": "netshort-deadliest-ep1-part1-v1", "title": "Deadliest Catch: Reclaiming My Ocean Empire - Episode 1 Part 1/3 | NetShort", "description": "Ethan returns to the Bering Sea with his mother\'s logbook and predicts an early superstorm. When Tucker tears up his $15/lb deal and his father Harlan sides against him, Ethan teams with Mara, fills his order, finds rare golden king crab, and builds the White Raven Alliance. Tucker crosses the safety line for fortune and loses everything.\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/auq6t-DNWteK\\n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you use them.", "bytes": 37550862, "sha256": "04b2f89efd1ed04b2df29f70cce166a2c346f1d890e42bb3411aaa6b81502bf7", "approval_required": true, "metadata_permission": "Owner S 2026-10-06 16:08:06 approving exact template for YT and IG", "duration": 49.458333, "privacy": "private", "source_episode": 1, "source_start": 0, "source_end": 49.458333}')
-          MANIFEST="deadliest.json"
+          Path("empire.mp4").write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?public_id=reelsaga-empire-ep1-part1-v1&type=private&timestamp=1791287086&format=mp4&expires_at=1791294289&signature=9ffddcd6d885a24216ca8454f4434ded21f6b1ae&api_key=323756243716765',timeout=120).read())
+          Path("empire.json").write_text('{"id": "netshort-empire-ep1-part1-v1", "title": "She Chose Her Lover. I Took Back My Empire. - Episode 1 Part 1/2 | NetShort", "description": "Atlas CTO Adam Stone owns 35 core patents. His wife Emma and her lover Zack seize his shares and fire him. Adam revokes all patent licenses, collapsing Atlas. Zack\'s fake tech is exposed. Shareholders beg Adam back, pay $3B, and he retakes power, fires Emma, jails Zack, and divorces her.\n\nThis is only one piece of the story. The rest is waiting on the channel.\n\nWatch on NetShort: https://r.reelsgo.tv/yulBgFs50Xvm\n\nFull episode part 1 of 2.\nAffiliate links: I may earn a commission if you use them.", "bytes": 18692061, "sha256": "e9d6c9e2d2a97b91f0a7668c0040ffa441aeb279f4f8907421ea40868dea6fd1", "approval_required": true, "metadata_permission": "Private diagnostic under Oct4 owner replacement rule. Public exact-template approval remains required.", "duration": 50.0, "privacy": "private", "source_episode": 1, "source_start": 0, "source_end": 50.0}')
+          MANIFEST="empire.json"
           
           def validate(item,path):
               expected=json.loads(Path(MANIFEST).read_text())
-              if item!=expected or item["id"]!="netshort-deadliest-ep1-part1-v1":raise RuntimeError("Unexpected item")
+              if item!=expected or item["id"]!="netshort-empire-ep1-part1-v1":raise RuntimeError("Unexpected item")
               if Path(path).stat().st_size!=item["bytes"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item["sha256"]:raise RuntimeError("Media integrity mismatch")
               if item.get("privacy")!="private":raise RuntimeError("Private gate missing")
           
@@ -95,7 +95,7 @@ jobs:
               controls=None
               stage="manifest"
               try:
-                  item=json.loads(Path(MANIFEST).read_text());path='deadliest.mp4';validate(item,path)
+                  item=json.loads(Path(MANIFEST).read_text());path='empire.mp4';validate(item,path)
                   stage="credentials_config"
                   record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
                   stage="state_initialize"
@@ -136,4 +136,4 @@ jobs:
                           raise SystemExit(2) from None
           if __name__=='__main__':main()
           PYCODE
-          python actions_deadliest.py
+          python actions_empire.py
