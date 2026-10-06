@@ -36,7 +36,7 @@ jobs:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
           GH_TOKEN: ${{ github.token }}
         run: |
-          cat > /tmp/actions_private_tutoring5.py <<'PYCODE'
+          cat > /tmp/actions_private_tutoring6.py <<'PYCODE'
           """One privately prepared promo, PRIVATE only, then stop for Studio review.
           
           Manual dispatch only. Reruns never recreate a claimed upload.
@@ -56,14 +56,14 @@ jobs:
           
           import urllib.request
           import urllib.request
-          Path('pt5.mp4').write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791249571&public_id=reelsaga-private-tutoring-promo5-v1&format=mp4&type=private&expires_at=1791256771&signature=2f1729c39065616f763b470941253ad8410a8100&api_key=323756243716765',timeout=120).read())
-          Path('pt5.json').write_text('{\n  "id": "dramabox-private-tutoring-promo5-v1",\n  "title": "Private Tutoring - Promo Part 5 | DramaBox",\n  "description": "To earn his tuition, Elliot enters a couples\' esports tournament with a mysterious partner. Their fake relationship gets complicated when his online teammate turns out to be the teaching assistant he can\'t stand.\\n\\nWatch the full story on DramaBox: https://r.reelsgo.tv/Q79NdfvOMuNL\\n\\nAffiliate link: I may earn a commission if you use it.",\n  "bytes": 16858389,\n  "sha256": "2bc2ee2a1dfa5707cfb95ad182e0664323d0e2b66f09c967dc5be15b2495f556",\n  "approval_required": true,\n  "metadata_permission": "pending future part template confirmation; private draft only",\n  "duration": 28,\n  "privacy": "private",\n  "source_episode": 5,\n  "source_start": 0,\n  "source_end": 28\n}')
-          MANIFEST='pt5.json'
+          Path('pt6.mp4').write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791279227&public_id=reelsaga-private-tutoring-promo6-v1&format=mp4&type=private&expires_at=1791286427&signature=ea7cea1718d7c898627120a5d432a342f4294d6a&api_key=323756243716765',timeout=120).read())
+          Path('pt6.json').write_text('{\n  "id": "dramabox-private-tutoring-promo6-v1",\n  "title": "Private Tutoring - Promo Part 6 | DramaBox",\n  "description": "To earn his tuition, Elliot enters a couples\' esports tournament with a mysterious partner. Their fake relationship gets complicated when his online teammate turns out to be the teaching assistant he can\'t stand.\\n\\nWatch the full story on DramaBox: https://r.reelsgo.tv/Q79NdfvOMuNL\\n\\nAffiliate link: I may earn a commission if you use it.",\n  "bytes": 13094928,\n  "sha256": "25937c49842a7db292687cd8e926d07b72a2c045819a7f89afefc2c2cc180f81",\n  "approval_required": true,\n  "metadata_permission": "pending future part template confirmation; private draft only",\n  "duration": 20,\n  "privacy": "private",\n  "source_episode": 7,\n  "source_start": 46,\n  "source_end": 66\n}')
+          MANIFEST='pt6.json'
           
           def validate(item,path):
               expected=json.loads(Path(MANIFEST).read_text())
-              if item!=expected or item['id']!='dramabox-private-tutoring-promo5-v1':raise RuntimeError('Unexpected promo item')
-              if item['title']!='Private Tutoring - Promo Part 5 | DramaBox':raise RuntimeError('Title mismatch')
+              if item!=expected or item['id']!='dramabox-private-tutoring-promo6-v1':raise RuntimeError('Unexpected promo item')
+              if item['title']!='Private Tutoring - Promo Part 6 | DramaBox':raise RuntimeError('Title mismatch')
               if Path(path).stat().st_size!=item['bytes'] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item['sha256']:raise RuntimeError('Media integrity mismatch')
               if item.get('privacy')!='private' or item.get('approval_required') is not True:raise RuntimeError('Private draft gate missing')
           
@@ -97,7 +97,7 @@ jobs:
               controls=None
               stage="manifest"
               try:
-                  item=json.loads(Path(MANIFEST).read_text());path='pt5.mp4';validate(item,path)
+                  item=json.loads(Path(MANIFEST).read_text());path='pt6.mp4';validate(item,path)
                   stage="credentials_config"
                   record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
                   stage="state_initialize"
@@ -138,5 +138,5 @@ jobs:
                           raise SystemExit(2) from None
           if __name__=='__main__':main()
           PYCODE
-          cp /tmp/actions_private_tutoring5.py actions_private_tutoring5.py
-          python actions_private_tutoring5.py
+          cp /tmp/actions_private_tutoring6.py actions_private_tutoring6.py
+          python actions_private_tutoring6.py
