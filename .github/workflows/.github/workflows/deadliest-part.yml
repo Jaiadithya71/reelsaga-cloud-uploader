@@ -1,0 +1,139 @@
+name: ReelSaga Deadliest Catch private check
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  private-part:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /tests/
+            /**/*.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install cryptography==46.0.5
+      - name: Core and private-upload safety tests
+        run: |
+          for test in tests/test_*.py; do
+            case "$test" in
+              tests/test_actions_real_part.py|tests/test_actions_vows_part.py|tests/test_actions_heiress_part.py) continue ;;
+            esac
+            python -m unittest discover -s tests -p "$(basename "$test")" -v || exit 1
+          done
+      - name: One approved private episode part then verified stop
+        env:
+          REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > actions_deadliest.py <<'PYCODE'
+          """One privately prepared promo, PRIVATE only, then stop for Studio review.
+          
+          Manual dispatch only. Reruns never recreate a claimed upload.
+          """
+          import hashlib,json,os
+          from pathlib import Path
+          from actions_canary import Store
+          from desktop_setup import CHANNEL,SCOPES
+          from provision_actions import validated_record
+          from credentials import GoogleCredentials
+          from transport import Transport,GoogleTokenForms
+          from github_state import GitHubState
+          from durable_state import DurableLedger
+          from controls import Controls,ControlError
+          from adapters import YouTube,checked
+          from actions_state_probe import probe
+          
+          import urllib.request
+          Path("deadliest.mp4").write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791283419&public_id=reelsaga-deadliest-ep1-part1-v1&format=mp4&type=private&expires_at=1791290619&signature=f92fe96d2346cbf761b3705083072479ce9c5b4d&api_key=323756243716765',timeout=120).read())
+          Path("deadliest.json").write_text('{"id": "netshort-deadliest-ep1-part1-v1", "title": "Deadliest Catch: Reclaiming My Ocean Empire - Episode 1 Part 1/3 | NetShort", "description": "Ethan returns to the Bering Sea with his mother\'s logbook and predicts an early superstorm. When Tucker tears up his $15/lb deal and his father Harlan sides against him, Ethan teams with Mara, fills his order, finds rare golden king crab, and builds the White Raven Alliance. Tucker crosses the safety line for fortune and loses everything.\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/auq6t-DNWteK\\n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you use them.", "bytes": 37550862, "sha256": "04b2f89efd1ed04b2df29f70cce166a2c346f1d890e42bb3411aaa6b81502bf7", "approval_required": true, "metadata_permission": "Owner S 2026-10-06 16:08:06 approving exact template for YT and IG", "duration": 49.458333, "privacy": "private", "source_episode": 1, "source_start": 0, "source_end": 49.458333}')
+          MANIFEST="deadliest.json"
+          
+          def validate(item,path):
+              expected=json.loads(Path(MANIFEST).read_text())
+              if item!=expected or item["id"]!="netshort-deadliest-ep1-part1-v1":raise RuntimeError("Unexpected item")
+              if Path(path).stat().st_size!=item["bytes"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item["sha256"]:raise RuntimeError("Media integrity mismatch")
+              if item.get("privacy")!="private":raise RuntimeError("Private gate missing")
+          
+          def run(backend,api,item,path):
+              validate(item,path)
+              controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)
+              if ledger.resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item already claimed; reconcile only')
+              controls.require_enabled()
+              if not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')
+              checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)
+              checkpoint('uncertain');controls.require_enabled()
+              youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)
+              offset=0
+              while offset<item['bytes']:
+                  controls.require_enabled()
+                  result=youtube.send_chunk(session,path,offset,checkpoint)
+                  if 'video_id' in result:break
+                  new_offset=result.get('offset',0)
+                  if not offset<new_offset<=item['bytes']:raise RuntimeError('Invalid server offset')
+                  offset=new_offset
+              if 'video_id' not in result:raise RuntimeError('Saved session incomplete; no retry')
+              video=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':result['video_id']})).data
+              rows=video.get('items',[])
+              if len(rows)!=1:raise RuntimeError('Video readback missing')
+              row=rows[0]
+              if row['snippet']['channelId']!=CHANNEL or row['status']['privacyStatus']!='private' or row['snippet']['title']!=item['title'] or row['snippet']['description']!=item['description'] or row['status'].get('selfDeclaredMadeForKids') is not False:
+                  raise RuntimeError('Private metadata readback mismatch')
+              return {'item_id':item['id'],'video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}
+          
+          def main():
+              controls=None
+              stage="manifest"
+              try:
+                  item=json.loads(Path(MANIFEST).read_text());path='deadliest.mp4';validate(item,path)
+                  stage="credentials_config"
+                  record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')
+                  stage="state_initialize"
+                  backend=GitHubState(Transport(lambda:gh,{'api.github.com'}),record['refresh_token']);backend.initialize()
+                  stage="state_probe"
+                  controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])
+                  stage="google_refresh"
+                  credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES);token=credential.access_token()
+                  api=Transport(lambda:token,{'www.googleapis.com'})
+                  stage="channel_identity"
+                  identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data
+                  if {x.get('id') for x in identity.get('items',[])}!={CHANNEL}:raise RuntimeError('Identity mismatch')
+                  stage="item_claim_read"
+                  if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item already claimed')
+                  stage="enable_control"
+                  controls.set_access(True,verified=True)
+                  stage="private_upload"
+                  result=run(backend,api,item,path)
+                  stage="stop_verify"
+                  controls.set_access(False)
+                  try:controls.require_enabled()
+                  except ControlError:pass
+                  else:raise RuntimeError('Stop did not block access')
+                  stage="checkpoint_readback"
+                  saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))
+                  if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint mismatch')
+                  result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)
+                  print(json.dumps(result,sort_keys=True))
+              except Exception:
+                  print('Safe failure stage: '+stage)
+                  print('Real-part upload stopped. Reconcile encrypted ledger and Studio before retry; secrets not shown.')
+                  raise SystemExit(1) from None
+              finally:
+                  if controls is not None:
+                      try:controls.set_access(False)
+                      except Exception:
+                          print('STOP control write unconfirmed. No rerun; operator action required.')
+                          raise SystemExit(2) from None
+          if __name__=='__main__':main()
+          PYCODE
+          python actions_deadliest.py
