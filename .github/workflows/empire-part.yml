@@ -1,8 +1,8 @@
-name: Airport EP4P2 matching IG publish
+name: ReelSaga read-only channel audit
 on:
   workflow_dispatch: null
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: reelsaga-canary
   cancel-in-progress: false
@@ -23,10 +23,9 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Publish saved FINISHED EP4P1 only
+    - name: Read all live metadata and playlists only
       env:
         GH_TOKEN: ${{ github.token }}
-        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
         REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: |
@@ -414,72 +413,39 @@ jobs:
             return read_token(endpoint,key)
 
         MODULE
-        cat > ig_publish.py <<'IGCODE'
-        import json,os,urllib.request,urllib.parse
-        from datetime import datetime,timezone,timedelta
-        from pathlib import Path
+        cat > audit.py <<'AUDITCODE'
+        import json,os
         from reader import read_token
-        from instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity
-        from transport import Transport
+        from instagram_record import EXPECTED_USER,EXPECTED_NAME
         from adapters import checked
-        from quarantine_state import QuarantineState
-        from durable_state import DurableLedger
-        from controls import Controls,ControlError
-
-        item={'id': 'netshort-airport-ep4-part2-v1', 'episode': 4, 'part': 2, 'title': "Don't Mess With That Airport Cleaner - Episode 4 Part 2/3 | NetShort", 'description': 'Ace pilot Alexander Cole took the fall for his brother Ryan to save his mother, lost his wings, became a janitor. When an engine fails mid-air, he saves everyone, but Ryan steals the credit, frames him. With ATC Maya, he exposes Ryan via black box and wire transfers. Ryan is jailed; Alexander reclaims his wings and the woman who believed in him.\n\nThis is only one piece of the story. The rest is waiting on the channel.\n\nWatch on NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\n\nFull episode part 2 of 3.\nAffiliate links: I may earn a commission if you use them.', 'file': '/downloads/airport-screen/ep4-part2.mp4', 'source_start': 44.958333, 'source_end': 95.541667, 'privacy': 'private', 'approval_required': True, 'bytes': 21565331, 'sha256': '5af4691dfac0c082de0d528f645413668a84b82c012aac1b2606bd8fbe82012b'}
-        caption=item['title']+'\n\n'+item['description']
-        item['caption']=caption
         from credentials import GoogleCredentials
         from actions_canary import Store
         from provision_actions import validated_record
         from desktop_setup import SCOPES,CHANNEL
-        from transport import GoogleTokenForms
-        stage='init';controls=None
-        try:
-            gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')
-            backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()
-            ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)
-            saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')
-            if saved['state']!='processing' or saved['external_id']!='18122665990793253':raise ValueError('No staged container')
-            record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))
-            credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)
-            yt=Transport(credential.access_token,{'www.googleapis.com'})
-            v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'nUm42nnLZCw'})).data['items'][0]
-            if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title'] or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public' or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('YT prerequisite')
-            token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))
-            api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'
-            ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data
-            if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise ValueError('Identity')
-            data=checked(api('GET',base+EXPECTED_USER+'/media',params={'fields':'id,caption','limit':100})).data
-            if any(x.get('caption')==caption for x in data.get('data',[])):raise ValueError('Duplicate')
-            q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]
-            if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')
-            import time
-            container=saved['external_id']
-            for attempt in range(5):
-                status=checked(api('GET',base+container,params={'fields':'status_code'})).data
-                if status['status_code']=='FINISHED':break
-                if status['status_code']!='IN_PROGRESS':raise ValueError('Container failed')
-                if attempt<4:time.sleep(60)
-            else:raise ValueError('Container not FINISHED')
-            stage='publish'
-            controls.set_access(True,verified=True);controls.require_enabled()
-            ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)
-            r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data
-            ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])
-            record,version=backend.get(ledger.key(item['id'],'youtube'))
-            record=dict(record, state='published', claim={'type':'none','studio_verified':True})
-            if not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise ValueError('Claim record checkpoint')
-            controls.set_access(False);stage='readback'
-            m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data
-            if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback mismatch')
-            print(json.dumps({'instagram_published':True,'media':m,'caption_exact':True,'matching_youtube_public':True,'stop_verified':True}))
-        except Exception:
-            print('IG publish stopped at '+stage+'. Reconcile saved ledger before retry.');raise SystemExit(1) from None
-        finally:
-            if controls:
-                try:controls.set_access(False)
-                except Exception:pass
+        from transport import Transport,GoogleTokenForms
+        cred=GoogleCredentials(Store(validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))),GoogleTokenForms(),SCOPES)
+        y=Transport(cred.access_token,{'www.googleapis.com'})
+        def pages(api,url,params,key):
+         out=[];seen=set()
+         while True:
+          d=checked(api('GET',url,params=params)).data;out+=d.get(key,[]);t=d.get('nextPageToken')
+          if not t:return out
+          if t in seen:raise ValueError('loop')
+          seen.add(t);params=dict(params,pageToken=t)
+        cs=checked(y('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id,contentDetails','mine':'true'})).data['items'];assert len(cs)==1 and cs[0]['id']==CHANNEL
+        uploads=pages(y,'https://www.googleapis.com/youtube/v3/playlistItems',{'part':'contentDetails','playlistId':cs[0]['contentDetails']['relatedPlaylists']['uploads'],'maxResults':50},'items');ids=[x['contentDetails']['videoId'] for x in uploads];videos=[]
+        for n in range(0,len(ids),50):
+         d=checked(y('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,contentDetails','id':','.join(ids[n:n+50])})).data['items'];assert {v['id'] for v in d}==set(ids[n:n+50]);videos+=d
+        ps=pages(y,'https://www.googleapis.com/youtube/v3/playlists',{'part':'snippet,status,contentDetails','mine':'true','maxResults':50},'items')
+        for p in ps:p['members']=pages(y,'https://www.googleapis.com/youtube/v3/playlistItems',{'part':'snippet,contentDetails,status','playlistId':p['id'],'maxResults':50},'items')
+        t=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''));a=Transport(lambda:t,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'
+        i=checked(a('GET',base+'me',params={'fields':'user_id,username'})).data;assert str(i.get('user_id'))==EXPECTED_USER and i.get('username')==EXPECTED_NAME
+        ig=[];url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,permalink,media_type,media_product_type,timestamp,media_url,thumbnail_url','limit':100};seen=set()
+        while url:
+         d=checked(a('GET',url,params=params)).data;ig+=d.get('data',[]);params=None;url=d.get('paging',{}).get('next')
+         if url in seen:raise ValueError('loop')
+         if url:seen.add(url)
+        print('AUDIT_JSON '+json.dumps({'youtube':videos,'playlists':ps,'instagram':ig},separators=(',',':')))
 
-        IGCODE
-        python ig_publish.py
+        AUDITCODE
+        python audit.py
