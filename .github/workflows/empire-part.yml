@@ -1,4 +1,4 @@
-name: ReelSaga Empire private check
+name: ReelSaga Airport private check
 on:
   workflow_dispatch:
 permissions:
@@ -55,13 +55,13 @@ jobs:
           from actions_state_probe import probe
           
           import urllib.request
-          Path("empire.mp4").write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791325491&public_id=reelsaga-empire-ep5-part1-v1&format=mp4&type=private&expires_at=1791336291&signature=4afa6f08b5cdaae94971eaca6a5a312f089c3e47&api_key=323756243716765',timeout=120).read())
-          Path("empire.json").write_text('{"id": "netshort-empire-ep5-part1-v1", "title": "She Chose Her Lover. I Took Back My Empire. - Episode 5 Part 1/2 | NetShort", "description": "Atlas CTO Adam Stone owns 35 core patents. His wife Emma and her lover Zack seize his shares and fire him. Adam revokes all patent licenses, collapsing Atlas. Zack\'s fake tech is exposed. Shareholders beg Adam back, pay $3B, and he retakes power, fires Emma, jails Zack, and divorces her.\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/yulBgFs50Xvm\\n\\nFull episode part 1 of 2.\\nAffiliate links: I may earn a commission if you use them.", "bytes": 19341868, "sha256": "2fff57c617f195b020c814292b442ebb422e172ea8b3426331bf2d1f50601fd6", "approval_required": true, "metadata_permission": "Private diagnostic under Oct4 owner replacement rule. Public exact-template approval remains required.", "duration": 42.0, "privacy": "private", "source_episode": 5, "source_start": 0, "source_end": 42}')
+          Path("empire.mp4").write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791510383&public_id=reelsaga-airport-ep2-part2-api-v1&format=mp4&type=private&expires_at=1791521183&signature=f0bffa1ae1803222d3d9191d0eb5396bacc79751&api_key=323756243716765',timeout=120).read())
+          Path("empire.json").write_text('{"id": "netshort-airport-ep2-part2-v1", "title": "Don\'t Mess With That Airport Cleaner - Episode 2 Part 2/2 | NetShort", "description": "Ace pilot Alexander Cole took the fall for his brother Ryan to save his mother, lost his wings, became a janitor. When an engine fails mid-air, he saves everyone, but Ryan steals the credit, frames him. With ATC Maya, he exposes Ryan via black box and wire transfers. Ryan is jailed; Alexander reclaims his wings and the woman who believed in him.\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\\n\\nFull episode part 2 of 2.\\nAffiliate links: I may earn a commission if you use them.", "bytes": 22463752, "sha256": "54609abd91ee14a66adad740fc273afcd4df48af297f9a3bc9b0ce6087229360", "source_start": 40.85, "source_end": 84.01, "privacy": "private", "approval_required": true, "duration": 43.16, "source_episode": 2}')
           MANIFEST="empire.json"
           
           def validate(item,path):
               expected=json.loads(Path(MANIFEST).read_text())
-              if item!=expected or item["id"]!="netshort-empire-ep5-part1-v1":raise RuntimeError("Unexpected item")
+              if item!=expected or item["id"]!="netshort-airport-ep2-part2-v1":raise RuntimeError("Unexpected item")
               if Path(path).stat().st_size!=item["bytes"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item["sha256"]:raise RuntimeError("Media integrity mismatch")
               if item.get("privacy")!="private":raise RuntimeError("Private gate missing")
           
