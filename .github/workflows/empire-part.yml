@@ -1,4 +1,4 @@
-name: ReelSaga read-only channel audit
+name: Vows approved single playlist order fix
 on:
   workflow_dispatch: null
 permissions:
@@ -23,10 +23,9 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Read all live metadata and playlists only
+    - name: Move Vows EP2P1 to fourth position and verify
       env:
         GH_TOKEN: ${{ github.token }}
-        REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
         REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: |
         cat > quarantine_state.py <<'QUARANTINE_FILE'
@@ -413,10 +412,8 @@ jobs:
             return read_token(endpoint,key)
 
         MODULE
-        cat > audit.py <<'AUDITCODE'
+        cat > fix.py <<'FIXCODE'
         import json,os
-        from reader import read_token
-        from instagram_record import EXPECTED_USER,EXPECTED_NAME
         from adapters import checked
         from credentials import GoogleCredentials
         from actions_canary import Store
@@ -432,20 +429,20 @@ jobs:
           if not t:return out
           if t in seen:raise ValueError('loop')
           seen.add(t);params=dict(params,pageToken=t)
-        cs=checked(y('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id,contentDetails','mine':'true'})).data['items'];assert len(cs)==1 and cs[0]['id']==CHANNEL
-        uploads=pages(y,'https://www.googleapis.com/youtube/v3/playlistItems',{'part':'contentDetails','playlistId':cs[0]['contentDetails']['relatedPlaylists']['uploads'],'maxResults':50},'items');ids=[x['contentDetails']['videoId'] for x in uploads];videos=[]
-        for n in range(0,len(ids),50):
-         d=checked(y('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,contentDetails','id':','.join(ids[n:n+50])})).data['items'];assert {v['id'] for v in d}==set(ids[n:n+50]);videos+=d
-        ps=pages(y,'https://www.googleapis.com/youtube/v3/playlists',{'part':'snippet,status,contentDetails','mine':'true','maxResults':50},'items')
-        for p in ps:p['members']=pages(y,'https://www.googleapis.com/youtube/v3/playlistItems',{'part':'snippet,contentDetails,status','playlistId':p['id'],'maxResults':50},'items')
-        t=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''));a=Transport(lambda:t,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'
-        i=checked(a('GET',base+'me',params={'fields':'user_id,username'})).data;assert str(i.get('user_id'))==EXPECTED_USER and i.get('username')==EXPECTED_NAME
-        ig=[];url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,permalink,media_type,media_product_type,timestamp,media_url,thumbnail_url','limit':100};seen=set()
-        while url:
-         d=checked(a('GET',url,params=params)).data;ig+=d.get('data',[]);params=None;url=d.get('paging',{}).get('next')
-         if url in seen:raise ValueError('loop')
-         if url:seen.add(url)
-        print('AUDIT_JSON '+json.dumps({'youtube':videos,'playlists':ps,'instagram':ig},separators=(',',':')))
+        pid='PLRszsuVhjIDQ'
+        rows=pages(y,'https://www.googleapis.com/youtube/v3/playlistItems',{'part':'snippet,contentDetails','playlistId':pid,'maxResults':50},'items')
+        expected=['VLP3MZFh7w0', 'uOPlV_UjYLg', 'LtB583dNJW8', 'JQT_BdHaLlQ', 'FEfeU1nqXa8', 'wHCToPgRhbE', '_BhHWvSy2Fs', 'qBwKX9aA0po', 'aUCHEmW7b3M', 'me5XpXTJiZ4', '7vV8DfUFBgw', '-B2XxRwuSvM', 'TPRJ5X9MImQ', 'uHhEHyI8RNM', 'eUhHkPphvoU', 'fdwIN2545ks', '1tZDFnz4Qrg', 'pIDTNRcLvWQ', 'DBc1b7GUvmQ', 'SrffHnx5tbk', 'emFc5dx-ejA', '_3QwQC-8WAs', 'tmVLOhiHK4k', 'gdeE3vPenGk', 'fcEVg7oK6ME', 'dHEy6x2010Y', 'WYTUTz2bC7M', 'gAh3AKWzylg', 'L1TQMvCFkvc', 'b0KWNauZksk', 'yBlkLlsExSA']
+        actual=[m['contentDetails']['videoId'] for m in rows]
+        want=expected.copy();want.remove('me5XpXTJiZ4');want.insert(3,'me5XpXTJiZ4')
+        if actual==want:print('Already correct; no change')
+        elif actual==expected:
+         target=next(m for m in rows if m['contentDetails']['videoId']=='me5XpXTJiZ4')
+         r=checked(y('PUT','https://www.googleapis.com/youtube/v3/playlistItems',params={'part':'snippet'},json={'id':target['id'],'snippet':{'playlistId':pid,'resourceId':{'kind':'youtube#video','videoId':'me5XpXTJiZ4'},'position':3}})).data
+         if r['snippet']['position']!=3:raise ValueError('position write mismatch')
+        else:raise ValueError('Playlist moved since approval; stop')
+        after=pages(y,'https://www.googleapis.com/youtube/v3/playlistItems',{'part':'snippet,contentDetails','playlistId':pid,'maxResults':50},'items')
+        if [m['contentDetails']['videoId'] for m in after]!=want:raise ValueError('Order readback mismatch')
+        print('ORDER_FIX_VERIFIED '+json.dumps({'count':len(after),'order':[{'position':m['snippet']['position'],'title':m['snippet']['title'],'video_id':m['contentDetails']['videoId']} for m in after]}))
 
-        AUDITCODE
-        python audit.py
+        FIXCODE
+        python fix.py
