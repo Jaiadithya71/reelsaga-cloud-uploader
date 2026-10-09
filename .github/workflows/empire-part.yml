@@ -1,6 +1,6 @@
 name: ReelSaga Instagram reader verify only
-'on':
-  workflow_dispatch: null
+on:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
@@ -8,50 +8,77 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-    - name: Read protected ReelSaga credential and verify identity, no publishing
-      env:
-        REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
-      run: "python3 - <<'PYCODE'\n\"\"\"Identity/expiry gate for a server-returned\
-        \ ReelSaga-only token record.\"\"\"\nfrom datetime import datetime,timezone,timedelta\n\
-        EXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\nSCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
-        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n\
-        \    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
-        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
-        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
-        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n\
-        \    except Exception:\n        raise ValueError('Invalid credential dates')\
-        \ from None\n    if created.tzinfo is None or expiry.tzinfo is None or created>now+timedelta(seconds=30)\
-        \ or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
-        \ expired or dates invalid')\n    token=record.get('access_token')\n    if\
-        \ not isinstance(token,str) or len(token)<100 or not token.isascii():\n  \
-        \      raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
-        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer\
-        \ '+token},params={'fields':'user_id,username'})\n    if identity.get('username')!=EXPECTED_NAME\
-        \ or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
-        \ Instagram identity mismatch')\n    return identity\n\n\"\"\"Server-side\
-        \ reader. No credential is written to logs or a public artifact.\"\"\"\nimport\
-        \ json,os,urllib.request,urllib.parse\n\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
-        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https'\
-        \ or parsed.hostname!='kathirvelan-boutique.vercel.app' or parsed.path!='/api/instagram/reelsaga-reader'\
-        \ or parsed.port not in (None,443) or parsed.username or parsed.password or\
-        \ parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader\
-        \ destination')\n    if not secret or len(secret)<32:\n        raise ValueError('Reader\
-        \ credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
-        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
-        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the\
-        \ read key to another destination.\n    if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n\
-        \    with opener(request,timeout=30) as response:\n        if response.status!=200:raise\
-        \ ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
-        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n\
-        \        record=json.loads(raw)\n    validate_record(record)
-    print(json.dumps({"record_scopes":record["scopes"],"expires_at":record["expires_at"]}))
-    return record["access_token"]\n\ndef\
-        \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
-        \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \ntry:\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    req=urllib.request.Request('https://graph.instagram.com/v26.0/me?fields=user_id,username',headers={'Authorization':'Bearer\
-        \ '+token})\n    with urllib.request.urlopen(req,timeout=30) as r: identity=json.load(r)\n\
-        \    if identity.get('username')!=EXPECTED_NAME or str(identity.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('identity')\n    print(json.dumps({'reader_authenticated':True,'identity_verified':True,'username':EXPECTED_NAME,'user_id':EXPECTED_USER,'token_printed':False,'video_uploaded':False,'publishing_enabled':False}))\n\
-        except Exception:\n    print('Reader verification failed. No credentials printed\
-        \ or video writes attempted.')\n    raise SystemExit(1) from None\n\nPYCODE\n"
+      - name: Read verified credential, no publishing
+        env:
+          REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
+        run: |
+          python3 - <<'PYCODE'
+          """Identity/expiry gate for a server-returned ReelSaga-only token record."""
+          from datetime import datetime,timezone,timedelta
+          EXPECTED_USER='17841423797577132'
+          EXPECTED_NAME='reelsaga3000'
+          SCOPES={'instagram_business_basic','instagram_business_content_publish'}
+          def validate_record(record,now=None):
+              now=now or datetime.now(timezone.utc)
+              if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:
+                  raise ValueError('Instagram identity mismatch')
+              if set(record.get('scopes',[]))!=SCOPES:
+                  raise ValueError('Instagram scope mismatch')
+              try:
+                  created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))
+                  expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))
+              except Exception:
+                  raise ValueError('Invalid credential dates') from None
+              if created.tzinfo is None or expiry.tzinfo is None or created>now+timedelta(seconds=30) or expiry<=now+timedelta(minutes=5):
+                  raise ValueError('Credential expired or dates invalid')
+              token=record.get('access_token')
+              if not isinstance(token,str) or len(token)<100 or not token.isascii():
+                  raise ValueError('Invalid credential')
+              return token
+          
+          def verify_live_identity(token,request):
+              identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer '+token},params={'fields':'user_id,username'})
+              if identity.get('username')!=EXPECTED_NAME or str(identity.get('user_id'))!=EXPECTED_USER:
+                  raise ValueError('Live Instagram identity mismatch')
+              return identity
+          
+          """Server-side reader. No credential is written to logs or a public artifact."""
+          import json,os,urllib.request,urllib.parse
+          
+          
+          def read_token(endpoint,secret,opener=urllib.request.urlopen):
+              parsed=urllib.parse.urlsplit(endpoint)
+              if parsed.scheme!='https' or parsed.hostname!='kathirvelan-boutique.vercel.app' or parsed.path!='/api/instagram/reelsaga-reader' or parsed.port not in (None,443) or parsed.username or parsed.password or parsed.fragment or parsed.query:
+                  raise ValueError('Invalid reader destination')
+              if not secret or len(secret)<32:
+                  raise ValueError('Reader credential missing')
+              class NoRedirect(urllib.request.HTTPRedirectHandler):
+                  def redirect_request(self,*args,**kwargs):return None
+              request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer '+secret,'Accept':'application/json'})
+              # Redirects must not carry the read key to another destination.
+              if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open
+              with opener(request,timeout=30) as response:
+                  if response.status!=200:raise ValueError('Reader response unverified')
+                  raw=response.read(65537)
+                  if len(raw)>65536:raise ValueError('Oversized reader response')
+                  record=json.loads(raw)
+              validate_record(record)
+              print(json.dumps({"record_scopes":record["scopes"],"expires_at":record["expires_at"]}))
+              return record["access_token"]
+          
+          def from_environment():
+              endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')
+              key=os.environ.pop('REELSAGA_IG_READ_KEY','')
+              return read_token(endpoint,key)
+          
+          try:
+              token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))
+              req=urllib.request.Request('https://graph.instagram.com/v26.0/me?fields=user_id,username',headers={'Authorization':'Bearer '+token})
+              with urllib.request.urlopen(req,timeout=30) as r: identity=json.load(r)
+              if identity.get('username')!=EXPECTED_NAME or str(identity.get('user_id'))!=EXPECTED_USER:raise ValueError('identity')
+              print(json.dumps({'reader_authenticated':True,'identity_verified':True,'username':EXPECTED_NAME,'user_id':EXPECTED_USER,'token_printed':False,'video_uploaded':False}))
+          except Exception:
+              print('Reader verification failed. No credentials printed or video writes attempted.')
+              raise SystemExit(1) from None
+          
+          PYCODE
