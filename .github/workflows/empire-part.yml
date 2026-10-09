@@ -1,5 +1,5 @@
 name: Airport EP4P3 IG stage only
-true:
+on:
   workflow_dispatch: null
 permissions:
   contents: write
