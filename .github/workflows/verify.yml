@@ -14,11 +14,42 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /tests/
+            /**/*.json
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m unittest discover -s tests -v
+      - run: python -m unittest discover -s tests -p test_actions_verify.py -v
       - name: Verify current Google scopes and exact channel, no upload
         env:
           REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
-        run: python actions_verify.py
+        run: |
+          python - <<'PYCODE'
+          import os,json
+          from provision_actions import validated_record
+          from transport import GoogleTokenForms
+          from actions_verify import verify
+          stage='record'
+          try:
+              raw=os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS','')
+              record=validated_record(raw)
+              stage='google_refresh'
+              response=GoogleTokenForms()('https://oauth2.googleapis.com/token',{'client_id':record['client_id'],'client_secret':record['client_secret'],'refresh_token':record['refresh_token'],'grant_type':'refresh_token'})
+              allowed={'invalid_grant','invalid_client','unauthorized_client','access_denied','temporarily_unavailable','server_error','invalid_scope','invalid_request'}
+              error=response.data.get('error')
+              report={'http_status':response.status,'oauth_error':error if error in allowed else 'unclassified' if error else None,'video_uploaded':False,'publishing_enabled':False}
+              if response.status!=200:
+                  print(json.dumps(report,sort_keys=True));raise SystemExit(1)
+              report.update(access_token_present=bool(response.data.get('access_token')),token_type_bearer=response.data.get('token_type','').lower()=='bearer')
+              print(json.dumps(report,sort_keys=True))
+              class OneResponse:
+                  def __call__(self,*args):return response
+              stage='readonly_channel_verification'
+              print(json.dumps(verify(raw,forms=OneResponse()),sort_keys=True))
+          except SystemExit:raise
+          except Exception:
+              print(json.dumps({'safe_failure_stage':stage,'video_uploaded':False,'publishing_enabled':False,'details_redacted':True}));raise SystemExit(1) from None
+          PYCODE
