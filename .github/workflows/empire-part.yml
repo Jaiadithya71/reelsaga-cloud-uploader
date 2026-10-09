@@ -40,7 +40,7 @@ jobs:
           cat > quarantine_state.py <<'QUARANTINE_FILE'
           """Fail-closed new namespace. Original legacy records are never mutated."""
           import hashlib,json,re
-          from quarantine_state import QuarantineState,StateError
+          from github_state import GitHubState,StateError
           from adapters import checked
           FROZEN='7cf655bd667d748e2e4030da1b6b78c7aa0c236e'
           class QuarantineState(GitHubState):
@@ -360,6 +360,7 @@ jobs:
             ]
           }
           QUARANTINE_FILE
+          python -c 'from quarantine_state import QuarantineState; assert QuarantineState.__name__ == "QuarantineState"'
           cat > actions_empire.py <<'PYCODE'
           """One privately prepared promo, PRIVATE only, then stop for Studio review.
           
@@ -437,18 +438,22 @@ jobs:
                   stage="complete_channel_duplicate_read"
                   c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data
                   playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']
-                  page=None;seen=set();ids=[]
+                  page=None;seen=set();ids=[];total=None
                   while True:
                       q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}
                       if page:q['pageToken']=page
                       data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data
+                      if total is None:total=data['pageInfo']['totalResults']
+                      elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel inventory changed')
                       ids.extend(x['contentDetails']['videoId'] for x in data.get('items',[]))
                       page=data.get('nextPageToken')
                       if not page:break
                       if page in seen:raise RuntimeError('Channel pagination loop')
                       seen.add(page)
+                  if len(ids)!=total or len(set(ids))!=len(ids):raise RuntimeError('Incomplete channel inventory')
                   for n in range(0,len(ids),50):
                       data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data
+                      if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise RuntimeError('Incomplete channel metadata')
                       for video in data.get('items',[]):
                           snippet=video['snippet']
                           if snippet['channelId']!=CHANNEL:raise RuntimeError('Channel mismatch')
