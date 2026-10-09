@@ -17,18 +17,25 @@ def probe(backend,run_id):
     if backend.compare_and_swap(key,old,{'value':3}):raise RuntimeError('Stale write unexpectedly accepted')
     print('State stage: stale write rejected')
     controls=Controls(backend,lambda:None)
+    print('Control stage: initial disable write')
     controls.set_access(False)
+    print('Control stage: initial disabled readback')
     try:controls.require_enabled()
     except ControlError:pass
     else:raise RuntimeError('Disabled control allowed access')
     try:
+        print('Control stage: enable write')
         controls.set_access(True,verified=True)
+        print('Control stage: enabled readback')
         controls.require_enabled()
     finally:
+        print('Control stage: final disable write')
         controls.set_access(False)
+    print('Control stage: final disabled readback')
     try:controls.require_enabled()
     except ControlError:pass
     else:raise RuntimeError('Stop control did not block access')
+    print('Control stage: stopped readback verified')
     return {'encrypted_state_readback':True,'stale_write_rejected':True,
             'stop_control_verified':True,'access_enabled':False,'video_uploaded':False}
 
@@ -71,7 +78,7 @@ def main():
             print('Diagnostic encrypted readback passed. No controls or videos changed.')
         else:
             print(json.dumps(probe(backend,os.environ['GITHUB_RUN_ID']),sort_keys=True))
-    except StateError as exc:
+    except (StateError,ControlError) as exc:
         print('Safe state diagnostic: '+str(exc))
         print('No video uploaded; stopped without retry.')
         raise SystemExit(1) from None
