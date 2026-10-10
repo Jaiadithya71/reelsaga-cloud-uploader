@@ -333,8 +333,9 @@ jobs:
         \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n\
         \    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
         \    record,version=backend.get(ledger.key(item['id'],'youtube'))\n    record=dict(record,\
-        \ state='published', claim={'type':'none','studio_verified':True})\n    if\
-        \ not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise\
+        \ state='published', claim={'type':'audio','track':'UNCOVERED','artist':'JOSEPH\
+        \ WILLIAM MORGAN','reach_impact':'none','strike':False,'studio_verified':True})\n\
+        \    if not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise\
         \ ValueError('Claim record checkpoint')\n    controls.set_access(False);stage='readback'\n\
         \    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
         \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback\
