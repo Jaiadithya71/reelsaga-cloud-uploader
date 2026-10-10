@@ -1,4 +1,4 @@
-name: Airport EP7P3 read only reconcile
+name: Airport EP7P3 resume precreate claim
 permissions:
   contents: write
 concurrency:
@@ -24,12 +24,11 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Read EP7P3 checkpoint and YouTube only
+    - name: Stage exact EP7P3 without publishing
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
-        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -277,36 +276,61 @@ jobs:
         \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
         \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
         \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > reconcile.py <<'PYCODE'\nimport json,os\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom transport\
-        \ import Transport,GoogleTokenForms\nfrom adapters import checked\nfrom credentials\
-        \ import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
-        \ import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\nitem={'id':\
-        \ 'netshort-airport-ep7-part3-v1', 'episode': 7, 'part': 3, 'title': \"Don't\
-        \ Mess With That Airport Cleaner - Episode 7 Part 3/4 | NetShort\", 'description':\
-        \ 'Ace pilot Alexander Cole took the fall for his brother Ryan to save his\
-        \ mother, lost his wings, became a janitor. When an engine fails mid-air,\
-        \ he saves everyone, but Ryan steals the credit, frames him. With ATC Maya,\
-        \ he exposes Ryan via black box and wire transfers. Ryan is jailed; Alexander\
-        \ reclaims his wings and the woman who believed in him.\\n\\nThis is only\
-        \ one piece of the story. The rest is waiting on the channel.\\n\\nWatch on\
-        \ NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\\n\\nFull episode part 3 of\
-        \ 4.\\nAffiliate links: I may earn a commission if you use them.', 'file':\
-        \ '/downloads/airport-screen/ep7-part3.mp4', 'source_start': 85.458333, 'source_end':\
-        \ 122.541667, 'privacy': 'private', 'approval_required': True, 'bytes': 20692224,\
-        \ 'sha256': '259f860116706094d1f2364933e66545628b26e5fe5dd8794c66c88da732b163'}\n\
-        backend=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);backend.initialize();ledger=DurableLedger(backend)\n\
-        saved,_=backend.get(ledger.key(item['id'],'youtube'))\nfor label,k in [('youtube',ledger.key(item['id'],'youtube')),('instagram',ledger.key(item['id'],'instagram')),('control','account-control')]:\n\
-        \ r,v=backend.get(k);print(json.dumps({'kind':label,'record':{a:b for a,b\
-        \ in (r or {}).items() if a!='session'},'version_present':bool(v)}))\ncredential=GoogleCredentials(Store(validated_record(os.environ['REELSAGA_GOOGLE_CREDENTIALS'])),GoogleTokenForms(),SCOPES);yt=Transport(credential.access_token,{'www.googleapis.com'})\n\
-        if saved and saved.get('external_id'):\n data=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':saved['external_id']})).data\n\
-        \ print(json.dumps({'youtube_readback':data,'metadata_hash_matches':saved.get('metadata_hash')==ledger.metadata_hash(item),'write_attempted':False}))\n\
-        \nPYCODE\npython reconcile.py\npython - <<'IGREAD'\nimport json,os\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom transport\
-        \ import Transport\nfrom adapters import checked\nfrom reader import read_token\n\
-        from instagram_record import EXPECTED_USER,EXPECTED_NAME\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize()\n\
-        r,_=b.get(DurableLedger.key('netshort-airport-ep7-part3-v1','instagram'));print(json.dumps({'ig_saved':r}))\n\
-        if r and r.get('external_id'):\n t=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY']);api=Transport(lambda:t,{'graph.instagram.com'});print(json.dumps({'ig_container':checked(api('GET','https://graph.instagram.com/v26.0/'+r['external_id'],params={'fields':'status_code,status'})).data}))\n\
-        IGREAD\n"
+        \nMODULE\ncat > ig_stage.py <<'IG_STAGE'\nimport json,os,urllib.request,urllib.parse\n\
+        from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
+        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
+        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
+        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
+        \ import Controls,ControlError\n\nitem={'id': 'netshort-airport-ep7-part3-v1',\
+        \ 'episode': 7, 'part': 3, 'title': \"Don't Mess With That Airport Cleaner\
+        \ - Episode 7 Part 3/4 | NetShort\", 'description': 'Ace pilot Alexander Cole\
+        \ took the fall for his brother Ryan to save his mother, lost his wings, became\
+        \ a janitor. When an engine fails mid-air, he saves everyone, but Ryan steals\
+        \ the credit, frames him. With ATC Maya, he exposes Ryan via black box and\
+        \ wire transfers. Ryan is jailed; Alexander reclaims his wings and the woman\
+        \ who believed in him.\\n\\nThis is only one piece of the story. The rest\
+        \ is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\\\
+        n\\nFull episode part 3 of 4.\\nAffiliate links: I may earn a commission if\
+        \ you use them.', 'file': '/downloads/airport-screen/ep7-part3.mp4', 'source_start':\
+        \ 85.458333, 'source_end': 122.541667, 'privacy': 'private', 'approval_required':\
+        \ True, 'bytes': 20692224, 'sha256': '259f860116706094d1f2364933e66545628b26e5fe5dd8794c66c88da732b163'}\n\
+        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
+        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
+        \    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n    if not saved\
+        \ or saved.get('state')!='started' or saved.get('external_id') is not None:raise\
+        \ ValueError('Unexpected recovery claim')\n    ledger.verify_item(item,'instagram')\n\
+        \    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
+        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
+        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
+        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
+        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
+        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
+        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
+        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
+        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
+        \ ValueError('Spacing')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
+        \    stage='require_enabled';import time\n    for _ in range(4):\n       \
+        \ control,_=backend.get('account-control')\n        if control and control.get('enabled')\
+        \ is True:break\n        time.sleep(3)\n    else:raise ValueError('Control\
+        \ enable readback failed')\n    controls.require_enabled()\n    stage='claim_record'\n\
+        \    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n    if not saved\
+        \ or saved.get('state')!='started' or saved.get('external_id') is not None:raise\
+        \ ValueError('Claim changed')\n    stage='uncertain_checkpoint'\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
+        \    import time\n    for _ in range(4):\n        saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \        if saved and saved.get('state')=='uncertain':break\n        time.sleep(3)\n\
+        \    else:raise ValueError('Uncertain checkpoint readback failed')\n    stage='create'\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':'https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791604591&public_id=reelsaga-airport-ep7-part3-video-v1&format=mp4&type=private&expires_at=1791615391&signature=fe619f3861fa618f0e3c302ae64fd0ec428c0122&api_key=323756243716765','cover_url':'https://api.cloudinary.com/v1_1/btob02ll/image/download?timestamp=1791604594&public_id=reelsaga-airport-ep7-part3-cover-v1&format=jpg&type=private&expires_at=1791615394&signature=aa9dc669d374e951491d84c259daca6b5a1aaa23&api_key=323756243716765','caption':caption,'share_to_feed':True})).data\n\
+        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
+        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
+        \ ValueError('Checkpoint')\n    print(json.dumps({'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}))\n\
+        except Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
+        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
+        \        except Exception:pass\n\nIG_STAGE\npython ig_stage.py\n"
 'on':
   workflow_dispatch: null
