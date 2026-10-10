@@ -1,4 +1,4 @@
-name: Airport EP7P1 publish once
+name: Airport EP7P2 private only
 permissions:
   contents: write
 concurrency:
@@ -24,12 +24,15 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Publish exact EP7P1 after matching YouTube gates
+    - name: Core and private-upload safety tests
+      run: "for test in tests/test_*.py; do\n  case \"$test\" in\n    tests/test_actions_real_part.py|tests/test_actions_vows_part.py|tests/test_actions_heiress_part.py)\
+        \ continue ;;\n  esac\n  python -m unittest discover -s tests -p \"$(basename\
+        \ \"$test\")\" -v || exit 1\ndone\n"
+    - name: Upload exact EP7P2 privately then stop
       env:
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
-        REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
-        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -240,106 +243,101 @@ jobs:
         ,\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n    \"probe-37874770790\"\
         ,\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
         \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"\
-        '\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
-        \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import\
-        \ datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\n\
-        SCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
-        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n\
-        \    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
-        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
-        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
-        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n\
-        \    except Exception:\n        raise ValueError('Invalid credential dates')\
-        \ from None\n    if created.tzinfo is None or expiry.tzinfo is None or created>now+timedelta(seconds=30)\
-        \ or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
-        \ expired or dates invalid')\n    token=record.get('access_token')\n    if\
-        \ not isinstance(token,str) or len(token)<100 or not token.isascii():\n  \
-        \      raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
-        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer\
-        \ '+token},params={'fields':'user_id,username'})\n    if identity.get('username')!=EXPECTED_NAME\
-        \ or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
-        \ Instagram identity mismatch')\n    return identity\n\nMODULE\ncat > reader.py\
-        \ <<'MODULE'\n\"\"\"Server-side reader. No credential is written to logs or\
-        \ a public artifact.\"\"\"\nimport json,os,urllib.request,urllib.parse\nfrom\
-        \ instagram_record import validate_record,verify_live_identity\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
-        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https'\
-        \ or parsed.hostname!='kathirvelan-boutique.vercel.app' or parsed.path!='/api/instagram/reelsaga-reader'\
-        \ or parsed.port not in (None,443) or parsed.username or parsed.password or\
-        \ parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader\
-        \ destination')\n    if not secret or len(secret)<32:\n        raise ValueError('Reader\
-        \ credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
-        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
-        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the\
-        \ read key to another destination.\n    if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n\
-        \    with opener(request,timeout=30) as response:\n        if response.status!=200:raise\
-        \ ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
-        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n\
-        \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
-        \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
-        \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > ig_stage.py <<'IGCODE'\nimport json,os,urllib.request,urllib.parse\n\
-        from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
-        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
-        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
-        \ import Controls,ControlError\n\nitem={'id': 'netshort-airport-ep7-part1-v1',\
-        \ 'episode': 7, 'part': 1, 'title': \"Don't Mess With That Airport Cleaner\
-        \ - Episode 7 Part 1/4 | NetShort\", 'description': 'Ace pilot Alexander Cole\
-        \ took the fall for his brother Ryan to save his mother, lost his wings, became\
-        \ a janitor. When an engine fails mid-air, he saves everyone, but Ryan steals\
-        \ the credit, frames him. With ATC Maya, he exposes Ryan via black box and\
-        \ wire transfers. Ryan is jailed; Alexander reclaims his wings and the woman\
-        \ who believed in him.\\n\\nThis is only one piece of the story. The rest\
-        \ is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\\\
-        n\\nFull episode part 1 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.', 'file': '/downloads/airport-screen/ep7-part1.mp4', 'source_start':\
-        \ 0, 'source_end': 40.458333, 'privacy': 'private', 'approval_required': True,\
-        \ 'bytes': 23611568, 'sha256': '64bc6cc8d852fde6a137ae6b6bd927dce0d8b6a2b119ce09bf0636c68a499661'}\n\
-        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
-        from credentials import GoogleCredentials\nfrom actions_canary import Store\n\
-        from provision_actions import validated_record\nfrom desktop_setup import\
-        \ SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
-        try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
-        \    if saved['state']!='processing' or saved['external_id']!='18122792920793253':raise\
-        \ ValueError('No staged container')\n    stage='youtube_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
-        \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'HUvNRojsZes'})).data['items'][0]\n\
-        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
-        \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public'\
-        \ or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('YT\
-        \ prerequisite')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
-        \    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
-        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('Identity')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n\
-        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')\n\
-        \        if url in seen:raise ValueError('Pagination loop')\n        if url:seen.add(url)\n\
-        \    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n\
-        \    if rows and datetime.now(timezone.utc)-max(datetime.fromisoformat(x['timestamp'])\
-        \ for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n    q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        \    if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')\n\
-        \    stage='container_status'\n    import time\n    container=saved['external_id']\n\
-        \    for attempt in range(5):\n        status=checked(api('GET',base+container,params={'fields':'status_code'})).data\n\
-        \        if status['status_code']=='FINISHED':break\n        if status['status_code']!='IN_PROGRESS':raise\
-        \ ValueError('Container failed')\n        if attempt<4:time.sleep(60)\n  \
-        \  else:raise ValueError('Container not FINISHED')\n    stage='publish'\n\
-        \    controls.set_access(True,verified=True);controls.require_enabled()\n\
-        \    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)\n\
-        \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n\
-        \    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
-        \    record,version=backend.get(ledger.key(item['id'],'youtube'))\n    record=dict(record,\
-        \ state='published', claim={'type':'none','studio_verified':True})\n    if\
-        \ not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise\
-        \ ValueError('Claim record checkpoint')\n    controls.set_access(False);stage='readback'\n\
-        \    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
-        \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback\
-        \ mismatch')\n    print(json.dumps({'instagram_published':True,'media':m,'caption_exact':True,'matching_youtube_public':True,'stop_verified':True}))\n\
-        except Exception:\n    print('IG publish stopped at '+stage+'. Reconcile saved\
-        \ ledger before retry.');raise SystemExit(1) from None\nfinally:\n    if controls:\n\
-        \        try:controls.set_access(False)\n        except Exception:pass\n\n\
-        IGCODE\npython ig_stage.py\n"
+        '\ncat > actions_empire.py <<'PYCODE'\n\"\"\"One privately prepared promo,\
+        \ PRIVATE only, then stop for Studio review.\n\nManual dispatch only. Reruns\
+        \ never recreate a claimed upload.\n\"\"\"\nimport hashlib,json,os\nfrom pathlib\
+        \ import Path\nfrom actions_canary import Store\nfrom desktop_setup import\
+        \ CHANNEL,SCOPES\nfrom provision_actions import validated_record\nfrom credentials\
+        \ import GoogleCredentials\nfrom transport import Transport,GoogleTokenForms\n\
+        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\n\
+        from controls import Controls,ControlError\nfrom adapters import YouTube,checked\n\
+        from actions_state_probe import probe\n\nimport urllib.request\nPath(\"empire.mp4\"\
+        ).write_bytes(urllib.request.urlopen('https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791601010&public_id=reelsaga-airport-ep7-part2-video-v1&format=mp4&type=private&expires_at=1791611810&signature=2af004f58e9e032b467690700d526da859b34e31&api_key=323756243716765',timeout=120).read())\n\
+        Path(\"empire.json\").write_text('{\"id\": \"netshort-airport-ep7-part2-v1\"\
+        , \"episode\": 7, \"part\": 2, \"title\": \"Don\\'t Mess With That Airport\
+        \ Cleaner - Episode 7 Part 2/4 | NetShort\", \"description\": \"Ace pilot\
+        \ Alexander Cole took the fall for his brother Ryan to save his mother, lost\
+        \ his wings, became a janitor. When an engine fails mid-air, he saves everyone,\
+        \ but Ryan steals the credit, frames him. With ATC Maya, he exposes Ryan via\
+        \ black box and wire transfers. Ryan is jailed; Alexander reclaims his wings\
+        \ and the woman who believed in him.\\\\n\\\\nThis is only one piece of the\
+        \ story. The rest is waiting on the channel.\\\\n\\\\nWatch on NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\\\
+        \\n\\\\nFull episode part 2 of 4.\\\\nAffiliate links: I may earn a commission\
+        \ if you use them.\", \"file\": \"/downloads/airport-screen/ep7-part2.mp4\"\
+        , \"source_start\": 40.458333, \"source_end\": 85.458333, \"privacy\": \"\
+        private\", \"approval_required\": true, \"bytes\": 22650613, \"sha256\": \"\
+        6cd8fcfd19851ad7dabbb05696973f2cde3736b2de9b9fbec0b591f4412c8296\"}')\nMANIFEST=\"\
+        empire.json\"\n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n\
+        \    if item!=expected or item[\"id\"]!=\"netshort-airport-ep7-part2-v1\"\
+        :raise RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
+        bytes\"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item[\"sha256\"\
+        ]:raise RuntimeError(\"Media integrity mismatch\")\n    if item.get(\"privacy\"\
+        )!=\"private\":raise RuntimeError(\"Private gate missing\")\n\ndef run(backend,api,item,path):\n\
+        \    validate(item,path)\n    controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)\n\
+        \    if ledger.resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item\
+        \ already claimed; reconcile only')\n    controls.require_enabled()\n    if\
+        \ not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')\n\
+        \    checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)\n\
+        \    checkpoint('uncertain');controls.require_enabled()\n    youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)\n\
+        \    offset=0\n    while offset<item['bytes']:\n        controls.require_enabled()\n\
+        \        result=youtube.send_chunk(session,path,offset,checkpoint)\n     \
+        \   if 'video_id' in result:break\n        new_offset=result.get('offset',0)\n\
+        \        if not offset<new_offset<=item['bytes']:raise RuntimeError('Invalid\
+        \ server offset')\n        offset=new_offset\n    if 'video_id' not in result:raise\
+        \ RuntimeError('Saved session incomplete; no retry')\n    video=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':result['video_id']})).data\n\
+        \    rows=video.get('items',[])\n    if len(rows)!=1:raise RuntimeError('Video\
+        \ readback missing')\n    row=rows[0]\n    if row['snippet']['channelId']!=CHANNEL\
+        \ or row['status']['privacyStatus']!='private' or row['snippet']['title']!=item['title']\
+        \ or row['snippet']['description']!=item['description'] or row['status'].get('selfDeclaredMadeForKids')\
+        \ is not False:\n        raise RuntimeError('Private metadata readback mismatch')\n\
+        \    return {'item_id':item['id'],'video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}\n\
+        \ndef main():\n    controls=None\n    stage=\"manifest\"\n    try:\n     \
+        \   item=json.loads(Path(MANIFEST).read_text());path='empire.mp4';validate(item,path)\n\
+        \        stage=\"credentials_config\"\n        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')\n\
+        \        stage=\"state_initialize\"\n        stable=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        \        if len(stable)<48:raise RuntimeError('Stable key missing')\n    \
+        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),stable);backend.initialize()\n\
+        \        stage=\"state_probe\"\n        controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])\n\
+        \        stage=\"google_refresh\"\n        credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES);token=credential.access_token()\n\
+        \        api=Transport(lambda:token,{'www.googleapis.com'})\n        stage=\"\
+        channel_identity\"\n        identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data\n\
+        \        if {x.get('id') for x in identity.get('items',[])}!={CHANNEL}:raise\
+        \ RuntimeError('Identity mismatch')\n        stage=\"complete_channel_duplicate_read\"\
+        \n        c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data\n\
+        \        playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']\n\
+        \        page=None;seen=set();ids=[];total=None\n        while True:\n   \
+        \         q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
+        \            if page:q['pageToken']=page\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data\n\
+        \            if total is None:total=data['pageInfo']['totalResults']\n   \
+        \         elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel\
+        \ inventory changed')\n            ids.extend(x['contentDetails']['videoId']\
+        \ for x in data.get('items',[]))\n            page=data.get('nextPageToken')\n\
+        \            if not page:break\n            if page in seen:raise RuntimeError('Channel\
+        \ pagination loop')\n            seen.add(page)\n        if len(ids)!=total\
+        \ or len(set(ids))!=len(ids):raise RuntimeError('Incomplete channel inventory')\n\
+        \        for n in range(0,len(ids),50):\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
+        \            if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise\
+        \ RuntimeError('Incomplete channel metadata')\n            for video in data.get('items',[]):\n\
+        \                snippet=video['snippet']\n                if snippet['channelId']!=CHANNEL:raise\
+        \ RuntimeError('Channel mismatch')\n                if snippet['title']==item['title']\
+        \ or (\"Airport Cleaner\" in snippet['title'] and 'Episode 7 Part 2' in snippet['title']):raise\
+        \ RuntimeError('Existing episode part, reconcile only')\n        print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':len(ids),'duplicate_part_found':False}))\n\
+        \        stage=\"item_claim_read\"\n        if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise\
+        \ RuntimeError('Item already claimed')\n        stage=\"enable_control\"\n\
+        \        controls.set_access(True,verified=True)\n        stage=\"private_upload\"\
+        \n        result=run(backend,api,item,path)\n        stage=\"stop_verify\"\
+        \n        controls.set_access(False)\n        try:controls.require_enabled()\n\
+        \        except ControlError:pass\n        else:raise RuntimeError('Stop did\
+        \ not block access')\n        stage=\"checkpoint_readback\"\n        saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))\n\
+        \        if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint\
+        \ mismatch')\n        result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)\n\
+        \        print(json.dumps(result,sort_keys=True))\n    except Exception:\n\
+        \        print('Safe failure stage: '+stage)\n        print('Real-part upload\
+        \ stopped. Reconcile encrypted ledger and Studio before retry; secrets not\
+        \ shown.')\n        raise SystemExit(1) from None\n    finally:\n        if\
+        \ controls is not None:\n            try:controls.set_access(False)\n    \
+        \        except Exception:\n                print('STOP control write unconfirmed.\
+        \ No rerun; operator action required.')\n                raise SystemExit(2)\
+        \ from None\nif __name__=='__main__':main()\nPYCODE\npython actions_empire.py\n"
 'on':
   workflow_dispatch: null
