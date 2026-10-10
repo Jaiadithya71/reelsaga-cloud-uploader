@@ -301,5 +301,5 @@ jobs:
         if saved and saved.get('external_id'):\n data=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':saved['external_id']})).data\n\
         \ print(json.dumps({'youtube_readback':data,'metadata_hash_matches':saved.get('metadata_hash')==ledger.metadata_hash(item),'write_attempted':False}))\n\
         \nPYCODE\npython reconcile.py\n"
-true:
+'on':
   workflow_dispatch: null
