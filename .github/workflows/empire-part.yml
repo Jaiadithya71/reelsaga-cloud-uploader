@@ -276,62 +276,9 @@ jobs:
         \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
         \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
         \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > ig_stage.py <<'IG_STAGE'\nimport json,os,urllib.request,urllib.parse\n\
+        \nMODULE\ncat > ig_stage.py <<'IGCODE'\nimport json,os,urllib.request,urllib.parse\n\
         from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
         from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
-        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
-        \ import Controls,ControlError\n\nitem={'id': 'netshort-airport-ep8-part4-v1',\
-        \ 'episode': 8, 'part': 4, 'title': \"Don't Mess With That Airport Cleaner\
-        \ - Episode 8 Part 4/4 | NetShort\", 'description': 'Ace pilot Alexander Cole\
-        \ took the fall for his brother Ryan to save his mother, lost his wings, became\
-        \ a janitor. When an engine fails mid-air, he saves everyone, but Ryan steals\
-        \ the credit, frames him. With ATC Maya, he exposes Ryan via black box and\
-        \ wire transfers. Ryan is jailed; Alexander reclaims his wings and the woman\
-        \ who believed in him.\\n\\nThis is only one piece of the story. The rest\
-        \ is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/dC6cCM2XpGG8\\\
-        n\\nFull episode part 4 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.', 'file': '/downloads/airport-screen/ep8-part4.mp4', 'source_start':\
-        \ 132, 'source_end': 163.841, 'privacy': 'private', 'approval_required': True,\
-        \ 'bytes': 10121382, 'sha256': 'fe0ac3012b0b6c6ef4e84dea14a00848a9dafc4c392acd16ab2f42dbd7b8e6d5'}\n\
-        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
-        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already\
-        \ claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
-        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
-        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
-        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
-        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
-        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
-        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
-        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
-        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
-        \ ValueError('Spacing')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
-        \    stage='require_enabled';controls.require_enabled()\n    stage='claim_record'\n\
-        \    if not ledger.claim(item,'instagram'):raise ValueError('Existing claim;\
-        \ reconcile only')\n    stage='uncertain_checkpoint'\n    import time\n  \
-        \  for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if claimed and claimed.get('state')=='started':break\n        time.sleep(3)\n\
-        \    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
-        \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if claimed and claimed.get('state')=='uncertain':break\n        time.sleep(3)\n\
-        \    else:raise ValueError('Uncertain readback did not settle')\n    stage='create'\n\
-        \    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':'https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791626335&public_id=reelsaga-airport-ep8-part4-video-v1&format=mp4&type=private&expires_at=1791637135&signature=9782d8cc406cee22c3226442fac0be4807b9f089&api_key=323756243716765','cover_url':'https://api.cloudinary.com/v1_1/btob02ll/image/download?timestamp=1791626337&public_id=reelsaga-airport-ep8-part4-cover-v1&format=jpg&type=private&expires_at=1791637137&signature=25dde6675855885a8fc4996a7eb65571773ff1df&api_key=323756243716765','caption':caption,'share_to_feed':True})).data\n\
-        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
-        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
-        \ ValueError('Checkpoint')\n    print(json.dumps({'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}))\n\
-        except Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
-        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
-        \        except Exception:pass\n\nIG_STAGE\npython ig_stage.py\ncat > ig_stage.py\
-        \ <<'IGCODE'\nimport json,os,urllib.request,urllib.parse\nfrom datetime import\
-        \ datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import\
-        \ read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
         \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
         \ import Controls,ControlError\n\nitem={'id': 'netshort-swarm-ep1-part1-v1',\
