@@ -1,4 +1,4 @@
-name: Swarm EP1P1 Instagram stage only
+name: Swarm EP1P1 Instagram stage verified control
 permissions:
   contents: write
 concurrency:
@@ -276,7 +276,7 @@ jobs:
         \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
         \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
         \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > ig_stage.py <<'IGCODE'\nimport json,os,urllib.request,urllib.parse\n\
+        \nMODULE\ncat > ig_stage.py <<'IG_STAGE'\nimport json,os,urllib.request,urllib.parse\n\
         from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
         from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
@@ -311,10 +311,13 @@ jobs:
         \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
         \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
         \ ValueError('Spacing')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
-        \    stage='require_enabled';controls.require_enabled()\n    stage='claim_record'\n\
-        \    if not ledger.claim(item,'instagram'):raise ValueError('Existing claim;\
-        \ reconcile only')\n    stage='uncertain_checkpoint'\n    import time\n  \
-        \  for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \    stage='require_enabled'\n    import time\n    for attempt in range(5):\n\
+        \        control,_=backend.get('account-control')\n        if control and\
+        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
+        \    else:raise ValueError('Control enable readback did not settle')\n   \
+        \ controls.require_enabled()\n    stage='claim_record'\n    if not ledger.claim(item,'instagram'):raise\
+        \ ValueError('Existing claim; reconcile only')\n    stage='uncertain_checkpoint'\n\
+        \    import time\n    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
         \        if claimed and claimed.get('state')=='started':break\n        time.sleep(3)\n\
         \    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
         \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
@@ -327,6 +330,6 @@ jobs:
         \ ValueError('Checkpoint')\n    print(json.dumps({'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}))\n\
         except Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
         \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
-        \        except Exception:pass\n\nIGCODE\npython ig_stage.py\n"
+        \        except Exception:pass\nIG_STAGE\npython ig_stage.py\n"
 'on':
   workflow_dispatch: null
