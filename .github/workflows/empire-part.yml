@@ -1,4 +1,4 @@
-name: Airport EP7P2 IG stage only
+name: Airport EP7P2 publish once
 permissions:
   contents: write
 concurrency:
@@ -24,11 +24,12 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Stage exact EP7P2 only
+    - name: Publish exact EP7P2 after matching YouTube gates
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -276,7 +277,7 @@ jobs:
         \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
         \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
         \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > ig_stage.py <<'IG_STAGE'\nimport json,os,urllib.request,urllib.parse\n\
+        \nMODULE\ncat > ig_stage.py <<'IGCODE'\nimport json,os,urllib.request,urllib.parse\n\
         from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
         from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
@@ -295,33 +296,50 @@ jobs:
         \ 40.458333, 'source_end': 85.458333, 'privacy': 'private', 'approval_required':\
         \ True, 'bytes': 22650613, 'sha256': '6cd8fcfd19851ad7dabbb05696973f2cde3736b2de9b9fbec0b591f4412c8296'}\n\
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
-        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        from credentials import GoogleCredentials\nfrom actions_canary import Store\n\
+        from provision_actions import validated_record\nfrom desktop_setup import\
+        \ SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
+        try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
         \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
         \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already\
-        \ claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        \    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
+        \    if saved['state']!='processing' or saved['external_id']!='18122817787793253':raise\
+        \ ValueError('No staged container')\n    stage='youtube_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
+        \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
+        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'fGBLZSlzR9I'})).data['items'][0]\n\
+        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
+        \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public'\
+        \ or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('YT\
+        \ prerequisite')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
+        \    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
         \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
-        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
-        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
-        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
-        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
-        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
-        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
-        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
-        \ ValueError('Spacing')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
-        \    stage='require_enabled';controls.require_enabled()\n    stage='claim_record'\n\
-        \    if not ledger.claim(item,'instagram'):raise ValueError('Existing claim;\
-        \ reconcile only')\n    stage='uncertain_checkpoint'\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
-        \    stage='create'\n    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':'https://api.cloudinary.com/v1_1/btob02ll/video/download?timestamp=1791601010&public_id=reelsaga-airport-ep7-part2-video-v1&format=mp4&type=private&expires_at=1791611810&signature=2af004f58e9e032b467690700d526da859b34e31&api_key=323756243716765','cover_url':'https://api.cloudinary.com/v1_1/btob02ll/image/download?timestamp=1791601012&public_id=reelsaga-airport-ep7-part2-cover-v1&format=jpg&type=private&expires_at=1791611812&signature=608d84d9589b9066944fa69b84d607cf188ff246&api_key=323756243716765','caption':caption,'share_to_feed':True})).data\n\
-        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
-        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
-        \ ValueError('Checkpoint')\n    print(json.dumps({'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}))\n\
-        except Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
-        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
-        \        except Exception:pass\n\nIG_STAGE\npython ig_stage.py\n"
+        \ ValueError('Identity')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n\
+        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')\n\
+        \        if url in seen:raise ValueError('Pagination loop')\n        if url:seen.add(url)\n\
+        \    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n\
+        \    if rows and datetime.now(timezone.utc)-max(datetime.fromisoformat(x['timestamp'])\
+        \ for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n    q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')\n\
+        \    stage='container_status'\n    import time\n    container=saved['external_id']\n\
+        \    for attempt in range(5):\n        status=checked(api('GET',base+container,params={'fields':'status_code'})).data\n\
+        \        if status['status_code']=='FINISHED':break\n        if status['status_code']!='IN_PROGRESS':raise\
+        \ ValueError('Container failed')\n        if attempt<4:time.sleep(60)\n  \
+        \  else:raise ValueError('Container not FINISHED')\n    stage='publish'\n\
+        \    controls.set_access(True,verified=True);controls.require_enabled()\n\
+        \    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n\
+        \    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
+        \    record,version=backend.get(ledger.key(item['id'],'youtube'))\n    record=dict(record,\
+        \ state='published', claim={'type':'none','studio_verified':True})\n    if\
+        \ not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise\
+        \ ValueError('Claim record checkpoint')\n    controls.set_access(False);stage='readback'\n\
+        \    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
+        \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback\
+        \ mismatch')\n    print(json.dumps({'instagram_published':True,'media':m,'caption_exact':True,'matching_youtube_public':True,'stop_verified':True}))\n\
+        except Exception:\n    print('IG publish stopped at '+stage+'. Reconcile saved\
+        \ ledger before retry.');raise SystemExit(1) from None\nfinally:\n    if controls:\n\
+        \        try:controls.set_access(False)\n        except Exception:pass\n\n\
+        IGCODE\npython ig_stage.py\n"
 'on':
   workflow_dispatch: null
