@@ -169,10 +169,10 @@ jobs:
         \ \"title\": \"Cast Me Out, Feed the Swarm - Episode 1 Part 4/5 | NetShort\", \"description\": \"Thirty\
         \ years ago, Ethan Hawk sacrificed his lifespan to raise the Skyveil and protect Earth, but was betrayed\
         \ and caged as humanity flew into the Zerg\\'s trap. When the trap was sprung, his plan activated: the veil\
-        \ rebooted, he killed the Zerg Mother, saved his daughter, and restored sunlight to Earth.\\n\\nThis is\
-        \ only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
-        n\\nFull episode part 4 of 5.\\nAffiliate links: I may earn a commission if you use them.\", \"file\": \"\
-        /downloads/swarm-screen/ep1-part4.mp4\", \"source_start\": 121.5, \"source_end\": 165.166667, \"privacy\"\
+        \ rebooted, he killed the Zerg Mother, saved his daughter, and restored sunlight to Earth.\\\\n\\\\nThis\
+        \ is only one piece of the story. The rest is waiting on the channel.\\\\n\\\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
+        \\n\\\\nFull episode part 4 of 5.\\\\nAffiliate links: I may earn a commission if you use them.\", \"file\"\
+        : \"/downloads/swarm-screen/ep1-part4.mp4\", \"source_start\": 121.5, \"source_end\": 165.166667, \"privacy\"\
         : \"private\", \"approval_required\": true, \"bytes\": 57147727, \"sha256\": \"be868adb2f84799911a47a74228da4f6314062766af271e940e27588965c6f5b\"\
         }')\nMANIFEST=\"empire.json\"\n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n\
         \    if item!=expected or item[\"id\"]!=\"netshort-swarm-ep1-part4-v1\":raise RuntimeError(\"Unexpected\
