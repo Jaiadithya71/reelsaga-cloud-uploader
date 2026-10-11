@@ -1,4 +1,4 @@
-name: Tigris unpublished Meta fetch trial
+name: Read existing Tigris Meta trial audit
 permissions:
   contents: write
 concurrency:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Create exactly one never-publish Meta trial and review status
+    - name: Read trial audit and live status only
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -276,32 +276,20 @@ jobs:
         \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
         \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
         \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > tigris_trial.py <<'TRIAL'\nVIDEO_URL='https://t3.storage.dev/reelsaga-private-staging-71/trial/ep5p4-native.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=tid_dKNCHULCPLPHuPiKOWvrGNmHQcTinNYotnMZrOrffAJiAOHvtM%2F20261011%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261011T133522Z&X-Amz-Expires=10800&X-Amz-SignedHeaders=host&X-Amz-Signature=78173646d0d65af80c87b7522ca9df48ac123114649832dd55e2fa8ad566d6b7'\n\
-        COVER_URL='https://t3.storage.dev/reelsaga-private-staging-71/trial/ep5p4-cover.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=tid_dKNCHULCPLPHuPiKOWvrGNmHQcTinNYotnMZrOrffAJiAOHvtM%2F20261011%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20261011T133523Z&X-Amz-Expires=10800&X-Amz-SignedHeaders=host&X-Amz-Signature=557177d01e894dd98ef508f32ba33469c3870de486e1cd48b0e8ce4586d481d1'\n\
-        SOURCE_HASH='d26d1e07b66dda46a337f70dee463619f498d4be2dfc3ab65502d11ab97437c2'\n\
-        import os,json,time\nfrom reader import read_token\nfrom instagram_record\
-        \ import EXPECTED_USER,EXPECTED_NAME\nfrom transport import Transport\nfrom\
-        \ adapters import checked\nfrom quarantine_state import QuarantineState\n\
-        key='tigris-fetch-trial-20261011-ep5p4'\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize()\n\
-        saved,v=b.get(key)\nif saved:raise SystemExit('Trial already recorded. Reconcile,\
-        \ never recreate.')\ntoken=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY'])\n\
-        api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
-        i=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
+        \nMODULE\ncat > trial_read.py <<'READ_ONLY'\nimport os,json\nfrom transport\
+        \ import Transport\nfrom quarantine_state import QuarantineState\nfrom reader\
+        \ import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME\n\
+        from adapters import checked\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize()\n\
+        r,v=b.get('tigris-fetch-trial-20261011-ep5p4')\nif not r:raise SystemExit('Audit\
+        \ record absent; no recreation')\nif not r.get('never_publish'):raise SystemExit('Bad\
+        \ trial record')\napi=Transport(lambda:read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY']),{'graph.instagram.com'})\n\
+        i=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
         if i.get('username')!=EXPECTED_NAME or str(i.get('user_id'))!=EXPECTED_USER:raise\
-        \ SystemExit('Wrong identity')\nq=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        if q['quota_usage']>=min(40,q['config']['quota_total']):raise SystemExit('Quota')\n\
-        record={'state':'uncertain','never_publish':True,'source_sha256':SOURCE_HASH,'video_object':'trial/ep5p4-native.mp4','test_cover':True}\n\
-        if not b.compare_and_swap(key,None,record):raise SystemExit('Trial claim conflict')\n\
-        r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':VIDEO_URL,'cover_url':COVER_URL,'caption':'Unpublished\
-        \ private-host fetch trial. Never publish.','share_to_feed':False})).data\n\
-        record.update(state='processing',container_id=r['id'])\nsaved,v=b.get(key)\n\
-        if saved is None or not b.compare_and_swap(key,v,record):raise SystemExit('Checkpoint\
-        \ failed; reconcile')\nprint(json.dumps({'trial_created':True,'container_id':r['id'],'never_publish':True}),flush=True)\n\
-        for attempt in range(15):\n s=checked(api('GET',base+r['id'],params={'fields':'status_code,status'})).data\n\
-        \ if s['status_code'] in ['FINISHED','ERROR','EXPIRED']:\n  record.update(state=s['status_code'],status=s);saved,v=b.get(key)\n\
-        \  if not b.compare_and_swap(key,v,record):raise SystemExit('Final audit checkpoint\
-        \ failed')\n  print(json.dumps({'trial_finished':s['status_code']=='FINISHED','container_id':r['id'],'status':s,'source_sha256':SOURCE_HASH,'never_publish':True,'publish_attempted':False}),flush=True);break\n\
-        \ time.sleep(30)\nelse:print(json.dumps({'trial_pending':True,'container_id':r['id'],'never_publish':True}),flush=True)\n\
-        \nTRIAL\npython tigris_trial.py\n"
+        \ SystemExit('Identity')\nc=r.get('container_id')\nif not c:raise SystemExit('Uncertain\
+        \ creation; audit has no ID')\nst=checked(api('GET','https://graph.instagram.com/v26.0/'+c,params={'fields':'status_code,status'})).data\n\
+        out={'container_id':c,'status':st,'audit_state':r['state'],'source_sha256':r['source_sha256'],'never_publish':True,'publish_attempted':False}\n\
+        print(json.dumps(out),flush=True)\nopen(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ Tigris trial live readback\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
+        n```\\n')\n\nREAD_ONLY\npython trial_read.py\n"
 'on':
   workflow_dispatch: null
