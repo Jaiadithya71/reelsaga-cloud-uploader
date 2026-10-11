@@ -402,18 +402,7 @@ jobs:
         \ is not False:\n        raise RuntimeError('Private metadata readback mismatch')\n\
         \    return {'item_id':item['id'],'video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}\n\
         \ndef main():\n    controls=None\n    stage=\"manifest\"\n    try:\n     \
-        \   item={'id': 'netshort-swarm-ep6-part4-v1', 'episode': 6, 'part': 4, 'title':\
-        \ 'Cast Me Out, Feed the Swarm - Episode 6 Part 4/4 | NetShort', 'description':\
-        \ \"Thirty years ago, Ethan Hawk sacrificed his lifespan to raise the Skyveil\
-        \ and protect Earth, but was betrayed and caged as humanity flew into the\
-        \ Zerg's trap. When the trap was sprung, his plan activated: the veil rebooted,\
-        \ he killed the Zerg Mother, saved his daughter, and restored sunlight to\
-        \ Earth.\\n\\nThis is only one piece of the story. The rest is waiting on\
-        \ the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
-        n\\nFull episode part 4 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.\", 'file': '/downloads/swarm-screen/ep6-part4-deterministic.mp4',\
-        \ 'source_start': 145.833333, 'source_end': 168.619, 'privacy': 'private',\
-        \ 'approval_required': True, 'bytes': 29648660, 'sha256': '5d6b450e209fe2b8b1198d6a594f37c7f08ef7d52048ae8eca3f220d9a641d96'}\n\
+        \   item=json.loads(Path(MANIFEST).read_text());path='empire.mp4';validate(item,path)\n\
         \        stage=\"credentials_config\"\n        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')\n\
         \        stage=\"state_initialize\"\n        stable=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
         \        if len(stable)<48:raise RuntimeError('Stable key missing')\n    \
