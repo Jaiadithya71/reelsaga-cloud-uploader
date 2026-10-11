@@ -1,4 +1,4 @@
-name: Swarm EP3P4 read-only diagnosis
+name: Swarm EP3P4 private upload
 permissions:
   contents: write
 concurrency:
@@ -304,17 +304,18 @@ jobs:
         \ RuntimeError('Identity mismatch')\n        stage=\"complete_channel_duplicate_read\"\
         \n        c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data\n\
         \        playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']\n\
-        \        page=None;seen=set();ids=[];total=None\n        while True:\n   \
-        \         q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
+        \        page=None;seen=set();ids=[];entries=[];total=None\n        while\
+        \ True:\n            q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
         \            if page:q['pageToken']=page\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data\n\
         \            if total is None:total=data['pageInfo']['totalResults']\n   \
         \         elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel\
-        \ inventory changed')\n            ids.extend(x['contentDetails']['videoId']\
+        \ inventory changed')\n            entries.extend(data.get('items',[]));ids.extend(x['contentDetails']['videoId']\
         \ for x in data.get('items',[]))\n            page=data.get('nextPageToken')\n\
         \            if not page:break\n            if page in seen:raise RuntimeError('Channel\
-        \ pagination loop')\n            seen.add(page)\n        print(json.dumps({'inventory_count':len(ids),'reported_total':total,'unique_count':len(set(ids)),'terminal_page':page\
-        \ is None}))\n        print(json.dumps({'duplicate_inventory_ids':[v for v\
-        \ in set(ids) if ids.count(v)>1]}))\n        ids=list(dict.fromkeys(ids))\n\
+        \ pagination loop')\n            seen.add(page)\n        if len(entries)!=total\
+        \ or len({x['id'] for x in entries})!=total:raise RuntimeError('Incomplete\
+        \ channel inventory')\n        print(json.dumps({'complete_playlist_entry_count':len(entries),'unique_video_count':len(set(ids)),'duplicate_video_ids':[v\
+        \ for v in set(ids) if ids.count(v)>1]}))\n        ids=list(dict.fromkeys(ids))\n\
         \        for n in range(0,len(ids),50):\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
         \            if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise\
         \ RuntimeError('Incomplete channel metadata')\n            for video in data.get('items',[]):\n\
@@ -324,18 +325,28 @@ jobs:
         \ 4' in snippet['title']):raise RuntimeError('Existing episode part, reconcile\
         \ only')\n        print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':len(ids),'duplicate_part_found':False}))\n\
         \        stage=\"item_claim_read\"\n        if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise\
-        \ RuntimeError('Item already claimed')\n        print(json.dumps({'read_only_diagnosis_complete':True,'item_state':'unclaimed'}))\n\
-        \    except Exception as e:\n        safe={'Channel inventory changed','Channel\
-        \ pagination loop','Incomplete channel inventory','Incomplete channel metadata','Channel\
-        \ mismatch','Existing episode part, reconcile only','Item already claimed'}\n\
-        \        print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'diagnosis':str(e)\
-        \ if str(e) in safe else 'Other source read failure'}))\n        print('Safe\
-        \ failure stage: '+stage)\n        print('Real-part upload stopped. Reconcile\
-        \ encrypted ledger and Studio before retry; secrets not shown.')\n       \
-        \ raise SystemExit(1) from None\n    finally:\n        if controls is not\
-        \ None:\n            try:controls.set_access(False)\n            except Exception:\n\
-        \                print('STOP control write unconfirmed. No rerun; operator\
-        \ action required.')\n                raise SystemExit(2) from None\nif __name__=='__main__':main()\n\
-        PYCODE\npython actions_empire.py\n"
+        \ RuntimeError('Item already claimed')\n        stage=\"enable_control\"\n\
+        \        controls.set_access(True,verified=True)\n        stage=\"private_upload\"\
+        \n        import time\n        for attempt in range(5):\n            c,_=backend.get(\"\
+        account-control\")\n            if c and c.get(\"enabled\") is True:break\n\
+        \            if attempt<4:time.sleep(3)\n        else:raise RuntimeError(\"\
+        Control readback unsettled\")\n        result=run(backend,api,item,path)\n\
+        \        stage=\"stop_verify\"\n        controls.set_access(False)\n     \
+        \   import time\n        for _ in range(5):\n            control,_=backend.get('account-control')\n\
+        \            if control and control.get('enabled') is False:break\n      \
+        \      time.sleep(3)\n        else:raise RuntimeError('Stop readback did not\
+        \ settle')\n        try:controls.require_enabled()\n        except ControlError:pass\n\
+        \        else:raise RuntimeError('Stop did not block access')\n        stage=\"\
+        checkpoint_readback\"\n        saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))\n\
+        \        if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint\
+        \ mismatch')\n        result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)\n\
+        \        print(json.dumps(result,sort_keys=True))\n    except Exception:\n\
+        \        print('Safe failure stage: '+stage)\n        print('Real-part upload\
+        \ stopped. Reconcile encrypted ledger and Studio before retry; secrets not\
+        \ shown.')\n        raise SystemExit(1) from None\n    finally:\n        if\
+        \ controls is not None:\n            try:controls.set_access(False)\n    \
+        \        except Exception:\n                print('STOP control write unconfirmed.\
+        \ No rerun; operator action required.')\n                raise SystemExit(2)\
+        \ from None\nif __name__=='__main__':main()\nPYCODE\npython actions_empire.py\n"
 'on':
   workflow_dispatch: null
