@@ -362,9 +362,9 @@ jobs:
         \ Earth.\\n\\nThis is only one piece of the story. The rest is waiting on\
         \ the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
         n\\nFull episode part 3 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.\", 'file': '/downloads/swarm-screen/ep6-part3.mp4', 'source_start':\
+        \ you use them.\", 'file': '/downloads/swarm-screen/ep6-part3-avx2.mp4', 'source_start':\
         \ 106.133333, 'source_end': 145.833333, 'privacy': 'private', 'approval_required':\
-        \ True, 'bytes': 22070760, 'sha256': '1c1edd3284f5c485d0f512839d36aed59e7ec1fb681d7265fcf6922ec680a0dc'}\n\
+        \ True, 'bytes': 22068682, 'sha256': 'f110a668e47b0e59686b159616b1155246596b2b1184798b966b81b5af58f3b6'}\n\
         import os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\n\
         from transport import Transport\nfrom quarantine_state import QuarantineState\n\
         from tigris_durable import bootstrap,DurableStaging\nfrom tigris_staging import\
@@ -375,11 +375,11 @@ jobs:
         \ GuardStop('Supplier hash mismatch')\nPath('source.mp4').write_bytes(data)\n\
         subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
         apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
-        \ error -cpuflags 0 -ss 106.133333 -i source.mp4 -t 39.70000000000002 -vf\
-        \ 'fade=t=in:st=0:d=0.5,fade=t=out:st=39.20000000000002:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=39.20000000000002:d=0.5'\
-        \ -c:v libx264 -threads:v 3 -preset fast -crf 18 -c:a aac -b:a 192k -movflags\
-        \ +faststart -y ep6-part3.mp4 && ffmpeg -v error -i ep6-part3.mp4 -f null\
-        \ - && ffmpeg -v error -ss 1 -i ep6-part3.mp4 -frames:v 1 -y ep6-part3-cover.jpg\"\
+        \ error -ss 106.133333 -i source.mp4 -t 39.70000000000002 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=39.20000000000002:d=0.5'\
+        \ -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=39.20000000000002:d=0.5' -c:v\
+        \ libx264 -threads:v 3 -x264-params asm=avx2 -preset fast -crf 18 -c:a aac\
+        \ -b:a 192k -movflags +faststart -y ep6-part3.mp4 && ffmpeg -v error -i ep6-part3.mp4\
+        \ -f null - && ffmpeg -v error -ss 1 -i ep6-part3.mp4 -frames:v 1 -y ep6-part3-cover.jpg\"\
         ],check=True)\np=Path('ep6-part3.mp4')\nprint(json.dumps({'render_bytes':p.stat().st_size,'render_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'cpu_affinity':sorted(os.sched_getaffinity(0))[:2]}),flush=True)\n\
         if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise\
         \ GuardStop('Render parity mismatch; no PUT')\nrecords={}\nfor kind,path,ct\
