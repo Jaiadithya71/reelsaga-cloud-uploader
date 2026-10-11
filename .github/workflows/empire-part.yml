@@ -304,19 +304,16 @@ jobs:
         \ RuntimeError('Identity mismatch')\n        stage=\"complete_channel_duplicate_read\"\
         \n        c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data\n\
         \        playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']\n\
-        \        page=None;seen=set();ids=[];entries=[];total=None\n        while\
-        \ True:\n            q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
+        \        page=None;seen=set();ids=[];total=None\n        while True:\n   \
+        \         q={'part':'contentDetails','playlistId':playlist,'maxResults':'25'}\n\
         \            if page:q['pageToken']=page\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data\n\
         \            if total is None:total=data['pageInfo']['totalResults']\n   \
         \         elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel\
-        \ inventory changed')\n            entries.extend(data.get('items',[]));ids.extend(x['contentDetails']['videoId']\
+        \ inventory changed')\n            ids.extend(x['contentDetails']['videoId']\
         \ for x in data.get('items',[]))\n            page=data.get('nextPageToken')\n\
         \            if not page:break\n            if page in seen:raise RuntimeError('Channel\
-        \ pagination loop')\n            seen.add(page)\n        print(json.dumps({'inventory_count':len(ids),'reported_total':total,'unique_count':len(set(ids)),'terminal_page':page\
-        \ is None}))\n        duplicates={v for v in ids if ids.count(v)>1}\n    \
-        \    print(json.dumps({'duplicate_entries':[x for x in entries if x['contentDetails']['videoId']\
-        \ in duplicates]}))\n        if len(ids)!=total or len({x['id'] for x in entries})!=total:raise\
-        \ RuntimeError('Incomplete channel inventory')\n        ids=list(dict.fromkeys(ids))\n\
+        \ pagination loop')\n            seen.add(page)\n        if len(ids)!=total\
+        \ or len(set(ids))!=len(ids):raise RuntimeError('Incomplete channel inventory')\n\
         \        for n in range(0,len(ids),50):\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
         \            if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise\
         \ RuntimeError('Incomplete channel metadata')\n            for video in data.get('items',[]):\n\
