@@ -1,4 +1,4 @@
-name: Exact Swarm P5 guarded Tigris private preparation
+name: P5 render diagnostics only no staging
 permissions:
   contents: write
 concurrency:
@@ -380,17 +380,10 @@ jobs:
         \ libx264 -preset fast -crf 18 -c:a aac -b:a 192k -movflags +faststart -y\
         \ ep5-part5.mp4 && ffmpeg -v error -i ep5-part5.mp4 -f null - && ffmpeg -v\
         \ error -ss 1 -i ep5-part5.mp4 -frames:v 1 -y ep5-part5-cover.jpg\"],check=True)\n\
-        p=Path('ep5-part5.mp4')\nif p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise\
-        \ GuardStop('Render parity mismatch; no PUT')\nrecords={}\nfor kind,path,ct\
-        \ in [('video','ep5-part5.mp4','video/mp4'),('cover','ep5-part5-cover.jpg','image/jpeg')]:\n\
-        \ h=hashlib.sha256(Path(path).read_bytes()).hexdigest();obj='production/'+ITEM['id']+'/'+kind+'.'+('mp4'\
-        \ if kind=='video' else 'jpg')\n records[kind]=s.stage(path,obj,ct,h);s.verified_get(obj,h);records[kind].update(s.signed_get(obj))\n\
-        \ out={'phase':'staging','records':records,'never_publish_without_review':True}\n\
-        \ if not b.compare_and_swap(key,v,out):raise GuardStop('Host checkpoint CAS\
-        \ conflict')\n saved,v=b.get(key)\n if saved!=out:raise GuardStop('Host checkpoint\
-        \ unsettled')\nresult={'hosts':records,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
-        open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Exact P5 private hosts\\\
-        n\\n```json\\n'+json.dumps(result,indent=2)+'\\n```\\n')\nprint(json.dumps(result),flush=True)\n\
-        \nPREPARE\npython host_prep.py\n"
+        p=Path('ep5-part5.mp4')\ndiag={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'expected_bytes':ITEM['bytes'],'expected_sha256':ITEM['sha256'],'ffmpeg':subprocess.check_output(['docker','run','--rm','ubuntu:22.04','bash','-c','apt-get\
+        \ update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -version'],text=True).splitlines()[:3],'put_attempted':False}\n\
+        open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## P5 render diagnostics\\\
+        n\\n```json\\n'+json.dumps(diag,indent=2)+'\\n```\\n')\n\nPREPARE\npython\
+        \ host_prep.py\n"
 'on':
   workflow_dispatch: null
