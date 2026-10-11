@@ -306,10 +306,9 @@ jobs:
         \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':'rWA9qexzKag'})).data['items'][0]\n\
         \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
         \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='private':raise\
-        \ ValueError('Corrected private YT prerequisite')\n    controls.require_disabled_if_present\
-        \ = None\n    control,_=backend.get('account-control')\n    if not control\
-        \ or control.get('enabled') is not False:raise ValueError('Control must remain\
-        \ disabled before repair')\n\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \ ValueError('Corrected private YT prerequisite')\n    control,_=backend.get('account-control')\n\
+        \    if not control or control.get('enabled') is not False:raise ValueError('Control\
+        \ must remain disabled before repair')\n\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
         \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
         \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
         \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
@@ -321,15 +320,42 @@ jobs:
         \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
         \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
         \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
-        \ ValueError('Spacing')\n    stage='audit_original_records'\n    old_item={'id':\
-        \ 'netshort-swarm-ep5-part1-v1', 'episode': 4, 'part': 1, 'title': 'Cast Me\
-        \ Out, Feed the Swarm - Episode 4 Part 1/5 | NetShort', 'description': \"\
-        Thirty years ago, Ethan Hawk sacrificed his lifespan to raise the Skyveil\
+        \ ValueError('Spacing')\n    wrong_caption={'id': 'netshort-swarm-ep5-part1-v1',\
+        \ 'episode': 4, 'part': 1, 'title': 'Cast Me Out, Feed the Swarm - Episode\
+        \ 4 Part 1/5 | NetShort', 'description': \"Thirty years ago, Ethan Hawk sacrificed\
+        \ his lifespan to raise the Skyveil and protect Earth, but was betrayed and\
+        \ caged as humanity flew into the Zerg's trap. When the trap was sprung, his\
+        \ plan activated: the veil rebooted, he killed the Zerg Mother, saved his\
+        \ daughter, and restored sunlight to Earth.\\n\\nThis is only one piece of\
+        \ the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
+        n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if\
+        \ you use them.\", 'file': '/downloads/swarm-screen/ep5-part1.mp4', 'source_start':\
+        \ 0, 'source_end': 48.566667, 'privacy': 'private', 'approval_required': True,\
+        \ 'bytes': 27239400, 'sha256': 'df02cbe02521e593eaa38ddafdd64b1b11604e968fa1179657c8523e0e17f925'}['title']+'\\\
+        n\\n'+{'id': 'netshort-swarm-ep5-part1-v1', 'episode': 4, 'part': 1, 'title':\
+        \ 'Cast Me Out, Feed the Swarm - Episode 4 Part 1/5 | NetShort', 'description':\
+        \ \"Thirty years ago, Ethan Hawk sacrificed his lifespan to raise the Skyveil\
         \ and protect Earth, but was betrayed and caged as humanity flew into the\
         \ Zerg's trap. When the trap was sprung, his plan activated: the veil rebooted,\
         \ he killed the Zerg Mother, saved his daughter, and restored sunlight to\
         \ Earth.\\n\\nThis is only one piece of the story. The rest is waiting on\
         \ the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
+        n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if\
+        \ you use them.\", 'file': '/downloads/swarm-screen/ep5-part1.mp4', 'source_start':\
+        \ 0, 'source_end': 48.566667, 'privacy': 'private', 'approval_required': True,\
+        \ 'bytes': 27239400, 'sha256': 'df02cbe02521e593eaa38ddafdd64b1b11604e968fa1179657c8523e0e17f925'}['description']\n\
+        \    if any(x.get('caption')==wrong_caption for x in rows):raise ValueError('Wrong\
+        \ caption already public; stop repair')\n    oldstatus=checked(api('GET',base+'18123319435793253',params={'fields':'status_code'})).data\n\
+        \    if oldstatus.get('status_code') not in ('FINISHED','IN_PROGRESS'):raise\
+        \ ValueError('Wrong container status not safely unpublished')\n    stage='audit_original_records'\
+        \ \n    old_item={'id': 'netshort-swarm-ep5-part1-v1', 'episode': 4, 'part':\
+        \ 1, 'title': 'Cast Me Out, Feed the Swarm - Episode 4 Part 1/5 | NetShort',\
+        \ 'description': \"Thirty years ago, Ethan Hawk sacrificed his lifespan to\
+        \ raise the Skyveil and protect Earth, but was betrayed and caged as humanity\
+        \ flew into the Zerg's trap. When the trap was sprung, his plan activated:\
+        \ the veil rebooted, he killed the Zerg Mother, saved his daughter, and restored\
+        \ sunlight to Earth.\\n\\nThis is only one piece of the story. The rest is\
+        \ waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
         n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if\
         \ you use them.\", 'file': '/downloads/swarm-screen/ep5-part1.mp4', 'source_start':\
         \ 0, 'source_end': 48.566667, 'privacy': 'private', 'approval_required': True,\
