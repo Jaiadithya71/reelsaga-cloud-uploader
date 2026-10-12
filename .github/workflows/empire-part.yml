@@ -1,4 +1,4 @@
-name: Swarm EP7P3 exact private YouTube
+name: Swarm EP7P3 exact private IG staging
 permissions:
   contents: write
 concurrency:
@@ -7,7 +7,7 @@ concurrency:
 jobs:
   private-part:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
     - uses: actions/checkout@v4
       with:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Upload exact Swarm EP7P3 privately then stop
+    - name: Stage exact EP5P2 unpublished
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -33,7 +33,6 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
         TIGRIS_BUCKET: reelsaga-private-staging-71
         TIGRIS_GUARD_DB: /tmp/tigris-guard.db
-        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -244,21 +243,59 @@ jobs:
         ,\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n    \"probe-37874770790\"\
         ,\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
         \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"\
-        '\npython -m pip install boto3\ncat > tigris_staging.py <<'MODULE'\n\"\"\"\
-        ReelSaga private staging. Guarded private staging with owner-approved external-fetch\
-        \ risk.\"\"\"\nimport contextlib, datetime, hashlib, json, os, sqlite3, time\n\
-        import boto3\nfrom botocore.config import Config\n\nSTORAGE_STOP = 4 * 1024**3\n\
-        WRITE_STOP, READ_STOP = 9000, 90000\n# Egress is free. This is a conservative\
-        \ operational ledger, not a billing cap.\nMAX_OBJECT_BYTES = 256 * 1024**2\n\
-        \nclass GuardStop(RuntimeError): pass\n\nclass Staging:\n    def __init__(self):\n\
-        \        self.bucket = os.environ['TIGRIS_BUCKET']\n        if self.bucket\
-        \ != 'reelsaga-private-staging-71':\n            raise GuardStop('Unexpected\
-        \ staging bucket')\n        self.db = os.environ['TIGRIS_GUARD_DB']\n    \
-        \    if not os.path.exists(self.db):\n            raise GuardStop('Guard ledger\
-        \ missing: restore durable state, never auto-reset')\n        self.s3 = boto3.client('s3',\
-        \ endpoint_url='https://t3.storage.dev',region_name='auto',\n            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],\n\
-        \            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],\n\
-        \            config=Config(signature_version='s3v4',retries={'total_max_attempts':1},s3={'addressing_style':'path'}))\n\
+        '\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
+        \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import\
+        \ datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\n\
+        SCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
+        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n\
+        \    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
+        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
+        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
+        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n\
+        \    except Exception:\n        raise ValueError('Invalid credential dates')\
+        \ from None\n    if created.tzinfo is None or expiry.tzinfo is None or created>now+timedelta(seconds=30)\
+        \ or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
+        \ expired or dates invalid')\n    token=record.get('access_token')\n    if\
+        \ not isinstance(token,str) or len(token)<100 or not token.isascii():\n  \
+        \      raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
+        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer\
+        \ '+token},params={'fields':'user_id,username'})\n    if identity.get('username')!=EXPECTED_NAME\
+        \ or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
+        \ Instagram identity mismatch')\n    return identity\n\nMODULE\ncat > reader.py\
+        \ <<'MODULE'\n\"\"\"Server-side reader. No credential is written to logs or\
+        \ a public artifact.\"\"\"\nimport json,os,urllib.request,urllib.parse\nfrom\
+        \ instagram_record import validate_record,verify_live_identity\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
+        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https'\
+        \ or parsed.hostname!='kathirvelan-boutique.vercel.app' or parsed.path!='/api/instagram/reelsaga-reader'\
+        \ or parsed.port not in (None,443) or parsed.username or parsed.password or\
+        \ parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader\
+        \ destination')\n    if not secret or len(secret)<32:\n        raise ValueError('Reader\
+        \ credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
+        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
+        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the\
+        \ read key to another destination.\n    if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n\
+        \    with opener(request,timeout=30) as response:\n        if response.status!=200:raise\
+        \ ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
+        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n\
+        \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
+        \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
+        \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
+        \nMODULE\npython -m pip install boto3\ncat > tigris_staging.py <<'MODULE'\n\
+        \"\"\"ReelSaga private staging. Guarded private staging with owner-approved\
+        \ external-fetch risk.\"\"\"\nimport contextlib, datetime, hashlib, json,\
+        \ os, sqlite3, time\nimport boto3\nfrom botocore.config import Config\n\n\
+        STORAGE_STOP = 4 * 1024**3\nWRITE_STOP, READ_STOP = 9000, 90000\n# Egress\
+        \ is free. This is a conservative operational ledger, not a billing cap.\n\
+        MAX_OBJECT_BYTES = 256 * 1024**2\n\nclass GuardStop(RuntimeError): pass\n\n\
+        class Staging:\n    def __init__(self):\n        self.bucket = os.environ['TIGRIS_BUCKET']\n\
+        \        if self.bucket != 'reelsaga-private-staging-71':\n            raise\
+        \ GuardStop('Unexpected staging bucket')\n        self.db = os.environ['TIGRIS_GUARD_DB']\n\
+        \        if not os.path.exists(self.db):\n            raise GuardStop('Guard\
+        \ ledger missing: restore durable state, never auto-reset')\n        self.s3\
+        \ = boto3.client('s3', endpoint_url='https://t3.storage.dev',region_name='auto',\n\
+        \            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],\n        \
+        \    aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],\n        \
+        \    config=Config(signature_version='s3v4',retries={'total_max_attempts':1},s3={'addressing_style':'path'}))\n\
         \n    @contextlib.contextmanager\n    def _lock(self):\n        c=sqlite3.connect(self.db,timeout=30)\n\
         \        try:\n            c.execute('BEGIN IMMEDIATE')\n            yield\
         \ c\n            c.commit()\n        except Exception:\n            c.rollback();\
@@ -353,115 +390,70 @@ jobs:
         \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
         \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
         \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
-        \ actions_empire.py <<'PRIVATE'\n\"\"\"One privately prepared promo, PRIVATE\
-        \ only, then stop for Studio review.\n\nManual dispatch only. Reruns never\
-        \ recreate a claimed upload.\n\"\"\"\nimport hashlib,json,os\nfrom pathlib\
-        \ import Path\nfrom actions_canary import Store\nfrom desktop_setup import\
-        \ CHANNEL,SCOPES\nfrom provision_actions import validated_record\nfrom credentials\
-        \ import GoogleCredentials\nfrom transport import Transport,GoogleTokenForms\n\
-        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\n\
-        from controls import Controls,ControlError\nfrom adapters import YouTube,checked\n\
-        from actions_state_probe import probe\n\nimport urllib.request\nfrom tigris_durable\
-        \ import DurableStaging\n_host_backend=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);_host_backend.initialize()\n\
-        _host=DurableStaging(_host_backend)\nPath(\"empire.mp4\").write_bytes(_host.verified_get('production/netshort-swarm-ep7-part3-v1/video.mp4','55fbbbe5a531e2278f41595ec597f7736a032357acbfb9eee9b117d78e6e219e'))\n\
-        \nPath(\"empire.json\").write_text('{\"id\": \"netshort-swarm-ep7-part3-v1\"\
-        , \"episode\": 7, \"part\": 3, \"title\": \"Cast Me Out, Feed the Swarm -\
-        \ Episode 7 Part 3/3 | NetShort\", \"description\": \"Thirty years ago, Ethan\
-        \ Hawk sacrificed his lifespan to raise the Skyveil and protect Earth, but\
-        \ was betrayed and caged as humanity flew into the Zerg\\'s trap. When the\
-        \ trap was sprung, his plan activated: the veil rebooted, he killed the Zerg\
-        \ Mother, saved his daughter, and restored sunlight to Earth.\\\\n\\\\nThis\
-        \ is only one piece of the story. The rest is waiting on the channel.\\\\\
-        n\\\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\\n\\\\nFull episode\
-        \ part 3 of 3.\\\\nAffiliate links: I may earn a commission if you use them.\"\
-        , \"file\": \"/downloads/swarm-screen/ep7-part3-deterministic.mp4\", \"source_start\"\
-        : 104.04, \"source_end\": 155.734, \"privacy\": \"private\", \"approval_required\"\
-        : true, \"bytes\": 60049137, \"sha256\": \"3a8317085243ce258be3f38cb56b66714323bc2ebadfc9b2d53df48e098ac69a\"\
-        }')\nMANIFEST=\"empire.json\"\n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n\
-        \    if item!=expected or item[\"id\"]!=\"netshort-swarm-ep7-part3-v1\":raise\
-        \ RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
-        bytes\"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item[\"sha256\"\
-        ]:raise RuntimeError(\"Media integrity mismatch\")\n    if item.get(\"privacy\"\
-        )!=\"private\":raise RuntimeError(\"Private gate missing\")\n\ndef run(backend,api,item,path):\n\
-        \    validate(item,path)\n    controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)\n\
-        \    if ledger.resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item\
-        \ already claimed; reconcile only')\n    controls.require_enabled()\n    if\
-        \ not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')\n\
-        \    checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)\n\
-        \    checkpoint('uncertain');controls.require_enabled()\n    youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)\n\
-        \    offset=0\n    while offset<item['bytes']:\n        controls.require_enabled()\n\
-        \        result=youtube.send_chunk(session,path,offset,checkpoint)\n     \
-        \   if 'video_id' in result:break\n        new_offset=result.get('offset',0)\n\
-        \        if not offset<new_offset<=item['bytes']:raise RuntimeError('Invalid\
-        \ server offset')\n        offset=new_offset\n    if 'video_id' not in result:raise\
-        \ RuntimeError('Saved session incomplete; no retry')\n    video=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':result['video_id']})).data\n\
-        \    rows=video.get('items',[])\n    if len(rows)!=1:raise RuntimeError('Video\
-        \ readback missing')\n    row=rows[0]\n    if row['snippet']['channelId']!=CHANNEL\
-        \ or row['status']['privacyStatus']!='private' or row['snippet']['title']!=item['title']\
-        \ or row['snippet']['description']!=item['description'] or row['status'].get('selfDeclaredMadeForKids')\
-        \ is not False:\n        raise RuntimeError('Private metadata readback mismatch')\n\
-        \    return {'item_id':item['id'],'video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}\n\
-        \ndef main():\n    controls=None\n    stage=\"manifest\"\n    try:\n     \
-        \   item=json.loads(Path(MANIFEST).read_text());path='empire.mp4';validate(item,path)\n\
-        \        stage=\"credentials_config\"\n        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')\n\
-        \        stage=\"state_initialize\"\n        stable=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \        if len(stable)<48:raise RuntimeError('Stable key missing')\n    \
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),stable);backend.initialize()\n\
-        \        stage=\"state_probe\"\n        controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])\n\
-        \        stage=\"google_refresh\"\n        credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES);token=credential.access_token()\n\
-        \        api=Transport(lambda:token,{'www.googleapis.com'})\n        stage=\"\
-        channel_identity\"\n        identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data\n\
-        \        if {x.get('id') for x in identity.get('items',[])}!={CHANNEL}:raise\
-        \ RuntimeError('Identity mismatch')\n        stage=\"complete_channel_duplicate_read\"\
-        \n        c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data\n\
-        \        playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']\n\
-        \        page=None;seen=set();ids=[];total=None\n        while True:\n   \
-        \         q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
-        \            if page:q['pageToken']=page\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data\n\
-        \            if total is None:total=data['pageInfo']['totalResults']\n   \
-        \         elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel\
-        \ inventory changed')\n            ids.extend(x['contentDetails']['videoId']\
-        \ for x in data.get('items',[]))\n            page=data.get('nextPageToken')\n\
-        \            if not page:break\n            if page in seen:raise RuntimeError('Channel\
-        \ pagination loop')\n            seen.add(page)\n        # Fresh broad Studio\
-        \ all-visibility Swarm list verified 2026-10-12 07:56 IST.\n        # Twenty-nine\
-        \ broad titles. Narrow fuzzy target search returns EP7P1 and EP7P2 only, no\
-        \ EP7P3 title. EP7P2 positive present.\n        # API uploads inventory inconsistency\
-        \ remains open; distinct IDs and ledger gated.\n        print(json.dumps({'studio_broad_swarm_rows':29,'studio_target_matches':0,'studio_narrow_fuzzy_rows':2,'positive_control':'YSGyDLqaT7A','checked_at':'2026-10-12T07:56:22+05:30'}))\n\
-        \        ids=list(dict.fromkeys(ids))\n        for n in range(0,len(ids),50):\n\
-        \            data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
-        \            if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise\
-        \ RuntimeError('Incomplete channel metadata')\n            for video in data.get('items',[]):\n\
-        \                snippet=video['snippet']\n                if snippet['channelId']!=CHANNEL:raise\
-        \ RuntimeError('Channel mismatch')\n                if snippet['title']==item['title']\
-        \ or (\"Cast Me Out, Feed the Swarm\" in snippet['title'] and 'Episode 7 Part\
-        \ 3' in snippet['title']):raise RuntimeError('Existing episode part, reconcile\
-        \ only')\n        print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':len(ids),'duplicate_part_found':False}))\n\
-        \        stage=\"item_claim_read\"\n        if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise\
-        \ RuntimeError('Item already claimed')\n        stage=\"enable_control\"\n\
-        \        controls.set_access(True,verified=True)\n        stage=\"private_upload\"\
-        \n        import time\n        for attempt in range(5):\n            c,_=backend.get(\"\
-        account-control\")\n            if c and c.get(\"enabled\") is True:break\n\
-        \            if attempt<4:time.sleep(3)\n        else:raise RuntimeError(\"\
-        Control readback unsettled\")\n        result=run(backend,api,item,path)\n\
-        \        stage=\"stop_verify\"\n        controls.set_access(False)\n     \
-        \   import time\n        for _ in range(5):\n            control,_=backend.get('account-control')\n\
-        \            if control and control.get('enabled') is False:break\n      \
-        \      time.sleep(3)\n        else:raise RuntimeError('Stop readback did not\
-        \ settle')\n        try:controls.require_enabled()\n        except ControlError:pass\n\
-        \        else:raise RuntimeError('Stop did not block access')\n        stage=\"\
-        checkpoint_readback\"\n        saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))\n\
-        \        if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint\
-        \ mismatch')\n        result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)\n\
-        \        print(json.dumps(result,sort_keys=True))\n        open(os.environ[\"\
-        GITHUB_STEP_SUMMARY\"],\"a\").write(\"## Private EP7P3 verified\\n\\n```json\\\
-        n\"+json.dumps(result,indent=2)+\"\\n```\\n\")\n    except Exception:\n  \
-        \      print('Safe failure stage: '+stage)\n        print('Real-part upload\
-        \ stopped. Reconcile encrypted ledger and Studio before retry; secrets not\
-        \ shown.')\n        raise SystemExit(1) from None\n    finally:\n        if\
-        \ controls is not None:\n            try:controls.set_access(False)\n    \
-        \        except Exception:\n                print('STOP control write unconfirmed.\
-        \ No rerun; operator action required.')\n                raise SystemExit(2)\
-        \ from None\nif __name__=='__main__':main()\nPRIVATE\npython actions_empire.py\n"
+        \ ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom\
+        \ datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
+        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
+        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
+        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
+        \ import Controls,ControlError\n\nitem={'id': 'netshort-swarm-ep7-part3-v1',\
+        \ 'episode': 7, 'part': 3, 'title': 'Cast Me Out, Feed the Swarm - Episode\
+        \ 7 Part 3/3 | NetShort', 'description': \"Thirty years ago, Ethan Hawk sacrificed\
+        \ his lifespan to raise the Skyveil and protect Earth, but was betrayed and\
+        \ caged as humanity flew into the Zerg's trap. When the trap was sprung, his\
+        \ plan activated: the veil rebooted, he killed the Zerg Mother, saved his\
+        \ daughter, and restored sunlight to Earth.\\n\\nThis is only one piece of\
+        \ the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/2HXsu_liwzGm\\\
+        n\\nFull episode part 3 of 3.\\nAffiliate links: I may earn a commission if\
+        \ you use them.\", 'file': '/downloads/swarm-screen/ep7-part3-deterministic.mp4',\
+        \ 'source_start': 104.04, 'source_end': 155.734, 'privacy': 'private', 'approval_required':\
+        \ True, 'bytes': 60049137, 'sha256': '3a8317085243ce258be3f38cb56b66714323bc2ebadfc9b2d53df48e098ac69a'}\n\
+        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
+        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
+        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already\
+        \ claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
+        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
+        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
+        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
+        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
+        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
+        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
+        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
+        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
+        \ ValueError('Spacing')\n    from tigris_durable import DurableStaging\n \
+        \   import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-swarm-ep7-part3-v1');urls={}\n\
+        \    for kind in ['video','cover']:\n        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
+        \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with\
+        \ urllib.request.urlopen(urls[kind]['url'],timeout=90) as response:\n    \
+        \        data=response.read();ct=response.headers.get_content_type()\n   \
+        \     if len(data)!=obj['bytes'] or hashlib.sha256(data).hexdigest()!=obj['sha256']\
+        \ or ct!=obj['content_type'] or '***' in urls[kind]['url']:raise ValueError('Fresh\
+        \ source')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
+        \    stage='require_enabled'\n    import time\n    for attempt in range(5):\n\
+        \        control,_=backend.get('account-control')\n        if control and\
+        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
+        \    else:raise ValueError('Control enable readback did not settle')\n   \
+        \ controls.require_enabled()\n    stage='claim_record'\n    if not ledger.claim(item,'instagram'):raise\
+        \ ValueError('Existing claim; reconcile only')\n    stage='uncertain_checkpoint'\n\
+        \    import time\n    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \        if claimed and claimed.get('state')=='started':break\n        time.sleep(3)\n\
+        \    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
+        \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \        if claimed and claimed.get('state')=='uncertain':break\n        time.sleep(3)\n\
+        \    else:raise ValueError('Uncertain readback did not settle')\n    stage='create'\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':urls['video']['url'],'cover_url':urls['cover']['url'],'caption':caption,'share_to_feed':True})).data\n\
+        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
+        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
+        \ ValueError('Checkpoint')\n    result={'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}\n\
+        \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ Private EP7P3 IG staged\\n\\n```json\\n'+json.dumps(result,indent=2)+'\\\
+        n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
+        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
+        \        except Exception:pass\n\nSTAGE\npython ig_stage.py\n"
 'on':
   workflow_dispatch: null
