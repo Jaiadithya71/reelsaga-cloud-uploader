@@ -359,7 +359,7 @@ jobs:
         \     if page in seen:raise RuntimeError('Channel pagination loop')\n            seen.add(page)\n\
         \        # Fresh broad Studio Swarm search verified 2026-10-12 08:58 IST.\n        #\
         \ Twenty-nine broad titles. Narrow fuzzy target search returns EP7P1 and EP7P2 only,\
-        \ no EP8P1 title. EP7P2 positive present.\n        # API uploads inventory inconsistency\
+        \ no EP8P1 title. EP7P3 positive present.\n        # API uploads inventory inconsistency\
         \ remains open; distinct IDs and ledger gated.\n        print(json.dumps({'studio_broad_swarm_rows':30,'studio_target_matches':0,'studio_narrow_fuzzy_rows':0,'positive_control':'JcJ42-Jj8fY','checked_at':'2026-10-12T08:58:26+05:30'}))\n\
         \        ids=list(dict.fromkeys(ids))\n        for n in range(0,len(ids),50):\n    \
         \        data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
