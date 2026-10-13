@@ -1,4 +1,4 @@
-name: Hidden Heiress EP7P1 stage
+name: Hidden EP7P1 stage corrected resume contract
 permissions:
   contents: write
 concurrency:
@@ -411,8 +411,8 @@ jobs:
         stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
         \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
         \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    if ledger.resume(item['id'],'instagram')!='uncertain':raise ValueError('Resume\
-        \ not uncertain')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    if ledger.resume(item['id'],'instagram')!='reconcile_manually':raise\
+        \ ValueError('Resume not uncertain')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
         \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
         \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
         \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
