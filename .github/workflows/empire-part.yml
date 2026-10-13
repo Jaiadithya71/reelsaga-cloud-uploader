@@ -1,4 +1,4 @@
-name: Hidden Heiress EP8P1 private direct
+name: Hidden EP8P1 private corrected manifest
 permissions:
   contents: write
 concurrency:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Upload exact Swarm EP8P1 privately then stop
+    - name: Upload exact Hidden EP8P1 privately then stop
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -266,14 +266,15 @@ jobs:
         \ Riley Sterling is betrayed by her social-climbing boyfriend and her roommate,\
         \ who steals her black card. Riley exposes their lies and lets their greed\
         \ destroy them, while billionaire Asher Vance stands at her side as she claims\
-        \ her empire and a powerful new future.\\n\\nThis is only one piece of the\
-        \ story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/5KXVs0T7AZki\\\
-        n\\nFull episode part 1 of 2.\\nAffiliate links: I may earn a commission if\
-        \ you use them.\", \"file\": \"/downloads/next-reelsaga/hidden-ep8-part1-deterministic.mp4\"\
-        , \"source_start\": 0, \"source_end\": 26.766667, \"privacy\": \"private\"\
-        , \"approval_required\": true, \"bytes\": 35319429, \"sha256\": \"59347477eb323c57f2fed80c6249012660722615b42d557f19984ea5aa28a915\"\
+        \ her empire and a powerful new future.\\\\n\\\\nThis is only one piece of\
+        \ the story. The rest is waiting on the channel.\\\\n\\\\nWatch on NetShort:\
+        \ https://r.reelsgo.tv/5KXVs0T7AZki\\\\n\\\\nFull episode part 1 of 2.\\\\\
+        nAffiliate links: I may earn a commission if you use them.\", \"file\": \"\
+        /downloads/next-reelsaga/hidden-ep8-part1-deterministic.mp4\", \"source_start\"\
+        : 0, \"source_end\": 26.766667, \"privacy\": \"private\", \"approval_required\"\
+        : true, \"bytes\": 35319429, \"sha256\": \"59347477eb323c57f2fed80c6249012660722615b42d557f19984ea5aa28a915\"\
         }')\nMANIFEST=\"empire.json\"\n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n\
-        \    if item!=expected or item[\"id\"]!=\"netshort-hidden-ep7-part1-v1\":raise\
+        \    if item!=expected or item[\"id\"]!=\"netshort-hidden-ep8-part1-v1\":raise\
         \ RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
         bytes\"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item[\"sha256\"\
         ]:raise RuntimeError(\"Media integrity mismatch\")\n    if item.get(\"privacy\"\
