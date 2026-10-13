@@ -1,4 +1,4 @@
-name: Mute EP1P2 readonly publish gate diagnosis
+name: Mute EP1P2 IG publish
 permissions:
   contents: write
 concurrency:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Read-only P2 prerequisite checks
+    - name: Publish exact Mute EP1P1 only after saved Studio gates
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -298,22 +298,54 @@ jobs:
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
         from credentials import GoogleCredentials\nfrom actions_canary import Store\n\
         from provision_actions import validated_record\nfrom desktop_setup import\
-        \ SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='state_read'\n\
+        \ SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
         try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
         \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \    out={'ig_state':saved.get('state') if saved else None,'ig_external_id':saved.get('external_id')\
-        \ if saved else None}\n    stage='yt_ledger_metadata'\n    record,_=backend.get(ledger.key(item['id'],'youtube'))\n\
-        \    out['yt_state']=record.get('state') if record else None\n    out['yt_metadata_matches']=bool(record\
-        \ and record.get('metadata_hash')==ledger.metadata_hash({k:v for k,v in item.items()\
-        \ if k!='caption'}))\n    stage='credentials_validate'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
+        \    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
+        \    if saved['state']!='processing' or saved['external_id']!='18124110967793253':raise\
+        \ ValueError('No staged container')\n    stage='youtube_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
         \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    stage='google_refresh'\n    token=credential.access_token()\n    yt=Transport(lambda:token,{'www.googleapis.com'})\n\
-        \    stage='youtube_current_read'\n    r=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'4z4cpVYImEY'})).data\n\
-        \    v=r['items'][0]\n    out.update(channel_matches=v['snippet']['channelId']==CHANNEL,title_matches=v['snippet']['title']==item['title'],description_matches=v['snippet']['description']==item['description'],privacy=v['status']['privacyStatus'],processing=v['processingDetails']['processingStatus'],live_title=v['snippet']['title'],live_description=v['snippet']['description'])\n\
-        \    print(json.dumps(out));open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
-        \ Read-only P2 publish gate diagnostic\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
-        n```\\n')\nexcept Exception as e:\n    print(json.dumps({'stage':stage,'error_type':type(e).__name__,'details':str(e)[:180]}));raise\
-        \ SystemExit(1) from None\n\nPUBLISH\npython ig_publish.py\n"
+        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v\
+        \ for k,v in item.items() if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'4z4cpVYImEY'})).data['items'][0]\n\
+        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
+        \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public'\
+        \ or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('YT\
+        \ prerequisite')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
+        \    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
+        \ ValueError('Identity')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n\
+        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')\n\
+        \        if url in seen:raise ValueError('Pagination loop')\n        if url:seen.add(url)\n\
+        \    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n\
+        \    if rows and datetime.now(timezone.utc)-max(datetime.fromisoformat(x['timestamp'])\
+        \ for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n    q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')\n\
+        \    stage='container_status'\n    import time\n    container=saved['external_id']\n\
+        \    for attempt in range(5):\n        status=checked(api('GET',base+container,params={'fields':'status_code'})).data\n\
+        \        if status['status_code']=='FINISHED':break\n        if status['status_code']!='IN_PROGRESS':raise\
+        \ ValueError('Container failed')\n        if attempt<4:time.sleep(60)\n  \
+        \  else:raise ValueError('Container not FINISHED')\n    stage='publish'\n\
+        \    controls.set_access(True,verified=True)\n    for attempt in range(5):\n\
+        \        control,_=backend.get('account-control')\n        if control and\
+        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
+        \    else:raise ValueError('Control readback did not settle')\n    controls.require_enabled()\n\
+        \    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n\
+        \    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
+        \    record,version=backend.get(ledger.key(item['id'],'youtube'))\n    record=dict(record,\
+        \ state='published', claim={'type':'none','studio_verified':True})\n    if\
+        \ not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise\
+        \ ValueError('Claim record checkpoint')\n    controls.set_access(False);stage='readback'\n\
+        \    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
+        \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback\
+        \ mismatch')\n    out={'instagram_published':True,'media':m,'caption_exact':True,'matching_youtube_public':True,'stop_verified':True}\n\
+        \    print(json.dumps(out))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ Published MuteEP1P2 Instagram\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
+        n```\\n')\nexcept Exception:\n    print('IG publish stopped at '+stage+'.\
+        \ Reconcile saved ledger before retry.');raise SystemExit(1) from None\nfinally:\n\
+        \    if controls:\n        try:controls.set_access(False)\n        except\
+        \ Exception:pass\n\nPUBLISH\npython ig_publish.py\n"
 'on':
   workflow_dispatch: null
