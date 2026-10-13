@@ -1,4 +1,4 @@
-name: Hidden Heiress EP4P2 hostprep
+name: Hidden Heiress EP4P2 private
 permissions:
   contents: write
 concurrency:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Exact render parity then guarded private staging only
+    - name: Upload exact Swarm EP8P1 privately then stop
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -33,6 +33,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
         TIGRIS_BUCKET: reelsaga-private-staging-71
         TIGRIS_GUARD_DB: /tmp/tigris-guard.db
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -352,47 +353,112 @@ jobs:
         \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
         \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
         \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
-        \ host_prep.py <<'PREPARE'\nSOURCE_URL='https://video.netshort.com/okweQCeXZAA8e2ArXDoFVaifoAeNM85LA22rlL?a=0&auth_key=1792224060-f31954bdd71944a38fd7af5703c73651-0-19381a100320949a164bd6ee6553fe42&br=1085&bt=1085&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=4&eid=e8663cb4eec14b55a0396d00f6856ea4&er=0&l=20261007080003EFF18249C2A1FBC6D5C9&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M2RyaXk5cmt5ZTozMzZoNEApZDk7aTM5NmQ4N2ZoZTY5aGdoMzJlMmRrai9hMi1kXjVzczFiMjMtYTYtMl8uYjFgMzU6Yw%3D%3D&vl=&vr='\n\
-        ITEM={'id': 'netshort-hidden-ep4-part2-v1', 'episode': 4, 'part': 2, 'title':\
-        \ 'The Hidden Heiress - Episode 4 Part 2/2 | NetShort', 'description': 'After\
-        \ three years posing as a broke student, heiress Riley Sterling is betrayed\
-        \ by her social-climbing boyfriend and her roommate, who steals her black\
-        \ card. Riley exposes their lies and lets their greed destroy them, while\
-        \ billionaire Asher Vance stands at her side as she claims her empire and\
-        \ a powerful new future.\\n\\nThis is only one piece of the story. The rest\
-        \ is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/5KXVs0T7AZki\\\
-        n\\nFull episode part 2 of 2.\\nAffiliate links: I may earn a commission if\
-        \ you use them.', 'file': '/downloads/next-reelsaga/hidden-ep4-part2-deterministic.mp4',\
-        \ 'source_start': 14, 'source_end': 56.64, 'privacy': 'private', 'approval_required':\
-        \ True, 'bytes': 49537743, 'sha256': 'c3a4deeec502a44332e27d832d0631d1dcd3e14871245ee2c99dba92ae70c778'}\n\
-        import os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\n\
-        from transport import Transport\nfrom quarantine_state import QuarantineState\n\
-        from tigris_durable import bootstrap,DurableStaging\nfrom tigris_staging import\
-        \ GuardStop\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();bootstrap(b);s=DurableStaging(b)\n\
-        key='tigris-host-netshort-hidden-ep4-part2-v1';r,v=b.get(key)\nif r:raise\
-        \ GuardStop('Host record exists; reconcile only')\ndata=urllib.request.urlopen(SOURCE_URL,timeout=120).read()\n\
-        if len(data)!=7867582 or hashlib.sha256(data).hexdigest()!='ce3dd938db6957eeb1cb8becc5c991a5a316dec0d32b25ebffedd7a5ade9860c':raise\
-        \ GuardStop('Supplier hash mismatch')\nPath('source.mp4').write_bytes(data)\n\
-        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
-        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
-        \ error -cpuflags 0 -filter_threads 1 -ss 14.000000 -i source.mp4 -t 42.640000\
-        \ -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=42.140000:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=42.140000:d=0.5'\
-        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a\
-        \ aac -flags:a +bitexact -b:a 192k -movflags +faststart -y hidden-ep4-part2.mp4\
-        \ && ffmpeg -v error -i hidden-ep4-part2.mp4 -f null - && ffmpeg -v error\
-        \ -ss 1 -i hidden-ep4-part2.mp4 -frames:v 1 -y hidden-ep4-part2-cover.jpg\"\
-        ],check=True)\np=Path('hidden-ep4-part2.mp4')\nprint(json.dumps({'render_bytes':p.stat().st_size,'render_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'cpu_affinity':sorted(os.sched_getaffinity(0))[:2]}),flush=True)\n\
-        if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise\
-        \ GuardStop('Render parity mismatch; no PUT')\nrecords={}\nfor kind,path,ct\
-        \ in [('video','hidden-ep4-part2.mp4','video/mp4'),('cover','hidden-ep4-part2-cover.jpg','image/jpeg')]:\n\
-        \ h=hashlib.sha256(Path(path).read_bytes()).hexdigest();obj='production/'+ITEM['id']+'/'+kind+'.'+('mp4'\
-        \ if kind=='video' else 'jpg')\n records[kind]=s.stage(path,obj,ct,h);s.verified_get(obj,h);records[kind].update(s.signed_get(obj))\n\
-        \ out={'phase':'staging','records':records,'never_publish_without_review':True}\n\
-        \ if not b.compare_and_swap(key,v,out):raise GuardStop('Host checkpoint CAS\
-        \ conflict')\n saved,v=b.get(key)\n if saved!=out:raise GuardStop('Host checkpoint\
-        \ unsettled')\nresult={'hosts':records,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
-        open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Exact HiddenEP4P2 private\
-        \ hosts\\n\\n```json\\n'+json.dumps(result,indent=2)+'\\n```\\n')\nprint(json.dumps(result),flush=True)\n\
-        \nPREPARE\npython host_prep.py\n"
+        \ actions_empire.py <<'PRIVATE'\n\"\"\"One privately prepared promo, PRIVATE\
+        \ only, then stop for Studio review.\n\nManual dispatch only. Reruns never\
+        \ recreate a claimed upload.\n\"\"\"\nimport hashlib,json,os\nfrom pathlib\
+        \ import Path\nfrom actions_canary import Store\nfrom desktop_setup import\
+        \ CHANNEL,SCOPES\nfrom provision_actions import validated_record\nfrom credentials\
+        \ import GoogleCredentials\nfrom transport import Transport,GoogleTokenForms\n\
+        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\n\
+        from controls import Controls,ControlError\nfrom adapters import YouTube,checked\n\
+        from actions_state_probe import probe\n\nimport urllib.request\nfrom tigris_durable\
+        \ import DurableStaging\n_host_backend=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);_host_backend.initialize()\n\
+        _host=DurableStaging(_host_backend)\nPath(\"empire.mp4\").write_bytes(_host.verified_get('production/netshort-hidden-ep4-part2-v1/video.mp4','c3a4deeec502a44332e27d832d0631d1dcd3e14871245ee2c99dba92ae70c778'))\n\
+        \nPath(\"empire.json\").write_text('{\"id\": \"netshort-hidden-ep4-part2-v1\"\
+        , \"episode\": 4, \"part\": 2, \"title\": \"The Hidden Heiress - Episode 4\
+        \ Part 2/2 | NetShort\", \"description\": \"After three years posing as a\
+        \ broke student, heiress Riley Sterling is betrayed by her social-climbing\
+        \ boyfriend and her roommate, who steals her black card. Riley exposes their\
+        \ lies and lets their greed destroy them, while billionaire Asher Vance stands\
+        \ at her side as she claims her empire and a powerful new future.\\\\n\\\\\
+        nThis is only one piece of the story. The rest is waiting on the channel.\\\
+        \\n\\\\nWatch on NetShort: https://r.reelsgo.tv/5KXVs0T7AZki\\\\n\\\\nFull\
+        \ episode part 2 of 2.\\\\nAffiliate links: I may earn a commission if you\
+        \ use them.\", \"file\": \"/downloads/next-reelsaga/hidden-ep4-part2-deterministic.mp4\"\
+        , \"source_start\": 14, \"source_end\": 56.64, \"privacy\": \"private\", \"\
+        approval_required\": true, \"bytes\": 49537743, \"sha256\": \"c3a4deeec502a44332e27d832d0631d1dcd3e14871245ee2c99dba92ae70c778\"\
+        }')\nMANIFEST=\"empire.json\"\n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n\
+        \    if item!=expected or item[\"id\"]!=\"netshort-hidden-ep4-part2-v1\":raise\
+        \ RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
+        bytes\"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item[\"sha256\"\
+        ]:raise RuntimeError(\"Media integrity mismatch\")\n    if item.get(\"privacy\"\
+        )!=\"private\":raise RuntimeError(\"Private gate missing\")\n\ndef run(backend,api,item,path):\n\
+        \    validate(item,path)\n    controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)\n\
+        \    if ledger.resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item\
+        \ already claimed; reconcile only')\n    controls.require_enabled()\n    if\
+        \ not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')\n\
+        \    checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)\n\
+        \    checkpoint('uncertain');controls.require_enabled()\n    youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)\n\
+        \    offset=0\n    while offset<item['bytes']:\n        controls.require_enabled()\n\
+        \        result=youtube.send_chunk(session,path,offset,checkpoint)\n     \
+        \   if 'video_id' in result:break\n        new_offset=result.get('offset',0)\n\
+        \        if not offset<new_offset<=item['bytes']:raise RuntimeError('Invalid\
+        \ server offset')\n        offset=new_offset\n    if 'video_id' not in result:raise\
+        \ RuntimeError('Saved session incomplete; no retry')\n    video=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':result['video_id']})).data\n\
+        \    rows=video.get('items',[])\n    if len(rows)!=1:raise RuntimeError('Video\
+        \ readback missing')\n    row=rows[0]\n    if row['snippet']['channelId']!=CHANNEL\
+        \ or row['status']['privacyStatus']!='private' or row['snippet']['title']!=item['title']\
+        \ or row['snippet']['description']!=item['description'] or row['status'].get('selfDeclaredMadeForKids')\
+        \ is not False:\n        raise RuntimeError('Private metadata readback mismatch')\n\
+        \    return {'item_id':item['id'],'video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}\n\
+        \ndef main():\n    controls=None\n    stage=\"manifest\"\n    try:\n     \
+        \   item=json.loads(Path(MANIFEST).read_text());path='empire.mp4';validate(item,path)\n\
+        \        stage=\"credentials_config\"\n        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')\n\
+        \        stage=\"state_initialize\"\n        stable=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        \        if len(stable)<48:raise RuntimeError('Stable key missing')\n    \
+        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),stable);backend.initialize()\n\
+        \        stage=\"state_probe\"\n        controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])\n\
+        \        stage=\"google_refresh\"\n        credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES);token=credential.access_token()\n\
+        \        api=Transport(lambda:token,{'www.googleapis.com'})\n        stage=\"\
+        channel_identity\"\n        identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data\n\
+        \        if {x.get('id') for x in identity.get('items',[])}!={CHANNEL}:raise\
+        \ RuntimeError('Identity mismatch')\n        stage=\"complete_channel_duplicate_read\"\
+        \n        c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data\n\
+        \        playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']\n\
+        \        page=None;seen=set();ids=[];total=None\n        while True:\n   \
+        \         q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
+        \            if page:q['pageToken']=page\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data\n\
+        \            if total is None:total=data['pageInfo']['totalResults']\n   \
+        \         elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel\
+        \ inventory changed')\n            ids.extend(x['contentDetails']['videoId']\
+        \ for x in data.get('items',[]))\n            page=data.get('nextPageToken')\n\
+        \            if not page:break\n            if page in seen:raise RuntimeError('Channel\
+        \ pagination loop')\n            seen.add(page)\n        # Fresh Studio 2026-10-13\
+        \ 08:16 IST EP4P1 positive public _Jv3eFXKW7Q; fulltitle fuzzy search has\
+        \ one result EP4P1 only, exact EP4P2 absent.\n        ids=list(dict.fromkeys(ids))\n\
+        \        for n in range(0,len(ids),50):\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
+        \            if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise\
+        \ RuntimeError('Incomplete channel metadata')\n            for video in data.get('items',[]):\n\
+        \                snippet=video['snippet']\n                if snippet['channelId']!=CHANNEL:raise\
+        \ RuntimeError('Channel mismatch')\n                if snippet['title']==item['title']\
+        \ or (\"The Hidden Heiress\" in snippet['title'] and 'Episode 4 Part 2' in\
+        \ snippet['title']):raise RuntimeError('Existing episode part, reconcile only')\n\
+        \        print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':len(ids),'duplicate_part_found':False}))\n\
+        \        stage=\"item_claim_read\"\n        if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise\
+        \ RuntimeError('Item already claimed')\n        stage=\"enable_control\"\n\
+        \        controls.set_access(True,verified=True)\n        stage=\"private_upload\"\
+        \n        import time\n        for attempt in range(5):\n            c,_=backend.get(\"\
+        account-control\")\n            if c and c.get(\"enabled\") is True:break\n\
+        \            if attempt<4:time.sleep(3)\n        else:raise RuntimeError(\"\
+        Control readback unsettled\")\n        result=run(backend,api,item,path)\n\
+        \        stage=\"stop_verify\"\n        controls.set_access(False)\n     \
+        \   import time\n        for _ in range(5):\n            control,_=backend.get('account-control')\n\
+        \            if control and control.get('enabled') is False:break\n      \
+        \      time.sleep(3)\n        else:raise RuntimeError('Stop readback did not\
+        \ settle')\n        try:controls.require_enabled()\n        except ControlError:pass\n\
+        \        else:raise RuntimeError('Stop did not block access')\n        stage=\"\
+        checkpoint_readback\"\n        saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))\n\
+        \        if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint\
+        \ mismatch')\n        result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)\n\
+        \        print(json.dumps(result,sort_keys=True))\n        open(os.environ[\"\
+        GITHUB_STEP_SUMMARY\"],\"a\").write(\"## Private HiddenEP4P2 verified\\n\\\
+        n```json\\n\"+json.dumps(result,indent=2)+\"\\n```\\n\")\n    except Exception:\n\
+        \        print('Safe failure stage: '+stage)\n        print('Real-part upload\
+        \ stopped. Reconcile encrypted ledger and Studio before retry; secrets not\
+        \ shown.')\n        raise SystemExit(1) from None\n    finally:\n        if\
+        \ controls is not None:\n            try:controls.set_access(False)\n    \
+        \        except Exception:\n                print('STOP control write unconfirmed.\
+        \ No rerun; operator action required.')\n                raise SystemExit(2)\
+        \ from None\nif __name__=='__main__':main()\nPRIVATE\npython actions_empire.py\n"
 'on':
   workflow_dispatch: null
