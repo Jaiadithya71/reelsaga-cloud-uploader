@@ -294,8 +294,10 @@ jobs:
         \ 'source_start': 0, 'source_end': 30.4, 'privacy': 'private', 'approval_required':\
         \ True, 'bytes': 45817346, 'sha256': '6e6c5726b16435c60402968f638eabf9695ec5667bbe78be1cd196c8806e7e95'}\n\
         item['caption']=item['title']+'\\n\\n'+item['description']\nl=DurableLedger(b);l.verify_item(item,'instagram');saved,_=b.get(l.key(item['id'],'instagram'))\n\
-        if saved.get('state')!='processing':raise ValueError('Stage not processing;\
-        \ reconcile only')\ntoken=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY'])\n\
+        print(json.dumps({'ledger_state':saved.get('state'),'external_id':saved.get('external_id'),'has_external_id':bool(saved.get('external_id'))}))\n\
+        if not saved.get('external_id'):\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ EP7 no returned container ID\\n\\n```json\\n'+json.dumps({'ledger_state':saved.get('state'),'external_id':saved.get('external_id'),'has_external_id':False},indent=2)+'\\\
+        n```\\n')\n    raise SystemExit(0)\ntoken=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY'])\n\
         api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
         ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
         if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
