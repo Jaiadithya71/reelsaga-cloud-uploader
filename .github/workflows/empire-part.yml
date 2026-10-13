@@ -1,4 +1,4 @@
-name: Hidden EP7P1 direct binary IG stage
+name: Hidden EP7P1 readonly container status
 permissions:
   contents: write
 concurrency:
@@ -24,11 +24,12 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Stage exact Hidden EP7P1 via direct binary, unpublished
+    - name: Read exact staged EP7 container status, no mutations
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -276,95 +277,32 @@ jobs:
         \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
         \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
         \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\n\
-        from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
-        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
-        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
-        \ import Controls,ControlError\n\nitem={'id': 'netshort-hidden-ep7-part1-v1',\
-        \ 'episode': 7, 'part': 1, 'title': 'The Hidden Heiress - Episode 7 Part 1/1\
-        \ | NetShort', 'description': 'After three years posing as a broke student,\
-        \ heiress Riley Sterling is betrayed by her social-climbing boyfriend and\
-        \ her roommate, who steals her black card. Riley exposes their lies and lets\
-        \ their greed destroy them, while billionaire Asher Vance stands at her side\
-        \ as she claims her empire and a powerful new future.\\n\\nThis is only one\
-        \ piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
-        \ https://r.reelsgo.tv/5KXVs0T7AZki\\n\\nFull episode part 1 of 1.\\nAffiliate\
-        \ links: I may earn a commission if you use them.', 'file': '/downloads/next-reelsaga/hidden-ep7-part1-deterministic.mp4',\
+        \nMODULE\ncat > ig_status.py <<'STATUS'\nimport json,os\nfrom reader import\
+        \ read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME\nfrom\
+        \ transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
+        \ import QuarantineState\nfrom durable_state import DurableLedger\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize()\n\
+        item={'id': 'netshort-hidden-ep7-part1-v1', 'episode': 7, 'part': 1, 'title':\
+        \ 'The Hidden Heiress - Episode 7 Part 1/1 | NetShort', 'description': 'After\
+        \ three years posing as a broke student, heiress Riley Sterling is betrayed\
+        \ by her social-climbing boyfriend and her roommate, who steals her black\
+        \ card. Riley exposes their lies and lets their greed destroy them, while\
+        \ billionaire Asher Vance stands at her side as she claims her empire and\
+        \ a powerful new future.\\n\\nThis is only one piece of the story. The rest\
+        \ is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/5KXVs0T7AZki\\\
+        n\\nFull episode part 1 of 1.\\nAffiliate links: I may earn a commission if\
+        \ you use them.', 'file': '/downloads/next-reelsaga/hidden-ep7-part1-deterministic.mp4',\
         \ 'source_start': 0, 'source_end': 30.4, 'privacy': 'private', 'approval_required':\
         \ True, 'bytes': 45817346, 'sha256': '6e6c5726b16435c60402968f638eabf9695ec5667bbe78be1cd196c8806e7e95'}\n\
-        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
-        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already\
-        \ claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
-        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
-        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
-        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
-        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
-        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
-        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
-        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
-        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
-        \ ValueError('Spacing')\n    import hashlib,subprocess\n    import urllib.request,subprocess\n\
-        \    SOURCE_URL='https://video.netshort.com/oEFtqJSVifmwBMGgEw0fOb9FgeLfIiHhURSVAD?a=0&auth_key=1792224034-a1188f971d5840c4a7772ef4a4a5d5d3-0-28ed3256524d0ce66cff02e9c8b01e8d&br=1282&bt=1282&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=4&eid=4d6aca51b72e48eebde3b3838347c2c8&er=0&l=20261007080003AEBA39FA3D822B6825AA&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajlpaHI5cmt5ZTozMzZoNEApZmY3OztlaGVoNzVlOGY5N2cxZGQxMmRrai9hMi1kXjVzczUvNDAwMDBhYjViNC5eXmE6Yw%3D%3D&vl=&vr='\n\
-        \    source=urllib.request.urlopen(SOURCE_URL,timeout=120).read()\n    if\
-        \ len(source)!=4990001 or hashlib.sha256(source).hexdigest()!='fae565374d039ef73bd85bc0e7f0a44c928cd304b6f03e55191e4994d35382e5':raise\
-        \ RuntimeError('Source mismatch')\n    Path('source.mp4').write_bytes(source)\n\
-        \    subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
-        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
-        \ error -cpuflags 0 -filter_threads 1 -ss 0.000000 -i source.mp4 -t 30.400000\
-        \ -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=29.900000:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=29.900000:d=0.5'\
-        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a\
-        \ aac -flags:a +bitexact -b:a 192k -movflags +faststart -y empire.mp4 && ffmpeg\
-        \ -v error -i empire.mp4 -f null -\"],check=True)\n    \n    \n    if Path('empire.mp4').stat().st_size!=item['bytes']\
-        \ or hashlib.sha256(Path('empire.mp4').read_bytes()).hexdigest()!=item['sha256']:raise\
-        \ ValueError('Render mismatch')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
-        \    stage='require_enabled'\n    import time\n    for attempt in range(5):\n\
-        \        control,_=backend.get('account-control')\n        if control and\
-        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
-        \    else:raise ValueError('Control enable readback did not settle')\n   \
-        \ controls.require_enabled()\n    stage='claim_record'\n    if not ledger.claim(item,'instagram'):raise\
-        \ ValueError('Existing claim; reconcile only')\n    stage='uncertain_checkpoint'\n\
-        \    import time\n    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if claimed and claimed.get('state')=='started':break\n        time.sleep(3)\n\
-        \    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
-        \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if claimed and claimed.get('state')=='uncertain':break\n        time.sleep(3)\n\
-        \    else:raise ValueError('Uncertain readback did not settle')\n    stage='create'\n\
-        \    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','upload_type':'resumable','thumb_offset':1000,'caption':caption,'share_to_feed':True})).data\n\
-        \    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=r['id'])\n\
-        \    for attempt in range(5):\n        checkpoint,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if checkpoint and checkpoint.get('external_id')==r['id'] and checkpoint.get('state')=='uncertain':break\n\
-        \        if attempt<4:time.sleep(3)\n    else:raise ValueError('Container\
-        \ checkpoint did not settle; no binary sent')\n    upload_uri=r['uri']\n \
-        \   if urllib.parse.urlparse(upload_uri).scheme!='https' or urllib.parse.urlparse(upload_uri).hostname!='rupload.facebook.com':raise\
-        \ ValueError('Unexpected upload URI')\n    stage='binary_upload'\n    parsed=urllib.parse.urlparse(upload_uri)\n\
-        \    if parsed.username or parsed.password or parsed.port not in [None,443]:raise\
-        \ ValueError('Unexpected upload URI authority')\n    controls.require_enabled()\n\
-        \    class NoRedirect(urllib.request.HTTPRedirectHandler):\n        def redirect_request(self,req,fp,code,msg,headers,newurl):raise\
-        \ ValueError('Upload redirect blocked; reconcile only')\n    opener=urllib.request.build_opener(NoRedirect)\n\
-        \    request=urllib.request.Request(upload_uri,data=Path('empire.mp4').read_bytes(),headers={'Authorization':'OAuth\
-        \ '+token,'offset':'0','file_size':str(item['bytes']),'Content-Type':'application/octet-stream'},method='POST')\n\
-        \    with opener.open(request,timeout=240) as response:\n        receipt=json.loads(response.read())\n\
-        \    if receipt.get('success') is not True:raise ValueError('Upload acknowledgement\
-        \ missing; reconcile only')\n    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
-        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \    for attempt in range(5):\n        saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if saved and saved.get('external_id')==r['id'] and saved.get('state')=='processing':break\n\
-        \        if attempt<4:time.sleep(3)\n    else:raise ValueError('Checkpoint')\n\
-        \    for attempt in range(5):\n        stopped,_=backend.get('account-control')\n\
-        \        if stopped and stopped.get('enabled') is False:break\n        if\
-        \ attempt<4:time.sleep(3)\n    else:raise ValueError('Stop readback did not\
-        \ settle')\n    result={'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}\n\
-        \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
-        \ Private HiddenEP7P1 IG staged\\n\\n```json\\n'+json.dumps(result,indent=2)+'\\\
-        n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
-        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
-        \        except Exception:pass\n\nSTAGE\npython ig_stage.py\n"
+        item['caption']=item['title']+'\\n\\n'+item['description']\nl=DurableLedger(b);l.verify_item(item,'instagram');saved,_=b.get(l.key(item['id'],'instagram'))\n\
+        if saved.get('state')!='processing':raise ValueError('Stage not processing;\
+        \ reconcile only')\ntoken=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY'])\n\
+        api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
+        ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
+        if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
+        \ ValueError('Identity')\nstatus=checked(api('GET',base+saved['external_id'],params={'fields':'status_code'})).data\n\
+        out={'container_id':saved['external_id'],'status':status,'publish_attempted':False}\n\
+        open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## EP7 container status\\\
+        n\\n```json\\n'+json.dumps(out,indent=2)+'\\n```\\n')\nprint(json.dumps(out))\n\
+        \nSTATUS\npython ig_status.py\n"
 'on':
   workflow_dispatch: null
