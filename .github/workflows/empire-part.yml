@@ -1,4 +1,4 @@
-name: Mute EP4P2 private
+name: Mute EP4P2 IG stage
 permissions:
   contents: write
 concurrency:
@@ -7,7 +7,7 @@ concurrency:
 jobs:
   private-part:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
     - uses: actions/checkout@v4
       with:
@@ -24,12 +24,15 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Upload exact Mute EP4P2 privately then stop
+    - name: Stage exact Hidden EP9P1 unpublished
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
-        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        TIGRIS_BUCKET: reelsaga-private-staging-71
+        TIGRIS_GUARD_DB: /tmp/tigris-guard.db
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -240,121 +243,220 @@ jobs:
         ,\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n    \"probe-37874770790\"\
         ,\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
         \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"\
-        '\ncat > actions_empire.py <<'PRIVATE'\n\"\"\"One privately prepared promo,\
-        \ PRIVATE only, then stop for Studio review.\n\nManual dispatch only. Reruns\
-        \ never recreate a claimed upload.\n\"\"\"\nimport hashlib,json,os\nfrom pathlib\
-        \ import Path\nfrom actions_canary import Store\nfrom desktop_setup import\
-        \ CHANNEL,SCOPES\nfrom provision_actions import validated_record\nfrom credentials\
-        \ import GoogleCredentials\nfrom transport import Transport,GoogleTokenForms\n\
-        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\n\
-        from controls import Controls,ControlError\nfrom adapters import YouTube,checked\n\
-        from actions_state_probe import probe\n\nimport urllib.request\nimport urllib.request,subprocess\n\
-        SOURCE_URL='https://video.netshort.com/oAD4QIDWaj36QFIUXI6ti8nE5QBivsMDvAANA?a=0&auth_key=1792830568-8e10f094515c4141ae024c874fa9f2b1-0-f6d492940f74dd0cd203dfacae028035&br=787&bt=787&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=4&ds=4&eid=4d87480761034cf8a50e769eb4b58d7d&er=0&l=20261012071055F5716C1F754F20931B91&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M2dpaHI5cjtuZTozMzZoNEApOjtlZTw6M2RpNzM5Mzc7N2czY2QxMmRrLS5hMi1kXjVzc2FhMjFiM2IyNWAwLjQ1NGE6Yw%3D%3D&vl=&vr='\n\
-        source=urllib.request.urlopen(SOURCE_URL,timeout=120).read()\nif len(source)!=9332313\
-        \ or hashlib.sha256(source).hexdigest()!='1edde34f24d138ecff80e2975679ce812f701b0336d51f2afd79d9b5d41a78fd':raise\
-        \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\n\
-        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
-        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
-        \ error -cpuflags 0 -filter_threads 1 -ss 51.200000 -i source.mp4 -t 41.402000\
-        \ -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=40.902000:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=40.902000:d=0.5'\
-        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a\
-        \ aac -flags:a +bitexact -b:a 192k -movflags +faststart -y empire.mp4 && ffmpeg\
-        \ -v error -i empire.mp4 -f null -\"],check=True)\n\n\nPath(\"empire.json\"\
-        ).write_text('{\"id\": \"netshort-mute-ep4-part2-v1\", \"episode\": 4, \"\
-        part\": 2, \"title\": \"The Mute Heiress Speaks - Episode 4 Part 2/2 | NetShort\"\
-        , \"description\": \"Chloe Sterling, a top Manhattan lawyer in her past life,\
-        \ dies from overwork and is reborn as the youngest heir of New York\\'s old-money\
-        \ Sterling family. When her family faces bankruptcy from short-sellers, betrayal,\
-        \ and forced liquidation, the once-quiet Chloe finally strikes back, tearing\
-        \ apart Wall Street\\'s trap contracts and turning the tables with a billion-dollar\
-        \ reverse takeover.\\\\n\\\\nThis is only one piece of the story. The rest\
-        \ is waiting on the channel.\\\\n\\\\nWatch on NetShort: https://r.reelsgo.tv/9Krnq_mgZ7ei\\\
-        \\n\\\\nFull episode part 2 of 2.\\\\nAffiliate links: I may earn a commission\
-        \ if you use them.\", \"file\": \"/downloads/next-reelsaga/mute-ep4-part2-deterministic.mp4\"\
-        , \"source_start\": 51.2, \"source_end\": 92.602, \"privacy\": \"private\"\
-        , \"approval_required\": true, \"bytes\": 42335793, \"sha256\": \"4b395334c5385ef9427664ce04e3da2d63250a667c2fef436afb0ae20c91ccf2\"\
-        }')\nMANIFEST=\"empire.json\"\n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n\
-        \    if item!=expected or item[\"id\"]!=\"netshort-mute-ep4-part2-v1\":raise\
-        \ RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
-        bytes\"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item[\"sha256\"\
-        ]:raise RuntimeError(\"Media integrity mismatch\")\n    if item.get(\"privacy\"\
-        )!=\"private\":raise RuntimeError(\"Private gate missing\")\n\ndef run(backend,api,item,path):\n\
-        \    validate(item,path)\n    controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)\n\
-        \    if ledger.resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item\
-        \ already claimed; reconcile only')\n    controls.require_enabled()\n    if\
-        \ not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')\n\
-        \    checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)\n\
-        \    checkpoint('uncertain');controls.require_enabled()\n    youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)\n\
-        \    offset=0\n    while offset<item['bytes']:\n        controls.require_enabled()\n\
-        \        result=youtube.send_chunk(session,path,offset,checkpoint)\n     \
-        \   if 'video_id' in result:break\n        new_offset=result.get('offset',0)\n\
-        \        if not offset<new_offset<=item['bytes']:raise RuntimeError('Invalid\
-        \ server offset')\n        offset=new_offset\n    if 'video_id' not in result:raise\
-        \ RuntimeError('Saved session incomplete; no retry')\n    video=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':result['video_id']})).data\n\
-        \    rows=video.get('items',[])\n    if len(rows)!=1:raise RuntimeError('Video\
-        \ readback missing')\n    row=rows[0]\n    if row['snippet']['channelId']!=CHANNEL\
-        \ or row['status']['privacyStatus']!='private' or row['snippet']['title']!=item['title']\
-        \ or row['snippet']['description']!=item['description'] or row['status'].get('selfDeclaredMadeForKids')\
-        \ is not False:\n        raise RuntimeError('Private metadata readback mismatch')\n\
-        \    return {'item_id':item['id'],'video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}\n\
-        \ndef main():\n    controls=None\n    stage=\"manifest\"\n    try:\n     \
-        \   item=json.loads(Path(MANIFEST).read_text());path='empire.mp4';validate(item,path)\n\
-        \        stage=\"credentials_config\"\n        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''));gh=os.environ.pop('GH_TOKEN','')\n\
-        \        stage=\"state_initialize\"\n        stable=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \        if len(stable)<48:raise RuntimeError('Stable key missing')\n    \
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),stable);backend.initialize()\n\
-        \        stage=\"state_probe\"\n        controls=Controls(backend,lambda:None);probe(backend,os.environ['GITHUB_RUN_ID'])\n\
-        \        stage=\"google_refresh\"\n        credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES);token=credential.access_token()\n\
-        \        api=Transport(lambda:token,{'www.googleapis.com'})\n        stage=\"\
-        channel_identity\"\n        identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data\n\
-        \        if {x.get('id') for x in identity.get('items',[])}!={CHANNEL}:raise\
-        \ RuntimeError('Identity mismatch')\n        stage=\"complete_channel_duplicate_read\"\
-        \n        c=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'contentDetails','mine':'true'})).data\n\
-        \        playlist=c['items'][0]['contentDetails']['relatedPlaylists']['uploads']\n\
-        \        page=None;seen=set();ids=[];total=None\n        while True:\n   \
-        \         q={'part':'contentDetails','playlistId':playlist,'maxResults':'50'}\n\
-        \            if page:q['pageToken']=page\n            data=checked(api('GET','https://www.googleapis.com/youtube/v3/playlistItems',params=q)).data\n\
-        \            if total is None:total=data['pageInfo']['totalResults']\n   \
-        \         elif data['pageInfo']['totalResults']!=total:raise RuntimeError('Channel\
-        \ inventory changed')\n            ids.extend(x['contentDetails']['videoId']\
-        \ for x in data.get('items',[]))\n            page=data.get('nextPageToken')\n\
-        \            if not page:break\n            if page in seen:raise RuntimeError('Channel\
-        \ pagination loop')\n            seen.add(page)\n# Full live API inventory\
-        \ and exact series+part duplicate check; Studio check required before dispatch.\n\
-        \        ids=list(dict.fromkeys(ids))\n        for n in range(0,len(ids),50):\n\
-        \            data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data\n\
-        \            if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise\
-        \ RuntimeError('Incomplete channel metadata')\n            for video in data.get('items',[]):\n\
-        \                snippet=video['snippet']\n                if snippet['channelId']!=CHANNEL:raise\
-        \ RuntimeError('Channel mismatch')\n                if snippet['title']==item['title']\
-        \ or (\"The Mute Heiress Speaks\" in snippet['title'] and 'Episode 4 Part\
-        \ 2' in snippet['title']):raise RuntimeError('Existing episode part, reconcile\
-        \ only')\n        print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':len(ids),'duplicate_part_found':False}))\n\
-        \        stage=\"item_claim_read\"\n        if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise\
-        \ RuntimeError('Item already claimed')\n        stage=\"enable_control\"\n\
-        \        controls.set_access(True,verified=True)\n        stage=\"private_upload\"\
-        \n        import time\n        for attempt in range(5):\n            c,_=backend.get(\"\
-        account-control\")\n            if c and c.get(\"enabled\") is True:break\n\
-        \            if attempt<4:time.sleep(3)\n        else:raise RuntimeError(\"\
-        Control readback unsettled\")\n        result=run(backend,api,item,path)\n\
-        \        stage=\"stop_verify\"\n        controls.set_access(False)\n     \
-        \   import time\n        for _ in range(5):\n            control,_=backend.get('account-control')\n\
-        \            if control and control.get('enabled') is False:break\n      \
-        \      time.sleep(3)\n        else:raise RuntimeError('Stop readback did not\
-        \ settle')\n        try:controls.require_enabled()\n        except ControlError:pass\n\
-        \        else:raise RuntimeError('Stop did not block access')\n        stage=\"\
-        checkpoint_readback\"\n        saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))\n\
-        \        if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint\
-        \ mismatch')\n        result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)\n\
-        \        print(json.dumps(result,sort_keys=True))\n        open(os.environ[\"\
-        GITHUB_STEP_SUMMARY\"],\"a\").write(\"## Private MuteEP4P2 verified\\n\\n```json\\\
-        n\"+json.dumps(result,indent=2)+\"\\n```\\n\")\n    except Exception:\n  \
-        \      print('Safe failure stage: '+stage)\n        print('Real-part upload\
-        \ stopped. Reconcile encrypted ledger and Studio before retry; secrets not\
-        \ shown.')\n        raise SystemExit(1) from None\n    finally:\n        if\
-        \ controls is not None:\n            try:controls.set_access(False)\n    \
-        \        except Exception:\n                print('STOP control write unconfirmed.\
-        \ No rerun; operator action required.')\n                raise SystemExit(2)\
-        \ from None\nif __name__=='__main__':main()\nPRIVATE\npython actions_empire.py\n"
+        '\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
+        \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import\
+        \ datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\n\
+        SCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
+        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n\
+        \    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
+        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
+        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
+        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n\
+        \    except Exception:\n        raise ValueError('Invalid credential dates')\
+        \ from None\n    if created.tzinfo is None or expiry.tzinfo is None or created>now+timedelta(seconds=30)\
+        \ or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
+        \ expired or dates invalid')\n    token=record.get('access_token')\n    if\
+        \ not isinstance(token,str) or len(token)<100 or not token.isascii():\n  \
+        \      raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
+        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer\
+        \ '+token},params={'fields':'user_id,username'})\n    if identity.get('username')!=EXPECTED_NAME\
+        \ or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
+        \ Instagram identity mismatch')\n    return identity\n\nMODULE\ncat > reader.py\
+        \ <<'MODULE'\n\"\"\"Server-side reader. No credential is written to logs or\
+        \ a public artifact.\"\"\"\nimport json,os,urllib.request,urllib.parse\nfrom\
+        \ instagram_record import validate_record,verify_live_identity\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
+        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https'\
+        \ or parsed.hostname!='kathirvelan-boutique.vercel.app' or parsed.path!='/api/instagram/reelsaga-reader'\
+        \ or parsed.port not in (None,443) or parsed.username or parsed.password or\
+        \ parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader\
+        \ destination')\n    if not secret or len(secret)<32:\n        raise ValueError('Reader\
+        \ credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
+        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
+        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the\
+        \ read key to another destination.\n    if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n\
+        \    with opener(request,timeout=30) as response:\n        if response.status!=200:raise\
+        \ ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
+        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n\
+        \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
+        \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
+        \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
+        \nMODULE\npython -m pip install boto3\ncat > tigris_staging.py <<'MODULE'\n\
+        \"\"\"ReelSaga private staging. Guarded private staging with owner-approved\
+        \ external-fetch risk.\"\"\"\nimport contextlib, datetime, hashlib, json,\
+        \ os, sqlite3, time\nimport boto3\nfrom botocore.config import Config\n\n\
+        STORAGE_STOP = 4 * 1024**3\nWRITE_STOP, READ_STOP = 9000, 90000\n# Egress\
+        \ is free. This is a conservative operational ledger, not a billing cap.\n\
+        MAX_OBJECT_BYTES = 256 * 1024**2\n\nclass GuardStop(RuntimeError): pass\n\n\
+        class Staging:\n    def __init__(self):\n        self.bucket = os.environ['TIGRIS_BUCKET']\n\
+        \        if self.bucket != 'reelsaga-private-staging-71':\n            raise\
+        \ GuardStop('Unexpected staging bucket')\n        self.db = os.environ['TIGRIS_GUARD_DB']\n\
+        \        if not os.path.exists(self.db):\n            raise GuardStop('Guard\
+        \ ledger missing: restore durable state, never auto-reset')\n        self.s3\
+        \ = boto3.client('s3', endpoint_url='https://t3.storage.dev',region_name='auto',\n\
+        \            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],\n        \
+        \    aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],\n        \
+        \    config=Config(signature_version='s3v4',retries={'total_max_attempts':1},s3={'addressing_style':'path'}))\n\
+        \n    @contextlib.contextmanager\n    def _lock(self):\n        c=sqlite3.connect(self.db,timeout=30)\n\
+        \        try:\n            c.execute('BEGIN IMMEDIATE')\n            yield\
+        \ c\n            c.commit()\n        except Exception:\n            c.rollback();\
+        \ raise\n        finally: c.close()\n\n    def reserve(self, a=0, b=0, bytes_out=0,\
+        \ external_reads=0):\n        \"\"\"Commit reservations before network calls.\
+        \ Failed/uncertain calls keep them.\"\"\"\n        if any(type(x) is not int\
+        \ or x<0 for x in (a,b,bytes_out,external_reads)):\n            raise GuardStop('Invalid\
+        \ reservation')\n        month=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m')\n\
+        \        with self._lock() as c:\n            row=c.execute('SELECT month,a,b,bytes_out,external_reads\
+        \ FROM budget WHERE id=1').fetchone()\n            if not row or row[0]!=month:\n\
+        \                raise GuardStop('Month not reconciled: explicit audited rollover\
+        \ required')\n            if row[1]+a>=WRITE_STOP or row[2]+b+external_reads>=READ_STOP:\n\
+        \                raise GuardStop('Monthly request stop guard')\n         \
+        \   c.execute('UPDATE budget SET a=a+?,b=b+?,bytes_out=bytes_out+?,external_reads=external_reads+?\
+        \ WHERE id=1',\n                (a,b+external_reads,bytes_out,external_reads))\n\
+        \n    def enumerate_bytes(self):\n        total=0; token=None; objects=[]\n\
+        \        while True:\n            self.reserve(a=1)\n            args={'Bucket':self.bucket}\n\
+        \            if token: args['ContinuationToken']=token\n            response=self.s3.list_objects_v2(**args)\n\
+        \            for item in response.get('Contents',[]):\n                total+=item['Size'];objects.append({'key':item['Key'],'size':item['Size']})\n\
+        \            if not response.get('IsTruncated'): return total,objects\n  \
+        \          token=response.get('NextContinuationToken')\n            if not\
+        \ token: raise GuardStop('Incomplete byte enumeration')\n\n    def stage(self,path,key,content_type,expected_sha256):\n\
+        \        \"\"\"Use a single serialized uploader across workers, not just this\
+        \ process.\"\"\"\n        if content_type not in ('video/mp4','image/jpeg'):\
+        \ raise GuardStop('Unsupported content type')\n        if not key.startswith('production/')\
+        \ or '..' in key: raise GuardStop('Unexpected object key')\n        data=open(path,'rb').read();digest=hashlib.sha256(data).hexdigest()\n\
+        \        if digest!=expected_sha256: raise GuardStop('Source manifest hash\
+        \ mismatch')\n        if len(data)>MAX_OBJECT_BYTES: raise GuardStop('Object\
+        \ too large for guarded single PUT')\n        # This lock serializes storage\
+        \ preflight + PUT within all users of the same local DB.\n        # Separate\
+        \ machines require a shared distributed lock at the pipeline layer.\n    \
+        \    with open(self.db+'.upload-lock','a') as lock:\n            import fcntl\n\
+        \            fcntl.flock(lock,fcntl.LOCK_EX)\n            stored,_=self.enumerate_bytes()\n\
+        \            if stored+len(data)>=STORAGE_STOP: raise GuardStop('4 GiB stop-before-upload')\n\
+        \            self.reserve(a=1)\n            self.s3.put_object(Bucket=self.bucket,Key=key,Body=data,ContentType=content_type,\n\
+        \                StorageClass='STANDARD',Metadata={'sha256':digest},IfNoneMatch='*')\n\
+        \            self.reserve(b=1)\n            head=self.s3.head_object(Bucket=self.bucket,Key=key)\n\
+        \            if head['ContentLength']!=len(data) or head['ContentType']!=content_type\
+        \ or head.get('Metadata',{}).get('sha256')!=digest:\n                raise\
+        \ GuardStop('HEAD verification failed; retain object, do not delete/retry')\n\
+        \        return {'bucket':self.bucket,'key':key,'bytes':len(data),'sha256':digest,'content_type':content_type}\n\
+        \n    def verified_get(self,key,expected_sha256):\n        self.reserve(b=1)\n\
+        \        head=self.s3.head_object(Bucket=self.bucket,Key=key)\n        self.reserve(b=1,bytes_out=head['ContentLength'])\n\
+        \        data=self.s3.get_object(Bucket=self.bucket,Key=key)['Body'].read()\n\
+        \        if hashlib.sha256(data).hexdigest()!=expected_sha256: raise GuardStop('GET\
+        \ hash mismatch')\n        return data\n\n    def signed_get(self,key):\n\
+        \        \"\"\"10800-second bearer URL. Nine external reads reserved, not\
+        \ enforced.\"\"\"\n        if not key.startswith('production/') or '..' in\
+        \ key:\n            raise GuardStop('Unexpected production object key')\n\
+        \        stored,_=self.enumerate_bytes()\n        if stored>=STORAGE_STOP:\
+        \ raise GuardStop('4 GiB staging stop')\n        self.reserve(b=1)\n     \
+        \   head=self.s3.head_object(Bucket=self.bucket,Key=key)\n        if head['ContentType']\
+        \ not in ('video/mp4','image/jpeg'):\n            raise GuardStop('Unexpected\
+        \ source type')\n        # Planning allowance only. External callers can exceed\
+        \ it until expiry.\n        self.reserve(external_reads=9,bytes_out=9*head['ContentLength'])\n\
+        \        url=self.s3.generate_presigned_url('get_object',\n            Params={'Bucket':self.bucket,'Key':key},ExpiresIn=10800)\n\
+        \        from urllib.parse import urlparse,parse_qs\n        query=parse_qs(urlparse(url).query)\n\
+        \        if query.get('X-Amz-Expires')!=['10800']:\n            raise GuardStop('Unexpected\
+        \ signed URL expiry')\n        signed_at=datetime.datetime.strptime(query['X-Amz-Date'][0],'%Y%m%dT%H%M%SZ').replace(tzinfo=datetime.timezone.utc)\n\
+        \        return {'url':url,'key':key,'bytes':head['ContentLength'],\n    \
+        \        'content_type':head['ContentType'],'sha256':head.get('Metadata',{}).get('sha256'),\n\
+        \            'expires_at':(signed_at+datetime.timedelta(seconds=10800)).isoformat(),\n\
+        \            'external_reads_reserved':9,'external_reads_hard_capped':False}\n\
+        \n\n    def status(self):\n        with self._lock() as c:\n            row=c.execute('SELECT\
+        \ month,a,b,bytes_out,external_reads FROM budget WHERE id=1').fetchone()\n\
+        \        return dict(zip(('month','class_a_reserved','class_b_reserved','bytes_out_reserved','external_reads_reserved'),row))\n\
+        \n\ndef initialize_approved_baseline(path,month,class_a,class_b):\n    \"\"\
+        \"One-time explicit baseline only. Refuses any existing DB. No auto rollover.\"\
+        \"\"\n    if os.path.exists(path): raise GuardStop('Existing ledger must not\
+        \ be overwritten')\n    fd=os.open(path,os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600);os.close(fd)\n\
+        \    c=sqlite3.connect(path)\n    c.execute('CREATE TABLE budget(id INTEGER\
+        \ PRIMARY KEY CHECK(id=1),month TEXT NOT NULL,a INTEGER NOT NULL,b INTEGER\
+        \ NOT NULL,bytes_out INTEGER NOT NULL,external_reads INTEGER NOT NULL)')\n\
+        \    c.execute('INSERT INTO budget VALUES(1,?,?,?,?,?)',(month,class_a,class_b,0,0));c.commit();c.close()\n\
+        \nMODULE\ncat > tigris_durable.py <<'MODULE'\nimport os,json,base64,sqlite3\n\
+        from tigris_staging import Staging,GuardStop,initialize_approved_baseline\n\
+        KEY='tigris-guard-202610'\nMARK='tigris-guard-initialized-202610'\ndef bootstrap(backend):\n\
+        \    record,version=backend.get(KEY);mark,mv=backend.get(MARK)\n    if record:\n\
+        \        if not mark:raise GuardStop('Guard marker missing')\n        return\n\
+        \    if mark:raise GuardStop('Guard missing after initialization, no reset')\n\
+        \    path='/tmp/tigris-bootstrap.db';initialize_approved_baseline(path,'2026-10',100,100)\n\
+        \    r={'month':'2026-10','sqlite_b64':base64.b64encode(open(path,'rb').read()).decode(),'exclusive_pipeline':'reelsaga-canary','baseline':'approved\
+        \ conservative100/100 not provider measurement'}\n    if not backend.compare_and_swap(KEY,None,r):raise\
+        \ GuardStop('Bootstrap CAS conflict')\n    if not backend.compare_and_swap(MARK,None,{'initialized':True,'month':'2026-10','baseline':[100,100]}):raise\
+        \ GuardStop('Marker CAS conflict')\nclass DurableStaging(Staging):\n    def\
+        \ __init__(self,backend):\n        self.backend=backend\n        r,v=backend.get(KEY);mark,_=backend.get(MARK)\n\
+        \        if not r or not mark or r['month']!='2026-10':raise GuardStop('Restore/reconcile\
+        \ guard required')\n        self.version=v;self.record=r\n        p=os.environ['TIGRIS_GUARD_DB'];open(p,'wb').write(base64.b64decode(r['sqlite_b64']))\n\
+        \        super().__init__()\n    def reserve(self,**kw):\n        super().reserve(**kw)\n\
+        \        r=dict(self.record,sqlite_b64=base64.b64encode(open(self.db,'rb').read()).decode())\n\
+        \        if not self.backend.compare_and_swap(KEY,self.version,r):raise GuardStop('Durable\
+        \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
+        \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
+        \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
+        \ ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom\
+        \ datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
+        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
+        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
+        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
+        \ import Controls,ControlError\n\nitem={'id': 'netshort-mute-ep4-part2-v1',\
+        \ 'episode': 4, 'part': 2, 'title': 'The Mute Heiress Speaks - Episode 4 Part\
+        \ 2/2 | NetShort', 'description': \"Chloe Sterling, a top Manhattan lawyer\
+        \ in her past life, dies from overwork and is reborn as the youngest heir\
+        \ of New York's old-money Sterling family. When her family faces bankruptcy\
+        \ from short-sellers, betrayal, and forced liquidation, the once-quiet Chloe\
+        \ finally strikes back, tearing apart Wall Street's trap contracts and turning\
+        \ the tables with a billion-dollar reverse takeover.\\n\\nThis is only one\
+        \ piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
+        \ https://r.reelsgo.tv/9Krnq_mgZ7ei\\n\\nFull episode part 2 of 2.\\nAffiliate\
+        \ links: I may earn a commission if you use them.\", 'file': '/downloads/next-reelsaga/mute-ep4-part2-deterministic.mp4',\
+        \ 'source_start': 51.2, 'source_end': 92.602, 'privacy': 'private', 'approval_required':\
+        \ True, 'bytes': 42335793, 'sha256': '4b395334c5385ef9427664ce04e3da2d63250a667c2fef436afb0ae20c91ccf2'}\n\
+        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
+        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
+        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already\
+        \ claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
+        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
+        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
+        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
+        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
+        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
+        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
+        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
+        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
+        \ ValueError('Spacing')\n    from tigris_durable import DurableStaging\n \
+        \   import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-mute-ep4-part2-v1');urls={}\n\
+        \    for kind in ['video']:\n        if not isinstance(host,dict) or not isinstance(host.get('records'),dict):raise\
+        \ ValueError('Missing verified host record; run guarded host-prep first')\n\
+        \        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
+        \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with\
+        \ urllib.request.urlopen(urls[kind]['url'],timeout=90) as response:\n    \
+        \        data=response.read();ct=response.headers.get_content_type()\n   \
+        \     if len(data)!=obj['bytes'] or hashlib.sha256(data).hexdigest()!=obj['sha256']\
+        \ or ct!=obj['content_type'] or '***' in urls[kind]['url']:raise ValueError('Fresh\
+        \ source')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
+        \    stage='require_enabled'\n    import time\n    for attempt in range(5):\n\
+        \        control,_=backend.get('account-control')\n        if control and\
+        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
+        \    else:raise ValueError('Control enable readback did not settle')\n   \
+        \ controls.require_enabled()\n    stage='claim_record'\n    if not ledger.claim(item,'instagram'):raise\
+        \ ValueError('Existing claim; reconcile only')\n    stage='uncertain_checkpoint'\n\
+        \    import time\n    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \        if claimed and claimed.get('state')=='started':break\n        time.sleep(3)\n\
+        \    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
+        \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \        if claimed and claimed.get('state')=='uncertain':break\n        time.sleep(3)\n\
+        \    else:raise ValueError('Uncertain readback did not settle')\n    stage='create'\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':urls['video']['url'],'thumb_offset':1000,'caption':caption,'share_to_feed':True})).data\n\
+        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
+        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
+        \    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
+        \ ValueError('Checkpoint')\n    result={'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}\n\
+        \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ Private MuteEP4P2 IG staged\\n\\n```json\\n'+json.dumps(result,indent=2)+'\\\
+        n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
+        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
+        \        except Exception:pass\n\nSTAGE\npython ig_stage.py\n"
 'on':
   workflow_dispatch: null
