@@ -352,7 +352,7 @@ jobs:
         \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
         \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
         \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
-        \ host_prep.py <<'PREPARE'\nSOURCE_URL='https://video.netshort.com/ocAqVM8fcfn6QN5jqAFzwPwD3fEEr2zEAqC7DE?a=0&auth_key=1792789262-583bd61b733340c8a814da5cd949e96c-0-a784b3a2211a103dca8009ce07b08eb3&br=1888&bt=1888&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=4&ds=4&eid=b5229da2c96b444ab85ebdf364dbf573&er=0&l=20261012071057DADCC709FA776090FDCB&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajd4M3c5cmdtZTozMzZoNEApOmlnOWllOGU3NzlmZDw1ZWdtamctMmRzci5hMi1kXjVzczAyXzEwYWI1XjFfNi9hLzI6Yw%3D%3D&vl=&vr='\n\
+        \ host_prep.py <<'PREPARE'\nSOURCE_URL='https://video.netshort.com/oszwwA9IDur8zCP4qEf3fPgIXF2BfqAq3zaNdD?a=0&auth_key=1792789255-bc39fd19094d48b8839d6abc86e8ea00-0-b402bff752e7e02fc414f8183bf9b69d&br=2063&bt=2063&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=4&ds=4&eid=03df54b78f7440f69d88448963846c15&er=0&l=20261012071051F5716C1F754F20931B63&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=anZ2anM5cmltZTozMzZoNEApNDk7OTs3OzxpNzo7ZThnM2czazNxMmRjci5hMi1kXjVzczJgMTA2MTVhMy0xYzQxYzA6Yw%3D%3D&vl=&vr='\n\
         ITEM={'id': 'netshort-robot-ep4-part1-v1', 'episode': 3, 'part': 1, 'title':\
         \ 'My Robot Son will Save the World - Episode 4 Part 1/4 | NetShort', 'description':\
         \ \"Genius programmer Silas creates Vanta, the world's most advanced police\
@@ -370,7 +370,7 @@ jobs:
         \ GuardStop\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();bootstrap(b);s=DurableStaging(b)\n\
         key='tigris-host-netshort-robot-ep4-part1-v1';r,v=b.get(key)\nif r:raise GuardStop('Host\
         \ record exists; reconcile only')\ndata=urllib.request.urlopen(SOURCE_URL,timeout=120).read()\n\
-        if len(data)!=30013518 or hashlib.sha256(data).hexdigest()!='b7385c5d16bfd3220dbba2377f3587ba07ef0c9d724a90dbd8c218e666529be5':raise\
+        if len(data)!=32649946 or hashlib.sha256(data).hexdigest()!='b7385c5d16bfd3220dbba2377f3587ba07ef0c9d724a90dbd8c218e666529be5':raise\
         \ GuardStop('Supplier hash mismatch')\nPath('source.mp4').write_bytes(data)\n\
         subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
         apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
