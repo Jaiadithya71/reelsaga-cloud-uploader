@@ -1,4 +1,4 @@
-name: Mute EP6P2 read-only diagnosis
+name: Mute EP6P2 readiness
 permissions:
   contents: write
 concurrency:
@@ -390,16 +390,18 @@ jobs:
         \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
         \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
         \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
-        \ diagnosis.py <<'DIAG'\nimport os,json\nfrom transport import Transport\n\
-        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\n\
-        stage='initialize'\ntry:\n b=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();out={}\n\
-        \ for key in ['account-control','probe-38506388052',DurableLedger.key('netshort-mute-ep6-part2-v1','youtube'),DurableLedger.key('netshort-mute-ep6-part2-v1','instagram')]:\n\
-        \  stage='read_'+key;r,v=b.get(key);out[key]=r\n import base64,sqlite3\n guard,_=b.get('tigris-guard-202610');mark,_=b.get('tigris-guard-initialized-202610')\n\
-        \ if guard:\n  open('/tmp/guard-read.db','wb').write(base64.b64decode(guard['sqlite_b64']));c=sqlite3.connect('file:/tmp/guard-read.db?mode=ro',uri=True);out['guard_budget']=c.execute('SELECT\
-        \ month,a,b,bytes_out,external_reads FROM budget WHERE id=1').fetchone()\n\
-        \ out['guard_marker_present']=bool(mark)\n out['read_only']=True\n print(json.dumps(out));open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
-        \ Read-only EP6P2 state diagnosis\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
-        n```')\nexcept Exception as e:\n print(json.dumps({'stage':stage,'error_type':type(e).__name__}));raise\
-        \ SystemExit(1) from None\nDIAG\npython diagnosis.py\n"
+        \ readiness.py <<'READY'\nimport os,json\nfrom reader import read_token\n\
+        from instagram_record import EXPECTED_USER,EXPECTED_NAME\nfrom transport import\
+        \ Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\n\
+        from durable_state import DurableLedger\nbackend=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);backend.initialize()\n\
+        ledger=DurableLedger(backend);saved,_=backend.get(ledger.key('netshort-mute-ep6-part2-v1','instagram'))\n\
+        assert saved['state']=='processing' and saved['external_id']=='18124349881793253'\n\
+        token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY']);api=Transport(lambda:token,{'graph.instagram.com'})\n\
+        i=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        assert i['username']==EXPECTED_NAME and str(i['user_id'])==EXPECTED_USER\n\
+        r=checked(api('GET','https://graph.instagram.com/v26.0/18124349881793253',params={'fields':'status_code,status'})).data\n\
+        out={'container':saved['external_id'],'readiness':r,'publish_attempted':False};print(json.dumps(out));open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ MuteEP6P2 read-only readiness\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
+        n```')\n\nREADY\npython readiness.py\n"
 'on':
   workflow_dispatch: null
