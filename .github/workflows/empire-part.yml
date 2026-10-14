@@ -291,7 +291,7 @@ jobs:
         \ Queena.\\n\\nThis is only one piece of the story. The rest is waiting on\
         \ the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/7LaI5-AfibmH\\\
         n\\nFull episode part 1 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.\", 'file': '/downloads/robot-screen/ep4-part1.mp4', 'source_start': 0, 'source_end': 31.5, 'privacy': 'private', 'approval_required': True,\
+        \ you use them.\", 'file': '/downloads/robot-screen/ep4-part1.mp4', 'source_start': 0.0, 'source_end': 31.5, 'privacy': 'private', 'approval_required': True,\
         \ 'bytes': 58456298, 'sha256': '652180bf343da014e38f4fe43b55e45c913c689f180d285ee2d9f9f7d0945053'}\n\
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
         from credentials import GoogleCredentials\nfrom actions_canary import Store\n\
