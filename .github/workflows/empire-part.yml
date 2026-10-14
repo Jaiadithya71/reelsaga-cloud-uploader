@@ -1,4 +1,4 @@
-name: Robot EP2P4 IG publish
+name: Robot EP3P1 hostprep
 permissions:
   contents: write
 concurrency:
@@ -7,7 +7,7 @@ concurrency:
 jobs:
   private-part:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     steps:
     - uses: actions/checkout@v4
       with:
@@ -24,12 +24,15 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Publish exact Robot EP2P4 Instagram
+    - name: Exact Robot EP3P1 hostprep only
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
-        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        TIGRIS_BUCKET: reelsaga-private-staging-71
+        TIGRIS_GUARD_DB: /tmp/tigris-guard.db
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\
@@ -240,110 +243,153 @@ jobs:
         ,\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n    \"probe-37874770790\"\
         ,\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
         \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"\
-        '\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
-        \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import\
-        \ datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\n\
-        SCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
-        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n\
-        \    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
-        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
-        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
-        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n\
-        \    except Exception:\n        raise ValueError('Invalid credential dates')\
-        \ from None\n    if created.tzinfo is None or expiry.tzinfo is None or created>now+timedelta(seconds=30)\
-        \ or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
-        \ expired or dates invalid')\n    token=record.get('access_token')\n    if\
-        \ not isinstance(token,str) or len(token)<100 or not token.isascii():\n  \
-        \      raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
-        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer\
-        \ '+token},params={'fields':'user_id,username'})\n    if identity.get('username')!=EXPECTED_NAME\
-        \ or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
-        \ Instagram identity mismatch')\n    return identity\n\nMODULE\ncat > reader.py\
-        \ <<'MODULE'\n\"\"\"Server-side reader. No credential is written to logs or\
-        \ a public artifact.\"\"\"\nimport json,os,urllib.request,urllib.parse\nfrom\
-        \ instagram_record import validate_record,verify_live_identity\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
-        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https'\
-        \ or parsed.hostname!='kathirvelan-boutique.vercel.app' or parsed.path!='/api/instagram/reelsaga-reader'\
-        \ or parsed.port not in (None,443) or parsed.username or parsed.password or\
-        \ parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader\
-        \ destination')\n    if not secret or len(secret)<32:\n        raise ValueError('Reader\
-        \ credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
-        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
-        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the\
-        \ read key to another destination.\n    if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n\
-        \    with opener(request,timeout=30) as response:\n        if response.status!=200:raise\
-        \ ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
-        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n\
-        \        record=json.loads(raw)\n    return validate_record(record)\n\ndef\
-        \ from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n\
-        \    key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\
-        \nMODULE\ncat > ig_publish.py <<'PUBLISH'\nimport json,os,urllib.request,urllib.parse\n\
-        from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
-        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
-        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
-        \ import Controls,ControlError\n\nitem={'id': 'netshort-robot-ep2-part4-v1', 'episode': 2, 'part': 4, 'title':\
-        \ 'My Robot Son will Save the World - Episode 2 Part 4/4 | NetShort', 'description':\
+        '\npython -m pip install boto3\ncat > tigris_staging.py <<'MODULE'\n\"\"\"\
+        ReelSaga private staging. Guarded private staging with owner-approved external-fetch\
+        \ risk.\"\"\"\nimport contextlib, datetime, hashlib, json, os, sqlite3, time\n\
+        import boto3\nfrom botocore.config import Config\n\nSTORAGE_STOP = 4 * 1024**3\n\
+        WRITE_STOP, READ_STOP = 9000, 90000\n# Egress is free. This is a conservative\
+        \ operational ledger, not a billing cap.\nMAX_OBJECT_BYTES = 256 * 1024**2\n\
+        \nclass GuardStop(RuntimeError): pass\n\nclass Staging:\n    def __init__(self):\n\
+        \        self.bucket = os.environ['TIGRIS_BUCKET']\n        if self.bucket\
+        \ != 'reelsaga-private-staging-71':\n            raise GuardStop('Unexpected\
+        \ staging bucket')\n        self.db = os.environ['TIGRIS_GUARD_DB']\n    \
+        \    if not os.path.exists(self.db):\n            raise GuardStop('Guard ledger\
+        \ missing: restore durable state, never auto-reset')\n        self.s3 = boto3.client('s3',\
+        \ endpoint_url='https://t3.storage.dev',region_name='auto',\n            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],\n\
+        \            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],\n\
+        \            config=Config(signature_version='s3v4',retries={'total_max_attempts':1},s3={'addressing_style':'path'}))\n\
+        \n    @contextlib.contextmanager\n    def _lock(self):\n        c=sqlite3.connect(self.db,timeout=30)\n\
+        \        try:\n            c.execute('BEGIN IMMEDIATE')\n            yield\
+        \ c\n            c.commit()\n        except Exception:\n            c.rollback();\
+        \ raise\n        finally: c.close()\n\n    def reserve(self, a=0, b=0, bytes_out=0,\
+        \ external_reads=0):\n        \"\"\"Commit reservations before network calls.\
+        \ Failed/uncertain calls keep them.\"\"\"\n        if any(type(x) is not int\
+        \ or x<0 for x in (a,b,bytes_out,external_reads)):\n            raise GuardStop('Invalid\
+        \ reservation')\n        month=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m')\n\
+        \        with self._lock() as c:\n            row=c.execute('SELECT month,a,b,bytes_out,external_reads\
+        \ FROM budget WHERE id=1').fetchone()\n            if not row or row[0]!=month:\n\
+        \                raise GuardStop('Month not reconciled: explicit audited rollover\
+        \ required')\n            if row[1]+a>=WRITE_STOP or row[2]+b+external_reads>=READ_STOP:\n\
+        \                raise GuardStop('Monthly request stop guard')\n         \
+        \   c.execute('UPDATE budget SET a=a+?,b=b+?,bytes_out=bytes_out+?,external_reads=external_reads+?\
+        \ WHERE id=1',\n                (a,b+external_reads,bytes_out,external_reads))\n\
+        \n    def enumerate_bytes(self):\n        total=0; token=None; objects=[]\n\
+        \        while True:\n            self.reserve(a=1)\n            args={'Bucket':self.bucket}\n\
+        \            if token: args['ContinuationToken']=token\n            response=self.s3.list_objects_v2(**args)\n\
+        \            for item in response.get('Contents',[]):\n                total+=item['Size'];objects.append({'key':item['Key'],'size':item['Size']})\n\
+        \            if not response.get('IsTruncated'): return total,objects\n  \
+        \          token=response.get('NextContinuationToken')\n            if not\
+        \ token: raise GuardStop('Incomplete byte enumeration')\n\n    def stage(self,path,key,content_type,expected_sha256):\n\
+        \        \"\"\"Use a single serialized uploader across workers, not just this\
+        \ process.\"\"\"\n        if content_type not in ('video/mp4','image/jpeg'):\
+        \ raise GuardStop('Unsupported content type')\n        if not key.startswith('production/')\
+        \ or '..' in key: raise GuardStop('Unexpected object key')\n        data=open(path,'rb').read();digest=hashlib.sha256(data).hexdigest()\n\
+        \        if digest!=expected_sha256: raise GuardStop('Source manifest hash\
+        \ mismatch')\n        if len(data)>MAX_OBJECT_BYTES: raise GuardStop('Object\
+        \ too large for guarded single PUT')\n        # This lock serializes storage\
+        \ preflight + PUT within all users of the same local DB.\n        # Separate\
+        \ machines require a shared distributed lock at the pipeline layer.\n    \
+        \    with open(self.db+'.upload-lock','a') as lock:\n            import fcntl\n\
+        \            fcntl.flock(lock,fcntl.LOCK_EX)\n            stored,_=self.enumerate_bytes()\n\
+        \            if stored+len(data)>=STORAGE_STOP: raise GuardStop('4 GiB stop-before-upload')\n\
+        \            self.reserve(a=1)\n            self.s3.put_object(Bucket=self.bucket,Key=key,Body=data,ContentType=content_type,\n\
+        \                StorageClass='STANDARD',Metadata={'sha256':digest},IfNoneMatch='*')\n\
+        \            self.reserve(b=1)\n            head=self.s3.head_object(Bucket=self.bucket,Key=key)\n\
+        \            if head['ContentLength']!=len(data) or head['ContentType']!=content_type\
+        \ or head.get('Metadata',{}).get('sha256')!=digest:\n                raise\
+        \ GuardStop('HEAD verification failed; retain object, do not delete/retry')\n\
+        \        return {'bucket':self.bucket,'key':key,'bytes':len(data),'sha256':digest,'content_type':content_type}\n\
+        \n    def verified_get(self,key,expected_sha256):\n        self.reserve(b=1)\n\
+        \        head=self.s3.head_object(Bucket=self.bucket,Key=key)\n        self.reserve(b=1,bytes_out=head['ContentLength'])\n\
+        \        data=self.s3.get_object(Bucket=self.bucket,Key=key)['Body'].read()\n\
+        \        if hashlib.sha256(data).hexdigest()!=expected_sha256: raise GuardStop('GET\
+        \ hash mismatch')\n        return data\n\n    def signed_get(self,key):\n\
+        \        \"\"\"10800-second bearer URL. Nine external reads reserved, not\
+        \ enforced.\"\"\"\n        if not key.startswith('production/') or '..' in\
+        \ key:\n            raise GuardStop('Unexpected production object key')\n\
+        \        stored,_=self.enumerate_bytes()\n        if stored>=STORAGE_STOP:\
+        \ raise GuardStop('4 GiB staging stop')\n        self.reserve(b=1)\n     \
+        \   head=self.s3.head_object(Bucket=self.bucket,Key=key)\n        if head['ContentType']\
+        \ not in ('video/mp4','image/jpeg'):\n            raise GuardStop('Unexpected\
+        \ source type')\n        # Planning allowance only. External callers can exceed\
+        \ it until expiry.\n        self.reserve(external_reads=9,bytes_out=9*head['ContentLength'])\n\
+        \        url=self.s3.generate_presigned_url('get_object',\n            Params={'Bucket':self.bucket,'Key':key},ExpiresIn=10800)\n\
+        \        from urllib.parse import urlparse,parse_qs\n        query=parse_qs(urlparse(url).query)\n\
+        \        if query.get('X-Amz-Expires')!=['10800']:\n            raise GuardStop('Unexpected\
+        \ signed URL expiry')\n        signed_at=datetime.datetime.strptime(query['X-Amz-Date'][0],'%Y%m%dT%H%M%SZ').replace(tzinfo=datetime.timezone.utc)\n\
+        \        return {'url':url,'key':key,'bytes':head['ContentLength'],\n    \
+        \        'content_type':head['ContentType'],'sha256':head.get('Metadata',{}).get('sha256'),\n\
+        \            'expires_at':(signed_at+datetime.timedelta(seconds=10800)).isoformat(),\n\
+        \            'external_reads_reserved':9,'external_reads_hard_capped':False}\n\
+        \n\n    def status(self):\n        with self._lock() as c:\n            row=c.execute('SELECT\
+        \ month,a,b,bytes_out,external_reads FROM budget WHERE id=1').fetchone()\n\
+        \        return dict(zip(('month','class_a_reserved','class_b_reserved','bytes_out_reserved','external_reads_reserved'),row))\n\
+        \n\ndef initialize_approved_baseline(path,month,class_a,class_b):\n    \"\"\
+        \"One-time explicit baseline only. Refuses any existing DB. No auto rollover.\"\
+        \"\"\n    if os.path.exists(path): raise GuardStop('Existing ledger must not\
+        \ be overwritten')\n    fd=os.open(path,os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600);os.close(fd)\n\
+        \    c=sqlite3.connect(path)\n    c.execute('CREATE TABLE budget(id INTEGER\
+        \ PRIMARY KEY CHECK(id=1),month TEXT NOT NULL,a INTEGER NOT NULL,b INTEGER\
+        \ NOT NULL,bytes_out INTEGER NOT NULL,external_reads INTEGER NOT NULL)')\n\
+        \    c.execute('INSERT INTO budget VALUES(1,?,?,?,?,?)',(month,class_a,class_b,0,0));c.commit();c.close()\n\
+        \nMODULE\ncat > tigris_durable.py <<'MODULE'\nimport os,json,base64,sqlite3\n\
+        from tigris_staging import Staging,GuardStop,initialize_approved_baseline\n\
+        KEY='tigris-guard-202610'\nMARK='tigris-guard-initialized-202610'\ndef bootstrap(backend):\n\
+        \    record,version=backend.get(KEY);mark,mv=backend.get(MARK)\n    if record:\n\
+        \        if not mark:raise GuardStop('Guard marker missing')\n        return\n\
+        \    if mark:raise GuardStop('Guard missing after initialization, no reset')\n\
+        \    path='/tmp/tigris-bootstrap.db';initialize_approved_baseline(path,'2026-10',100,100)\n\
+        \    r={'month':'2026-10','sqlite_b64':base64.b64encode(open(path,'rb').read()).decode(),'exclusive_pipeline':'reelsaga-canary','baseline':'approved\
+        \ conservative100/100 not provider measurement'}\n    if not backend.compare_and_swap(KEY,None,r):raise\
+        \ GuardStop('Bootstrap CAS conflict')\n    if not backend.compare_and_swap(MARK,None,{'initialized':True,'month':'2026-10','baseline':[100,100]}):raise\
+        \ GuardStop('Marker CAS conflict')\nclass DurableStaging(Staging):\n    def\
+        \ __init__(self,backend):\n        self.backend=backend\n        r,v=backend.get(KEY);mark,_=backend.get(MARK)\n\
+        \        if not r or not mark or r['month']!='2026-10':raise GuardStop('Restore/reconcile\
+        \ guard required')\n        self.version=v;self.record=r\n        p=os.environ['TIGRIS_GUARD_DB'];open(p,'wb').write(base64.b64decode(r['sqlite_b64']))\n\
+        \        super().__init__()\n    def reserve(self,**kw):\n        super().reserve(**kw)\n\
+        \        r=dict(self.record,sqlite_b64=base64.b64encode(open(self.db,'rb').read()).decode())\n\
+        \        if not self.backend.compare_and_swap(KEY,self.version,r):raise GuardStop('Durable\
+        \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
+        \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
+        \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
+        \ host_prep.py <<'PREPARE'\nSOURCE_URL='https://video.netshort.com/ocAqVM8fcfn6QN5jqAFzwPwD3fEEr2zEAqC7DE?a=0&auth_key=1792789262-583bd61b733340c8a814da5cd949e96c-0-a784b3a2211a103dca8009ce07b08eb3&br=1888&bt=1888&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=4&ds=4&eid=b5229da2c96b444ab85ebdf364dbf573&er=0&l=20261012071057DADCC709FA776090FDCB&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=ajd4M3c5cmdtZTozMzZoNEApOmlnOWllOGU3NzlmZDw1ZWdtamctMmRzci5hMi1kXjVzczAyXzEwYWI1XjFfNi9hLzI6Yw%3D%3D&vl=&vr='\n\
+        ITEM={'id': 'netshort-robot-ep3-part1-v1', 'episode': 3, 'part': 1, 'title':\
+        \ 'My Robot Son will Save the World - Episode 3 Part 1/4 | NetShort', 'description':\
         \ \"Genius programmer Silas creates Vanta, the world's most advanced police\
         \ robot, then gets betrayed and cast aside. Queena, the icy CEO of a defense-tech\
         \ empire, saves him and makes him her partner. When a deadly war machine runs\
         \ wild, Silas reveals his true genius, awakens Vanta, and fights back with\
         \ Queena.\\n\\nThis is only one piece of the story. The rest is waiting on\
         \ the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/7LaI5-AfibmH\\\
-        n\\nFull episode part 4 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.\", 'file': '/downloads/robot-screen/ep2-part4.mp4', 'source_start': 139.375, 'source_end': 172.758, 'privacy': 'private', 'approval_required': True,\
-        \ 'bytes': 39989884, 'sha256': '692ef237783b45a5cc05009832a4d5f2f3372461c35672d5beb34e8e444f19ba'}\n\
-        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
-        from credentials import GoogleCredentials\nfrom actions_canary import Store\n\
-        from provision_actions import validated_record\nfrom desktop_setup import\
-        \ SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
-        try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
-        \    if saved['state']!='processing' or saved['external_id']!='18124466362793253':raise\
-        \ ValueError('No staged container')\n    stage='youtube_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
-        \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v\
-        \ for k,v in item.items() if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'GmKoi0siCes'})).data['items'][0]\n\
-        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
-        \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public'\
-        \ or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('YT\
-        \ prerequisite')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n\
-        \    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
-        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('Identity')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n\
-        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')\n\
-        \        if url in seen:raise ValueError('Pagination loop')\n        if url:seen.add(url)\n\
-        \    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n\
-        \    if rows and datetime.now(timezone.utc)-max(datetime.fromisoformat(x['timestamp'])\
-        \ for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n    q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        \    if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')\n\
-        \    stage='container_status'\n    import time\n    container=saved['external_id']\n\
-        \    for attempt in range(5):\n        status=checked(api('GET',base+container,params={'fields':'status_code'})).data\n\
-        \        if status['status_code']=='FINISHED':break\n        if status['status_code']!='IN_PROGRESS':raise\
-        \ ValueError('Container failed')\n        if attempt<4:time.sleep(60)\n  \
-        \  else:raise ValueError('Container not FINISHED')\n    stage='publish'\n\
-        \    controls.set_access(True,verified=True)\n    for attempt in range(5):\n\
-        \        control,_=backend.get('account-control')\n        if control and\
-        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
-        \    else:raise ValueError('Control readback did not settle')\n    controls.require_enabled()\n\
-        \    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)\n\
-        \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n\
-        \    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
-        \    record,version=backend.get(ledger.key(item['id'],'youtube'))\n    record=dict(record,\
-        \ state='published', claim={'type': 'none', 'studio_verified': True, 'reach_impact': 'none', 'channel_impact': 'none', 'strike': False})\n\
-        \    if not backend.compare_and_swap(ledger.key(item['id'],'youtube'),version,record):raise\
-        \ ValueError('Claim record checkpoint')\n    controls.set_access(False);stage='readback'\n\
-        \    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
-        \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback\
-        \ mismatch')\n    out={'instagram_published':True,'media':m,'caption_exact':True,'matching_youtube_public':True,'stop_verified':True}\n\
-        \    print(json.dumps(out))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
-        \ Published RobotEP2P4 Instagram\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
-        n```\\n')\nexcept Exception:\n    print('IG publish stopped at '+stage+'.\
-        \ Reconcile saved ledger before retry.');raise SystemExit(1) from None\nfinally:\n\
-        \    if controls:\n        try:controls.set_access(False)\n        except\
-        \ Exception:pass\n\nPUBLISH\npython ig_publish.py\n"
+        n\\nFull episode part 1 of 4.\\nAffiliate links: I may earn a commission if\
+        \ you use them.\", 'file': '/downloads/robot-screen/ep3-part1.mp4', 'source_start': 0, 'source_end': 30.875, 'privacy': 'private', 'approval_required': True,\
+        \ 'bytes': 44490483, 'sha256': 'a132cdb9e96f751083b5e8d4480fd312fa63f0b0d98fdd796169feec4eaf8301'}\n\
+        import os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\n\
+        from transport import Transport\nfrom quarantine_state import QuarantineState\n\
+        from tigris_durable import bootstrap,DurableStaging\nfrom tigris_staging import\
+        \ GuardStop\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();bootstrap(b);s=DurableStaging(b)\n\
+        key='tigris-host-netshort-robot-ep3-part1-v1';r,v=b.get(key)\nif r:raise GuardStop('Host\
+        \ record exists; reconcile only')\ndata=urllib.request.urlopen(SOURCE_URL,timeout=120).read()\n\
+        if len(data)!=30013518 or hashlib.sha256(data).hexdigest()!='ccc2a5fe360909ccbe4f738846a54717adaa0b7c899107eaf505fd674cae67af':raise\
+        \ GuardStop('Supplier hash mismatch')\nPath('source.mp4').write_bytes(data)\n\
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
+        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
+        \ error -cpuflags 0 -filter_threads 1 -ss 0.000000 -i source.mp4 -t 30.875000\
+        \ -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=30.375000:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=30.375000:d=0.5'\
+        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a\
+        \ aac -flags:a +bitexact -b:a 192k -movflags +faststart -y robot-ep3-part1.mp4\
+        \ && ffmpeg -v error -i robot-ep3-part1.mp4 -f null -\"],check=True)\np=Path('robot-ep3-part1.mp4')\n\
+        print(json.dumps({'render_bytes':p.stat().st_size,'render_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'cpu_affinity':sorted(os.sched_getaffinity(0))[:2]}),flush=True)\n\
+        if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise\
+        \ GuardStop('Render parity mismatch; no PUT')\nrecords={}\nfor kind,path,ct\
+        \ in [('video','robot-ep3-part1.mp4','video/mp4')]:\n h=hashlib.sha256(Path(path).read_bytes()).hexdigest();obj='production/'+ITEM['id']+'/'+kind+'.'+('mp4'\
+        \ if kind=='video' else 'jpg')\n records[kind]=s.stage(path,obj,ct,h);s.verified_get(obj,h);records[kind].update(s.signed_get(obj))\n\
+        \ out={'phase':'staging','records':records,'never_publish_without_review':True}\n\
+        \ if not b.compare_and_swap(key,v,out):raise GuardStop('Host checkpoint CAS\
+        \ conflict')\n saved,v=b.get(key)\n if saved!=out:raise GuardStop('Host checkpoint\
+        \ unsettled')\nresult={'hosts':records,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
+        open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Exact RobotEP3P1 private\
+        \ hosts\\n\\n```json\\n'+json.dumps(result,indent=2)+'\\n```\\n')\nprint(json.dumps(result),flush=True)\n\
+        \nPREPARE\npython host_prep.py\n"
 'on':
-  workflow_dispatch: null
+  workflow_dispatch: {}
