@@ -261,8 +261,8 @@ jobs:
         \ aac -flags:a +bitexact -b:a 192k -movflags +faststart -y empire.mp4 && ffmpeg\
         \ -v error -i empire.mp4 -f null -\"],check=True)\n\n\nPath(\"empire.json\"\
         ).write_text('{\"id\": \"netshort-robot-ep4-part3-v1\", \"episode\": 4, \"\
-        part\": 2, \"title\": \"My Robot Son will Save the World - Episode 4 Part\
-        \ 2/4 | NetShort\", \"description\": \"Genius programmer Silas creates Vanta,\
+        part\": 3, \"title\": \"My Robot Son will Save the World - Episode 4 Part\
+        \ 3/4 | NetShort\", \"description\": \"Genius programmer Silas creates Vanta,\
         \ the world\\'s most advanced police robot, then gets betrayed and cast aside.\
         \ Queena, the icy CEO of a defense-tech empire, saves him and makes him her\
         \ partner. When a deadly war machine runs wild, Silas reveals his true genius,\
