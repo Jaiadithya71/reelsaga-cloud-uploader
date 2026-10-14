@@ -291,7 +291,7 @@ jobs:
         \ Queena.\\n\\nThis is only one piece of the story. The rest is waiting on\
         \ the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/7LaI5-AfibmH\\\
         n\\nFull episode part 1 of 4.\\nAffiliate links: I may earn a commission if\
-        \ you use them.\", 'file': '/downloads/robot-screen/ep4-part1.mp4', 'source_start': 0.0, 'source_end': 31.5, 'privacy': 'private', 'approval_required': True,\
+        \ you use them.\", 'file': '/downloads/robot-screen/ep4-part1.mp4', 'source_start': 0, 'source_end': 31.5, 'privacy': 'private', 'approval_required': True,\
         \ 'bytes': 58456298, 'sha256': '652180bf343da014e38f4fe43b55e45c913c689f180d285ee2d9f9f7d0945053'}\n\
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
         from credentials import GoogleCredentials\nfrom actions_canary import Store\n\
@@ -304,7 +304,7 @@ jobs:
         \    if saved['state']!='processing' or saved['external_id']!='18124552798793253':raise\
         \ ValueError('No staged container')\n    stage='youtube_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
         \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v\
+        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:(0.0 if k=='source_start' else v)\
         \ for k,v in item.items() if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'2CV6fpmmWiA'})).data['items'][0]\n\
         \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
         \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public'\
