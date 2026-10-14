@@ -395,7 +395,7 @@ jobs:
         from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
         \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
-        \ import Controls,ControlError\n\n{'id': 'netshort-robot-ep2-part1-v1', 'episode': 2, 'part': 1, 'title':\
+        \ import Controls,ControlError\n\nitem={'id': 'netshort-robot-ep2-part1-v1', 'episode': 2, 'part': 1, 'title':\
         \ 'My Robot Son will Save the World - Episode 2 Part 1/4 | NetShort', 'description':\
         \ \"Genius programmer Silas creates Vanta, the world's most advanced police\
         \ robot, then gets betrayed and cast aside. Queena, the icy CEO of a defense-tech\
