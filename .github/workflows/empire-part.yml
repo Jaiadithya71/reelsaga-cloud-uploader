@@ -1,4 +1,4 @@
-name: Mute EP5P2 IG stage
+name: Mute EP5P2 readonly readiness
 permissions:
   contents: write
 concurrency:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Stage exact Hidden EP9P1 unpublished
+    - name: Readonly exact saved container status
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -390,73 +390,18 @@ jobs:
         \ reservation CAS conflict; stop before network')\n        saved,v=self.backend.get(KEY)\n\
         \        if saved!=r:raise GuardStop('Reservation readback unsettled; stop\
         \ before network')\n        self.record=r;self.version=v\n\nMODULE\ncat >\
-        \ ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom\
-        \ datetime import datetime,timezone,timedelta\nfrom pathlib import Path\n\
-        from reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
-        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state\
-        \ import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls\
-        \ import Controls,ControlError\n\nitem={'id': 'netshort-mute-ep5-part2-v1',\
-        \ 'episode': 5, 'part': 2, 'title': 'The Mute Heiress Speaks - Episode 5 Part\
-        \ 2/2 | NetShort', 'description': \"Chloe Sterling, a top Manhattan lawyer\
-        \ in her past life, dies from overwork and is reborn as the youngest heir\
-        \ of New York's old-money Sterling family. When her family faces bankruptcy\
-        \ from short-sellers, betrayal, and forced liquidation, the once-quiet Chloe\
-        \ finally strikes back, tearing apart Wall Street's trap contracts and turning\
-        \ the tables with a billion-dollar reverse takeover.\\n\\nThis is only one\
-        \ piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
-        \ https://r.reelsgo.tv/9Krnq_mgZ7ei\\n\\nFull episode part 2 of 2.\\nAffiliate\
-        \ links: I may earn a commission if you use them.\", 'file': '/downloads/next-reelsaga/mute-ep5-part2-deterministic.mp4',\
-        \ 'source_start': 53.166667, 'source_end': 102.912, 'privacy': 'private',\
-        \ 'approval_required': True, 'bytes': 52404100, 'sha256': 'f927cd306c53283cd7032b8cc74ad826fa878bb95bd8f1d5fbdfb978afea3864'}\n\
-        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\n\
-        stage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already\
-        \ claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
-        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
-        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise\
-        \ ValueError('identity')\n    base='https://graph.instagram.com/v26.0/'\n\
-        \    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
-        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise\
-        \ ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
-        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
-        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise\
-        \ ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
-        \ for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
-        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise\
-        \ ValueError('Spacing')\n    from tigris_durable import DurableStaging\n \
-        \   import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-mute-ep5-part2-v1');urls={}\n\
-        \    for kind in ['video']:\n        if not isinstance(host,dict) or not isinstance(host.get('records'),dict):raise\
-        \ ValueError('Missing verified host record; run guarded host-prep first')\n\
-        \        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
-        \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with\
-        \ urllib.request.urlopen(urls[kind]['url'],timeout=90) as response:\n    \
-        \        data=response.read();ct=response.headers.get_content_type()\n   \
-        \     if len(data)!=obj['bytes'] or hashlib.sha256(data).hexdigest()!=obj['sha256']\
-        \ or ct!=obj['content_type'] or '***' in urls[kind]['url']:raise ValueError('Fresh\
-        \ source')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
-        \    stage='require_enabled'\n    import time\n    for attempt in range(5):\n\
-        \        control,_=backend.get('account-control')\n        if control and\
-        \ control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n\
-        \    else:raise ValueError('Control enable readback did not settle')\n   \
-        \ controls.require_enabled()\n    stage='claim_record'\n    if not ledger.claim(item,'instagram'):raise\
-        \ ValueError('Existing claim; reconcile only')\n    stage='uncertain_checkpoint'\n\
-        \    import time\n    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if claimed and claimed.get('state')=='started':break\n        time.sleep(3)\n\
-        \    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
-        \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \        if claimed and claimed.get('state')=='uncertain':break\n        time.sleep(3)\n\
-        \    else:raise ValueError('Uncertain readback did not settle')\n    stage='create'\n\
-        \    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':urls['video']['url'],'thumb_offset':1000,'caption':caption,'share_to_feed':True})).data\n\
-        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n\
-        \    controls.set_access(False)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n\
-        \    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
-        \ ValueError('Checkpoint')\n    result={'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}\n\
-        \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
-        \ Private MuteEP5P2 IG staged\\n\\n```json\\n'+json.dumps(result,indent=2)+'\\\
-        n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
-        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
-        \        except Exception:pass\n\nSTAGE\npython ig_stage.py\n"
+        \ readiness.py <<'READY'\nimport os,json\nfrom reader import read_token\n\
+        from instagram_record import EXPECTED_USER,EXPECTED_NAME\nfrom transport import\
+        \ Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\n\
+        from durable_state import DurableLedger\nbackend=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);backend.initialize()\n\
+        ledger=DurableLedger(backend);saved,_=backend.get(ledger.key('netshort-mute-ep5-part2-v1','instagram'))\n\
+        assert saved['state']=='processing' and saved['external_id']=='18124310923793253'\n\
+        token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ['REELSAGA_IG_READ_KEY']);api=Transport(lambda:token,{'graph.instagram.com'})\n\
+        i=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        assert i['username']==EXPECTED_NAME and str(i['user_id'])==EXPECTED_USER\n\
+        r=checked(api('GET','https://graph.instagram.com/v26.0/18124310923793253',params={'fields':'status_code,status'})).data\n\
+        out={'container':saved['external_id'],'readiness':r,'publish_attempted':False};print(json.dumps(out));open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('##\
+        \ MuteEP5P2 read-only readiness\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\\
+        n```')\n\nREADY\npython readiness.py\n"
 'on':
   workflow_dispatch: null
