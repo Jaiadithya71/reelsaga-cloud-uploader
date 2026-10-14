@@ -304,7 +304,7 @@ jobs:
         \    if saved['state']!='processing' or saved['external_id']!='18124552798793253':raise\
         \ ValueError('No staged container')\n    stage='youtube_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
         \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:(0.0 if k=='source_start' else v)\
+        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:({'source_start':0.0,'sha256':'1cc115cc30aed28ae10ef30ffefea52dee22aa9dbd526465657b3b139d733f03'}.get(k,v))\
         \ for k,v in item.items() if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'2CV6fpmmWiA'})).data['items'][0]\n\
         \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title']\
         \ or v['snippet']['description']!=item['description'] or v['status']['privacyStatus']!='public'\
