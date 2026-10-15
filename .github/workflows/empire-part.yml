@@ -39,13 +39,15 @@ jobs:
             if not r.get('IsTruncated'): break
             token=r['NextContinuationToken']
         total=sum(s for _,s,_ in objs); objs.sort()
-        before={'objects':len(objs),'bytes':total}
+        from collections import Counter
+        dist=Counter(k.split('/')[0]+'/' for _,_,k in objs)
+        before={'objects':len(objs),'bytes':total,'prefixes':dict(dist)}
         print('BEFORE '+json.dumps(before), flush=True)
         deleted=[]
         for ts,size,key in objs:
             if total<=TARGET: break
             if not (key.startswith('production/') or key.startswith('trial/')) or '..' in key:
-                raise SystemExit('unexpected key prefix: '+key)
+                print('SKIP unknown prefix: '+key, flush=True); continue
             s3.delete_object(Bucket=B, Key=key)
             total-=size; deleted.append((key,size))
             print('DELETED %s %d' % (key,size), flush=True)
