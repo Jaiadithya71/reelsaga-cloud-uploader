@@ -1,0 +1,40 @@
+name: maintenance-tigris-inventory
+on:
+  workflow_dispatch: {}
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install boto3
+      - name: List objects (read-only)
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        run: |
+          cat > inv.py <<'PYEOF'
+          import boto3, os, json
+          from botocore.config import Config
+          B='reelsaga-private-staging-71'
+          s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+              aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+              aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+              config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+          objs=[]; token=None
+          while True:
+              kw={'Bucket':B}
+              if token: kw['ContinuationToken']=token
+              r=s3.list_objects_v2(**kw)
+              objs += [(o['LastModified'].isoformat(), o['Size'], o['Key']) for o in r.get('Contents',[])]
+              if not r.get('IsTruncated'): break
+              token=r['NextContinuationToken']
+          objs.sort()
+          total=sum(s for _,s,_ in objs)
+          print('TOTAL {"objects": %d, "bytes": %d}' % (len(objs), total), flush=True)
+          for ts,size,key in objs:
+              print('OBJ %s %d %s' % (ts, size, key), flush=True)
+          open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Tigris inventory\n\n```\n'+'\n'.join('%s %d %s'%(t,s,k) for t,s,k in objs)+'\n```\n')
+          PYEOF
+          python inv.py
