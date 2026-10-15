@@ -44,8 +44,8 @@ jobs:
         deleted=[]
         for ts,size,key in objs:
             if total<=TARGET: break
-            if not key.startswith('production/') or '..' in key:
-                raise SystemExit('unexpected key outside production/: '+key)
+            if not (key.startswith('production/') or key.startswith('trial/')) or '..' in key:
+                raise SystemExit('unexpected key prefix: '+key)
             s3.delete_object(Bucket=B, Key=key)
             total-=size; deleted.append((key,size))
             print('DELETED %s %d' % (key,size), flush=True)
