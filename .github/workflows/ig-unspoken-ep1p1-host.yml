@@ -1,4 +1,4 @@
-name: Unspoken IG EP1P1 host and stage
+name: Unspoken IG EP1P1 stage and publish
 permissions:
   contents: write
 concurrency:
@@ -7,7 +7,7 @@ concurrency:
 jobs:
   private-part:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
     - uses: actions/checkout@v4
       with:
@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5
-    - name: Exact Robot EP9P4 hostprep only
+    - name: Stage and publish verified Unspoken EP1P1 IG only
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
@@ -33,6 +33,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
         TIGRIS_BUCKET: reelsaga-private-staging-71
         TIGRIS_GUARD_DB: /tmp/tigris-guard.db
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace. Original legacy records are never\
         \ mutated.\"\"\"\nimport hashlib,json,re\nfrom github_state import GitHubState,StateError\nfrom adapters import checked\n\
         FROZEN='7cf655bd667d748e2e4030da1b6b78c7aa0c236e'\nclass QuarantineState(GitHubState):\n    def __init__(self,request,key_material):\n\
@@ -155,10 +156,36 @@ jobs:
         \    \"probe-37494568652\",\n    \"probe-37502302763\",\n    \"probe-37510377852\",\n    \"probe-37518223575\",\n\
         \    \"probe-37525778422\",\n    \"probe-37533224914\",\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n\
         \    \"probe-37874770790\",\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
-        \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"'\npython -m pip install boto3\ncat\
-        \ > tigris_staging.py <<'MODULE'\n\"\"\"ReelSaga private staging. Guarded private staging with owner-approved external-fetch\
-        \ risk.\"\"\"\nimport contextlib, datetime, hashlib, json, os, sqlite3, time\nimport boto3\nfrom botocore.config import\
-        \ Config\n\nSTORAGE_STOP = 4 * 1024**3\nWRITE_STOP, READ_STOP = 9000, 90000\n# Egress is free. This is a conservative\
+        \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"'\ncat > instagram_record.py <<'MODULE'\n\
+        \"\"\"Identity/expiry gate for a server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import datetime,timezone,timedelta\n\
+        EXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\nSCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
+        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n    if record.get('username')!=EXPECTED_NAME\
+        \ or str(record.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
+        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
+        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n    except Exception:\n      \
+        \  raise ValueError('Invalid credential dates') from None\n    if created.tzinfo is None or expiry.tzinfo is None\
+        \ or created>now+timedelta(seconds=30) or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
+        \ expired or dates invalid')\n    token=record.get('access_token')\n    if not isinstance(token,str) or len(token)<100\
+        \ or not token.isascii():\n        raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
+        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer '+token},params={'fields':'user_id,username'})\n\
+        \    if identity.get('username')!=EXPECTED_NAME or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
+        \ Instagram identity mismatch')\n    return identity\n\nMODULE\ncat > reader.py <<'MODULE'\n\"\"\"Server-side reader.\
+        \ No credential is written to logs or a public artifact.\"\"\"\nimport json,os,urllib.request,urllib.parse\nfrom instagram_record\
+        \ import validate_record,verify_live_identity\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
+        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https' or parsed.hostname!='kathirvelan-boutique.vercel.app'\
+        \ or parsed.path!='/api/instagram/reelsaga-reader' or parsed.port not in (None,443) or parsed.username or parsed.password\
+        \ or parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader destination')\n    if not secret or\
+        \ len(secret)<32:\n        raise ValueError('Reader credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
+        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
+        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the read key to another destination.\n  \
+        \  if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n    with opener(request,timeout=30)\
+        \ as response:\n        if response.status!=200:raise ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
+        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n        record=json.loads(raw)\n    return\
+        \ validate_record(record)\n\ndef from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n \
+        \   key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\nMODULE\npython -m pip install\
+        \ boto3\ncat > tigris_staging.py <<'MODULE'\n\"\"\"ReelSaga private staging. Guarded private staging with owner-approved\
+        \ external-fetch risk.\"\"\"\nimport contextlib, datetime, hashlib, json, os, sqlite3, time\nimport boto3\nfrom botocore.config\
+        \ import Config\n\nSTORAGE_STOP = 4 * 1024**3\nWRITE_STOP, READ_STOP = 9000, 90000\n# Egress is free. This is a conservative\
         \ operational ledger, not a billing cap.\nMAX_OBJECT_BYTES = 256 * 1024**2\n\nclass GuardStop(RuntimeError): pass\n\
         \nclass Staging:\n    def __init__(self):\n        self.bucket = os.environ['TIGRIS_BUCKET']\n        if self.bucket\
         \ != 'reelsaga-private-staging-71':\n            raise GuardStop('Unexpected staging bucket')\n        self.db = os.environ['TIGRIS_GUARD_DB']\n\
@@ -233,44 +260,21 @@ jobs:
         \            if saved==r:\n                self.record=r;self.version=v;return\n            last=GuardStop('Reservation\
         \ readback unsettled; stop before network')\n            print('RETRY reserve: readback unsettled after CAS (attempt\
         \ %d/3), backing off 75s'%(attempt+1),flush=True)\n            if attempt<2:time.sleep(75)\n        raise last\nMODULE\n\
-        cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
-        \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
-        \ tigris_staging import GuardStop\nITEM={'id': 'playlet-unspoken-ep1-part1-v1', 'episode': 1, 'part': 1, 'title':\
-        \ 'A Love Left Unspoken - Episode 1 Part 1/3 | Playlet', 'description': \"Hayato, heir to a powerful empire, has spent\
-        \ years chasing his first love while taking his mute wife Shiori for granted. Convinced she would never leave, he's\
-        \ shattered when she hands him divorce papers, and begins to realize who he's truly loved all along.\\n\\nThis is\
-        \ only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on Playlet: https://r.reelsgo.tv/-0dOutzhgUgt\\\
-        n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/playlet-unspoken-screen/ep1-part1.mp4',\
-        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 43225589, 'sha256':\
-        \ '63ca2b3bb772b3638e1690ff6efb6fd933659f207df122ac812304021cc7f6a4'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\nSOURCE_URL='https://cdn-aws2.playlet.com/mp4/v2/10740/1/1_07d99946fbf296d3912c41b036d814a7.mp4'\n\
-        source=urllib.request.urlopen(SOURCE_URL,timeout=120).read()\nif len(source)!=8781125 or hashlib.sha256(source).hexdigest()!='ffca77e928f41a7172485295cc36f1bbe9decd0d16c30877dcb81bceae6831e8':raise\
-        \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
-        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss\
-        \ 0 -i source.mp4 -t 50 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=49.5:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=49.5:d=0.5'\
-        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags\
-        \ +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -\"],check=True)\n\n\n\np=Path('empire.mp4')\n\
-        if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise GuardStop('Render\
-        \ parity mismatch; no PUT')\nobj='production/'+ITEM['id']+'/video.mp4'\nrecord=s.stage(str(p),obj,'video/mp4',ITEM['sha256']);s.verified_get(obj,ITEM['sha256'])\n\
-        out={'phase':'staging','records':{'video':record},'never_publish_without_review':True}\nif not b.compare_and_swap(key,v,out):raise\
-        \ GuardStop('Host checkpoint CAS conflict')\nsaved,_=b.get(key)\nif saved!=out:raise GuardStop('Host checkpoint unsettled')\n\
-        result={'host':record,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
-        print(json.dumps(result),flush=True)\nopen(os.environ['GITHUB_STEP_SUMMARY'],'a').write('```json\\n'+json.dumps(result,indent=2)+'\\\
-        n```')\n\nPREPARE\npython host_prep.py\n\ncat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\n\
-        from datetime import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
-        \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
-        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
-        \nitem={'id': 'playlet-unspoken-ep1-part1-v1', 'episode': 1, 'part': 1, 'title': 'A Love Left Unspoken - Episode 1\
-        \ Part 1/3 | Playlet', 'description': \"Hayato, heir to a powerful empire, has spent years chasing his first love\
-        \ while taking his mute wife Shiori for granted. Convinced she would never leave, he's shattered when she hands him\
-        \ divorce papers, and begins to realize who he's truly loved all along.\\n\\nThis is only one piece of the story.\
-        \ The rest is waiting on the channel.\\n\\nWatch on Playlet: https://r.reelsgo.tv/-0dOutzhgUgt\\n\\nFull episode part\
-        \ 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/playlet-unspoken-screen/ep1-part1.mp4',\
-        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 43225589, 'sha256':\
-        \ '63ca2b3bb772b3638e1690ff6efb6fd933659f207df122ac812304021cc7f6a4'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
-        item['caption']=caption\nstage='initial'\ncontrols=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
-        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
-        \    if ledger.resume(item['id'],'instagram')!='unclaimed':raise ValueError('Already claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        cat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom datetime import datetime,timezone,timedelta\n\
+        from pathlib import Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
+        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
+        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'playlet-unspoken-ep1-part1-v1',\
+        \ 'episode': 1, 'part': 1, 'title': 'A Love Left Unspoken - Episode 1 Part 1/3 | Playlet', 'description': \"Hayato,\
+        \ heir to a powerful empire, has spent years chasing his first love while taking his mute wife Shiori for granted.\
+        \ Convinced she would never leave, he's shattered when she hands him divorce papers, and begins to realize who he's\
+        \ truly loved all along.\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch\
+        \ on Playlet: https://r.reelsgo.tv/-0dOutzhgUgt\\n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission\
+        \ if you use them.\", 'file': '/downloads/playlet-unspoken-screen/ep1-part1.mp4', 'source_start': 0, 'source_end':\
+        \ 50, 'privacy': 'private', 'approval_required': True, 'bytes': 43225589, 'sha256': '63ca2b3bb772b3638e1690ff6efb6fd933659f207df122ac812304021cc7f6a4'}\n\
+        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\nstage='initial'\ncontrols=None\ntry:\n\
+        \    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    if ledger.resume(item['id'],'instagram')!='unclaimed':raise\
+        \ ValueError('Already claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
         \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
         \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise ValueError('identity')\n\
         \    base='https://graph.instagram.com/v26.0/'\n    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
@@ -301,6 +305,49 @@ jobs:
         \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Unspoken EP1P1 IG staged\\\
         n\\n```json\\n'+json.dumps(result,indent=2)+'\\n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
         \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n        except Exception:pass\n\
-        \nSTAGE\npython ig_stage.py\n"
+        \nSTAGE\npython ig_stage.py\n\ncat > ig_publish.py <<'PUBLISH'\nimport json,os,urllib.request,urllib.parse\nfrom datetime\
+        \ import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
+        \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
+        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
+        \nitem={'id': 'playlet-unspoken-ep1-part1-v1', 'episode': 1, 'part': 1, 'title': 'A Love Left Unspoken - Episode 1\
+        \ Part 1/3 | Playlet', 'description': \"Hayato, heir to a powerful empire, has spent years chasing his first love\
+        \ while taking his mute wife Shiori for granted. Convinced she would never leave, he's shattered when she hands him\
+        \ divorce papers, and begins to realize who he's truly loved all along.\\n\\nThis is only one piece of the story.\
+        \ The rest is waiting on the channel.\\n\\nWatch on Playlet: https://r.reelsgo.tv/-0dOutzhgUgt\\n\\nFull episode part\
+        \ 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/playlet-unspoken-screen/ep1-part1.mp4',\
+        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 43225589, 'sha256':\
+        \ '63ca2b3bb772b3638e1690ff6efb6fd933659f207df122ac812304021cc7f6a4'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
+        item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
+        \ import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
+        try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
+        \    if saved['state']!='processing' or not saved.get('external_id'):raise ValueError('No staged container')\n   \
+        \ stage='youtube_probe_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
+        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v for k,v in item.items()\
+        \ if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'OAWdbO-7Sh0'})).data['items'][0]\n\
+        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title'] or v['snippet']['description']!=item['description']\
+        \ or v['status']['privacyStatus']!='private' or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('Verified\
+        \ private probe mismatch')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise ValueError('Identity')\n\
+        \    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n   \
+        \ while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')\n\
+        \        if url in seen:raise ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
+        \ for x in rows):raise ValueError('Duplicate')\n    if rows and datetime.now(timezone.utc)-max(datetime.fromisoformat(x['timestamp'])\
+        \ for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n    q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')\n    stage='container_status'\n\
+        \    import time\n    container=saved['external_id']\n    for attempt in range(5):\n        status=checked(api('GET',base+container,params={'fields':'status_code'})).data\n\
+        \        if status['status_code']=='FINISHED':break\n        if status['status_code']!='IN_PROGRESS':raise ValueError('Container\
+        \ failed')\n        if attempt<4:time.sleep(60)\n    else:raise ValueError('Container not FINISHED')\n    stage='publish'\n\
+        \    controls.set_access(True,verified=True)\n    for attempt in range(5):\n        control,_=backend.get('account-control')\n\
+        \        if control and control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n    else:raise ValueError('Control\
+        \ readback did not settle')\n    controls.require_enabled()\n    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
+        \    controls.set_access(False);stage='readback'\n    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
+        \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback mismatch')\n    out={'instagram_published':True,'media':m,'caption_exact':True,'youtube_probe_claims_checked':True,'youtube_mutated':False,'stop_verified':True}\n\
+        \    print(json.dumps(out))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Published Unspoken EP1P1 Instagram\\\
+        n\\n```json\\n'+json.dumps(out,indent=2)+'\\n```\\n')\nexcept Exception:\n    print('IG publish stopped at '+stage+'.\
+        \ Reconcile saved ledger before retry.');raise SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
+        \        except Exception:pass\n\nPUBLISH\npython ig_publish.py\n"
 'on':
   workflow_dispatch: {}
