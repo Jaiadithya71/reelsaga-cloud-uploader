@@ -406,7 +406,5 @@ jobs:
         out={'identity':ident,'quota':quota,'media':rows,'relevant_states':states}\n\
         print(json.dumps(out));open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('```json\\\
         n'+json.dumps(out,indent=2)+'\\n```')\n\nIGREAD\npython inspect_ig.py\n"
-true:
-  workflow_dispatch: {}
 'on':
   workflow_dispatch: {}
