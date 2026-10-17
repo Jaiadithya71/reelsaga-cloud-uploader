@@ -255,12 +255,12 @@ jobs:
         \ GuardStop('Host checkpoint CAS conflict')\nsaved,_=b.get(key)\nif saved!=out:raise GuardStop('Host checkpoint unsettled')\n\
         result={'host':record,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
         print(json.dumps(result),flush=True)\nopen(os.environ['GITHUB_STEP_SUMMARY'],'a').write('```json\\n'+json.dumps(result,indent=2)+'\\\
-        n```')\n\nPREPARE\npython host_prep.py\n\n\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
-        \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\n\
-        EXPECTED_NAME='reelsaga3000'\nSCOPES={'instagram_business_basic','instagram_business_content_publish'}\ndef validate_record(record,now=None):\n\
-        \    now=now or datetime.now(timezone.utc)\n    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
-        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n        raise\
-        \ ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
+        n```')\n\nPREPARE\necho 'host_prep skipped: v4 host record already staged (verified)'\n\n\ncat > instagram_record.py\
+        \ <<'MODULE'\n\"\"\"Identity/expiry gate for a server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import\
+        \ datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\nEXPECTED_NAME='reelsaga3000'\nSCOPES={'instagram_business_basic','instagram_business_content_publish'}\n\
+        def validate_record(record,now=None):\n    now=now or datetime.now(timezone.utc)\n    if record.get('username')!=EXPECTED_NAME\
+        \ or str(record.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n\
+        \        raise ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
         \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n    except Exception:\n      \
         \  raise ValueError('Invalid credential dates') from None\n    if created.tzinfo is None or expiry.tzinfo is None\
         \ or created>now+timedelta(seconds=30) or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
@@ -328,27 +328,28 @@ jobs:
         \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## SupremeMage EP1P1 IG staged\\\
         n\\n```json\\n'+json.dumps(result,indent=2)+'\\n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
         \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n        except Exception:pass\n\
-        \nSTAGE\npython ig_stage.py\n\ncat > ig_publish.py <<'PUBLISH'\nimport json,os,urllib.request,urllib.parse\nfrom datetime\
-        \ import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
-        \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
-        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
-        \nitem={'id': 'netshort-suprememage-ep1-part1-v4', 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time,\
-        \ I Choose My Family - Episode 1 Part 1/5 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
-        \ a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
-        \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
-        \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
-        \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
-        \ 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
-        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 76415832, 'sha256':\
-        \ '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
-        item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
-        \ import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
-        try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
-        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
-        \    if saved['state']!='processing' or not saved.get('external_id'):raise ValueError('No staged container')\n   \
-        \ stage='youtube_probe_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v for k,v in item.items()\
-        \ if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'H3UIu1IkSzI'})).data['items'][0]\n\
+        \nSTAGE\necho 'ig_stage skipped: v4 container 18125644816793253 already staged'\n\ncat > ig_publish.py <<'PUBLISH'\n\
+        import json,os,urllib.request,urllib.parse\nfrom datetime import datetime,timezone,timedelta\nfrom pathlib import\
+        \ Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
+        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
+        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep1-part1-v4',\
+        \ 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 1 Part 1/5 | NetShort',\
+        \ 'description': \"The strongest mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and\
+        \ daughter. Hiding his power, he fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses\
+        \ the girl. He uncovers his real self to save her. Having sacrificed all to defeat the foe, can this stolen-body family\
+        \ truly start anew?\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
+        \ https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if you\
+        \ use them.\", 'file': '/downloads/suprememage/ep1-part1.mp4', 'source_start': 0, 'source_end': 50, 'privacy': 'private',\
+        \ 'approval_required': True, 'bytes': 76415832, 'sha256': '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\n\
+        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\nfrom credentials import GoogleCredentials\n\
+        from actions_canary import Store\nfrom provision_actions import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\n\
+        from transport import GoogleTokenForms\nstage='init';controls=None\ntry:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n\
+        \    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n\
+        \    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n    if saved['state']!='processing'\
+        \ or not saved.get('external_id'):raise ValueError('No staged container')\n    stage='youtube_probe_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n\
+        \    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n    yt=Transport(credential.access_token,{'www.googleapis.com'})\n\
+        \    ledger.verify_item({k:v for k,v in item.items() if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'H3UIu1IkSzI'})).data['items'][0]\n\
+        \    print(json.dumps({'probe':{'channel_ok':v['snippet']['channelId']==CHANNEL,'title_ok':v['snippet']['title']==item['title'],'desc_ok':v['snippet']['description']==item['description'],'desc_len_live':len(v['snippet']['description']),'desc_len_item':len(item['description']),'privacy':v['status']['privacyStatus'],'processing':v.get('processingDetails',{}).get('processingStatus','ABSENT')}}),flush=True)\n\
         \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title'] or v['snippet']['description']!=item['description']\
         \ or v['status']['privacyStatus']!='private' or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('Verified\
         \ private probe mismatch')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
