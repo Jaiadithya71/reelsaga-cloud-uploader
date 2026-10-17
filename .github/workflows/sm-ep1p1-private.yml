@@ -168,11 +168,11 @@ jobs:
         \ +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -\"],check=True)\n\n\nPath(\"empire.json\").write_text('{\"\
         id\": \"netshort-suprememage-ep1-part1-v1\", \"episode\": 1, \"part\": 1, \"title\": \"The Supreme Mage: This Time,\
         \ I Choose My Family - Episode 1 Part 1/5 | NetShort\", \"description\": \"The strongest mage is ambushed, reborn\
-        \ in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
+        \ in a dead gambler\\'s body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
-        \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
-        \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
-        \ 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\", \"file\": \"/downloads/suprememage/ep1-part1.mp4\"\
+        \ all to defeat the foe, can this stolen-body family truly start anew?\\\\n\\\\nThis is only one piece of the story.\
+        \ The rest is waiting on the channel.\\\\n\\\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\\\n\\\\nFull\
+        \ episode part 1 of 5.\\\\nAffiliate links: I may earn a commission if you use them.\", \"file\": \"/downloads/suprememage/ep1-part1.mp4\"\
         , \"source_start\": 0.0, \"source_end\": 44.206, \"privacy\": \"private\", \"approval_required\": true, \"bytes\"\
         : 67815417, \"sha256\": \"7e2bcee15178ef9fe6022afd4c6faccc42bf9c14762ed72f1906bb7db23346b0\"}')\nMANIFEST=\"empire.json\"\
         \n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n    if item!=expected or item[\"\
