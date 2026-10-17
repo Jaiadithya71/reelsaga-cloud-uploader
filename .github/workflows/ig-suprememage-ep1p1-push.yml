@@ -232,7 +232,7 @@ jobs:
         \ %d/3), backing off 75s'%(attempt+1),flush=True)\n            if attempt<2:time.sleep(75)\n        raise last\nMODULE\n\
         cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
         \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
-        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep1-part1-v2', 'episode': 1, 'part': 1, 'title':\
+        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep1-part1-v3', 'episode': 1, 'part': 1, 'title':\
         \ 'The Supreme Mage: This Time, I Choose My Family - Episode 1 Part 1/5 | NetShort', 'description': \"The strongest\
         \ mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he\
         \ fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real\
@@ -241,7 +241,7 @@ jobs:
         n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\\n\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
         \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 76415832, 'sha256':\
         \ '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:\n    import sys\n    _v=(r.get('records') or {}).get('video') or {}\n    if _v.get('sha256')!=ITEM['sha256'] or _v.get('bytes')!=ITEM['bytes'] or r.get('phase')!='staging':raise GuardStop('Host record mismatch; reconcile only')\n    print('Host record exists and verified; skipping re-stage');sys.exit(0)\ns.reserve(b=1,bytes_out=40877625)\n\
+        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=40877625)\n\
         source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep1.mp4')['Body'].read()\n\
         if len(source)!=40877625 or hashlib.sha256(source).hexdigest()!='1cafbfeb4761b26e94762ff3f739acc7f312ab187d6962850188fdc9989f7971':raise\
         \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
@@ -285,7 +285,7 @@ jobs:
         \ boto3\n\ncat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom datetime import datetime,timezone,timedelta\n\
         from pathlib import Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
-        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep1-part1-v2',\
+        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep1-part1-v3',\
         \ 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 1 Part 1/5 | NetShort',\
         \ 'description': \"The strongest mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and\
         \ daughter. Hiding his power, he fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses\
@@ -306,7 +306,7 @@ jobs:
         \        url=data.get('paging',{}).get('next')\n        if url in seen:raise ValueError('Pagination loop')\n     \
         \   if url:seen.add(url)\n    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
         \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n\
-        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-playlet-unspoken-ep6-part4-v1');urls={}\n\
+        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-suprememage-ep1-part1-v3');urls={}\n\
         \    for kind in ['video']:\n        if not isinstance(host,dict) or not isinstance(host.get('records'),dict):raise\
         \ ValueError('Missing verified host record; run guarded host-prep first')\n        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
         \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with urllib.request.urlopen(urls[kind]['url'],timeout=90)\
@@ -332,7 +332,7 @@ jobs:
         \ import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
         \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
         from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
-        \nitem={'id': 'netshort-suprememage-ep1-part1-v2', 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time,\
+        \nitem={'id': 'netshort-suprememage-ep1-part1-v3', 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time,\
         \ I Choose My Family - Episode 1 Part 1/5 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
         \ a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
