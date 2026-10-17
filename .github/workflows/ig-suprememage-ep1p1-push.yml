@@ -232,13 +232,13 @@ jobs:
         \ %d/3), backing off 75s'%(attempt+1),flush=True)\n            if attempt<2:time.sleep(75)\n        raise last\nMODULE\n\
         cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
         \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
-        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep1-part1-v3', 'episode': 1, 'part': 1, 'title':\
+        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep1-part1-v4', 'episode': 1, 'part': 1, 'title':\
         \ 'The Supreme Mage: This Time, I Choose My Family - Episode 1 Part 1/5 | NetShort', 'description': \"The strongest\
         \ mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he\
         \ fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real\
         \ self to save her. Having sacrificed all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis\
         \ is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\\
-        n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\\n\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
+        n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
         \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 76415832, 'sha256':\
         \ '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
         key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=40877625)\n\
@@ -285,15 +285,15 @@ jobs:
         \ boto3\n\ncat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom datetime import datetime,timezone,timedelta\n\
         from pathlib import Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
-        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep1-part1-v3',\
+        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep1-part1-v4',\
         \ 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 1 Part 1/5 | NetShort',\
         \ 'description': \"The strongest mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and\
         \ daughter. Hiding his power, he fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses\
         \ the girl. He uncovers his real self to save her. Having sacrificed all to defeat the foe, can this stolen-body family\
         \ truly start anew?\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
         \ https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if you\
-        \ use them.\\n\", 'file': '/downloads/suprememage/ep1-part1.mp4', 'source_start': 0, 'source_end': 50, 'privacy':\
-        \ 'private', 'approval_required': True, 'bytes': 76415832, 'sha256': '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\n\
+        \ use them.\", 'file': '/downloads/suprememage/ep1-part1.mp4', 'source_start': 0, 'source_end': 50, 'privacy': 'private',\
+        \ 'approval_required': True, 'bytes': 76415832, 'sha256': '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\n\
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\nstage='initial'\ncontrols=None\ntry:\n\
         \    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
         \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    if ledger.resume(item['id'],'instagram')!='unclaimed':raise\
@@ -306,7 +306,7 @@ jobs:
         \        url=data.get('paging',{}).get('next')\n        if url in seen:raise ValueError('Pagination loop')\n     \
         \   if url:seen.add(url)\n    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
         \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n\
-        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-suprememage-ep1-part1-v3');urls={}\n\
+        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-suprememage-ep1-part1-v4');urls={}\n\
         \    for kind in ['video']:\n        if not isinstance(host,dict) or not isinstance(host.get('records'),dict):raise\
         \ ValueError('Missing verified host record; run guarded host-prep first')\n        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
         \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with urllib.request.urlopen(urls[kind]['url'],timeout=90)\
@@ -332,13 +332,13 @@ jobs:
         \ import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
         \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
         from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
-        \nitem={'id': 'netshort-suprememage-ep1-part1-v3', 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time,\
+        \nitem={'id': 'netshort-suprememage-ep1-part1-v4', 'episode': 1, 'part': 1, 'title': 'The Supreme Mage: This Time,\
         \ I Choose My Family - Episode 1 Part 1/5 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
         \ a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
         \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
         \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
-        \ 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\\n\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
+        \ 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
         \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 76415832, 'sha256':\
         \ '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
         item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
