@@ -241,7 +241,7 @@ jobs:
         n\\nFull episode part 1 of 5.\\nAffiliate links: I may earn a commission if you use them.\\n\", 'file': '/downloads/suprememage/ep1-part1.mp4',\
         \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 76415832, 'sha256':\
         \ '6f0d279cc80c57595bd6949e4a5fffac7059190bad811d3d1f530478cd155881'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=40877625)\n\
+        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:\n    import sys\n    if r.get('sha256')!=ITEM['sha256'] or r.get('bytes')!=ITEM['bytes']:raise GuardStop('Host record mismatch; reconcile only')\n    print('Host record exists and verified; skipping re-stage');sys.exit(0)\ns.reserve(b=1,bytes_out=40877625)\n\
         source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep1.mp4')['Body'].read()\n\
         if len(source)!=40877625 or hashlib.sha256(source).hexdigest()!='1cafbfeb4761b26e94762ff3f739acc7f312ab187d6962850188fdc9989f7971':raise\
         \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
