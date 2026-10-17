@@ -166,7 +166,7 @@ jobs:
         \ 50 -i source.mp4 -t 34.142 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=33.642:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=33.642:d=0.5'\
         \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags\
         \ +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -\"],check=True)\n\n\nPath(\"empire.json\").write_text('{\"\
-        id\": \"netshort-suprememage-ep5-part2-v1\", \"episode\": 5, \"part\": 2, \"title\": \"The Supreme Mage: This Time,\
+        id\": \"netshort-suprememage-ep5-part2-v2\", \"episode\": 5, \"part\": 2, \"title\": \"The Supreme Mage: This Time,\
         \ I Choose My Family - Episode 5 Part 2/3 | NetShort\", \"description\": \"The strongest mage is ambushed, reborn\
         \ in a dead gambler\\'s body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
@@ -176,7 +176,7 @@ jobs:
         , \"source_start\": 50, \"source_end\": 84.142, \"privacy\": \"private\", \"approval_required\": true, \"bytes\":\
         \ 39335842, \"sha256\": \"752db2983640ea4cf4ef205d857f46eeee78e32b21292ceda7cc66251436028d\"}')\nMANIFEST=\"empire.json\"\
         \n\ndef validate(item,path):\n    expected=json.loads(Path(MANIFEST).read_text())\n    if item!=expected or item[\"\
-        id\"]!=\"netshort-suprememage-ep5-part2-v1\":raise RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
+        id\"]!=\"netshort-suprememage-ep5-part2-v2\":raise RuntimeError(\"Unexpected item\")\n    if Path(path).stat().st_size!=item[\"\
         bytes\"] or hashlib.sha256(Path(path).read_bytes()).hexdigest()!=item[\"sha256\"]:raise RuntimeError(\"Media integrity\
         \ mismatch\")\n    if item.get(\"privacy\")!=\"private\":raise RuntimeError(\"Private gate missing\")\n\ndef run(backend,api,item,path):\n\
         \    validate(item,path)\n    controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)\n    if ledger.resume(item['id'],'youtube')!='unclaimed':raise\
