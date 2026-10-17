@@ -1,0 +1,56 @@
+name: maintenance-tigris-delete-consumed
+on:
+  workflow_dispatch: {}
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install boto3
+      - name: Delete the 101 consumed staging objects approved by the owner 2026-10-17
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        run: |
+          cat > del.py <<'PYEOF'
+          import boto3, os, json
+          from botocore.config import Config
+          B='reelsaga-private-staging-71'
+          KEYS=json.loads('"[\"production/netshort-mute-ep1-part2-v1/video.mp4\", \"production/netshort-mute-ep1-part3-v1/video.mp4\", \"production/netshort-mute-ep2-part1-v1/video.mp4\", \"production/netshort-mute-ep2-part2-v1/video.mp4\", \"production/netshort-mute-ep2-part3-v1/video.mp4\", \"production/netshort-mute-ep3-part1-v1/video.mp4\", \"production/netshort-mute-ep3-part2-v1/video.mp4\", \"production/netshort-mute-ep4-part1-v1/video.mp4\", \"production/netshort-mute-ep4-part2-v1/video.mp4\", \"production/netshort-mute-ep5-part1-v1/video.mp4\", \"production/netshort-mute-ep5-part2-v1/video.mp4\", \"production/netshort-mute-ep6-part1-v1/video.mp4\", \"production/netshort-mute-ep6-part2-v1/video.mp4\", \"production/netshort-robot-ep1-part1-v1/video.mp4\", \"production/netshort-robot-ep1-part2-v1/video.mp4\", \"production/netshort-robot-ep1-part3-v1/video.mp4\", \"production/netshort-robot-ep1-part4-v1/video.mp4\", \"production/netshort-robot-ep2-part1-v1/video.mp4\", \"production/netshort-robot-ep2-part2-v1/video.mp4\", \"production/netshort-robot-ep2-part3-v1/video.mp4\", \"production/netshort-robot-ep2-part4-v1/video.mp4\", \"production/netshort-robot-ep3-part1-v1/video.mp4\", \"production/netshort-robot-ep3-part2-v1/video.mp4\", \"production/netshort-robot-ep3-part3-v1/video.mp4\", \"production/netshort-robot-ep3-part4-v1/video.mp4\", \"production/netshort-robot-ep4-part1-v1/video.mp4\", \"production/netshort-robot-ep4-part2-v1/video.mp4\", \"production/netshort-robot-ep4-part3-v1/video.mp4\", \"production/netshort-robot-ep4-part4-v1/video.mp4\", \"production/netshort-robot-ep5-part1-v1/video.mp4\", \"production/netshort-robot-ep5-part2-v1/video.mp4\", \"production/netshort-robot-ep5-part3-v1/video.mp4\", \"production/netshort-robot-ep5-part4-v1/video.mp4\", \"production/netshort-robot-ep6-part1-v1/video.mp4\", \"production/netshort-robot-ep6-part2-v1/video.mp4\", \"production/netshort-robot-ep6-part3-v1/video.mp4\", \"production/netshort-robot-ep6-part4-v1/video.mp4\", \"production/netshort-robot-ep7-part1-v1/video.mp4\", \"production/netshort-robot-ep7-part2-v1/video.mp4\", \"production/netshort-robot-ep7-part3-v1/video.mp4\", \"production/netshort-robot-ep7-part4-v1/video.mp4\", \"production/netshort-robot-ep8-part1-v1/video.mp4\", \"production/netshort-robot-ep8-part2-v1/video.mp4\", \"production/netshort-robot-ep8-part3-v1/video.mp4\", \"production/netshort-robot-ep8-part4-v1/video.mp4\", \"production/netshort-robot-ep9-part1-v1/video.mp4\", \"production/netshort-robot-ep9-part2-v1/video.mp4\", \"production/netshort-robot-ep9-part3-v1/video.mp4\", \"production/netshort-robot-ep9-part4-v1/video.mp4\", \"production/netshort-pets-ep1-part1-v1/video.mp4\", \"production/netshort-flash-ep1-part1-v1/video.mp4\", \"production/netshort-fight-ep1-part1-v1/video.mp4\", \"production/netshort-domain-ep1-part1-v1/video.mp4\", \"production/playlet-lawyer-ep1-part1-v1/video.mp4\", \"production/playlet-lawyer-ep1-part1-v2/video.mp4\", \"production/playlet-lawyer-ep1-part2-v1/video.mp4\", \"production/playlet-lawyer-ep1-part3-v1/video.mp4\", \"production/reelshort-bloodpact-ep1-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep1-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep1-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep2-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep2-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep2-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep3-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep3-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep3-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep4-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep4-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep4-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep5-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep5-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep5-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep6-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep6-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep6-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep7-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep7-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep7-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep8-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep8-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep8-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep9-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep9-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep9-part3-v2/video.mp4\", \"production/reelshort-bloodpact-ep10-part1-v2/video.mp4\", \"production/reelshort-bloodpact-ep10-part2-v2/video.mp4\", \"production/reelshort-bloodpact-ep10-part3-v2/video.mp4\", \"production/playlet-unspoken-ep1-part1-v1/video.mp4\", \"production/playlet-unspoken-ep1-part2-v1/video.mp4\", \"production/playlet-unspoken-ep1-part3-v1/video.mp4\", \"production/playlet-unspoken-ep2-part1-v1/video.mp4\", \"production/playlet-unspoken-ep2-part2-v1/video.mp4\", \"production/playlet-unspoken-ep2-part3-v1/video.mp4\", \"production/playlet-unspoken-ep2-part4-v1/video.mp4\", \"production/playlet-unspoken-ep3-part1-v1/video.mp4\", \"production/playlet-unspoken-ep3-part2-v1/video.mp4\", \"production/playlet-unspoken-ep3-part3-v1/video.mp4\", \"production/playlet-unspoken-ep3-part4-v1/video.mp4\", \"production/playlet-unspoken-ep4-part1-v1/video.mp4\", \"production/playlet-unspoken-ep4-part2-v1/video.mp4\", \"production/playlet-unspoken-ep4-part3-v1/video.mp4\"]"')
+          s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+              aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+              aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+              config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+          # inventory first; refuse to touch anything not on the approved list
+          objs=[]; token=None
+          while True:
+              kw={'Bucket':B}
+              if token: kw['ContinuationToken']=token
+              r=s3.list_objects_v2(**kw)
+              objs += [o['Key'] for o in r.get('Contents',[])]
+              if not r.get('IsTruncated'): break
+              token=r['NextContinuationToken']
+          extra=[k for k in objs if k not in KEYS]
+          if extra:
+              print('REFUSING: unexpected keys present:', extra); raise SystemExit(1)
+          deleted=[]
+          for i in range(0,len(KEYS),1000):
+              r=s3.delete_objects(Bucket=B, Delete={'Objects':[{'Key':k} for k in KEYS[i:i+1000]],'Quiet':True})
+              if r.get('Errors'):
+                  print('DELETE ERRORS:', r['Errors']); raise SystemExit(1)
+              deleted += KEYS[i:i+1000]
+          print('DELETED', len(deleted))
+          left=[]; token=None
+          while True:
+              kw={'Bucket':B}
+              if token: kw['ContinuationToken']=token
+              r=s3.list_objects_v2(**kw)
+              left += [o['Key'] for o in r.get('Contents',[])]
+              if not r.get('IsTruncated'): break
+              token=r['NextContinuationToken']
+          print('REMAINING', len(left))
+          open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Tigris delete\n\ndeleted %d objects, remaining %d\n' % (len(deleted), len(left)))
+          PYEOF
+          python del.py
