@@ -1,0 +1,381 @@
+concurrency:
+  cancel-in-progress: false
+  group: reelsaga-canary
+jobs:
+  private-part:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        sparse-checkout: '/*.py
+
+          /tests/
+
+          /**/*.json
+
+          '
+        sparse-checkout-cone-mode: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5
+    - env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+        REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+        TIGRIS_BUCKET: reelsaga-private-staging-71
+        TIGRIS_GUARD_DB: /tmp/tigris-guard.db
+      name: SupremeMage EP2P1 exact host stage publish
+      run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace. Original legacy records are never\
+        \ mutated.\"\"\"\nimport hashlib,json,re\nfrom github_state import GitHubState,StateError\nfrom adapters import checked\n\
+        FROZEN='7cf655bd667d748e2e4030da1b6b78c7aa0c236e'\nclass QuarantineState(GitHubState):\n    def __init__(self,request,key_material):\n\
+        \        super().__init__(request,key_material)\n        with open('legacy_quarantine.json') as f:self.inventory=json.load(f)\n\
+        \        if self.inventory['frozen_commit']!=FROZEN or len(self.inventory['legacy_keys'])!=279:\n            raise\
+        \ StateError('Legacy inventory mismatch')\n        self.legacy=set(self.inventory['legacy_keys'])\n    def initialize(self):\n\
+        \        r=checked(self.request('GET',self.base+'/git/trees/'+FROZEN,params={'recursive':'1'})).data\n        if r.get('truncated')\
+        \ is not False:raise StateError('Incomplete legacy tree')\n        keys={v['path'][6:-4] for v in r['tree'] if v['path'].startswith('state/')\
+        \ and v['path'].endswith('.enc')}\n        if keys!=self.legacy:raise StateError('Legacy inventory integrity mismatch')\n\
+        \        r=self.request('GET',self.base+'/git/ref/heads/'+self.branch)\n        if r.status!=200:raise StateError('Original\
+        \ state branch missing')\n    def url(self,key):\n        if not re.fullmatch(r'[a-zA-Z0-9_-]+',key):raise StateError('Invalid\
+        \ state key')\n        return self.base+'/contents/state-v2/'+key+'.enc'\n    def blocked(self,key):\n        if not\
+        \ re.fullmatch(r'[0-9a-f]{64}',key):return False\n        if key in self.legacy:return True\n        r=self.request('GET',self.base+'/contents/state/'+key+'.enc',params={'ref':self.branch})\n\
+        \        if r.status==200:return True\n        if r.status!=404:raise StateError('Legacy read not verified')\n   \
+        \     return False\n    def get(self,key):\n        if self.blocked(key):return {'state':'blocked','legacy_quarantine':True},None\n\
+        \        return super().get(key)\n    def compare_and_swap(self,key,version,record):\n        if self.blocked(key):raise\
+        \ StateError('Legacy key permanently quarantined')\n        return super().compare_and_swap(key,version,record)\n\
+        QUARANTINE_FILE\ncat > legacy_quarantine.json <<'QUARANTINE_FILE'\n{\n  \"frozen_commit\": \"7cf655bd667d748e2e4030da1b6b78c7aa0c236e\"\
+        ,\n  \"legacy_keys\": [\n    \"01fa2bc454dba1431864506e74f426111b576994d3afc951f179dcde53ee3561\",\n    \"04dbaeebf1d6adb6f666c3398a7c8852ca353793c29064a31494e4288946ce9a\"\
+        ,\n    \"05ff4c70645e2c565dcf5fbb53b16cd339c2cefe1846d403befc197e46600b71\",\n    \"07560d2e657a535fb59fdcdd49057e96c2c9d0017c94c7c35c8c8691c5a2755d\"\
+        ,\n    \"0a520c406a0ff1abeb5652d4d15129282a00f101e55391647bbd903f9dda575d\",\n    \"11b11caebbfa23b933a0a6e9f045365b526c51c92d3647ebbeb1d02a4fb87991\"\
+        ,\n    \"12200db9e2aefc17ed30bf283825bfdaa8233ffe21ff3ad698069502084df124\",\n    \"123f015f8bfe567382e6e08060147230df3257928c3b890fdd1291c5d990c5ad\"\
+        ,\n    \"12ce84ca04b09ff161add5e637bde0f71732d4c139a241aeafe4e69c9487386b\",\n    \"12e009437436f23697ff8d704e132e19b4e87bb4397669dc90ca80bdf9ae9b71\"\
+        ,\n    \"177002c7132a85e5fb8753f8be790840b4dba87e57ac611f90ea98924b359a1d\",\n    \"189b1907aa98b07caa27a3901005b5b1bad787c0bd7221f9089fc82d92b49738\"\
+        ,\n    \"1a0a6fc39a4fb41dbf52e0fdc6833a83d0050175c90507551e13d7dee7d33bab\",\n    \"1a76bc61c2406191a47eb0b363ce265e36900c81cf92d65a62b737ec83c375f5\"\
+        ,\n    \"1a80d4d27e9067a0ca11661ae75baf249f7ac6db4e42f7ce917f33f2c8a58e92\",\n    \"1a93d7b4ad585d3d34c97fd3c086f2c40b45ce343bc40317767965101cc1c467\"\
+        ,\n    \"1cd1e8f1ac7adf35156ce924358d141baa012f08e4e6e722a674fcd26e9681a0\",\n    \"1e13ab24947b737df7837124aca91aa8396097f1043b171274f9bcabbd668fcd\"\
+        ,\n    \"1e2bfe2cf7d1a2053c4c3133b7cfdb5447add53218c1eb29e68f8c05a4784622\",\n    \"1e930a7ec30d828445d0980aadcfc724c9da14309b4f14a60e6b8eaa36deef12\"\
+        ,\n    \"1e9d74901ec1b510c54eec487ea795369320abaf4ebffe522ea6119f6a472f0d\",\n    \"224e46d34ac6683b7be1b89456d7432a56bf54d716b855c4950ddcb661825623\"\
+        ,\n    \"25cdad8a2b12259c6fdb01c0c10ee700b097f516b83a76970508a368259ddcc4\",\n    \"27f5b441763ebd412b81ca90936b7c4a9c8d6694306c2930b7d7c7035c2518c1\"\
+        ,\n    \"2a3f5e9569998ac5daad80b94ec7ddbbdebc1381669edb8d7cab6eda3cdd9bfb\",\n    \"30a0cb7998937c06499d2ab64fce7a7a365a06a4584189ec8121ec7e904457db\"\
+        ,\n    \"30c0d3987ea3212dcf99757ce79d5ec335ad50ffe552c0f21d20a96fcfb77a91\",\n    \"315cc93a807e74ab9ed2862e8f18df4642e8cd48740ab5bf17cb4d72632d9e45\"\
+        ,\n    \"319f00ad3d95d01efa11d491bc1b18d445316df18d90dcb056403b5d31e0dcaa\",\n    \"3598dd011fac0bc95f3cf51f01453569869b4aecae322214f9be998e1312a20a\"\
+        ,\n    \"3652818e0f28f60f0c1853133d9e07382b444bbf04a9b0584066f7e0bd9b182b\",\n    \"374b1a8c8f3005fc6de9def9b5e759d6003671cdcc7c7e312ce827ac8c17a30c\"\
+        ,\n    \"384a9fdde838cdb2570fb324a804e371bd9bacdd556ed74e3ec2d83c83e6f51f\",\n    \"384bdc3bd95eb3764d227004de45431e6c9962d2edd309d67469d8735b58844f\"\
+        ,\n    \"38bee5fea02d1c49053f39c2a9f66088731d05620d6a96d9df79ef06e4e3788b\",\n    \"3a86998506d1a17de038ee7cf5bcb6cd3c699c4a90c8e80f33895ea61366640e\"\
+        ,\n    \"3cc727e222a65978e30f658c840b8bc7b7ee8a774a509a836dbe1a56e8dc4a98\",\n    \"3d0b15822b84a2ff48789c53e92e3ad3704615c2bac41f79037a7ab626847520\"\
+        ,\n    \"3ea7db1636f2362651e3ca536729aa7bde965782d34bf594477453f21dccb11d\",\n    \"3f94088647dd1c942a110b6f66ccc19df146cc95f24b1fe5cc57d1648f0a2ab7\"\
+        ,\n    \"4073452de20402244b46b9826b3a4ff7884ddce3a8593c925191891661005c47\",\n    \"4252bd9fec270a23df024e11353e4c7c8acc3a1effbf5e1257c0cf0125400aea\"\
+        ,\n    \"425812df2f2713a9e2b0ddcf4d07f174b6da1c355ee203e6c13e4f2a27ba28a0\",\n    \"43cc91f7c249d393d4aeb78a7c8a283868e15b09c2d3938cba1e8eb8a11196b9\"\
+        ,\n    \"43db1351d10cf825fabceca091341d7435d2c1c9ce089929b1c71f9311f98b51\",\n    \"44792da6920b73a92e0cc2f32324bf97693736167df6e86bb0a7de15ae63d0bf\"\
+        ,\n    \"451322a11e41f31997cfedecd854dc9564f2e85649cb526b3ce20b038ec035e9\",\n    \"479c5fdcbe4d66fb2fcdb9fd96c587c6c234e508b7a58785c3b1b4c4aa6aaa1e\"\
+        ,\n    \"48372599fc04da920bf1526d632730ade70097af786da08dfbb89a0e38db1144\",\n    \"4ab4a455f1a2c1b69baada71179a18bac28de1585b7dd7bc600e38d007d53317\"\
+        ,\n    \"4db36cf3e0e1892ae2224646d53fad22015957268c459541bc84203e0a1372e4\",\n    \"50514f93697949b98c70188fe6f431b1821e1ab154d7691c665d252400679e45\"\
+        ,\n    \"54b772cdd3f497daa9cee2d2592f270be00ae7fa6ce90b17baa09a092df54793\",\n    \"5595b72df90ccc45cc07485758a92a9ae1544fc61e918813651271ff7e22a46a\"\
+        ,\n    \"55b76f57e00e453a450cb56527034c6da492a1659cbd6caf7be51886b52da9dd\",\n    \"59e6600bd0721e43a5c60096477f714843857bb59d085f993623512f3a427e0f\"\
+        ,\n    \"5aaaa132bdc50d3c26777d33778bbf2436e276c385871a312ea151fa03cd972b\",\n    \"5e78e8814ac501a094ea7daa49f55dc2ae0f09af3ec70978b0d4c5d0c8e6db29\"\
+        ,\n    \"6145e1df3efbfe20a89a78ea4756b5bddcf2cdf0c304e19dc7daa941742201e3\",\n    \"646cbc43ce446955203e178661f854ca10079bf948c6a9e7157e5c8c0af828a4\"\
+        ,\n    \"673cf4d881ee17c572ee102578539a5fae0cb1fdd285d924b6ea4b99bf25e762\",\n    \"67c89767da5ae33cc2988039dbef6db55a3cc5906671ea844ae6b2d06f8bfb57\"\
+        ,\n    \"6856eed798d307878a95d0b4da1bcf4b2ac9f30fb1798cb6d35c7d98f3717b8c\",\n    \"695ffc36123c5f7348ea059a5a4a50ea6e52ebbc8b093f073a141a126a081d8d\"\
+        ,\n    \"6aaee7d7c5c22d9adaff209fd7fdc6f77f40ab2eeac85775dc72e40c35dd7eac\",\n    \"6e686857066d972982323fcd3d91ae8e8c5262e927489d1d4f5af2d55f561427\"\
+        ,\n    \"769aadd266395f45234a30181cd3db2df9c15158fd2a9026252933a6bbc9789c\",\n    \"772c74c197017e8b6fc3af3f9cd9e1c1f3b992f700671df3baa05d68295a87a1\"\
+        ,\n    \"7776a9753c0beaf263f13f2bdcfe982ced8d74af5730464c8b5392ad78b516b1\",\n    \"7be0c1229eccc170568778663ee566fb030ca53717f77e7d924fd185f1ac35d1\"\
+        ,\n    \"7da5714cbf3d8513fc6af508f1da47f80e9440d082417adc1ab43aed59561f53\",\n    \"7e803f833619635b188436e2e066d483cf8b1b64607e8348e6e885f0cac6fb3e\"\
+        ,\n    \"808f2c06dbedcb2e0620c4920a3d322c06da68d53f7edd8d6f492449b25da1b0\",\n    \"81fb61d032c77f9672b439393225117de38f52de638c61a77b482669aaf08ad9\"\
+        ,\n    \"86f6c46a9464a93f08da051653bbd4abf5217ed9511731e5340ddb0e937ab77c\",\n    \"8ebfbcc1906be5869528b162117cb9cf5879d627454e95109d08d76f39795de7\"\
+        ,\n    \"93ebd308e7bb351c57234f84a478bde03abd6da0f41c833f59dc84707614fb2d\",\n    \"95139e7bbf5d198df7c617f9b904806fca3fc7c840368b6e6665fb66bcc8192d\"\
+        ,\n    \"98779771f85cf016c7d8ecdd44f78b86d646dc93f6e19d2e0b547cb3cc12b0e3\",\n    \"9a525ff259488713135de796c18e39824ccec38ff7ff24ce980dd0c094d93311\"\
+        ,\n    \"9ab4c4f3e109fdae19182375142215b9ec388f8dff59e6bdf9ec7452ea900cdf\",\n    \"9e3ec416017aefdb69a81cf86a3c442be38b2c967a5132722d45e4b9c3d7a41b\"\
+        ,\n    \"9f7aa1371e3f9c47f2633b1ac9a4a5d7b05ff403819dcadcb8d35ae38083f755\",\n    \"a10eb0631834611b49839d45b566c4a04c8f5029ff1faa4d65c1cd3f544aad5a\"\
+        ,\n    \"a35c22f0d77ef321ee3131e89a0e98e65f26a20b1fd3f6cbe41c06e847e61c39\",\n    \"a4e59243c610ab14aee40f4b436649e560ff720648dccda389ea92574a1ba63d\"\
+        ,\n    \"a51d3f9a0deaebd7f28526e2310784b564f055c04dc4cf7371d635e33126f4ee\",\n    \"a676d5a0569f6a2093b675f6e8cb6f24bc2bb510c01e1d353d157ef1ee8b6e33\"\
+        ,\n    \"account-control\",\n    \"aeee67e24c822f7b8a18e6bdd9b39abc5ee35ac8e17548560346721dcd859e7e\",\n    \"af46d9186c7a67ee95d287616a4fd59fd836b57438f2ff780db66baaa2366455\"\
+        ,\n    \"af9ac707829d49be2ff8b19e074b2be7b770cf22e18389a0ef1754e37ad7f48d\",\n    \"afa42f468d5f66bf7e0db0957c4d23d6427b61077baf5165f8c8bdde05875cac\"\
+        ,\n    \"b3893554a2ca2d2027751a3353c0b4546139157ed617a68b5de6b91f20117216\",\n    \"b66eb9be516b0442714ae72fae829fc3f7aa33ec04faf876d2958c4d47e1d5b9\"\
+        ,\n    \"b6eaa1774c00bb6347befecab5118abf1c5beedfb3cf7d83ea6586d504d23254\",\n    \"b79d1fcfc0cef2a2b544168fead8a4a76324787883ee87280d2c80e27d20692e\"\
+        ,\n    \"b873d6874a3c2d2cd5f7273b16582a0c1e2a86b445f28692913ab7b07adae3c4\",\n    \"b9ec00ec5b916c7a28fc3ffdce5a1ed09fe863d3f5a65fea14fbcb66abd72273\"\
+        ,\n    \"be0f9cdb5905bb15a92871ff719621d0e9322b55a3f3055847cd21495e2bdfe4\",\n    \"beb1ee43a83a2d7b6e4fced74b09a48ba46f65cf2ebb77bbae0faf2c9e6d9e41\"\
+        ,\n    \"c048a0e55c89de8fe955ff5934ad75991a9f6be2ee3c7078a265d7c045b1304e\",\n    \"c62a2b18c7b09d92a73583d59989d477d9a0df6b05dbd864d459f8726db15ca2\"\
+        ,\n    \"c7d7cb674a2535e919d17adda649cab7f1a341ebe2895e72c8f92c10e3a46f2a\",\n    \"c80113830bcf9eb836f17d6a1700c42f43dd87b496fb3f10df5331e42b340e6f\"\
+        ,\n    \"ce5416503469e67708535cde685df613f565e35f1d7a2fca75843370547a96db\",\n    \"cefdf5c623a2d0658c39cdc6e619ae055d0a98eafcadc976954067acbadc5782\"\
+        ,\n    \"d3347fc23b61fb6ae625e20337047ad8e0175594feba4993806a0a7250b8d3dc\",\n    \"d35b3bf726e74e082d6b0f200805296135cf4a95ca7e5b0e8dd1d62b4af19676\"\
+        ,\n    \"d4e533ceaee071f0f84685acc42fc4429464514aa52db07f184d25fe09978570\",\n    \"d7c47082369b3defec579b1e23b192f86458295b1358ad1a977e5e5ef03c7ad8\"\
+        ,\n    \"d88ca090bd9aefa009bdf862f5151a34e7761827f2e2b236fe5b57634a158c31\",\n    \"d95058ed0cfd1c1f58d7daecfd3dd92547784f7f13368d2f3e896deeccbacd1d\"\
+        ,\n    \"da193a0a7cb8b349be951fa4d6830a2f6c93624cf3aadabc6a2b14115cf80b0e\",\n    \"da50314559d69e0e3ee05015f819ee19488ef1b809d7d920f5716510b805e77c\"\
+        ,\n    \"diagnostic-36699697319\",\n    \"e0115e257c047b02506866d665e2c155e2901f8284775a529c703bd80c12f875\",\n  \
+        \  \"e02914e1ec1d0521d2a67fda7d90a1a47f3e6630f38def60aaf1c9acee599725\",\n    \"e8114f3ff709081c91d8be4745bddbae50f90464db8eea8f74e42b0a967c696d\"\
+        ,\n    \"e93e2e75f9f904bf2d21ce3e42e2bf7c8fdaa4609db7396a6eccdb7e9567cbc4\",\n    \"ea0abe9b8cf0799a46b932215608a554ba209c1c945e6e8ff1a5f10550942e80\"\
+        ,\n    \"eb161089e0e535cf61314b702f23b6f080ce0596269189d77421a0a06109d7ba\",\n    \"eb52070634da9429e9e97d35cde12687998cabc82a1114bc8f398b5b8b6890f7\"\
+        ,\n    \"ec48152f51571223f02c675b3a25566c19fdc52bb04ff125e6fbb1e41a2a5a5b\",\n    \"eda211e61555cb5c7bf57f589e9c205e36c47058dea4d08595f1826d1487c602\"\
+        ,\n    \"ede64ed389e73f68909f408deee853cbb6e79ca07180232a34a6583dc4b4d8b1\",\n    \"ee10face142109a4eac2f36f9cae7e2d00a59e27f9b6735e32f25c05dd82985b\"\
+        ,\n    \"ee6023e3aa434cdad3d07148b8108cc377436ebd6592c5c47be250a4a8e02b8c\",\n    \"f00e05984b60d67f67c57e1693d8fa61690a22226fe747338d37dee5a88db7a9\"\
+        ,\n    \"f05722af841f0ccb9c2120e22215b8e48f6c36d746d819dd5d3b65925c8097fb\",\n    \"f231fcde423de08d267ce03569c41f8dc67240bc0bde74da9a663e45c7f98901\"\
+        ,\n    \"f2413e9fd6d5cde94e82772a9409704acd892ef870459494697b1c57360c249a\",\n    \"f3f61290334f5c47035c408ecd88b73dc7f9853d4205163fbedb05a8b6c41782\"\
+        ,\n    \"f535c785665b230a6baf5786ce053374fc119fced8dd2ea920f24a4a41a4b617\",\n    \"f6b34956dd17938dec6f1088599235a2df5a26acdd16fa97cd7bc1ca7f7803eb\"\
+        ,\n    \"f7dc27cc7603fc422b7e101c544af610a6238ed4bbf7c4c0d609849a0110a925\",\n    \"fff8f05e90ee98363611f9b0f5856b48c74e10aae72a0a3faf1158cfef9f4926\"\
+        ,\n    \"probe-36699222147\",\n    \"probe-36699465738\",\n    \"probe-36700393196\",\n    \"probe-36700512294\",\n\
+        \    \"probe-36706789089\",\n    \"probe-36710940771\",\n    \"probe-36711513740\",\n    \"probe-36711848598\",\n\
+        \    \"probe-36712479410\",\n    \"probe-36712735410\",\n    \"probe-36713135372\",\n    \"probe-36713939124\",\n\
+        \    \"probe-36714480559\",\n    \"probe-36714858944\",\n    \"probe-36716649470\",\n    \"probe-36716890860\",\n\
+        \    \"probe-36717123197\",\n    \"probe-36717467115\",\n    \"probe-36717864356\",\n    \"probe-36718090394\",\n\
+        \    \"probe-36721200436\",\n    \"probe-36723346309\",\n    \"probe-36724288999\",\n    \"probe-36725237725\",\n\
+        \    \"probe-36735370529\",\n    \"probe-36738037617\",\n    \"probe-36738491119\",\n    \"probe-36740703945\",\n\
+        \    \"probe-36752981397\",\n    \"probe-36753106896\",\n    \"probe-36758867169\",\n    \"probe-36759581472\",\n\
+        \    \"probe-36760789687\",\n    \"probe-36770502171\",\n    \"probe-36775267756\",\n    \"probe-36776039710\",\n\
+        \    \"probe-36776678465\",\n    \"probe-36778368398\",\n    \"probe-36782741561\",\n    \"probe-36788568113\",\n\
+        \    \"probe-36793812758\",\n    \"probe-36803940042\",\n    \"probe-36808448902\",\n    \"probe-36817777635\",\n\
+        \    \"probe-36827980971\",\n    \"probe-36833890617\",\n    \"probe-36846772553\",\n    \"probe-36853193165\",\n\
+        \    \"probe-36859321959\",\n    \"probe-36866127661\",\n    \"probe-36873787793\",\n    \"probe-36883427851\",\n\
+        \    \"probe-36889731323\",\n    \"probe-36897067074\",\n    \"probe-36912120545\",\n    \"probe-36919450898\",\n\
+        \    \"probe-36926788076\",\n    \"probe-36933664115\",\n    \"probe-36939257551\",\n    \"probe-36944674535\",\n\
+        \    \"probe-36949707105\",\n    \"probe-36961148745\",\n    \"probe-36967884224\",\n    \"probe-36985831326\",\n\
+        \    \"probe-36986261617\",\n    \"probe-36986949502\",\n    \"probe-36987559272\",\n    \"probe-36988256399\",\n\
+        \    \"probe-36988983757\",\n    \"probe-36989649559\",\n    \"probe-36992021819\",\n    \"probe-36992781846\",\n\
+        \    \"probe-36993108093\",\n    \"probe-36993624891\",\n    \"probe-36994158526\",\n    \"probe-36994930693\",\n\
+        \    \"probe-36995546196\",\n    \"probe-36996104015\",\n    \"probe-37061775231\",\n    \"probe-37068506556\",\n\
+        \    \"probe-37072012776\",\n    \"probe-37076698230\",\n    \"probe-37082253539\",\n    \"probe-37085423957\",\n\
+        \    \"probe-37089118358\",\n    \"probe-37092704735\",\n    \"probe-37095935147\",\n    \"probe-37099224572\",\n\
+        \    \"probe-37102444152\",\n    \"probe-37105730855\",\n    \"probe-37109072364\",\n    \"probe-37112415721\",\n\
+        \    \"probe-37115792277\",\n    \"probe-37122284169\",\n    \"probe-37125575748\",\n    \"probe-37129001902\",\n\
+        \    \"probe-37132636800\",\n    \"probe-37136283932\",\n    \"probe-37145323788\",\n    \"probe-37150436771\",\n\
+        \    \"probe-37156166113\",\n    \"probe-37163361815\",\n    \"probe-37167203774\",\n    \"probe-37177832317\",\n\
+        \    \"probe-37181392404\",\n    \"probe-37183292344\",\n    \"probe-37186574504\",\n    \"probe-37190101622\",\n\
+        \    \"probe-37193489718\",\n    \"probe-37200704010\",\n    \"probe-37221642566\",\n    \"probe-37226778823\",\n\
+        \    \"probe-37230913868\",\n    \"probe-37247820332\",\n    \"probe-37252088400\",\n    \"probe-37257285054\",\n\
+        \    \"probe-37262122296\",\n    \"probe-37273199159\",\n    \"probe-37277370696\",\n    \"probe-37290185559\",\n\
+        \    \"probe-37298402137\",\n    \"probe-37349253914\",\n    \"probe-37371367732\",\n    \"probe-37387740894\",\n\
+        \    \"probe-37393431421\",\n    \"probe-37398641242\",\n    \"probe-37443973074\",\n    \"probe-37447067468\",\n\
+        \    \"probe-37451989522\",\n    \"probe-37459655864\",\n    \"probe-37467404529\",\n    \"probe-37477624146\",\n\
+        \    \"probe-37494568652\",\n    \"probe-37502302763\",\n    \"probe-37510377852\",\n    \"probe-37518223575\",\n\
+        \    \"probe-37525778422\",\n    \"probe-37533224914\",\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n\
+        \    \"probe-37874770790\",\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
+        \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"'\npython -m pip install boto3\ncat\
+        \ > tigris_staging.py <<'MODULE'\n\"\"\"ReelSaga private staging. Guarded private staging with owner-approved external-fetch\
+        \ risk.\"\"\"\nimport contextlib, datetime, hashlib, json, os, sqlite3, time\nimport boto3\nfrom botocore.config import\
+        \ Config\n\nSTORAGE_STOP = 4 * 1024**3\nWRITE_STOP, READ_STOP = 9000, 90000\n# Egress is free. This is a conservative\
+        \ operational ledger, not a billing cap.\nMAX_OBJECT_BYTES = 256 * 1024**2\n\nclass GuardStop(RuntimeError): pass\n\
+        \nclass Staging:\n    def __init__(self):\n        self.bucket = os.environ['TIGRIS_BUCKET']\n        if self.bucket\
+        \ != 'reelsaga-private-staging-71':\n            raise GuardStop('Unexpected staging bucket')\n        self.db = os.environ['TIGRIS_GUARD_DB']\n\
+        \        if not os.path.exists(self.db):\n            raise GuardStop('Guard ledger missing: restore durable state,\
+        \ never auto-reset')\n        self.s3 = boto3.client('s3', endpoint_url='https://t3.storage.dev',region_name='auto',\n\
+        \            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],\n            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],\n\
+        \            config=Config(signature_version='s3v4',retries={'total_max_attempts':1},s3={'addressing_style':'path'}))\n\
+        \n    @contextlib.contextmanager\n    def _lock(self):\n        c=sqlite3.connect(self.db,timeout=30)\n        try:\n\
+        \            c.execute('BEGIN IMMEDIATE')\n            yield c\n            c.commit()\n        except Exception:\n\
+        \            c.rollback(); raise\n        finally: c.close()\n\n    def reserve(self, a=0, b=0, bytes_out=0, external_reads=0):\n\
+        \        \"\"\"Commit reservations before network calls. Failed/uncertain calls keep them.\"\"\"\n        if any(type(x)\
+        \ is not int or x<0 for x in (a,b,bytes_out,external_reads)):\n            raise GuardStop('Invalid reservation')\n\
+        \        month=datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m')\n        with self._lock() as c:\n \
+        \           row=c.execute('SELECT month,a,b,bytes_out,external_reads FROM budget WHERE id=1').fetchone()\n       \
+        \     if not row or row[0]!=month:\n                raise GuardStop('Month not reconciled: explicit audited rollover\
+        \ required')\n            if row[1]+a>=WRITE_STOP or row[2]+b+external_reads>=READ_STOP:\n                raise GuardStop('Monthly\
+        \ request stop guard')\n            c.execute('UPDATE budget SET a=a+?,b=b+?,bytes_out=bytes_out+?,external_reads=external_reads+?\
+        \ WHERE id=1',\n                (a,b+external_reads,bytes_out,external_reads))\n\n    def enumerate_bytes(self):\n\
+        \        total=0; token=None; objects=[]\n        while True:\n            self.reserve(a=1)\n            args={'Bucket':self.bucket}\n\
+        \            if token: args['ContinuationToken']=token\n            response=self.s3.list_objects_v2(**args)\n   \
+        \         for item in response.get('Contents',[]):\n                total+=item['Size'];objects.append({'key':item['Key'],'size':item['Size']})\n\
+        \            if not response.get('IsTruncated'): return total,objects\n            token=response.get('NextContinuationToken')\n\
+        \            if not token: raise GuardStop('Incomplete byte enumeration')\n\n    def stage(self,path,key,content_type,expected_sha256):\n\
+        \        \"\"\"Use a single serialized uploader across workers, not just this process.\"\"\"\n        if content_type\
+        \ not in ('video/mp4','image/jpeg'): raise GuardStop('Unsupported content type')\n        if not key.startswith('production/')\
+        \ or '..' in key: raise GuardStop('Unexpected object key')\n        data=open(path,'rb').read();digest=hashlib.sha256(data).hexdigest()\n\
+        \        if digest!=expected_sha256: raise GuardStop('Source manifest hash mismatch')\n        if len(data)>MAX_OBJECT_BYTES:\
+        \ raise GuardStop('Object too large for guarded single PUT')\n        # This lock serializes storage preflight + PUT\
+        \ within all users of the same local DB.\n        # Separate machines require a shared distributed lock at the pipeline\
+        \ layer.\n        with open(self.db+'.upload-lock','a') as lock:\n            import fcntl\n            fcntl.flock(lock,fcntl.LOCK_EX)\n\
+        \            stored,_=self.enumerate_bytes()\n            if stored+len(data)>=STORAGE_STOP: raise GuardStop('4 GiB\
+        \ stop-before-upload')\n            self.reserve(a=1)\n            self.s3.put_object(Bucket=self.bucket,Key=key,Body=data,ContentType=content_type,\n\
+        \                StorageClass='STANDARD',Metadata={'sha256':digest},IfNoneMatch='*')\n            self.reserve(b=1)\n\
+        \            head=self.s3.head_object(Bucket=self.bucket,Key=key)\n            if head['ContentLength']!=len(data)\
+        \ or head['ContentType']!=content_type or head.get('Metadata',{}).get('sha256')!=digest:\n                raise GuardStop('HEAD\
+        \ verification failed; retain object, do not delete/retry')\n        return {'bucket':self.bucket,'key':key,'bytes':len(data),'sha256':digest,'content_type':content_type}\n\
+        \n    def verified_get(self,key,expected_sha256):\n        self.reserve(b=1)\n        head=self.s3.head_object(Bucket=self.bucket,Key=key)\n\
+        \        self.reserve(b=1,bytes_out=head['ContentLength'])\n        data=self.s3.get_object(Bucket=self.bucket,Key=key)['Body'].read()\n\
+        \        if hashlib.sha256(data).hexdigest()!=expected_sha256: raise GuardStop('GET hash mismatch')\n        return\
+        \ data\n\n    def signed_get(self,key):\n        \"\"\"10800-second bearer URL. Nine external reads reserved, not\
+        \ enforced.\"\"\"\n        if not key.startswith('production/') or '..' in key:\n            raise GuardStop('Unexpected\
+        \ production object key')\n        stored,_=self.enumerate_bytes()\n        if stored>=STORAGE_STOP: raise GuardStop('4\
+        \ GiB staging stop')\n        self.reserve(b=1)\n        head=self.s3.head_object(Bucket=self.bucket,Key=key)\n  \
+        \      if head['ContentType'] not in ('video/mp4','image/jpeg'):\n            raise GuardStop('Unexpected source type')\n\
+        \        # Planning allowance only. External callers can exceed it until expiry.\n        self.reserve(external_reads=9,bytes_out=9*head['ContentLength'])\n\
+        \        url=self.s3.generate_presigned_url('get_object',\n            Params={'Bucket':self.bucket,'Key':key},ExpiresIn=10800)\n\
+        \        from urllib.parse import urlparse,parse_qs\n        query=parse_qs(urlparse(url).query)\n        if query.get('X-Amz-Expires')!=['10800']:\n\
+        \            raise GuardStop('Unexpected signed URL expiry')\n        signed_at=datetime.datetime.strptime(query['X-Amz-Date'][0],'%Y%m%dT%H%M%SZ').replace(tzinfo=datetime.timezone.utc)\n\
+        \        return {'url':url,'key':key,'bytes':head['ContentLength'],\n            'content_type':head['ContentType'],'sha256':head.get('Metadata',{}).get('sha256'),\n\
+        \            'expires_at':(signed_at+datetime.timedelta(seconds=10800)).isoformat(),\n            'external_reads_reserved':9,'external_reads_hard_capped':False}\n\
+        \n\n    def status(self):\n        with self._lock() as c:\n            row=c.execute('SELECT month,a,b,bytes_out,external_reads\
+        \ FROM budget WHERE id=1').fetchone()\n        return dict(zip(('month','class_a_reserved','class_b_reserved','bytes_out_reserved','external_reads_reserved'),row))\n\
+        \n\ndef initialize_approved_baseline(path,month,class_a,class_b):\n    \"\"\"One-time explicit baseline only. Refuses\
+        \ any existing DB. No auto rollover.\"\"\"\n    if os.path.exists(path): raise GuardStop('Existing ledger must not\
+        \ be overwritten')\n    fd=os.open(path,os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600);os.close(fd)\n    c=sqlite3.connect(path)\n\
+        \    c.execute('CREATE TABLE budget(id INTEGER PRIMARY KEY CHECK(id=1),month TEXT NOT NULL,a INTEGER NOT NULL,b INTEGER\
+        \ NOT NULL,bytes_out INTEGER NOT NULL,external_reads INTEGER NOT NULL)')\n    c.execute('INSERT INTO budget VALUES(1,?,?,?,?,?)',(month,class_a,class_b,0,0));c.commit();c.close()\n\
+        \nMODULE\ncat > tigris_durable.py <<'MODULE'\nimport os,json,base64,sqlite3,time\nfrom tigris_staging import Staging,GuardStop,initialize_approved_baseline\n\
+        KEY='tigris-guard-202610'\nMARK='tigris-guard-initialized-202610'\ndef bootstrap(backend):\n    record,version=backend.get(KEY);mark,mv=backend.get(MARK)\n\
+        \    if record:\n        if not mark:raise GuardStop('Guard marker missing')\n        return\n    if mark:raise GuardStop('Guard\
+        \ missing after initialization, no reset')\n    path='/tmp/tigris-bootstrap.db';initialize_approved_baseline(path,'2026-10',100,100)\n\
+        \    r={'month':'2026-10','sqlite_b64':base64.b64encode(open(path,'rb').read()).decode(),'exclusive_pipeline':'reelsaga-canary','baseline':'approved\
+        \ conservative100/100 not provider measurement'}\n    if not backend.compare_and_swap(KEY,None,r):raise GuardStop('Bootstrap\
+        \ CAS conflict')\n    if not backend.compare_and_swap(MARK,None,{'initialized':True,'month':'2026-10','baseline':[100,100]}):raise\
+        \ GuardStop('Marker CAS conflict')\nclass DurableStaging(Staging):\n    def __init__(self,backend):\n        self.backend=backend\n\
+        \        r,v=backend.get(KEY);mark,_=backend.get(MARK)\n        if not r or not mark or r['month']!='2026-10':raise\
+        \ GuardStop('Restore/reconcile guard required')\n        self.version=v;self.record=r\n        p=os.environ['TIGRIS_GUARD_DB'];open(p,'wb').write(base64.b64decode(r['sqlite_b64']))\n\
+        \        super().__init__()\n    def reserve(self,**kw):\n        super().reserve(**kw)\n        r=dict(self.record,sqlite_b64=base64.b64encode(open(self.db,'rb').read()).decode())\n\
+        \        last=None\n        for attempt in range(3):\n            if not self.backend.compare_and_swap(KEY,self.version,r):\n\
+        \                saved,v=self.backend.get(KEY)\n                if saved==r:\n                    self.record=r;self.version=v;return\n\
+        \                raise GuardStop('Durable reservation CAS conflict; stop before network')\n            saved,v=self.backend.get(KEY)\n\
+        \            if saved==r:\n                self.record=r;self.version=v;return\n            last=GuardStop('Reservation\
+        \ readback unsettled; stop before network')\n            print('RETRY reserve: readback unsettled after CAS (attempt\
+        \ %d/3), backing off 75s'%(attempt+1),flush=True)\n            if attempt<2:time.sleep(75)\n        raise last\nMODULE\n\
+        cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
+        \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
+        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep2-part1-v2', 'episode': 2, 'part': 1, 'title':\
+        \ 'The Supreme Mage: This Time, I Choose My Family - Episode 2 Part 1/3 | NetShort', 'description': \"The strongest\
+        \ mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he\
+        \ fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real\
+        \ self to save her. Having sacrificed all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis\
+        \ is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\\
+        n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep2-part1.mp4',\
+        \ 'source_start': 0.0, 'source_end': 54.141, 'privacy': 'private', 'approval_required': True, 'bytes': 61674935, 'sha256':\
+        \ '0707fbc6160ee7d7becc73c9bd31c982486593e087a81af099edfdec552548e4'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
+        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=21317422)\n\
+        source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep2.mp4')['Body'].read()\n\
+        if len(source)!=21317422 or hashlib.sha256(source).hexdigest()!='2b1101fc97247378f169478009a7270fae7be7eee122da0084c9b92f77c4ccfa':raise\
+        \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
+        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss\
+        \ 0 -i source.mp4 -t 54.141 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=53.641:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=53.641:d=0.5'\
+        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags\
+        \ +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -\"],check=True)\n\n\n\np=Path('empire.mp4')\n\
+        if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise GuardStop('Render\
+        \ parity mismatch; no PUT')\nobj='production/'+ITEM['id']+'/video.mp4'\nrecord=s.stage(str(p),obj,'video/mp4',ITEM['sha256']);s.verified_get(obj,ITEM['sha256'])\n\
+        out={'phase':'staging','records':{'video':record},'never_publish_without_review':True}\nif not b.compare_and_swap(key,v,out):raise\
+        \ GuardStop('Host checkpoint CAS conflict')\nsaved,_=b.get(key)\nif saved!=out:raise GuardStop('Host checkpoint unsettled')\n\
+        result={'host':record,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
+        print(json.dumps(result),flush=True)\nopen(os.environ['GITHUB_STEP_SUMMARY'],'a').write('```json\\n'+json.dumps(result,indent=2)+'\\\
+        n```')\n\nPREPARE\npython host_prep.py\n\n\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
+        \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\n\
+        EXPECTED_NAME='reelsaga3000'\nSCOPES={'instagram_business_basic','instagram_business_content_publish'}\ndef validate_record(record,now=None):\n\
+        \    now=now or datetime.now(timezone.utc)\n    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
+        \        raise ValueError('Instagram identity mismatch')\n    if set(record.get('scopes',[]))!=SCOPES:\n        raise\
+        \ ValueError('Instagram scope mismatch')\n    try:\n        created=datetime.fromisoformat(record['created_at'].replace('Z','+00:00'))\n\
+        \        expiry=datetime.fromisoformat(record['expires_at'].replace('Z','+00:00'))\n    except Exception:\n      \
+        \  raise ValueError('Invalid credential dates') from None\n    if created.tzinfo is None or expiry.tzinfo is None\
+        \ or created>now+timedelta(seconds=30) or expiry<=now+timedelta(minutes=5):\n        raise ValueError('Credential\
+        \ expired or dates invalid')\n    token=record.get('access_token')\n    if not isinstance(token,str) or len(token)<100\
+        \ or not token.isascii():\n        raise ValueError('Invalid credential')\n    return token\n\ndef verify_live_identity(token,request):\n\
+        \    identity=request('GET','https://graph.instagram.com/v26.0/me',headers={'Authorization':'Bearer '+token},params={'fields':'user_id,username'})\n\
+        \    if identity.get('username')!=EXPECTED_NAME or str(identity.get('user_id'))!=EXPECTED_USER:\n        raise ValueError('Live\
+        \ Instagram identity mismatch')\n    return identity\n\nMODULE\ncat > reader.py <<'MODULE'\n\"\"\"Server-side reader.\
+        \ No credential is written to logs or a public artifact.\"\"\"\nimport json,os,urllib.request,urllib.parse\nfrom instagram_record\
+        \ import validate_record,verify_live_identity\n\ndef read_token(endpoint,secret,opener=urllib.request.urlopen):\n\
+        \    parsed=urllib.parse.urlsplit(endpoint)\n    if parsed.scheme!='https' or parsed.hostname!='kathirvelan-boutique.vercel.app'\
+        \ or parsed.path!='/api/instagram/reelsaga-reader' or parsed.port not in (None,443) or parsed.username or parsed.password\
+        \ or parsed.fragment or parsed.query:\n        raise ValueError('Invalid reader destination')\n    if not secret or\
+        \ len(secret)<32:\n        raise ValueError('Reader credential missing')\n    class NoRedirect(urllib.request.HTTPRedirectHandler):\n\
+        \        def redirect_request(self,*args,**kwargs):return None\n    request=urllib.request.Request(endpoint,headers={'Authorization':'Bearer\
+        \ '+secret,'Accept':'application/json'})\n    # Redirects must not carry the read key to another destination.\n  \
+        \  if opener is urllib.request.urlopen:opener=urllib.request.build_opener(NoRedirect).open\n    with opener(request,timeout=30)\
+        \ as response:\n        if response.status!=200:raise ValueError('Reader response unverified')\n        raw=response.read(65537)\n\
+        \        if len(raw)>65536:raise ValueError('Oversized reader response')\n        record=json.loads(raw)\n    return\
+        \ validate_record(record)\n\ndef from_environment():\n    endpoint=os.environ.pop('REELSAGA_IG_READER_URL','')\n \
+        \   key=os.environ.pop('REELSAGA_IG_READ_KEY','')\n    return read_token(endpoint,key)\n\nMODULE\npython -m pip install\
+        \ boto3\n\ncat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom datetime import datetime,timezone,timedelta\n\
+        from pathlib import Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
+        from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
+        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep2-part1-v2',\
+        \ 'episode': 2, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 2 Part 1/3 | NetShort',\
+        \ 'description': \"The strongest mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and\
+        \ daughter. Hiding his power, he fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses\
+        \ the girl. He uncovers his real self to save her. Having sacrificed all to defeat the foe, can this stolen-body family\
+        \ truly start anew?\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
+        \ https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you\
+        \ use them.\", 'file': '/downloads/suprememage/ep2-part1.mp4', 'source_start': 0.0, 'source_end': 54.141, 'privacy':\
+        \ 'private', 'approval_required': True, 'bytes': 61674935, 'sha256': '0707fbc6160ee7d7becc73c9bd31c982486593e087a81af099edfdec552548e4'}\n\
+        caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\nstage='initial'\ncontrols=None\ntry:\n\
+        \    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    if ledger.resume(item['id'],'instagram')!='unclaimed':raise\
+        \ ValueError('Already claimed')\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'})\n    ident=checked(api('GET','https://graph.instagram.com/v26.0/me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise ValueError('identity')\n\
+        \    base='https://graph.instagram.com/v26.0/'\n    quota=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if quota['quota_usage']>=min(40,quota['config']['quota_total']):raise ValueError('Quota')\n    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp,permalink','limit':100};seen=set();rows=[]\n\
+        \    while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None\n\
+        \        url=data.get('paging',{}).get('next')\n        if url in seen:raise ValueError('Pagination loop')\n     \
+        \   if url:seen.add(url)\n    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
+        \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n\
+        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-suprememage-ep2-part1-v2');urls={}\n\
+        \    for kind in ['video']:\n        if not isinstance(host,dict) or not isinstance(host.get('records'),dict):raise\
+        \ ValueError('Missing verified host record; run guarded host-prep first')\n        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
+        \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with urllib.request.urlopen(urls[kind]['url'],timeout=90)\
+        \ as response:\n            data=response.read();ct=response.headers.get_content_type()\n        if len(data)!=obj['bytes']\
+        \ or hashlib.sha256(data).hexdigest()!=obj['sha256'] or ct!=obj['content_type'] or '***' in urls[kind]['url']:raise\
+        \ ValueError('Fresh source')\n    stage='claim'\n    stage='enable_control';controls.set_access(True,verified=True)\n\
+        \    stage='require_enabled'\n    import time\n    for attempt in range(5):\n        control,_=backend.get('account-control')\n\
+        \        if control and control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n    else:raise ValueError('Control\
+        \ enable readback did not settle')\n    controls.require_enabled()\n    stage='claim_record'\n    if not ledger.claim(item,'instagram'):raise\
+        \ ValueError('Existing claim; reconcile only')\n    stage='uncertain_checkpoint'\n    import time\n    for _ in range(5):\n\
+        \        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n        if claimed and claimed.get('state')=='started':break\n\
+        \        time.sleep(3)\n    else:raise ValueError('Claim readback did not settle')\n    ledger.checkpoint(item['id'],'instagram','uncertain')\n\
+        \    for _ in range(5):\n        claimed,_=backend.get(ledger.key(item['id'],'instagram'))\n        if claimed and\
+        \ claimed.get('state')=='uncertain':break\n        time.sleep(3)\n    else:raise ValueError('Uncertain readback did\
+        \ not settle')\n    stage='create'\n    r=checked(api('POST',base+EXPECTED_USER+'/media',json={'media_type':'REELS','video_url':urls['video']['url'],'thumb_offset':1000,'caption':caption,'share_to_feed':True})).data\n\
+        \    ledger.checkpoint(item['id'],'instagram','processing',external_id=r['id'])\n    controls.set_access(False)\n\
+        \    saved,_=backend.get(ledger.key(item['id'],'instagram'))\n    if saved['external_id']!=r['id'] or saved['state']!='processing':raise\
+        \ ValueError('Checkpoint')\n    result={'container_id':r['id'],'state':'processing','caption_exact':True,'quota_usage':quota['quota_usage'],'new_publish_attempted':False}\n\
+        \    print(json.dumps(result))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## SupremeMage EP2P1 IG staged\\\
+        n\\n```json\\n'+json.dumps(result,indent=2)+'\\n```\\n')\nexcept Exception as e:\n    print(json.dumps({'failure_stage':stage,'error_type':type(e).__name__,'error':str(e)[:250]}));raise\
+        \ SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n        except Exception:pass\n\
+        \nSTAGE\npython ig_stage.py\n\ncat > ig_publish.py <<'PUBLISH'\nimport json,os,urllib.request,urllib.parse\nfrom datetime\
+        \ import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
+        \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
+        from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
+        \nitem={'id': 'netshort-suprememage-ep2-part1-v2', 'episode': 2, 'part': 1, 'title': 'The Supreme Mage: This Time,\
+        \ I Choose My Family - Episode 2 Part 1/3 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
+        \ a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
+        \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
+        \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
+        \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
+        \ 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep2-part1.mp4',\
+        \ 'source_start': 0.0, 'source_end': 54.141, 'privacy': 'private', 'approval_required': True, 'bytes': 61674935, 'sha256':\
+        \ '0707fbc6160ee7d7becc73c9bd31c982486593e087a81af099edfdec552548e4'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
+        item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
+        \ import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
+        try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
+        \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
+        \    if saved['state']!='processing' or not saved.get('external_id'):raise ValueError('No staged container')\n   \
+        \ stage='youtube_probe_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
+        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v for k,v in item.items()\
+        \ if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'Lq6Y_B4c3bQ'})).data['items'][0]\n\
+        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title'] or v['snippet']['description']!=item['description']\
+        \ or v['status']['privacyStatus']!='private' or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('Verified\
+        \ private probe mismatch')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
+        \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise ValueError('Identity')\n\
+        \    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n   \
+        \ while url:\n        data=checked(api('GET',url,params=params)).data;rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')\n\
+        \        if url in seen:raise ValueError('Pagination loop')\n        if url:seen.add(url)\n    if any(x.get('caption')==caption\
+        \ for x in rows):raise ValueError('Duplicate')\n    if rows and datetime.now(timezone.utc)-max(datetime.fromisoformat(x['timestamp'])\
+        \ for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n    q=checked(api('GET',base+EXPECTED_USER+'/content_publishing_limit',params={'fields':'config,quota_usage'})).data['data'][0]\n\
+        \    if q['quota_usage']>=min(40,q['config']['quota_total']):raise ValueError('Quota')\n    stage='container_status'\n\
+        \    import time\n    container=saved['external_id']\n    for attempt in range(5):\n        status=checked(api('GET',base+container,params={'fields':'status_code'})).data\n\
+        \        if status['status_code']=='FINISHED':break\n        if status['status_code']!='IN_PROGRESS':raise ValueError('Container\
+        \ failed')\n        if attempt<4:time.sleep(60)\n    else:raise ValueError('Container not FINISHED')\n    stage='publish'\n\
+        \    controls.set_access(True,verified=True)\n    for attempt in range(5):\n        control,_=backend.get('account-control')\n\
+        \        if control and control.get('enabled') is True:break\n        if attempt<4:time.sleep(3)\n    else:raise ValueError('Control\
+        \ readback did not settle')\n    controls.require_enabled()\n    ledger.checkpoint(item['id'],'instagram','uncertain',external_id=container)\n\
+        \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
+        \    controls.set_access(False);stage='readback'\n    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
+        \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback mismatch')\n    out={'instagram_published':True,'media':m,'caption_exact':True,'youtube_probe_claims_checked':True,'youtube_mutated':False,'stop_verified':True}\n\
+        \    print(json.dumps(out))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Published SupremeMage EP2P1\
+        \ Instagram\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\n```\\n')\nexcept Exception:\n    print('IG publish stopped\
+        \ at '+stage+'. Reconcile saved ledger before retry.');raise SystemExit(1) from None\nfinally:\n    if controls:\n\
+        \        try:controls.set_access(False)\n        except Exception:pass\n\nPUBLISH\npython ig_publish.py\n"
+    timeout-minutes: 20
+name: SupremeMage IG EP2P1 guarded publish
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: write
