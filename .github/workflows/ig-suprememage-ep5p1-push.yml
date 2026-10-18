@@ -232,7 +232,7 @@ jobs:
         \ %d/3), backing off 75s'%(attempt+1),flush=True)\n            if attempt<2:time.sleep(75)\n        raise last\nMODULE\n\
         cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
         \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
-        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep5-part1-v1', 'episode': 5, 'part': 1, 'title':\
+        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep5-part1-v2', 'episode': 5, 'part': 1, 'title':\
         \ 'The Supreme Mage: This Time, I Choose My Family - Episode 5 Part 1/3 | NetShort', 'description': \"The strongest\
         \ mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he\
         \ fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real\
@@ -285,7 +285,7 @@ jobs:
         \ boto3\n\ncat > ig_stage.py <<'STAGE'\nimport json,os,urllib.request,urllib.parse\nfrom datetime import datetime,timezone,timedelta\n\
         from pathlib import Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
-        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep5-part1-v1',\
+        \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep5-part1-v2',\
         \ 'episode': 5, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 5 Part 1/3 | NetShort',\
         \ 'description': \"The strongest mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and\
         \ daughter. Hiding his power, he fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses\
@@ -306,7 +306,7 @@ jobs:
         \        url=data.get('paging',{}).get('next')\n        if url in seen:raise ValueError('Pagination loop')\n     \
         \   if url:seen.add(url)\n    if any(x.get('caption')==caption for x in rows):raise ValueError('Duplicate')\n    now=datetime.now(timezone.utc)\n\
         \    if rows and now-max(datetime.fromisoformat(x['timestamp']) for x in rows)<timedelta(minutes=30):raise ValueError('Spacing')\n\
-        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-suprememage-ep5-part1-v1');urls={}\n\
+        \    from tigris_durable import DurableStaging\n    import hashlib\n    st=DurableStaging(backend);host,_=backend.get('tigris-host-netshort-suprememage-ep5-part1-v2');urls={}\n\
         \    for kind in ['video']:\n        if not isinstance(host,dict) or not isinstance(host.get('records'),dict):raise\
         \ ValueError('Missing verified host record; run guarded host-prep first')\n        obj=host['records'][kind];st.verified_get(obj['key'],obj['sha256']);urls[kind]=st.signed_get(obj['key'])\n\
         \        st.reserve(external_reads=1,bytes_out=obj['bytes'])\n        with urllib.request.urlopen(urls[kind]['url'],timeout=90)\
@@ -332,7 +332,7 @@ jobs:
         \ import datetime,timezone,timedelta\nfrom pathlib import Path\nfrom reader import read_token\nfrom instagram_record\
         \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
         from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
-        \nitem={'id': 'netshort-suprememage-ep5-part1-v1', 'episode': 5, 'part': 1, 'title': 'The Supreme Mage: This Time,\
+        \nitem={'id': 'netshort-suprememage-ep5-part1-v2', 'episode': 5, 'part': 1, 'title': 'The Supreme Mage: This Time,\
         \ I Choose My Family - Episode 5 Part 1/3 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
         \ a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
