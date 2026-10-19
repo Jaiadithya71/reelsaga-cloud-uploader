@@ -17,7 +17,7 @@ SCOPES=('https://www.googleapis.com/auth/youtube.upload',
         'https://www.googleapis.com/auth/youtube.readonly')
 CHANNEL='UC71kSXnAt6Ipy7KqVVo3mdA'
 SERVICE='ReelSaga Upload Queue'
-ACCOUNT='jaiadithya2025.71@gmail.com'
+ACCOUNT='reelsaga-upload-queue'
 
 class SetupError(RuntimeError):pass
 

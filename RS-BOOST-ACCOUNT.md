@@ -2,13 +2,13 @@
 
 Verified October 3, 2026 in the signed-in RS Boost dashboard.
 
-- Account email: jaiadithya2025.71@gmail.com
+- Account email: [owner-gmail-redacted]
 - Login: https://cps.reelshort.com/user/login
 - Content hub: https://cps.reelshort.com/resource-square
-- Own referral code: HSUtV7LEgsw8
+- Own referral code: [redacted]
 - Referral level: 1
 - Drama distribution ratio: 30%
-- Bound invitation code: SMxmSmsvo8Ur (shortools public code)
+- Bound invitation code: [redacted] (shortools public code)
 - Binding approved by the owner on October 3, 2026 after being told it is permanent and cannot be unbound.
 - Password location: vault login entry "RS Boost (cps.reelshort.com)". No password is stored in this project.
 

@@ -1,6 +1,6 @@
 # Drive queue layout (not created yet)
 
-Use account jaiadithya2025.71@gmail.com. Proposed private folder name: ReelSaga Queue.
+Use account [owner-gmail-redacted]. Proposed private folder name: ReelSaga Queue.
 No files, folder, shares, OAuth grants, or billing services have been created.
 
 Proposed child layout:

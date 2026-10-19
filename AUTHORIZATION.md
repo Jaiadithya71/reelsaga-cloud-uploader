@@ -3,7 +3,7 @@
 No tokens should be pasted into chat, committed, or printed in workflow logs.
 No Google/Meta setup has been submitted in this preparation run. Existing Google project157426279644 (dramacps-youtube-pipeline) was verified live September30: YouTube API enabled, OAuth External/Testing, no clients/scopes/test users. Owner deferred the authorization steps.
 
-## Google, account jaiadithya2025.71@gmail.com
+## Google, account [owner-gmail-redacted]
 
 1. Create or select a Google Cloud project and enable Drive API and YouTube Data API v3. No billing account needed for these upload calls.
 2. Configure an OAuth consent screen and an OAuth client for the selected auth callback. Request offline access for a refresh token. Verify the actual ReelSaga channel ID before any upload.
