@@ -171,19 +171,18 @@ jobs:
         s3=boto3.client('s3',endpoint_url='https://fly.storage.tigris.dev')
         data=s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep5.mp4')['Body'].read()
         print('SOURCE bytes',len(data),flush=True)
-        i=0
+        j=0
         dur=None
-        while i<len(data)-8:
-            size=struct.unpack('>I',data[i:i+4])[0]
-            typ=data[i+4:i+8]
-            if typ==b'mvhd':
-                ver=data[i+8]
-                if ver==1:
-                    ts=struct.unpack('>I',data[i+28:i+32])[0]; d=struct.unpack('>Q',data[i+32:i+40])[0]
-                else:
-                    ts=struct.unpack('>I',data[i+20:i+24])[0]; d=struct.unpack('>I',data[i+24:i+28])[0]
+        while True:
+            j=data.find(b'mvhd',j)
+            if j<0: break
+            ver=data[j+4]
+            if ver==1:
+                ts=struct.unpack('>I',data[j+24:j+28])[0]; d=struct.unpack('>Q',data[j+28:j+36])[0]
+            else:
+                ts=struct.unpack('>I',data[j+16:j+20])[0]; d=struct.unpack('>I',data[j+20:j+24])[0]
+            if ts and 0<d/ts<3600:
                 dur=d/ts; break
-            if size<8: break
-            i+=size
+            j+=4
         print('EP5_DURATION_S',dur,flush=True)
         PY
