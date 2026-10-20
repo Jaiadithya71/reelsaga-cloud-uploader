@@ -46,5 +46,7 @@ jobs:
                     s=m+'='*(-len(m)%4);dur=json.loads(base64.urlsafe_b64decode(s)).get('duration_s')
                 except Exception: dur='ERR'
             cap=(r.get('caption') or '').split('\n')[0][:70]
-            print(json.dumps({'cap':cap,'dur':dur,'ts':r.get('timestamp'),'link':r.get('permalink')}),flush=True)
+            line=json.dumps({'cap':cap,'dur':dur,'ts':r.get('timestamp'),'link':r.get('permalink')})
+            print(line,flush=True)
+            open(os.environ['GITHUB_STEP_SUMMARY'],'a').write(line+'\n')
         PY
