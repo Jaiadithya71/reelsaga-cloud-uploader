@@ -230,32 +230,7 @@ jobs:
         \            if saved==r:\n                self.record=r;self.version=v;return\n            last=GuardStop('Reservation\
         \ readback unsettled; stop before network')\n            print('RETRY reserve: readback unsettled after CAS (attempt\
         \ %d/3), backing off 75s'%(attempt+1),flush=True)\n            if attempt<2:time.sleep(75)\n        raise last\nMODULE\n\
-        cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
-        \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
-        \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep5-part2-v2', 'episode': 5, 'part': 2, 'title':\
-        \ 'The Supreme Mage: This Time, I Choose My Family - Episode 5 Part 2/3 | NetShort', 'description': \"The strongest\
-        \ mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he\
-        \ fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real\
-        \ self to save her. Having sacrificed all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis\
-        \ is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\\
-        n\\nFull episode part 2 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep5-part2.mp4',\
-        \ 'source_start': 50, 'source_end': 84.142, 'privacy': 'private', 'approval_required': True, 'bytes': 52568148, 'sha256':\
-        \ '4a104da2bda93bba8b5f2682559ac66bd59c5ed37adacdc17ee2b001ea704490'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=13865547)\n\
-        source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep5.mp4')['Body'].read()\n\
-        if len(source)!=13865547 or hashlib.sha256(source).hexdigest()!='bd2dae3f403fb88855a24ddc4a0610c51f52f6e20ae5e0ad0026c50377f4c219':raise\
-        \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
-        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss\
-        \ 0 -i source.mp4 -t 50 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=49.5:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=49.5:d=0.5'\
-        \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags\
-        \ +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -\"],check=True)\n\n\n\np=Path('empire.mp4')\n\
-        if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise GuardStop('Render\
-        \ parity mismatch; no PUT')\nobj='production/'+ITEM['id']+'/video.mp4'\nrecord=s.stage(str(p),obj,'video/mp4',ITEM['sha256']);s.verified_get(obj,ITEM['sha256'])\n\
-        out={'phase':'staging','records':{'video':record},'never_publish_without_review':True}\nif not b.compare_and_swap(key,v,out):raise\
-        \ GuardStop('Host checkpoint CAS conflict')\nsaved,_=b.get(key)\nif saved!=out:raise GuardStop('Host checkpoint unsettled')\n\
-        result={'host':record,'guard':s.status(),'source_exact':True,'render_exact':True,'full_decode_clean':True,'publish_attempted':False}\n\
-        print(json.dumps(result),flush=True)\nopen(os.environ['GITHUB_STEP_SUMMARY'],'a').write('```json\\n'+json.dumps(result,indent=2)+'\\\
-        n```')\n\nPREPARE\npython host_prep.py\n\n\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
+        \n\ncat > instagram_record.py <<'MODULE'\n\"\"\"Identity/expiry gate for a\
         \ server-returned ReelSaga-only token record.\"\"\"\nfrom datetime import datetime,timezone,timedelta\nEXPECTED_USER='17841423797577132'\n\
         EXPECTED_NAME='reelsaga3000'\nSCOPES={'instagram_business_basic','instagram_business_content_publish'}\ndef validate_record(record,now=None):\n\
         \    now=now or datetime.now(timezone.utc)\n    if record.get('username')!=EXPECTED_NAME or str(record.get('user_id'))!=EXPECTED_USER:\n\
