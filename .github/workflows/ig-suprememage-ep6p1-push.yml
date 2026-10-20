@@ -241,7 +241,7 @@ jobs:
         n\\nFull episode part 1 of 4.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep6-part1.mp4',\
         \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 31791361, 'sha256':\
         \ '9b37f8a0754a59637299d79f54b4b112cf7da188ba62aae81a5a985e31d50186'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=12053213)\n\
+        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:\n    _rec=(r.get('records') or {}).get('video',{})\n    if _rec.get('sha256')!=ITEM['sha256'] or _rec.get('bytes')!=ITEM['bytes']:raise GuardStop('Host record mismatch; audited delete then redispatch')\n    print('Host record verified; skipping render',flush=True)\n    raise SystemExit(0)\ns.reserve(b=1,bytes_out=12053213)\n\
         source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep6.mp4')['Body'].read()\n\
         if len(source)!=12053213 or hashlib.sha256(source).hexdigest()!='6532d255979dbf308c5df41237119e37f77a8b2bfa132a250a168d0514d61231':raise\
         \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
