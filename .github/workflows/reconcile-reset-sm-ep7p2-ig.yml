@@ -180,4 +180,16 @@ jobs:
                 if resp.status not in (200,204): raise SystemExit('DELETE failed HTTP '+str(resp.status))
             after,_=backend.get(k)
             print('RESET_OK' if after is None else 'RESET_FAIL',pid,plat,flush=True)
+        hk='tigris-host-netshort-suprememage-ep7-part2-v1'
+        hrec,_=backend.get(hk)
+        print('AUDIT_HOST',hk,json.dumps(hrec),flush=True)
+        if hrec:
+            r=backend.request('GET',backend.url(hk),params={'ref':backend.branch})
+            sha=r.data.get('sha')
+            body=json.dumps({'message':'Reconcile: SM EP7P2 tigris host record removed so the corrected full push re-renders and re-stages deterministically; prior staged URL belonged to an IG container that never published','sha':sha,'branch':backend.branch}).encode()
+            req=urllib.request.Request(backend.url(hk),data=body,method='DELETE',headers={'Authorization':'Bearer '+gh,'Accept':'application/vnd.github+json','Content-Type':'application/json'})
+            with urllib.request.urlopen(req,timeout=30) as resp:
+                if resp.status not in (200,204): raise SystemExit('DELETE failed HTTP '+str(resp.status))
+            hafter,_=backend.get(hk)
+            print('HOST_RESET_OK' if hafter is None else 'HOST_RESET_FAIL',hk,flush=True)
         PY
