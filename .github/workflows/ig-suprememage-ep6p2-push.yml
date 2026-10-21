@@ -29,7 +29,7 @@ jobs:
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
         TIGRIS_BUCKET: reelsaga-private-staging-71
         TIGRIS_GUARD_DB: /tmp/tigris-guard.db
-      name: SupremeMage EP6P1 exact host stage publish
+      name: SupremeMage EP6P2 exact host stage publish
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace. Original legacy records are never\
         \ mutated.\"\"\"\nimport hashlib,json,re\nfrom github_state import GitHubState,StateError\nfrom adapters import checked\n\
         FROZEN='7cf655bd667d748e2e4030da1b6b78c7aa0c236e'\nclass QuarantineState(GitHubState):\n    def __init__(self,request,key_material):\n\
@@ -338,7 +338,7 @@ jobs:
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
         \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
         \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
-        \ 1 of 4.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep6-part2.mp4',\
+        \ 2 of 4.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep6-part2.mp4',\
         \ 'source_start': 50, 'source_end': 89.108, 'privacy': 'private', 'approval_required': True, 'bytes': 22628718, 'sha256':\
         \ 'b24535b95e5124adf0e4b9e41905e97a8c7107470e1ce6bf823f67b0b056338a'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
         item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
@@ -369,7 +369,7 @@ jobs:
         \    r=checked(api('POST',base+EXPECTED_USER+'/media_publish',json={'creation_id':container})).data\n    ledger.checkpoint(item['id'],'instagram','published',external_id=r['id'])\n\
         \    controls.set_access(False);stage='readback'\n    m=checked(api('GET',base+r['id'],params={'fields':'id,caption,permalink,media_type,media_product_type,media_url,thumbnail_url,timestamp'})).data\n\
         \    if m['caption']!=caption or m['media_product_type']!='REELS':raise ValueError('Readback mismatch')\n    out={'instagram_published':True,'media':m,'caption_exact':True,'youtube_probe_claims_checked':True,'youtube_mutated':False,'stop_verified':True}\n\
-        \    print(json.dumps(out))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Published SupremeMage EP6P1\
+        \    print(json.dumps(out))\n    open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Published SupremeMage EP6P2\
         \ Instagram\\n\\n```json\\n'+json.dumps(out,indent=2)+'\\n```\\n')\nexcept Exception:\n    print('IG publish stopped\
         \ at '+stage+'. Reconcile saved ledger before retry.');raise SystemExit(1) from None\nfinally:\n    if controls:\n\
         \        try:controls.set_access(False)\n        except Exception:pass\n\nPUBLISH\npython ig_publish.py\n"
