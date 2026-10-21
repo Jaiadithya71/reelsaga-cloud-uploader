@@ -149,12 +149,16 @@ jobs:
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
       run: |
         python - <<'PY'
         import os,json,hashlib,urllib.request,subprocess
         from pathlib import Path
-        SOURCE_URL='https://video.netshort.com/ooY6ADfBsA4FG511IM4WjZKZLAgvrijKiQSpEK?a=0&auth_key=1792565888-fe33b04e5f7f4d41b8a154d979e8659b-0-e6c29f92141cc39cc373648077cf0926&br=961&bt=961&cd=0%7C0%7C0&ch=0&cr=0&cs=0&cv=1&dr=0&ds=4&eid=66a378dfd6914d6387d3d5241a40addf&er=0&l=20261011065533E73C9955456192307E70&lr=&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M2RpaHI5cm5tZTozMzZoNEApZ2Q3NDVnZzs5NzxnZzpkOWdfZmQxMmRzMDJhMi1kXjVzc2NhLV4xMjA0MGEuM2M1MDM6Yw%3D%3D&vl=&vr='
-        data=urllib.request.urlopen(SOURCE_URL,timeout=120).read()
+        import boto3
+        from botocore.config import Config
+        s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto', aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'], aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'], config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+        data=s3.get_object(Bucket='reelsaga-private-staging-71', Key='production/suprememage-sources/ep7.mp4')['Body'].read()
         if len(data)!=19046546 or hashlib.sha256(data).hexdigest()!='9769ac48380c6cade3db960dae799361f043add262dd591f639ac4ded6727ddf':raise SystemExit('Source mismatch')
         Path('source.mp4').write_bytes(data)
         subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',"apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss 100 -i source.mp4 -t 54.715 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=54.215:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=54.215:d=0.5' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -"],check=True)
