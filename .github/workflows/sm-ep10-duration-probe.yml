@@ -1,0 +1,41 @@
+name: ReelSaga SM EP10 source duration probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install boto3
+    - name: Probe ep10 source presence, size, hash, duration
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+      run: |
+        cat > ep10_probe.py <<'EP10'
+        import hashlib,os,subprocess
+        import boto3
+        from botocore.config import Config
+        from botocore.exceptions import ClientError
+        s3=boto3.client('s3',endpoint_url='https://t3.storage.dev',region_name='auto',aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],config=Config(signature_version='s3v4',retries={'total_max_attempts':3},s3={'addressing_style':'path'}))
+        try:
+            data=s3.get_object(Bucket='reelsaga-private-staging-71',Key='production/suprememage-sources/ep10.mp4')['Body'].read()
+        except ClientError as e:
+            code=e.response.get('Error',{}).get('Code','')
+            if code in ('NoSuchKey','404','NotFound'):
+                print('EP10_SOURCE_ABSENT',flush=True);raise SystemExit(0)
+            raise
+        open('source.mp4','wb').write(data)
+        print('EP10_SOURCE_BYTES',len(data),flush=True)
+        print('EP10_SOURCE_SHA256',hashlib.sha256(data).hexdigest(),flush=True)
+        subprocess.run(['docker','run','--rm','-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',"apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 source.mp4"],check=True)
+        EP10
+        python ep10_probe.py
