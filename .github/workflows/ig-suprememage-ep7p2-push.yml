@@ -239,7 +239,7 @@ jobs:
         \ self to save her. Having sacrificed all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis\
         \ is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\\
         n\\nFull episode part 2 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep7-part2.mp4',\
-        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 63581652, 'sha256':\
+        \ 'source_start': 50, 'source_end': 100, 'privacy': 'private', 'approval_required': True, 'bytes': 63581652, 'sha256':\
         \ '700de946ba776b60405f07b4e097b480ab6f402a83157e94f77ef2339d99fc90'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
         key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=19046546)\n\
         source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep7.mp4')['Body'].read()\n\
@@ -292,7 +292,7 @@ jobs:
         \ the girl. He uncovers his real self to save her. Having sacrificed all to defeat the foe, can this stolen-body family\
         \ truly start anew?\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
         \ https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part 2 of 3.\\nAffiliate links: I may earn a commission if you\
-        \ use them.\", 'file': '/downloads/netshort-suprememage-screen/ep7-part2.mp4', 'source_start': 0, 'source_end': 50, 'privacy': 'private',\
+        \ use them.\", 'file': '/downloads/netshort-suprememage-screen/ep7-part2.mp4', 'source_start': 50, 'source_end': 100, 'privacy': 'private',\
         \ 'approval_required': True, 'bytes': 63581652, 'sha256': '700de946ba776b60405f07b4e097b480ab6f402a83157e94f77ef2339d99fc90'}\n\
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\nstage='initial'\ncontrols=None\ntry:\n\
         \    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
@@ -338,8 +338,8 @@ jobs:
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
         \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
         \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
-        \ 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep7-part2.mp4',\
-        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 63581652, 'sha256':\
+        \ 2 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep7-part2.mp4',\
+        \ 'source_start': 50, 'source_end': 100, 'privacy': 'private', 'approval_required': True, 'bytes': 63581652, 'sha256':\
         \ '700de946ba776b60405f07b4e097b480ab6f402a83157e94f77ef2339d99fc90'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
         item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
         \ import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
