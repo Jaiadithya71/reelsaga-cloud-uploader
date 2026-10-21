@@ -1,0 +1,46 @@
+name: YT upload quota probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        sparse-checkout-cone-mode: false
+        sparse-checkout: '/*.py'
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5
+    - name: Upload quota probe (no video created)
+      env:
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+      run: |
+        cat > quota_probe.py <<'QUOTA'
+        import os,re
+        from actions_canary import Store
+        from desktop_setup import CHANNEL,SCOPES
+        from provision_actions import validated_record
+        from credentials import GoogleCredentials
+        from transport import Transport,GoogleTokenForms
+        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))
+        credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)
+        token=credential.access_token()
+        api=Transport(lambda:token,{'www.googleapis.com'})
+        identity=api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})
+        if identity.status!=200 or {x.get('id') for x in identity.data.get('items',[])}!={CHANNEL}:
+            print('QUOTA_PROBE identity failure',identity.status);raise SystemExit(1)
+        md={'snippet':{'title':'upload quota probe','description':'quota probe','categoryId':'24'},'status':{'privacyStatus':'private','selfDeclaredMadeForKids':False}}
+        r=api('POST','https://www.googleapis.com/upload/youtube/v3/videos',params={'uploadType':'resumable','part':'snippet,status'},json=md,headers={'X-Upload-Content-Type':'video/mp4','X-Upload-Content-Length':'1'})
+        body=re.sub(r'https?://\S+','<url>',str(r.data)[:300])
+        print('QUOTA_PROBE status',r.status,body)
+        print('QUOTA_OPEN' if r.status==200 else 'QUOTA_CLOSED')
+        QUOTA
+        python quota_probe.py
