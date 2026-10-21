@@ -241,9 +241,9 @@ jobs:
         n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep10-part1.mp4',\
         \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 59184508, 'sha256':\
         \ 'd047438c2c5ce2ac1d565eede13658fc2485405ef3c962178dea28c8facfdabc'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=21361576)\n\
-        source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep9.mp4')['Body'].read()\n\
-        if len(source)!=21361576 or hashlib.sha256(source).hexdigest()!='0c663bf8c33a5833ce5b7afcbef2356f903549fae6c27f99cee9c2835f90519c':raise\
+        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=13376181)\n\
+        source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep10.mp4')['Body'].read()\n\
+        if len(source)!=13376181 or hashlib.sha256(source).hexdigest()!='cdd936e542b780030716b2a78482ac9bdade0a630b97cae79b3202828513e1ee':raise\
         \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
         apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss\
         \ 0 -i source.mp4 -t 50 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=49.5:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=49.5:d=0.5'\
