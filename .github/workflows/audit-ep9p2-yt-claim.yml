@@ -1,0 +1,40 @@
+name: ReelSaga audit EP9P2 youtube claim (read-only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        sparse-checkout-cone-mode: false
+        sparse-checkout: '/*.py'
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5
+    - name: Read ledger claim record
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+      run: |
+        python - <<'PY'
+        import os,json
+        from github_state import GitHubState
+        from durable_state import DurableLedger
+        from transport import Transport
+        gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')
+        backend=GitHubState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()
+        ledger=DurableLedger(backend)
+        k=ledger.key('netshort-suprememage-ep9-part2-v1','youtube')
+        rec,_=backend.get(k)
+        print('CLAIM',json.dumps(rec),flush=True)
+        print('RESUME',ledger.resume('netshort-suprememage-ep9-part2-v1','youtube'),flush=True)
+        PY
