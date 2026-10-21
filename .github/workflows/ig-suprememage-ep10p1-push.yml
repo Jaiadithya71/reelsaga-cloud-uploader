@@ -233,20 +233,20 @@ jobs:
         cat > host_prep.py <<'PREPARE'\nimport os,json,hashlib,subprocess,urllib.request\nfrom pathlib import Path\nfrom transport\
         \ import Transport\nfrom quarantine_state import QuarantineState\nfrom tigris_durable import DurableStaging\nfrom\
         \ tigris_staging import GuardStop\nITEM={'id': 'netshort-suprememage-ep10-part1-v1', 'episode': 10, 'part': 1, 'title':\
-        \ 'The Supreme Mage: This Time, I Choose My Family - Episode 10 Part 1/2 | NetShort', 'description': \"The strongest\
+        \ 'The Supreme Mage: This Time, I Choose My Family - Episode 10 Part 1/3 | NetShort', 'description': \"The strongest\
         \ mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he\
         \ fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real\
         \ self to save her. Having sacrificed all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis\
         \ is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\\
-        n\\nFull episode part 1 of 2.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep10-part1.mp4',\
-        \ 'source_start': 0.0, 'source_end': 53.255, 'privacy': 'private', 'approval_required': True, 'bytes': 63412205, 'sha256':\
-        \ '82c38478f4d1a8c9b59952840a186545a61166b3748794e675aafdc56ae142bc'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
-        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=13376181)\n\
-        source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep10.mp4')['Body'].read()\n\
-        if len(source)!=13376181 or hashlib.sha256(source).hexdigest()!='cdd936e542b780030716b2a78482ac9bdade0a630b97cae79b3202828513e1ee':raise\
+        n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep10-part1.mp4',\
+        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 59184508, 'sha256':\
+        \ 'd047438c2c5ce2ac1d565eede13658fc2485405ef3c962178dea28c8facfdabc'}\nb=QuarantineState(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ['REELSAGA_LEDGER_KEY']);b.initialize();s=DurableStaging(b)\n\
+        key='tigris-host-'+ITEM['id'];r,v=b.get(key)\nif r:raise GuardStop('Host record exists; reconcile only')\ns.reserve(b=1,bytes_out=21361576)\n\
+        source=s.s3.get_object(Bucket=os.environ['TIGRIS_BUCKET'],Key='production/suprememage-sources/ep9.mp4')['Body'].read()\n\
+        if len(source)!=21361576 or hashlib.sha256(source).hexdigest()!='0c663bf8c33a5833ce5b7afcbef2356f903549fae6c27f99cee9c2835f90519c':raise\
         \ RuntimeError('Source mismatch')\nPath('source.mp4').write_bytes(source)\nsubprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',\"\
         apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss\
-        \ 0 -i source.mp4 -t 53.255 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=52.755:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=52.755:d=0.5'\
+        \ 0 -i source.mp4 -t 50 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=49.5:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=49.5:d=0.5'\
         \ -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags\
         \ +faststart -y empire.mp4 && ffmpeg -v error -i empire.mp4 -f null -\"],check=True)\n\n\n\np=Path('empire.mp4')\n\
         if p.stat().st_size!=ITEM['bytes'] or hashlib.sha256(p.read_bytes()).hexdigest()!=ITEM['sha256']:raise GuardStop('Render\
@@ -286,14 +286,14 @@ jobs:
         from pathlib import Path\nfrom reader import read_token\nfrom instagram_record import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\n\
         from transport import Transport\nfrom adapters import checked\nfrom quarantine_state import QuarantineState\nfrom\
         \ durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\nitem={'id': 'netshort-suprememage-ep10-part1-v1',\
-        \ 'episode': 10, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 10 Part 1/2 | NetShort',\
+        \ 'episode': 10, 'part': 1, 'title': 'The Supreme Mage: This Time, I Choose My Family - Episode 10 Part 1/3 | NetShort',\
         \ 'description': \"The strongest mage is ambushed, reborn in a dead gambler's body with his debts, abused wife and\
         \ daughter. Hiding his power, he fixes clocks to pay thugs. His mage-killer crosses worlds to hunt him and curses\
         \ the girl. He uncovers his real self to save her. Having sacrificed all to defeat the foe, can this stolen-body family\
         \ truly start anew?\\n\\nThis is only one piece of the story. The rest is waiting on the channel.\\n\\nWatch on NetShort:\
-        \ https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part 1 of 2.\\nAffiliate links: I may earn a commission if you\
-        \ use them.\", 'file': '/downloads/suprememage/ep10-part1.mp4', 'source_start': 0.0, 'source_end': 53.255, 'privacy':\
-        \ 'private', 'approval_required': True, 'bytes': 63412205, 'sha256': '82c38478f4d1a8c9b59952840a186545a61166b3748794e675aafdc56ae142bc'}\n\
+        \ https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part 1 of 3.\\nAffiliate links: I may earn a commission if you\
+        \ use them.\", 'file': '/downloads/netshort-suprememage-screen/ep10-part1.mp4', 'source_start': 0, 'source_end': 50, 'privacy': 'private',\
+        \ 'approval_required': True, 'bytes': 59184508, 'sha256': 'd047438c2c5ce2ac1d565eede13658fc2485405ef3c962178dea28c8facfdabc'}\n\
         caption=item['title']+'\\n\\n'+item['description']\nitem['caption']=caption\nstage='initial'\ncontrols=None\ntry:\n\
         \    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
         \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    if ledger.resume(item['id'],'instagram')!='unclaimed':raise\
@@ -333,25 +333,20 @@ jobs:
         \ import EXPECTED_USER,EXPECTED_NAME,verify_live_identity\nfrom transport import Transport\nfrom adapters import checked\n\
         from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\nfrom controls import Controls,ControlError\n\
         \nitem={'id': 'netshort-suprememage-ep10-part1-v1', 'episode': 10, 'part': 1, 'title': 'The Supreme Mage: This Time,\
-        \ I Choose My Family - Episode 10 Part 1/2 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
+        \ I Choose My Family - Episode 10 Part 1/3 | NetShort', 'description': \"The strongest mage is ambushed, reborn in\
         \ a dead gambler's body with his debts, abused wife and daughter. Hiding his power, he fixes clocks to pay thugs.\
         \ His mage-killer crosses worlds to hunt him and curses the girl. He uncovers his real self to save her. Having sacrificed\
         \ all to defeat the foe, can this stolen-body family truly start anew?\\n\\nThis is only one piece of the story. The\
         \ rest is waiting on the channel.\\n\\nWatch on NetShort: https://r.reelsgo.tv/bJwAn5BG3xVp\\n\\nFull episode part\
-        \ 1 of 2.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/suprememage/ep10-part1.mp4',\
-        \ 'source_start': 0.0, 'source_end': 53.255, 'privacy': 'private', 'approval_required': True, 'bytes': 63412205, 'sha256':\
-        \ '82c38478f4d1a8c9b59952840a186545a61166b3748794e675aafdc56ae142bc'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
+        \ 1 of 3.\\nAffiliate links: I may earn a commission if you use them.\", 'file': '/downloads/netshort-suprememage-screen/ep10-part1.mp4',\
+        \ 'source_start': 0, 'source_end': 50, 'privacy': 'private', 'approval_required': True, 'bytes': 59184508, 'sha256':\
+        \ 'd047438c2c5ce2ac1d565eede13658fc2485405ef3c962178dea28c8facfdabc'}\ncaption=item['title']+'\\n\\n'+item['description']\n\
         item['caption']=caption\nfrom credentials import GoogleCredentials\nfrom actions_canary import Store\nfrom provision_actions\
         \ import validated_record\nfrom desktop_setup import SCOPES,CHANNEL\nfrom transport import GoogleTokenForms\nstage='init';controls=None\n\
         try:\n    gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')\n    backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()\n\
         \    ledger=DurableLedger(backend);controls=Controls(backend,lambda:None)\n    saved,_=backend.get(ledger.key(item['id'],'instagram'));ledger.verify_item(item,'instagram')\n\
         \    if saved['state']!='processing' or not saved.get('external_id'):raise ValueError('No staged container')\n   \
-        \ stage='youtube_probe_read'\n    record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))\n    credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)\n\
-        \    yt=Transport(credential.access_token,{'www.googleapis.com'})\n    ledger.verify_item({k:v for k,v in item.items()\
-        \ if k!='caption'},'youtube')\n    v=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails','id':'0iwPD0IXvyw'})).data['items'][0]\n\
-        \    if v['snippet']['channelId']!=CHANNEL or v['snippet']['title']!=item['title'] or v['snippet']['description']!=item['description']\
-        \ or v['status']['privacyStatus']!='private' or v['processingDetails']['processingStatus']!='succeeded':raise ValueError('Verified\
-        \ private probe mismatch')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
+        \ stage='youtube_probe_read'\n    print('YT twin gate removed: IG-only publish per standing rule 2026-10-16')\n    stage='reader'\n    token=read_token('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',os.environ.pop('REELSAGA_IG_READ_KEY',''))\n\
         \    api=Transport(lambda:token,{'graph.instagram.com'});base='https://graph.instagram.com/v26.0/'\n    ident=checked(api('GET',base+'me',params={'fields':'user_id,username'})).data\n\
         \    if ident.get('username')!=EXPECTED_NAME or str(ident.get('user_id'))!=EXPECTED_USER:raise ValueError('Identity')\n\
         \    url=base+EXPECTED_USER+'/media';params={'fields':'id,caption,timestamp','limit':100};rows=[];seen=set()\n   \
