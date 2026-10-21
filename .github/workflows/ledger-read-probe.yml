@@ -158,7 +158,7 @@ jobs:
         gh=os.environ.pop('GH_TOKEN','');key=os.environ.pop('REELSAGA_LEDGER_KEY','')
         backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),key);backend.initialize()
         ledger=DurableLedger(backend)
-        for pid in ['netshort-suprememage-ep6-part2-v1']:
+        for pid in ['netshort-suprememage-ep7-part1-v1']:
             for plat in ['instagram','youtube']:
                 rec,_=backend.get(ledger.key(pid,plat))
                 if rec:
