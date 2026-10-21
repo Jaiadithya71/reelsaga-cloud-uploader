@@ -382,7 +382,10 @@ jobs:
         try:
             newsn={f:sn[f] for f in ('title','description','tags','categoryId','defaultLanguage','defaultAudioLanguage') if f in sn}
             newsn['title']=NEW['title'];newsn['description']=NEW['description']
-            checked(yt('PUT','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet'},json={'id':VID,'snippet':newsn}))
+            resp=yt('PUT','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet'},json={'id':VID,'snippet':newsn})
+            print('PUT_STATUS',resp.status,flush=True)
+            print('PUT_BODY',json.dumps(resp.data)[:600],flush=True)
+            if resp.status not in (200,201):raise RuntimeError('Twin update rejected; see PUT_BODY')
             rb=checked(yt('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':VID})).data['items'][0]
             assert rb['snippet']['title']==NEW['title'] and rb['snippet']['description']==NEW['description'] and rb['status']['privacyStatus']=='private','Twin update readback failed'
             newrec=dict(rec,metadata_hash=ledger.metadata_hash(NEW))
