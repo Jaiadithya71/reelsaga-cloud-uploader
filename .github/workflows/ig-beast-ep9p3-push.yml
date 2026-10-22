@@ -368,6 +368,35 @@ jobs:
         n\\n```json\\n'+json.dumps(out,indent=2)+'\\n```\\n')\nexcept Exception:\n    print('IG publish stopped at '+stage+'.\
         \ Reconcile saved ledger before retry.');raise SystemExit(1) from None\nfinally:\n    if controls:\n        try:controls.set_access(False)\n\
         \        except Exception:pass\n\nPUBLISH\npython ig_publish.py\n"
+    - name: maintenance purge of own staged object after publish
+      if: success()
+      continue-on-error: true
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+      run: |
+        pip install boto3
+        python - <<'PYEOF'
+        import boto3, os
+        from botocore.config import Config
+        B='reelsaga-private-staging-71'; KEY='production/rsboost-beast-ep9-part3-v1/video.mp4'
+        s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+            config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+        try:
+            h=s3.head_object(Bucket=B, Key=KEY)
+        except s3.exceptions.ClientError as e:
+            if e.response['Error']['Code'] in ('404','NoSuchKey','NotFound'):
+                print('PURGE skip: object absent'); raise SystemExit(0)
+            raise
+        s3.delete_object(Bucket=B, Key=KEY)
+        try:
+            s3.head_object(Bucket=B, Key=KEY); print('PURGE_FAIL still present'); raise SystemExit(1)
+        except s3.exceptions.ClientError as e:
+            if e.response['Error']['Code'] in ('404','NoSuchKey','NotFound'): print('PURGE_OK', KEY)
+            else: raise
+        PYEOF
     timeout-minutes: 20
 name: Beast IG EP9P3 guarded publish
 'on':

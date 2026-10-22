@@ -1,0 +1,64 @@
+name: maintenance-tigris-purge-published-20261022
+on:
+  workflow_dispatch: {}
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install boto3
+      - name: Purge 81 staged objects for parts verified fully published on both lanes (owner directive 2026-10-22)
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        run: |
+          cat > purge.py <<'PYEOF'
+          import boto3, os, json
+          from botocore.config import Config
+          B='reelsaga-private-staging-71'
+          PURGE=json.loads('["production/suprememage-sources/ep1.mp4", "production/suprememage-sources/ep2.mp4", "production/suprememage-sources/ep3.mp4", "production/suprememage-sources/ep4.mp4", "production/suprememage-sources/ep5.mp4", "production/suprememage-sources/ep6.mp4", "production/suprememage-sources/ep7.mp4", "production/suprememage-sources/ep8.mp4", "production/suprememage-sources/ep9.mp4", "production/suprememage-sources/ep10.mp4", "production/suprememage-sources/ep11.mp4", "production/netshort-suprememage-ep1-part1-v2/video.mp4", "production/netshort-suprememage-ep1-part1-v3/video.mp4", "production/netshort-suprememage-ep1-part1-v4/video.mp4", "production/netshort-suprememage-ep1-part2-v1/video.mp4", "production/netshort-suprememage-ep1-part3-v1/video.mp4", "production/netshort-suprememage-ep1-part4-v1/video.mp4", "production/netshort-suprememage-ep1-part5-v1/video.mp4", "production/netshort-suprememage-ep2-part1-v2/video.mp4", "production/netshort-suprememage-ep2-part2-v1/video.mp4", "production/netshort-suprememage-ep2-part3-v1/video.mp4", "production/netshort-suprememage-ep3-part1-v1/video.mp4", "production/netshort-suprememage-ep3-part1-v2/video.mp4", "production/netshort-suprememage-ep3-part2-v1/video.mp4", "production/netshort-suprememage-ep3-part3-v1/video.mp4", "production/netshort-suprememage-ep4-part1-v1/video.mp4", "production/netshort-suprememage-ep4-part1-v2/video.mp4", "production/netshort-suprememage-ep4-part2-v1/video.mp4", "production/netshort-suprememage-ep4-part3-v1/video.mp4", "production/netshort-suprememage-ep5-part1-v1/video.mp4", "production/netshort-suprememage-ep5-part1-v2/video.mp4", "production/beast-sources/ep1.mp4", "production/beast-sources/ep2.mp4", "production/beast-sources/ep3.mp4", "production/beast-sources/ep4.mp4", "production/beast-sources/ep5.mp4", "production/beast-sources/ep6.mp4", "production/beast-sources/ep7.mp4", "production/rsboost-beast-ep1-part1-v1/video.mp4", "production/rsboost-beast-ep1-part2-v1/video.mp4", "production/netshort-suprememage-ep5-part2-v2/video.mp4", "production/rsboost-beast-ep1-part3-v1/video.mp4", "production/rsboost-beast-ep2-part1-v1/video.mp4", "production/netshort-suprememage-ep5-part2-v3/video.mp4", "production/netshort-suprememage-ep5-part3-v1/video.mp4", "production/rsboost-beast-ep2-part2-v1/video.mp4", "production/netshort-suprememage-ep6-part1-v1/video.mp4", "production/rsboost-beast-ep3-part1-v1/video.mp4", "production/netshort-suprememage-ep6-part2-v1/video.mp4", "production/rsboost-beast-ep3-part2-v1/video.mp4", "production/rsboost-beast-ep3-part3-v1/video.mp4", "production/netshort-suprememage-ep6-part3-v1/video.mp4", "production/rsboost-beast-ep4-part1-v1/video.mp4", "production/netshort-suprememage-ep6-part4-v1/video.mp4", "production/rsboost-beast-ep4-part2-v1/video.mp4", "production/netshort-suprememage-ep7-part1-v1/video.mp4", "production/rsboost-beast-ep4-part3-v1/video.mp4", "production/netshort-suprememage-ep7-part2-v1/video.mp4", "production/netshort-suprememage-ep7-part3-v1/video.mp4", "production/netshort-suprememage-ep8-part1-v1/video.mp4", "production/netshort-suprememage-ep8-part2-v1/video.mp4", "production/netshort-suprememage-ep8-part3-v1/video.mp4", "production/netshort-suprememage-ep8-part4-v1/video.mp4", "production/netshort-suprememage-ep9-part1-v1/video.mp4", "production/netshort-suprememage-ep9-part2-v1/video.mp4", "production/netshort-suprememage-ep9-part3-v1/video.mp4", "production/netshort-suprememage-ep9-part4-v1/video.mp4", "production/netshort-suprememage-ep10-part1-v1/video.mp4", "production/netshort-suprememage-ep10-part2-v1/video.mp4", "production/netshort-suprememage-ep10-part3-v1/video.mp4", "production/netshort-suprememage-ep11-part1-v1/video.mp4", "production/netshort-suprememage-ep11-part2-v1/video.mp4", "production/netshort-suprememage-ep11-part3-v1/video.mp4", "production/rsboost-beast-ep5-part1-v1/video.mp4", "production/rsboost-beast-ep5-part2-v1/video.mp4", "production/rsboost-beast-ep5-part3-v1/video.mp4", "production/rsboost-beast-ep6-part1-v1/video.mp4", "production/rsboost-beast-ep7-part1-v1/video.mp4", "production/rsboost-beast-ep7-part2-v1/video.mp4", "production/rsboost-beast-ep7-part3-v1/video.mp4", "production/rsboost-beast-ep8-part1-v1/video.mp4"]')
+          SIZES=json.loads('{"production/suprememage-sources/ep1.mp4": 40877625, "production/suprememage-sources/ep2.mp4": 21317422, "production/suprememage-sources/ep3.mp4": 9440974, "production/suprememage-sources/ep4.mp4": 17281764, "production/suprememage-sources/ep5.mp4": 13865547, "production/suprememage-sources/ep6.mp4": 12053213, "production/suprememage-sources/ep7.mp4": 19046546, "production/suprememage-sources/ep8.mp4": 23140678, "production/suprememage-sources/ep9.mp4": 21361576, "production/suprememage-sources/ep10.mp4": 13376181, "production/suprememage-sources/ep11.mp4": 14171602, "production/netshort-suprememage-ep1-part1-v2/video.mp4": 76415832, "production/netshort-suprememage-ep1-part1-v3/video.mp4": 76415832, "production/netshort-suprememage-ep1-part1-v4/video.mp4": 76415832, "production/netshort-suprememage-ep1-part2-v1/video.mp4": 62909386, "production/netshort-suprememage-ep1-part3-v1/video.mp4": 65625231, "production/netshort-suprememage-ep1-part4-v1/video.mp4": 62437737, "production/netshort-suprememage-ep1-part5-v1/video.mp4": 65521130, "production/netshort-suprememage-ep2-part1-v2/video.mp4": 61674935, "production/netshort-suprememage-ep2-part2-v1/video.mp4": 58702180, "production/netshort-suprememage-ep2-part3-v1/video.mp4": 65297020, "production/netshort-suprememage-ep3-part1-v1/video.mp4": 31825567, "production/netshort-suprememage-ep3-part1-v2/video.mp4": 31825567, "production/netshort-suprememage-ep3-part2-v1/video.mp4": 26109737, "production/netshort-suprememage-ep3-part3-v1/video.mp4": 22587232, "production/netshort-suprememage-ep4-part1-v1/video.mp4": 59836771, "production/netshort-suprememage-ep4-part1-v2/video.mp4": 59836771, "production/netshort-suprememage-ep4-part2-v1/video.mp4": 54006293, "production/netshort-suprememage-ep4-part3-v1/video.mp4": 48127936, "production/netshort-suprememage-ep5-part1-v1/video.mp4": 52568148, "production/netshort-suprememage-ep5-part1-v2/video.mp4": 52568148, "production/beast-sources/ep1.mp4": 52297560, "production/beast-sources/ep2.mp4": 41932825, "production/beast-sources/ep3.mp4": 44077495, "production/beast-sources/ep4.mp4": 43932718, "production/beast-sources/ep5.mp4": 50220593, "production/beast-sources/ep6.mp4": 17746013, "production/beast-sources/ep7.mp4": 47451377, "production/rsboost-beast-ep1-part1-v1/video.mp4": 67341091, "production/rsboost-beast-ep1-part2-v1/video.mp4": 73656414, "production/netshort-suprememage-ep5-part2-v2/video.mp4": 52568148, "production/rsboost-beast-ep1-part3-v1/video.mp4": 65563365, "production/rsboost-beast-ep2-part1-v1/video.mp4": 89281739, "production/netshort-suprememage-ep5-part2-v3/video.mp4": 39335842, "production/netshort-suprememage-ep5-part3-v1/video.mp4": 40689177, "production/rsboost-beast-ep2-part2-v1/video.mp4": 95245769, "production/netshort-suprememage-ep6-part1-v1/video.mp4": 31791361, "production/rsboost-beast-ep3-part1-v1/video.mp4": 66198255, "production/netshort-suprememage-ep6-part2-v1/video.mp4": 22628718, "production/rsboost-beast-ep3-part2-v1/video.mp4": 62765498, "production/rsboost-beast-ep3-part3-v1/video.mp4": 58451379, "production/netshort-suprememage-ep6-part3-v1/video.mp4": 25673262, "production/rsboost-beast-ep4-part1-v1/video.mp4": 54336793, "production/netshort-suprememage-ep6-part4-v1/video.mp4": 24119489, "production/rsboost-beast-ep4-part2-v1/video.mp4": 56820522, "production/netshort-suprememage-ep7-part1-v1/video.mp4": 56037048, "production/rsboost-beast-ep4-part3-v1/video.mp4": 51776355, "production/netshort-suprememage-ep7-part2-v1/video.mp4": 63581652, "production/netshort-suprememage-ep7-part3-v1/video.mp4": 62859356, "production/netshort-suprememage-ep8-part1-v1/video.mp4": 56593460, "production/netshort-suprememage-ep8-part2-v1/video.mp4": 52554408, "production/netshort-suprememage-ep8-part3-v1/video.mp4": 65484011, "production/netshort-suprememage-ep8-part4-v1/video.mp4": 49407108, "production/netshort-suprememage-ep9-part1-v1/video.mp4": 52708472, "production/netshort-suprememage-ep9-part2-v1/video.mp4": 50983702, "production/netshort-suprememage-ep9-part3-v1/video.mp4": 58530542, "production/netshort-suprememage-ep9-part4-v1/video.mp4": 44163814, "production/netshort-suprememage-ep10-part1-v1/video.mp4": 59184508, "production/netshort-suprememage-ep10-part2-v1/video.mp4": 60629128, "production/netshort-suprememage-ep10-part3-v1/video.mp4": 8864504, "production/netshort-suprememage-ep11-part1-v1/video.mp4": 67427053, "production/netshort-suprememage-ep11-part2-v1/video.mp4": 56248840, "production/netshort-suprememage-ep11-part3-v1/video.mp4": 2376172, "production/rsboost-beast-ep5-part1-v1/video.mp4": 61874327, "production/rsboost-beast-ep5-part2-v1/video.mp4": 63391270, "production/rsboost-beast-ep5-part3-v1/video.mp4": 65098419, "production/rsboost-beast-ep6-part1-v1/video.mp4": 64712629, "production/rsboost-beast-ep7-part1-v1/video.mp4": 60123261, "production/rsboost-beast-ep7-part2-v1/video.mp4": 60947513, "production/rsboost-beast-ep7-part3-v1/video.mp4": 59135502, "production/rsboost-beast-ep8-part1-v1/video.mp4": 65555938}')
+          KEEP=set(json.loads('["production/beast-sources/ep8.mp4", "production/beast-sources/ep9.mp4", "production/playlet-unspoken-ep5-part1-v1/video.mp4", "production/playlet-unspoken-ep5-part2-v1/video.mp4", "production/playlet-unspoken-ep5-part3-v1/video.mp4", "production/playlet-unspoken-ep6-part1-v1/video.mp4", "production/playlet-unspoken-ep6-part2-v1/video.mp4", "production/playlet-unspoken-ep6-part3-v1/video.mp4", "production/playlet-unspoken-ep6-part4-v1/video.mp4"]'))
+          s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+              aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+              aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+              config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+          def inv():
+              objs={}; token=None
+              while True:
+                  kw={'Bucket':B}
+                  if token: kw['ContinuationToken']=token
+                  r=s3.list_objects_v2(**kw)
+                  for o in r.get('Contents',[]): objs[o['Key']]=o['Size']
+                  if not r.get('IsTruncated'): break
+                  token=r['NextContinuationToken']
+              return objs
+          live=inv()
+          expected=set(PURGE)|KEEP
+          extra=[k for k in live if k not in expected]
+          missing=[k for k in PURGE if k not in live]
+          if extra:
+              print('REFUSING: unexpected keys present:', extra, flush=True); raise SystemExit(1)
+          if missing:
+              print('NOTE absent already:', missing, flush=True)
+          bad=[k for k in PURGE if k in live and live[k]!=SIZES[k]]
+          if bad:
+              print('REFUSING: size mismatch on', bad, flush=True); raise SystemExit(1)
+          todo=[k for k in PURGE if k in live]
+          print('VERIFIED purge set: %d objects, %d bytes' % (len(todo), sum(SIZES[k] for k in todo)), flush=True)
+          for i in range(0,len(todo),1000):
+              r=s3.delete_objects(Bucket=B, Delete={'Objects':[{'Key':k} for k in todo[i:i+1000]],'Quiet':True})
+              if r.get('Errors'):
+                  print('DELETE ERRORS:', r['Errors'], flush=True); raise SystemExit(1)
+          left=inv()
+          if set(left.keys())!=KEEP:
+              print('POST CHECK FAIL remaining:', sorted(left.keys()), flush=True); raise SystemExit(1)
+          print('PURGED %d objects; remaining %d keepers, %d bytes' % (len(todo), len(left), sum(left.values())), flush=True)
+          open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Tigris purge 2026-10-22\n\npurged %d objects; remaining %d (%.1f MB)\n' % (len(todo), len(left), sum(left.values())/1e6))
+          PYEOF
+          python purge.py
