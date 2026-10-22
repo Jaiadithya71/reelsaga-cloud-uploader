@@ -1,0 +1,34 @@
+name: ReelSaga Ambassador EP1 render probes
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - name: Probe ep1 renders
+      run: |
+        python - <<'PY'
+        import hashlib,urllib.request,subprocess,os
+        from pathlib import Path
+        SOURCE_URL='https://cdn-aws2.playlet.com/mp4/v2/10692/1/1_08f35e44e156bd599c697be7e2d166cd.mp4'
+        data=urllib.request.urlopen(SOURCE_URL,timeout=120).read()
+        if len(data)!=201600243 or hashlib.sha256(data).hexdigest()!='3b1b5e3b31fdc7ca8c5b0321d31edb954338a1f460cbadd6727918eb5008332f':raise SystemExit('Source mismatch')
+        Path('source.mp4').write_bytes(data)
+        PARTS=[(1,'0','50'),(2,'50','50'),(3,'100','20.341')]
+        renders=[]
+        for part,ss,t in PARTS:
+            fd=str(round(float(t)-0.5,3))
+            renders.append((part,'ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss '+ss+' -i source.mp4 -t '+t+' -vf \'fade=t=in:st=0:d=0.5,fade=t=out:st='+fd+':d=0.5\' -af \'afade=t=in:st=0:d=0.5,afade=t=out:st='+fd+':d=0.5\' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p'+str(part)+'.mp4 && ffmpeg -v error -i p'+str(part)+'.mp4 -f null -'))
+        cmd='apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && '+' && '.join(r[1] for r in renders)
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
+        for part,ss,t in PARTS:
+            rb=Path('p'+str(part)+'.mp4').read_bytes()
+            print('EP1P'+str(part)+'_RENDER_BYTES '+str(len(rb)),flush=True)
+            print('EP1P'+str(part)+'_RENDER_SHA256 '+hashlib.sha256(rb).hexdigest(),flush=True)
+        PY
