@@ -187,8 +187,7 @@ jobs:
         \ within all users of the same local DB.\n        # Separate machines require a shared distributed lock at the pipeline\
         \ layer.\n        with open(self.db+'.upload-lock','a') as lock:\n            import fcntl\n            fcntl.flock(lock,fcntl.LOCK_EX)\n\
         \            stored,_=self.enumerate_bytes()\n            if stored+len(data)>=STORAGE_STOP: raise GuardStop('4 GiB\
-        \ stop-before-upload')\n            self.reserve(a=1)\n            self.s3.put_object(Bucket=self.bucket,Key=key,Body=data,ContentType=content_type,\n\
-        \                StorageClass='STANDARD',Metadata={'sha256':digest},IfNoneMatch='*')\n            self.reserve(b=1)\n\
+        \ stop-before-upload')\n            self.reserve(a=1)\n            try:\n                self.s3.put_object(Bucket=self.bucket,Key=key,Body=data,ContentType=content_type,StorageClass='STANDARD',Metadata={'sha256':digest},IfNoneMatch='*')\n            except Exception as e:\n                if 'PreconditionFailed' not in str(e):raise\n                hh=self.s3.head_object(Bucket=self.bucket,Key=key)\n                if hh['ContentLength']!=len(data) or hh.get('Metadata',{}).get('sha256')!=digest:raise GuardStop('412 with mismatched existing object; retain and reconcile only')\n                if hashlib.sha256(self.s3.get_object(Bucket=self.bucket,Key=key)['Body'].read()).hexdigest()!=digest:raise GuardStop('412 with mismatched existing content; retain and reconcile only')\n            self.reserve(b=1)\n\
         \            head=self.s3.head_object(Bucket=self.bucket,Key=key)\n            if head['ContentLength']!=len(data)\
         \ or head['ContentType']!=content_type or head.get('Metadata',{}).get('sha256')!=digest:\n                raise GuardStop('HEAD\
         \ verification failed; retain object, do not delete/retry')\n        return {'bucket':self.bucket,'key':key,'bytes':len(data),'sha256':digest,'content_type':content_type}\n\
