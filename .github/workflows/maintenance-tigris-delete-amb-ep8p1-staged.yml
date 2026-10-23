@@ -1,0 +1,57 @@
+name: maintenance-tigris-delete-amb-ep8p1-staged
+on:
+  workflow_dispatch: {}
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install boto3
+      - name: Delete the orphaned Ambassador EP8P1 staged object after audited reconcile
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        run: |
+          cat > del.py <<'PYEOF'
+          import boto3, os, hashlib
+          from botocore.config import Config
+          B='reelsaga-private-staging-71'
+          KEY='production/playlet-ambassador-ep8-part1-v1/video.mp4'
+          EXPECT_BYTES=110576896
+          EXPECT_SHA='f6227f4d585ec4ad9f6caaa62c6407b06571fb4b4a8371a90c4c6735fa63802f'
+          s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+              aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+              aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+              config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+          try:
+              head=s3.head_object(Bucket=B, Key=KEY)
+          except s3.exceptions.ClientError as e:
+              if e.response['Error']['Code'] in ('404','NoSuchKey','NotFound'):
+                  print('AUDIT absent already; nothing to delete', flush=True)
+                  raise SystemExit(0)
+              raise
+          print('AUDIT head', KEY, 'bytes', head['ContentLength'], 'sha', head.get('Metadata',{}).get('sha256'), flush=True)
+          if head['ContentLength']!=EXPECT_BYTES or head.get('Metadata',{}).get('sha256')!=EXPECT_SHA:
+              raise SystemExit('REFUSE: staged object HEAD does not match the audited EP8P1 values')
+          data=s3.get_object(Bucket=B, Key=KEY)['Body'].read()
+          digest=hashlib.sha256(data).hexdigest()
+          print('AUDIT content sha256', digest, flush=True)
+          if digest!=EXPECT_SHA:
+              raise SystemExit('REFUSE: staged object content hash does not match the audited EP8P1 render')
+          s3.delete_object(Bucket=B, Key=KEY)
+          try:
+              s3.head_object(Bucket=B, Key=KEY)
+              print('DELETE_FAIL still present', flush=True)
+              raise SystemExit(1)
+          except s3.exceptions.ClientError as e:
+              if e.response['Error']['Code'] in ('404','NoSuchKey','NotFound'):
+                  print('DELETE_OK', KEY, flush=True)
+              else:
+                  raise
+          PYEOF
+          python del.py
