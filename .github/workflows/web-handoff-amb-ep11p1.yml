@@ -1,0 +1,182 @@
+name: Ambassador EP11P1 web handoff ledger gate
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: claim before any web publish; finalize only after verified public permalink
+        required: true
+        type: choice
+        options:
+        - claim
+        - finalize
+      permalink:
+        description: Public reel permalink (required for finalize)
+        required: false
+        type: string
+concurrency:
+  cancel-in-progress: false
+  group: reelsaga-canary
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        sparse-checkout: '/*.py
+
+          /tests/
+
+          /**/*.json
+
+          '
+        sparse-checkout-cone-mode: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5
+    - env:
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+        PHASE: ${{ inputs.phase }}
+        PERMALINK: ${{ inputs.permalink }}
+      name: Web handoff ledger gate
+      run: |
+        cat > quarantine_state.py <<'QUARANTINE_FILE'
+        """Fail-closed new namespace. Original legacy records are never mutated."""
+        import hashlib,json,re
+        from github_state import GitHubState,StateError
+        from adapters import checked
+        FROZEN='7cf655bd667d748e2e4030da1b6b78c7aa0c236e'
+        class QuarantineState(GitHubState):
+            def __init__(self,request,key_material):
+                super().__init__(request,key_material)
+                with open('legacy_quarantine.json') as f:self.inventory=json.load(f)
+                if self.inventory['frozen_commit']!=FROZEN or len(self.inventory['legacy_keys'])!=279:
+                    raise StateError('Legacy inventory mismatch')
+                self.legacy=set(self.inventory['legacy_keys'])
+            def initialize(self):
+                r=checked(self.request('GET',self.base+'/git/trees/'+FROZEN,params={'recursive':'1'})).data
+                if r.get('truncated') is not False:raise StateError('Incomplete legacy tree')
+                keys={v['path'][6:-4] for v in r['tree'] if v['path'].startswith('state/') and v['path'].endswith('.enc')}
+                if keys!=self.legacy:raise StateError('Legacy inventory integrity mismatch')
+                r=self.request('GET',self.base+'/git/ref/heads/'+self.branch)
+                if r.status!=200:raise StateError('Original state branch missing')
+            def url(self,key):
+                if not re.fullmatch(r'[a-zA-Z0-9_-]+',key):raise StateError('Invalid state key')
+                return self.base+'/contents/state-v2/'+key+'.enc'
+            def blocked(self,key):
+                if not re.fullmatch(r'[0-9a-f]{64}',key):return False
+                if key in self.legacy:return True
+                r=self.request('GET',self.base+'/contents/state/'+key+'.enc',params={'ref':self.branch})
+                if r.status==200:return True
+                if r.status!=404:raise StateError('Legacy read not verified')
+                return False
+            def get(self,key):
+                if self.blocked(key):return {'state':'blocked','legacy_quarantine':True},None
+                return super().get(key)
+            def compare_and_swap(self,key,version,record):
+                if self.blocked(key):raise StateError('Legacy key permanently quarantined')
+                return super().compare_and_swap(key,version,record)
+        QUARANTINE_FILE
+        cat > gate.py <<'GATE'
+        import base64, hashlib, json, os, re, sys, urllib.request
+        from quarantine_state import QuarantineState
+        from durable_state import DurableLedger
+        from transport import Transport
+
+        def stop(msg):
+            print(json.dumps({'gate_stop': msg}))
+            raise SystemExit(1)
+
+        ITEM_ID = 'playlet-ambassador-ep11-part1-v1'
+        PLATFORM = 'instagram'
+        EXPECTED_MH = 'df50ebea2dde6952bcfad7c7962146a3eafb2256c83127042d8bf1717bee6acb'
+        PHASE = os.environ.get('PHASE', '')
+        PERMALINK = (os.environ.get('PERMALINK') or '').strip()
+
+        item = json.loads(base64.b64decode('eyJhcHByb3ZhbF9yZXF1aXJlZCI6IHRydWUsICJieXRlcyI6IDEzMTMwMzExMCwgImNhcHRpb24iOiAiUmV0dXJuIG9mIHRoZSBEZWF0aCdzIEFtYmFzc2Fkb3IgLSBFcGlzb2RlIDExIFBhcnQgMS8yIHwgUGxheWxldFxuXG5JbiBvcmRlciB0byByZXBheSBMZWlsYSBmb3Igc2F2aW5nIGhpcyBsaWZlLCBBaG1lZCwgdGhlIEd1YXJkaWFuIG9mIHRoZSBUZW1wbGUgb2YgRGVhdGggYW5kIHRoZSBhbWJhc3NhZG9yIG9mIEFudWJpcyBpbiB0aGUgaHVtYW4gd29ybGQsIG1hcnJpZWQgaGVyIGFuZCB0b29rIGNhcmUgb2YgaGVyIHNlY3JldGx5IGZvciB0aHJlZSB5ZWFycywgaGlkaW5nIGhpcyBpZGVudGl0eSwgYnV0IHRoZSBtb25leS1odW5ncnkgTGVpbGEgZGl2b3JjZXMgaGltIGZvciBhIHByb2plY3Qgd29ydGggMTAgYmlsbGlvbiBkb2xsYXJzLiBUaGUgZnVyaW91cyBBaG1lZCBmaW5hbGx5IGRlY2lkZXMgdG8gc3RvcCB0b2xlcmF0aW5nIGluc3VsdHMuIFdoZW4gaGlzIHRydWUgaWRlbnRpdHkgaXMgcmV2ZWFsZWQsIGFsbCB0aGUgYnVsbGllcyB0cmVtYmxlIGF0IGhpcyBmZWV0LiBBbmQgYXQgdGhpcyBwb2ludCwgaGlzIHRydWUgbG92ZSBzaG93cyB1cC4uLlxuXG5UaGlzIGlzIG9ubHkgb25lIHBpZWNlIG9mIHRoZSBzdG9yeS4gVGhlIHJlc3QgaXMgd2FpdGluZyBvbiB0aGUgY2hhbm5lbC5cblxuV2F0Y2ggb24gUGxheWxldDogaHR0cHM6Ly9yLnJlZWxzZ28udHYvYjh6Vi0tMlA2Zm8tXG5cbkZ1bGwgZXBpc29kZSBwYXJ0IDEgb2YgMi5cbkFmZmlsaWF0ZSBsaW5rczogSSBtYXkgZWFybiBhIGNvbW1pc3Npb24gaWYgeW91IHVzZSB0aGVtLiIsICJkZXNjcmlwdGlvbiI6ICJJbiBvcmRlciB0byByZXBheSBMZWlsYSBmb3Igc2F2aW5nIGhpcyBsaWZlLCBBaG1lZCwgdGhlIEd1YXJkaWFuIG9mIHRoZSBUZW1wbGUgb2YgRGVhdGggYW5kIHRoZSBhbWJhc3NhZG9yIG9mIEFudWJpcyBpbiB0aGUgaHVtYW4gd29ybGQsIG1hcnJpZWQgaGVyIGFuZCB0b29rIGNhcmUgb2YgaGVyIHNlY3JldGx5IGZvciB0aHJlZSB5ZWFycywgaGlkaW5nIGhpcyBpZGVudGl0eSwgYnV0IHRoZSBtb25leS1odW5ncnkgTGVpbGEgZGl2b3JjZXMgaGltIGZvciBhIHByb2plY3Qgd29ydGggMTAgYmlsbGlvbiBkb2xsYXJzLiBUaGUgZnVyaW91cyBBaG1lZCBmaW5hbGx5IGRlY2lkZXMgdG8gc3RvcCB0b2xlcmF0aW5nIGluc3VsdHMuIFdoZW4gaGlzIHRydWUgaWRlbnRpdHkgaXMgcmV2ZWFsZWQsIGFsbCB0aGUgYnVsbGllcyB0cmVtYmxlIGF0IGhpcyBmZWV0LiBBbmQgYXQgdGhpcyBwb2ludCwgaGlzIHRydWUgbG92ZSBzaG93cyB1cC4uLlxuXG5UaGlzIGlzIG9ubHkgb25lIHBpZWNlIG9mIHRoZSBzdG9yeS4gVGhlIHJlc3QgaXMgd2FpdGluZyBvbiB0aGUgY2hhbm5lbC5cblxuV2F0Y2ggb24gUGxheWxldDogaHR0cHM6Ly9yLnJlZWxzZ28udHYvYjh6Vi0tMlA2Zm8tXG5cbkZ1bGwgZXBpc29kZSBwYXJ0IDEgb2YgMi5cbkFmZmlsaWF0ZSBsaW5rczogSSBtYXkgZWFybiBhIGNvbW1pc3Npb24gaWYgeW91IHVzZSB0aGVtLiIsICJlcGlzb2RlIjogMTEsICJmaWxlIjogIi9kb3dubG9hZHMvcGxheWxldC1hbWJhc3NhZG9yLXNjcmVlbi9lcDExLXBhcnQxLm1wNCIsICJpZCI6ICJwbGF5bGV0LWFtYmFzc2Fkb3ItZXAxMS1wYXJ0MS12MSIsICJwYXJ0IjogMSwgInByaXZhY3kiOiAicHJpdmF0ZSIsICJzaGEyNTYiOiAiNmY3NGJkMjJkMjQ0ZjY2YzM3ZGMzOTU1MjhiMjE1NTE5YzQ1Yjk2YTIzYTlkYWMzZGU3NDU2YzhjZTA1ZGU0OSIsICJzb3VyY2VfZW5kIjogNTAsICJzb3VyY2Vfc3RhcnQiOiAwLCAidGl0bGUiOiAiUmV0dXJuIG9mIHRoZSBEZWF0aCdzIEFtYmFzc2Fkb3IgLSBFcGlzb2RlIDExIFBhcnQgMS8yIHwgUGxheWxldCJ9').decode())
+        item['caption'] = item['title'] + '\n\n' + item['description']
+        canon = json.dumps(item, sort_keys=True, separators=(',', ':'))
+        mh = hashlib.sha256(canon.encode()).hexdigest()
+        if mh != EXPECTED_MH:
+            stop('metadata_hash mismatch: ' + mh)
+
+        gh = os.environ.pop('GH_TOKEN', '')
+        key_material = os.environ.pop('REELSAGA_LEDGER_KEY', '')
+        backend = QuarantineState(Transport(lambda: gh, {'api.github.com'}), key_material)
+        backend.initialize()
+        ledger = DurableLedger(backend)
+        key = ledger.key(ITEM_ID, PLATFORM)
+
+        if PHASE == 'claim':
+            st = ledger.resume(ITEM_ID, PLATFORM)
+            if st != 'unclaimed':
+                stop('not unclaimed: ' + st)
+            if not ledger.claim(item, PLATFORM):
+                stop('claim returned existing record')
+            ledger.checkpoint(ITEM_ID, PLATFORM, 'uncertain', session='web_handoff_pending')
+            record, _ = backend.get(key)
+            if not record or record.get('state') != 'uncertain' or record.get('session') != 'web_handoff_pending' or record.get('metadata_hash') != EXPECTED_MH:
+                stop('claim readback mismatch')
+            print(json.dumps({'claimed': True, 'key': key, 'state': 'uncertain', 'session': 'web_handoff_pending', 'metadata_hash': mh}))
+
+        elif PHASE == 'finalize':
+            m = re.fullmatch(r'https://www\.instagram\.com/(?:p|reel)/([A-Za-z0-9_-]+)/?', PERMALINK)
+            if not m:
+                stop('invalid permalink')
+            record, _ = backend.get(key)
+            if not record:
+                stop('no claim record; run phase=claim first')
+            if record.get('state') != 'uncertain' or record.get('session') != 'web_handoff_pending':
+                stop('unexpected ledger state: ' + str(record.get('state')))
+            if record.get('metadata_hash') != EXPECTED_MH:
+                stop('claimed metadata mismatch')
+            url = 'https://www.instagram.com/p/' + m.group(1) + '/embed/captioned/'
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
+            try:
+                html = urllib.request.urlopen(req, timeout=30).read().decode('utf-8', 'replace')
+            except Exception:
+                stop('permalink fetch failed; ledger left uncertain, no retry')
+            if 'Episode 11 Part 1/2' not in html or 'r.reelsgo.tv/b8zV--2P6fo-' not in html:
+                stop('caption markers absent on permalink; ledger left uncertain, no retry')
+            ledger.checkpoint(ITEM_ID, PLATFORM, 'published', external_id=PERMALINK)
+            record, _ = backend.get(key)
+            if not record or record.get('state') != 'published' or record.get('external_id') != PERMALINK:
+                stop('publish readback mismatch')
+            print(json.dumps({'published': True, 'key': key, 'external_id': PERMALINK}))
+        else:
+            stop('unknown phase')
+        GATE
+        python gate.py
+    - if: success() && inputs.phase == 'finalize'
+      name: guarded purge of staged object after verified web publish
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+      run: |
+        pip install boto3
+        python - <<'PURGEBLOCK'
+        import boto3, os
+        from botocore.config import Config
+        B='reelsaga-private-staging-71'; KEY='production/playlet-ambassador-ep11-part1-v1/video.mp4'
+        s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+            config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+        try:
+            h=s3.head_object(Bucket=B, Key=KEY)
+        except s3.exceptions.ClientError as e:
+            if e.response['Error']['Code'] in ('404','NoSuchKey','NotFound'):
+                print('PURGE skip: object absent'); raise SystemExit(0)
+            raise
+        md=h.get('Metadata') or {}
+        if md.get('sha256')!='6f74bd22d244f66c37dc395528b215519c45b96a23a9dac3de7456c8ce05de49' or h.get('ContentLength')!=131303110:
+            print('PURGE_STOP: staged object identity mismatch; no delete'); raise SystemExit(1)
+        s3.delete_object(Bucket=B, Key=KEY)
+        try:
+            s3.head_object(Bucket=B, Key=KEY); print('PURGE_FAIL still present'); raise SystemExit(1)
+        except s3.exceptions.ClientError as e:
+            if e.response['Error']['Code'] in ('404','NoSuchKey','NotFound'): print('PURGE_OK', KEY)
+            else: raise
+        PURGEBLOCK
