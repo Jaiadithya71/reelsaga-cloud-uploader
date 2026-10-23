@@ -147,8 +147,8 @@ jobs:
         \    \"probe-37874770790\",\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\n"
     - name: Probe ep1 all parts render
       env:
-        GH_TOKEN: ${ github.token }
-        REELSAGA_LEDGER_KEY: ${ secrets.REELSAGA_LEDGER_KEY }
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
       run: |
         python - <<'PY'
         import os,json,hashlib,urllib.request,subprocess

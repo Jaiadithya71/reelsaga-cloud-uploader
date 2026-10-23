@@ -145,10 +145,10 @@ jobs:
         \    \"probe-37494568652\",\n    \"probe-37502302763\",\n    \"probe-37510377852\",\n    \"probe-37518223575\",\n\
         \    \"probe-37525778422\",\n    \"probe-37533224914\",\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n\
         \    \"probe-37874770790\",\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\n"
-    - name: Probe ep1 all parts render
+    - name: Probe ep2 all parts render
       env:
-        GH_TOKEN: ${ github.token }
-        REELSAGA_LEDGER_KEY: ${ secrets.REELSAGA_LEDGER_KEY }
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
       run: |
         python - <<'PY'
         import os,json,hashlib,urllib.request,subprocess
