@@ -13,6 +13,8 @@ on:
         description: Public reel permalink (required for finalize)
         required: false
         type: string
+permissions:
+  contents: write
 concurrency:
   cancel-in-progress: false
   group: reelsaga-canary
