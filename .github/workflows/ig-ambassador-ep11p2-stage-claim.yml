@@ -2,7 +2,7 @@ name: ReelSaga Ambassador EP11P2 stage and claim (Buffer route prep, no publish)
 on:
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 concurrency:
   group: reelsaga-canary
   cancel-in-progress: false
