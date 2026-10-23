@@ -157,7 +157,7 @@ jobs:
         data=urllib.request.urlopen(SOURCE_URL,timeout=120).read()
         if len(data)!=10415368 or hashlib.sha256(data).hexdigest()!='9fac4fbd0dc0aaf480bf67e88480b7a1b8b0439a5b1c6dce1e2a414faf6ca401':raise SystemExit('Source mismatch')
         Path('source.mp4').write_bytes(data)
-        PARTS=[(1,0,50),(2,50,50),(3,100,8.352)]
+        PARTS=[(1,0,36.117),(2,36.117,36.118),(3,72.235,36.117)]
         for part,start,dur in PARTS:
             fade_out=max(dur-0.5,0.1)
             subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',"apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss %s -i source.mp4 -t %s -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=%s:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=%s:d=0.5' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y part%s.mp4 && ffmpeg -v error -i part%s.mp4 -f null -"%(start,dur,fade_out,fade_out,part,part)],check=True)
