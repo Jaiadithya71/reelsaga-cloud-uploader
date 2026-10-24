@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-    - name: Probe 670982 ep1 renders
+    - name: Probe 671003 ep1 renders
       run: |
         python - <<'PY'
         import hashlib,urllib.request,urllib.parse,subprocess,os,zipfile,io
         from pathlib import Path
-        ZIP_URL='https://cps-distr.ikyuedu.com/distribution/8/'+urllib.parse.quote('DramaBox资源包-42000030977-5118f5bff897107f0a794f21348f2c81.zip')
+        ZIP_URL='https://cps-distr.ikyuedu.com/distribution/8/'+urllib.parse.quote('DramaBox资源包-42000030937-8711bb07bc0f52a4b5705d40a406d794.zip')
         data=urllib.request.urlopen(ZIP_URL,timeout=600).read()
         if len(data)!=781820223:raise SystemExit('ZIP size mismatch')
         z=zipfile.ZipFile(io.BytesIO(data))
