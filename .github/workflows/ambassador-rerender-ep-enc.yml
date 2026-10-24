@@ -1,0 +1,63 @@
+name: Ambassador EP re-render to encrypted artifact (recovery)
+on:
+  workflow_dispatch:
+    inputs:
+      ep:
+        description: '11, 12 or 13'
+        required: true
+      gpg_pub:
+        description: armored one-time public key
+        required: true
+permissions:
+  actions: write
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - name: Re-render episode parts, verify original shas, encrypt
+      env:
+        EP: ${{ inputs.ep }}
+        PUB: ${{ inputs.gpg_pub }}
+      run: |
+        python - <<'PY'
+        import hashlib,urllib.request,subprocess,os,sys
+        from pathlib import Path
+        ep=os.environ['EP']
+        EPS={
+        '11':('https://cdn-aws2.playlet.com/mp4/v2/10692/11/11_f31386b2e408c7aef6c92ebeaa56cd96.mp4',101042780,'4ecd12695b39cc0ec87348c49ab007750e269141055f8104f6c4fa0bf1a2e26e',[(1,'0','50','6f74bd22d244f66c37dc395528b215519c45b96a23a9dac3de7456c8ce05de49'),(2,'50','11.099','e0e9216cda51044420b6fbaaf8e5a241de44f142c05c200d06f6a360f0f391cc')]),
+        '12':('https://cdn-aws2.playlet.com/mp4/v2/10692/12/12_78b297d21464150336dbba3e719540e5.mp4',122461495,'a667759052b6d2a5fa4aa9929b0130444345e996721a46c8394d2b0fd7f0449a',[(1,'0','50','9efd96dbe2bbf5566a048b557c9585155b25a711695d4626b0c900c757542dd6'),(2,'50','22.832','8248952477ef210bf239df7842fd27de45b79c690e2c6a1827e5a5a7abd15294')]),
+        '13':('https://cdn-aws2.playlet.com/mp4/v2/10692/13/13_d5575a5ba8b08df327f40c67d71d942e.mp4',140187506,'934c19b6cea8dbf12de92d9549762e9bc3e0fb2d361cbc8b403e3ee6c2d25213',[(1,'0','50','8871852fedf571510bad9951d16139d77b8fbf44d302e6ce34c812ab87a6f849'),(2,'50','34.565','77f6f8502d95900645f861c9d3e7d2c40c4a27ea51ca55f4d6e2f27f4df81ff6')]),
+        }
+        if ep not in EPS: raise SystemExit('ep not on allowlist')
+        url,nb,sba,parts=EPS[ep]
+        data=urllib.request.urlopen(url,timeout=120).read()
+        if len(data)!=nb or hashlib.sha256(data).hexdigest()!=sba: raise SystemExit('Source mismatch')
+        Path('source.mp4').write_bytes(data)
+        cmds=[]
+        for part,ss,t,sha in parts:
+            fd=str(round(float(t)-0.5,3))
+            cmds.append('ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss '+ss+' -i source.mp4 -t '+t+' -vf \'fade=t=in:st=0:d=0.5,fade=t=out:st='+fd+':d=0.5\' -af \'afade=t=in:st=0:d=0.5,afade=t=out:st='+fd+':d=0.5\' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p'+str(part)+'.mp4 && ffmpeg -v error -i p'+str(part)+'.mp4 -f null -')
+        cmd='apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && '+' && '.join(cmds)
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
+        for part,ss,t,sha in parts:
+            rb=Path('p'+str(part)+'.mp4').read_bytes()
+            hs=hashlib.sha256(rb).hexdigest()
+            print('EP'+ep+'P'+str(part)+'_RERENDER_BYTES '+str(len(rb)),flush=True)
+            print('EP'+ep+'P'+str(part)+'_RERENDER_SHA256 '+hs,flush=True)
+            if hs!=sha: raise SystemExit('Re-render mismatch for part '+str(part)+' - NOT byte-identical, stop')
+        PY
+        printf '%s\n' "$PUB" | gpg --batch --import
+        for p in 1 2; do
+          gpg --batch --yes --trust-model always --compress-level 0 --encrypt --recipient rs-xfer-onetime --output p$p.mp4.gpg p$p.mp4
+          shred -u p$p.mp4
+        done
+    - name: upload encrypted artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ambassador-ep${{ inputs.ep }}-rerender-xfer
+        path: '*.mp4.gpg'
+        retention-days: 1
