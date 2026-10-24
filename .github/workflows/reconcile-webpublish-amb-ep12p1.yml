@@ -430,7 +430,7 @@ jobs:
                 print('PURGE skip: object absent'); raise SystemExit(0)
             raise
         md=h.get('Metadata') or {}
-        if md.get('sha256')!='e0e9216cda51044420b6fbaaf8e5a241de44f142c05c200d06f6a360f0f391cc' or h.get('ContentLength')!=37534137:
+        if md.get('sha256')!='9efd96dbe2bbf5566a048b557c9585155b25a711695d4626b0c900c757542dd6' or h.get('ContentLength')!=137603484:
             print('PURGE_STOP: staged object identity mismatch; no delete'); raise SystemExit(1)
         s3.delete_object(Bucket=B, Key=KEY)
         try:
