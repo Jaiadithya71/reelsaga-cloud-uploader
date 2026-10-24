@@ -53,7 +53,8 @@ jobs:
         printf '%s\n' "$PUB" | gpg --batch --import
         for p in 1 2; do
           gpg --batch --yes --trust-model always --compress-level 0 --encrypt --recipient rs-xfer-onetime --output p$p.mp4.gpg p$p.mp4
-          shred -u p$p.mp4
+          sync
+          sudo shred -u p$p.mp4 2>/dev/null || sudo rm -f p$p.mp4
         done
     - name: upload encrypted artifacts
       uses: actions/upload-artifact@v4
