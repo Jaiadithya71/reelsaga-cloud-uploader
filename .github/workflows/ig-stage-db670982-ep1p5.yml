@@ -33,8 +33,8 @@ jobs:
         del source
         cmd=("apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && "
          "ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss 202 -i source.mp4 -t 50.612 "
-         "-vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=50:d=0.5' "
-         "-af 'afade=t=in:st=0:d=0.5,afade=t=out:st=50:d=0.5' "
+         "-vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=50.112:d=0.5' "
+         "-af 'afade=t=in:st=0:d=0.5,afade=t=out:st=50.112:d=0.5' "
          "-c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 "
          "-c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p5.mp4 "
          "&& ffmpeg -v error -i p5.mp4 -f null -")
