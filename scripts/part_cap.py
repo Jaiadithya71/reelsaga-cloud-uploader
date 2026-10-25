@@ -14,8 +14,9 @@ threshold. It is NOT a 55.00 invariant. Operationalized fail-closed as:
   HARD_GATE   56.0   any computed part above this fails (58.5s-class bug fails)
   MEASURED    56.05  ffprobe-measured rendered duration above this fails
   DRIFT        0.6   measured vs requested drift above this fails
-A per-episode user-approved caption fixing the part count (e.g. "Part N/3")
-may set approved_n; resulting parts must still pass HARD_GATE.
+The 56.0 hard gate is implementation tolerance for approx-55 parts (e.g.
+55.397 s from equal-splitting), NOT a new limit to aim for. Splits always use
+the target-55 default; no per-episode part-count overrides.
 """
 import math
 
@@ -26,10 +27,10 @@ DRIFT = 0.6
 FADE = 0.5
 
 
-def compute_parts(dur, approved_n=None):
+def compute_parts(dur):
     """Equal-split parts for episode duration dur (seconds).
     Returns [(part_no, ss_str, t_str), ...]; raises SystemExit on cap breach."""
-    n = approved_n if approved_n else max(1, math.ceil(dur / TARGET))
+    n = max(1, math.ceil(dur / TARGET))
     step = dur / n
     cuts = [round(i * step * 2) / 2 for i in range(n)]
     parts = []

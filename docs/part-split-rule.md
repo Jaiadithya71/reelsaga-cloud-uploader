@@ -23,10 +23,11 @@ Split algorithm for episode duration D seconds:
                             # 58.5 s parts
   part_len = D / n          # equal parts; first n-1 cuts rounded to 0.5 s,
                             # last part takes the remainder
-  A per-episode user-approved caption that fixes the part count (e.g. an
-  approved "Part N/3" template) may override n; the resulting parts must
-  still pass the hard gate below. Example: 670995 EP1 (166.191 s, approved
-  Part N/3 caption) renders 3 x 55.397 s - inside the approved approx cap.
+  The 56.0 s hard gate is implementation tolerance, not a target: splits
+  always use the target-55 default. Approx-55 parts that arise from
+  equal-splitting (e.g. 670995 EP1: 166.191 s as 3 x 55.397 s, 0.4 s over
+  target) remain inside the approved approx cap; no separate part-count
+  approval is duration authority.
 
   0.5 s fade in/out at every cut; fade-out st = part_len - 0.5 for that part.
 
