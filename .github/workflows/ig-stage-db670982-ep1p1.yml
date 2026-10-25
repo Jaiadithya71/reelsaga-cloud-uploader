@@ -1,0 +1,60 @@
+name: DB670982 EP1P1 IG staging (encrypted render artifact)
+on:
+  workflow_dispatch:
+    inputs:
+      gpg_pub:
+        description: armored one-time public key
+        required: true
+permissions:
+  actions: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - name: Re-render EP1P1, verify original sha, encrypt
+      env:
+        PUB: ${{ inputs.gpg_pub }}
+      run: |
+        set -euo pipefail
+        python - <<'PY'
+        import hashlib,urllib.request,subprocess,zipfile,io,os
+        from pathlib import Path
+        ZIP_URL='https://cps-distr.ikyuedu.com/distribution/8/DramaBox%E8%B5%84%E6%BA%90%E5%8C%85-42000030977-5118f5bff897107f0a794f21348f2c81.zip'
+        _z=urllib.request.urlopen(ZIP_URL,timeout=600).read()
+        if len(_z)!=727876961:raise RuntimeError('ZIP size mismatch')
+        source=zipfile.ZipFile(io.BytesIO(_z)).read('Episode1.mp4')
+        del _z
+        if len(source)!=182464664 or hashlib.sha256(source).hexdigest()!='f4d2bab87ef68cb15df9212e7fe2fd38725a65082a199c8c1cee0885e9902291':raise RuntimeError('Source mismatch')
+        Path('source.mp4').write_bytes(source)
+        del source
+        cmd=("apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && "
+         "ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss 0 -i source.mp4 -t 50.5 "
+         "-vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=50:d=0.5' "
+         "-af 'afade=t=in:st=0:d=0.5,afade=t=out:st=50:d=0.5' "
+         "-c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 "
+         "-c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p1.mp4 "
+         "&& ffmpeg -v error -i p1.mp4 -f null -")
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
+        rb=Path('p1.mp4').read_bytes()
+        hs=hashlib.sha256(rb).hexdigest()
+        print('EP1P1_BYTES '+str(len(rb)),flush=True)
+        print('EP1P1_SHA256 '+hs,flush=True)
+        if hs!='8b3bfba69a93ff49623db2cb539292ef68c8ce503d004b04a931bfa5af095cc8':
+            raise SystemExit('Re-render mismatch - NOT byte-identical, stop')
+        PY
+        printf '%s
+        ' "$PUB" | gpg --batch --import
+        gpg --batch --yes --trust-model always --compress-level 0 --encrypt --recipient rs-xfer-onetime --output p1.mp4.gpg p1.mp4
+        sync
+        sudo shred -u p1.mp4 source.mp4 2>/dev/null || sudo rm -f p1.mp4 source.mp4
+        ls -la p1.mp4.gpg
+    - name: upload encrypted artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: db670982-ep1p1-ig
+        path: p1.mp4.gpg
+        retention-days: 1
