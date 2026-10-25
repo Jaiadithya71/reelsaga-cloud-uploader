@@ -1,0 +1,55 @@
+name: ReelSaga DramaBox 670995 EP2 render probes (private research prep, no publish)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install ffmpeg on host
+      run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+    - name: Probe 670995 ep2 renders
+      run: |
+        python - <<'PY'
+        import hashlib,urllib.request,urllib.parse,subprocess,os,zipfile,io,json
+        from pathlib import Path
+        ZIP_URL='https://cps-distr.ikyuedu.com/distribution/8/'+urllib.parse.quote('DramaBox资源包-42000030954-99f818b242e81197601f9da79de29cbc.zip')
+        data=urllib.request.urlopen(ZIP_URL,timeout=600).read()
+        if len(data)!=544812905:raise SystemExit('ZIP size mismatch')
+        z=zipfile.ZipFile(io.BytesIO(data))
+        ep=z.read('Episode2.mp4')
+        del data
+        if len(ep)!=65295376 or hashlib.sha256(ep).hexdigest()!='25346625f12aaf407425e22f3a32da8a30cbf861898082df629213bca97c12db':raise SystemExit('Episode2 mismatch')
+        print('EP2_SOURCE_BYTES',len(ep),flush=True)
+        print('EP2_SOURCE_SHA256',hashlib.sha256(ep).hexdigest(),flush=True)
+        Path('source.mp4').write_bytes(ep)
+        del ep
+        dur=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','source.mp4']).decode().strip())
+        import sys;sys.path.insert(0,'.')
+        from scripts.part_cap import compute_parts,gate_measured
+        PARTS=compute_parts(dur)  # canonical cap: scripts/part_cap.py
+        n=len(PARTS)
+        print('EP2_DURATION '+repr(dur)+' N_PARTS '+str(n),flush=True)
+        print('EP2_PARTS '+json.dumps(PARTS),flush=True)
+        renders=[]
+        for part,ss,t in PARTS:
+            fd=str(round(float(t)-0.5,3))
+            if float(fd)<=0:raise SystemExit('Invalid fade-out start for part '+str(part))
+            renders.append((part,'ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss '+ss+' -i source.mp4 -t '+t+' -vf \'fade=t=in:st=0:d=0.5,fade=t=out:st='+fd+':d=0.5\' -af \'afade=t=in:st=0:d=0.5,afade=t=out:st='+fd+':d=0.5\' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p'+str(part)+'.mp4 && ffmpeg -v error -i p'+str(part)+'.mp4 -f null -'))
+        cmd='apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && '+' && '.join(r[1] for r in renders)
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
+        for part,ss,t in PARTS:
+            _md=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','p'+str(part)+'.mp4']).decode().strip())
+            gate_measured(_md,float(t))  # canonical cap: scripts/part_cap.py
+            print('EP2P'+str(part)+'_MEASURED_DURATION '+repr(_md),flush=True)
+        for part,ss,t in PARTS:
+            rb=Path('p'+str(part)+'.mp4').read_bytes()
+            print('DB670995E2P'+str(part)+'_RENDER_BYTES '+str(len(rb)),flush=True)
+            print('DB670995E2P'+str(part)+'_RENDER_SHA256 '+hashlib.sha256(rb).hexdigest(),flush=True)
+        PY
