@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
+    - uses: actions/checkout@v4
     - name: Install ffmpeg on host
       run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
     - name: Probe 670982 ep2 renders
@@ -30,17 +31,10 @@ jobs:
         Path('source.mp4').write_bytes(ep)
         del ep
         dur=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','source.mp4']).decode().strip())
-        import math
-        n=max(1,math.ceil(dur/55.0))
-        step=dur/n
-        cuts=[round(i*step*2)/2 for i in range(n)]
-        PARTS=[]
-        for i in range(n):
-            ss=cuts[i]
-            t=(round(dur-ss,3)) if i==n-1 else round(cuts[i+1]-ss,3)
-            PARTS.append((i+1,repr(ss),repr(t)))
-        for _part,_ss,_t in PARTS:
-            if float(_t)>55.0:raise SystemExit('Part length cap exceeded: '+_t)
+        import sys;sys.path.insert(0,'.')
+        from scripts.part_cap import compute_parts,gate_measured
+        PARTS=compute_parts(dur)  # canonical cap: scripts/part_cap.py
+        n=len(PARTS)
         print('EP2_DURATION '+repr(dur)+' N_PARTS '+str(n),flush=True)
         print('EP2_PARTS '+json.dumps(PARTS),flush=True)
         renders=[]
@@ -52,8 +46,7 @@ jobs:
         subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
         for part,ss,t in PARTS:
             _md=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','p'+str(part)+'.mp4']).decode().strip())
-            if _md>55.05:raise SystemExit('Measured part duration over cap: '+repr(_md))
-            if abs(_md-float(t))>0.6:raise SystemExit('Measured duration drift vs requested: '+repr(_md)+' vs '+t)
+            gate_measured(_md,float(t))  # canonical cap: scripts/part_cap.py
             print('EP2P'+str(part)+'_MEASURED_DURATION '+repr(_md),flush=True)
         for part,ss,t in PARTS:
             rb=Path('p'+str(part)+'.mp4').read_bytes()
