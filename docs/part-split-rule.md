@@ -15,3 +15,10 @@ Every per-part render must be sha-gated against the episode's render-probe
 measurements before any upload, and the fade-out st must be recomputed per
 part length (a cloned workflow with a stale st fails the gate - seen on
 670982 EP1P5, 2026-10-25).
+
+Executable enforcement (fail-closed, docs alone are not prevention):
+- Render-probe workflows compute n=ceil(D/55) and abort if any computed part
+  exceeds 55.0 s, if a fade-out st is invalid, or if the ffprobe-measured
+  rendered duration exceeds 55.05 s or drifts >0.6 s from the requested cut.
+- Private-upload workflows must never be generated for a split that has not
+  passed those gates; wrong-split workflow files are removed, not kept.
