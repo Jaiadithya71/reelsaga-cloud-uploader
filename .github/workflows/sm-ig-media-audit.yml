@@ -1,0 +1,52 @@
+name: ReelSaga IG media audit probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: List account media with durations
+      env:
+        REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
+      run: |
+        python - <<'PY'
+        import os,json,urllib.request,urllib.parse,base64
+        key=os.environ.pop('REELSAGA_IG_READ_KEY','')
+        req=urllib.request.Request('https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader',headers={'Authorization':'Bearer '+key,'Accept':'application/json'})
+        rec=json.loads(urllib.request.urlopen(req,timeout=30).read(65537))
+        if rec.get('username')!='reelsaga3000' or str(rec.get('user_id'))!='17841423797577132': raise ValueError('Identity mismatch')
+        token=rec['access_token']
+        def get(url,params=None):
+            if params: url=url+'?'+urllib.parse.urlencode(params)
+            r=urllib.request.Request(url,headers={'Authorization':'Bearer '+token})
+            return json.loads(urllib.request.urlopen(r,timeout=30).read())
+        url='https://graph.instagram.com/v26.0/17841423797577132/media'
+        params={'fields':'id,caption,timestamp,permalink,media_url','limit':100}
+        rows=[];seen=set()
+        while url:
+            if url in seen: raise ValueError('Pagination loop')
+            seen.add(url)
+            data=get(url,params);rows.extend(data.get('data',[]));params=None;url=data.get('paging',{}).get('next')
+        print('MEDIA_COUNT',len(rows),flush=True)
+        for r in rows:
+            dur=None
+            mu=r.get('media_url') or ''
+            m=urllib.parse.parse_qs(urllib.parse.urlsplit(mu).query).get('efg',[None])[0]
+            if m:
+                try:
+                    s=m+'='*(-len(m)%4);dur=json.loads(base64.urlsafe_b64decode(s)).get('duration_s')
+                except Exception: dur='ERR'
+            cap=(r.get('caption') or '').split('\n')[0][:70]
+            line=json.dumps({'cap':cap,'dur':dur,'ts':r.get('timestamp'),'link':r.get('permalink')})
+            print(line,flush=True)
+            open(os.environ['GITHUB_STEP_SUMMARY'],'a').write(line+'\n')
+        PY

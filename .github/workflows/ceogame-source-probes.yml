@@ -1,0 +1,49 @@
+name: ReelSaga CEOGame EP2-11 source probes
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - name: Probe ep2-11 sources
+      run: |
+        python - <<'PY'
+        import hashlib,urllib.request,subprocess,os
+        from pathlib import Path
+        EPS={
+          2:'https://cdn-aws2.playlet.com/mp4/v2/10640/2/2_d17d70aa7b56f75df832731bf11a66cd.mp4',
+          3:'https://cdn-aws2.playlet.com/mp4/v2/10640/3/3_ea786705c69c270b8406be39d77b90d4.mp4',
+          4:'https://cdn-aws2.playlet.com/mp4/v2/10640/4/4_f1ebec0a528e10cf31a1295600a723cd.mp4',
+          5:'https://cdn-aws2.playlet.com/mp4/v2/10640/5/5_1c4d3249fbb9d5a5e572c6ba84c34dac.mp4',
+          6:'https://cdn-aws2.playlet.com/mp4/v2/10640/6/6_9dda0522cf0650335b0c47c7931048ef.mp4',
+          7:'https://cdn-aws2.playlet.com/mp4/v2/10640/7/7_9bd46f88927dd5610474097ab554fb53.mp4',
+          8:'https://cdn-aws2.playlet.com/mp4/v2/10640/8/8_ee4b98e9f26ff6db0f44e80c135e346c.mp4',
+          9:'https://cdn-aws2.playlet.com/mp4/v2/10640/9/9_42bd2c0f2920e90898b6e70b04dda73e.mp4',
+          10:'https://cdn-aws2.playlet.com/mp4/v2/10640/10/10_7b9e7b85c5e5d0b7e2a1fd6dd30d2d87.mp4',
+          11:'https://cdn-aws2.playlet.com/mp4/v2/10640/11/11_6fa824b1d1d9d55a4e93b89e28cf78d0.mp4',
+        }
+        shas={}
+        for ep,url in sorted(EPS.items()):
+            data=urllib.request.urlopen(url,timeout=180).read()
+            Path('ep%d.mp4'%ep).write_bytes(data)
+            shas[ep]=(len(data),hashlib.sha256(data).hexdigest())
+        cmd='apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && for f in ep*.mp4; do echo "DUR $f $(ffprobe -v error -show_entries format=duration -of csv=p=0 $f)"; done'
+        r=subprocess.run(['docker','run','--rm','-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True,capture_output=True,text=True)
+        durs={}
+        for line in r.stdout.split('\n'):
+            if line.startswith('DUR ep'):
+                f,d=line.split()[1],float(line.split()[2])
+                durs[int(f[2:-4])]=d
+        for ep in sorted(EPS):
+            b,s=shas[ep]
+            print('EP%d_SOURCE_BYTES %d'%(ep,b),flush=True)
+            print('EP%d_SOURCE_SHA256 %s'%(ep,s),flush=True)
+            print('EP%d_DURATION %.3f'%(ep,durs[ep]),flush=True)
+        for ep in EPS: Path('ep%d.mp4'%ep).unlink()
+        PY

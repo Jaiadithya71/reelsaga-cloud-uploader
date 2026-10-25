@@ -1,0 +1,60 @@
+name: Tigris staging cleanup
+on:
+  workflow_dispatch: {}
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install boto3
+    - name: Delete oldest production artifacts until under target
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+      run: |
+        cat > cleanup.py <<'PYEOF'
+        import boto3, os, json
+        from botocore.config import Config
+        B='reelsaga-private-staging-71'
+        TARGET=int(2.5*1024**3)
+        s3=boto3.client('s3', endpoint_url='https://t3.storage.dev', region_name='auto',
+            aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+            aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+            config=Config(signature_version='s3v4', retries={'total_max_attempts':3}, s3={'addressing_style':'path'}))
+        objs=[]; token=None
+        while True:
+            kw={'Bucket':B}
+            if token: kw['ContinuationToken']=token
+            r=s3.list_objects_v2(**kw)
+            objs += [(o['LastModified'], o['Size'], o['Key']) for o in r.get('Contents',[])]
+            if not r.get('IsTruncated'): break
+            token=r['NextContinuationToken']
+        total=sum(s for _,s,_ in objs); objs.sort()
+        from collections import Counter
+        dist=Counter(k.split('/')[0]+'/' for _,_,k in objs)
+        before={'objects':len(objs),'bytes':total,'prefixes':dict(dist)}
+        print('BEFORE '+json.dumps(before), flush=True)
+        deleted=[]
+        for ts,size,key in objs:
+            if total<=TARGET: break
+            if not (key.startswith('production/') or key.startswith('trial/')) or '..' in key:
+                print('SKIP unknown prefix: '+key, flush=True); continue
+            s3.delete_object(Bucket=B, Key=key)
+            total-=size; deleted.append((key,size))
+            print('DELETED %s %d' % (key,size), flush=True)
+        out={'before':before,'deleted_count':len(deleted),
+             'deleted_bytes':sum(s for _,s in deleted),
+             'deleted_keys':[k for k,_ in deleted],'after_bytes':total}
+        open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Tigris cleanup\n\n```json\n'+json.dumps(out,indent=2)+'\n```\n')
+        print('AFTER '+json.dumps({'after_bytes':total,'deleted_count':len(deleted)}), flush=True)
+        PYEOF
+        python cleanup.py
