@@ -1,0 +1,51 @@
+name: ReelSaga DramaBox 670982 EP2 render probes (private research prep, no publish)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - name: Probe 670982 ep2 renders
+      run: |
+        python - <<'PY'
+        import hashlib,urllib.request,urllib.parse,subprocess,os,zipfile,io,json
+        from pathlib import Path
+        ZIP_URL='https://cps-distr.ikyuedu.com/distribution/8/'+urllib.parse.quote('DramaBox资源包-42000030977-5118f5bff897107f0a794f21348f2c81.zip')
+        data=urllib.request.urlopen(ZIP_URL,timeout=600).read()
+        if len(data)!=727876961:raise SystemExit('ZIP size mismatch')
+        z=zipfile.ZipFile(io.BytesIO(data))
+        ep=z.read('Episode2.mp4')
+        del data
+        if len(ep)!=81012330:raise SystemExit('Episode2 size mismatch')
+        print('EP2_SOURCE_BYTES',len(ep),flush=True)
+        print('EP2_SOURCE_SHA256',hashlib.sha256(ep).hexdigest(),flush=True)
+        Path('source.mp4').write_bytes(ep)
+        del ep
+        dur=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0','source.mp4']).decode().strip())
+        n=max(1,round(dur/50.5))
+        step=dur/n
+        cuts=[round(i*step*2)/2 for i in range(n)]
+        PARTS=[]
+        for i in range(n):
+            ss=cuts[i]
+            t=(round(dur-ss,3)) if i==n-1 else round(cuts[i+1]-ss,3)
+            PARTS.append((i+1,repr(ss),repr(t)))
+        print('EP2_DURATION '+repr(dur)+' N_PARTS '+str(n),flush=True)
+        print('EP2_PARTS '+json.dumps(PARTS),flush=True)
+        renders=[]
+        for part,ss,t in PARTS:
+            fd=str(round(float(t)-0.5,3))
+            renders.append((part,'ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss '+ss+' -i source.mp4 -t '+t+' -vf \'fade=t=in:st=0:d=0.5,fade=t=out:st='+fd+':d=0.5\' -af \'afade=t=in:st=0:d=0.5,afade=t=out:st='+fd+':d=0.5\' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p'+str(part)+'.mp4 && ffmpeg -v error -i p'+str(part)+'.mp4 -f null -'))
+        cmd='apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && '+' && '.join(r[1] for r in renders)
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
+        for part,ss,t in PARTS:
+            rb=Path('p'+str(part)+'.mp4').read_bytes()
+            print('DB670982E2P'+str(part)+'_RENDER_BYTES '+str(len(rb)),flush=True)
+            print('DB670982E2P'+str(part)+'_RENDER_SHA256 '+hashlib.sha256(rb).hexdigest(),flush=True)
+        PY
