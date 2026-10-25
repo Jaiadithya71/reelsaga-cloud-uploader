@@ -1,4 +1,4 @@
-name: DB670982 EP1P3 IG staging (encrypted render artifact)
+name: DB670982 EP1P4 IG staging (encrypted render artifact)
 on:
   workflow_dispatch:
     inputs:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-    - name: Re-render EP1P3, verify original sha, encrypt
+    - name: Re-render EP1P4, verify original sha, encrypt
       env:
         PUB: ${{ inputs.gpg_pub }}
       run: |
@@ -32,29 +32,29 @@ jobs:
         Path('source.mp4').write_bytes(source)
         del source
         cmd=("apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && "
-         "ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss 101 -i source.mp4 -t 50.5 "
+         "ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss 151.5 -i source.mp4 -t 50.5 "
          "-vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=50:d=0.5' "
          "-af 'afade=t=in:st=0:d=0.5,afade=t=out:st=50:d=0.5' "
          "-c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 "
-         "-c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p3.mp4 "
-         "&& ffmpeg -v error -i p3.mp4 -f null -")
+         "-c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y p4.mp4 "
+         "&& ffmpeg -v error -i p4.mp4 -f null -")
         subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',cmd],check=True)
-        rb=Path('p3.mp4').read_bytes()
+        rb=Path('p4.mp4').read_bytes()
         hs=hashlib.sha256(rb).hexdigest()
-        print('EP1P3_BYTES '+str(len(rb)),flush=True)
-        print('EP1P3_SHA256 '+hs,flush=True)
-        if hs!='2d7ed1cf967c49ede9402f5845180ee43be647042dc192c3ae60f6649a8d9dd8':
+        print('EP1P4_BYTES '+str(len(rb)),flush=True)
+        print('EP1P4_SHA256 '+hs,flush=True)
+        if hs!='817812f1959523d1faedbb113a0470135344886c3f8fc63971b5b51800b3d6e4':
             raise SystemExit('Re-render mismatch - NOT byte-identical, stop')
         PY
         printf '%s
         ' "$PUB" | gpg --batch --import
-        gpg --batch --yes --trust-model always --compress-level 0 --encrypt --recipient rs-xfer-onetime --output p3.mp4.gpg p3.mp4
+        gpg --batch --yes --trust-model always --compress-level 0 --encrypt --recipient rs-xfer-onetime --output p4.mp4.gpg p4.mp4
         sync
-        sudo shred -u p3.mp4 source.mp4 2>/dev/null || sudo rm -f p3.mp4 source.mp4
-        ls -la p3.mp4.gpg
+        sudo shred -u p4.mp4 source.mp4 2>/dev/null || sudo rm -f p4.mp4 source.mp4
+        ls -la p4.mp4.gpg
     - name: upload encrypted artifact
       uses: actions/upload-artifact@v4
       with:
         name: db670982-ep1p4-ig
-        path: p3.mp4.gpg
+        path: p4.mp4.gpg
         retention-days: 1
