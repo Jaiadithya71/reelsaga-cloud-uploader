@@ -1,0 +1,30 @@
+name: ReelSaga Mate EP1 all-parts render probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+    - name: Probe ep1 all parts render
+      run: |
+        python - <<'PY'
+        import os,json,hashlib,urllib.request,subprocess
+        from pathlib import Path
+        SOURCE_URL='https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/cb1fab3-1a162a71b79-0005-9573-534-c9280.mp4'
+        data=urllib.request.urlopen(SOURCE_URL,timeout=120).read()
+        if len(data)!=6930019 or hashlib.sha256(data).hexdigest()!='0bf2a2b705bc0282002efdca5125509b15d17b899326fd1105155f639c8f934c':raise SystemExit('Source mismatch')
+        Path('source.mp4').write_bytes(data)
+        PARTS=[(1,0,48.225),(2,48.225,48.225)]
+        for part,start,dur in PARTS:
+            fade_out=max(dur-0.5,0.1)
+            subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',os.getcwd()+':/work','-w','/work','ubuntu:22.04','bash','-c',"apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss %s -i source.mp4 -t %s -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=%s:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=%s:d=0.5' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y part%s.mp4 && ffmpeg -v error -i part%s.mp4 -f null -"%(start,dur,fade_out,fade_out,part,part)],check=True)
+            rb=Path('part%s.mp4'%part).read_bytes()
+            print('EP1P%d_RENDER_BYTES %d'%(part,len(rb)),flush=True)
+            print('EP1P%d_RENDER_SHA256 %s'%(part,hashlib.sha256(rb).hexdigest()),flush=True)
+        PY
