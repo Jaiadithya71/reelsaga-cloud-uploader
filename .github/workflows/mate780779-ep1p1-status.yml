@@ -1,0 +1,67 @@
+name: ReelSaga read-only status check Mate780779 EP1P1 (no upload, no ledger write)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-readonly-verification
+  cancel-in-progress: false
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: '/*.py'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read video status for rYuj5AR6UTI
+        env:
+          REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+        run: |
+          python - <<'PYCODE'
+          import os,json
+          from provision_actions import validated_record
+          from credentials import GoogleCredentials
+          from actions_canary import Store
+          from desktop_setup import CHANNEL,SCOPES
+          from transport import Transport,GoogleTokenForms
+          from adapters import checked
+          stage='record'
+          try:
+              raw=os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS','')
+              record=validated_record(raw)
+              stage='google_refresh'
+              credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)
+              token=credential.access_token()
+              api=Transport(lambda:token,{'www.googleapis.com'})
+              stage='video_read'
+              data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails,contentDetails','id':'rYuj5AR6UTI'})).data
+              rows=data.get('items',[])
+              if len(rows)!=1:
+                  print(json.dumps({'error':'video readback missing','row_count':len(rows)},sort_keys=True));raise SystemExit(1)
+              row=rows[0]
+              status=row.get('status',{})
+              proc=row.get('processingDetails',{})
+              out={'video_id':row['id'],
+                   'channel_match':row['snippet'].get('channelId')==CHANNEL,
+                   'privacy':status.get('privacyStatus'),
+                   'upload_status':status.get('uploadStatus'),
+                   'failure_reason':status.get('failureReason'),
+                   'rejection_reason':status.get('rejectionReason'),
+                   'processing_status':proc.get('processingStatus'),
+                   'processing_failure_reason':proc.get('processingFailureReason'),
+                   'licensed_content':row.get('contentDetails',{}).get('licensedContent'),
+                   'title':row['snippet'].get('title'),
+                   'made_for_kids':status.get('madeForKids'),
+                   'self_declared_made_for_kids':status.get('selfDeclaredMadeForKids')}
+              print(json.dumps(out,sort_keys=True))
+              open(os.environ['GITHUB_STEP_SUMMARY'],'a').write('## Mate780779 EP1P1 status\n\n```json\n'+json.dumps(out,indent=2)+'\n```\n')
+          except SystemExit:raise
+          except Exception:
+              print(json.dumps({'safe_failure_stage':stage,'details_redacted':True}));raise SystemExit(1) from None
+          PYCODE
