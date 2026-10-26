@@ -1,0 +1,39 @@
+name: EV EP1P1 render probe (no upload)
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+on:
+  workflow_dispatch:
+    inputs:
+      source_url:
+        description: 'Fresh signed OSS URL for Escape Velocity-0001.mp4 (expires ~2h)'
+        required: true
+        type: string
+jobs:
+  render-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - name: Download source, verify, trim EP1P1, print render sha
+      env:
+        EV_SOURCE_URL: ${{ inputs.source_url }}
+      run: |
+        python - <<'PYEOF'
+        import hashlib,os,subprocess
+        from pathlib import Path
+        url=os.environ['EV_SOURCE_URL']
+        if 'v-out.oss-accelerate.aliyuncs.com' not in url or 'Escape%20Velocity-0001' not in url: raise RuntimeError('Unexpected source URL shape')
+        import urllib.request
+        source=urllib.request.urlopen(url,timeout=180).read()
+        if len(source)!=68991083 or hashlib.sha256(source).hexdigest()!='49e5a0049adf319ea7dd6f8d9339d37fb2c382b9f39105acdf6269c1fe9cb6a9': raise RuntimeError('Source mismatch')
+        Path('source.mp4').write_bytes(source)
+        subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',"apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v error -cpuflags 0 -filter_threads 1 -ss 0 -i source.mp4 -t 47.25 -vf 'fade=t=in:st=0:d=0.5,fade=t=out:st=46.75:d=0.5' -af 'afade=t=in:st=0:d=0.5,afade=t=out:st=46.75:d=0.5' -c:v libx264 -threads:v 3 -x264-params asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags +faststart -y ev.mp4 && ffmpeg -v error -i ev.mp4 -f null -"],check=True)
+        rb=Path('ev.mp4').read_bytes()
+        print('EV_EP1P1_RENDER_BYTES '+str(len(rb)),flush=True)
+        print('EV_EP1P1_RENDER_SHA256 '+hashlib.sha256(rb).hexdigest(),flush=True)
+        PYEOF
