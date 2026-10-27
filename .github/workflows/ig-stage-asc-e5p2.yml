@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Re-render E5P2, verify original sha, encrypt
       env:
-        PUB: $${{ inputs.gpg_pub }}
+        PUB: ${{ inputs.gpg_pub }}
       run: |
         set -euo pipefail
         python - <<'PY'
