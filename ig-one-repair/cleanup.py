@@ -1,5 +1,6 @@
 import os,json,pathlib,urllib.request,urllib.error,time
 import cloudinary,cloudinary.api,cloudinary.uploader
+from cloudinary.exceptions import NotFound
 from github_state import GitHubState
 from transport import Transport
 from durable_state import DurableLedger
@@ -16,7 +17,7 @@ assert p['id']==PID and p['status']=='sent' and p.get('externalLink')
 cloudinary.config(cloud_name='btob02ll',api_key='323756243716765',api_secret=secret,secure=True)
 r=cloudinary.uploader.destroy(host['public_id'],resource_type='video',type='authenticated',invalidate=True);assert r['result']in('ok','not found')
 try:cloudinary.api.resource(host['public_id'],resource_type='video',type='authenticated');raise RuntimeError('Host still present')
-except cloudinary.api.NotFound:pass
+except NotFound:pass
 statuses={}
 for method in ('HEAD','GET'):
  try:
