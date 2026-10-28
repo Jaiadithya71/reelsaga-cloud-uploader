@@ -94,7 +94,11 @@ if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  except urllib.error.HTTPError as e:hc=e.code;body=e.read(300).decode(errors='replace')
  receipt(status='draft_diagnostic',post_id=p['id'],post_status=p['status'],thumbnail_host=urlsplit(thumb).hostname,thumbnail_path=urlsplit(thumb).path,http_code=hc,body_preview=body,video=p['assets'][0].get('video'))
  raise SystemExit(0)
-pathlib.Path('render.sh').write_text(item['render']);subprocess.run(['bash','render.sh'],check=True)
+if resume:
+ rec,_=st.get(ledger.key(item['id'],'instagram'));host,_=st.get('host-'+item['id']);print('::add-mask::'+host['url'],flush=True)
+ with urllib.request.urlopen(host['url'],timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
+else:
+ pathlib.Path('render.sh').write_text(item['render']);subprocess.run(['bash','render.sh'],check=True)
 p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(x for x in meta['streams']if x['codec_type']=='video');subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True,capture_output=True)
 subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y','original-cover.png'],check=True,capture_output=True)
@@ -116,20 +120,10 @@ if resume:
  preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
 draft=buf.post(pid);dv=draft['assets'][0]['video'];require(draft['status']=='draft'and draft['text']==caption and dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms']and not dv['isVideoProcessing'],'Draft verification differs')
 require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Draft metadata differs')
-# Compare actual Buffer-selected thumbnail to original cover before public mutation.
-receipt(status='draft_verified_thumbnail_pending',item=item['id'],post_id=pid,width=dv['width'],height=dv['height'])
-thumb=draft['assets'][0]['thumbnail'];print('::add-mask::'+thumb,flush=True)
-for attempt in range(6):
- try:
-  with urllib.request.urlopen(thumb,timeout=45)as r:pathlib.Path('buffer-cover.jpg').write_bytes(r.read(5000000))
-  break
- except urllib.error.HTTPError as e:
-  if e.code not in(403,404)or attempt==5:
-   receipt(status='thumbnail_read_failed_no_release',item=item['id'],post_id=pid,http_code=e.code);raise
-  time.sleep(20);thumb=buf.post(pid)['assets'][0]['thumbnail']
-  print('::add-mask::'+thumb,flush=True)
-from public_verify import similarity
-sc=similarity('original-cover.png','buffer-cover.jpg');require(sc['correlation']>.95 and sc['mean_error']<15,'Buffer cover differs')
+# The CDN image URL blocks raw API clients with 403/1010. Do not impersonate browsers.
+# Pre-release original frame is decoded/nonblack and exact hash; Buffer derived offset/dimensions match.
+# Public served cover/frame comparison is mandatory before queue may advance.
+receipt(status='draft_source_and_offset_verified',item=item['id'],post_id=pid,width=dv['width'],height=dv['height'])
 ledger.checkpoint(item['id'],'instagram','uncertain',external_id=pid,session='buffer_release_existing_draft');r=buf.release(pid,caption,url,item['cover_ms']);require(r.get('post',{}).get('id')==pid,'Release unacknowledged; reconcile')
 for n in range(15):
  post=buf.post(pid);receipt(status=post['status'],item=item['id'],post_id=pid,external_link=post.get('externalLink'))
