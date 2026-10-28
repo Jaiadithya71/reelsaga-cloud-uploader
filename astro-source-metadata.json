@@ -1,0 +1,62 @@
+[
+  {
+    "episode": 1,
+    "duration": 164.8,
+    "bytes": 65671616,
+    "sha256": "70ae8f235b13c1bf7c9a0cb4f0fe96f56778255c2a65d1db64cdf13e026a946b"
+  },
+  {
+    "episode": 2,
+    "duration": 173.503991,
+    "bytes": 66598440,
+    "sha256": "4ca869d0cb6209a62b6de20af951202ae1764b815407dd8008182c03ad000d95"
+  },
+  {
+    "episode": 3,
+    "duration": 72.768005,
+    "bytes": 27146001,
+    "sha256": "c7877783ec55f64f6e24f1665bbdfd3b86667c1f203f6a3d74ada5f7f44fac5a"
+  },
+  {
+    "episode": 4,
+    "duration": 256.458333,
+    "bytes": 98952615,
+    "sha256": "f1e61d53d22578cca70e0db68061d85998e6ecb2aa78497538e72c67f8c20096"
+  },
+  {
+    "episode": 5,
+    "duration": 266.416667,
+    "bytes": 102104324,
+    "sha256": "724d59580de4f12ee4ab4e6119dc2e9e8b2c884969c0a5830ed53433195a65df"
+  },
+  {
+    "episode": 6,
+    "duration": 149.208333,
+    "bytes": 57135694,
+    "sha256": "5dcf59ef6e99eb427f14cc6c12f2671e1848ca0816712493e7345775aaa69f65"
+  },
+  {
+    "episode": 7,
+    "duration": 182.016009,
+    "bytes": 70683116,
+    "sha256": "83479cc2060b8f604aff74e0f83da798a00711abc444511cf27f3feafe93d077"
+  },
+  {
+    "episode": 8,
+    "duration": 195.375,
+    "bytes": 76824681,
+    "sha256": "61e827f6905fd633e6c21e307c0e6791d75d40075c656cc2ac0ff733160182fe"
+  },
+  {
+    "episode": 9,
+    "duration": 88.32,
+    "bytes": 35165360,
+    "sha256": "af745c1744121c67fb9667604634769f1d839e2e7a357f5bd03f5aa080c7cfed"
+  },
+  {
+    "episode": 10,
+    "duration": 63.103991,
+    "bytes": 22836797,
+    "sha256": "ef575f9d099bcb2a25ee4801c26827a04c5caab2149debb80cf7566136205fe4"
+  }
+]
