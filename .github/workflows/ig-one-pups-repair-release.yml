@@ -32,5 +32,8 @@ jobs:
       if: always()
       with:
         name: one-pups-repair-release-receipt
-        path: release-receipt.json
+        path: |
+          release-receipt.json
+          release-diagnostic.json
+          release-stop.json
         retention-days: 1

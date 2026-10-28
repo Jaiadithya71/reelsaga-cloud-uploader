@@ -1,4 +1,4 @@
-import os,json,time,pathlib,hashlib,urllib.request,datetime
+import os,json,time,pathlib,hashlib,urllib.request,urllib.error,datetime,re
 import cloudinary,cloudinary.api
 from github_state import GitHubState
 from transport import Transport
@@ -8,7 +8,7 @@ secret=os.environ.pop('REELSAGA_CLOUDINARY_API_SECRET');buf=os.environ.pop('REEL
 class State(GitHubState):
  def url(self,k):return self.base+'/contents/state-v2/'+k+'.enc'
 b=State(Transport(lambda:gh,{'api.github.com'}),lk);ledger=DurableLedger(b)
-rec,_=b.get(ledger.key(ID,'instagram'));assert rec and rec['state']=='ready_for_review'and rec['external_id']==PID
+rec,_=b.get(ledger.key(ID,'instagram'));assert rec and rec['state']=='uncertain' and rec['session']=='buffer_release_existing_draft'and rec['external_id']==PID
 host,_=b.get('host-'+ID);assert host and host['bytes']==85133950
 budget,_=b.get('cloudinary-one-repair-budget-20261028');assert budget and budget['attempts']==1
 cloudinary.config(cloud_name='btob02ll',api_key='323756243716765',api_secret=secret,secure=True)
@@ -18,8 +18,11 @@ def gql(q,v):
  req=urllib.request.Request('https://api.buffer.com',data=json.dumps({'query':q,'variables':v}).encode(),headers={'Authorization':'Bearer '+buf,'Content-Type':'application/json'})
  try:
   with urllib.request.urlopen(req,timeout=90)as r:d=json.load(r)
+ except urllib.error.HTTPError as e:
+  raw=e.read().decode(errors='replace');raw=re.sub(r'https?://[^\s\"<>]+','[URL]',raw);raw=raw.replace(buf,'[REDACTED]').replace(secret,'[REDACTED]');pathlib.Path('release-diagnostic.json').write_text(json.dumps({'http':e.code,'body':raw[:3000]}));raise RuntimeError('Buffer HTTP failure; reconcile')from None
  except Exception:raise RuntimeError('Buffer result uncertain; no retry')from None
- if d.get('errors'):raise RuntimeError('GraphQL error; no retry')
+ if d.get('errors'):
+  raw=json.dumps(d['errors']);raw=re.sub(r'https?://[^\s\"<>]+','[URL]',raw);pathlib.Path('release-diagnostic.json').write_text(json.dumps({'errors':raw[:3000]}));raise RuntimeError('GraphQL error; no retry')
  return d['data']
 Q='query($input:PostInput!){post(input:$input){id status channelId text sentAt dueAt externalLink metadata{... on InstagramPostMetadata{type shouldShareToFeed isAiGenerated}} assets{type thumbnail ... on VideoAsset{video{width height durationMs thumbnailOffset isVideoProcessing}}}}}'
 p=gql(Q,{'input':{'id':PID}})['post'];assert p['status']=='draft'and p['channelId']==CH and p['text']==caption and not p.get('dueAt')and not p.get('sentAt')
@@ -34,7 +37,9 @@ for e in recent:
  if ts:assert abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())>=1800,'Spacing'
 ledger.checkpoint(ID,'instagram','uncertain',external_id=PID,session='buffer_release_existing_draft')
 pathlib.Path('release-receipt.json').write_text(json.dumps({'status':'release_in_flight','post_id':PID}))
-r=gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id status}} ... on MutationError{message}}}',{'input':{'id':PID,'mode':'shareNow','schedulingType':'automatic','saveToDraft':False}})['editPost'];assert r.get('post',{}).get('id')==PID,'Release response unknown; reconcile'
+r=gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id status}} ... on MutationError{message}}}',{'input':{'id':PID,'mode':'shareNow','schedulingType':'automatic','saveToDraft':False}})['editPost'];
+if r.get('post',{}).get('id')!=PID:
+ pathlib.Path('release-diagnostic.json').write_text(json.dumps({'typed_result':r}));raise RuntimeError('Release rejected; no resend')
 for i in range(12):
  if i:time.sleep(20)
  p=gql(Q,{'input':{'id':PID}})['post'];status=p['status'];link=p.get('externalLink')
