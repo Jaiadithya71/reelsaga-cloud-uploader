@@ -1,0 +1,30 @@
+name: ReelSaga read-only complete IG Buffer inventory
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5 cloudinary==1.44.1
+    - name: Read-only post state and mutation schema
+      env:
+        REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
+      run: PYTHONPATH=. python ig-recovery/read_inventory.py
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: ig-complete-inventory-receipt
+        path: inventory-receipt.json
+        retention-days: 1
