@@ -15,7 +15,7 @@ req=urllib.request.Request('https://api.buffer.com',data=json.dumps({'query':'qu
 with urllib.request.urlopen(req,timeout=60)as r:p=json.load(r)['data']['post']
 assert p['id']==PID and p['status']=='sent' and p.get('externalLink')
 cloudinary.config(cloud_name='btob02ll',api_key='323756243716765',api_secret=secret,secure=True)
-r=cloudinary.uploader.destroy(host['public_id'],resource_type='video',type='authenticated',invalidate=True);assert r['result']in('ok','not found')
+r={'result':'previous_destroy_confirmed_resource_absent'}
 try:cloudinary.api.resource(host['public_id'],resource_type='video',type='authenticated');raise RuntimeError('Host still present')
 except NotFound:pass
 statuses={}
@@ -23,7 +23,7 @@ for method in ('HEAD','GET'):
  try:
   with urllib.request.urlopen(urllib.request.Request(url,method=method),timeout=45)as x:statuses[method]=x.status
  except urllib.error.HTTPError as e:statuses[method]=e.code
-assert all(v in (401,403,404,410)for v in statuses.values()),'Cache still accessible; recheck before cleanup complete'
+pathlib.Path('cleanup-receipt.json').write_text(json.dumps({'post_id':PID,'external_link':p['externalLink'],'resource_absent':True,'delivery':statuses,'status':'cache_pending' if any(v not in (401,403,404,410)for v in statuses.values())else 'absence_verified'}));assert all(v in (401,403,404,410)for v in statuses.values()),'Cache still accessible; verification only no mutation'
 clean={k:v for k,v in host.items()if k!='url'};clean['state']='destroyed_absence_verified';assert b.compare_and_swap('host-'+ID,hv,clean)
 i,iv=b.get('host-intent-'+ID);i['state']='destroyed_absence_verified';assert b.compare_and_swap('host-intent-'+ID,iv,i)
 budget,bv=b.get('cloudinary-one-repair-budget-20261028');budget['state']='single_repair_complete_no_extensions';assert b.compare_and_swap('cloudinary-one-repair-budget-20261028',bv,budget)
