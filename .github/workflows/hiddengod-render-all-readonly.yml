@@ -1,0 +1,29 @@
+name: Hidden God original free source QA and full coverage renders only
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+    - run: python hiddengod_render_all.py
+      env:
+        SOURCES_JSON: '[{"href": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/435e5bfe-1a13e56da76-0005-9573-534-c9280.mp4",
+          "text": "Episode 1 \u00b7 1"}, {"href": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/164eb89b-1a13e56daf3-0005-9573-534-c9280.mp4",
+          "text": "Episode 2 \u00b7 2"}, {"href": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2775c91f-1a13e56da6f-0005-9573-534-c9280.mp4",
+          "text": "Episode 3 \u00b7 3"}, {"href": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/6458df37-1a13e56dac9-0005-9573-534-c9280.mp4",
+          "text": "Episode 4 \u00b7 4"}, {"href": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/3e78a8eb-1a13e56db10-0005-9573-534-c9280.mp4",
+          "text": "Episode 5 \u00b7 5"}]'
+    - uses: actions/upload-artifact@v4
+      with:
+        name: hiddengod-full-free-renders
+        path: 'hiddengod
+
+          hiddengod-render-receipt.json'
+        retention-days: 1
