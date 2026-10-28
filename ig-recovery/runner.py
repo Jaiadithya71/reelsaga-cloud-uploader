@@ -78,9 +78,9 @@ if not resume:
  now=datetime.datetime.now(datetime.timezone.utc)
  for row in recent:
   ts=row.get('sentAt')or row.get('dueAt')
-  if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<2400:
-   receipt(status='waiting_minimum_40min_spacing',item=item['id']);raise SystemExit(0)
- preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+  if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<900:
+   receipt(status='waiting_minimum_15min_spacing',item=item['id']);raise SystemExit(0)
+ preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=900)
  old=inv(OLD);new=inv(B);require(sum(x['Size']for x in old+new)+item['bytes']+512*1024**2<4*1024**3,'Aggregate storage guard');require(len(new)<2,'Stage count guard');require(batch['baseline_a']+batch['class_a_reserved']+30<9000 and batch['baseline_b']+batch['class_b_reserved']+100<90000,'Request planning guard')
  for x in old:
   try:
@@ -125,7 +125,7 @@ else:
  rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id'];host,_=st.get('host-'+item['id']);url=host['url'];hk='host-'+item['id'];caption=item['caption'];channel=buf.channel(CH);require(channel['name']=='reelsaga3000','Wrong channel')
 if resume:
  rows=buf.inventory(ORG,CH);rows=Inventory(x for x in rows if x['id']!=pid and not(x['status']=='sent'and code(x.get('externalLink'))==item['old_shortcode']and not is_present(item['old_shortcode'])))
- preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+ preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=900)
 draft=buf.post(pid);dv=draft['assets'][0]['video'];require(draft['status']=='draft'and draft['text']==caption and dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms']and not dv['isVideoProcessing'],'Draft verification differs')
 require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Draft metadata differs')
 # The CDN image URL blocks raw API clients with 403/1010. Do not impersonate browsers.
