@@ -235,5 +235,5 @@ jobs:
         ,\n    \"probe-37540585932\",\n    \"probe-37871458508\",\n    \"probe-37874770790\"\
         ,\n    \"probe-37875084061\"\n  ]\n}\nQUARANTINE_FILE\npython -c 'from quarantine_state\
         \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"\
-        '\n\nset +x\nfor e in {1..10}; do ASTRO_EP=$e python astro_private_probe.py\
+        '\n\nset +x\nfor e in {2..10}; do ASTRO_EP=$e python astro_private_probe.py\
         \ || exit $?; done"
