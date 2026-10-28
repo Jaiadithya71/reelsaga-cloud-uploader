@@ -1,8 +1,15 @@
 import os,json,pathlib,urllib.request,urllib.parse,hashlib,subprocess,math
+import time
+def download(u):
+ for attempt in range(3):
+  try:return urllib.request.urlopen(u,timeout=120).read(400000000)
+  except Exception:
+   if attempt==2:raise
+   time.sleep(30)
 sources=json.loads(os.environ['SOURCES_JSON']);assert len(sources)==5;result=[]
 for e,source in enumerate(sources,1):
  d=pathlib.Path('hiddengod')/f'e{e}';d.mkdir(parents=True);u=source['href'];assert urllib.parse.urlsplit(u).hostname=='outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com'
- data=urllib.request.urlopen(u,timeout=120).read(400000000);p=d/'source.mp4';p.write_bytes(data)
+ print('Source',e,flush=True);data=download(u);p=d/'source.mp4';p.write_bytes(data)
  meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(x for x in meta['streams']if x['codec_type']=='video');assert v['width']>=720 and v['height']>=1280 and any(x['codec_type']=='audio'for x in meta['streams']);duration=float(meta['format']['duration']);subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True)
  rec={'episode':e,'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'duration':duration,'metadata':meta};n=math.ceil(duration/55);length=duration/n;parts=[]
  for k in range(n):
