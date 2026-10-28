@@ -89,8 +89,10 @@ if not resume:
 if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  rec,_=st.get(ledger.key(item['id'],'instagram'));p=buf.post(rec['external_id']);thumb=p['assets'][0]['thumbnail'];print('::add-mask::'+thumb)
  from urllib.parse import urlsplit
- import requests
- rr=requests.get(thumb,timeout=45);receipt(status='draft_diagnostic',post_id=p['id'],post_status=p['status'],thumbnail_host=urlsplit(thumb).hostname,thumbnail_path=urlsplit(thumb).path,http_code=rr.status_code,body_preview=rr.text[:300]if rr.status_code!=200 else 'image',video=p['assets'][0].get('video'))
+ try:
+  with urllib.request.urlopen(thumb,timeout=45)as rr:hc=rr.status;body='image'
+ except urllib.error.HTTPError as e:hc=e.code;body=e.read(300).decode(errors='replace')
+ receipt(status='draft_diagnostic',post_id=p['id'],post_status=p['status'],thumbnail_host=urlsplit(thumb).hostname,thumbnail_path=urlsplit(thumb).path,http_code=hc,body_preview=body,video=p['assets'][0].get('video'))
  raise SystemExit(0)
 pathlib.Path('render.sh').write_text(item['render']);subprocess.run(['bash','render.sh'],check=True)
 p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
