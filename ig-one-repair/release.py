@@ -37,7 +37,7 @@ for e in recent:
  if ts:assert abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())>=1800,'Spacing'
 ledger.checkpoint(ID,'instagram','uncertain',external_id=PID,session='buffer_release_existing_draft')
 pathlib.Path('release-receipt.json').write_text(json.dumps({'status':'release_in_flight','post_id':PID}))
-r=gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id status}} ... on MutationError{message}}}',{'input':{'id':PID,'mode':'shareNow','schedulingType':'automatic','saveToDraft':False}})['editPost'];
+r=gql('mutation($input:EditPostInput!){editPost(input:$input){__typename ... on PostActionSuccess{post{id status}} ... on MutationError{message}}}',{'input':{'id':PID,'mode':'shareNow','schedulingType':'automatic','saveToDraft':False,'text':caption,'assets':[{'video':{'url':host['url'],'metadata':{'thumbnailOffset':2000}}}],'metadata':{'instagram':{'type':'reel','shouldShareToFeed':True,'isAiGenerated':True}}}})['editPost'];
 if r.get('post',{}).get('id')!=PID:
  pathlib.Path('release-diagnostic.json').write_text(json.dumps({'typed_result':r}));raise RuntimeError('Release rejected; no resend')
 for i in range(12):
