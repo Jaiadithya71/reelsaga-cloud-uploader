@@ -29,7 +29,7 @@ def is_present(c):
  return 'EmbeddedMediaImage'in s
 batch,bv=st.get(BATCH)
 if not batch:
- batch={'state':'active','started':time.time(),'deadline':time.time()+6*86400,'class_a_reserved':0,'class_b_reserved':0,'objects':[],'baseline_a':1028,'baseline_b':2377,'baseline_asof':'2026-10-27T00:00:00Z','bucket_names':[OLD,B]};require(st.compare_and_swap(BATCH,bv,batch),'Batch CAS failed');batch,bv=st.get(BATCH)
+ batch={'state':'active','started':time.time(),'deadline':time.time()+6*86400,'class_a_reserved':0,'class_b_reserved':0,'objects':[],'baseline_a':1029,'baseline_b':2377,'baseline_asof':'2026-10-28T05:20:00Z','bucket_names':[OLD,B]};require(st.compare_and_swap(BATCH,bv,batch),'Batch CAS failed');batch,bv=st.get(BATCH)
 def cleanup_batch(force=False):
  hosts=[]
  for i in m['items']:
