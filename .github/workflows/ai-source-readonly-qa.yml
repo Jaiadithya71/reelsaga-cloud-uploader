@@ -1,0 +1,41 @@
+name: AI promotion source read-only quality check
+'on':
+  workflow_dispatch:
+    inputs:
+      source_url:
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Download only portal offered source
+        env:
+          SOURCE_URL: ${{ inputs.source_url }}
+        run: |
+          set +x
+          python - <<'PY'
+          import os,urllib.request,urllib.parse,pathlib
+          u=os.environ['SOURCE_URL'];p=urllib.parse.urlsplit(u)
+          assert p.scheme=='https' and p.hostname=='v-out.oss-accelerate.aliyuncs.com'
+          with urllib.request.urlopen(u,timeout=120)as r: pathlib.Path('source.mp4').write_bytes(r.read(400000000))
+          PY
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+      - name: Inspect original quality and decode
+        run: |
+          ffprobe -v error -show_streams -show_format -of json source.mp4 > source-metadata.json
+          sha256sum source.mp4 > source-sha256.txt
+          ffmpeg -v error -i source.mp4 -f null -
+          for t in 2 25 50; do ffmpeg -v error -ss $t -i source.mp4 -frames:v 1 -vf scale=360:640 frame-$t.jpg; done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ai-source-quality
+          path: |
+            source.mp4
+            source-metadata.json
+            source-sha256.txt
+            frame-*.jpg
+          retention-days: 1
