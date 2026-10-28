@@ -7,4 +7,4 @@ d=g(q,{'input':{'id':'6ae1604ff652e014d7a4bf99'}});p=d.get('data',{}).get('post'
 for a in p.get('assets',[]):a.pop('thumbnail',None)
 s=g('query{__schema{mutationType{fields{name args{name type{kind name ofType{kind name}}} type{kind name ofType{kind name}}}}}}')
 fields=s.get('data',{}).get('__schema',{}).get('mutationType',{}).get('fields',[]);fields=[f for f in fields if f['name']=='editPost']
-pathlib.Path('inspect-receipt.json').write_text(json.dumps({'post':p,'errors':bool(d.get('errors')),'mutation_schema':fields},indent=2))
+pathlib.Path('inspect-receipt.json').write_text(json.dumps({'post':p,'errors':bool(d.get('errors')),'mutation_schema':fields,'edit_input':g('query{__type(name:"EditPostInput"){inputFields{name type{kind name ofType{kind name}}}}}'),'payload_types':g('query{__type(name:"PostActionPayload"){possibleTypes{name}}}')},indent=2))
