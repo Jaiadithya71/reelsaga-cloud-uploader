@@ -69,7 +69,13 @@ exclude=set()
 for p in dupes:
  require(p['status']=='sent'and code(p.get('externalLink'))==item['old_shortcode'],'Caption duplicate is not the mapped deleted original')
  require(not is_present(item['old_shortcode']),'Mapped original still publicly present');exclude.add(p['id'])
-recent=Inventory(p for p in recent if p['id']not in exclude);preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+recent=Inventory(p for p in recent if p['id']not in exclude)
+now=datetime.datetime.now(datetime.timezone.utc)
+for row in recent:
+ ts=row.get('sentAt')or row.get('dueAt')
+ if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<2400:
+  receipt(status='waiting_minimum_40min_spacing',item=item['id']);raise SystemExit(0)
+preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
 old=inv(OLD);new=inv(B);require(sum(x['Size']for x in old+new)+item['bytes']+512*1024**2<4*1024**3,'Aggregate storage guard');require(len(new)<2,'Stage count guard');require(batch['baseline_a']+batch['class_a_reserved']+30<9000 and batch['baseline_b']+batch['class_b_reserved']+100<90000,'Request planning guard')
 for x in old:
  try:
