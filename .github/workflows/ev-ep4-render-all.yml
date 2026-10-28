@@ -1,0 +1,45 @@
+name: EV E4 source and all-parts render probe (no upload)
+'on':
+  workflow_dispatch:
+    inputs:
+      source_url:
+        required: true
+        type: string
+        description: Fresh offered free Episode 4 source
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Source, render, decode, frames
+      env:
+        EV_SOURCE_URL: ${{ inputs.source_url }}
+      run: "sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null\n\
+        python - <<'EVPY'\nimport os,pathlib,urllib.request,subprocess,json,hashlib,math\n\
+        u=os.environ['EV_SOURCE_URL'];print('::add-mask::'+u,flush=True)\nassert 'v-out.oss-accelerate.aliyuncs.com/'\
+        \ in u and 'Escape%20Velocity-0004.mp4' in u\np=pathlib.Path('ev4');p.mkdir();s=p/'source.mp4'\n\
+        with urllib.request.urlopen(u,timeout=180)as r:s.write_bytes(r.read(600000001))\n\
+        assert s.stat().st_size<600000000\nmeta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(s)]));dur=float(meta['format']['duration']);v=next(x\
+        \ for x in meta['streams']if x['codec_type']=='video');assert v['width']==1080\
+        \ and v['height']==1920\nassert any(x['codec_type']=='audio' for x in meta['streams']);n=math.ceil(dur/55);length=dur/n;rows=[]\n\
+        for i in range(n):\n out=p/('part'+str(i+1)+'.mp4');fade=f'fade=t=in:st=0:d=0.5,fade=t=out:st={length-.5}:d=0.5';afade=fade.replace('fade','afade')\n\
+        \ subprocess.run(['docker','run','--rm','--cpuset-cpus',','.join(map(str,sorted(os.sched_getaffinity(0))[:2])),'-v',str(pathlib.Path.cwd())+':/work','-w','/work','ubuntu:22.04','bash','-c',f\"\
+        apt-get update -qq && apt-get install -y -qq ffmpeg >/dev/null && ffmpeg -v\
+        \ error -cpuflags 0 -filter_threads 1 -ss {i*length} -i ev4/source.mp4 -t\
+        \ {length} -vf '{fade}' -af '{afade}' -c:v libx264 -threads:v 3 -x264-params\
+        \ asm=0 -preset ultrafast -crf 18 -c:a aac -flags:a +bitexact -b:a 192k -movflags\
+        \ +faststart -y {out} && ffmpeg -v error -i {out} -f null -\"],check=True)\n\
+        \ rows.append({'part':i+1,'start':i*length,'end':min((i+1)*length,dur),'bytes':out.stat().st_size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest()})\n\
+        \ for sec in [2,length/2,length-3]:subprocess.run(['ffmpeg','-v','error','-ss',str(sec),'-i',str(out),'-frames:v','1','-y',str(p/('p'+str(i+1)+'-frame-'+str(round(sec))+'.jpg'))],check=True)\n\
+        result={'episode':4,'source_bytes':s.stat().st_size,'source_sha256':hashlib.sha256(s.read_bytes()).hexdigest(),'duration':dur,'part_count':n,'parts':rows,'source_probe':meta};(p/'render-receipt.json').write_text(json.dumps(result,indent=2));print(json.dumps(result))\n\
+        EVPY"
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: ev4-render-probe
+        path: 'ev4/render-receipt.json
+
+          ev4/*-frame-*.jpg'
+        retention-days: 2
