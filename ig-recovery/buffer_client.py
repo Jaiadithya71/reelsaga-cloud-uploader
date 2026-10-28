@@ -2,6 +2,8 @@
 import json,urllib.request,urllib.error
 class Uncertain(RuntimeError):pass
 class Rejected(RuntimeError):pass
+class Inventory(list):
+ complete=True
 class Buffer:
  def __init__(self,key):self.key=key
  def gql(self,query,variables):
@@ -15,9 +17,15 @@ class Buffer:
   q='query($input:PostInput!){post(input:$input){id status channelId text sentAt dueAt externalLink metadata{... on InstagramPostMetadata{type shouldShareToFeed isAiGenerated}} assets{type thumbnail ... on VideoAsset{video{width height durationMs thumbnailOffset isVideoProcessing}}}}}'
   return self.gql(q,{'input':{'id':pid}})['post']
  def inventory(self,org,ch):
-  # Buffer connection cursor shape must be live-introspected before using pagination.
-  q='query($input:PostsInput!){posts(input:$input,first:100){edges{node{id text status sentAt dueAt}}}}'
-  return [e['node']for e in self.gql(q,{'input':{'organizationId':org,'filter':{'channelIds':[ch],'status':['draft','scheduled','sending','sent']}}})['posts']['edges']]
+  q='query($input:PostsInput!,$after:String){posts(input:$input,first:100,after:$after){edges{node{id text status sentAt dueAt}} pageInfo{endCursor hasNextPage}}}'
+  rows=[];after=None;seen=set()
+  for _ in range(100):
+   d=self.gql(q,{'input':{'organizationId':org,'filter':{'channelIds':[ch],'status':['draft','scheduled','sending','sent']}},'after':after})['posts'];rows.extend(e['node']for e in d['edges']);pi=d['pageInfo']
+   if not pi['hasNextPage']:return Inventory(rows)
+   after=pi.get('endCursor')
+   if not after or after in seen:raise Rejected('Pagination stalled; no writes')
+   seen.add(after)
+  raise Rejected('Inventory bound exhausted; no writes')
  def channel(self,ch):return self.gql('query($input:ChannelInput!){channel(input:$input){id name organizationId isDisconnected isLocked isQueuePaused}}',{'input':{'id':ch}})['channel']
  @staticmethod
  def content(caption,url,offset):return {'text':caption,'schedulingType':'automatic','assets':[{'video':{'url':url,'metadata':{'thumbnailOffset':offset}}}],'metadata':{'instagram':{'type':'reel','shouldShareToFeed':True,'isAiGenerated':True}}}
