@@ -242,10 +242,10 @@ jobs:
         \ import QuarantineState; assert QuarantineState.__name__ == \"QuarantineState\"\
         '\ncat > actions_ev.py <<'PRIVATE'\n\"\"\"One privately prepared promo, PRIVATE\
         \ only, then stop for Studio review.\n\nManual dispatch only. Reruns never\
-        \ recreate a claimed upload.\n\"\"\"\nimport hashlib,json,os\nfrom pathlib\
-        \ import Path\nfrom actions_canary import Store\nfrom desktop_setup import\
-        \ CHANNEL,SCOPES\nfrom provision_actions import validated_record\nfrom credentials\
-        \ import GoogleCredentials\nfrom transport import Transport,GoogleTokenForms\n\
+        \ recreate a claimed upload.\n\"\"\"\nimport hashlib,json,os,pathlib\nfrom\
+        \ pathlib import Path\nfrom actions_canary import Store\nfrom desktop_setup\
+        \ import CHANNEL,SCOPES\nfrom provision_actions import validated_record\n\
+        from credentials import GoogleCredentials\nfrom transport import Transport,GoogleTokenForms\n\
         from quarantine_state import QuarantineState\nfrom durable_state import DurableLedger\n\
         from controls import Controls,ControlError\nfrom adapters import YouTube,checked\n\
         from actions_state_probe import probe\n\nimport urllib.request\nimport urllib.request,subprocess\n\
