@@ -133,7 +133,8 @@ require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerate
 # Public served cover/frame comparison is mandatory before queue may advance.
 receipt(status='draft_source_and_offset_verified',item=item['id'],post_id=pid,width=dv['width'],height=dv['height'])
 ledger.checkpoint(item['id'],'instagram','uncertain',external_id=pid,session='buffer_release_existing_draft');r=buf.release(pid,caption,url,item['cover_ms']);require(r.get('post',{}).get('id')==pid,'Release unacknowledged; reconcile')
-for n in range(15):
+# Buffer can remain sending for more than five minutes. Poll only the exact saved ID.
+for n in range(45):
  post=buf.post(pid);receipt(status=post['status'],item=item['id'],post_id=pid,external_link=post.get('externalLink'))
  if post['status']=='sent':break
  require(post['status']not in('error','failed'),'Publish rejected; hold');time.sleep(20)
