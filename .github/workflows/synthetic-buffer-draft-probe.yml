@@ -1,0 +1,38 @@
+name: ReelSaga synthetic Buffer private draft probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-synthetic-draft-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5
+    - name: Synthetic draft only
+      env:
+        REELSAGA_CLOUDINARY_API_SECRET: ${{ secrets.REELSAGA_CLOUDINARY_API_SECRET }}
+        REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
+        PROBE_MANIFEST: manifest.json
+      run: |
+        set +x
+        python synthetic-probe/decrypt.py
+        python synthetic-probe/probe.py
+    - name: Remove decrypted fixture manifest
+      if: always()
+      run: rm -f manifest.json
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: synthetic-buffer-draft-receipt
+        path: probe-receipt.json
+        retention-days: 1
