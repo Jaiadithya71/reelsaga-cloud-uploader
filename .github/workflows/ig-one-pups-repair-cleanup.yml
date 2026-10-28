@@ -1,0 +1,36 @@
+name: ReelSaga ONE Pups verified public cleanup
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5 cloudinary==1.44.1
+    - name: Destroy ONLY verified public repair original host
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+        REELSAGA_CLOUDINARY_API_SECRET: ${{ secrets.REELSAGA_CLOUDINARY_API_SECRET
+          }}
+        REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
+      run: 'set +x
+
+        PYTHONPATH=. python ig-one-repair/cleanup.py'
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: one-pups-cleanup-receipt
+        path: cleanup-receipt.json
+        retention-days: 1
