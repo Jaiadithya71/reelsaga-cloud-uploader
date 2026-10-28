@@ -1,0 +1,35 @@
+name: Stardust King free original QA and render only
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+    - run: python stardustking_render_all.py
+      env:
+        SOURCES_JSON: '[{"href": "https://acdn-v.stardust-tv.com/prod/24491/1/a102930f4fe5454da99b06f67cfe6a06.mp4",
+          "text": "Episode 1 \u00b7 \u7b2c1\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/2/b9eedd87caf74c97ba2b94eff4a23c87.mp4",
+          "text": "Episode 2 \u00b7 \u7b2c2\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/3/c866faa015c84c54abaa0acd1549ad67.mp4",
+          "text": "Episode 3 \u00b7 \u7b2c3\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/4/907961afa194431ab36c23d60fca2c5f.mp4",
+          "text": "Episode 4 \u00b7 \u7b2c4\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/5/ccb8789051f943ac9613fe5f0d2331dd.mp4",
+          "text": "Episode 5 \u00b7 \u7b2c5\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/6/04c3fbfd98f04bf8983b7bf991b1bb1c.mp4",
+          "text": "Episode 6 \u00b7 \u7b2c6\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/7/300d107b5d6b4298a037be89eee14e8f.mp4",
+          "text": "Episode 7 \u00b7 \u7b2c7\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/8/8e1b35d476ec471386808b9c98b25d9f.mp4",
+          "text": "Episode 8 \u00b7 \u7b2c8\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/9/8f8c69fa6f4344d6a554f380703b1563.mp4",
+          "text": "Episode 9 \u00b7 \u7b2c9\u96c6"}, {"href": "https://acdn-v.stardust-tv.com/prod/24491/10/8ef0124a9c454573a8972b7cb1064f17.mp4",
+          "text": "Episode 10 \u00b7 \u7b2c10\u96c6"}]'
+    - uses: actions/upload-artifact@v4
+      with:
+        name: stardustking-full-free-renders
+        path: 'stardustking
+
+          stardustking-render-receipt.json'
+        retention-days: 1
+      if: always()
