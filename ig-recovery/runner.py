@@ -30,7 +30,30 @@ def is_present(c):
 batch,bv=st.get(BATCH)
 if not batch:
  batch={'state':'active','started':time.time(),'deadline':time.time()+6*86400,'class_a_reserved':0,'class_b_reserved':0,'objects':[],'baseline_a':1028,'baseline_b':2377,'baseline_asof':'2026-10-27T00:00:00Z','bucket_names':[OLD,B]};require(st.compare_and_swap(BATCH,bv,batch),'Batch CAS failed');batch,bv=st.get(BATCH)
+def cleanup_batch(force=False):
+ hosts=[]
+ for i in m['items']:
+  h,hv=st.get('host-'+i['id'])
+  if h and h.get('state')!='deleted_absence_verified':hosts.append((i,h,hv))
+ if not hosts:return
+ require(force or len(hosts)>=2 or all(i.get('status')=='public_verified_cleaned'or ledger.resume(i['id'],'instagram')=='do_not_create'for i in m['items']),'Cleanup batch not due')
+ for i,h,hv in hosts:
+  require(h.get('state')=='published_qa_verified','Unresolved post requires cancellation/reconciliation before cleanup')
+  p=buf.post(h['post_id']);require(p['status']=='sent'and p['externalLink']==h['external_link'],'Published identity changed')
+  s3.delete_object(Bucket=B,Key=h['key'])
+  try:s3.head_object(Bucket=B,Key=h['key']);raise RuntimeError('Deleted host still exists')
+  except s3.exceptions.ClientError as e:require(e.response['ResponseMetadata']['HTTPStatusCode']==404,'Host absence unknown')
+  for method in ('HEAD','GET'):
+   try:
+    with urllib.request.urlopen(urllib.request.Request(h['url'],method=method),timeout=45)as r:raise RuntimeError('Delivery cache still accessible')
+   except urllib.error.HTTPError as e:require(e.code in(403,404,410),'Delivery absence unknown')
+  h={k:v for k,v in h.items()if k!='url'};h['state']='deleted_absence_verified';require(st.compare_and_swap('host-'+i['id'],hv,h),'Cleanup state conflict')
+ receipt(status='batch_cleanup_absence_verified',items=[i['id']for i,h,hv in hosts])
+if os.environ.get('RECOVERY_CLEANUP_ONLY')=='1':
+ cleanup_batch(force=True);raise SystemExit(0)
 require(time.time()<batch['deadline'],'Batch cleanup deadline reached, no more uploads')
+new_before=inv(B)
+if len(new_before)>=2:cleanup_batch()
 item=None
 for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
