@@ -1,0 +1,32 @@
+name: Zeus True Love full free original QA and render only
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+    - run: python zeustrue_render_all.py
+      env:
+        SOURCES_JSON: '[{"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/1/1_6eda1104e3be23e9e7a5a05ef556f31d.mp4",
+          "text": "Episode 1"}, {"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/2/2_b1eba02750578984fe11a823d590ad87.mp4",
+          "text": "Episode 2"}, {"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/3/3_9aa27385556891f87753efa5cde5aa3f.mp4",
+          "text": "Episode 3"}, {"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/4/4_88c4ce17e034d06af4113bedd3f07c56.mp4",
+          "text": "Episode 4"}, {"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/5/5_73c69dddb2489a8671a89c4bad243591.mp4",
+          "text": "Episode 5"}, {"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/6/6_e48bd0d17be1cb6bb4a31e32d580e186.mp4",
+          "text": "Episode 6"}, {"href": "https://cdn-aws2.playlet.com/mp4/v2/10819/7/7_6a32143da1f28c2b65d036edd1108b23.mp4",
+          "text": "Episode 7"}]'
+    - uses: actions/upload-artifact@v4
+      with:
+        name: zeustrue-full-free-renders
+        path: 'zeustrue
+
+          zeustrue-render-receipt.json'
+        retention-days: 1
+      if: always()
