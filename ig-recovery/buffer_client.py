@@ -17,7 +17,7 @@ class Buffer:
   q='query($input:PostInput!){post(input:$input){id status channelId text sentAt dueAt externalLink metadata{... on InstagramPostMetadata{type shouldShareToFeed isAiGenerated}} assets{type thumbnail ... on VideoAsset{video{width height durationMs thumbnailOffset isVideoProcessing}}}}}'
   return self.gql(q,{'input':{'id':pid}})['post']
  def inventory(self,org,ch):
-  q='query($input:PostsInput!,$after:String){posts(input:$input,first:100,after:$after){edges{node{id text status sentAt dueAt}} pageInfo{endCursor hasNextPage}}}'
+  q='query($input:PostsInput!,$after:String){posts(input:$input,first:100,after:$after){edges{node{id text status sentAt dueAt externalLink}} pageInfo{endCursor hasNextPage}}}'
   rows=[];after=None;seen=set()
   for _ in range(100):
    d=self.gql(q,{'input':{'organizationId':org,'filter':{'channelIds':[ch],'status':['draft','scheduled','sending','sent']}},'after':after})['posts'];rows.extend(e['node']for e in d['edges']);pi=d['pageInfo']

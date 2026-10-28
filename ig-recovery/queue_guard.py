@@ -13,7 +13,7 @@ def next_item(manifest,records):
   require(state.get('state')!='blocked','Prior blocked item must not be skipped')
   return i
  return None
-def preflight(item,channel,recent,now,caption,min_gap=1800,rolling_cap=40):
+def preflight(item,channel,recent,now,caption,min_gap=2400,rolling_cap=40):
  require(channel.get('id')=='6adb4d02778b240e2f9c6d48'and channel.get('organizationId')=='6adb4a329ef1e740831f7879'and channel.get('name','').lstrip('@')=='reelsaga3000','Wrong channel')
  require(not any(channel.get(k)for k in ('isDisconnected','isLocked','isQueuePaused')),'Channel not ready')
  require(hashlib.sha256(caption.encode()).hexdigest()==item['caption_sha256'],'Caption differs')
