@@ -103,6 +103,9 @@ if not resume:
  r=buf.draft(CH,caption,url,item['cover_ms']);require(r.get('post',{}).get('id'),'Draft rejected; reconcile');pid=r['post']['id'];ledger.checkpoint(item['id'],'instagram','ready_for_review',external_id=pid,session='draft_created')
 else:
  rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id'];host,_=st.get('host-'+item['id']);url=host['url'];hk='host-'+item['id'];caption=item['caption'];channel=buf.channel(CH);require(channel['name']=='reelsaga3000','Wrong channel')
+if resume:
+ rows=buf.inventory(ORG,CH);rows=Inventory(x for x in rows if x['id']!=pid and not(x['status']=='sent'and code(x.get('externalLink'))==item['old_shortcode']and not is_present(item['old_shortcode'])))
+ preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
 draft=buf.post(pid);dv=draft['assets'][0]['video'];require(draft['status']=='draft'and draft['text']==caption and dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms']and not dv['isVideoProcessing'],'Draft verification differs')
 require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Draft metadata differs')
 # Compare actual Buffer-selected thumbnail to original cover before public mutation.
