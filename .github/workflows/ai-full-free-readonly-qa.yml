@@ -1,0 +1,39 @@
+name: AI all-free source quality audit
+'on':
+  workflow_dispatch:
+    inputs:
+      sources_json:
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+    - name: Download only portal offered source
+      env:
+        SOURCES_JSON: ${{ inputs.sources_json }}
+      run: "set +x\npython - <<'PYCODE'\nimport os,json,urllib.request,urllib.parse,pathlib\n\
+        sources=json.loads(os.environ['SOURCES_JSON']);assert len(sources)==10\nfor\
+        \ e,v in enumerate(sources,1):\n u=v['href'];p=urllib.parse.urlsplit(u);assert\
+        \ p.scheme=='https' and p.hostname=='v-out.oss-accelerate.aliyuncs.com'\n\
+        \ d=pathlib.Path('e'+str(e));d.mkdir()\n with urllib.request.urlopen(u,timeout=120)as\
+        \ r:d.joinpath('source.mp4').write_bytes(r.read(400000000))\nPYCODE"
+    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+    - name: Inspect original quality and decode
+      run: "for e in {1..10}; do\n ffprobe -v error -show_streams -show_format -of\
+        \ json e$e/source.mp4 > e$e/source-metadata.json\n sha256sum e$e/source.mp4\
+        \ > e$e/source-sha256.txt\n ffmpeg -v error -i e$e/source.mp4 -f null -\n\
+        \ for t in 2 25 50; do ffmpeg -v error -ss $t -i e$e/source.mp4 -frames:v\
+        \ 1 -vf scale=360:640 e$e/frame-$t.jpg; done\ndone"
+    - uses: actions/upload-artifact@v4
+      with:
+        name: ai-full-free-quality
+        path: 'e*/source-metadata.json
+
+          e*/source-sha256.txt
+
+          e*/frame-*.jpg'
+        retention-days: 1
