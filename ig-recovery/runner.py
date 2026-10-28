@@ -59,50 +59,62 @@ for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
- require(not r,'In-flight or blocked item, reconcile exact saved ID')
+ require(not r or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
  item=i;break
 if item is None:receipt(status='all_33_verified_no_new_post');raise SystemExit(0)
 receipt(status='preflight',item=item['id'])
-channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
-# Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
-exclude=set()
-for p in dupes:
- require(p['status']=='sent'and code(p.get('externalLink'))==item['old_shortcode'],'Caption duplicate is not the mapped deleted original')
- require(not is_present(item['old_shortcode']),'Mapped original still publicly present');exclude.add(p['id'])
-recent=Inventory(p for p in recent if p['id']not in exclude)
-now=datetime.datetime.now(datetime.timezone.utc)
-for row in recent:
- ts=row.get('sentAt')or row.get('dueAt')
- if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<2400:
-  receipt(status='waiting_minimum_40min_spacing',item=item['id']);raise SystemExit(0)
-preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
-old=inv(OLD);new=inv(B);require(sum(x['Size']for x in old+new)+item['bytes']+512*1024**2<4*1024**3,'Aggregate storage guard');require(len(new)<2,'Stage count guard');require(batch['baseline_a']+batch['class_a_reserved']+30<9000 and batch['baseline_b']+batch['class_b_reserved']+100<90000,'Request planning guard')
-for x in old:
- try:
-  with urllib.request.urlopen(urllib.request.Request('https://'+OLD+'.t3.tigrisbucket.io/'+x['Key'],method='HEAD'),timeout=20)as r:raise RuntimeError('Old source public')
- except urllib.error.HTTPError as e:require(e.code==403,'Old privacy uncertain')
-# Commit request reserve before any real upload. No card or billing mutation exists in this workflow.
-batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
-require(ledger.claim(item,'instagram'),'Existing item claim')
+resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
+if not resume:
+ channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
+ # Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
+ exclude=set()
+ for p in dupes:
+  require(p['status']=='sent'and code(p.get('externalLink'))==item['old_shortcode'],'Caption duplicate is not the mapped deleted original')
+  require(not is_present(item['old_shortcode']),'Mapped original still publicly present');exclude.add(p['id'])
+ recent=Inventory(p for p in recent if p['id']not in exclude)
+ now=datetime.datetime.now(datetime.timezone.utc)
+ for row in recent:
+  ts=row.get('sentAt')or row.get('dueAt')
+  if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<2400:
+   receipt(status='waiting_minimum_40min_spacing',item=item['id']);raise SystemExit(0)
+ preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+ old=inv(OLD);new=inv(B);require(sum(x['Size']for x in old+new)+item['bytes']+512*1024**2<4*1024**3,'Aggregate storage guard');require(len(new)<2,'Stage count guard');require(batch['baseline_a']+batch['class_a_reserved']+30<9000 and batch['baseline_b']+batch['class_b_reserved']+100<90000,'Request planning guard')
+ for x in old:
+  try:
+   with urllib.request.urlopen(urllib.request.Request('https://'+OLD+'.t3.tigrisbucket.io/'+x['Key'],method='HEAD'),timeout=20)as r:raise RuntimeError('Old source public')
+  except urllib.error.HTTPError as e:require(e.code==403,'Old privacy uncertain')
+ # Commit request reserve before any real upload. No card or billing mutation exists in this workflow.
+ batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
+ require(ledger.claim(item,'instagram'),'Existing item claim')
 pathlib.Path('render.sh').write_text(item['render']);subprocess.run(['bash','render.sh'],check=True)
 p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(x for x in meta['streams']if x['codec_type']=='video');subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True,capture_output=True)
 subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y','original-cover.png'],check=True,capture_output=True)
 from PIL import Image
 require(np.asarray(Image.open('original-cover.png')).mean()>12,'Black original cover');require(v['height']/v['width']>1.7 and v['sample_aspect_ratio']=='1:1'and any(x['codec_type']=='audio'for x in meta['streams']),'Original video shape/audio')
-k='xfer/'+item['id']+'-'+uuid.uuid4().hex+'.mp4';url='https://'+B+'.t3.tigrisbucket.io/'+k;print('::add-mask::'+url,flush=True);hk='host-'+item['id'];host={'key':k,'bucket':B,'url':url,'bytes':item['bytes'],'uploaded':time.time(),'deadline':batch['deadline'],'state':'upload_intent'};require(st.compare_and_swap(hk,None,host),'Host locator exists');ledger.checkpoint(item['id'],'instagram','uploading',session='tigris:'+k)
-with p.open('rb')as f:s3.put_object(Bucket=B,Key=k,Body=f,ContentType='video/mp4',ACL='public-read',IfNoneMatch='*')
-acl=s3.get_object_acl(Bucket=B,Key=k);require(any(g['Grantee'].get('URI','').endswith('/AllUsers')and g['Permission']=='READ'for g in acl['Grants']),'Public ACL absent')
-with urllib.request.urlopen(url,timeout=90)as r:data=r.read(item['bytes']+1)
-require(len(data)==item['bytes']and hashlib.sha256(data).hexdigest()==item['sha256'],'Delivery original differs');del data
-host,hv=st.get(hk);host['state']='verified_original';require(st.compare_and_swap(hk,hv,host),'Host checkpoint conflict')
-ledger.checkpoint(item['id'],'instagram','uncertain',session='buffer_create_draft')
-r=buf.draft(CH,caption,url,item['cover_ms']);require(r.get('post',{}).get('id'),'Draft rejected; reconcile');pid=r['post']['id'];ledger.checkpoint(item['id'],'instagram','ready_for_review',external_id=pid,session='draft_created')
+if not resume:
+ k='xfer/'+item['id']+'-'+uuid.uuid4().hex+'.mp4';url='https://'+B+'.t3.tigrisbucket.io/'+k;print('::add-mask::'+url,flush=True);hk='host-'+item['id'];host={'key':k,'bucket':B,'url':url,'bytes':item['bytes'],'uploaded':time.time(),'deadline':batch['deadline'],'state':'upload_intent'};require(st.compare_and_swap(hk,None,host),'Host locator exists');ledger.checkpoint(item['id'],'instagram','uploading',session='tigris:'+k)
+ with p.open('rb')as f:s3.put_object(Bucket=B,Key=k,Body=f,ContentType='video/mp4',ACL='public-read',IfNoneMatch='*')
+ acl=s3.get_object_acl(Bucket=B,Key=k);require(any(g['Grantee'].get('URI','').endswith('/AllUsers')and g['Permission']=='READ'for g in acl['Grants']),'Public ACL absent')
+ with urllib.request.urlopen(url,timeout=90)as r:data=r.read(item['bytes']+1)
+ require(len(data)==item['bytes']and hashlib.sha256(data).hexdigest()==item['sha256'],'Delivery original differs');del data
+ host,hv=st.get(hk);host['state']='verified_original';require(st.compare_and_swap(hk,hv,host),'Host checkpoint conflict')
+ ledger.checkpoint(item['id'],'instagram','uncertain',session='buffer_create_draft')
+ r=buf.draft(CH,caption,url,item['cover_ms']);require(r.get('post',{}).get('id'),'Draft rejected; reconcile');pid=r['post']['id'];ledger.checkpoint(item['id'],'instagram','ready_for_review',external_id=pid,session='draft_created')
+else:
+ rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id'];host,_=st.get('host-'+item['id']);url=host['url'];hk='host-'+item['id'];caption=item['caption'];channel=buf.channel(CH);require(channel['name']=='reelsaga3000','Wrong channel')
 draft=buf.post(pid);dv=draft['assets'][0]['video'];require(draft['status']=='draft'and draft['text']==caption and dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms']and not dv['isVideoProcessing'],'Draft verification differs')
 require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Draft metadata differs')
 # Compare actual Buffer-selected thumbnail to original cover before public mutation.
 thumb=draft['assets'][0]['thumbnail'];print('::add-mask::'+thumb,flush=True)
-with urllib.request.urlopen(thumb,timeout=45)as r:pathlib.Path('buffer-cover.jpg').write_bytes(r.read(5000000))
+for attempt in range(6):
+ try:
+  with urllib.request.urlopen(thumb,timeout=45)as r:pathlib.Path('buffer-cover.jpg').write_bytes(r.read(5000000))
+  break
+ except urllib.error.HTTPError as e:
+  if e.code not in(403,404)or attempt==5:raise
+  time.sleep(20);thumb=buf.post(pid)['assets'][0]['thumbnail']
+  print('::add-mask::'+thumb,flush=True)
 from public_verify import similarity
 sc=similarity('original-cover.png','buffer-cover.jpg');require(sc['correlation']>.95 and sc['mean_error']<15,'Buffer cover differs')
 ledger.checkpoint(item['id'],'instagram','uncertain',external_id=pid,session='buffer_release_existing_draft');r=buf.release(pid,caption,url,item['cover_ms']);require(r.get('post',{}).get('id')==pid,'Release unacknowledged; reconcile')
