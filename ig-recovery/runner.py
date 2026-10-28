@@ -59,7 +59,10 @@ for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
- require(not r or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
+ reconcile_started = bool(r and os.environ.get('RECOVERY_RECONCILE_STARTED')=='1' and r['state']=='started' and r.get('external_id') is None and r.get('session') is None)
+ require(not r or reconcile_started or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
+ if reconcile_started:
+  ledger.verify_item(i,'instagram');held_host,_=st.get('host-'+i['id']);require(held_host is None,'Started item has host intent; reconcile manually')
  item=i;break
 if item is None:receipt(status='all_33_verified_no_new_post');raise SystemExit(0)
 receipt(status='preflight',item=item['id'])
@@ -85,7 +88,10 @@ if not resume:
   except urllib.error.HTTPError as e:require(e.code==403,'Old privacy uncertain')
  # Commit request reserve before any real upload. No card or billing mutation exists in this workflow.
  batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
- require(ledger.claim(item,'instagram'),'Existing item claim')
+ if not reconcile_started:require(ledger.claim(item,'instagram'),'Existing item claim')
+ else:
+  rec,_=st.get(ledger.key(item['id'],'instagram'));held_host,_=st.get('host-'+item['id']);require(rec['state']=='started'and rec.get('external_id')is None and rec.get('session')is None and held_host is None,'Reconcile evidence changed')
+  receipt(status='started_claim_no_host_or_platform_duplicate_verified',item=item['id'])
 if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  rec,_=st.get(ledger.key(item['id'],'instagram'));p=buf.post(rec['external_id']);thumb=p['assets'][0]['thumbnail'];print('::add-mask::'+thumb)
  from urllib.parse import urlsplit
@@ -99,6 +105,8 @@ if resume:
  with urllib.request.urlopen(host['url'],timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
 else:
  pathlib.Path('render.sh').write_text(item['render']);subprocess.run(['bash','render.sh'],check=True)
+ from render_output import normalize_original
+ normalize_original(pathlib.Path('.'),item['bytes'],item['sha256'])
 p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(x for x in meta['streams']if x['codec_type']=='video');subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True,capture_output=True)
 subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y','original-cover.png'],check=True,capture_output=True)
