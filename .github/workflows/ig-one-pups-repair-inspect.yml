@@ -23,7 +23,7 @@ jobs:
         REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
       run: 'set +x
 
-        python ig-one-repair/inspect.py'
+        python ig-one-repair/diagnostic_probe.py'
     - uses: actions/upload-artifact@v4
       if: always()
       with:
