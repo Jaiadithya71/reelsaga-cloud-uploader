@@ -70,6 +70,16 @@
       "playlist_membership_saved": true,
       "native_ai_verified": true,
       "playlist_order_verified": false
+    },
+    "episode3part3": {
+      "id": "6KZHmezXjr4",
+      "url": "https://youtube.com/shorts/6KZHmezXjr4",
+      "sent_at": "2026-10-29T20:18:03+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-29T20:18:23+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true,
+      "playlist_order_verified": false
     }
   },
   "instagram": {
