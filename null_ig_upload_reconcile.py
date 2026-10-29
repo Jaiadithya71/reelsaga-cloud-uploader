@@ -9,7 +9,7 @@ from buffer_client import Buffer
 class State(GitHubState):
  def url(self,k):return self.base+'/contents/state-v2/'+k+'.enc'
 st=State(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ.pop('REELSAGA_LEDGER_KEY'))
-i='dramabox-null42000029033-ep3-part1-v1';item=next(x for x in json.loads(pathlib.Path('null-public-catalog.json').read_text())['items']if x['id']==i)
+i='dramabox-null42000029033-ep3-part2-v1';item=next(x for x in json.loads(pathlib.Path('null-public-catalog.json').read_text())['items']if x['id']==i)
 rec,rv=st.get(DurableLedger.key(i,'instagram'));host,hv=st.get('host-'+i)
 assert rec and host and rec['state']=='uploading' and not rec.get('external_id') and host['state']=='upload_intent'
 assert rec['session']=='tigris:'+host['key'] and host['bytes']==item['bytes']

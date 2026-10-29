@@ -65,7 +65,7 @@ for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
- require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (os.environ.get('NULL_RESUME_VERIFIED_UPLOAD')=='1'and i['id']=='dramabox-null42000029033-ep3-part1-v1'and r['state']=='uploading'and not r.get('external_id')and r.get('session','').startswith('tigris:')) or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
+ require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (os.environ.get('NULL_RESUME_VERIFIED_UPLOAD')=='1'and i['id']=='dramabox-null42000029033-ep3-part2-v1'and r['state']=='uploading'and not r.get('external_id')and r.get('session','').startswith('tigris:')) or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
  item=i;break
 if item is None:receipt(status='all_30_verified_no_new_post');raise SystemExit(0)
 gate=review.get(item['id'])
@@ -78,7 +78,7 @@ for earlier in m['items'][:position]:
 receipt(status='preflight',item=item['id'])
 resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
 recover_upload=os.environ.get('NULL_RESUME_VERIFIED_UPLOAD')=='1'
-require(not recover_upload or item['id']=='dramabox-null42000029033-ep3-part1-v1','Recovery exact item mismatch')
+require(not recover_upload or item['id']=='dramabox-null42000029033-ep3-part2-v1','Recovery exact item mismatch')
 if not resume:
  channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
  # Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
