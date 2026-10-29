@@ -45,7 +45,7 @@
     "8": [
       0.0,
       51.32,
-      102.36,
+      102.64,
       154.132993
     ],
     "9": [
@@ -103,5 +103,13 @@
       "pixels": "source8sclipinspected"
     },
     "not_public_approved": true
+  },
+  "episode8_boundary_review": {
+    "reviewed_at": "2026-10-30T02:05:26+05:30",
+    "51.32": "prior3s no speech; next begins Im gonna completely; source8s pixels checked",
+    "old102.36": "splits I wont stop now, corrected before any P2/P3 upload",
+    "102.64": "complete I wont stop now; next Chloe think about this; tight0.5s clips/source8s pixels checked",
+    "source_run": 40948845049,
+    "rendered_edges_pending": true
   }
 }
