@@ -128,6 +128,15 @@
       "claims_checked_at": "2026-10-29T23:08:20+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true
+    },
+    "episode6part1": {
+      "id": "abpsF-azjdU",
+      "url": "https://youtube.com/shorts/abpsF-azjdU",
+      "sent_at": "2026-10-29T23:42:21+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-29T23:42:30+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true
     }
   },
   "instagram": {
