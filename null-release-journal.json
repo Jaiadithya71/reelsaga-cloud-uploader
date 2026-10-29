@@ -178,6 +178,16 @@
       "workflow_run": 40906615324,
       "native_ai_verified": true,
       "reconciled_upload_run": 40906195466
+    },
+    "episode3part3": {
+      "id": "6ae377a5d620628a0e7d33cf",
+      "url": "https://www.instagram.com/reel/DfFd0aXlV1k/",
+      "sent_at": "2026-10-29T16:46:17.287Z",
+      "state": "served_pixels_verified_host_absence_verified",
+      "workflow_run": 40914157028,
+      "native_ai_verified": true,
+      "single_upload_readback_verified": true,
+      "lost_ack_fallback_live_exercised": false
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
