@@ -123,6 +123,45 @@
       "old_shortcode": "NO_OLD_ORIGINAL",
       "source_start": 90.8,
       "source_end": 139.220998
+    },
+    {
+      "id": "dramabox-null42000029033-ep4-part1-v1",
+      "episode": 4,
+      "part": 1,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 4 Part 1/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "976cee7d63f3ef3de54fae494bf7ebbdd7f639dd9c531b543f1ffc6b1dcc01eb",
+      "bytes": 51597721,
+      "sha256": "f728cea96bd778ed6fa35ebc033ee0371ccaf3ae0b993dbedd6e344dc8c4951d",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 0,
+      "source_end": 38.2
+    },
+    {
+      "id": "dramabox-null42000029033-ep4-part2-v1",
+      "episode": 4,
+      "part": 2,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 4 Part 2/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "d97f377ff36bc42256c8be22524b4ac2ed039c8ffe5cd6b917f379b3e8920b3a",
+      "bytes": 45174083,
+      "sha256": "50d9a1eaac0151876e097335a12523f89944d54df2271a6ca6b1fe1d654be53d",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 38.2,
+      "source_end": 74.28
+    },
+    {
+      "id": "dramabox-null42000029033-ep4-part3-v1",
+      "episode": 4,
+      "part": 3,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 4 Part 3/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "819de9509263a1d9483c3c196544ea51c3b62fcd121cf3007760f519a0ff4fe1",
+      "bytes": 41195711,
+      "sha256": "939f3c20766a8c5d26ebb1f1e7275c73c8a0e2a24ecace73639e01c0c8029822",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 74.28,
+      "source_end": 111.339002
     }
   ],
   "full_planned_parts": 33,
