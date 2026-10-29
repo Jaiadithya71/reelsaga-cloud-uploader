@@ -1,4 +1,4 @@
-name: Weakest Null episode1 PRIVATE qualification
+name: Weakest Null per episode PRIVATE qualification
 'on':
   workflow_dispatch:
     inputs:

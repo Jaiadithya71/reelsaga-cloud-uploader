@@ -16,8 +16,9 @@ from adapters import YouTube,checked
 from actions_state_probe import probe
 
 import requests,io,zipfile,subprocess
-e=int(os.environ['NULL_EP']);assert e==1,'First episode only until Studio qualification'
-durations={1:140.459002};cuts={1:50.32};parts={1:3}
+e=int(os.environ['NULL_EP']);assert 1<=e<=11
+sourceqa={1: {'duration': 140.459002, 'width': 1080, 'height': 1920, 'sha256': 'c0ab0b2b61c3873e5407fd287c1bbda3b4d0af44f28a6607ba910ecdf8dd1ba4'}, 2: {'duration': 124.309002, 'width': 1080, 'height': 1920, 'sha256': 'bf75ae0e96f0cc2d15bfa0cb9b2f12eebc7bd68d646acfd216370e9f295d8ee8'}, 3: {'duration': 139.220998, 'width': 1080, 'height': 1920, 'sha256': '393cc0588f6dd7a0fa523dbfa17fa05f9423ac06050314e6f1df071c9fcd7760'}, 4: {'duration': 111.339002, 'width': 1080, 'height': 1920, 'sha256': '1ae7af0d4017bc865275ca589f109cdd6ea12bdb42ccdde5c29337b880174051'}, 5: {'duration': 94.165011, 'width': 1080, 'height': 1920, 'sha256': 'a5e6cc64ae470700cb1744577215c748a01f31e5bd261a0851ddb75ff888e426'}, 6: {'duration': 151.339002, 'width': 1080, 'height': 1920, 'sha256': '0e3ebc12c10a27930b6c04d198421ebb8923fe87fa7316e815c09aba78ba3ffc'}, 7: {'duration': 123.84, 'width': 1080, 'height': 1920, 'sha256': '3cd37a198952739849ae326d701a03dfd9335534222e894244bbdc676f72659c'}, 8: {'duration': 154.132993, 'width': 1080, 'height': 1920, 'sha256': 'b137d15ca2c069d3b3f5211bb2e39f9fa9b6d1ac302306f679df0d21bae0a7b7'}, 9: {'duration': 109.72, 'width': 1080, 'height': 1920, 'sha256': '87adf87deec5bb8563f43e0b1303e28ba847d58fb4910f1eb9e3dcfede7c3b3e'}, 10: {'duration': 217.515011, 'width': 1080, 'height': 1922, 'sha256': '0739e933f71423a619d17b7c2cc8e1997e160bdecd2887dceeeaf722367e841c'}, 11: {'duration': 69.099002, 'width': 1080, 'height': 1920, 'sha256': '296cc98c003909741f9a86f8a273dd306ebbd0583e929ad40452a4e574d5e904'}}
+durations={1: 140.459002, 2: 124.309002, 3: 139.220998, 4: 111.339002, 5: 94.165011, 6: 151.339002, 7: 123.84, 8: 154.132993, 9: 109.72, 10: 217.515011, 11: 69.099002};cuts={1: 50.32, 2: 40.28, 3: 48.12, 4: 38.2, 5: 47.16, 6: 48.48, 7: 40.96, 8: 51.32, 9: 36.24, 10: 43.88, 11: 32.88};parts={1: 3, 2: 3, 3: 3, 4: 3, 5: 2, 6: 3, 7: 3, 8: 3, 9: 3, 10: 5, 11: 2}
 u='https://cps-distr.ikyuedu.com/distribution/11/DramaBox资源包-42000029033-19b48bade6b3906f40a7fafe28d1b268.zip'
 s=requests.Session();response=s.head(u,timeout=30);response.raise_for_status();size=int(response.headers['Content-Length'])
 class Remote(io.RawIOBase):
@@ -41,8 +42,8 @@ class Remote(io.RawIOBase):
     last=ex
     if attempt<2:time.sleep(3*(attempt+1))
   raise last
-z=zipfile.ZipFile(Remote());member=f'Episode{e}.mp4';assert member in z.namelist();Path('source.mp4').write_bytes(z.read(member));assert hashlib.sha256(Path('source.mp4').read_bytes()).hexdigest()=='c0ab0b2b61c3873e5407fd287c1bbda3b4d0af44f28a6607ba910ecdf8dd1ba4'
-meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json','source.mp4']));v=next(x for x in meta['streams'] if x['codec_type']=='video');assert (v['width'],v['height'])==(1080,1920);assert abs(float(meta['format']['duration'])-durations[e])<.1
+z=zipfile.ZipFile(Remote());member=f'Episode{e}.mp4';assert member in z.namelist();Path('source.mp4').write_bytes(z.read(member));assert hashlib.sha256(Path('source.mp4').read_bytes()).hexdigest()==sourceqa[e]['sha256']
+meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json','source.mp4']));v=next(x for x in meta['streams'] if x['codec_type']=='video');assert (v['width'],v['height'])==(sourceqa[e]['width'],sourceqa[e]['height']);assert abs(float(meta['format']['duration'])-durations[e])<.1
 subprocess.run(['ffmpeg','-v','error','-i','source.mp4','-f','null','-'],check=True)
 subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-i','source.mp4','-t',str(cuts[e]),'-vf',f'fade=t=in:st=0:d=0.5,fade=t=out:st={cuts[e]-.5}:d=0.5','-af',f'afade=t=in:st=0:d=0.5,afade=t=out:st={cuts[e]-.5}:d=0.5','-c:v','libx264','-threads:v','3','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','ev.mp4'],check=True)
 subprocess.run(['ffmpeg','-v','error','-i','ev.mp4','-f','null','-'],check=True)
