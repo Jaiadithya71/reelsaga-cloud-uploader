@@ -181,11 +181,12 @@
       "id": "fyENQWZvwxY",
       "url": "https://youtube.com/shorts/fyENQWZvwxY",
       "sent_at": "2026-10-30T01:52:01+05:30",
-      "state": "public_hd_no_claims",
+      "state": "public_record_global_block_notice",
       "claims_checked_at": "2026-10-30T01:52:12+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": true
+      "playlist_order_verified": true,
+      "restriction_notice_at": "2026-10-30T04:49:09+05:30"
     },
     "episode7part3": {
       "id": "IDYuOmAWKVU",
@@ -470,9 +471,25 @@
       "3qNS0fjje5U",
       "HQ1kiMW3IVs",
       "wxxmOU3RzCs",
-      "9xFr4vzfDOA"
+      "9xFr4vzfDOA",
+      "fyENQWZvwxY"
     ],
     "claims": "global_visual_DramaBox_no_strike",
-    "no_deletions": true
+    "no_deletions": true,
+    "notice_evidence": {
+      "fyENQWZvwxY": {
+        "source": "live_gmail",
+        "account": "jaiadithya2025.71@gmail.com",
+        "thread_id": "1a189f5ce2158a46",
+        "received_at": "2026-10-30T04:49:09+05:30",
+        "checked_at": "2026-10-30T05:11:40+05:30",
+        "claimant": "DramaBox",
+        "type": "Video",
+        "impact": "Blocked globally",
+        "strike": false,
+        "studio_link_from_notice": "https://studio.youtube.com/video/fyENQWZvwxY/edit?d=vc",
+        "studio_recheck_pending": true
+      }
+    }
   }
 }
