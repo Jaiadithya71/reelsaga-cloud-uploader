@@ -22,6 +22,10 @@ for name in members:
  dec=subprocess.run(['ffmpeg','-v','error','-threads','2','-i',str(p),'-f','null','-'],capture_output=True)
  for sec in (2,25):
   subprocess.run(['ffmpeg','-v','error','-ss',str(sec),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y',str(root/(name+f'.{sec}s.jpg'))],check=True)
+ ep=int(name[7:-4]);bs=json.loads(pathlib.Path('null-candidate-bounds.json').read_text())['bounds'][str(ep)]
+ for cut in bs[1:-1]:
+  for delta in (-0.4,0.4):
+   subprocess.run(['ffmpeg','-v','error','-ss',str(cut+delta),'-i',str(p),'-frames:v','1','-vf','scale=270:480','-y',str(root/f'e{ep}-cut{cut}-{delta}.jpg')],check=True)
  r={'episode':int(name[7:-4]),'duration':float(meta['format']['duration']),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'width':v['width'],'height':v['height'],'audio':any(i['codec_type']=='audio'for i in meta['streams']),'decode':'pass' if dec.returncode==0 and not dec.stderr else 'review','decode_stderr':dec.stderr.decode()[:3000]}
  sc=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-vf',"scale=180:320,select='gt(scene,0.25)',showinfo",'-an','-f','null','-'],capture_output=True)
  r['scene_times']=[float(t)for t in re.findall(r'pts_time:([0-9.]+)',sc.stderr.decode())]
