@@ -171,6 +171,15 @@
       "playlist_membership_saved": true,
       "native_ai_verified": true,
       "corrected_private_item": "dramabox-null42000029033-ep7-part1-private-probe-cut4496-v2"
+    },
+    "episode7part2": {
+      "id": "fyENQWZvwxY",
+      "url": "https://youtube.com/shorts/fyENQWZvwxY",
+      "sent_at": "2026-10-30T01:52:01+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-30T01:52:12+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true
     }
   },
   "instagram": {
