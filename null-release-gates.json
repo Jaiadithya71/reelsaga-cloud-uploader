@@ -1,12 +1,14 @@
 {
   "dramabox-null42000029033-ep1-part1-private-probe": {
     "video_id": "3qNS0fjje5U",
-    "state": "private_hd_no_claims",
-    "reviewed_at": "2026-10-29T13:45:21+05:30",
+    "state": "public_hd_no_claims",
+    "reviewed_at": "2026-10-29T15:47:43+05:30",
     "claims_url": "https://studio.youtube.com/video/3qNS0fjje5U/claims",
     "evidence": "/downloads/cloud-browser-20261029-081521.png",
-    "public_release_approved": false,
-    "source_sha256": "c0ab0b2b61c3873e5407fd287c1bbda3b4d0af44f28a6607ba910ecdf8dd1ba4"
+    "public_release_approved": true,
+    "source_sha256": "c0ab0b2b61c3873e5407fd287c1bbda3b4d0af44f28a6607ba910ecdf8dd1ba4",
+    "public_url": "https://youtube.com/shorts/3qNS0fjje5U",
+    "published_at": "2026-10-29T15:47:35+05:30"
   },
   "dramabox-null42000029033-ep2-part1-private-probe": {
     "video_id": "HQ1kiMW3IVs",
@@ -97,5 +99,14 @@
     "evidence": "/downloads/cloud-browser-20261029-090052.png",
     "public_release_approved": false,
     "source_sha256": "296cc98c003909741f9a86f8a273dd306ebbd0583e929ad40452a4e574d5e904"
+  },
+  "dramabox-null42000029033-ep1-part2-private-probe": {
+    "video_id": "J6e4sL-llbo",
+    "state": "private_hd_no_claims",
+    "reviewed_at": "2026-10-29T15:57:50+05:30",
+    "claims_url": "https://studio.youtube.com/video/J6e4sL-llbo/claims",
+    "evidence": "/downloads/cloud-browser-20261029-102751.png",
+    "public_release_approved": true,
+    "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA"
   }
 }

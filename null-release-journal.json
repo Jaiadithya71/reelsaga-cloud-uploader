@@ -1,0 +1,21 @@
+{
+  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA",
+  "youtube": {
+    "episode1part1": {
+      "id": "3qNS0fjje5U",
+      "url": "https://youtube.com/shorts/3qNS0fjje5U",
+      "sent_at": "2026-10-29T15:47:35+05:30",
+      "state": "public_hd_no_claims"
+    }
+  },
+  "instagram": {
+    "episode1part1": {
+      "id": "6ae31dffdda228e8b1e01e2f",
+      "url": "https://www.instagram.com/reel/DfEx5yuDzyY/",
+      "sent_at": "2026-10-29T10:21:49.960Z",
+      "state": "served_pixels_verified_host_absence_verified",
+      "workflow_run": 40856632705,
+      "native_ai_verified": true
+    }
+  }
+}

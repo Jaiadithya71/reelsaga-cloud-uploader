@@ -1,6 +1,13 @@
-name: Weakest Null E1P1 original renderer audit
+name: Weakest Null own-part original renderer audit
 'on':
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      episode:
+        required: true
+        default: '1'
+      part:
+        required: true
+        default: '1'
 permissions:
   contents: read
 jobs:
@@ -14,7 +21,10 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.12'
-    - run: 'sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+    - env:
+        NULL_EP: ${{ inputs.episode }}
+        NULL_PART: ${{ inputs.part }}
+      run: 'sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
 
         python -m pip install requests
 

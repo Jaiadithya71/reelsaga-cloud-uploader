@@ -1,4 +1,5 @@
-import requests,io,zipfile,pathlib,subprocess,json,hashlib
+import requests,io,zipfile,pathlib,subprocess,json,hashlib,os
+e=int(os.environ.get('NULL_EP','1'));part=int(os.environ.get('NULL_PART','1'));bounds=json.loads(pathlib.Path('null-candidate-bounds.json').read_text())['bounds'][str(e)];assert 1<=part<len(bounds);start,end=bounds[part-1:part+1];length=end-start;assert 0<length<=55
 def require(ok,why):
  if not ok:raise RuntimeError(why)
 import requests,io,zipfile
@@ -15,6 +16,6 @@ class Remote(io.RawIOBase):
   n=min(n,size-self.pos)
   if n<=0:return b''
   rr=sess.get(u,headers={'Range':f'bytes={self.pos}-{min(size-1,self.pos+n-1)}'},timeout=45);rr.raise_for_status();require(rr.status_code==206,'Source range unsupported');self.pos+=len(rr.content);return rr.content
-z=zipfile.ZipFile(Remote());pathlib.Path('source.mp4').write_bytes(z.read('Episode1.mp4'))
-subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-ss','0','-i','source.mp4','-t','50.32','-vf','fade=t=in:st=0:d=0.5,fade=t=out:st=49.82:d=0.5','-af','afade=t=in:st=0:d=0.5,afade=t=out:st=49.82:d=0.5','-c:v','libx264','-threads:v','3','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','p1.mp4'],check=True)
+z=zipfile.ZipFile(Remote());pathlib.Path('source.mp4').write_bytes(z.read(f'Episode{e}.mp4'))
+subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-ss',str(start),'-i','source.mp4','-t',str(length),'-vf',f'fade=t=in:st=0:d=0.5,fade=t=out:st={length-.5}:d=0.5','-af',f'afade=t=in:st=0:d=0.5,afade=t=out:st={length-.5}:d=0.5','-c:v','libx264','-threads:v','3','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','p1.mp4'],check=True)
 p=pathlib.Path('p1.mp4');subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True);pathlib.Path('render-receipt.json').write_text(json.dumps({'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()},indent=2))
