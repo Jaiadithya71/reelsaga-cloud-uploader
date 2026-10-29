@@ -163,6 +163,32 @@
       "old_shortcode": "NO_OLD_ORIGINAL",
       "source_start": 74.28,
       "source_end": 111.339002
+    },
+    {
+      "id": "dramabox-null42000029033-ep5-part1-v1",
+      "episode": 5,
+      "part": 1,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 5 Part 1/2\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "b993dcb2df6f4217ae1f9bbfb0b8fd1400963efd754e8daaa38d8f82ddf7554e",
+      "bytes": 53560128,
+      "sha256": "7cde98abb343cc0439588a4c157c8dff01387224a05c81c55f90ce42dd7621b9",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 0,
+      "source_end": 47.16
+    },
+    {
+      "id": "dramabox-null42000029033-ep5-part2-v1",
+      "episode": 5,
+      "part": 2,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 5 Part 2/2\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "0c0521924c71e2cf408a2abd93c0e124dba4d05c3b254c670f179dd2bb41fbbd",
+      "bytes": 59345787,
+      "sha256": "c49c6653cc879b3107377fa7e8f76dcf04a6925903e9bff64c34b5e266fc209d",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 47.16,
+      "source_end": 94.165011
     }
   ],
   "full_planned_parts": 33,

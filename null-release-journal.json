@@ -221,5 +221,21 @@
       "state": "private_hd_no_claims",
       "checked_at": "2026-10-29T20:53:29+05:30"
     }
+  },
+  "playlist_order_checked_at": "2026-10-29T22:00:59+05:30",
+  "playlist_order_verified_through": "episode4part3",
+  "playlist_count": 12,
+  "private_episode5": {
+    "part1": {
+      "id": "gsGPfkVAT40",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-29T22:00:38+05:30"
+    },
+    "part2": {
+      "id": "avG4GdYoIT0",
+      "state": "private_hd_claims_readback_pending",
+      "checked_at": "2026-10-29T22:01:59+05:30",
+      "workflow_run": 40908770971
+    }
   }
 }
