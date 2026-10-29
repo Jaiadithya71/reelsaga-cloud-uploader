@@ -137,6 +137,15 @@
       "claims_checked_at": "2026-10-29T23:42:30+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true
+    },
+    "episode6part2": {
+      "id": "Dz3yfQhxyJA",
+      "url": "https://youtube.com/shorts/Dz3yfQhxyJA",
+      "sent_at": "2026-10-30T00:15:38+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-30T00:15:56+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true
     }
   },
   "instagram": {

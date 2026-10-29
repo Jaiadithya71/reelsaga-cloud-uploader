@@ -11,11 +11,12 @@ from adapters import checked
 class State(GitHubState):
  def url(self,key):return self.base+'/contents/state-v2/'+key+'.enc'
 b=State(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ.pop('REELSAGA_LEDGER_KEY'))
-i='dramabox-null42000029033-ep3-part3-private-probe';record,_=b.get(DurableLedger.key(i,'youtube'));control,_=b.get('account-control')
-assert record is None,'Existing exact item claim; no retry'
-assert control=={'enabled':False},'Disabled control not verified; hold'
+items=[('dramabox-null42000029033-ep7-part1-private-probe-cut4496-v2','The Weakest Null Commands the Devil King! - Episode 7 Part 1/3 | DramaBox'),('dramabox-null42000029033-ep7-part2-private-probe','The Weakest Null Commands the Devil King! - Episode 7 Part 2/3 | DramaBox')]
+control,_=b.get('account-control');assert control=={'enabled':False}
 c=GoogleCredentials(Store(validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS'))),GoogleTokenForms(),SCOPES);token=c.access_token();api=Transport(lambda:token,{'www.googleapis.com'})
 identity=checked(api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})).data;assert {x['id']for x in identity['items']}=={CHANNEL}
-item={'title':'The Weakest Null Commands the Devil King! - Episode 3 Part 3/3 | DramaBox'}
-s=pathlib.Path('null_part_private_probe.py').read_text();block=s[s.index('        def _dupread():'):s.index('        _da=0')];exec(textwrap.dedent(block));n=_dupread()
-print(json.dumps({'item_id':i,'ledger_unclaimed':True,'control_disabled':True,'complete_channel_inventory_checked':True,'inventory_video_count':n,'exact_title_absent':True,'no_mutations':True}))
+s=pathlib.Path('null_part_private_probe.py').read_text();block=s[s.index('        def _dupread():'):s.index('        _da=0')]
+for iid,title in items:
+ record,_=b.get(DurableLedger.key(iid,'youtube'));assert record is None,'Exact claim exists; hold'
+ item={'id':iid,'title':title};exec(textwrap.dedent(block));n=_dupread()
+ print(json.dumps({'item_id':iid,'ledger_unclaimed':True,'control_disabled':True,'complete_channel_inventory_checked':True,'inventory_video_count':n,'no_unexpected_exact_title':True,'allowed_retained_private_id':'9zqazaUJ25I'if 'cut4496' in iid else None,'no_mutations':True}))
