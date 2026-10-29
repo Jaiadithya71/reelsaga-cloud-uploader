@@ -10,7 +10,7 @@ from queue_guard import require,preflight,media
 from public_verify import verify
 B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-golden-batch-20261029'
 def receipt(**kw):pathlib.Path('recovery-receipt.json').write_text(json.dumps(kw,indent=2))
-m={'items':[{'id': 'dramabox-golden42000028903-ep1-part1-v1', 'episode': 1, 'part': 1, 'caption': 'Ad\n\nStolen as a baby and raised by dragons, Caesar enters the Dragon Knight Trials to uncover his past.\n\nThe Golden Dragon Rider | Episode 1 Part 1/4\nThis is only one piece of the story. The rest is waiting on the channel.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/xloSvC56azwG\n#TheGoldenDragonRider #AIDrama #FantasyDrama #ReelSaga', 'caption_sha256': 'b895c674f948d155a8c252894db0abd1a1f752215f21e4eda033a01ce1376b01', 'bytes': 46003218, 'sha256': 'bc93d6dcd5574b03dc02d9c8736c4eabbe354a70b8e44f64c0338dc1733a302d', 'cover_ms': 600, 'old_shortcode': 'NO_OLD_ORIGINAL'}]}
+m={'items':[{'id': 'dramabox-golden42000028903-ep1-part1-v1', 'episode': 1, 'part': 1, 'caption': 'Ad\n\nStolen as a baby and raised by dragons, Caesar enters the Dragon Knight Trials to uncover his past.\n\nThe Golden Dragon Rider | Episode 1 Part 1/4\nThis is only one piece of the story. The rest is waiting on the channel.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/xloSvC56azwG\n#TheGoldenDragonRider #AIDrama #FantasyDrama #ReelSaga', 'caption_sha256': 'b895c674f948d155a8c252894db0abd1a1f752215f21e4eda033a01ce1376b01', 'bytes': 46001430, 'sha256': '5f3483f6924d367528f9f2298b35ef2fdb75374a021634a3f468f6a03f56a312', 'cover_ms': 600, 'old_shortcode': 'NO_OLD_ORIGINAL'}]}
 class State(GitHubState):
  def url(self,k):return self.base+'/contents/state-v2/'+k+'.enc'
 st=State(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ.pop('REELSAGA_LEDGER_KEY'));ledger=DurableLedger(st);buf=Buffer(os.environ.pop('REELSAGA_BUFFER_API_KEY'))
@@ -61,7 +61,7 @@ for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
- require(not r or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
+ require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
  item=i;break
 if item is None:receipt(status='all_33_verified_no_new_post');raise SystemExit(0)
 receipt(status='preflight',item=item['id'])
@@ -87,7 +87,16 @@ if not resume:
   except urllib.error.HTTPError as e:require(e.code==403,'Old privacy uncertain')
  # Commit request reserve before any real upload. No card or billing mutation exists in this workflow.
  batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
- require(ledger.claim(item,'instagram'),'Existing item claim')
+ existing,version=st.get(ledger.key(item['id'],'instagram'))
+ if existing:
+  old_item=dict(item,bytes=46003218,sha256='bc93d6dcd5574b03dc02d9c8736c4eabbe354a70b8e44f64c0338dc1733a302d')
+  require(existing['state']=='started' and not existing.get('external_id') and not existing.get('session'),'Not pre-external claim')
+  require(existing['metadata_hash']==ledger.metadata_hash(old_item),'Unexpected prior item')
+  host,_=st.get('host-'+item['id']);require(not host and not new,'Unexpected staged object')
+  # Complete live Buffer inventory above proves no matching caption in any lifecycle.
+  existing['metadata_hash']=ledger.metadata_hash(item);existing['render_reconciled_from_run']='40822739285';require(st.compare_and_swap(ledger.key(item['id'],'instagram'),version,existing),'Preexternal reconcile failed')
+  print('RECONCILED_PREEXTERNAL_RENDER_QA_40822970580',flush=True)
+ else:require(ledger.claim(item,'instagram'),'Existing item claim')
 if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  rec,_=st.get(ledger.key(item['id'],'instagram'));p=buf.post(rec['external_id']);thumb=p['assets'][0]['thumbnail'];print('::add-mask::'+thumb)
  from urllib.parse import urlsplit
