@@ -273,6 +273,45 @@
       "old_shortcode": "NO_OLD_ORIGINAL",
       "source_start": 81.4,
       "source_end": 123.84
+    },
+    {
+      "id": "dramabox-null42000029033-ep8-part1-v1",
+      "episode": 8,
+      "part": 1,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 8 Part 1/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "138453cdfd3d9b85116c3fc7b27cded62d17d747ec01a8b5a1724c8116e53a55",
+      "bytes": 70482821,
+      "sha256": "4b6822d82634bc285d72314b070b42c446550fdb33c27bacd60d7bf6da449f22",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 0,
+      "source_end": 51.32
+    },
+    {
+      "id": "dramabox-null42000029033-ep8-part2-v1",
+      "episode": 8,
+      "part": 2,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 8 Part 2/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "34f0811343ca63d4798facd49b4cdc2fd1a225f575ac7d1551bec3c83e5ca332",
+      "bytes": 71265170,
+      "sha256": "c864131fc22f758aa5026ef95be56379b00410af7170985701976e65957acc35",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 51.32,
+      "source_end": 102.64
+    },
+    {
+      "id": "dramabox-null42000029033-ep8-part3-v1",
+      "episode": 8,
+      "part": 3,
+      "caption": "Ad\n\nAt an academy where rank depends on the demon you command, Leo is the weakest outcast - until he gains the Devil King's power.\n\nThe Weakest Null Commands the Devil King! | Episode 8 Part 3/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/qL7HyrJRq1PC\n#TheWeakestNull #FantasyDrama #ReelSaga",
+      "caption_sha256": "e0cd438e9b7d743b7b79f26c484814df9be1bd59605f62e480d4d1b6e6c04241",
+      "bytes": 70099069,
+      "sha256": "f0174416f9e556a99f186ee51ef64d1c145acdb6f0881b031d77fe84592835e0",
+      "cover_ms": 600,
+      "old_shortcode": "NO_OLD_ORIGINAL",
+      "source_start": 102.64,
+      "source_end": 154.132993
     }
   ],
   "full_planned_parts": 33,

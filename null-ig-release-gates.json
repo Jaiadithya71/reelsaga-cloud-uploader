@@ -159,5 +159,29 @@
     "youtube_id": "IDYuOmAWKVU",
     "claims_checked_at": "2026-10-30T00:32:59+05:30",
     "renderer_verified_run": 40930254735
+  },
+  "dramabox-null42000029033-ep8-part1-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "4b6822d82634bc285d72314b070b42c446550fdb33c27bacd60d7bf6da449f22",
+    "reviewed_at": 1793307441.174921,
+    "youtube_id": "NsyrhHN4ei4",
+    "claims_checked_at": "2026-10-30T02:26:50+05:30",
+    "renderer_verified_run": 40950404906
+  },
+  "dramabox-null42000029033-ep8-part2-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "c864131fc22f758aa5026ef95be56379b00410af7170985701976e65957acc35",
+    "reviewed_at": 1793307441.2928147,
+    "youtube_id": "6nd_BeJOCJ0",
+    "claims_checked_at": "2026-10-30T02:27:03+05:30",
+    "renderer_verified_run": 40950408580
+  },
+  "dramabox-null42000029033-ep8-part3-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "f0174416f9e556a99f186ee51ef64d1c145acdb6f0881b031d77fe84592835e0",
+    "reviewed_at": 1793307441.3949544,
+    "youtube_id": "TwrffD-Lv-I",
+    "claims_checked_at": "2026-10-30T02:27:12+05:30",
+    "renderer_verified_run": 40950411974
   }
 }
