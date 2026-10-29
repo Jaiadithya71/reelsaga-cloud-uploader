@@ -39,7 +39,9 @@ jobs:
       if: always()
       with:
         name: ig-recovery-sanitized-receipt
-        path: 'recovery-receipt.json
+        path: 'upload-readback-receipt.json
+
+          recovery-receipt.json
 
           recovery-stop.json
 

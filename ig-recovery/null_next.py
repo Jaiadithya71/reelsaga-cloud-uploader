@@ -8,6 +8,7 @@ from durable_state import DurableLedger
 from buffer_client import Buffer,Inventory
 from queue_guard import require,preflight,media
 from public_verify import verify
+from verified_upload import put_once_verified
 B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-null-batch-20261029'
 def receipt(**kw):pathlib.Path('recovery-receipt.json').write_text(json.dumps(kw,indent=2))
 m=json.loads(pathlib.Path('null-public-catalog.json').read_text())
@@ -149,11 +150,20 @@ if not resume:
   require(s3.head_object(Bucket=B,Key=k)['ContentLength']==item['bytes'],'Saved object size mismatch')
  else:
   k='xfer/'+item['id']+'-'+uuid.uuid4().hex+'.mp4';url='https://'+B+'.t3.tigrisbucket.io/'+k;print('::add-mask::'+url,flush=True);hk='host-'+item['id'];host={'key':k,'bucket':B,'url':url,'bytes':item['bytes'],'uploaded':time.time(),'deadline':batch['deadline'],'state':'upload_intent'};require(st.compare_and_swap(hk,None,host),'Host locator exists');ledger.checkpoint(item['id'],'instagram','uploading',session='tigris:'+k)
-  with p.open('rb')as f:s3.put_object(Bucket=B,Key=k,Body=f,ContentType='video/mp4',ACL='public-read',IfNoneMatch='*')
+  upload_proof=put_once_verified(s3,B,k,p,item['bytes'],item['sha256'])
+  pathlib.Path('upload-readback-receipt.json').write_text(json.dumps(upload_proof,indent=2))
  acl=s3.get_object_acl(Bucket=B,Key=k);require(any(g['Grantee'].get('URI','').endswith('/AllUsers')and g['Permission']=='READ'for g in acl['Grants']),'Public ACL absent')
  with urllib.request.urlopen(url,timeout=90)as r:data=r.read(item['bytes']+1)
  require(len(data)==item['bytes']and hashlib.sha256(data).hexdigest()==item['sha256'],'Delivery original differs');del data
  host,hv=st.get(hk);host['state']='verified_original';require(st.compare_and_swap(hk,hv,host),'Host checkpoint conflict')
+ # Recheck exact saved identity and live channel inventory immediately before
+ # external creation. A reconciled acknowledgement never skips release gates.
+ rec,_=st.get(ledger.key(item['id'],'instagram'));saved,_=st.get(hk)
+ require(rec['state']=='uploading'and not rec.get('external_id')and rec['session']=='tigris:'+k and saved['key']==k and saved['bytes']==item['bytes']and saved['state']=='verified_original','Upload identity changed')
+ current=inv(B);require(len(current)==1 and current[0]['Key']==k and current[0]['Size']==item['bytes'],'Unexpected relay object after upload')
+ require(sum(x['Size']for x in inv(OLD)+current)+512*1024**2<4*1024**3,'Post-upload storage guard')
+ fresh=buf.inventory(ORG,CH);fresh=Inventory(x for x in fresh if x['id']not in exclude)
+ preflight(item,buf.channel(CH),fresh,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
  ledger.checkpoint(item['id'],'instagram','uncertain',session='buffer_create_draft')
  r=buf.draft(CH,caption,url,item['cover_ms']);require(r.get('post',{}).get('id'),'Draft rejected; reconcile');pid=r['post']['id'];ledger.checkpoint(item['id'],'instagram','ready_for_review',external_id=pid,session='draft_created')
 else:
