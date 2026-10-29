@@ -27,10 +27,21 @@ class Remote(io.RawIOBase):
  def tell(self):return self.pos
  def seek(self,o,w=0):self.pos=o if w==0 else self.pos+o if w==1 else size+o;return self.pos
  def read(self,n=-1):
+  import time
   if n<0:n=size-self.pos
-  if not n:return b''
-  r=s.get(u,headers={'Range':f'bytes={self.pos}-{min(size-1,self.pos+n-1)}'},timeout=40);r.raise_for_status();assert r.status_code==206;self.pos+=len(r.content);return r.content
-z=zipfile.ZipFile(Remote());member=f'Episode{e}.mp4';assert member in z.namelist();Path('source.mp4').write_bytes(z.read(member))
+  n=min(n,size-self.pos)
+  if n<=0:return b''
+  last=None
+  for attempt in range(3):
+   try:
+    rr=s.get(u,headers={'Range':f'bytes={self.pos}-{self.pos+n-1}'},timeout=60);rr.raise_for_status()
+    assert rr.status_code==206 and len(rr.content)==n,'Incomplete source range'
+    self.pos+=len(rr.content);return rr.content
+   except (requests.RequestException,AssertionError)as ex:
+    last=ex
+    if attempt<2:time.sleep(3*(attempt+1))
+  raise last
+z=zipfile.ZipFile(Remote());member=f'Episode{e}.mp4';assert member in z.namelist();Path('source.mp4').write_bytes(z.read(member));assert hashlib.sha256(Path('source.mp4').read_bytes()).hexdigest()=='c0ab0b2b61c3873e5407fd287c1bbda3b4d0af44f28a6607ba910ecdf8dd1ba4'
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json','source.mp4']));v=next(x for x in meta['streams'] if x['codec_type']=='video');assert (v['width'],v['height'])==(1080,1920);assert abs(float(meta['format']['duration'])-durations[e])<.1
 subprocess.run(['ffmpeg','-v','error','-i','source.mp4','-f','null','-'],check=True)
 subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-i','source.mp4','-t',str(cuts[e]),'-vf',f'fade=t=in:st=0:d=0.5,fade=t=out:st={cuts[e]-.5}:d=0.5','-af',f'afade=t=in:st=0:d=0.5,afade=t=out:st={cuts[e]-.5}:d=0.5','-c:v','libx264','-threads:v','3','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','ev.mp4'],check=True)
