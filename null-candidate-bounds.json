@@ -75,5 +75,13 @@
     "candidate_cut": 44.96,
     "reason": "Old cut split the S-rank threat sentence. New cut follows the Devil King himself ending and auditorium reaction before next speaker. Pixel review 37-50s and44.3-44.9; final rendered audio edge still to verify.",
     "not_public_approved": true
+  },
+  "episode5_boundary_review": {
+    "cut": 47.16,
+    "reviewed_at": "2026-10-29T21:39:14+05:30",
+    "tail_audio": "No speech detected in preceding3s",
+    "head_audio": "No speech detected in following3s",
+    "pixel_review": "8s source clip inspected; action/reaction edge, no dialogue split",
+    "not_public_approved": true
   }
 }
