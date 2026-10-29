@@ -295,6 +295,15 @@
       "native_ai_verified": true,
       "single_upload_readback_verified": true,
       "lost_ack_fallback_live_exercised": true
+    },
+    "episode5part2": {
+      "id": "6ae3ae2cf48fe90c60024195",
+      "url": "https://www.instagram.com/reel/DfF4T3ggqiB/",
+      "sent_at": "2026-10-29T20:36:57.367Z",
+      "state": "served_pixels_verified_host_absence_verified",
+      "workflow_run": 40950226899,
+      "native_ai_verified": true,
+      "single_upload_readback_verified": true
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
