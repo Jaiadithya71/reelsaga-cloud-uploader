@@ -65,7 +65,7 @@ for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
- require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
+ require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (os.environ.get('NULL_RESUME_VERIFIED_UPLOAD')=='1'and i['id']=='dramabox-null42000029033-ep3-part1-v1'and r['state']=='uploading'and not r.get('external_id')and r.get('session','').startswith('tigris:')) or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
  item=i;break
 if item is None:receipt(status='all_30_verified_no_new_post');raise SystemExit(0)
 gate=review.get(item['id'])
@@ -77,6 +77,8 @@ for earlier in m['items'][:position]:
  rr,_=st.get(ledger.key(earlier['id'],'instagram'));require(rr and rr.get('state')=='published' and 'public_pixels_verified' in rr.get('session',''),'Earlier part not verified')
 receipt(status='preflight',item=item['id'])
 resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
+recover_upload=os.environ.get('NULL_RESUME_VERIFIED_UPLOAD')=='1'
+require(not recover_upload or item['id']=='dramabox-null42000029033-ep3-part1-v1','Recovery exact item mismatch')
 if not resume:
  channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
  # Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
@@ -96,12 +98,17 @@ if not resume:
   try:
    with urllib.request.urlopen(urllib.request.Request('https://'+OLD+'.t3.tigrisbucket.io/'+x['Key'],method='HEAD'),timeout=20)as r:raise RuntimeError('Old source public')
   except urllib.error.HTTPError as e:require(e.code==403,'Old privacy uncertain')
- # Commit request reserve before any real upload. No card or billing mutation exists in this workflow.
- batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
- existing,version=st.get(ledger.key(item['id'],'instagram'))
- if existing:
-  require(False,'Existing started item requires exact reconciliation, no automatic re-claim')
- else:require(ledger.claim(item,'instagram'),'Existing item claim')
+ if recover_upload:
+  rec,_=st.get(ledger.key(item['id'],'instagram'));saved,_=st.get('host-'+item['id'])
+  require(rec['state']=='uploading'and not rec.get('external_id')and saved['state']=='upload_intent'and rec['session']=='tigris:'+saved['key']and saved['bytes']==item['bytes'],'Saved upload mismatch')
+  require(len(new)==1 and new[0]['Key']==saved['key']and new[0]['Size']==item['bytes'],'Exact saved object inventory mismatch')
+ else:
+  # Commit request reserve before any real upload. No card or billing mutation exists in this workflow.
+  batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
+  existing,version=st.get(ledger.key(item['id'],'instagram'))
+  if existing:
+   require(False,'Existing started item requires exact reconciliation, no automatic re-claim')
+  else:require(ledger.claim(item,'instagram'),'Existing item claim')
 if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  rec,_=st.get(ledger.key(item['id'],'instagram'));p=buf.post(rec['external_id']);thumb=p['assets'][0]['thumbnail'];print('::add-mask::'+thumb)
  from urllib.parse import urlsplit
@@ -137,8 +144,12 @@ subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(
 from PIL import Image
 require(np.asarray(Image.open('original-cover.png')).mean()>12,'Black original cover');require(v['height']/v['width']>1.7 and v['sample_aspect_ratio']=='1:1'and any(x['codec_type']=='audio'for x in meta['streams']),'Original video shape/audio')
 if not resume:
- k='xfer/'+item['id']+'-'+uuid.uuid4().hex+'.mp4';url='https://'+B+'.t3.tigrisbucket.io/'+k;print('::add-mask::'+url,flush=True);hk='host-'+item['id'];host={'key':k,'bucket':B,'url':url,'bytes':item['bytes'],'uploaded':time.time(),'deadline':batch['deadline'],'state':'upload_intent'};require(st.compare_and_swap(hk,None,host),'Host locator exists');ledger.checkpoint(item['id'],'instagram','uploading',session='tigris:'+k)
- with p.open('rb')as f:s3.put_object(Bucket=B,Key=k,Body=f,ContentType='video/mp4',ACL='public-read',IfNoneMatch='*')
+ if recover_upload:
+  hk='host-'+item['id'];host,_=st.get(hk);k=host['key'];url=host['url'];print('::add-mask::'+url,flush=True)
+  require(s3.head_object(Bucket=B,Key=k)['ContentLength']==item['bytes'],'Saved object size mismatch')
+ else:
+  k='xfer/'+item['id']+'-'+uuid.uuid4().hex+'.mp4';url='https://'+B+'.t3.tigrisbucket.io/'+k;print('::add-mask::'+url,flush=True);hk='host-'+item['id'];host={'key':k,'bucket':B,'url':url,'bytes':item['bytes'],'uploaded':time.time(),'deadline':batch['deadline'],'state':'upload_intent'};require(st.compare_and_swap(hk,None,host),'Host locator exists');ledger.checkpoint(item['id'],'instagram','uploading',session='tigris:'+k)
+  with p.open('rb')as f:s3.put_object(Bucket=B,Key=k,Body=f,ContentType='video/mp4',ACL='public-read',IfNoneMatch='*')
  acl=s3.get_object_acl(Bucket=B,Key=k);require(any(g['Grantee'].get('URI','').endswith('/AllUsers')and g['Permission']=='READ'for g in acl['Grants']),'Public ACL absent')
  with urllib.request.urlopen(url,timeout=90)as r:data=r.read(item['bytes']+1)
  require(len(data)==item['bytes']and hashlib.sha256(data).hexdigest()==item['sha256'],'Delivery original differs');del data
