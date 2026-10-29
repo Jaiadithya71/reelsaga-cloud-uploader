@@ -233,8 +233,8 @@
     },
     "part2": {
       "id": "avG4GdYoIT0",
-      "state": "private_hd_claims_readback_pending",
-      "checked_at": "2026-10-29T22:01:59+05:30",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-29T22:12:29+05:30",
       "workflow_run": 40908770971
     }
   }

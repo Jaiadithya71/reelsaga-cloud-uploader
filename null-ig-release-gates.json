@@ -95,5 +95,19 @@
     "youtube_id": "ZvKpEbyGEvk",
     "claims_checked_at": "2026-10-29T20:53:29+05:30",
     "renderer_verified_run": 40898453601
+  },
+  "dramabox-null42000029033-ep5-part1-v1": {
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793292156.0100024,
+    "source_sha256": "7cde98abb343cc0439588a4c157c8dff01387224a05c81c55f90ce42dd7621b9",
+    "video_id": "gsGPfkVAT40",
+    "source_pixels_and_rendered_edges_verified": true
+  },
+  "dramabox-null42000029033-ep5-part2-v1": {
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793292156.0100064,
+    "source_sha256": "c49c6653cc879b3107377fa7e8f76dcf04a6925903e9bff64c34b5e266fc209d",
+    "video_id": "avG4GdYoIT0",
+    "source_pixels_and_rendered_edges_verified": true
   }
 }
