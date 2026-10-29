@@ -109,10 +109,11 @@
   },
   "dramabox-null42000029033-ep5-part2-v1": {
     "status": "private_hd_no_claims",
-    "reviewed_at": 1793292156.0100064,
+    "reviewed_at": 1793306061.7511876,
     "source_sha256": "c49c6653cc879b3107377fa7e8f76dcf04a6925903e9bff64c34b5e266fc209d",
     "video_id": "avG4GdYoIT0",
-    "source_pixels_and_rendered_edges_verified": true
+    "source_pixels_and_rendered_edges_verified": true,
+    "claims_checked_at": "2026-10-30T02:04:17+05:30"
   },
   "dramabox-null42000029033-ep6-part1-v1": {
     "status": "private_hd_no_claims",
