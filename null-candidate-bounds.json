@@ -74,7 +74,13 @@
     "old_cut": 40.96,
     "candidate_cut": 44.96,
     "reason": "Old cut split the S-rank threat sentence. New cut follows the Devil King himself ending and auditorium reaction before next speaker. Pixel review 37-50s and44.3-44.9; final rendered audio edge still to verify.",
-    "not_public_approved": true
+    "not_public_approved": true,
+    "final_source_audio_verified_at": "2026-10-29T23:52:33+05:30",
+    "tail": "The Devil King himself complete",
+    "head": "I called it new speaker",
+    "second_cut81_4": "complete Is that true, next Hey you look like youre gonna throw up",
+    "source_pixels_verified": true,
+    "rendered_edges_pending": true
   },
   "episode5_boundary_review": {
     "cut": 47.16,
