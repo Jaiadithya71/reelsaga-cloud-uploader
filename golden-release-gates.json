@@ -1,22 +1,31 @@
 {
   "dramabox-golden42000028903-ep1-part4-v1": {
     "video_id": "_nG2_AMSYtI",
-    "status": "private_hd_no_claims",
+    "status": "blocked_globally_visual",
     "reviewed_at": 1793252703.0,
     "claims_url": "https://studio.youtube.com/video/_nG2_AMSYtI/claims",
     "evidence": "/downloads/cloud-browser-20261029-054505.png",
     "no_reach_impact": true,
     "no_strike": true,
-    "source_sha256": "1248a3b5689e7981e1626143d5c50b4f0ff0cdaaa5687ce17eeea9d5bfa045a8"
+    "source_sha256": "1248a3b5689e7981e1626143d5c50b4f0ff0cdaaa5687ce17eeea9d5bfa045a8",
+    "restriction_verified_at": "2026-10-29T13:03:00+05:30",
+    "claim_reference": "The Golden Dragon Rider\uff08\u7ad6\u7248\uff09",
+    "no_channel_impact": true,
+    "restriction_evidence": "/downloads/cloud-browser-20261029-073146.png"
   },
   "dramabox-golden42000028903-ep1-part2-v1": {
     "video_id": "XC8rnVgWoPc",
-    "status": "private_hd_no_claims",
+    "status": "blocked_globally_visual",
     "reviewed_at": 1793252228.0,
     "claims_url": "https://studio.youtube.com/video/XC8rnVgWoPc/claims",
     "evidence": "/downloads/cloud-browser-20261029-053712.png",
     "metadata_prepared_private": true,
-    "source_sha256": "29fe4b1c70c4e1f4e8ab66be9cd0cbe0e01213431cefd334311b2bfb156c34ca"
+    "source_sha256": "29fe4b1c70c4e1f4e8ab66be9cd0cbe0e01213431cefd334311b2bfb156c34ca",
+    "restriction_verified_at": "2026-10-29T13:03:00+05:30",
+    "claim_reference": "The Golden Dragon Rider\uff08\u7ad6\u7248\uff09",
+    "no_strike": true,
+    "no_channel_impact": true,
+    "restriction_evidence": null
   },
   "dramabox-golden42000028903-ep2-part2-v1": {
     "video_id": "uuZmy21oKpo",
@@ -44,12 +53,17 @@
   },
   "dramabox-golden42000028903-ep1-part3-v1": {
     "video_id": "474XjSsOzrk",
-    "status": "private_hd_no_claims",
+    "status": "blocked_globally_visual",
     "reviewed_at": 1793254510.0,
     "source_sha256": "290bea7c9c57c93673acb5256cb089c2c5021923cfe80626fa61b5426458544e",
     "claims_url": "https://studio.youtube.com/video/474XjSsOzrk/claims",
     "evidence": "/downloads/cloud-browser-20261029-061510.png",
-    "metadata_prepared_private": true
+    "metadata_prepared_private": true,
+    "restriction_verified_at": "2026-10-29T13:03:00+05:30",
+    "claim_reference": "The Golden Dragon Rider\uff08\u7ad6\u7248\uff09",
+    "no_strike": true,
+    "no_channel_impact": true,
+    "restriction_evidence": "/downloads/cloud-browser-20261029-073236.png"
   },
   "dramabox-golden42000028903-ep3-part3-v1": {
     "video_id": "nyO37_tGg34",
