@@ -83,5 +83,19 @@
     "head_audio": "No speech detected in following3s",
     "pixel_review": "8s source clip inspected; action/reaction edge, no dialogue split",
     "not_public_approved": true
+  },
+  "episode6_boundary_review": {
+    "reviewed_at": "2026-10-29T22:35:48+05:30",
+    "48.48": {
+      "tail": "complete question ending free pass to harass her",
+      "head": "You brought an unranked demon into my school",
+      "pixels": "source8sclipinspected"
+    },
+    "102.16": {
+      "tail": "I wouldnt touch you if you were the last guy on Earth complete",
+      "head": "no speech first3seconds",
+      "pixels": "source8sclipinspected"
+    },
+    "not_public_approved": true
   }
 }
