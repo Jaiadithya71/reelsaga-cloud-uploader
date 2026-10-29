@@ -11,7 +11,10 @@
     "restriction_verified_at": "2026-10-29T13:03:00+05:30",
     "claim_reference": "The Golden Dragon Rider\uff08\u7ad6\u7248\uff09",
     "no_channel_impact": true,
-    "restriction_evidence": "/downloads/cloud-browser-20261029-073146.png"
+    "restriction_evidence": "/downloads/cloud-browser-20261029-073146.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep1-part2-v1": {
     "video_id": "XC8rnVgWoPc",
@@ -25,7 +28,10 @@
     "claim_reference": "The Golden Dragon Rider\uff08\u7ad6\u7248\uff09",
     "no_strike": true,
     "no_channel_impact": true,
-    "restriction_evidence": null
+    "restriction_evidence": null,
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep2-part2-v1": {
     "video_id": "uuZmy21oKpo",
@@ -33,7 +39,10 @@
     "reviewed_at": 1793253228.0,
     "source_sha256": "a9a5da563afbfe6d759b3b6afaa4d5cf4e61e09ef0ee35e010f9c37782b345d6",
     "claims_url": "https://studio.youtube.com/video/uuZmy21oKpo/claims",
-    "evidence": "/downloads/cloud-browser-20261029-055349.png"
+    "evidence": "/downloads/cloud-browser-20261029-055349.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep2-part3-v1": {
     "video_id": "-GO7jzF8s1k",
@@ -41,7 +50,10 @@
     "reviewed_at": 1793253940.0,
     "source_sha256": "637c8ec0cb37844512ab28dd73e6bc37b9758db25920af5261d8921a5a95d404",
     "claims_url": "https://studio.youtube.com/video/-GO7jzF8s1k/claims",
-    "evidence": "/downloads/cloud-browser-20261029-060540.png"
+    "evidence": "/downloads/cloud-browser-20261029-060540.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep3-part2-v1": {
     "video_id": "b7xJs-nbg0k",
@@ -49,7 +61,10 @@
     "reviewed_at": 1793254459.0,
     "source_sha256": "efb5d6df86070cc3c4232e519e62d020bde41dc8da97b468979605e63d8c89c4",
     "claims_url": "https://studio.youtube.com/video/b7xJs-nbg0k/claims",
-    "evidence": "/downloads/cloud-browser-20261029-061419.png"
+    "evidence": "/downloads/cloud-browser-20261029-061419.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep1-part3-v1": {
     "video_id": "474XjSsOzrk",
@@ -63,7 +78,10 @@
     "claim_reference": "The Golden Dragon Rider\uff08\u7ad6\u7248\uff09",
     "no_strike": true,
     "no_channel_impact": true,
-    "restriction_evidence": "/downloads/cloud-browser-20261029-073236.png"
+    "restriction_evidence": "/downloads/cloud-browser-20261029-073236.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep3-part3-v1": {
     "video_id": "nyO37_tGg34",
@@ -71,7 +89,10 @@
     "reviewed_at": 1793255229.0,
     "source_sha256": "af059fb0af32601f5087d81666766bde5fb779d69915ea5a364fa61483e27316",
     "claims_url": "https://studio.youtube.com/video/nyO37_tGg34/claims",
-    "evidence": "/downloads/cloud-browser-20261029-062709.png"
+    "evidence": "/downloads/cloud-browser-20261029-062709.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep2-part4-v1": {
     "video_id": "fKBUR9Mf-Ms",
@@ -79,7 +100,10 @@
     "reviewed_at": 1793255249.0,
     "source_sha256": "a488a2589f00a66a28014c75c8a88fca717b4113cc41b55e43e99dff082af331",
     "claims_url": "https://studio.youtube.com/video/fKBUR9Mf-Ms/claims",
-    "evidence": "/downloads/cloud-browser-20261029-062729.png"
+    "evidence": "/downloads/cloud-browser-20261029-062729.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep4-part2-v1": {
     "video_id": "ZaMd07JeNis",
@@ -87,7 +111,10 @@
     "reviewed_at": 1793255848.0,
     "source_sha256": "75e76a31733935915af70767d94c352b870dc3e5f0d7d4b6f71697848402c4c5",
     "claims_url": "https://studio.youtube.com/video/ZaMd07JeNis/claims",
-    "evidence": "/downloads/cloud-browser-20261029-063728.png"
+    "evidence": "/downloads/cloud-browser-20261029-063728.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep4-part3-v1": {
     "video_id": "-5ppLuIFze4",
@@ -95,7 +122,10 @@
     "reviewed_at": 1793256472.0,
     "source_sha256": "eaefe3858c790c5b5083d9c5b8f2f23d220a71983aa234ff9384830e9e0d8497",
     "claims_url": "https://studio.youtube.com/video/-5ppLuIFze4/claims",
-    "evidence": "/downloads/cloud-browser-20261029-064752.png"
+    "evidence": "/downloads/cloud-browser-20261029-064752.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep4-part4-v1": {
     "video_id": "_gm3f3PH_wA",
@@ -103,7 +133,10 @@
     "reviewed_at": 1793257243.0,
     "source_sha256": "e859a3ed69bf70d08fc3feaa3934cc57cef144c630a03321f6154604ad6c7672",
     "claims_url": "https://studio.youtube.com/video/_gm3f3PH_wA/claims",
-    "evidence": "/downloads/cloud-browser-20261029-070043.png"
+    "evidence": "/downloads/cloud-browser-20261029-070043.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep5-part2-v1": {
     "video_id": "IWkWEhrqvXc",
@@ -111,7 +144,10 @@
     "reviewed_at": 1793257863.0,
     "source_sha256": "6dc4955c21896e541d827266dcc068b8f3044484c9b073107f87d6bb1270a78c",
     "claims_url": "https://studio.youtube.com/video/IWkWEhrqvXc/claims",
-    "evidence": "/downloads/cloud-browser-20261029-071103.png"
+    "evidence": "/downloads/cloud-browser-20261029-071103.png",
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   },
   "dramabox-golden42000028903-ep5-part3-v1": {
     "video_id": "hC9lFSJFPTI",
@@ -121,6 +157,9 @@
     "claims_url": "https://studio.youtube.com/video/hC9lFSJFPTI/claims",
     "evidence": "/downloads/cloud-browser-20261029-072141.png",
     "no_reach_impact": true,
-    "no_strike": true
+    "no_strike": true,
+    "release_disabled": true,
+    "series_state": "public_cleanup_completed_do_not_release",
+    "series_halted_at": "2026-10-29T13:01:00+05:30"
   }
 }
