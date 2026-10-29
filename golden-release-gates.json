@@ -82,5 +82,13 @@
     "source_sha256": "eaefe3858c790c5b5083d9c5b8f2f23d220a71983aa234ff9384830e9e0d8497",
     "claims_url": "https://studio.youtube.com/video/-5ppLuIFze4/claims",
     "evidence": "/downloads/cloud-browser-20261029-064752.png"
+  },
+  "dramabox-golden42000028903-ep4-part4-v1": {
+    "video_id": "_gm3f3PH_wA",
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793257243.0,
+    "source_sha256": "e859a3ed69bf70d08fc3feaa3934cc57cef144c630a03321f6154604ad6c7672",
+    "claims_url": "https://studio.youtube.com/video/_gm3f3PH_wA/claims",
+    "evidence": "/downloads/cloud-browser-20261029-070043.png"
   }
 }
