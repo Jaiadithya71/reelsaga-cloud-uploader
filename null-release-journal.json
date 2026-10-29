@@ -320,5 +320,29 @@
       "workflow_run": 40918033699,
       "checked_at": "2026-10-29T23:09:40+05:30"
     }
+  },
+  "private_episode7": {
+    "part1": {
+      "id": "9B_IIv50XjA",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-30T00:32:27+05:30",
+      "workflow_run": 40934844074,
+      "item": "dramabox-null42000029033-ep7-part1-private-probe-cut4496-v2"
+    },
+    "part3": {
+      "id": "IDYuOmAWKVU",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-30T00:32:59+05:30",
+      "workflow_run": 40930243086
+    },
+    "part2": {
+      "state": "single_retry_dispatched_after_absence_reconciled",
+      "dispatched_at": "2026-10-30T00:32:11+05:30"
+    },
+    "retained_old_part1": {
+      "id": "9zqazaUJ25I",
+      "never_publish": true
+    },
+    "rendered_pixels_audio_edges_verified_at": "2026-10-30T00:22:35+05:30"
   }
 }
