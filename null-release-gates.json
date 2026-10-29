@@ -7,5 +7,23 @@
     "evidence": "/downloads/cloud-browser-20261029-081521.png",
     "public_release_approved": false,
     "source_sha256": "c0ab0b2b61c3873e5407fd287c1bbda3b4d0af44f28a6607ba910ecdf8dd1ba4"
+  },
+  "dramabox-null42000029033-ep2-part1-private-probe": {
+    "video_id": "HQ1kiMW3IVs",
+    "state": "private_hd_no_claims",
+    "reviewed_at": "2026-10-29T13:55:00+05:30",
+    "claims_url": "https://studio.youtube.com/video/HQ1kiMW3IVs/claims",
+    "evidence": "/downloads/cloud-browser-20261029-082433.png",
+    "public_release_approved": false,
+    "source_sha256": "bf75ae0e96f0cc2d15bfa0cb9b2f12eebc7bd68d646acfd216370e9f295d8ee8"
+  },
+  "dramabox-null42000029033-ep4-part1-private-probe": {
+    "video_id": "9xFr4vzfDOA",
+    "state": "private_hd_no_claims",
+    "reviewed_at": "2026-10-29T13:55:00+05:30",
+    "claims_url": "https://studio.youtube.com/video/9xFr4vzfDOA/claims",
+    "evidence": "/downloads/cloud-browser-20261029-082454.png",
+    "public_release_approved": false,
+    "source_sha256": "1ae7af0d4017bc865275ca589f109cdd6ea12bdb42ccdde5c29337b880174051"
   }
 }
