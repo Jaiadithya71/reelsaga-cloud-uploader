@@ -42,13 +42,24 @@
     },
     "episode2part3": {
       "id": "NzfslN6KaqY",
-      "url": "https://youtube.com/shorts/NzfslN6KaqY",
+      "url": "https://www.youtube.com/shorts/NzfslN6KaqY",
       "sent_at": "2026-10-29T18:36:01+05:30",
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T18:36:08+05:30",
       "playlist_membership_saved": true,
       "playlist_count_verified": 6,
       "playlist_order_verified": false
+    },
+    "episode3part1": {
+      "id": "wxxmOU3RzCs",
+      "url": "https://youtube.com/shorts/wxxmOU3RzCs",
+      "sent_at": "2026-10-29T19:10:46+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-29T19:11:13+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true,
+      "playlist_order_verified": false,
+      "playlist_ax_order_verified": true
     }
   },
   "instagram": {
@@ -102,6 +113,25 @@
     "ledger_unclaimed": true,
     "control_disabled": true,
     "complete_channel_title_absent": true,
-    "inventory_count": 435
+    "inventory_count": 435,
+    "retry_run": 40881451896,
+    "retry_video_id": "6KZHmezXjr4",
+    "retry_controls_disabled_verified": true
+  },
+  "episode3_cut_audio_edges": {
+    "48.12": "tail ends complete sentence its you three, next part starts What the hell did you just say",
+    "90.8": "prior 3.8 seconds no speech; next part begins What the hell is wrong"
+  },
+  "private_episode3": {
+    "part2": {
+      "id": "yirBB2jVpRU",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-29T19:12:02+05:30"
+    },
+    "part3": {
+      "id": "6KZHmezXjr4",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-29T19:12:16+05:30"
+    }
   }
 }
