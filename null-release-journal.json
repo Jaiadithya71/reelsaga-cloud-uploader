@@ -83,8 +83,25 @@
       "state": "served_pixels_verified_host_absence_verified",
       "workflow_run": 40874037651,
       "native_ai_verified": true
+    },
+    "episode2part2": {
+      "id": "6ae347066597d8ffc7d493b9",
+      "url": "https://www.instagram.com/reel/DfFF8enDJHh/",
+      "sent_at": "2026-10-29T13:16:52.660Z",
+      "state": "served_pixels_verified_host_absence_verified",
+      "workflow_run": 40880119529,
+      "native_ai_verified": true
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
-  "playlist_id": "PLQeITjEI7yMw"
+  "playlist_id": "PLQeITjEI7yMw",
+  "private_reconciliation": {
+    "item": "dramabox-null42000029033-ep3-part3-private-probe",
+    "failed_run": 40875312841,
+    "read_only_run": 40880230650,
+    "ledger_unclaimed": true,
+    "control_disabled": true,
+    "complete_channel_title_absent": true,
+    "inventory_count": 435
+  }
 }
