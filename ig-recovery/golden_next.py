@@ -99,13 +99,7 @@ if not resume:
  batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
  existing,version=st.get(ledger.key(item['id'],'instagram'))
  if existing:
-  old_item=dict(item,bytes=46003218,sha256='bc93d6dcd5574b03dc02d9c8736c4eabbe354a70b8e44f64c0338dc1733a302d')
-  require(existing['state']=='started' and not existing.get('external_id') and not existing.get('session'),'Not pre-external claim')
-  require(item['episode']==1 and item['part']==1 and existing['metadata_hash']==ledger.metadata_hash(old_item),'Unexpected prior item')
-  host,_=st.get('host-'+item['id']);require(not host and not new,'Unexpected staged object')
-  # Complete live Buffer inventory above proves no matching caption in any lifecycle.
-  existing['metadata_hash']=ledger.metadata_hash(item);existing['render_reconciled_from_run']='40822739285';require(st.compare_and_swap(ledger.key(item['id'],'instagram'),version,existing),'Preexternal reconcile failed')
-  print('RECONCILED_PREEXTERNAL_RENDER_QA_40822970580',flush=True)
+  require(False,'Existing started item requires exact reconciliation, no automatic re-claim')
  else:require(ledger.claim(item,'instagram'),'Existing item claim')
 if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  rec,_=st.get(ledger.key(item['id'],'instagram'));p=buf.post(rec['external_id']);thumb=p['assets'][0]['thumbnail'];print('::add-mask::'+thumb)
