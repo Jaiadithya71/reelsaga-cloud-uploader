@@ -66,10 +66,11 @@
   "dramabox-null42000029033-ep3-part3-v1": {
     "status": "private_hd_no_claims",
     "source_sha256": "b4a73cce27d95cc7bda7e5a3f0dd27392a5cab3786025e764910e55f169a1e8d",
-    "reviewed_at": 1793283312.6156168,
+    "reviewed_at": 1793292125.1470244,
     "youtube_id": "6KZHmezXjr4",
     "claims_checked_at": "2026-10-29T19:12:16+05:30",
-    "renderer_verified_run": 40884488888
+    "renderer_verified_run": 40884488888,
+    "own_claims_rechecked_at": "2026-10-29T22:11:53+05:30"
   },
   "dramabox-null42000029033-ep4-part1-v1": {
     "status": "private_hd_no_claims",
