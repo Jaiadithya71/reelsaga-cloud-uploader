@@ -50,5 +50,21 @@
     "claims_url": "https://studio.youtube.com/video/474XjSsOzrk/claims",
     "evidence": "/downloads/cloud-browser-20261029-061510.png",
     "metadata_prepared_private": true
+  },
+  "dramabox-golden42000028903-ep3-part3-v1": {
+    "video_id": "nyO37_tGg34",
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793255229.0,
+    "source_sha256": "af059fb0af32601f5087d81666766bde5fb779d69915ea5a364fa61483e27316",
+    "claims_url": "https://studio.youtube.com/video/nyO37_tGg34/claims",
+    "evidence": "/downloads/cloud-browser-20261029-062709.png"
+  },
+  "dramabox-golden42000028903-ep2-part4-v1": {
+    "video_id": "fKBUR9Mf-Ms",
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793255249.0,
+    "source_sha256": "a488a2589f00a66a28014c75c8a88fca717b4113cc41b55e43e99dff082af331",
+    "claims_url": "https://studio.youtube.com/video/fKBUR9Mf-Ms/claims",
+    "evidence": "/downloads/cloud-browser-20261029-062729.png"
   }
 }
