@@ -5,8 +5,9 @@
       "id": "3qNS0fjje5U",
       "url": "https://youtube.com/shorts/3qNS0fjje5U",
       "sent_at": "2026-10-29T15:47:35+05:30",
-      "state": "public_hd_no_claims",
-      "playlist_order_verified": true
+      "state": "public_record_globally_blocked_visual",
+      "playlist_order_verified": true,
+      "restriction_checked_at": "2026-10-30T03:34:12+05:30"
     },
     "episode1part2": {
       "id": "J6e4sL-llbo",
@@ -28,10 +29,11 @@
       "id": "HQ1kiMW3IVs",
       "url": "https://youtube.com/shorts/HQ1kiMW3IVs",
       "sent_at": "2026-10-29T17:28:06+05:30",
-      "state": "public_hd_no_claims",
+      "state": "public_record_globally_blocked_visual",
       "claims_checked_at": "2026-10-29T17:28:13+05:30",
       "playlist_membership_saved": true,
-      "playlist_order_verified": true
+      "playlist_order_verified": true,
+      "restriction_checked_at": "2026-10-30T03:34:12+05:30"
     },
     "episode2part2": {
       "id": "m9Ff9RC0m6Q",
@@ -55,12 +57,13 @@
       "id": "wxxmOU3RzCs",
       "url": "https://youtube.com/shorts/wxxmOU3RzCs",
       "sent_at": "2026-10-29T19:10:46+05:30",
-      "state": "public_hd_no_claims",
+      "state": "public_record_globally_blocked_visual",
       "claims_checked_at": "2026-10-29T19:11:13+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
       "playlist_order_verified": true,
-      "playlist_ax_order_verified": true
+      "playlist_ax_order_verified": true,
+      "restriction_checked_at": "2026-10-30T03:34:12+05:30"
     },
     "episode3part2": {
       "id": "yirBB2jVpRU",
@@ -86,11 +89,12 @@
       "id": "9xFr4vzfDOA",
       "url": "https://youtube.com/shorts/9xFr4vzfDOA",
       "sent_at": "2026-10-29T20:51:48+05:30",
-      "state": "public_hd_no_claims",
+      "state": "public_record_globally_blocked_visual",
       "claims_checked_at": "2026-10-29T20:52:22+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": true
+      "playlist_order_verified": true,
+      "restriction_checked_at": "2026-10-30T03:34:12+05:30"
     },
     "episode4part2": {
       "id": "fRzQ3bCn7a8",
@@ -458,5 +462,17 @@
       "checked_at": "2026-10-30T02:27:12+05:30"
     },
     "rendered_pixels_audio_edges_verified_at": "2026-10-30T02:11:20+05:30"
+  },
+  "rights_hold": {
+    "at": "2026-10-30T03:31:27+05:30",
+    "status": "both_new_publication_paused_pending_user_decision",
+    "affected_confirmed": [
+      "3qNS0fjje5U",
+      "HQ1kiMW3IVs",
+      "wxxmOU3RzCs",
+      "9xFr4vzfDOA"
+    ],
+    "claims": "global_visual_DramaBox_no_strike",
+    "no_deletions": true
   }
 }
