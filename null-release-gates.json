@@ -137,11 +137,13 @@
   },
   "dramabox-null42000029033-ep2-part3-private-probe": {
     "video_id": "NzfslN6KaqY",
-    "state": "private_hd_no_claims",
+    "state": "public_hd_no_claims",
     "reviewed_at": "2026-10-29T16:56:03+05:30",
     "claims_url": "https://studio.youtube.com/video/NzfslN6KaqY/claims",
     "evidence": "/downloads/cloud-browser-20261029-112607.png",
     "public_release_approved": true,
-    "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA"
+    "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA",
+    "published_at": "2026-10-29T18:36:01+05:30",
+    "claims_rechecked_at": "2026-10-29T18:36:08+05:30"
   }
 }

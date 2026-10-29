@@ -39,6 +39,16 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T18:01:06+05:30",
       "playlist_order_verified": true
+    },
+    "episode2part3": {
+      "id": "NzfslN6KaqY",
+      "url": "https://youtube.com/shorts/NzfslN6KaqY",
+      "sent_at": "2026-10-29T18:36:01+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-29T18:36:08+05:30",
+      "playlist_membership_saved": true,
+      "playlist_count_verified": 6,
+      "playlist_order_verified": false
     }
   },
   "instagram": {
