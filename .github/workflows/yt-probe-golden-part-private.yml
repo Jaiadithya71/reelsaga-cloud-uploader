@@ -8,6 +8,9 @@ name: Golden Dragon Rider single remaining part PRIVATE qualification
       part:
         required: true
         type: string
+      diagnose:
+        type: boolean
+        default: false
 permissions:
   contents: write
   actions: read
@@ -33,6 +36,7 @@ jobs:
         REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
         REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+        GOLDEN_DIAG_ONLY: ${{ inputs.diagnose && '1' || '0' }}
       run: "cat > quarantine_state.py <<'QUARANTINE_FILE'\n\"\"\"Fail-closed new namespace.\
         \ Original legacy records are never mutated.\"\"\"\nimport hashlib,json,re\n\
         from github_state import GitHubState,StateError\nfrom adapters import checked\n\

@@ -84,9 +84,12 @@ def main():
         stable=os.environ.pop('REELSAGA_LEDGER_KEY','')
         if len(stable)<48:raise RuntimeError('Stable key missing')
         backend=QuarantineState(Transport(lambda:gh,{'api.github.com'}),stable);backend.initialize()
+        if os.environ.get('GOLDEN_DIAG_ONLY')=='1':
+            current,_=backend.get(DurableLedger.key(item['id'],'youtube'));control,_=backend.get('account-control')
+            print(json.dumps({'diagnostic_only':True,'episode':e,'part':part,'item_state':current,'control':control,'video_uploaded':False}));return
         stage="state_probe"
         controls=Controls(backend,lambda:None);import time as _pt
-        _ptransient=('readback','unsettled','unconfirmed')
+        _ptransient=('readback','unsettled','unconfirmed','Stop control did not block access','Account access disabled')
         _pa=0
         while True:
             _pa+=1
