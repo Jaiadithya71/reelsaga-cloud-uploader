@@ -30,5 +30,21 @@
     "youtube_id": "HQ1kiMW3IVs",
     "claims_checked_at": "2026-10-29T17:28:13+05:30",
     "renderer_verified_run": 40865388880
+  },
+  "dramabox-null42000029033-ep2-part2-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "ae111c158be6d36ac398d498652512cf993469b3d8643b467303f2631760c112",
+    "reviewed_at": 1793277171.7397819,
+    "youtube_id": "m9Ff9RC0m6Q",
+    "claims_checked_at": "2026-10-29T17:59:48+05:30",
+    "renderer_verified_run": 40869542527
+  },
+  "dramabox-null42000029033-ep2-part3-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "4bf774acb4f16cfe3196c59b32caa60352c90926dbbf313b4da5ff27eb0fa1cd",
+    "reviewed_at": 1793277171.7397897,
+    "youtube_id": "NzfslN6KaqY",
+    "claims_checked_at": "2026-10-29T16:56:03+05:30",
+    "renderer_verified_run": 40869545858
   }
 }
