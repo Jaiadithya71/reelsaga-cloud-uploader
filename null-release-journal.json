@@ -130,6 +130,15 @@
       "state": "served_pixels_verified_host_absence_verified",
       "workflow_run": 40886734803,
       "native_ai_verified": true
+    },
+    "episode3part1": {
+      "id": "6ae35f3cf3a8aff3f352cbae",
+      "url": "https://www.instagram.com/reel/DfFRwOcDHn0/",
+      "sent_at": "2026-10-29T15:00:08.636Z",
+      "state": "served_pixels_verified_host_absence_verified",
+      "workflow_run": 40896772067,
+      "native_ai_verified": true,
+      "reconciled_upload_run": 40895704067
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
