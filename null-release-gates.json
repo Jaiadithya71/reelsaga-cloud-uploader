@@ -70,5 +70,32 @@
     "evidence": "/downloads/cloud-browser-20261029-085153.png",
     "public_release_approved": false,
     "source_sha256": "b137d15ca2c069d3b3f5211bb2e39f9fa9b6d1ac302306f679df0d21bae0a7b7"
+  },
+  "dramabox-null42000029033-ep9-part1-private-probe": {
+    "video_id": "XwGJyRoBpoI",
+    "state": "private_hd_no_claims",
+    "reviewed_at": "2026-10-29T14:30:52+05:30",
+    "claims_url": "https://studio.youtube.com/video/XwGJyRoBpoI/claims",
+    "evidence": "/downloads/cloud-browser-20261029-090015.png",
+    "public_release_approved": false,
+    "source_sha256": "87adf87deec5bb8563f43e0b1303e28ba847d58fb4910f1eb9e3dcfede7c3b3e"
+  },
+  "dramabox-null42000029033-ep10-part1-private-probe": {
+    "video_id": "HHEjuBLt7Hg",
+    "state": "private_hd_no_claims",
+    "reviewed_at": "2026-10-29T14:30:52+05:30",
+    "claims_url": "https://studio.youtube.com/video/HHEjuBLt7Hg/claims",
+    "evidence": "/downloads/cloud-browser-20261029-090034.png",
+    "public_release_approved": false,
+    "source_sha256": "0739e933f71423a619d17b7c2cc8e1997e160bdecd2887dceeeaf722367e841c"
+  },
+  "dramabox-null42000029033-ep11-part1-private-probe": {
+    "video_id": "3Pm2qnGELXI",
+    "state": "private_hd_no_claims",
+    "reviewed_at": "2026-10-29T14:30:52+05:30",
+    "claims_url": "https://studio.youtube.com/video/3Pm2qnGELXI/claims",
+    "evidence": "/downloads/cloud-browser-20261029-090052.png",
+    "public_release_approved": false,
+    "source_sha256": "296cc98c003909741f9a86f8a273dd306ebbd0583e929ad40452a4e574d5e904"
   }
 }
