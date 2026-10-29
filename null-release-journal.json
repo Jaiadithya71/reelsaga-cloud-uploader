@@ -5,7 +5,8 @@
       "id": "3qNS0fjje5U",
       "url": "https://youtube.com/shorts/3qNS0fjje5U",
       "sent_at": "2026-10-29T15:47:35+05:30",
-      "state": "public_hd_no_claims"
+      "state": "public_hd_no_claims",
+      "playlist_order_verified": true
     },
     "episode1part2": {
       "id": "J6e4sL-llbo",
@@ -48,7 +49,7 @@
       "claims_checked_at": "2026-10-29T18:36:08+05:30",
       "playlist_membership_saved": true,
       "playlist_count_verified": 6,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
     },
     "episode3part1": {
       "id": "wxxmOU3RzCs",
@@ -58,7 +59,7 @@
       "claims_checked_at": "2026-10-29T19:11:13+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": false,
+      "playlist_order_verified": true,
       "playlist_ax_order_verified": true
     },
     "episode3part2": {
@@ -69,7 +70,7 @@
       "claims_checked_at": "2026-10-29T19:44:17+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
     },
     "episode3part3": {
       "id": "6KZHmezXjr4",
@@ -79,7 +80,7 @@
       "claims_checked_at": "2026-10-29T20:18:23+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
     },
     "episode4part1": {
       "id": "9xFr4vzfDOA",
@@ -89,7 +90,7 @@
       "claims_checked_at": "2026-10-29T20:52:22+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
     },
     "episode4part2": {
       "id": "fRzQ3bCn7a8",
@@ -99,7 +100,7 @@
       "claims_checked_at": "2026-10-29T21:26:10+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
     },
     "episode4part3": {
       "id": "ZvKpEbyGEvk",
@@ -109,7 +110,7 @@
       "claims_checked_at": "2026-10-29T21:59:52+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
     },
     "episode5part1": {
       "id": "gsGPfkVAT40",
@@ -118,7 +119,8 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T22:34:34+05:30",
       "playlist_membership_saved": true,
-      "native_ai_verified": true
+      "native_ai_verified": true,
+      "playlist_order_verified": true
     },
     "episode5part2": {
       "id": "avG4GdYoIT0",
@@ -127,7 +129,8 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T23:08:20+05:30",
       "playlist_membership_saved": true,
-      "native_ai_verified": true
+      "native_ai_verified": true,
+      "playlist_order_verified": true
     },
     "episode6part1": {
       "id": "abpsF-azjdU",
@@ -136,7 +139,8 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T23:42:30+05:30",
       "playlist_membership_saved": true,
-      "native_ai_verified": true
+      "native_ai_verified": true,
+      "playlist_order_verified": true
     },
     "episode6part2": {
       "id": "Dz3yfQhxyJA",
@@ -145,7 +149,18 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-30T00:15:56+05:30",
       "playlist_membership_saved": true,
-      "native_ai_verified": true
+      "native_ai_verified": true,
+      "playlist_order_verified": true
+    },
+    "episode6part3": {
+      "id": "c-g4_KnhUEc",
+      "url": "https://youtube.com/shorts/c-g4_KnhUEc",
+      "sent_at": "2026-10-30T00:48:15+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-30T00:48:31+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true,
+      "playlist_order_verified": true
     }
   },
   "instagram": {
@@ -295,9 +310,9 @@
       "checked_at": "2026-10-29T20:53:29+05:30"
     }
   },
-  "playlist_order_checked_at": "2026-10-29T22:00:59+05:30",
-  "playlist_order_verified_through": "episode4part3",
-  "playlist_count": 12,
+  "playlist_order_checked_at": "2026-10-30T00:48:46+05:30",
+  "playlist_order_verified_through": "episode6part3",
+  "playlist_count": 17,
   "private_episode5": {
     "part1": {
       "id": "gsGPfkVAT40",
