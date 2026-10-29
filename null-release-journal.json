@@ -170,7 +170,8 @@
       "claims_checked_at": "2026-10-30T01:19:12+05:30",
       "playlist_membership_saved": true,
       "native_ai_verified": true,
-      "corrected_private_item": "dramabox-null42000029033-ep7-part1-private-probe-cut4496-v2"
+      "corrected_private_item": "dramabox-null42000029033-ep7-part1-private-probe-cut4496-v2",
+      "playlist_order_verified": true
     },
     "episode7part2": {
       "id": "fyENQWZvwxY",
@@ -179,7 +180,8 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-30T01:52:12+05:30",
       "playlist_membership_saved": true,
-      "native_ai_verified": true
+      "native_ai_verified": true,
+      "playlist_order_verified": true
     },
     "episode7part3": {
       "id": "IDYuOmAWKVU",
@@ -188,7 +190,18 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-30T02:26:17+05:30",
       "playlist_membership_saved": true,
-      "native_ai_verified": true
+      "native_ai_verified": true,
+      "playlist_order_verified": true
+    },
+    "episode8part1": {
+      "id": "NsyrhHN4ei4",
+      "url": "https://youtube.com/shorts/NsyrhHN4ei4",
+      "sent_at": "2026-10-30T03:00:02+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-30T03:00:10+05:30",
+      "playlist_membership_saved": true,
+      "native_ai_verified": true,
+      "playlist_order_verified": true
     }
   },
   "instagram": {
@@ -366,9 +379,9 @@
       "checked_at": "2026-10-29T20:53:29+05:30"
     }
   },
-  "playlist_order_checked_at": "2026-10-30T00:48:46+05:30",
-  "playlist_order_verified_through": "episode6part3",
-  "playlist_count": 17,
+  "playlist_order_checked_at": "2026-10-30T03:00:26+05:30",
+  "playlist_order_verified_through": "episode8part1",
+  "playlist_count": 21,
   "private_episode5": {
     "part1": {
       "id": "gsGPfkVAT40",
