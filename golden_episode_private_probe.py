@@ -16,7 +16,7 @@ from adapters import YouTube,checked
 from actions_state_probe import probe
 
 import requests,io,zipfile,subprocess
-e=int(os.environ['GOLDEN_EP']);assert 2<=e<=9;durations={2:171.247,3:107.396,4:157.551,5:138.522,6:101.551,7:120.73,8:101.53,9:123.396};cuts={2:47.36,3:35.6,4:38.4,5:45.4,6:33.4,7:40.4,8:34.12,9:40.2};parts={2:4,3:3,4:4,5:3,6:3,7:3,8:3,9:3}
+e=int(os.environ['GOLDEN_EP']);assert 2<=e<=9;durations={2:171.247,3:107.396,4:157.551,5:138.522,6:101.551,7:120.73,8:101.53,9:123.396};cuts={2:47.36,3:35.6,4:38.4,5:51.0,6:33.4,7:40.4,8:34.12,9:40.2};parts={2:4,3:3,4:4,5:3,6:3,7:3,8:3,9:3}
 u='https://cps-distr.ikyuedu.com/distribution/9/DramaBox资源包-42000028903-19e7e89829848a1e130e65a6c710e035.zip'
 s=requests.Session();response=s.head(u,timeout=30);response.raise_for_status();size=int(response.headers['Content-Length'])
 class Remote(io.RawIOBase):
