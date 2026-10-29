@@ -25,5 +25,13 @@
     "source_sha256": "a9a5da563afbfe6d759b3b6afaa4d5cf4e61e09ef0ee35e010f9c37782b345d6",
     "claims_url": "https://studio.youtube.com/video/uuZmy21oKpo/claims",
     "evidence": "/downloads/cloud-browser-20261029-055349.png"
+  },
+  "dramabox-golden42000028903-ep2-part3-v1": {
+    "video_id": "-GO7jzF8s1k",
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793253940.0,
+    "source_sha256": "637c8ec0cb37844512ab28dd73e6bc37b9758db25920af5261d8921a5a95d404",
+    "claims_url": "https://studio.youtube.com/video/-GO7jzF8s1k/claims",
+    "evidence": "/downloads/cloud-browser-20261029-060540.png"
   }
 }
