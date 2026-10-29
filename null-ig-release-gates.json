@@ -110,5 +110,26 @@
     "source_sha256": "c49c6653cc879b3107377fa7e8f76dcf04a6925903e9bff64c34b5e266fc209d",
     "video_id": "avG4GdYoIT0",
     "source_pixels_and_rendered_edges_verified": true
+  },
+  "dramabox-null42000029033-ep6-part1-v1": {
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793295588.356229,
+    "source_sha256": "ad6d07186c2ae84d3bbcd3b3cff12494664b8c33897238284d69d9fc20645631",
+    "video_id": "abpsF-azjdU",
+    "source_pixels_and_rendered_edges_verified": true
+  },
+  "dramabox-null42000029033-ep6-part2-v1": {
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793295588.3562334,
+    "source_sha256": "4ece8e8eefadf0de5478127b47ac78ab97d19d959bafc301df965032c7ae8d3b",
+    "video_id": "Dz3yfQhxyJA",
+    "source_pixels_and_rendered_edges_verified": true
+  },
+  "dramabox-null42000029033-ep6-part3-v1": {
+    "status": "private_hd_no_claims",
+    "reviewed_at": 1793295588.3562367,
+    "source_sha256": "07702569d16e59b44f3ed41ea3efe48316b33504c346b4027694a239d9b56162",
+    "video_id": "c-g4_KnhUEc",
+    "source_pixels_and_rendered_edges_verified": true
   }
 }
