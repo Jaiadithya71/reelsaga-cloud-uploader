@@ -30,7 +30,15 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T17:28:13+05:30",
       "playlist_membership_saved": true,
-      "playlist_order_verified": false
+      "playlist_order_verified": true
+    },
+    "episode2part2": {
+      "id": "m9Ff9RC0m6Q",
+      "url": "https://www.youtube.com/shorts/m9Ff9RC0m6Q",
+      "sent_at": "2026-10-29T18:00:58+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-29T18:01:06+05:30",
+      "playlist_order_verified": true
     }
   },
   "instagram": {
