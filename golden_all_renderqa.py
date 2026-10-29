@@ -26,5 +26,5 @@ for e,bs in bounds.items():
   md5=subprocess.check_output(['ffmpeg','-v','error','-i',str(target),'-map','0:v','-f','framemd5','-']);lines=[l for l in md5.decode().splitlines()if not l.startswith('#')]
   meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(target)]))
   receipts.append({'episode':e,'part':part,'start':start,'end':end,'bytes':target.stat().st_size,'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'decoded_frame_hash':hashlib.sha256('\n'.join(lines).encode()).hexdigest(),'frame_count':len(lines),'metadata':meta})
-  subprocess.run(['ffmpeg','-v','error','-ss','.6','-i',str(target),'-frames:v','1','-vf','scale=216:384','-y',str(out/f'e{e}p{part}-cover.jpg')],check=True)
+  subprocess.run(['ffmpeg','-v','error','-ss','0.6','-i',str(target),'-frames:v','1','-vf','scale=216:384','-y',str(out/f'e{e}p{part}-cover.jpg')],check=True)
   (out/'receipts.json').write_text(json.dumps(receipts,indent=2));print('rendered',e,part,flush=True)
