@@ -12,12 +12,14 @@
   },
   "dramabox-null42000029033-ep2-part1-private-probe": {
     "video_id": "HQ1kiMW3IVs",
-    "state": "private_hd_no_claims",
+    "state": "public_hd_no_claims",
     "reviewed_at": "2026-10-29T13:55:00+05:30",
     "claims_url": "https://studio.youtube.com/video/HQ1kiMW3IVs/claims",
     "evidence": "/downloads/cloud-browser-20261029-082433.png",
-    "public_release_approved": false,
-    "source_sha256": "bf75ae0e96f0cc2d15bfa0cb9b2f12eebc7bd68d646acfd216370e9f295d8ee8"
+    "public_release_approved": true,
+    "source_sha256": "bf75ae0e96f0cc2d15bfa0cb9b2f12eebc7bd68d646acfd216370e9f295d8ee8",
+    "published_at": "2026-10-29T17:28:06+05:30",
+    "claims_rechecked_at": "2026-10-29T17:28:13+05:30"
   },
   "dramabox-null42000029033-ep4-part1-private-probe": {
     "video_id": "9xFr4vzfDOA",

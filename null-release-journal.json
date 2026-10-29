@@ -22,6 +22,15 @@
       "state": "public_hd_no_claims",
       "claims_checked_at": "2026-10-29T16:55:02+05:30",
       "playlist_order_verified": true
+    },
+    "episode2part1": {
+      "id": "HQ1kiMW3IVs",
+      "url": "https://youtube.com/shorts/HQ1kiMW3IVs",
+      "sent_at": "2026-10-29T17:28:06+05:30",
+      "state": "public_hd_no_claims",
+      "claims_checked_at": "2026-10-29T17:28:13+05:30",
+      "playlist_membership_saved": true,
+      "playlist_order_verified": false
     }
   },
   "instagram": {
@@ -39,6 +48,14 @@
       "sent_at": "2026-10-29T11:05:54.516Z",
       "state": "served_pixels_verified_host_absence_verified",
       "workflow_run": 40862273017,
+      "native_ai_verified": true
+    },
+    "episode1part3": {
+      "id": "6ae332d11ed1437ba0be66ff",
+      "url": "https://www.instagram.com/reel/DfE8EailVsS/",
+      "sent_at": "2026-10-29T11:50:36.177Z",
+      "state": "served_pixels_verified_host_absence_verified",
+      "workflow_run": 40868225762,
       "native_ai_verified": true
     }
   },
