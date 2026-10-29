@@ -345,13 +345,16 @@
       "workflow_run": 40930243086
     },
     "part2": {
-      "state": "single_retry_dispatched_after_absence_reconciled",
-      "dispatched_at": "2026-10-30T00:32:11+05:30"
+      "id": "fyENQWZvwxY",
+      "state": "private_hd_no_claims",
+      "checked_at": "2026-10-30T00:38:39+05:30",
+      "workflow_run": 40936373733
     },
     "retained_old_part1": {
       "id": "9zqazaUJ25I",
       "never_publish": true
     },
-    "rendered_pixels_audio_edges_verified_at": "2026-10-30T00:22:35+05:30"
+    "rendered_pixels_audio_edges_verified_at": "2026-10-30T00:22:35+05:30",
+    "catalog_renderer_gates_recorded_at": "2026-10-30T00:38:39+05:30"
   }
 }

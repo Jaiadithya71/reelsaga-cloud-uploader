@@ -132,5 +132,29 @@
     "source_sha256": "07702569d16e59b44f3ed41ea3efe48316b33504c346b4027694a239d9b56162",
     "video_id": "c-g4_KnhUEc",
     "source_pixels_and_rendered_edges_verified": true
+  },
+  "dramabox-null42000029033-ep7-part1-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "807dba8e3accb0240ed96b295bdb8370f6bff31a8a256deaa06f885c2434e96c",
+    "reviewed_at": 1793300933.1888268,
+    "youtube_id": "9B_IIv50XjA",
+    "claims_checked_at": "2026-10-30T00:32:27+05:30",
+    "renderer_verified_run": 40930247299
+  },
+  "dramabox-null42000029033-ep7-part2-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "a9813822ff005c9fb7e280baea04c25c8fd3d3a2f51b947703ce70c30cff0623",
+    "reviewed_at": 1793300933.2653258,
+    "youtube_id": "fyENQWZvwxY",
+    "claims_checked_at": "2026-10-30T00:38:39+05:30",
+    "renderer_verified_run": 40930250876
+  },
+  "dramabox-null42000029033-ep7-part3-v1": {
+    "status": "private_hd_no_claims",
+    "source_sha256": "fbafe49b27f387982cba874d2502d7f8e701e6cc8356eefe6429e0debbd018df",
+    "reviewed_at": 1793300933.3310797,
+    "youtube_id": "IDYuOmAWKVU",
+    "claims_checked_at": "2026-10-30T00:32:59+05:30",
+    "renderer_verified_run": 40930254735
   }
 }
