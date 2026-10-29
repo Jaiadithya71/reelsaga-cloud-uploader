@@ -16,6 +16,11 @@ results=[]
 for name in members:
  p=root/name
  if not p.exists():p.write_bytes(z.read(name))
- meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(i for i in meta['streams']if i['codec_type']=='video');assert (v['width'],v['height'])==(1080,1920);assert any(i['codec_type']=='audio'for i in meta['streams']);subprocess.run(['ffmpeg','-v','error','-threads','2','-i',str(p),'-f','null','-'],check=True,capture_output=True)
- subprocess.run(['ffmpeg','-v','error','-ss','25','-i',str(p),'-frames:v','1','-vf','scale=360:640','-y',str(root/(name+'.jpg'))],check=True)
- r={'episode':int(name[7:-4]),'duration':float(meta['format']['duration']),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'width':1080,'height':1920,'decode':'pass'};results.append(r);print(r,flush=True);(root/'all-source-qa.json').write_text(json.dumps(results,indent=2));p.unlink()
+ meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]))
+ (root/(name+'.metadata.json')).write_text(json.dumps(meta,indent=2))
+ v=next(i for i in meta['streams']if i['codec_type']=='video')
+ dec=subprocess.run(['ffmpeg','-v','error','-threads','2','-i',str(p),'-f','null','-'],capture_output=True)
+ for sec in (2,25):
+  subprocess.run(['ffmpeg','-v','error','-ss',str(sec),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y',str(root/(name+f'.{sec}s.jpg'))],check=True)
+ r={'episode':int(name[7:-4]),'duration':float(meta['format']['duration']),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'width':v['width'],'height':v['height'],'audio':any(i['codec_type']=='audio'for i in meta['streams']),'decode':'pass' if dec.returncode==0 and not dec.stderr else 'review','decode_stderr':dec.stderr.decode()[:3000]}
+ results.append(r);print(r,flush=True);(root/'all-source-qa.json').write_text(json.dumps(results,indent=2));p.unlink()

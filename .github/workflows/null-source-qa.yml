@@ -20,6 +20,7 @@ jobs:
 
         python null_source_qa.py'
     - uses: actions/upload-artifact@v4
+      if: always()
       with:
         name: null-source-qa
         path: null-source-qa/
