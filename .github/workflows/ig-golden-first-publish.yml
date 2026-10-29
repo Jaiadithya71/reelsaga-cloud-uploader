@@ -1,6 +1,14 @@
 name: Golden Dragon Rider E1P1 guarded IG publication
 'on':
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options:
+        - publish
+        - cleanup
+        default: publish
+        required: true
 permissions:
   contents: write
 concurrency:
@@ -30,6 +38,7 @@ jobs:
         REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
         AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        RECOVERY_CLEANUP_ONLY: ${{ inputs.mode == 'cleanup' && '1' || '0' }}
       run: 'set +x
 
         PYTHONPATH=.:ig-recovery python ig-recovery/golden_first.py'
