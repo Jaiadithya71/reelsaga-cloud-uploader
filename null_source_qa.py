@@ -1,4 +1,4 @@
-import requests,io,zipfile,pathlib,json,subprocess
+import requests,io,zipfile,pathlib,json,subprocess,re
 root=pathlib.Path('null-source-qa');root.mkdir(exist_ok=True);u='https://cps-distr.ikyuedu.com/distribution/11/DramaBox资源包-42000029033-19b48bade6b3906f40a7fafe28d1b268.zip';s=requests.Session();r=s.head(u,timeout=25);r.raise_for_status();size=int(r.headers['Content-Length'])
 class Remote(io.RawIOBase):
  def __init__(self):self.pos=0
@@ -23,4 +23,8 @@ for name in members:
  for sec in (2,25):
   subprocess.run(['ffmpeg','-v','error','-ss',str(sec),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y',str(root/(name+f'.{sec}s.jpg'))],check=True)
  r={'episode':int(name[7:-4]),'duration':float(meta['format']['duration']),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'width':v['width'],'height':v['height'],'audio':any(i['codec_type']=='audio'for i in meta['streams']),'decode':'pass' if dec.returncode==0 and not dec.stderr else 'review','decode_stderr':dec.stderr.decode()[:3000]}
+ sc=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-vf',"scale=180:320,select='gt(scene,0.25)',showinfo",'-an','-f','null','-'],capture_output=True)
+ r['scene_times']=[float(t)for t in re.findall(r'pts_time:([0-9.]+)',sc.stderr.decode())]
+ sil=subprocess.run(['ffmpeg','-hide_banner','-i',str(p),'-af','silencedetect=noise=-30dB:d=0.18','-vn','-f','null','-'],capture_output=True)
+ r['silence_log']=[line for line in sil.stderr.decode().splitlines()if 'silence_'in line]
  results.append(r);print(r,flush=True);(root/'all-source-qa.json').write_text(json.dumps(results,indent=2));p.unlink()

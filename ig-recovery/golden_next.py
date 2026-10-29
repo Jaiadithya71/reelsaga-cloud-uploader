@@ -13,6 +13,7 @@ def receipt(**kw):pathlib.Path('recovery-receipt.json').write_text(json.dumps(kw
 m=json.loads(pathlib.Path('golden-public-catalog.json').read_text())
 require(len(m['items'])==30,'Incomplete free-run catalog')
 review=json.loads(pathlib.Path('golden-release-gates.json').read_text())
+require(not pathlib.Path('golden-public-cleanup.json').exists(),'Golden public series removed: release disabled')
 
 class State(GitHubState):
  def url(self,k):return self.base+'/contents/state-v2/'+k+'.enc'
