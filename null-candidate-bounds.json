@@ -111,5 +111,12 @@
     "102.64": "complete I wont stop now; next Chloe think about this; tight0.5s clips/source8s pixels checked",
     "source_run": 40948845049,
     "rendered_edges_pending": true
+  },
+  "episode9_boundary_review": {
+    "reviewed_at": "2026-10-30T03:11:28+05:30",
+    "36.24": "prior3s no speech; head butterfly name repeated; source8s actualpixelschecked",
+    "71.2": "complete Stop the match! Shes going to die!; next Call off the fight distinct sentence; source8s actualpixelschecked",
+    "source_run": 40959157028,
+    "rendered_edges_pending": true
   }
 }
