@@ -630,8 +630,11 @@
   "private_episode8": {
     "part1": {
       "id": "NsyrhHN4ei4",
-      "state": "private_hd_no_claims",
-      "checked_at": "2026-10-30T02:26:50+05:30"
+      "state": "blocked_globally_per_email_studio_recheck_pending",
+      "checked_at": "2026-10-30T02:26:50+05:30",
+      "previous_state": "private_hd_no_claims",
+      "previous_checked_at": "2026-10-30T02:26:50+05:30",
+      "notice_received_at": "2026-10-30T22:48:14+05:30"
     },
     "part2": {
       "id": "6nd_BeJOCJ0",
@@ -670,6 +673,20 @@
         "strike": false,
         "studio_link_from_notice": "https://studio.youtube.com/video/fyENQWZvwxY/edit?d=vc",
         "studio_recheck_pending": true
+      },
+      "NsyrhHN4ei4": {
+        "source": "live_gmail",
+        "received_at": "2026-10-30T22:48:14+05:30",
+        "checked_at": "2026-10-31T04:59:59+05:30",
+        "episode": 8,
+        "part": 1,
+        "claimant": "DramaBox",
+        "type": "Video",
+        "impact": "Blocked globally",
+        "strike": false,
+        "channel_impact_reported": false,
+        "studio_link_from_notice": "https://studio.youtube.com/video/NsyrhHN4ei4/edit?d=vc",
+        "studio_recheck_pending": true
       }
     },
     "instagram_resume": {
@@ -678,7 +695,10 @@
       "scope": "existing_ordered_instagram_only_no_messaging_or_youtube",
       "rights_not_established": true
     },
-    "youtube_publishing_paused": true
+    "youtube_publishing_paused": true,
+    "additional_notice_ids_pending_studio_recheck": [
+      "NsyrhHN4ei4"
+    ]
   },
   "instagram_run_closeout": {
     "status": "free_run_complete_stopped",
