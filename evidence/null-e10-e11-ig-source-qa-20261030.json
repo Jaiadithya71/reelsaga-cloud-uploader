@@ -1,0 +1,82 @@
+{
+  "render_run": 41060819675,
+  "parts": [
+    {
+      "episode": 10,
+      "part": 1,
+      "start": 0.0,
+      "end": 43.88,
+      "bytes": 55111973,
+      "sha256": "a4c564b80654a76f401c239e28ab8bee0d81da20cff614784c1cefeac06b620c"
+    },
+    {
+      "episode": 10,
+      "part": 2,
+      "start": 43.88,
+      "end": 87.64,
+      "bytes": 52377748,
+      "sha256": "7805b78696533238f388a7612ac9ce09051da0a6582bcbfe948bf4abd1686222"
+    },
+    {
+      "episode": 10,
+      "part": 3,
+      "start": 87.64,
+      "end": 128.4,
+      "bytes": 49945998,
+      "sha256": "13ff39d1286e0da50e5f985c6e3a22d61e1b46d64912ea234537baa0b3956e13"
+    },
+    {
+      "episode": 10,
+      "part": 4,
+      "start": 128.4,
+      "end": 174.08,
+      "bytes": 54940806,
+      "sha256": "670673e9674c3c9c3ce62cbb203b0a19c735a9a623c02a913245e726501a5aa1"
+    },
+    {
+      "episode": 10,
+      "part": 5,
+      "start": 174.08,
+      "end": 217.515011,
+      "bytes": 53748800,
+      "sha256": "9d2a24cda6b22263aa335479e088ee0c906c0592ef291943b64a4b4e2490ca3f"
+    },
+    {
+      "episode": 11,
+      "part": 1,
+      "start": 0.0,
+      "end": 32.88,
+      "bytes": 40932693,
+      "sha256": "ff2e5429807b2eeaca2324b20a8ff068759008598457061086305fe83c182018"
+    },
+    {
+      "episode": 11,
+      "part": 2,
+      "start": 32.88,
+      "end": 69.099002,
+      "bytes": 49980191,
+      "sha256": "215c3c9f24be822e5d2380d774100d5db69f0e43b3c813a9c7ce6a0796a79f04"
+    }
+  ],
+  "actual_pixels_audio_decode_sha_reviewed": true,
+  "dimensions": {
+    "episode10": [
+      1080,
+      1922
+    ],
+    "episode11": [
+      1080,
+      1920
+    ]
+  },
+  "boundary_review": {
+    "e10_43.88": "prior no speech, next What was that",
+    "e10_87.64": "prior complete insult, next no speech",
+    "e10_128.4": "prior Dont test me complete, next Are you going to say it",
+    "e10_174.08": "prior Im dying complete as laughter, next No dont touch her",
+    "e11_32.88": "no speech either side"
+  },
+  "ig_authority": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+  "youtube_claims_unverified": true,
+  "not_rights_clearance": true
+}
