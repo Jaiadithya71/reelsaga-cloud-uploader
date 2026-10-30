@@ -1,0 +1,193 @@
+{
+  "series": "No One Gets Saved",
+  "source_episodes": [
+    {
+      "episode": 1,
+      "sha256": "cd0cd51fc39dafe5e3423e93a5604828dda8f538d28f3191935d6bb630395527",
+      "bytes": 61182156,
+      "full_decode": true
+    },
+    {
+      "episode": 2,
+      "sha256": "98889b618183810b2bd0507407cc6f0cba4e0068c0bcd286c0c5fd1dfdcb84f0",
+      "bytes": 49348017,
+      "full_decode": true
+    },
+    {
+      "episode": 3,
+      "sha256": "438aaf738ea92679a1bf56d9f9cd2e19d522506ef86093431deeae45b0451615",
+      "bytes": 51232972,
+      "full_decode": true
+    },
+    {
+      "episode": 4,
+      "sha256": "63758fa96a4663b54279dcd8bf8473fcb12f558de2d3a0bac5cf3f2f7374d4fc",
+      "bytes": 42558528,
+      "full_decode": true
+    },
+    {
+      "episode": 5,
+      "sha256": "2158379c9ea91ba806fa3f0b136a204b6ac7e95ce2a552a31eb42577db288bf2",
+      "bytes": 56169289,
+      "full_decode": true
+    },
+    {
+      "episode": 6,
+      "sha256": "b630227cc5b17c4dcc26a8f35d72fd56613cb6d4f3c95bc3f508e3e9b2dd7e61",
+      "bytes": 59544307,
+      "full_decode": true
+    },
+    {
+      "episode": 7,
+      "sha256": "0f63feef59e7a86aa8a3b84dc253b686e4f6d7b50455f7d5c35dedbc434b93ac",
+      "bytes": 58781302,
+      "full_decode": true
+    },
+    {
+      "episode": 8,
+      "sha256": "5aaae4146b9d4b8f6ebc945b451377b80f7234cda3bcf8403440bf5f4a96b416",
+      "bytes": 51135607,
+      "full_decode": true
+    },
+    {
+      "episode": 9,
+      "sha256": "356442e91c20266412a2f04011e36def2de6dad446edb0bccb8d772f064de5e3",
+      "bytes": 56342056,
+      "full_decode": true
+    }
+  ],
+  "parts": [
+    {
+      "id": "dramabox-saved42000029091-ep1-part1-v1",
+      "sha256": "73942736acc9906a3501df0457f8c57960b5e22de2a4e07504647650664c4597",
+      "bytes": 60965359,
+      "start": 0,
+      "end": 46.28
+    },
+    {
+      "id": "dramabox-saved42000029091-ep1-part2-v1",
+      "sha256": "7d12cc5b4a80dd45ff2dfe387025e83b767f8db177d4ae9e39941c0ec9b73ed1",
+      "bytes": 59295328,
+      "start": 46.28,
+      "end": 91.844
+    },
+    {
+      "id": "dramabox-saved42000029091-ep2-part1-v1",
+      "sha256": "05b260aae6b331158770f9d53bfe19a83fbc378a93d7dd94108dfaa0e18df470",
+      "bytes": 57921501,
+      "start": 0,
+      "end": 46.28
+    },
+    {
+      "id": "dramabox-saved42000029091-ep2-part2-v1",
+      "sha256": "1b0230de0a37d9980458b4cdaae434064a621df303528c6fa8237c19d0a87d85",
+      "bytes": 37172144,
+      "start": 46.28,
+      "end": 74.756
+    },
+    {
+      "id": "dramabox-saved42000029091-ep3-part1-v1",
+      "sha256": "980413d17db58cffcbf4f7ba2cfa47b9b7e0689add5c6637d9ae5bd06b47b5ad",
+      "bytes": 55226133,
+      "start": 0,
+      "end": 44.24
+    },
+    {
+      "id": "dramabox-saved42000029091-ep3-part2-v1",
+      "sha256": "7e285e42fe5ec54489f6ae9261f8cef64d0b5e11b4dce337dab7f608eae29d57",
+      "bytes": 38205155,
+      "start": 44.24,
+      "end": 78.02
+    },
+    {
+      "id": "dramabox-saved42000029091-ep4-part1-v1",
+      "sha256": "b7102f72ce4d06c975ac462ad9fb08b1ea2da23189b959e1aef7f17c453f875f",
+      "bytes": 47147937,
+      "start": 0,
+      "end": 43.28
+    },
+    {
+      "id": "dramabox-saved42000029091-ep4-part2-v1",
+      "sha256": "4efa4f66e94e17f368ea787286ef909f98853035fedf08b5893c0a832149c9c7",
+      "bytes": 25429794,
+      "start": 43.28,
+      "end": 64.58
+    },
+    {
+      "id": "dramabox-saved42000029091-ep5-part1-v1",
+      "sha256": "8cba8dd935811ea8f058ecc23dd64619f59fcab0cd5c1b51f63fe56f5c65eb19",
+      "bytes": 51039289,
+      "start": 0,
+      "end": 42.0
+    },
+    {
+      "id": "dramabox-saved42000029091-ep5-part2-v1",
+      "sha256": "dfbcd0babecdf8c3ed814283cf7bc7582c1928fad168160ae002e344026b8fad",
+      "bytes": 47317284,
+      "start": 42.0,
+      "end": 80.73
+    },
+    {
+      "id": "dramabox-saved42000029091-ep6-part1-v1",
+      "sha256": "3957714598a05e77a766bd8ee5d838b44ff7a6759104880d3fd065aeaec2fcf5",
+      "bytes": 47578683,
+      "start": 0,
+      "end": 43.36
+    },
+    {
+      "id": "dramabox-saved42000029091-ep6-part2-v1",
+      "sha256": "901e89450cbee2bebb2b2dc8a70bf86dd82ae7cdaf3d7ca9d1ca5f667163b17f",
+      "bytes": 55206741,
+      "start": 43.36,
+      "end": 90.65
+    },
+    {
+      "id": "dramabox-saved42000029091-ep7-part1-v1",
+      "sha256": "5ee806cd56cb79d1983fdcf412184ceeab649254e5bb0ae48addf0c1c6b8e080",
+      "bytes": 48675876,
+      "start": 0,
+      "end": 43.28
+    },
+    {
+      "id": "dramabox-saved42000029091-ep7-part2-v1",
+      "sha256": "2706ae622269631867c38c4980b0eea9ba84cb9e3ede578e0a19c95e9b7f4c9e",
+      "bytes": 48407758,
+      "start": 43.28,
+      "end": 82.351
+    },
+    {
+      "id": "dramabox-saved42000029091-ep8-part1-v1",
+      "sha256": "0858a8b87ec05d3371a578d3d23064db58dd6063ddba7e6b5bab6a4a134379bd",
+      "bytes": 54019183,
+      "start": 0,
+      "end": 45.72
+    },
+    {
+      "id": "dramabox-saved42000029091-ep8-part2-v1",
+      "sha256": "410829ad0f8a71966e9065bc0e17dec40c0848bb05d32e71154811f3adb542b7",
+      "bytes": 37767749,
+      "start": 45.72,
+      "end": 70.148
+    },
+    {
+      "id": "dramabox-saved42000029091-ep9-part1-v1",
+      "sha256": "c4718122aa25590140c7cf411e32852f162abebe03e1c9af35cc678904c39f47",
+      "bytes": 66727328,
+      "start": 0,
+      "end": 45.6
+    },
+    {
+      "id": "dramabox-saved42000029091-ep9-part2-v1",
+      "sha256": "4db71b6e213e9b0be98170157d12d7bfe62efa2a24140f3be77d2dd779c54400",
+      "bytes": 51813796,
+      "start": 45.6,
+      "end": 85.7
+    }
+  ],
+  "actual_visual_and_audio_inspected": true,
+  "status": "prepared_not_released",
+  "instagram_release_pending": true,
+  "youtube_held": true,
+  "not_rights_clearance": true,
+  "render_note": "Local ffmpeg hashes are preparation evidence. A future runner render must reproduce exact qualified bytes or be requalified; no guessed hash substitutions."
+}
