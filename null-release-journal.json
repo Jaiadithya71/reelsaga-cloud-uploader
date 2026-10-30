@@ -441,6 +441,16 @@
       "public_pixels_verified": true,
       "relay_cleanup_absence_verified": true,
       "workflow_run": 41072277095
+    },
+    "episode9part3": {
+      "id": "6ae4b49ee266b27191f2282f",
+      "url": "https://www.instagram.com/reel/DfH4hYHj9Zt/",
+      "sent_at": "2026-10-30T15:18:48.065Z",
+      "state": "public_verified_cleaned",
+      "native_ai_verified": true,
+      "public_pixels_verified": true,
+      "relay_cleanup_absence_verified": true,
+      "workflow_run": 41078848329
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
