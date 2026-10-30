@@ -451,6 +451,16 @@
       "public_pixels_verified": true,
       "relay_cleanup_absence_verified": true,
       "workflow_run": 41078848329
+    },
+    "episode10part1": {
+      "id": "6ae4bf91cd8290b9b9fbbba3",
+      "url": "https://www.instagram.com/reel/DfH93LMlISp/",
+      "sent_at": "2026-10-30T16:04:35.959Z",
+      "state": "public_verified_cleaned",
+      "native_ai_verified": true,
+      "public_pixels_verified": true,
+      "relay_cleanup_absence_verified": true,
+      "workflow_run": 41085965470
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
