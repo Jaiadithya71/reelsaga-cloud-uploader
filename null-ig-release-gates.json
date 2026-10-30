@@ -146,12 +146,18 @@
     "renderer_verified_run": 40930247299
   },
   "dramabox-null42000029033-ep7-part2-v1": {
-    "status": "private_hd_no_claims",
+    "status": "instagram_owner_authorized_known_youtube_block",
     "source_sha256": "a9813822ff005c9fb7e280baea04c25c8fd3d3a2f51b947703ce70c30cff0623",
     "reviewed_at": 1793300933.2653258,
     "youtube_id": "fyENQWZvwxY",
     "claims_checked_at": "2026-10-30T00:38:39+05:30",
-    "renderer_verified_run": 40930250876
+    "renderer_verified_run": 40930250876,
+    "historical_youtube_review_status": "private_hd_no_claims",
+    "youtube_current_status": "globally_blocked_visual_DramaBox",
+    "youtube_block_notice_at": "2026-10-30T04:49:09+05:30",
+    "instagram_authorization_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+    "authorization_at": "2026-10-30T13:08:08+05:30",
+    "not_rights_clearance": true
   },
   "dramabox-null42000029033-ep7-part3-v1": {
     "status": "private_hd_no_claims",

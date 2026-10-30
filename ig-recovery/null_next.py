@@ -71,7 +71,8 @@ for i in m['items']:
  item=i;break
 if item is None:receipt(status='all_30_verified_no_new_post');raise SystemExit(0)
 gate=review.get(item['id'])
-require(gate and gate.get('status')=='private_hd_no_claims' and gate.get('source_sha256')==item['sha256'],'Own-part private review missing or media changed')
+owner_ig_exception=(item['id']=='dramabox-null42000029033-ep7-part2-v1' and gate and gate.get('status')=='instagram_owner_authorized_known_youtube_block' and gate.get('youtube_current_status')=='globally_blocked_visual_DramaBox' and gate.get('not_rights_clearance') is True and gate.get('instagram_authorization_message')==m.get('instagram_resume',{}).get('message_id')=='wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA' and not m.get('instagram_publishing_paused',True))
+require(gate and (gate.get('status')=='private_hd_no_claims' or owner_ig_exception) and gate.get('source_sha256')==item['sha256'],'Own-part review/IG authorization missing or media changed')
 require(time.time()-gate['reviewed_at']<86400,'Own-part private review stale')
 # All preceding items must have completed served frame/cover verification. No part skipping.
 position=m['items'].index(item)
