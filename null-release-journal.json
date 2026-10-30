@@ -679,5 +679,16 @@
       "rights_not_established": true
     },
     "youtube_publishing_paused": true
+  },
+  "instagram_run_closeout": {
+    "status": "free_run_complete_stopped",
+    "parts_verified": 33,
+    "free_episodes_completed": 11,
+    "last_actual_sent_at": "2026-10-31T02:00:18.316+05:30",
+    "next_series": "No One Gets Saved",
+    "next_series_status": "prepared_not_release_authorized_pending_owner_decision",
+    "youtube_held": true,
+    "messaging_held": true,
+    "rights_not_established": true
   }
 }

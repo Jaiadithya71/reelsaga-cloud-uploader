@@ -468,12 +468,15 @@
   "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA",
   "publishing_paused": true,
   "pause_reason": "2026-10-30T03:31:27+05:30 new global DramaBox visual block; both lanes await user rights-scope decision",
-  "instagram_publishing_paused": false,
+  "instagram_publishing_paused": true,
   "youtube_publishing_paused": true,
   "instagram_resume": {
     "at": "2026-10-30T13:08:08+05:30",
     "message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
     "scope": "existing_ordered_instagram_only_no_messaging_or_youtube",
     "rights_not_established": true
-  }
+  },
+  "instagram_run_status": "free_run_complete_stopped",
+  "instagram_completed_at": "2026-10-31T02:00:18.316+05:30",
+  "instagram_next_series_status": "held_pending_owner_decision"
 }
