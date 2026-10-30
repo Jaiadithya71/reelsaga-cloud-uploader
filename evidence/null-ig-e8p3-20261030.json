@@ -1,0 +1,43 @@
+{
+  "post_id": "6ae495ce3dc61ec0c201ae36",
+  "external_link": "https://www.instagram.com/reel/DfHpipJHYxk/",
+  "sent_at": "2026-10-30T13:06:33.514Z",
+  "run_id": 41060000768,
+  "public_qa": {
+    "shortcode": "DfHpipJHYxk",
+    "width": 720,
+    "height": 1280,
+    "duration": 51.616553,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+      {
+        "seconds": 0.6,
+        "correlation": 0.9994225467149304,
+        "mean_error": 1.6091087962962962
+      },
+      {
+        "seconds": 10,
+        "correlation": 0.9991373795968185,
+        "mean_error": 0.6755107060185185
+      },
+      {
+        "seconds": 25.8082765,
+        "correlation": 0.9992940893375184,
+        "mean_error": 1.5272569444444444
+      },
+      {
+        "seconds": 46.616553,
+        "correlation": 0.9989808600050545,
+        "mean_error": 1.5459244791666666
+      }
+    ],
+    "cover": {
+      "correlation": 0.9995698716605402,
+      "mean_error": 2.100455729166667
+    },
+    "status": "public_frame_and_cover_match"
+  },
+  "relay_cleanup": "absence_verified",
+  "visually_inspected": true
+}
