@@ -340,6 +340,16 @@
       "workflow_run": 40956679753,
       "native_ai_verified": true,
       "single_upload_readback_verified": true
+    },
+    "episode6part2": {
+      "id": "6ae44a436385db216a2f5b16",
+      "url": "https://www.instagram.com/reel/DfHEmRQmh9-/",
+      "sent_at": "2026-10-30T07:44:56.526Z",
+      "state": "public_verified_cleaned",
+      "native_ai_verified": true,
+      "public_pixels_verified": true,
+      "relay_cleanup_absence_verified": true,
+      "workflow_run": 41021517816
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
