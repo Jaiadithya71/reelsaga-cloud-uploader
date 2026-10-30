@@ -1,0 +1,43 @@
+{
+  "post_id": "6ae4defa10a950f137394f1a",
+  "external_link": "https://www.instagram.com/reel/DfINIailDA8/",
+  "sent_at": "2026-10-30T18:17:27.903Z",
+  "run_id": 41105049337,
+  "public_qa": {
+    "shortcode": "DfINIailDA8",
+    "width": 716,
+    "height": 1274,
+    "duration": 45.811565,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+      {
+        "seconds": 0.6,
+        "correlation": 0.9991810073355679,
+        "mean_error": 1.398857060185185
+      },
+      {
+        "seconds": 10,
+        "correlation": 0.9996190396832761,
+        "mean_error": 0.9421195023148148
+      },
+      {
+        "seconds": 22.9057825,
+        "correlation": 0.9990900558293806,
+        "mean_error": 1.857980324074074
+      },
+      {
+        "seconds": 40.811565,
+        "correlation": 0.999123453275565,
+        "mean_error": 1.5030396412037037
+      }
+    ],
+    "cover": {
+      "correlation": 0.9992959410084187,
+      "mean_error": 1.9509534143518519
+    },
+    "status": "public_frame_and_cover_match"
+  },
+  "relay_cleanup": "absence_verified",
+  "visually_inspected": true
+}
