@@ -1,0 +1,68 @@
+name: Weakest Null E7P1 exact saved draft recovery
+'on':
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options:
+        - publish
+        - cleanup
+        default: publish
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: 'python -m pip install cryptography==46.0.5 boto3==1.40.61 numpy==2.3.4
+        pillow==12.0.0
+
+        sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+
+        python -m pip install requests'
+    - name: Next own-part-reviewed original with complete live gates
+      env:
+        GH_TOKEN: ${{ github.token }}
+        REELSAGA_LEDGER_KEY: ${{ secrets.REELSAGA_LEDGER_KEY }}
+        REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.TIGRIS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.TIGRIS_SECRET_ACCESS_KEY }}
+        RECOVERY_RESUME_DRAFT: '1'
+        RECOVERY_CLEANUP_ONLY: ${{ inputs.mode == 'cleanup' && '1' || '0' }}
+      run: 'set +x
+
+        PYTHONPATH=.:ig-recovery python null_ig_e7p1_draft_reconcile.py
+
+        PYTHONPATH=.:ig-recovery python ig-recovery/null_next.py'
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: ig-recovery-sanitized-receipt
+        path: 'draft-reconcile.json
+
+          upload-readback-receipt.json
+
+          recovery-receipt.json
+
+          recovery-stop.json
+
+          public-qa/verification-receipt.json
+
+          public-qa/served-*.png
+
+          public-qa/cover.jpg'
+        retention-days: 2
+    - name: Remove runner originals
+      if: always()
+      run: rm -f p1.mp4 source.mp4 render.sh; rm -f public-qa/served.mp4
