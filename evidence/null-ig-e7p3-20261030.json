@@ -1,0 +1,43 @@
+{
+  "post_id": "6ae47625e97270550554b487",
+  "external_link": "https://www.instagram.com/reel/DfHaCIkiDVJ/",
+  "sent_at": "2026-10-30T10:52:09.288Z",
+  "run_id": 41043263880,
+  "public_qa": {
+    "shortcode": "DfHaCIkiDVJ",
+    "width": 720,
+    "height": 1280,
+    "duration": 42.560771,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+      {
+        "seconds": 0.6,
+        "correlation": 0.9990797932755641,
+        "mean_error": 1.3477662037037037
+      },
+      {
+        "seconds": 10,
+        "correlation": 0.9997934848982677,
+        "mean_error": 0.9556351273148148
+      },
+      {
+        "seconds": 21.2803855,
+        "correlation": 0.9996798731303782,
+        "mean_error": 1.3402068865740742
+      },
+      {
+        "seconds": 37.560771,
+        "correlation": 0.999229302471268,
+        "mean_error": 1.356814236111111
+      }
+    ],
+    "cover": {
+      "correlation": 0.9991993741254565,
+      "mean_error": 1.8527821180555555
+    },
+    "status": "public_frame_and_cover_match"
+  },
+  "relay_cleanup": "absence_verified",
+  "visually_inspected": true
+}
