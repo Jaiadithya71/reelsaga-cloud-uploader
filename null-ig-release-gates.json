@@ -191,5 +191,38 @@
     "youtube_id": "TwrffD-Lv-I",
     "claims_checked_at": "2026-10-30T02:27:12+05:30",
     "renderer_verified_run": 40950411974
+  },
+  "dramabox-null42000029033-ep9-part1-v1": {
+    "status": "instagram_source_qa_owner_authorized",
+    "source_sha256": "e10db43561d58a145c3278c610ede9ed285f1c5ad884a3a6fd7f35099c0795bf",
+    "reviewed_at": 1793365468.7314699,
+    "source_pixels_and_rendered_edges_verified": true,
+    "render_run": 40959929854,
+    "source_dialogue_audit_run": 40959157028,
+    "instagram_authorization_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+    "youtube_current_status": "unverified_no_new_probe_while_held",
+    "not_rights_clearance": true
+  },
+  "dramabox-null42000029033-ep9-part2-v1": {
+    "status": "instagram_source_qa_owner_authorized",
+    "source_sha256": "4469afb19b2ef72147d420ea468da7efd4ce6bcfb907bb44b4993e89007891f0",
+    "reviewed_at": 1793365470.4658213,
+    "source_pixels_and_rendered_edges_verified": true,
+    "render_run": 40959933007,
+    "source_dialogue_audit_run": 40959157028,
+    "instagram_authorization_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+    "youtube_current_status": "unverified_no_new_probe_while_held",
+    "not_rights_clearance": true
+  },
+  "dramabox-null42000029033-ep9-part3-v1": {
+    "status": "instagram_source_qa_owner_authorized",
+    "source_sha256": "165d53c016f20accf112f818764ca50ddc9af22d64b04a5d5352ef565f446085",
+    "reviewed_at": 1793365472.4273293,
+    "source_pixels_and_rendered_edges_verified": true,
+    "render_run": 40959936156,
+    "source_dialogue_audit_run": 40959157028,
+    "instagram_authorization_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+    "youtube_current_status": "unverified_no_new_probe_while_held",
+    "not_rights_clearance": true
   }
 }

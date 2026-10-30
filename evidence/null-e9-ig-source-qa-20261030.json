@@ -1,0 +1,47 @@
+{
+  "parts": [
+    {
+      "item": "dramabox-null42000029033-ep9-part1-v1",
+      "render": {
+        "bytes": 55300741,
+        "sha256": "e10db43561d58a145c3278c610ede9ed285f1c5ad884a3a6fd7f35099c0795bf"
+      },
+      "actual_pixels_audio_decode_reviewed": true,
+      "source_bounds": [
+        0.0,
+        36.24
+      ]
+    },
+    {
+      "item": "dramabox-null42000029033-ep9-part2-v1",
+      "render": {
+        "bytes": 44614160,
+        "sha256": "4469afb19b2ef72147d420ea468da7efd4ce6bcfb907bb44b4993e89007891f0"
+      },
+      "actual_pixels_audio_decode_reviewed": true,
+      "source_bounds": [
+        36.24,
+        71.2
+      ]
+    },
+    {
+      "item": "dramabox-null42000029033-ep9-part3-v1",
+      "render": {
+        "bytes": 51130718,
+        "sha256": "165d53c016f20accf112f818764ca50ddc9af22d64b04a5d5352ef565f446085"
+      },
+      "actual_pixels_audio_decode_reviewed": true,
+      "source_bounds": [
+        71.2,
+        109.72
+      ]
+    }
+  ],
+  "audio_boundaries": {
+    "36.24": "prior tail and next head no speech",
+    "71.2": "prior complete Stop the match she is going to die; next Call off the fight"
+  },
+  "ig_authority": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+  "youtube_claims_unverified": true,
+  "not_rights_clearance": true
+}
