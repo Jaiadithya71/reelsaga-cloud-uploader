@@ -12,7 +12,7 @@ from verified_upload import put_once_verified
 B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-null-batch-20261029'
 def receipt(**kw):pathlib.Path('recovery-receipt.json').write_text(json.dumps(kw,indent=2))
 m=json.loads(pathlib.Path('null-public-catalog.json').read_text())
-require(not m.get('publishing_paused',False),'Publishing paused for rights-scope decision; no new upload or post')
+require(not m.get('instagram_publishing_paused',m.get('publishing_paused',False)),'Instagram publication paused; no new upload or post')
 require(1<=len(m['items'])<=33 and m['full_planned_parts']==33,'Unexpected qualified catalog')
 review=json.loads(pathlib.Path('null-ig-release-gates.json').read_text())
 require(m['approval_message']=='wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA','Approval mismatch')

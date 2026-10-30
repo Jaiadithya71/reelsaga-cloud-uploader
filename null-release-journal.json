@@ -466,7 +466,7 @@
   },
   "rights_hold": {
     "at": "2026-10-30T03:31:27+05:30",
-    "status": "both_new_publication_paused_pending_user_decision",
+    "status": "youtube_hold_instagram_resumed_by_owner",
     "affected_confirmed": [
       "3qNS0fjje5U",
       "HQ1kiMW3IVs",
@@ -490,6 +490,13 @@
         "studio_link_from_notice": "https://studio.youtube.com/video/fyENQWZvwxY/edit?d=vc",
         "studio_recheck_pending": true
       }
-    }
+    },
+    "instagram_resume": {
+      "at": "2026-10-30T13:08:08+05:30",
+      "message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+      "scope": "existing_ordered_instagram_only_no_messaging_or_youtube",
+      "rights_not_established": true
+    },
+    "youtube_publishing_paused": true
   }
 }

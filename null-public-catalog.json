@@ -319,5 +319,13 @@
   "full_planned_parts": 33,
   "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2RTE4MzhGMzY2OUM3NjExMzdDMDMxNjBERTRGMzUA",
   "publishing_paused": true,
-  "pause_reason": "2026-10-30T03:31:27+05:30 new global DramaBox visual block; both lanes await user rights-scope decision"
+  "pause_reason": "2026-10-30T03:31:27+05:30 new global DramaBox visual block; both lanes await user rights-scope decision",
+  "instagram_publishing_paused": false,
+  "youtube_publishing_paused": true,
+  "instagram_resume": {
+    "at": "2026-10-30T13:08:08+05:30",
+    "message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM2QkQ1NkUxQjNCNkNDOTdBREY1RjJCNjY3MjJCRTkA",
+    "scope": "existing_ordered_instagram_only_no_messaging_or_youtube",
+    "rights_not_established": true
+  }
 }
