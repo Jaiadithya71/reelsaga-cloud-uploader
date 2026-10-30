@@ -371,6 +371,16 @@
       "relay_cleanup_absence_verified": true,
       "workflow_run": 41031997633,
       "saved_draft_reconciled_from_run": 41031401575
+    },
+    "episode7part2": {
+      "id": "6ae46b2f58a62337fb7b4eed",
+      "url": "https://www.instagram.com/reel/DfHUykzgV3N/",
+      "sent_at": "2026-10-30T10:04:52.993Z",
+      "state": "public_verified_cleaned",
+      "native_ai_verified": true,
+      "public_pixels_verified": true,
+      "relay_cleanup_absence_verified": true,
+      "workflow_run": 41037547096
     }
   },
   "playlist_url": "https://www.youtube.com/playlist?list=PLQeITjEI7yMw",
