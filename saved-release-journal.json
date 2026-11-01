@@ -216,6 +216,29 @@
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified",
    "recovery": "Initial release (run 41288251325) errored on Buffer side with no send; guarded retry re-released the same draft after verifying error/unsent state, staged-original hash, spacing and identity. Published on retry."
+  },
+  {
+   "id": "dramabox-saved42000029091-ep5-part2-v1",
+   "episode": 5,
+   "part": 2,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae702d637c1acd2a0f6ce2f",
+   "external_link": "https://www.instagram.com/reel/DfMYpCSEV2e/",
+   "actual_send_at": "2026-11-01T14:44:59.348+05:30",
+   "run": "41292101573",
+   "bytes": 47317284,
+   "sha256": "dfbcd0babecdf8c3ed814283cf7bc7582c1928fad168160ae002e344026b8fad",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfMYpCSEV2e",
+    "width": 720,
+    "height": 1280,
+    "duration": 38.823,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
