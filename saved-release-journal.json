@@ -1,0 +1,33 @@
+{
+ "series": "No One Gets Saved",
+ "dramacps_id": "807544",
+ "platform": "instagram",
+ "authorization_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM3QTU0OTlFNjQ3NjA4ODJDNUZBNzA4RTBDODM4QzEA",
+ "authorization_scope": "Owner approved Instagram start without private YouTube copyright checks; copyright risk untested; YouTube and DMs remain held; not rights clearance",
+ "entries": [
+  {
+   "id": "dramabox-saved42000029091-ep1-part1-v1",
+   "episode": 1,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae69f08f0984eef3341a69b",
+   "external_link": "https://www.instagram.com/reel/DfLn6aNig3D/",
+   "actual_send_at": "2026-11-01T07:39:07.157+05:30",
+   "run": "41263822708",
+   "commit": "022fe5d",
+   "bytes": 60965359,
+   "sha256": "73942736acc9906a3501df0457f8c57960b5e22de2a4e07504647650664c4597",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfLn6aNig3D",
+    "width": 720,
+    "height": 1280,
+    "duration": 46.416,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  }
+ ]
+}
