@@ -192,6 +192,30 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-saved42000029091-ep5-part1-v1",
+   "episode": 5,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae6f5f637c1acd2a0f3cd2a",
+   "external_link": "https://www.instagram.com/reel/DfMTYrjj9NH/",
+   "actual_send_at": "2026-11-01T14:00:44.778+05:30",
+   "run": "41288889536",
+   "bytes": 51039289,
+   "sha256": "8cba8dd935811ea8f058ecc23dd64619f59fcab0cd5c1b51f63fe56f5c65eb19",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfMTYrjj9NH",
+    "width": 720,
+    "height": 1280,
+    "duration": 42.12,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified",
+   "recovery": "Initial release (run 41288251325) errored on Buffer side with no send; guarded retry re-released the same draft after verifying error/unsent state, staged-original hash, spacing and identity. Published on retry."
   }
  ]
 }
