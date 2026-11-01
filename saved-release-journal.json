@@ -285,6 +285,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-saved42000029091-ep7-part1-v1",
+   "episode": 7,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae7231f37c1acd2a0ff7299",
+   "external_link": "https://www.instagram.com/reel/DfMoZ5XADIA/",
+   "actual_send_at": "2026-11-01T17:02:43.216+05:30",
+   "run": "41302106410",
+   "bytes": 48675876,
+   "sha256": "5ee806cd56cb79d1983fdcf412184ceeab649254e5bb0ae48addf0c1c6b8e080",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfMoZ5XADIA",
+    "width": 720,
+    "height": 1280,
+    "duration": 43.397,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
