@@ -141,7 +141,12 @@ else:
    if n<0:n=size-self.pos
    n=min(n,size-self.pos)
    if n<=0:return b''
-   rr=sess.get(u,headers={'Range':f'bytes={self.pos}-{min(size-1,self.pos+n-1)}'},timeout=45);rr.raise_for_status();require(rr.status_code==206,'Source range unsupported');self.pos+=len(rr.content);return rr.content
+   for attempt in range(4):
+    try:
+     rr=sess.get(u,headers={'Range':f'bytes={self.pos}-{min(size-1,self.pos+n-1)}'},timeout=60);rr.raise_for_status();require(rr.status_code==206,'Source range unsupported');self.pos+=len(rr.content);return rr.content
+    except Exception:
+     if attempt==3:raise
+     time.sleep(3*(attempt+1))
  z=zipfile.ZipFile(Remote());pathlib.Path('source.mp4').write_bytes(z.read(f"Episode{item['episode']}.mp4"))
  require(hashlib.sha256(pathlib.Path('source.mp4').read_bytes()).hexdigest()==item['source_sha256'],'Source episode differs')
  length=item['source_end']-item['source_start']
