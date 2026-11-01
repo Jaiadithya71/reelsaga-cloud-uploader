@@ -146,6 +146,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-saved42000029091-ep4-part1-v1",
+   "episode": 4,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae6e0721ee172cd6de2318b",
+   "external_link": "https://www.instagram.com/reel/DfMH2p0Efmq/",
+   "actual_send_at": "2026-11-01T12:18:15.356+05:30",
+   "run": "41282128619",
+   "bytes": 47147937,
+   "sha256": "b7102f72ce4d06c975ac462ad9fb08b1ea2da23189b959e1aef7f17c453f875f",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfMH2p0Efmq",
+    "width": 720,
+    "height": 1280,
+    "duration": 43.397,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
