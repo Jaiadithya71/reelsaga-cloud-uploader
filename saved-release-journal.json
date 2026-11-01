@@ -239,6 +239,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-saved42000029091-ep6-part1-v1",
+   "episode": 6,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae70d55cf3a3112f3edea28",
+   "external_link": "https://www.instagram.com/reel/DfMdxX8Dat4/",
+   "actual_send_at": "2026-11-01T15:29:46.355+05:30",
+   "run": "41295338724",
+   "bytes": 47578683,
+   "sha256": "3957714598a05e77a766bd8ee5d838b44ff7a6759104880d3fd065aeaec2fcf5",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfMdxX8Dat4",
+    "width": 720,
+    "height": 1280,
+    "duration": 43.49,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
