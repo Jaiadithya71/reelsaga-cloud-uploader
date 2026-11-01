@@ -52,6 +52,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-saved42000029091-ep2-part1-v1",
+   "episode": 2,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae6b4c61ee172cd6dd8d670",
+   "external_link": "https://www.instagram.com/reel/DfLylDnDhDF/",
+   "actual_send_at": "2026-11-01T09:13:55.789+05:30",
+   "run": "41270044979",
+   "bytes": 57921501,
+   "sha256": "05b260aae6b331158770f9d53bfe19a83fbc378a93d7dd94108dfaa0e18df470",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfLylDnDhDF",
+    "width": 720,
+    "height": 1280,
+    "duration": 46.416,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
