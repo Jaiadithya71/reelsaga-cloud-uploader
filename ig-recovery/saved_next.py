@@ -64,12 +64,14 @@ if os.environ.get('RECOVERY_CLEANUP_ONLY')=='1':
 require(time.time()<batch['deadline'],'Batch cleanup deadline reached, no more uploads')
 new_before=inv(B)
 if len(new_before)>=2:cleanup_batch()
+resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
+retry_errored=os.environ.get('RECOVERY_RETRY_ERRORED')=='1'
 item=None
 for i in m['items']:
  if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
- require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (os.environ.get('RECOVERY_RESUME_DRAFT')=='1'and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
+ require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (resume and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')) or (retry_errored and r['state']=='uncertain' and r.get('session')=='buffer_release_existing_draft' and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
  item=i;break
 if item is None:receipt(status='all_18_verified_no_new_post');raise SystemExit(0)
 gate=review.get(item['id'])
@@ -81,8 +83,7 @@ position=m['items'].index(item)
 for earlier in m['items'][:position]:
  rr,_=st.get(ledger.key(earlier['id'],'instagram'));require(rr and rr.get('state')=='published' and 'public_pixels_verified' in rr.get('session',''),'Earlier part not verified')
 receipt(status='preflight',item=item['id'])
-resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
-if not resume:
+if not resume and not retry_errored:
  channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
  # Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
  exclude=set()
@@ -115,7 +116,15 @@ if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  except urllib.error.HTTPError as e:hc=e.code;body=e.read(300).decode(errors='replace')
  receipt(status='draft_diagnostic',post_id=p['id'],post_status=p['status'],thumbnail_host=urlsplit(thumb).hostname,thumbnail_path=urlsplit(thumb).path,http_code=hc,body_preview=body,video=p['assets'][0].get('video'))
  raise SystemExit(0)
-if resume:
+if retry_errored:
+ rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id']
+ epost=buf.post(pid);require(epost['status']=='error' and not epost.get('sentAt') and not epost.get('externalLink'),'Errored post state changed; reconcile manually')
+ host,_=st.get('host-'+item['id']);require(host.get('state')=='verified_original','Staged original state changed');url=host['url']
+ print('::add-mask::'+url,flush=True)
+ with urllib.request.urlopen(url,timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
+ channel=buf.channel(CH);caption=item['caption'];rows=buf.inventory(ORG,CH);rows=Inventory(x for x in rows if x['id']!=pid)
+ preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+elif resume:
  rec,_=st.get(ledger.key(item['id'],'instagram'));host,_=st.get('host-'+item['id']);print('::add-mask::'+host['url'],flush=True)
  with urllib.request.urlopen(host['url'],timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
 else:
@@ -142,7 +151,7 @@ meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams',
 subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y','original-cover.png'],check=True,capture_output=True)
 from PIL import Image
 require(np.asarray(Image.open('original-cover.png')).mean()>12,'Black original cover');require(v['height']/v['width']>1.7 and v['sample_aspect_ratio']=='1:1'and any(x['codec_type']=='audio'for x in meta['streams']),'Original video shape/audio')
-if not resume:
+if not resume and not retry_errored:
  k='xfer/'+item['id']+'-'+uuid.uuid4().hex+'.mp4';url='https://'+B+'.t3.tigrisbucket.io/'+k;print('::add-mask::'+url,flush=True);hk='host-'+item['id'];host={'key':k,'bucket':B,'url':url,'bytes':item['bytes'],'uploaded':time.time(),'deadline':batch['deadline'],'state':'upload_intent'};require(st.compare_and_swap(hk,None,host),'Host locator exists');ledger.checkpoint(item['id'],'instagram','uploading',session='tigris:'+k)
  upload_proof=put_once_verified(s3,B,k,p,item['bytes'],item['sha256'])
  pathlib.Path('upload-readback-receipt.json').write_text(json.dumps(upload_proof,indent=2))
@@ -160,18 +169,26 @@ if not resume:
  preflight(item,buf.channel(CH),fresh,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
  ledger.checkpoint(item['id'],'instagram','uncertain',session='buffer_create_draft')
  r=buf.draft(CH,caption,url,item['cover_ms']);require(r.get('post',{}).get('id'),'Draft rejected; reconcile');pid=r['post']['id'];ledger.checkpoint(item['id'],'instagram','ready_for_review',external_id=pid,session='draft_created')
-else:
+elif resume:
  rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id'];host,_=st.get('host-'+item['id']);url=host['url'];hk='host-'+item['id'];caption=item['caption'];channel=buf.channel(CH);require(channel['name']=='reelsaga3000','Wrong channel')
+else:
+ hk='host-'+item['id']
 if resume:
  rows=buf.inventory(ORG,CH);rows=Inventory(x for x in rows if x['id']!=pid and not(x['status']=='sent'and code(x.get('externalLink'))==item['old_shortcode']and item['old_shortcode']and not is_present(item['old_shortcode'])))
  preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
-draft=buf.post(pid);dv=draft['assets'][0]['video'];require(draft['status']=='draft'and draft['text']==caption and dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms']and not dv['isVideoProcessing'],'Draft verification differs')
-require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Draft metadata differs')
+draft=buf.post(pid)
+if retry_errored:
+ require(draft['status']=='error' and not draft.get('sentAt') and not draft.get('externalLink'),'Errored post state changed before retry; reconcile manually')
+ require(draft['text']==caption and draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Errored post content/metadata differs')
+ dv=draft['assets'][0]['video'];require(dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms'],'Errored post video differs')
+else:
+ dv=draft['assets'][0]['video'];require(draft['status']=='draft'and draft['text']==caption and dv['width']==v['width']and dv['height']==v['height']and abs(dv['durationMs']/1000-float(v['duration']))<.1 and dv['thumbnailOffset']==item['cover_ms']and not dv['isVideoProcessing'],'Draft verification differs')
+ require(draft['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Draft metadata differs')
 # The CDN image URL blocks raw API clients with 403/1010. Do not impersonate browsers.
 # Pre-release original frame is decoded/nonblack and exact hash; Buffer derived offset/dimensions match.
 # Public served cover/frame comparison is mandatory before queue may advance.
 receipt(status='draft_source_and_offset_verified',item=item['id'],post_id=pid,width=dv['width'],height=dv['height'])
-ledger.checkpoint(item['id'],'instagram','uncertain',external_id=pid,session='buffer_release_existing_draft');r=buf.release(pid,caption,url,item['cover_ms']);require(r.get('post',{}).get('id')==pid,'Release unacknowledged; reconcile')
+ledger.checkpoint(item['id'],'instagram','uncertain',external_id=pid,session='buffer_retry_release_existing_draft' if retry_errored else 'buffer_release_existing_draft');r=buf.release(pid,caption,url,item['cover_ms']);require(r.get('post',{}).get('id')==pid,'Release unacknowledged; reconcile')
 for n in range(15):
  post=buf.post(pid);receipt(status=post['status'],item=item['id'],post_id=pid,external_link=post.get('externalLink'))
  if post['status']=='sent':break
