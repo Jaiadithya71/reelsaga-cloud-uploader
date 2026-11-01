@@ -110,12 +110,16 @@
    "sha256": "980413d17db58cffcbf4f7ba2cfa47b9b7e0689add5c6637d9ae5bd06b47b5ad",
    "source_sha256": "438aaf738ea92679a1bf56d9f9cd2e19d522506ef86093431deeae45b0451615",
    "caption": "Ad\n\nBetrayed after saving her classmates, Layla gets a second life. This time, she puts herself first and refuses to save the people who abandoned her.\n\nNo One Gets Saved | Episode 3 Part 1/2\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/JHHC64FLdPRA\n#NoOneGetsSaved #FantasyDrama #ReelSaga",
-   "status": "prepared_not_queued",
+   "status": "public_verified_cleanup_pending",
    "native_ai_label": true,
    "id": "dramabox-saved42000029091-ep3-part1-v1",
    "cover_ms": 2000,
    "caption_sha256": "d81d842e3237a17ae312a48da6f4b52d56ae9a3940c049fa8e9899dfb9236acb",
-   "old_shortcode": null
+   "old_shortcode": null,
+   "instagram_reel": "https://www.instagram.com/reel/DfL9eJglR6t/",
+   "instagram_sent_at": "2026-11-01T10:47:11.660+05:30",
+   "buffer_post_id": "6ae6cb1cf0984eef334b3f8c",
+   "instagram_run": "41276189224"
   },
   {
    "episode": 3,
@@ -375,6 +379,6 @@
   "question_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSNEIyRjJFQTAyMjcwNUIzQzQ0AA==",
   "scope": "Instagram only. Private YouTube copyright checks waived for this series start at owner direction; copyright risk remains untested. YouTube publishing and DMs remain held. Not rights clearance."
  },
- "instagram_run_status": "publishing_4_of_18_verified",
- "instagram_last_send_at": "2026-11-01T09:59:08.463+05:30"
+ "instagram_run_status": "publishing_5_of_18_verified",
+ "instagram_last_send_at": "2026-11-01T10:47:11.660+05:30"
 }
