@@ -331,6 +331,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-saved42000029091-ep8-part1-v1",
+   "episode": 8,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae738c5ab019b90875d5b26",
+   "external_link": "https://www.instagram.com/reel/DfMzD09ifq6/",
+   "actual_send_at": "2026-11-01T18:35:51.961+05:30",
+   "run": "41309301646",
+   "bytes": 54019183,
+   "sha256": "0858a8b87ec05d3371a578d3d23064db58dd6063ddba7e6b5bab6a4a134379bd",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfMzD09ifq6",
+    "width": 720,
+    "height": 1280,
+    "duration": 45.835,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
