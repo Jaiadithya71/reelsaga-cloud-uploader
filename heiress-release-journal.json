@@ -26,6 +26,29 @@
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified",
    "recovery_note": "attempts 1-2 failed pre-publish (transient source-download break, then bare-claim gate); no external effects, exactly reconciled"
+  },
+  {
+   "id": "dramabox-heiress42000027409-ep1-part2-v1",
+   "episode": 1,
+   "part": 2,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae77dcc142f545151f2c3bc",
+   "external_link": "https://www.instagram.com/reel/DfNUrhxlOiF/",
+   "actual_send_at": "2026-11-01T23:29:36.417+05:30",
+   "run": "41334089888",
+   "bytes": 72628580,
+   "sha256": "be35ba74497ced15741c4d10a674936911d3dd0d14881856f3d84fe11fc12bb1",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfNUrhxlOiF",
+    "width": 720,
+    "height": 1280,
+    "duration": 43.328,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
