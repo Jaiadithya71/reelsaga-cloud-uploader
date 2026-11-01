@@ -1,6 +1,31 @@
 {
  "series": "heiress42000027409",
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM5MDc4RjczQkFGQjRBNkY2NUZFMDkyMTMyMkI4NDQA",
- "status": "prepared",
- "entries": []
+ "status": "publishing",
+ "entries": [
+  {
+   "id": "dramabox-heiress42000027409-ep1-part1-v1",
+   "episode": 1,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae76e557c4e55592665e555",
+   "external_link": "https://www.instagram.com/reel/DfNNIU4E3wN/",
+   "actual_send_at": "2026-11-01T22:23:41.484+05:30",
+   "run": "41328468317",
+   "bytes": 85683614,
+   "sha256": "2101a325eb2cf0d80ea452f3e52373cc5341dc08fc14978ba41a0a623b583ffe",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfNNIU4E3wN",
+    "width": 720,
+    "height": 1280,
+    "duration": 44.28,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified",
+   "recovery_note": "attempts 1-2 failed pre-publish (transient source-download break, then bare-claim gate); no external effects, exactly reconciled"
+  }
+ ]
 }
