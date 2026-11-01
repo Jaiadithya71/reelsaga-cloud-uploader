@@ -106,7 +106,9 @@ if not resume and not retry_errored:
  batch['class_a_reserved']+=30;batch['class_b_reserved']+=100;require(st.compare_and_swap(BATCH,bv,batch),'Reserve CAS failed')
  existing,version=st.get(ledger.key(item['id'],'instagram'))
  if existing:
-  require(False,'Existing started item requires exact reconciliation, no automatic re-claim')
+  # Exact reconciliation: a bare claim (started, no session/external_id, matching
+  # metadata) proves the prior run died before any external write; reclaim it.
+  require(existing['state']=='started' and not existing.get('external_id') and not existing.get('session') and existing['metadata_hash']==ledger.metadata_hash(item),'Existing started item requires exact reconciliation, no automatic re-claim')
  else:require(ledger.claim(item,'instagram'),'Existing item claim')
 if os.environ.get('RECOVERY_DIAG_ONLY')=='1':
  rec,_=st.get(ledger.key(item['id'],'instagram'));p=buf.post(rec['external_id']);thumb=p['assets'][0]['thumbnail'];print('::add-mask::'+thumb)
