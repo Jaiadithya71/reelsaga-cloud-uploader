@@ -118,6 +118,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-heiress42000027409-ep3-part1-v1",
+   "episode": 3,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae7bb02902c3fb1debe63bc",
+   "external_link": "https://www.instagram.com/reel/DfNykg5ldYv/",
+   "actual_send_at": "2026-11-02T03:50:45.237+05:30",
+   "run": "41356454602",
+   "bytes": 44269444,
+   "sha256": "a488dcd0223ac235a63cc70cbdca24d8a4d580a98eba3152cd649ad9065db95f",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfNykg5ldYv",
+    "width": 720,
+    "height": 1280,
+    "duration": 39.891,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ]
 }
