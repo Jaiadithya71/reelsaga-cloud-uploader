@@ -94,9 +94,9 @@ if not resume and not retry_errored:
  now=datetime.datetime.now(datetime.timezone.utc)
  for row in recent:
   ts=row.get('sentAt')or row.get('dueAt')
-  if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<2400:
+  if ts and abs((now-datetime.datetime.fromisoformat(ts.replace('Z','+00:00'))).total_seconds())<3600:
    receipt(status='waiting_minimum_40min_spacing',item=item['id']);raise SystemExit(0)
- preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+ preflight(item,channel,recent,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=3600)
  old=inv(OLD);new=inv(B);require(sum(x['Size']for x in old+new)+item['bytes']+512*1024**2<4*1024**3,'Aggregate storage guard');require(len(new)<2,'Stage count guard');require(batch['baseline_a']+batch['class_a_reserved']+30<9000 and batch['baseline_b']+batch['class_b_reserved']+100<90000,'Request planning guard')
  for x in old:
   try:
@@ -123,7 +123,7 @@ if retry_errored:
  print('::add-mask::'+url,flush=True)
  with urllib.request.urlopen(url,timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
  channel=buf.channel(CH);caption=item['caption'];rows=buf.inventory(ORG,CH);rows=Inventory(x for x in rows if x['id']!=pid)
- preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+ preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=3600)
 elif resume:
  rec,_=st.get(ledger.key(item['id'],'instagram'));host,_=st.get('host-'+item['id']);print('::add-mask::'+host['url'],flush=True)
  with urllib.request.urlopen(host['url'],timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
@@ -171,7 +171,7 @@ if not resume and not retry_errored:
  current=inv(B);require(len(current)==1 and current[0]['Key']==k and current[0]['Size']==item['bytes'],'Unexpected relay object after upload')
  require(sum(x['Size']for x in inv(OLD)+current)+512*1024**2<4*1024**3,'Post-upload storage guard')
  fresh=buf.inventory(ORG,CH);fresh=Inventory(x for x in fresh if x['id']not in exclude)
- preflight(item,buf.channel(CH),fresh,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+ preflight(item,buf.channel(CH),fresh,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=3600)
  ledger.checkpoint(item['id'],'instagram','uncertain',session='buffer_create_draft')
  r=buf.draft(CH,caption,url,item['cover_ms']);require(r.get('post',{}).get('id'),'Draft rejected; reconcile');pid=r['post']['id'];ledger.checkpoint(item['id'],'instagram','ready_for_review',external_id=pid,session='draft_created')
 elif resume:
@@ -180,7 +180,7 @@ else:
  hk='host-'+item['id']
 if resume:
  rows=buf.inventory(ORG,CH);rows=Inventory(x for x in rows if x['id']!=pid and not(x['status']=='sent'and code(x.get('externalLink'))==item['old_shortcode']and item['old_shortcode']and not is_present(item['old_shortcode'])))
- preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=2400)
+ preflight(item,channel,rows,datetime.datetime.now(datetime.timezone.utc),caption,min_gap=3600)
 draft=buf.post(pid)
 if retry_errored:
  require(draft['status']=='error' and not draft.get('sentAt') and not draft.get('externalLink'),'Errored post state changed before retry; reconcile manually')
