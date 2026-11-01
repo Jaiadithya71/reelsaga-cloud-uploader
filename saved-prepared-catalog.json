@@ -110,7 +110,7 @@
    "sha256": "980413d17db58cffcbf4f7ba2cfa47b9b7e0689add5c6637d9ae5bd06b47b5ad",
    "source_sha256": "438aaf738ea92679a1bf56d9f9cd2e19d522506ef86093431deeae45b0451615",
    "caption": "Ad\n\nBetrayed after saving her classmates, Layla gets a second life. This time, she puts herself first and refuses to save the people who abandoned her.\n\nNo One Gets Saved | Episode 3 Part 1/2\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/JHHC64FLdPRA\n#NoOneGetsSaved #FantasyDrama #ReelSaga",
-   "status": "public_verified_cleanup_pending",
+   "status": "public_verified_cleaned",
    "native_ai_label": true,
    "id": "dramabox-saved42000029091-ep3-part1-v1",
    "cover_ms": 2000,
@@ -119,7 +119,8 @@
    "instagram_reel": "https://www.instagram.com/reel/DfL9eJglR6t/",
    "instagram_sent_at": "2026-11-01T10:47:11.660+05:30",
    "buffer_post_id": "6ae6cb1cf0984eef334b3f8c",
-   "instagram_run": "41276189224"
+   "instagram_run": "41276189224",
+   "cleanup_run": "41276509665"
   },
   {
    "episode": 3,

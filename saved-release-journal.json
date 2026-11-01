@@ -103,7 +103,7 @@
    "id": "dramabox-saved42000029091-ep3-part1-v1",
    "episode": 3,
    "part": 1,
-   "status": "public_verified_cleanup_pending",
+   "status": "public_verified_cleaned",
    "buffer_post_id": "6ae6cb1cf0984eef334b3f8c",
    "external_link": "https://www.instagram.com/reel/DfL9eJglR6t/",
    "actual_send_at": "2026-11-01T10:47:11.660+05:30",
@@ -121,7 +121,8 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified",
-   "cleanup_note": "Run trailing cleanup failed on relay delivery-URL cache still accessible after S3 object deletion (CDN lag). Object deleted and head-404 verified in-run; public URL absence re-verification pending via cleanup-mode dispatch."
+   "cleanup_note": "Initial trailing cleanup hit CDN cache lag on the deleted relay object URL; cleanup-mode run 41276509665 completed deletion + absence verification.",
+   "cleanup_run": "41276509665"
   }
  ]
 }
