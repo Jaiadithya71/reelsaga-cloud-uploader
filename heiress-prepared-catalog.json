@@ -33,7 +33,7 @@
   "question_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSOEM3NENDMkYyODkxRTA0QUUzAA==",
   "scope": "Instagram only. Private YouTube copyright checks waived for this series start at owner direction; copyright risk remains untested. YouTube publishing and DMs remain held. Not rights clearance."
  },
- "instagram_run_status": "publishing_17_of_23_verified",
+ "instagram_run_status": "publishing_18_of_23_verified",
  "items": [
   {
    "episode": 1,
@@ -420,12 +420,16 @@
    "sha256": "90bf7ae7f619e3e6e548f73ca9e9fd060fa954de2b2a0c006bed100de0c5f6e9",
    "source_sha256": "e4e774196da1b11dc191f85f2cf6dd62846e1445fa0ed1a3a8966fcc31cde2a4",
    "caption": "Ad\n\nBorn the hidden trueborn daughter of the Silver Dragon King, Violet hides her bloodline for love and endures humiliation from her fiance Darian's family and the fake Silver Dragon Delia - until her true identity awakens and she rises beside the Black Dragon King.\n\nThe Dragon King's True Heiress | Episode 7 Part 3/5\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/zjkEr-gVapEb\n#DragonKingsTrueHeiress #FantasyDrama #ReelSaga",
-   "status": "prepared_not_queued",
+   "status": "public_verified_cleaned",
    "native_ai_label": true,
    "id": "dramabox-heiress42000027409-ep7-part3-v1",
    "cover_ms": 2000,
    "caption_sha256": "211964ddbb5c8f4279743571a83dd625bdcd232203d65ba8abe7f9e0bea4b1db",
-   "old_shortcode": null
+   "old_shortcode": null,
+   "instagram_reel": "https://www.instagram.com/reel/DfPNXs3jM2c/",
+   "instagram_sent_at": "2026-11-02T17:04:14.070+05:30",
+   "buffer_post_id": "6ae874f8146ca029aa153040",
+   "instagram_run": "41437528131"
   },
   {
    "episode": 7,
@@ -518,5 +522,5 @@
    "old_shortcode": null
   }
  ],
- "instagram_last_send_at": "2026-11-02T15:59:42.173+05:30"
+ "instagram_last_send_at": "2026-11-02T17:04:14.070+05:30"
 }
