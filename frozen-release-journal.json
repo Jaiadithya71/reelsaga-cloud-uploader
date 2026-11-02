@@ -71,6 +71,29 @@
         "status": "public_frame_and_cover_match"
       },
       "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+    },
+    {
+      "id": "dramabox-frozen42000029035-ep2-part1-v1",
+      "episode": 2,
+      "part": 1,
+      "status": "public_verified_cleaned",
+      "buffer_post_id": "6ae9010a3b6f22c15ecfaf48",
+      "external_link": "https://www.instagram.com/reel/DfQR6IkAuWf/",
+      "actual_send_at": "2026-11-03T03:04:25.710+05:30",
+      "run": "41528826048",
+      "bytes": 61168021,
+      "sha256": "4b422890ff7012073e9530ccc919af73c9a8b2c62019e1ed1625ee2d36ff2ecc",
+      "runner_bytes_match_qa": true,
+      "served": {
+        "shortcode": "DfQR6IkAuWf",
+        "width": 720,
+        "height": 1280,
+        "duration": 41.818,
+        "audio_present": true,
+        "decode_ok": true,
+        "status": "public_frame_and_cover_match"
+      },
+      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
     }
   ],
   "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
