@@ -33,7 +33,7 @@
   "question_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSOEM3NENDMkYyODkxRTA0QUUzAA==",
   "scope": "Instagram only. Private YouTube copyright checks waived for this series start at owner direction; copyright risk remains untested. YouTube publishing and DMs remain held. Not rights clearance."
  },
- "instagram_run_status": "publishing_9_of_23_verified",
+ "instagram_run_status": "publishing_10_of_23_verified",
  "items": [
   {
    "episode": 1,
@@ -244,12 +244,16 @@
    "sha256": "833edda99d999b999768becbd8000e224e1b117ac5a1287b4c22e23485b190d7",
    "source_sha256": "fc3dee83b461aa023dc7e57a214821a0dd7685f9b97ff9cf06e128279714c72e",
    "caption": "Ad\n\nBorn the hidden trueborn daughter of the Silver Dragon King, Violet hides her bloodline for love and endures humiliation from her fiance Darian's family and the fake Silver Dragon Delia - until her true identity awakens and she rises beside the Black Dragon King.\n\nThe Dragon King's True Heiress | Episode 4 Part 2/2\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/zjkEr-gVapEb\n#DragonKingsTrueHeiress #FantasyDrama #ReelSaga",
-   "status": "prepared_not_queued",
+   "status": "public_verified_cleaned",
    "native_ai_label": true,
    "id": "dramabox-heiress42000027409-ep4-part2-v1",
    "cover_ms": 2000,
    "caption_sha256": "146f22a81d5c65ea2bb412b992211c5944b4a2faf41c95a704d3c0cec695f628",
-   "old_shortcode": null
+   "old_shortcode": null,
+   "instagram_reel": "https://www.instagram.com/reel/DfOQqcXgmss/",
+   "instagram_sent_at": "2026-11-02T08:13:39.851+05:30",
+   "buffer_post_id": "6ae7f89f05377798e050be40",
+   "instagram_run": "41378992563"
   },
   {
    "episode": 5,
@@ -486,5 +490,5 @@
    "old_shortcode": null
   }
  ],
- "instagram_last_send_at": "2026-11-02T07:05:55.485+05:30"
+ "instagram_last_send_at": "2026-11-02T08:13:39.851+05:30"
 }
