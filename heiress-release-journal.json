@@ -233,6 +233,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixel match/montage visual inspected"
+  },
+  {
+   "id": "dramabox-heiress42000027409-ep5-part1-v1",
+   "episode": 5,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae8087cc60bdbcc33d2cc2d",
+   "external_link": "https://www.instagram.com/reel/DfOYZjjG1NL/",
+   "actual_send_at": "2026-11-02T09:21:20.441+05:30",
+   "run": "41385106845",
+   "bytes": 77974825,
+   "sha256": "b5d7fbdda9569cdf8101e2f57f5d69ca24a50bc04414f993a565910591e72091",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfOYZjjG1NL",
+    "width": 720,
+    "height": 1280,
+    "duration": 47.879,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixel match/montage visual inspected"
   }
  ]
 }
