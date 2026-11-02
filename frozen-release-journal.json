@@ -2,5 +2,31 @@
   "series": "frozen42000029035",
   "title": "Frozen by My Fiance, Adored by the Dragon King",
   "planned_parts": 20,
-  "entries": []
+  "entries": [
+    {
+      "id": "dramabox-frozen42000029035-ep1-part1-v1",
+      "episode": 1,
+      "part": 1,
+      "status": "public_verified_cleaned",
+      "buffer_post_id": "6ae8d2606b1d49ecbdeb9109",
+      "external_link": "https://www.instagram.com/reel/DfP7ByTkQfr/",
+      "actual_send_at": "2026-11-02T23:44:47.352+05:30",
+      "run": "41498040157",
+      "bytes": 52881423,
+      "sha256": "a60d142365020d0380a801db9b79dbcdd8621b4eb33ca3c121052f73e7f19eb4",
+      "runner_bytes_match_qa": true,
+      "served": {
+        "shortcode": "DfP7ByTkQfr",
+        "width": 720,
+        "height": 1280,
+        "duration": 37.337,
+        "audio_present": true,
+        "decode_ok": true,
+        "status": "public_frame_and_cover_match"
+      },
+      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+    }
+  ],
+  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
+  "status": "publishing"
 }
