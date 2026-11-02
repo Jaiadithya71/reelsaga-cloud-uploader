@@ -486,6 +486,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixel match/montage visual inspected"
+  },
+  {
+   "id": "dramabox-heiress42000027409-ep8-part2-v1",
+   "episode": 8,
+   "part": 2,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae8b385a8c7e349215a7153",
+   "external_link": "https://www.instagram.com/reel/DfPr7OuCsSV/",
+   "actual_send_at": "2026-11-02T21:30:52.694+05:30",
+   "run": "41476674647",
+   "bytes": 59630949,
+   "sha256": "41cef25dc0ac8233e99a700f383a00cbedbb184f493813e6e9092a10c19cd0e4",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfPr7OuCsSV",
+    "width": 720,
+    "height": 1280,
+    "duration": 43.606,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixel match/montage visual inspected"
   }
  ]
 }
