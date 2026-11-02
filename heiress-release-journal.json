@@ -325,6 +325,29 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixel match/montage visual inspected"
+  },
+  {
+   "id": "dramabox-heiress42000027409-ep6-part3-v1",
+   "episode": 6,
+   "part": 3,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae8461076279ec7eb9f425e",
+   "external_link": "https://www.instagram.com/reel/DfO2eAcDpZ2/",
+   "actual_send_at": "2026-11-02T13:44:03.988+05:30",
+   "run": "41411197354",
+   "bytes": 73223847,
+   "sha256": "fb22d19ee7f302bed7c46e3a398474e312c458e30f74cd4096c3ac986b431dcc",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfO2eAcDpZ2",
+    "width": 720,
+    "height": 1280,
+    "duration": 45.232,
+    "audio_present": true,
+    "decode_ok": true,
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixel match/montage visual inspected"
   }
  ]
 }
