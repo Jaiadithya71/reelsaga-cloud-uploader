@@ -33,7 +33,7 @@
     "question_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSNTIyODAzQ0FEOTE5OTBCMkE5AA==",
     "scope": "Instagram only. Private YouTube copyright checks waived for this series start at owner direction; copyright risk remains untested. YouTube publishing and DMs remain held. Not rights clearance."
   },
-  "instagram_run_status": "publishing_1_of_20",
+  "instagram_run_status": "publishing_2_of_20",
   "items": [
     {
       "episode": 1,
@@ -68,12 +68,16 @@
       "sha256": "30273296914fdea181511943128094010bb93bee82e595aed2fcb7f46066c353",
       "source_sha256": "49e428b3e866ff3c90f0514925841f7db02d42f65dc1e04ff7e6295d6b0aaac6",
       "caption": "Ad\n\nBetrayed by her fiance and left to die in the frozen Langel Range, Princess Sloane summons Kane, the pure-blood Dragon King she once saved, with an ancient dragon scale - and his fierce devotion becomes her revenge and a new love.\n\nFrozen by My Fiance, Adored by the Dragon King | Episode 1 Part 2/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/g4n9yetobaE2\n#AdoredByTheDragonKing #FantasyDrama #ReelSaga",
-      "status": "prepared",
+      "status": "public_verified_cleaned",
       "native_ai_label": true,
       "id": "dramabox-frozen42000029035-ep1-part2-v1",
       "cover_ms": 2000,
       "caption_sha256": "454c0f48796a81e367cd1df601bce2b2ea884b5e1777c666cdcc3f35da9fac1d",
-      "old_shortcode": null
+      "old_shortcode": null,
+      "instagram_reel": "https://www.instagram.com/reel/DfQC0uUjL3i/",
+      "instagram_sent_at": "2026-11-03T00:51:22.108+05:30",
+      "buffer_post_id": "6ae8e2724efbf4f5475cfda4",
+      "instagram_run": "41508811789"
     },
     {
       "episode": 1,
@@ -400,5 +404,5 @@
       "old_shortcode": null
     }
   ],
-  "instagram_last_send_at": "2026-11-02T23:44:47.352+05:30"
+  "instagram_last_send_at": "2026-11-03T00:51:22.108+05:30"
 }
