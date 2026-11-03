@@ -1,170 +1,219 @@
 {
-  "series": "frozen42000029035",
-  "title": "Frozen by My Fiance, Adored by the Dragon King",
-  "planned_parts": 20,
-  "entries": [
-    {
-      "id": "dramabox-frozen42000029035-ep1-part1-v1",
-      "episode": 1,
-      "part": 1,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae8d2606b1d49ecbdeb9109",
-      "external_link": "https://www.instagram.com/reel/DfP7ByTkQfr/",
-      "actual_send_at": "2026-11-02T23:44:47.352+05:30",
-      "run": "41498040157",
-      "bytes": 52881423,
-      "sha256": "a60d142365020d0380a801db9b79dbcdd8621b4eb33ca3c121052f73e7f19eb4",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfP7ByTkQfr",
-        "width": 720,
-        "height": 1280,
-        "duration": 37.337,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
-    },
-    {
-      "id": "dramabox-frozen42000029035-ep1-part2-v1",
-      "episode": 1,
-      "part": 2,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae8e2724efbf4f5475cfda4",
-      "external_link": "https://www.instagram.com/reel/DfQC0uUjL3i/",
-      "actual_send_at": "2026-11-03T00:51:22.108+05:30",
-      "run": "41508811789",
-      "bytes": 60193546,
-      "sha256": "30273296914fdea181511943128094010bb93bee82e595aed2fcb7f46066c353",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfQC0uUjL3i",
-        "width": 720,
-        "height": 1280,
-        "duration": 42.724,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
-    },
-    {
-      "id": "dramabox-frozen42000029035-ep1-part3-v1",
-      "episode": 1,
-      "part": 3,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae8f19c9b8d347bafdaa8e6",
-      "external_link": "https://www.instagram.com/reel/DfQKOqTAY7m/",
-      "actual_send_at": "2026-11-03T01:56:02.468+05:30",
-      "run": "41518797210",
-      "bytes": 61981635,
-      "sha256": "d2b5e5c5212c2aad0363b99955ff485af4108ea48dbe5e2d1b368c060895e6d6",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfQKOqTAY7m",
-        "width": 720,
-        "height": 1280,
-        "duration": 40.054,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
-    },
-    {
-      "id": "dramabox-frozen42000029035-ep2-part1-v1",
-      "episode": 2,
-      "part": 1,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae9010a3b6f22c15ecfaf48",
-      "external_link": "https://www.instagram.com/reel/DfQR6IkAuWf/",
-      "actual_send_at": "2026-11-03T03:04:25.710+05:30",
-      "run": "41528826048",
-      "bytes": 61168021,
-      "sha256": "4b422890ff7012073e9530ccc919af73c9a8b2c62019e1ed1625ee2d36ff2ecc",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfQR6IkAuWf",
-        "width": 720,
-        "height": 1280,
-        "duration": 41.818,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
-    },
-    {
-      "id": "dramabox-frozen42000029035-ep2-part2-v1",
-      "episode": 2,
-      "part": 2,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae9108368613b68af8c181a",
-      "external_link": "https://www.instagram.com/reel/DfQZUWkAdJv/",
-      "actual_send_at": "2026-11-03T04:07:53.872+05:30",
-      "run": "41538405512",
-      "bytes": 63289224,
-      "sha256": "7b59fb754df63a07f197911c3c6ff1a260e8369fe365b892a910ae85fda63b45",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfQZUWkAdJv",
-        "width": 720,
-        "height": 1280,
-        "duration": 42.283,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
-    },
-    {
-      "id": "dramabox-frozen42000029035-ep3-part1-v1",
-      "episode": 3,
-      "part": 1,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae91f56b62d192bcc4efbc1",
-      "external_link": "https://www.instagram.com/reel/DfQglfTiBhR/",
-      "actual_send_at": "2026-11-03T05:11:06.034+05:30",
-      "run": "41547035909",
-      "bytes": 46098761,
-      "sha256": "db088634515debfac9f5cc20309d26d3d26cac802612f4b36ddd0774fbbdf836",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfQglfTiBhR",
-        "width": 720,
-        "height": 1280,
-        "duration": 31.973,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
-    },
-    {
-      "id": "dramabox-frozen42000029035-ep3-part2-v1",
-      "episode": 3,
-      "part": 2,
-      "status": "public_verified_cleaned",
-      "buffer_post_id": "6ae92e6f08a182357fa540a9",
-      "external_link": "https://www.instagram.com/reel/DfQn7X5DeBT/",
-      "actual_send_at": "2026-11-03T06:15:32.013+05:30",
-      "run": "41554837842",
-      "bytes": 34736923,
-      "sha256": "feee06e8dc6d1d4742128397ddd9ffcad725fbc6c55af42eb496feb7e10e9929",
-      "runner_bytes_match_qa": true,
-      "served": {
-        "shortcode": "DfQn7X5DeBT",
-        "width": 720,
-        "height": 1280,
-        "duration": 31.067,
-        "audio_present": true,
-        "decode_ok": true,
-        "status": "public_frame_and_cover_match"
-      },
-      "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified; episode 3 complete"
-    }
-  ],
-  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
-  "status": "publishing"
+    "series": "frozen42000029035",
+    "title": "Frozen by My Fiance, Adored by the Dragon King",
+    "planned_parts": 20,
+    "entries": [
+        {
+            "id": "dramabox-frozen42000029035-ep1-part1-v1",
+            "episode": 1,
+            "part": 1,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae8d2606b1d49ecbdeb9109",
+            "external_link": "https://www.instagram.com/reel/DfP7ByTkQfr/",
+            "actual_send_at": "2026-11-02T23:44:47.352+05:30",
+            "run": "41498040157",
+            "bytes": 52881423,
+            "sha256": "a60d142365020d0380a801db9b79dbcdd8621b4eb33ca3c121052f73e7f19eb4",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfP7ByTkQfr",
+                "width": 720,
+                "height": 1280,
+                "duration": 37.337,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep1-part2-v1",
+            "episode": 1,
+            "part": 2,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae8e2724efbf4f5475cfda4",
+            "external_link": "https://www.instagram.com/reel/DfQC0uUjL3i/",
+            "actual_send_at": "2026-11-03T00:51:22.108+05:30",
+            "run": "41508811789",
+            "bytes": 60193546,
+            "sha256": "30273296914fdea181511943128094010bb93bee82e595aed2fcb7f46066c353",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQC0uUjL3i",
+                "width": 720,
+                "height": 1280,
+                "duration": 42.724,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep1-part3-v1",
+            "episode": 1,
+            "part": 3,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae8f19c9b8d347bafdaa8e6",
+            "external_link": "https://www.instagram.com/reel/DfQKOqTAY7m/",
+            "actual_send_at": "2026-11-03T01:56:02.468+05:30",
+            "run": "41518797210",
+            "bytes": 61981635,
+            "sha256": "d2b5e5c5212c2aad0363b99955ff485af4108ea48dbe5e2d1b368c060895e6d6",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQKOqTAY7m",
+                "width": 720,
+                "height": 1280,
+                "duration": 40.054,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep2-part1-v1",
+            "episode": 2,
+            "part": 1,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae9010a3b6f22c15ecfaf48",
+            "external_link": "https://www.instagram.com/reel/DfQR6IkAuWf/",
+            "actual_send_at": "2026-11-03T03:04:25.710+05:30",
+            "run": "41528826048",
+            "bytes": 61168021,
+            "sha256": "4b422890ff7012073e9530ccc919af73c9a8b2c62019e1ed1625ee2d36ff2ecc",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQR6IkAuWf",
+                "width": 720,
+                "height": 1280,
+                "duration": 41.818,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep2-part2-v1",
+            "episode": 2,
+            "part": 2,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae9108368613b68af8c181a",
+            "external_link": "https://www.instagram.com/reel/DfQZUWkAdJv/",
+            "actual_send_at": "2026-11-03T04:07:53.872+05:30",
+            "run": "41538405512",
+            "bytes": 63289224,
+            "sha256": "7b59fb754df63a07f197911c3c6ff1a260e8369fe365b892a910ae85fda63b45",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQZUWkAdJv",
+                "width": 720,
+                "height": 1280,
+                "duration": 42.283,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep3-part1-v1",
+            "episode": 3,
+            "part": 1,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae91f56b62d192bcc4efbc1",
+            "external_link": "https://www.instagram.com/reel/DfQglfTiBhR/",
+            "actual_send_at": "2026-11-03T05:11:06.034+05:30",
+            "run": "41547035909",
+            "bytes": 46098761,
+            "sha256": "db088634515debfac9f5cc20309d26d3d26cac802612f4b36ddd0774fbbdf836",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQglfTiBhR",
+                "width": 720,
+                "height": 1280,
+                "duration": 31.973,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep3-part2-v1",
+            "episode": 3,
+            "part": 2,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae92e6f08a182357fa540a9",
+            "external_link": "https://www.instagram.com/reel/DfQn7X5DeBT/",
+            "actual_send_at": "2026-11-03T06:15:32.013+05:30",
+            "run": "41554837842",
+            "bytes": 34736923,
+            "sha256": "feee06e8dc6d1d4742128397ddd9ffcad725fbc6c55af42eb496feb7e10e9929",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQn7X5DeBT",
+                "width": 720,
+                "height": 1280,
+                "duration": 31.067,
+                "audio_present": true,
+                "decode_ok": true,
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified; episode 3 complete"
+        },
+        {
+            "id": "dramabox-frozen42000029035-ep4-part1-v1",
+            "episode": 4,
+            "part": 1,
+            "status": "public_verified_cleaned",
+            "buffer_post_id": "6ae93d9b41f57fdb742c2316",
+            "external_link": "https://www.instagram.com/reel/DfQvVmmifQ3/",
+            "actual_send_at": "2026-11-03T07:20:12.267+05:30",
+            "run": "41562052898",
+            "bytes": 62309915,
+            "sha256": "55c650c8893c924692cb358e4b2e8ce293debbd45abcf0ab78caa0511f375b3a",
+            "runner_bytes_match_qa": true,
+            "served": {
+                "shortcode": "DfQvVmmifQ3",
+                "width": 720,
+                "height": 1280,
+                "duration": 41.656,
+                "audio_present": true,
+                "decode_ok": true,
+                "frames": [
+                    {
+                        "seconds": 2.0,
+                        "correlation": 0.9993616852666384,
+                        "mean_error": 1.4186530671296296
+                    },
+                    {
+                        "seconds": 10,
+                        "correlation": 0.9998396200380204,
+                        "mean_error": 0.8375839120370371
+                    },
+                    {
+                        "seconds": 20.828,
+                        "correlation": 0.999448061643382,
+                        "mean_error": 1.7217259837962964
+                    },
+                    {
+                        "seconds": 36.656,
+                        "correlation": 0.999556447645171,
+                        "mean_error": 1.5089192708333334
+                    }
+                ],
+                "cover": {
+                    "correlation": 0.9993657617553211,
+                    "mean_error": 2.037155671296296
+                },
+                "status": "public_frame_and_cover_match"
+            },
+            "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+        }
+    ],
+    "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
+    "status": "publishing"
 }
