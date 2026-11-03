@@ -2,7 +2,7 @@
  "title": "Frozen by My Fiance, Adored by the Dragon King",
  "dramacps_id": "807545",
  "platform": "dramabox",
- "source_zip": "https://cps-distr.ikyuedu.com/distribution/9/DramaBox资源包-42000029035-9317606e080593c0af9b84603b7b6348.zip",
+ "source_zip": "https://cps-distr.ikyuedu.com/distribution/9/DramaBox\u8d44\u6e90\u5305-42000029035-9317606e080593c0af9b84603b7b6348.zip",
  "affiliate_url": "https://r.reelsgo.tv/g4n9yetobaE2",
  "free_episodes": 9,
  "full_planned_parts": 20,
@@ -400,12 +400,16 @@
    "sha256": "94b453357d44c27d75333fa421483f8333cb06e31af2d565b2ef7e17cf979ee5",
    "source_sha256": "8366bea68dfcb7a5b796d57e9b72502786bd20be1c57586081507bcbbd62039e",
    "caption": "Ad\n\nBetrayed by her fiance and left to die in the frozen Langel Range, Princess Sloane summons Kane, the pure-blood Dragon King she once saved, with an ancient dragon scale - and his fierce devotion becomes her revenge and a new love.\n\nFrozen by My Fiance, Adored by the Dragon King | Episode 8 Part 3/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/g4n9yetobaE2\n#AdoredByTheDragonKing #FantasyDrama #ReelSaga",
-   "status": "prepared",
+   "status": "public_verified_cleaned",
    "native_ai_label": true,
    "id": "dramabox-frozen42000029035-ep8-part3-v1",
    "cover_ms": 2000,
    "caption_sha256": "39dcdcb0d9ce5af289109412c52a3ebf7c6fb89c5c62c0faeac78f31ad3ee697",
-   "old_shortcode": null
+   "old_shortcode": null,
+   "buffer_post_id": "6ae9dc628ed9bcac81a220ab",
+   "instagram_reel": "https://www.instagram.com/reel/DfR85KoCuSM/",
+   "instagram_sent_at": "2026-11-03T18:37:42.053+05:30",
+   "instagram_run": "41641224352"
   },
   {
    "episode": 9,
