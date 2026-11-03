@@ -6,12 +6,12 @@
  "affiliate_url": "https://r.reelsgo.tv/O00BOfDo9_Zv",
  "free_episodes": 8,
  "full_planned_parts": 23,
- "instagram_publishing_paused": true,
+ "instagram_publishing_paused": false,
  "youtube_publishing_paused": true,
  "not_rights_clearance": true,
  "youtube_status": "unprobed_hold",
- "release_gate": "NONE - no owner approval for this series yet; do not publish",
- "approval_message": null,
+ "release_gate": "owner_approved_instagram_start_without_private_youtube_checks_2026-11-03_starprincess",
+ "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
  "source_and_render_qa": {
   "full_decode": false,
   "all_episode_dialogue_reviewed": false,
@@ -29,7 +29,13 @@
   "not_rights_clearance": true,
   "content_caveat": "AI-generated drama (portal tag: fast-promo AI). Contains affair/coffin imagery (a shirtless man embracing a woman in a burial-chamber scene), pregnancy/medical distress, blood, and a revenge/divorce storyline. Screening limits: 263 OCR subtitle frames clean of explicit terms and all 8 episode visual grids reviewed once; no full-decode dialogue review."
  },
- "instagram_resume": null,
+ "instagram_resume": {
+  "message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
+  "decided_at": "2026-11-03T17:36:58+05:30",
+  "decision": "proceed",
+  "question_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSODc2MUM0MTlEQ0VBN0E1MEExAA==",
+  "scope": "Instagram only. Private YouTube copyright checks waived for this series start at owner direction; copyright risk remains untested. YouTube public lane stays held. Start only after Frozen completes, hourly spacing from actual send."
+ },
  "instagram_run_status": "prepared_not_started",
  "instagram_last_send_at": null,
  "items": [
