@@ -1,0 +1,57 @@
+{
+ "series": "starprincess",
+ "title": "The Star Princess He Betrayed",
+ "planned_parts": 23,
+ "entries": [
+  {
+   "id": "dramabox-starprincess42000027169-ep1-part1-v1",
+   "episode": 1,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6aea0b55ce22073f337d2712",
+   "external_link": "https://www.instagram.com/reel/DfSTyvWj4f6/",
+   "actual_send_at": "2026-11-03T21:58:02.437+05:30",
+   "run": "41674091143",
+   "bytes": 76243840,
+   "sha256": "2e85b59ec9fbbf67d14c47197a2c15c77b67db426ec1fa61005770f803a3ab8e",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfSTyvWj4f6",
+    "width": 720,
+    "height": 1280,
+    "duration": 50.131,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9990985080985985,
+      "mean_error": 1.2441869212962964
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9996036985447452,
+      "mean_error": 0.7830700231481481
+     },
+     {
+      "seconds": 25.0655,
+      "correlation": 0.9994013302598417,
+      "mean_error": 1.1435300925925926
+     },
+     {
+      "seconds": 45.131,
+      "correlation": 0.9991300230108112,
+      "mean_error": 1.5245081018518518
+     }
+    ],
+    "cover": {
+     "correlation": 0.9987388141307785,
+     "mean_error": 2.0514525462962965
+    },
+    "status": "public_frame_and_cover_match"
+   }
+  }
+ ],
+ "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
+ "status": "publishing_1_of_23"
+}
