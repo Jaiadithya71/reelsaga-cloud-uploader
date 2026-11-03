@@ -603,8 +603,56 @@
     },
     "status": "public_frame_and_cover_match"
    }
+  },
+  {
+   "id": "dramabox-frozen42000029035-ep8-part2-v1",
+   "episode": 8,
+   "part": 2,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae9c9493b7ecdee655c9ab5",
+   "external_link": "https://www.instagram.com/reel/DfRzjWMCsdA/",
+   "actual_send_at": "2026-11-03T17:16:18.173+05:30",
+   "run": "41629880735",
+   "bytes": 55966414,
+   "sha256": "75c659fb64e505f4ba7afa9c58eb7fd74d24294d724f643047e948c984e73293",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfRzjWMCsdA",
+    "width": 720,
+    "height": 1280,
+    "duration": 40.17,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9982678942229668,
+      "mean_error": 1.8253284143518518
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9995359873529092,
+      "mean_error": 0.8161371527777778
+     },
+     {
+      "seconds": 20.085,
+      "correlation": 0.9986775339796291,
+      "mean_error": 1.8083304398148148
+     },
+     {
+      "seconds": 35.17,
+      "correlation": 0.9981080446137383,
+      "mean_error": 1.5512022569444444
+     }
+    ],
+    "cover": {
+     "correlation": 0.9989663054898257,
+     "mean_error": 2.0331380208333334
+    },
+    "status": "public_frame_and_cover_match"
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
- "status": "publishing_16_of_20"
+ "status": "publishing_17_of_20"
 }
