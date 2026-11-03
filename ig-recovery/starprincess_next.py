@@ -9,8 +9,8 @@ from buffer_client import Buffer,Inventory
 from queue_guard import require,preflight,media
 from public_verify import verify
 from verified_upload import put_once_verified
-B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-starprincess-batch-PENDING-APPROVAL'
-APPROVAL='PENDING_OWNER_APPROVAL_STARPRINCESS_no_waiver_yet'
+B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-starprincess-batch-20261103'
+APPROVAL='wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA'
 def receipt(**kw):pathlib.Path('recovery-receipt.json').write_text(json.dumps(kw,indent=2))
 m=json.loads(pathlib.Path('starprincess-prepared-catalog.json').read_text())
 require(not m.get('instagram_publishing_paused',m.get('publishing_paused',True)),'Instagram publication paused; no new upload or post')
