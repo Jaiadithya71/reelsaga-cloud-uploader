@@ -699,8 +699,56 @@
     },
     "status": "public_frame_and_cover_match"
    }
+  },
+  {
+   "id": "dramabox-frozen42000029035-ep9-part1-v1",
+   "episode": 9,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae9ebc37ee51e5b512708ea",
+   "external_link": "https://www.instagram.com/reel/DfSEX7vkgP_/",
+   "actual_send_at": "2026-11-03T19:43:24.917+05:30",
+   "run": "41651154028",
+   "bytes": 59744698,
+   "sha256": "17b6ddc31903799cbf8381501e7a6cc806456ed3019869c61a627faec9c6e9b4",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfSEX7vkgP_",
+    "width": 720,
+    "height": 1280,
+    "duration": 43.885,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9988215351831793,
+      "mean_error": 1.535580150462963
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9997190301602293,
+      "mean_error": 0.9961921296296297
+     },
+     {
+      "seconds": 21.9425,
+      "correlation": 0.9994707025123829,
+      "mean_error": 1.4187774884259259
+     },
+     {
+      "seconds": 38.885,
+      "correlation": 0.9992316790508985,
+      "mean_error": 1.4981640625
+     }
+    ],
+    "cover": {
+     "correlation": 0.9989997683194909,
+     "mean_error": 2.0738208912037037
+    },
+    "status": "public_frame_and_cover_match"
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
- "status": "publishing_18_of_20"
+ "status": "publishing_19_of_20"
 }
