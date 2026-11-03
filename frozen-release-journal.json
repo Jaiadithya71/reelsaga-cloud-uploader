@@ -261,6 +261,55 @@
     "status": "public_frame_and_cover_match"
    },
    "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
+  },
+  {
+   "id": "dramabox-frozen42000029035-ep5-part1-v1",
+   "episode": 5,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6ae95c7ada2711fd26ac7371",
+   "external_link": "https://www.instagram.com/reel/DfQ-g8IDNlY/",
+   "actual_send_at": "2026-11-03T09:32:34.844+05:30",
+   "run": "41575443791",
+   "bytes": 52510457,
+   "sha256": "e5f403c78a46c079063000da8ecd216e81e397e576bb74051d1afe94c46b839f",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfQ-g8IDNlY",
+    "width": 720,
+    "height": 1280,
+    "duration": 39.241,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9992258338033059,
+      "mean_error": 1.3981105324074075
+     },
+     {
+      "seconds": 9.81025,
+      "correlation": 0.9993054925016233,
+      "mean_error": 1.5899956597222222
+     },
+     {
+      "seconds": 19.6205,
+      "correlation": 0.9992121925459074,
+      "mean_error": 1.3094719328703703
+     },
+     {
+      "seconds": 34.241,
+      "correlation": 0.9986143146498044,
+      "mean_error": 1.661451099537037
+     }
+    ],
+    "cover": {
+     "correlation": 0.9992947958175966,
+     "mean_error": 1.9076634837962962
+    },
+    "status": "public_frame_and_cover_match"
+   },
+   "checks": "caption/nativeAI/served audio/full decode/cover+4 frame pixels verified; relay object deleted and absence verified"
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFN0EzMkJERTgzRDBGMTE0RTkyQzIxMzhENDI2ODQA",
