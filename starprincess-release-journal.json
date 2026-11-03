@@ -242,8 +242,56 @@
     },
     "status": "public_frame_and_cover_match"
    }
+  },
+  {
+   "id": "dramabox-starprincess42000027169-ep2-part3-v1",
+   "episode": 2,
+   "part": 3,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6aea58b79da2f6a2e9720211",
+   "external_link": "https://www.instagram.com/reel/DfS5kqzgVFZ/",
+   "actual_send_at": "2026-11-04T03:28:15.009+05:30",
+   "run": "41726023724",
+   "bytes": 58559226,
+   "sha256": "4e4bf42e9ad49eaddf02081193a78f22b6f430040f56f35ebf5396585d808d2f",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfS5kqzgVFZ",
+    "width": 720,
+    "height": 1280,
+    "duration": 40.518,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9995190065136504,
+      "mean_error": 1.1970949074074073
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9993636672102986,
+      "mean_error": 1.0745269097222223
+     },
+     {
+      "seconds": 20.259,
+      "correlation": 0.998773188398366,
+      "mean_error": 1.6107581018518518
+     },
+     {
+      "seconds": 35.518,
+      "correlation": 0.9995113212066292,
+      "mean_error": 1.4124001736111111
+     }
+    ],
+    "cover": {
+     "correlation": 0.999444175490316,
+     "mean_error": 2.5183680555555554
+    },
+    "status": "public_frame_and_cover_match"
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
- "status": "publishing_5_of_23"
+ "status": "publishing_6_of_23"
 }
