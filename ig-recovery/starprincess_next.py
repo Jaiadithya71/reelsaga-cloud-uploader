@@ -68,7 +68,7 @@ resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
 retry_errored=os.environ.get('RECOVERY_RETRY_ERRORED')=='1'
 item=None;reconcile_sent=False
 for i in m['items']:
- if i.get('status')in('public_verified_cleaned','provider_published_served_gated'):continue
+ if i.get('status')=='public_verified_cleaned':continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
  if r and r['state']=='uncertain' and r.get('session')=='buffer_release_existing_draft' and r.get('external_id') and not retry_errored:
