@@ -7,7 +7,7 @@ from transport import Transport
 from durable_state import DurableLedger
 from buffer_client import Buffer,Inventory
 from queue_guard import require,preflight,media
-from public_verify import verify
+from public_verify import verify,GatedVerification
 from verified_upload import put_once_verified
 B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-starprincess-batch-20261103'
 APPROVAL='wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA'
@@ -46,9 +46,9 @@ def cleanup_batch(force=False):
   h,hv=st.get('host-'+i['id'])
   if h and h.get('state')!='deleted_absence_verified':hosts.append((i,h,hv))
  if not hosts:return
- require(force or len(hosts)>=2 or all(i.get('status')=='public_verified_cleaned'or ledger.resume(i['id'],'instagram')=='do_not_create'for i in m['items']),'Cleanup batch not due')
+ require(force or len(hosts)>=2 or all(i.get('status')in('public_verified_cleaned','provider_published_served_gated')or ledger.resume(i['id'],'instagram')=='do_not_create'for i in m['items']),'Cleanup batch not due')
  for i,h,hv in hosts:
-  require(h.get('state')=='published_qa_verified','Unresolved post requires cancellation/reconciliation before cleanup')
+  require(h.get('state')in('published_qa_verified','provider_published_served_gated'),'Unresolved post requires cancellation/reconciliation before cleanup')
   p=buf.post(h['post_id']);require(p['status']=='sent'and p['externalLink']==h['external_link'],'Published identity changed')
   s3.delete_object(Bucket=B,Key=h['key'])
   try:s3.head_object(Bucket=B,Key=h['key']);raise RuntimeError('Deleted host still exists')
@@ -66,11 +66,14 @@ new_before=inv(B)
 if len(new_before)>=2:cleanup_batch()
 resume=os.environ.get('RECOVERY_RESUME_DRAFT')=='1'
 retry_errored=os.environ.get('RECOVERY_RETRY_ERRORED')=='1'
-item=None
+item=None;reconcile_sent=False
 for i in m['items']:
- if i.get('status')=='public_verified_cleaned':continue
+ if i.get('status')in('public_verified_cleaned','provider_published_served_gated'):continue
  r,_=st.get(ledger.key(i['id'],'instagram'))
  if r and r['state']=='published':continue
+ if r and r['state']=='uncertain' and r.get('session')=='buffer_release_existing_draft' and r.get('external_id') and not retry_errored:
+  _p=buf.post(r['external_id'])
+  if _p['status']=='sent' and _p.get('externalLink') and _p.get('text','').strip()==i['caption'].strip():item=i;reconcile_sent=True;break
  require(not r or (r['state']=='started'and not r.get('external_id')and not r.get('session')) or (resume and r['state']=='ready_for_review'and r.get('session')=='draft_created'and r.get('external_id')) or (retry_errored and r['state']=='uncertain' and r.get('session')=='buffer_release_existing_draft' and r.get('external_id')),'In-flight or blocked item, reconcile exact saved ID')
  item=i;break
 if item is None:receipt(status='all_20_verified_no_new_post');raise SystemExit(0)
@@ -81,8 +84,33 @@ require(time.time()-gate['reviewed_at']<172800,'Own-part review stale')
 # All preceding items must have completed served frame/cover verification. No part skipping.
 position=m['items'].index(item)
 for earlier in m['items'][:position]:
- rr,_=st.get(ledger.key(earlier['id'],'instagram'));require(rr and rr.get('state')=='published' and 'public_pixels_verified' in rr.get('session',''),'Earlier part not verified')
+ rr,_=st.get(ledger.key(earlier['id'],'instagram'));require(rr and rr.get('state')=='published' and ('public_pixels_verified' in rr.get('session','') or rr.get('session')=='provider_published_served_verification_gated'),'Earlier part not verified')
 receipt(status='preflight',item=item['id'])
+if reconcile_sent:
+ # Post-ack reconciliation: the release was acknowledged and Buffer confirms sent.
+ # Never re-upload or re-release; only confirm provider publication, re-verify the
+ # staged exact source, and record served verification (or its gated unavailability).
+ rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id'];hk='host-'+item['id']
+ host,_=st.get(hk);require(host and host.get('state')=='verified_original' and host.get('bytes')==item['bytes'],'Reconcile host state changed')
+ post=buf.post(pid);require(post['status']=='sent' and post.get('externalLink') and post['text'].strip()==item['caption'].strip() and post['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Provider publication evidence missing')
+ print('::add-mask::'+host['url'],flush=True)
+ with urllib.request.urlopen(host['url'],timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
+ p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
+ meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(x for x in meta['streams']if x['codec_type']=='video');subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True,capture_output=True)
+ subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y','original-cover.png'],check=True,capture_output=True)
+ from PIL import Image
+ require(np.asarray(Image.open('original-cover.png')).mean()>12,'Black original cover');require(v['height']/v['width']>1.7 and v['sample_aspect_ratio']=='1:1'and any(x['codec_type']=='audio'for x in meta['streams']),'Original video shape/audio')
+ try:
+  qa=verify(post['externalLink'],p,item['caption'],item['cover_ms'],'public-qa')
+ except GatedVerification as g:
+  ledger.checkpoint(item['id'],'instagram','published',external_id=pid,session='provider_published_served_verification_gated')
+  host,hv=st.get(hk);host.update(state='provider_published_served_gated',post_id=pid,external_link=post['externalLink']);require(st.compare_and_swap(hk,hv,host),'Host checkpoint failed')
+  receipt(status='provider_published_served_verification_gated',item=item['id'],post_id=pid,external_link=post['externalLink'],gate=str(g),reconciled_post_ack=True,batch_deadline=batch['deadline'])
+ else:
+  ledger.checkpoint(item['id'],'instagram','published',external_id=pid,session='public_pixels_verified_batch_host_retained')
+  host,hv=st.get(hk);host.update(state='published_qa_verified',post_id=pid,external_link=post['externalLink']);require(st.compare_and_swap(hk,hv,host),'Host checkpoint failed')
+  receipt(status='published_public_qa_verified_batch_retained',item=item['id'],post_id=pid,external_link=post['externalLink'],qa=qa,reconciled_post_ack=True,batch_deadline=batch['deadline'])
+ cleanup_batch(force=True);raise SystemExit(0)
 if not resume and not retry_errored:
  channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
  # Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
@@ -201,8 +229,16 @@ for n in range(15):
  if post['status']=='sent':break
  require(post['status']not in('error','failed'),'Publish rejected; hold');time.sleep(20)
 require(post['status']=='sent'and post.get('externalLink'),'Not confirmed public')
-qa=verify(post['externalLink'],p,caption,item['cover_ms'],'public-qa');require(post['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Public metadata differs');ledger.checkpoint(item['id'],'instagram','published',external_id=pid,session='public_pixels_verified_batch_host_retained')
-host,hv=st.get(hk);host.update(state='published_qa_verified',post_id=pid,external_link=post['externalLink']);require(st.compare_and_swap(hk,hv,host),'Host checkpoint failed')
-receipt(status='published_public_qa_verified_batch_retained',item=item['id'],post_id=pid,external_link=post['externalLink'],qa=qa,batch_deadline=batch['deadline'])
+require(post['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Public metadata differs')
+try:
+ qa=verify(post['externalLink'],p,caption,item['cover_ms'],'public-qa')
+except GatedVerification as g:
+ ledger.checkpoint(item['id'],'instagram','published',external_id=pid,session='provider_published_served_verification_gated')
+ host,hv=st.get(hk);host.update(state='provider_published_served_gated',post_id=pid,external_link=post['externalLink']);require(st.compare_and_swap(hk,hv,host),'Host checkpoint failed')
+ receipt(status='provider_published_served_verification_gated',item=item['id'],post_id=pid,external_link=post['externalLink'],gate=str(g),batch_deadline=batch['deadline'])
+else:
+ ledger.checkpoint(item['id'],'instagram','published',external_id=pid,session='public_pixels_verified_batch_host_retained')
+ host,hv=st.get(hk);host.update(state='published_qa_verified',post_id=pid,external_link=post['externalLink']);require(st.compare_and_swap(hk,hv,host),'Host checkpoint failed')
+ receipt(status='published_public_qa_verified_batch_retained',item=item['id'],post_id=pid,external_link=post['externalLink'],qa=qa,batch_deadline=batch['deadline'])
 
 cleanup_batch(force=True)
