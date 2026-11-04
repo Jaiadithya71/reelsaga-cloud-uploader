@@ -24,7 +24,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9990985080985985,
       "mean_error": 1.2441869212962964
      },
@@ -72,7 +72,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9988377215995234,
       "mean_error": 1.5582103587962963
      },
@@ -120,7 +120,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.99912966963609,
       "mean_error": 1.4939554398148147
      },
@@ -168,7 +168,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9985392751624723,
       "mean_error": 1.7282609953703705
      },
@@ -216,7 +216,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9987808736614231,
       "mean_error": 1.527912326388889
      },
@@ -264,7 +264,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9995190065136504,
       "mean_error": 1.1970949074074073
      },
@@ -312,7 +312,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9985331701133179,
       "mean_error": 1.4642086226851851
      },
@@ -360,7 +360,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9982233643168801,
       "mean_error": 2.029230324074074
      },
@@ -408,7 +408,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9980022699139579,
       "mean_error": 1.7771195023148147
      },
@@ -456,7 +456,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9989251143441606,
       "mean_error": 1.7897569444444446
      },
@@ -504,7 +504,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9990269399702101,
       "mean_error": 1.7055685763888888
      },
@@ -588,7 +588,7 @@
     "decode_ok": true,
     "frames": [
      {
-      "seconds": 2.0,
+      "seconds": 2,
       "correlation": 0.9990516203226372,
       "mean_error": 1.9879788773148148
      },
@@ -614,8 +614,56 @@
     },
     "status": "public_frame_and_cover_match"
    }
+  },
+  {
+   "id": "dramabox-starprincess42000027169-ep6-part1-v1",
+   "episode": 6,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6aeae4ee394911f9f1241dea",
+   "external_link": "https://www.instagram.com/reel/DfT-CQcF_h2/",
+   "actual_send_at": "2026-11-04T13:25:26.323+05:30",
+   "run": "41795403248",
+   "bytes": 67679284,
+   "sha256": "7e3d25f6ec6cf2a8a92f70e4e91d5b5df29052c5f511eb59edbb040671a3f166",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfT-CQcF_h2",
+    "width": 720,
+    "height": 1280,
+    "duration": 42.631,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2,
+      "correlation": 0.9991817265204831,
+      "mean_error": 1.3892433449074073
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9996397713049844,
+      "mean_error": 0.805859375
+     },
+     {
+      "seconds": 21.3155,
+      "correlation": 0.9985310477608048,
+      "mean_error": 1.6880656828703704
+     },
+     {
+      "seconds": 37.631,
+      "correlation": 0.9984868158457869,
+      "mean_error": 1.7070717592592592
+     }
+    ],
+    "cover": {
+     "correlation": 0.9992878286816759,
+     "mean_error": 2.0759129050925926
+    },
+    "status": "public_frame_and_cover_match"
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
- "status": "publishing_14_of_23"
+ "status": "publishing_15_of_23"
 }
