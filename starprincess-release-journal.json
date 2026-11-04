@@ -530,8 +530,26 @@
     },
     "status": "public_frame_and_cover_match"
    }
+  },
+  {
+   "id": "dramabox-starprincess42000027169-ep5-part1-v1",
+   "episode": 5,
+   "part": 1,
+   "status": "provider_published_served_gated",
+   "buffer_post_id": "6aeab60f16e63068f19403ed",
+   "external_link": "https://www.instagram.com/reel/DfTnKCgE2ML/",
+   "actual_send_at": "2026-11-04T10:06:27.417+05:30",
+   "run": "41773860408",
+   "bytes": 79157784,
+   "sha256": "a262e61ca9f4ab49e7062ff5b1074584f66ba691a58f17c7309eb966ba0d0daf",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfTnKCgE2ML",
+    "status": "served_verification_unavailable_gated",
+    "detail": "Instagram embed probe returned no served video_url under unauthenticated gating (login-wall/429 class). Provider-confirmed publication via Buffer sent + externalLink; source/readback QA passed (exact sha256). No probe retries per policy; served playback QA remains outstanding, not failed."
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
- "status": "publishing_11_of_23"
+ "status": "publishing_12_of_23"
 }
