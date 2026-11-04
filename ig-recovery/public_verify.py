@@ -3,6 +3,7 @@ import re,json,html,pathlib,subprocess,tempfile,urllib.parse,urllib.request
 import numpy as np
 from PIL import Image
 class VerificationError(RuntimeError):pass
+class GatedVerification(VerificationError):pass
 def require(ok,why):
  if not ok:raise VerificationError(why)
 def fetch(url,limit):
@@ -16,8 +17,18 @@ def similarity(a,b):
  return {'correlation':float(np.corrcoef(a.ravel(),b.ravel())[0,1]),'mean_error':float(np.abs(a-b).mean())}
 def verify(link,original,caption,cover_ms,outdir):
  p=urllib.parse.urlsplit(link);require(p.hostname=='www.instagram.com','Unexpected reel domain');m=re.fullmatch(r'/(?:reel|reels)/([A-Za-z0-9_-]+)/?',p.path);require(m,'Unexpected reel URL');code=m.group(1);d=pathlib.Path(outdir);d.mkdir(parents=True,exist_ok=True)
- s=fetch('https://www.instagram.com/reel/'+code+'/embed/',5_000_000).decode();require('EmbeddedMediaImage'in s and code in s,'No actual embedded media')
- m=re.search(r'\\"video_url\\":\\"(.*?)\\"',s);require(m,'No served video URL');video_url=json.loads('"'+m.group(1)+'"').replace('\\/','/')
+ try:d=fetch('https://www.instagram.com/reel/'+code+'/embed/',5_000_000)
+ except urllib.error.HTTPError as e:
+  if e.code in(401,403,429):raise GatedVerification('embed_http_%d'%e.code)from None
+  raise
+ s=d.decode()
+ if not('EmbeddedMediaImage'in s and code in s):
+  low=s.lower()
+  if 'login'in low or 'checkpoint'in low or 'challenge'in low:raise GatedVerification('embed_login_wall')
+  require(False,'No actual embedded media')
+ m=re.search(r'\\"video_url\\":\\"(.*?)\\"',s)
+ if not m:raise GatedVerification('served_video_url_gated')
+ video_url=json.loads('"'+m.group(1)+'"').replace('\\/','/')
  m=re.search(r'<img class="EmbeddedMediaImage"[^>]*src="([^"]+)"',s);require(m,'No served cover');cover_url=html.unescape(m.group(1));v=d/'served.mp4';c=d/'cover.jpg';v.write_bytes(fetch(video_url,200_000_000));c.write_bytes(fetch(cover_url,5_000_000))
  meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(v)]));orig=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(original)]));vv=next(x for x in meta['streams']if x['codec_type']=='video');ov=next(x for x in orig['streams']if x['codec_type']=='video');duration=float(meta['format']['duration']);require(abs(duration-float(orig['format']['duration']))<.3,'Duration changed');require(abs(vv['width']/vv['height']-ov['width']/ov['height'])<.003,'Frame cropped');require(any(x['codec_type']=='audio'for x in meta['streams']),'No served audio')
  subprocess.run(['ffmpeg','-v','error','-i',str(v),'-f','null','-'],check=True,capture_output=True)
