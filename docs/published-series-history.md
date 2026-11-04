@@ -15,6 +15,7 @@ not evidence of "not published".
 
 | Series | Platform | Parts | Free eps | Run window (IST) | Evidence |
 | --- | --- | --- | --- | --- | --- |
+| The Star Princess He Betrayed (DramaCPS 807564) | IG | 23/23 | 8/8 | 2026-11-03 21:58 → 2026-11-04 22:24 | starprincess-release-journal.json (23 sent; 21 served-verified, E5P1/E5P2 served checks gated), starprincess-prepared-catalog.json; last https://www.instagram.com/reel/DfU7ksdAIqp/ |
 | Frozen by My Fiancé, Adored by the Dragon King (DramaCPS 807545) | IG | 20/20 | 9/9 | 2026-11-02 23:44 → 2026-11-03 20:50 | frozen-release-journal.json (20 entries public_verified_cleaned), frozen-prepared-catalog.json |
 | The Dragon King's True Heiress (DramaCPS 807565) | IG | 23 | 8 | 2026-11-01 → 2026-11-02 | heiress-release-journal.json, heiress-prepared-catalog.json |
 | No One Gets Saved | IG | 18 | complete | → 2026-11-01 21:07 | Buffer captions "Betrayed after saving her classmates, Layla" |
@@ -27,13 +28,12 @@ not evidence of "not published".
 | Stolen as a baby and raised by dragons (Caesar) | IG | 3 | - | Oct 2026 | Buffer history |
 | The Blood Pact Game; Gone Before the Vows (31/31, complete Oct 6, both platforms); From F-Class Trash to Mech God; Wrong Door Right Girl; She Chose Her Lover. I Took Back My Empire.; Cast Me Out, Feed the Swarm; The Hidden Heiress; The Mute Heiress Speaks; My Robot Son will Save the World; A Love Left Unspoken; Don't Mess With That Airport Cleaner | IG | - | - | before/early Oct 2026 | index cards (pre-Buffer lane history) |
 
-## Active run (in progress)
-- The Star Princess He Betrayed (DramaCPS 807564, book 42000027169): IG
-  15/23 parts sent as of 2026-11-04 13:25 IST; ~61 min spacing, ordered
-  no-skip. Evidence: starprincess-release-journal.json,
-  starprincess-prepared-catalog.json. Per-series waiver granted
-  2026-11-03 17:36:58 IST (series-only skip of private YT checks;
-  public YouTube stays held).
+## Active run
+- None. Star Princess completed its 23 supplied parts at 2026-11-04 22:24 IST.
+- The Soldier's Journey Home (DramaCPS 807559, book 42000030015): prepared,
+  not published. 11 supplied free episodes, 26 parts rendered and sampled.
+  Catalog paused, per-series IG / skip-YT approval pending. Source and
+  screening caveats: soldier-source-preparation.json. No paid unlocks.
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
@@ -44,7 +44,7 @@ not evidence of "not published".
 
 ## Screened candidates
 - (Frozen and Star Princess moved out: both screened, waived and started;
-  see Completed table and Active run above.)
+  see Completed table above.))
 
 ## Resolved decisions
 - 2026-11-02 22:47 approval covered ONLY Weakest Null conditional on
@@ -52,4 +52,4 @@ not evidence of "not published".
   happened and the approval is spent.
 - Frozen start: own per-series waiver; published 2026-11-02 → 2026-11-03.
 - Star Princess start: per-series waiver granted 2026-11-03 17:36:58 IST
-  (series-only skip of private YT checks); run in progress.
+  (series-only skip of private YT checks); supplied free run complete.
