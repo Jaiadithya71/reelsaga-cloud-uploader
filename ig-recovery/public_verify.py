@@ -17,11 +17,11 @@ def similarity(a,b):
  return {'correlation':float(np.corrcoef(a.ravel(),b.ravel())[0,1]),'mean_error':float(np.abs(a-b).mean())}
 def verify(link,original,caption,cover_ms,outdir):
  p=urllib.parse.urlsplit(link);require(p.hostname=='www.instagram.com','Unexpected reel domain');m=re.fullmatch(r'/(?:reel|reels)/([A-Za-z0-9_-]+)/?',p.path);require(m,'Unexpected reel URL');code=m.group(1);d=pathlib.Path(outdir);d.mkdir(parents=True,exist_ok=True)
- try:d=fetch('https://www.instagram.com/reel/'+code+'/embed/',5_000_000)
+ try:raw=fetch('https://www.instagram.com/reel/'+code+'/embed/',5_000_000)
  except urllib.error.HTTPError as e:
   if e.code in(401,403,429):raise GatedVerification('embed_http_%d'%e.code)from None
   raise
- s=d.decode()
+ s=raw.decode()
  if not('EmbeddedMediaImage'in s and code in s):
   low=s.lower()
   if 'login'in low or 'checkpoint'in low or 'challenge'in low:raise GatedVerification('embed_login_wall')
