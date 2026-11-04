@@ -566,8 +566,56 @@
     "status": "served_verification_unavailable_gated",
     "detail": "Instagram embed probe gated again (intermittent; one attempt returned a video_url, reconcile attempt did not). Provider-confirmed publication via Buffer sent + externalLink; source/readback QA passed (exact sha256). No probe retries per policy; served playback QA remains outstanding, not failed."
    }
+  },
+  {
+   "id": "dramabox-starprincess42000027169-ep5-part3-v1",
+   "episode": 5,
+   "part": 3,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6aead53e394911f9f11d3f62",
+   "external_link": "https://www.instagram.com/reel/DfT2YVhjo_Z/",
+   "actual_send_at": "2026-11-04T12:19:30.612+05:30",
+   "run": "41787797364",
+   "bytes": 75596950,
+   "sha256": "790376739abc4e17320d8d24555c439c56b6aa708f1a8f5c40e18fdbe325a060",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfT2YVhjo_Z",
+    "width": 720,
+    "height": 1280,
+    "duration": 49.736,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9990516203226372,
+      "mean_error": 1.9879788773148148
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9995550210452343,
+      "mean_error": 0.8746209490740741
+     },
+     {
+      "seconds": 24.868,
+      "correlation": 0.9987287817370127,
+      "mean_error": 1.6464597800925926
+     },
+     {
+      "seconds": 44.736,
+      "correlation": 0.999473236042598,
+      "mean_error": 1.3863599537037037
+     }
+    ],
+    "cover": {
+     "correlation": 0.9991256780677169,
+     "mean_error": 2.3719574652777777
+    },
+    "status": "public_frame_and_cover_match"
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
- "status": "publishing_13_of_23"
+ "status": "publishing_14_of_23"
 }
