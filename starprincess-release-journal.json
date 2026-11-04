@@ -998,8 +998,56 @@
    },
    "status": "public_frame_and_cover_match"
   }
+ },
+ {
+  "id": "dramabox-starprincess42000027169-ep8-part3-v1",
+  "episode": 8,
+  "part": 3,
+  "status": "public_verified_cleaned",
+  "buffer_post_id": "6aeb62f3b60af5ca1676c667",
+  "external_link": "https://www.instagram.com/reel/DfU7ksdAIqp/",
+  "actual_send_at": "2026-11-04T22:24:07.979+05:30",
+  "run": "41871670762",
+  "bytes": 75380306,
+  "sha256": "5b4f99af6ebabd6f17b6187cb22b93dd1cae9995eed2841a3f9230573fb6fb0a",
+  "runner_bytes_match_qa": true,
+  "served": {
+   "shortcode": "DfU7ksdAIqp",
+   "width": 720,
+   "height": 1280,
+   "duration": 48.691,
+   "audio_present": true,
+   "decode_ok": true,
+   "frames": [
+    {
+     "seconds": 2.0,
+     "correlation": 0.9995378940825287,
+     "mean_error": 1.033498263888889
+    },
+    {
+     "seconds": 10,
+     "correlation": 0.9993748188089634,
+     "mean_error": 1.306986400462963
+    },
+    {
+     "seconds": 24.3455,
+     "correlation": 0.9989115689281828,
+     "mean_error": 1.6772554976851852
+    },
+    {
+     "seconds": 43.691,
+     "correlation": 0.9994316479169039,
+     "mean_error": 1.1304383680555556
+    }
+   ],
+   "cover": {
+    "correlation": 0.9994567160491552,
+    "mean_error": 1.8067809606481482
+   },
+   "status": "public_frame_and_cover_match"
+  }
  }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNGMzE3MzlCMjdGMTQ3MzNENjc0QTA5MjM4MzZBODQA",
- "status": "publishing_22_of_23"
+ "status": "completed_23_of_23"
 }
