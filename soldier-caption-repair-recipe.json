@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "status": "staged_not_activated",
   "subtitle_policy": "complete spoken-word coverage with source profanity masking retained",
   "fixes": [
@@ -52,13 +52,14 @@
       ],
       "frame_count_preserved": true,
       "decode_verified": true,
-      "source_profanity_masking_retained": true
+      "source_profanity_masking_retained": true,
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
     },
     {
       "part": "ep6-part2",
       "source_sha256": "7eb8237913a923f1bd7d29400c7f13a29710b8851359565e8f13119f74cf2b02",
-      "new_sha256": "3e6da84b04200a7e5fed863726dfc7f4c3cb9715e097ebb0fa9fdfa24ff4b6f0",
-      "bytes": 56322052,
+      "new_sha256": "87204c2dbd0180bab5dfd5c624ca3c6b8f7aed9c9b478ed045cfc7eb84375f1f",
+      "bytes": 56292835,
       "audio_stream_sha256": "2441afba2f9d025b314f062ab14a9789af15534284d92e0f85ef7278a13af239",
       "audio_byte_exact": true,
       "timing": [
@@ -73,8 +74,8 @@
         155
       ],
       "duration": "42.335000",
-      "final_review": "corrected_line_audio_and_pixels_checked",
-      "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog.",
+      "final_review": "pending",
+      "caveat": "Additional okay/alright source mistranscription identified during final review. Candidate only; not activated.",
       "preservation_samples": [
         {
           "at": 1,
@@ -103,7 +104,36 @@
       ],
       "frame_count_preserved": true,
       "decode_verified": true,
-      "source_profanity_masking_retained": true
+      "source_profanity_masking_retained": true,
+      "patches": [
+        {
+          "timing": [
+            19.4,
+            21.72
+          ],
+          "text": "Show them the kind of monster\nthat harasses old ladies!",
+          "rect": [
+            140,
+            1350,
+            800,
+            155
+          ]
+        },
+        {
+          "timing": [
+            28.64,
+            29.84
+          ],
+          "text": "but just let it go, okay?",
+          "rect": [
+            210,
+            1350,
+            660,
+            100
+          ]
+        }
+      ],
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
     },
     {
       "part": "ep9-part3",
@@ -154,7 +184,92 @@
       ],
       "frame_count_preserved": true,
       "decode_verified": true,
-      "source_profanity_masking_retained": true
+      "source_profanity_masking_retained": true,
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+    },
+    {
+      "part": "ep5-part3",
+      "source_sha256": "b5c9ed679f6c071bb95afcaaa82a557c3a6a9302d6ee70c137f6dde7a5178f1e",
+      "new_sha256": "f663197213c8fca8fdfced8a95e24e38e8617196c5e625a440189a29ca29d2cc",
+      "bytes": 73520493,
+      "audio_stream_sha256": "8e1909594f0da51ac1e3e0568af9721aa5cefe0ade64bad18f0bd967d39548f3",
+      "audio_byte_exact": true,
+      "timing": [
+        34.24,
+        35.26
+      ],
+      "text": "Notify the hangar.",
+      "rect": [
+        300,
+        1350,
+        480,
+        100
+      ],
+      "final_review": "pending",
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+    },
+    {
+      "part": "ep6-part1",
+      "source_sha256": "f4c1e8106bfaf49f3ef4a2e28c49b74d71c37b94c9c0f1578f9a8aa07199482e",
+      "new_sha256": "dcfbe8c9f137660854cc725b22c30ac1f18391b51d404d6f91e58d0eb8c6296f",
+      "bytes": 55536295,
+      "audio_stream_sha256": "525b77875170e732466bd2e2d52052fbdd462f26b5f51953cb680492d2fbe987",
+      "audio_byte_exact": true,
+      "timing": [
+        25.26,
+        26.94
+      ],
+      "text": "He's the regional director\nof the Horton Group!",
+      "rect": [
+        170,
+        1340,
+        740,
+        165
+      ],
+      "final_review": "pending",
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+    },
+    {
+      "part": "ep7-part1",
+      "source_sha256": "df7eb6ce8ab9a538de27748fe080d6a037aac5436b7d62f80a733af72a789920",
+      "new_sha256": "dec2c2a88afec966302226c08e6e224adfd356e37633ce10adf5fec0692ac7b5",
+      "bytes": 51048330,
+      "audio_stream_sha256": "4dd5b3407382f409761993246fff9d201090ae5c4470a0a03540c3c9df8e3c65",
+      "audio_byte_exact": true,
+      "timing": [
+        4.28,
+        5.72
+      ],
+      "text": "Oh, I'm feeling dizzy.",
+      "rect": [
+        280,
+        1350,
+        520,
+        100
+      ],
+      "final_review": "pending",
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+    },
+    {
+      "part": "ep10-part1",
+      "source_sha256": "96344b9cfd2b9d156e2325cb7c9ffbe537119630586a1fe445fd2f6e69fc65f6",
+      "new_sha256": "57be1c160e61bc915acabd5d91acda73383593bda954d8bd74e31f727cbd1750",
+      "bytes": 55384732,
+      "audio_stream_sha256": "e81be0d3f281aa8ff86c03e69cedbb988aaa68276f3cad1f26ba55beb83ed1c8",
+      "audio_byte_exact": true,
+      "timing": [
+        45.16,
+        46.48
+      ],
+      "text": "Oh, boo-hoo!",
+      "rect": [
+        340,
+        1350,
+        400,
+        100
+      ],
+      "final_review": "pending",
+      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
     }
   ],
   "original_audio": "stream-copy; verify extracted AAC SHA256",
