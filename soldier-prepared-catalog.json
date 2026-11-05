@@ -6,12 +6,12 @@
  "affiliate_url": "https://r.reelsgo.tv/GFBBQsIQ1FBz",
  "free_episodes": 11,
  "full_planned_parts": 26,
- "instagram_publishing_paused": true,
+ "instagram_publishing_paused": false,
  "youtube_publishing_paused": true,
  "not_rights_clearance": true,
  "youtube_status": "unprobed_hold",
- "release_gate": "awaiting_owner_series_specific_instagram_skip_youtube_approval",
- "approval_message": null,
+ "release_gate": "instagram_source_qa_owner_authorized_yt_checks_waived",
+ "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA",
  "source_and_render_qa": {
   "native_dimensions": [
    1080,
@@ -522,5 +522,6 @@
    "caption": "Ad\n\nAfter losing his right leg in service, decorated veteran Ethan North returns home to public humiliation. The people mocking him have no idea who he saved - or who is coming to find him.\n\nThe Soldier's Journey Home | Episode 11 Part 3/3\nThis is only one piece of the story. Follow for the next part.\n\nWatch the original on DramaBox: https://r.reelsgo.tv/GFBBQsIQ1FBz\n#TheSoldiersJourneyHome #RevengeDrama #ReelSaga",
    "caption_sha256": "127aabe8a6c0a94b58c8ac6cfca6d67871242997bc46f16e1f315a775c1fb55f"
   }
- ]
+ ],
+ "publishing_paused": false
 }
