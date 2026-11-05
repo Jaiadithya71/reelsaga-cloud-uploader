@@ -93,7 +93,7 @@ if reconcile_sent:
  # staged exact source, and record served verification (or its gated unavailability).
  rec,_=st.get(ledger.key(item['id'],'instagram'));pid=rec['external_id'];hk='host-'+item['id']
  host,_=st.get(hk);require(host and host.get('state')=='verified_original' and host.get('bytes')==item['bytes'],'Reconcile host state changed')
- post=buf.post(pid);require(post['status']=='sent' and post.get('externalLink') and post['text'].strip()==item['caption'].strip() and post['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Provider publication evidence missing')
+ post=_p;require(post['status']=='sent' and post.get('externalLink') and post['text'].strip()==item['caption'].strip() and post['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Provider publication evidence missing')
  print('::add-mask::'+host['url'],flush=True)
  with urllib.request.urlopen(host['url'],timeout=90)as rr:pathlib.Path('p1.mp4').write_bytes(rr.read(item['bytes']+1))
  p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
@@ -227,10 +227,10 @@ else:
 # Public served cover/frame comparison is mandatory before queue may advance.
 receipt(status='draft_source_and_offset_verified',item=item['id'],post_id=pid,width=dv['width'],height=dv['height'])
 ledger.checkpoint(item['id'],'instagram','uncertain',external_id=pid,session='buffer_retry_release_existing_draft' if retry_errored else 'buffer_release_existing_draft');r=buf.release(pid,caption,url,item['cover_ms']);require(r.get('post',{}).get('id')==pid,'Release unacknowledged; reconcile')
-for n in range(15):
+for n in range(3):
  post=buf.post(pid);receipt(status=post['status'],item=item['id'],post_id=pid,external_link=post.get('externalLink'))
  if post['status']=='sent':break
- require(post['status']not in('error','failed'),'Publish rejected; hold');time.sleep(20)
+ require(post['status']not in('error','failed'),'Publish rejected; hold');time.sleep(90)
 require(post['status']=='sent'and post.get('externalLink'),'Not confirmed public')
 require(post['metadata']=={'type':'reel','shouldShareToFeed':True,'isAiGenerated':True},'Public metadata differs')
 try:
