@@ -20,6 +20,7 @@ require(1<=len(m['items'])<=26 and m['full_planned_parts']==26 and m['free_episo
 review=json.loads(pathlib.Path('soldier-ig-release-gates.json').read_text())
 require(m['approval_message']==APPROVAL,'Approval mismatch')
 
+
 class State(GitHubState):
  def url(self,k):return self.base+'/contents/state-v2/'+k+'.enc'
 st=State(Transport(lambda:os.environ['GH_TOKEN'],{'api.github.com'}),os.environ.pop('REELSAGA_LEDGER_KEY'));ledger=DurableLedger(st);buf=Buffer(os.environ.pop('REELSAGA_BUFFER_API_KEY'))
@@ -112,6 +113,12 @@ if reconcile_sent:
   host,hv=st.get(hk);host.update(state='published_qa_verified',post_id=pid,external_link=post['externalLink']);require(st.compare_and_swap(hk,hv,host),'Host checkpoint failed')
   receipt(status='published_public_qa_verified_batch_retained',item=item['id'],post_id=pid,external_link=post['externalLink'],qa=qa,reconciled_post_ack=True,batch_deadline=batch['deadline'])
  cleanup_batch(force=True);raise SystemExit(0)
+# A quality hold never blocks exact saved-post reconciliation or relay cleanup.
+# It blocks any new draft/release until this exact candidate has full checks.
+quality=json.loads(pathlib.Path('soldier-subtitle-quality-gates.json').read_text())
+check=quality.get('parts',{}).get(item['id'],{})
+require(check.get('status')=='verified' and check.get('approved_render_sha256')==item['sha256'] and all(check.get(k)is True for k in quality['requirements']),'Subtitle/visual quality hold; no new draft or release')
+
 if not resume and not retry_errored:
  channel=buf.channel(CH);recent=buf.inventory(ORG,CH);caption=item['caption'];dupes=[p for p in recent if p.get('text','').strip()==caption.strip()]
  # Historical Buffer sent rows persist after intentional IG deletion. Only exact mapped old shortcode absent can be excluded.
