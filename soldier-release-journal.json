@@ -48,10 +48,58 @@
     },
     "status": "public_frame_and_cover_match"
    }
+  },
+  {
+   "id": "dramabox-soldier42000030015-ep1-part2-v1",
+   "episode": 1,
+   "part": 2,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6aec017375052a1eb81c89bd",
+   "external_link": "https://www.instagram.com/reel/DfWI9t-ile5/",
+   "actual_send_at": "2026-11-05T09:40:23.847+05:30",
+   "run": "41965908334",
+   "bytes": 56315987,
+   "sha256": "34c99196ed07e3010605aa8a9fc89d568d8a727e69a8e190a6191d980af00907",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfWI9t-ile5",
+    "width": 720,
+    "height": 1280,
+    "duration": 40.588,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.9983388552494072,
+      "mean_error": 2.288048321759259
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.999481904248365,
+      "mean_error": 0.8863208912037037
+     },
+     {
+      "seconds": 20.294,
+      "correlation": 0.9994382094288231,
+      "mean_error": 1.4463208912037038
+     },
+     {
+      "seconds": 35.588,
+      "correlation": 0.9985632464178458,
+      "mean_error": 2.217643229166667
+     }
+    ],
+    "cover": {
+     "correlation": 0.9989645168353264,
+     "mean_error": 2.305015914351852
+    },
+    "status": "public_frame_and_cover_match"
+   }
   }
  ],
  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA",
- "status": "publishing_1_of_26",
+ "status": "publishing_2_of_26",
  "series": "soldier",
  "planned_parts": 26
 }
