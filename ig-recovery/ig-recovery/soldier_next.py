@@ -191,6 +191,18 @@ else:
  source_meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_format','-of','json','source.mp4']));planned=compute_parts(float(source_meta['format']['duration']));expected=planned[item['part']-1]
  require(abs(float(expected[1])-item['source_start'])<0.001 and abs(float(expected[2])-length)<0.001,'Canonical split differs')
  subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-ss',str(item['source_start']),'-i','source.mp4','-t',str(length),'-vf',f'fade=t=in:st=0:d=0.5,fade=t=out:st={length-.5}:d=0.5','-af',f'afade=t=in:st=0:d=0.5,afade=t=out:st={length-.5}:d=0.5','-c:v','libx264','-threads:v','2','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','p1.mp4'],check=True)
+# Optional exact-render subtitle correction only before a NEW upload.
+# Saved-post reconciliation and resume keep their existing exact uploaded media.
+if item.get('caption_correction_part') and not resume and not retry_errored:
+ from apply_caption_correction import apply
+ recipe=json.loads(pathlib.Path('soldier-caption-repair-recipe.json').read_text())
+ fix=next(x for x in recipe['fixes']if x['part']==item['caption_correction_part'])
+ require(fix['new_sha256']==item['sha256'] and fix['bytes']==item['bytes'],'Correction recipe/catalog mismatch')
+ untouched=pathlib.Path('p1-before-caption-correction.mp4')
+ pathlib.Path('p1.mp4').rename(untouched)
+ apply(untouched,pathlib.Path('p1.mp4'),fix,'/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')
+ untouched.unlink()
+
 p=pathlib.Path('p1.mp4');require(p.stat().st_size==item['bytes']and hashlib.sha256(p.read_bytes()).hexdigest()==item['sha256'],'Original differs')
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(p)]));v=next(x for x in meta['streams']if x['codec_type']=='video');gate_measured(float(meta['format']['duration']),item['duration']);subprocess.run(['ffmpeg','-v','error','-i',str(p),'-f','null','-'],check=True,capture_output=True)
 subprocess.run(['ffmpeg','-v','error','-ss',str(item['cover_ms']/1000),'-i',str(p),'-frames:v','1','-vf','scale=360:640','-y','original-cover.png'],check=True,capture_output=True)
