@@ -1,15 +1,40 @@
 """No implicit retries. Mutation uncertainty is durable reconciliation work."""
-import json,urllib.request,urllib.error
+import json,urllib.request,urllib.error,pathlib,datetime
 class Uncertain(RuntimeError):pass
 class Rejected(RuntimeError):pass
 class Inventory(list):
  complete=True
 class Buffer:
- def __init__(self,key):self.key=key
+ def __init__(self,key):self.key=key;self._quota_blocked=False
  def gql(self,query,variables):
+  if self._quota_blocked:raise Rejected('Prior429 in this process; no further API requests permitted')
   req=urllib.request.Request('https://api.buffer.com',data=json.dumps({'query':query,'variables':variables}).encode(),headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
+  def evidence(response,body=None):
+   # Never persist Authorization, cookies, response text, signed media URLs or keys.
+   headers={k:response.headers.get(k) for k in ('Retry-After','RateLimit','RateLimit-Policy') if response.headers.get(k) is not None}
+   windows=[]
+   if isinstance(body,dict):
+    for error in body.get('errors',[]):
+     ext=error.get('extensions',{})
+     windows.append({k:ext[k] for k in ('code','window') if isinstance(ext.get(k),(str,int,float))})
+   path=pathlib.Path('buffer-rate-limit-receipt.json')
+   event={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'http_status':getattr(response,'status',getattr(response,'code',None)),'headers':headers,'errors':windows}
+   prior=[]
+   if path.exists():
+    try:prior=json.loads(path.read_text())
+    except Exception:pass
+   path.write_text(json.dumps((prior+[event])[-30:],indent=2))
   try:
-   with urllib.request.urlopen(req,timeout=90)as r:d=json.load(r)
+   with urllib.request.urlopen(req,timeout=90)as r:
+    d=json.load(r);evidence(r,d)
+  except urllib.error.HTTPError as error:
+   try:body=json.loads(error.read(65536))
+   except Exception:body=None
+   evidence(error,body)
+   if error.code==429:
+    self._quota_blocked=True
+    raise Rejected('Buffer rate limited; honor recorded Retry-After, no automatic retry')from None
+   raise Uncertain('No verified response; reconcile saved identity')from None
   except Exception:raise Uncertain('No verified response; reconcile saved identity')from None
   if d.get('errors'):raise Rejected('GraphQL rejected; no retry')
   return d['data']
