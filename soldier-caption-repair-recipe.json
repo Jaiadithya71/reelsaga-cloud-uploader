@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "status": "staged_not_activated",
+  "subtitle_policy": "complete spoken-word coverage with source profanity masking retained",
+  "fixes": [
+    {
+      "part": "ep3-part1",
+      "source_sha256": "46158ac397a40080988e5af0d5c9c72cb5c27132da751ffdeb22ad01ef9baf0d",
+      "new_sha256": "55117efef0b4d97dbd5b531f19fbe1a484933639c37460a61fe1678a529aeb89",
+      "bytes": 47477199,
+      "audio_stream_sha256": "e170b08be18972a09706b43299088137d8c0992c8e8e7b7fbaa07d6a27a604b0",
+      "audio_byte_exact": true,
+      "timing": [
+        32.96,
+        34.4
+      ],
+      "text": "just two weeks after surgery.",
+      "rect": [
+        200,
+        1360,
+        680,
+        100
+      ],
+      "duration": "42.520000",
+      "final_review": "corrected_line_audio_and_pixels_checked",
+      "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog.",
+      "preservation_samples": [
+        {
+          "at": 1,
+          "outside_patch_mae_255": 1.059
+        },
+        {
+          "at": 8.504,
+          "outside_patch_mae_255": 0.526
+        },
+        {
+          "at": 32.56,
+          "outside_patch_mae_255": 0.627
+        },
+        {
+          "at": 33.68,
+          "outside_patch_mae_255": 0.626
+        },
+        {
+          "at": 34.8,
+          "outside_patch_mae_255": 0.623
+        },
+        {
+          "at": 41.72,
+          "outside_patch_mae_255": 0.644
+        }
+      ],
+      "frame_count_preserved": true,
+      "decode_verified": true,
+      "source_profanity_masking_retained": true
+    },
+    {
+      "part": "ep6-part2",
+      "source_sha256": "7eb8237913a923f1bd7d29400c7f13a29710b8851359565e8f13119f74cf2b02",
+      "new_sha256": "3e6da84b04200a7e5fed863726dfc7f4c3cb9715e097ebb0fa9fdfa24ff4b6f0",
+      "bytes": 56322052,
+      "audio_stream_sha256": "2441afba2f9d025b314f062ab14a9789af15534284d92e0f85ef7278a13af239",
+      "audio_byte_exact": true,
+      "timing": [
+        19.4,
+        21.72
+      ],
+      "text": "Show them the kind of monster\nthat harasses old ladies!",
+      "rect": [
+        140,
+        1350,
+        800,
+        155
+      ],
+      "duration": "42.335000",
+      "final_review": "corrected_line_audio_and_pixels_checked",
+      "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog.",
+      "preservation_samples": [
+        {
+          "at": 1,
+          "outside_patch_mae_255": 0.499
+        },
+        {
+          "at": 8.467,
+          "outside_patch_mae_255": 0.432
+        },
+        {
+          "at": 19.0,
+          "outside_patch_mae_255": 1.141
+        },
+        {
+          "at": 20.56,
+          "outside_patch_mae_255": 0.758
+        },
+        {
+          "at": 22.12,
+          "outside_patch_mae_255": 0.759
+        },
+        {
+          "at": 41.535,
+          "outside_patch_mae_255": 0.807
+        }
+      ],
+      "frame_count_preserved": true,
+      "decode_verified": true,
+      "source_profanity_masking_retained": true
+    },
+    {
+      "part": "ep9-part3",
+      "source_sha256": "8cb323a69b9b981610d371e1a206c1f99eebe73ada300950a59eca3dcf7ef77f",
+      "new_sha256": "6fc7f6590ba208e757f0c936a95c707dd4eaeb24e1b39efc8adea43f0bf84948",
+      "bytes": 52089681,
+      "audio_stream_sha256": "b798742d90dfbb9b69c3509d3cf2fdade0fc34a8b2ce1a11da7c3be9afe86a8b",
+      "audio_byte_exact": true,
+      "timing": [
+        35.72,
+        38.4
+      ],
+      "text": "Whoa, this, this guy's\nactually the VIP?",
+      "rect": [
+        100,
+        1345,
+        880,
+        170
+      ],
+      "duration": "47.270000",
+      "final_review": "corrected_line_audio_and_pixels_checked",
+      "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog.",
+      "preservation_samples": [
+        {
+          "at": 1,
+          "outside_patch_mae_255": 0.826
+        },
+        {
+          "at": 9.454,
+          "outside_patch_mae_255": 0.816
+        },
+        {
+          "at": 35.32,
+          "outside_patch_mae_255": 0.576
+        },
+        {
+          "at": 37.06,
+          "outside_patch_mae_255": 0.734
+        },
+        {
+          "at": 38.8,
+          "outside_patch_mae_255": 0.871
+        },
+        {
+          "at": 46.47,
+          "outside_patch_mae_255": 1.133
+        }
+      ],
+      "frame_count_preserved": true,
+      "decode_verified": true,
+      "source_profanity_masking_retained": true
+    }
+  ],
+  "original_audio": "stream-copy; verify extracted AAC SHA256",
+  "footage": "same frame count/timing, local backing only, no inpainting",
+  "activation": "Only after complete render-specific QC, use verified candidate hash, never reuse original source-only hash. No automatic publishing or reconciliation."
+}
