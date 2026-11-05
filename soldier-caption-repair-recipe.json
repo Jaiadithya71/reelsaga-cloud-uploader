@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "status": "staged_not_activated",
+  "status": "installed_catalog_held_no_release",
   "subtitle_policy": "complete spoken-word coverage with source profanity masking retained",
   "fixes": [
     {
@@ -22,8 +22,8 @@
         100
       ],
       "duration": "42.520000",
-      "final_review": "corrected_line_audio_and_pixels_checked",
-      "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog.",
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
       "preservation_samples": [
         {
           "at": 1,
@@ -53,7 +53,7 @@
       "frame_count_preserved": true,
       "decode_verified": true,
       "source_profanity_masking_retained": true,
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain"
     },
     {
       "part": "ep6-part2",
@@ -74,8 +74,8 @@
         155
       ],
       "duration": "42.335000",
-      "final_review": "pending",
-      "caveat": "Additional okay/alright source mistranscription identified during final review. Candidate only; not activated.",
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
       "preservation_samples": [
         {
           "at": 1,
@@ -133,7 +133,7 @@
           ]
         }
       ],
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain"
     },
     {
       "part": "ep9-part3",
@@ -154,8 +154,8 @@
         170
       ],
       "duration": "47.270000",
-      "final_review": "corrected_line_audio_and_pixels_checked",
-      "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog.",
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
       "preservation_samples": [
         {
           "at": 1,
@@ -185,7 +185,7 @@
       "frame_count_preserved": true,
       "decode_verified": true,
       "source_profanity_masking_retained": true,
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain"
     },
     {
       "part": "ep5-part3",
@@ -205,8 +205,9 @@
         480,
         100
       ],
-      "final_review": "pending",
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
     },
     {
       "part": "ep6-part1",
@@ -226,18 +227,19 @@
         740,
         165
       ],
-      "final_review": "pending",
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
     },
     {
       "part": "ep7-part1",
       "source_sha256": "df7eb6ce8ab9a538de27748fe080d6a037aac5436b7d62f80a733af72a789920",
-      "new_sha256": "dec2c2a88afec966302226c08e6e224adfd356e37633ce10adf5fec0692ac7b5",
-      "bytes": 51048330,
+      "new_sha256": "7d544dbc1171819e6cb7bdf36b0f5c5f1b55e01d3a9d9459d68bc4f12490b5bc",
+      "bytes": 51040930,
       "audio_stream_sha256": "4dd5b3407382f409761993246fff9d201090ae5c4470a0a03540c3c9df8e3c65",
       "audio_byte_exact": true,
       "timing": [
-        4.28,
+        3.88,
         5.72
       ],
       "text": "Oh, I'm feeling dizzy.",
@@ -247,8 +249,9 @@
         520,
         100
       ],
-      "final_review": "pending",
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
     },
     {
       "part": "ep10-part1",
@@ -268,11 +271,27 @@
         400,
         100
       ],
-      "final_review": "pending",
-      "verification_status": "candidate_wording_and_patch_boundary_reviewed_full_quality_gate_still_closed"
+      "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+      "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
     }
   ],
   "original_audio": "stream-copy; verify extracted AAC SHA256",
   "footage": "same frame count/timing, local backing only, no inpainting",
-  "activation": "Only after complete render-specific QC, use verified candidate hash, never reuse original source-only hash. No automatic publishing or reconciliation."
+  "activation": "Corrected catalog hashes installed with both platforms paused and all quality release gates still closed. Buffer stop independent. No publishing authorization from this recipe.",
+  "independent_verification": {
+    "scope": "Eight patch timing checks; independent alignment and energy context, not word identity proof",
+    "ep7_part1_onset": "Moved caption onset from4.28to3.88; no neighboring caption, boundary pixels inspected; original audio exact",
+    "unsupported_regions": [
+      "ep4-part1 entire part",
+      "ep10-part3 about9.5-23.5s",
+      "ep11-part3 about12.5-21.4s",
+      "ep5-part2 about3-13s",
+      "ep9-part1 first line0-5.25s"
+    ],
+    "ambiguities": [
+      "ep7-part2 announcer/announcement",
+      "ep11-part1 The2/tube"
+    ]
+  }
 }
