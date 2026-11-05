@@ -3,7 +3,7 @@
 Single cross-series record so no future run re-proposes an already-published
 title. Per-series detail lives in each series' *-release-journal.json /
 *-public-catalog.json; the live index cards are at
-https://reelsaga-index.vercel.app/ (20 cards as of 2026-11-04).
+https://reelsaga-index.vercel.app/ (21 cards as of 2026-11-05).
 
 ## Rule
 Before proposing ANY "next series", check it against this file AND the live
@@ -29,11 +29,13 @@ not evidence of "not published".
 | The Blood Pact Game; Gone Before the Vows (31/31, complete Oct 6, both platforms); From F-Class Trash to Mech God; Wrong Door Right Girl; She Chose Her Lover. I Took Back My Empire.; Cast Me Out, Feed the Swarm; The Hidden Heiress; The Mute Heiress Speaks; My Robot Son will Save the World; A Love Left Unspoken; Don't Mess With That Airport Cleaner | IG | - | - | before/early Oct 2026 | index cards (pre-Buffer lane history) |
 
 ## Active run
-- None. Star Princess completed its 23 supplied parts at 2026-11-04 22:24 IST.
-- The Soldier's Journey Home (DramaCPS 807559, book 42000030015): prepared,
-  not published. 11 supplied free episodes, 26 parts rendered and sampled.
-  Catalog paused, per-series IG / skip-YT approval pending. Source and
-  screening caveats: soldier-source-preparation.json. No paid unlocks.
+- The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
+  1/26 parts sent and served verified at 2026-11-05 08:36:03.879 IST.
+  11 supplied free episodes; ordered hourly no-skip run.
+  Evidence: soldier-release-journal.json and soldier-prepared-catalog.json.
+  Per-series IG/skip-YT-check approval Nov5 08:31:38, original WhatsApp
+  wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA.
+  Public YouTube remains held, zero spend, no paid unlocks.
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
