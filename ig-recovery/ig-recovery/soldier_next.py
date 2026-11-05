@@ -11,7 +11,7 @@ from public_verify import verify,GatedVerification
 from verified_upload import put_once_verified
 from scripts.part_cap import compute_parts,gate_measured
 B='reelsaga-relay-stage-71';OLD='reelsaga-private-staging-71';CH='6adb4d02778b240e2f9c6d48';ORG='6adb4a329ef1e740831f7879';BATCH='ig-soldier-batch-20261104'
-APPROVAL='PENDING_OWNER_APPROVAL_DO_NOT_PUBLISH'
+APPROVAL='wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA'
 def receipt(**kw):pathlib.Path('recovery-receipt.json').write_text(json.dumps(kw,indent=2))
 m=json.loads(pathlib.Path('soldier-prepared-catalog.json').read_text())
 require(not m.get('instagram_publishing_paused',m.get('publishing_paused',True)),'Instagram publication paused; no new upload or post')
