@@ -52,6 +52,8 @@ jobs:
 
           recovery-stop.json
 
+          buffer-rate-limit-receipt.json
+
           public-qa/verification-receipt.json
 
           public-qa/served-*.png
