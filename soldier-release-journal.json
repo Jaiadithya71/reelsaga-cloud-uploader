@@ -1,6 +1,57 @@
 {
  "title": "The Soldier's Journey Home",
- "entries": [],
- "approval_message": null,
- "status": "prepared_awaiting_owner_approval"
+ "entries": [
+  {
+   "id": "dramabox-soldier42000030015-ep1-part1-v1",
+   "episode": 1,
+   "part": 1,
+   "status": "public_verified_cleaned",
+   "buffer_post_id": "6aebf25ff283c8dd45b623ef",
+   "external_link": "https://www.instagram.com/reel/DfWBmWVD7tm/",
+   "actual_send_at": "2026-11-05T08:36:03.879+05:30",
+   "run": "41959164792",
+   "bytes": 59349833,
+   "sha256": "8cce31570e0711b9a00b635bf7e8b8cb51a7a3c0557f918bd99a13110ccca0d7",
+   "runner_bytes_match_qa": true,
+   "served": {
+    "shortcode": "DfWBmWVD7tm",
+    "width": 720,
+    "height": 1280,
+    "duration": 40.123,
+    "audio_present": true,
+    "decode_ok": true,
+    "frames": [
+     {
+      "seconds": 2.0,
+      "correlation": 0.998714788784238,
+      "mean_error": 1.827583912037037
+     },
+     {
+      "seconds": 10,
+      "correlation": 0.9996378252918969,
+      "mean_error": 0.9943417245370371
+     },
+     {
+      "seconds": 20.0615,
+      "correlation": 0.9988182602214605,
+      "mean_error": 1.2133579282407407
+     },
+     {
+      "seconds": 35.123,
+      "correlation": 0.9992024803686267,
+      "mean_error": 1.4372077546296296
+     }
+    ],
+    "cover": {
+     "correlation": 0.9988713583520384,
+     "mean_error": 2.2648148148148146
+    },
+    "status": "public_frame_and_cover_match"
+   }
+  }
+ ],
+ "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA",
+ "status": "publishing_1_of_26",
+ "series": "soldier",
+ "planned_parts": 26
 }
