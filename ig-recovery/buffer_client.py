@@ -1,5 +1,5 @@
 """No implicit retries. Mutation uncertainty is durable reconciliation work."""
-import json,urllib.request,urllib.error,pathlib,datetime
+import json,urllib.request,urllib.error,pathlib,datetime,email.utils
 class Uncertain(RuntimeError):pass
 class Rejected(RuntimeError):pass
 class Inventory(list):
@@ -7,11 +7,38 @@ class Inventory(list):
 class Buffer:
  def __init__(self,key):self.key=key;self._quota_blocked=False
  def gql(self,query,variables):
+  # A fresh process must not silently forget the last known provider cooldown.
+  cooldown=pathlib.Path(__file__).resolve().parent.parent/'buffer-api-cooldown.json'
+  if cooldown.exists():
+   try:
+    stop=json.loads(cooldown.read_text());until=datetime.datetime.fromisoformat(stop['not_before'].replace('Z','+00:00'))
+    if until.tzinfo is None:raise ValueError('Timezone missing')
+   except Exception:raise Rejected('Invalid saved Buffer cooldown; no API request')from None
+   if datetime.datetime.now(datetime.timezone.utc)<until:raise Rejected('Saved Buffer Retry-After active; no API request')
+  path=pathlib.Path('buffer-rate-limit-receipt.json')
+  if path.exists():
+   try:
+    events=json.loads(path.read_text())
+    for event in events:
+     if event.get('http_status')!=429:continue
+     raw=event.get('headers',{}).get('Retry-After')
+     if isinstance(raw,list):raw=raw[0]if raw else None
+     at=datetime.datetime.fromisoformat(event['at'].replace('Z','+00:00'))
+     if str(raw).isdigit():until=at+datetime.timedelta(seconds=int(raw))
+     else:until=email.utils.parsedate_to_datetime(raw)
+     if until.tzinfo is None:raise ValueError('Timezone missing')
+     if datetime.datetime.now(datetime.timezone.utc)<until:raise Rejected('Saved429 receipt cooldown active; no API request')
+   except Rejected:raise
+   except Exception:raise Rejected('Saved Buffer quota receipt unverifiable; no API request')from None
   if self._quota_blocked:raise Rejected('Prior429 in this process; no further API requests permitted')
   req=urllib.request.Request('https://api.buffer.com',data=json.dumps({'query':query,'variables':variables}).encode(),headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
   def evidence(response,body=None):
    # Never persist Authorization, cookies, response text, signed media URLs or keys.
-   headers={k:response.headers.get(k) for k in ('Retry-After','RateLimit','RateLimit-Policy') if response.headers.get(k) is not None}
+   headers={}
+   for k in ('Retry-After','RateLimit','RateLimit-Policy'):
+    values=response.headers.get_all(k)if hasattr(response.headers,'get_all')else None
+    if values:headers[k]=values if k!='Retry-After'else values[0]
+    elif response.headers.get(k)is not None:headers[k]=response.headers.get(k)
    windows=[]
    if isinstance(body,dict):
     for error in body.get('errors',[]):
@@ -34,7 +61,7 @@ class Buffer:
    if error.code==429:
     self._quota_blocked=True
     raise Rejected('Buffer rate limited; honor recorded Retry-After, no automatic retry')from None
-   raise Uncertain('No verified response; reconcile saved identity')from None
+   raise Uncertain('Buffer HTTP '+str(error.code)+'; reconcile saved identity, no automatic retry')from None
   except Exception:raise Uncertain('No verified response; reconcile saved identity')from None
   if d.get('errors'):raise Rejected('GraphQL rejected; no retry')
   return d['data']

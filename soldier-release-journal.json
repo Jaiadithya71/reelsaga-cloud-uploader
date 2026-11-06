@@ -1,105 +1,129 @@
 {
- "title": "The Soldier's Journey Home",
- "entries": [
-  {
-   "id": "dramabox-soldier42000030015-ep1-part1-v1",
-   "episode": 1,
-   "part": 1,
-   "status": "public_verified_cleaned",
-   "buffer_post_id": "6aebf25ff283c8dd45b623ef",
-   "external_link": "https://www.instagram.com/reel/DfWBmWVD7tm/",
-   "actual_send_at": "2026-11-05T08:36:03.879+05:30",
-   "run": "41959164792",
-   "bytes": 59349833,
-   "sha256": "8cce31570e0711b9a00b635bf7e8b8cb51a7a3c0557f918bd99a13110ccca0d7",
-   "runner_bytes_match_qa": true,
-   "served": {
-    "shortcode": "DfWBmWVD7tm",
-    "width": 720,
-    "height": 1280,
-    "duration": 40.123,
-    "audio_present": true,
-    "decode_ok": true,
-    "frames": [
-     {
-      "seconds": 2.0,
-      "correlation": 0.998714788784238,
-      "mean_error": 1.827583912037037
-     },
-     {
-      "seconds": 10,
-      "correlation": 0.9996378252918969,
-      "mean_error": 0.9943417245370371
-     },
-     {
-      "seconds": 20.0615,
-      "correlation": 0.9988182602214605,
-      "mean_error": 1.2133579282407407
-     },
-     {
-      "seconds": 35.123,
-      "correlation": 0.9992024803686267,
-      "mean_error": 1.4372077546296296
-     }
-    ],
-    "cover": {
-     "correlation": 0.9988713583520384,
-     "mean_error": 2.2648148148148146
+  "title": "The Soldier's Journey Home",
+  "entries": [
+    {
+      "id": "dramabox-soldier42000030015-ep1-part1-v1",
+      "episode": 1,
+      "part": 1,
+      "status": "public_verified_cleaned",
+      "buffer_post_id": "6aebf25ff283c8dd45b623ef",
+      "external_link": "https://www.instagram.com/reel/DfWBmWVD7tm/",
+      "actual_send_at": "2026-11-05T08:36:03.879+05:30",
+      "run": "41959164792",
+      "bytes": 59349833,
+      "sha256": "8cce31570e0711b9a00b635bf7e8b8cb51a7a3c0557f918bd99a13110ccca0d7",
+      "runner_bytes_match_qa": true,
+      "served": {
+        "shortcode": "DfWBmWVD7tm",
+        "width": 720,
+        "height": 1280,
+        "duration": 40.123,
+        "audio_present": true,
+        "decode_ok": true,
+        "frames": [
+          {
+            "seconds": 2.0,
+            "correlation": 0.998714788784238,
+            "mean_error": 1.827583912037037
+          },
+          {
+            "seconds": 10,
+            "correlation": 0.9996378252918969,
+            "mean_error": 0.9943417245370371
+          },
+          {
+            "seconds": 20.0615,
+            "correlation": 0.9988182602214605,
+            "mean_error": 1.2133579282407407
+          },
+          {
+            "seconds": 35.123,
+            "correlation": 0.9992024803686267,
+            "mean_error": 1.4372077546296296
+          }
+        ],
+        "cover": {
+          "correlation": 0.9988713583520384,
+          "mean_error": 2.2648148148148146
+        },
+        "status": "public_frame_and_cover_match"
+      }
     },
-    "status": "public_frame_and_cover_match"
-   }
-  },
-  {
-   "id": "dramabox-soldier42000030015-ep1-part2-v1",
-   "episode": 1,
-   "part": 2,
-   "status": "public_verified_cleaned",
-   "buffer_post_id": "6aec017375052a1eb81c89bd",
-   "external_link": "https://www.instagram.com/reel/DfWI9t-ile5/",
-   "actual_send_at": "2026-11-05T09:40:23.847+05:30",
-   "run": "41965908334",
-   "bytes": 56315987,
-   "sha256": "34c99196ed07e3010605aa8a9fc89d568d8a727e69a8e190a6191d980af00907",
-   "runner_bytes_match_qa": true,
-   "served": {
-    "shortcode": "DfWI9t-ile5",
-    "width": 720,
-    "height": 1280,
-    "duration": 40.588,
-    "audio_present": true,
-    "decode_ok": true,
-    "frames": [
-     {
-      "seconds": 2.0,
-      "correlation": 0.9983388552494072,
-      "mean_error": 2.288048321759259
-     },
-     {
-      "seconds": 10,
-      "correlation": 0.999481904248365,
-      "mean_error": 0.8863208912037037
-     },
-     {
-      "seconds": 20.294,
-      "correlation": 0.9994382094288231,
-      "mean_error": 1.4463208912037038
-     },
-     {
-      "seconds": 35.588,
-      "correlation": 0.9985632464178458,
-      "mean_error": 2.217643229166667
-     }
-    ],
-    "cover": {
-     "correlation": 0.9989645168353264,
-     "mean_error": 2.305015914351852
-    },
-    "status": "public_frame_and_cover_match"
-   }
-  }
- ],
- "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA",
- "status": "publishing_2_of_26",
- "series": "soldier",
- "planned_parts": 26
+    {
+      "id": "dramabox-soldier42000030015-ep1-part2-v1",
+      "episode": 1,
+      "part": 2,
+      "status": "public_verified_cleaned",
+      "buffer_post_id": "6aec017375052a1eb81c89bd",
+      "external_link": "https://www.instagram.com/reel/DfWI9t-ile5/",
+      "actual_send_at": "2026-11-05T09:40:23.847+05:30",
+      "run": "41965908334",
+      "bytes": 56315987,
+      "sha256": "34c99196ed07e3010605aa8a9fc89d568d8a727e69a8e190a6191d980af00907",
+      "runner_bytes_match_qa": true,
+      "served": {
+        "shortcode": "DfWI9t-ile5",
+        "width": 720,
+        "height": 1280,
+        "duration": 40.588,
+        "audio_present": true,
+        "decode_ok": true,
+        "frames": [
+          {
+            "seconds": 2.0,
+            "correlation": 0.9983388552494072,
+            "mean_error": 2.288048321759259
+          },
+          {
+            "seconds": 10,
+            "correlation": 0.999481904248365,
+            "mean_error": 0.8863208912037037
+          },
+          {
+            "seconds": 20.294,
+            "correlation": 0.9994382094288231,
+            "mean_error": 1.4463208912037038
+          },
+          {
+            "seconds": 35.588,
+            "correlation": 0.9985632464178458,
+            "mean_error": 2.217643229166667
+          }
+        ],
+        "cover": {
+          "correlation": 0.9989645168353264,
+          "mean_error": 2.305015914351852
+        },
+        "status": "public_frame_and_cover_match"
+      }
+    }
+  ],
+  "approval_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA",
+  "status": "2_fully_verified_plus_1_independently_observed_provider_reconciliation_pending",
+  "series": "soldier",
+  "planned_parts": 26,
+  "independent_instagram_confirmations": [
+    {
+      "id": "dramabox-soldier42000030015-ep2-part1-v1",
+      "status": "instagram_publication_observed_provider_mapping_pending",
+      "external_link": "https://www.instagram.com/reelsaga3000/reel/DfWQUDsFCEX/",
+      "instagram_posted_at": "2026-11-05T05:14:32Z",
+      "caption_timestamp": "2026-11-05T05:14:33Z",
+      "observed_at": "2026-11-06T21:30:55+05:30",
+      "account": "reelsaga3000",
+      "caption_title": "The Soldier's Journey Home | Episode 2 Part 1/2",
+      "ad_disclosure_present": true,
+      "ai_content_label_present": true,
+      "playback_observed": true,
+      "served_dimensions": [
+        720,
+        1280
+      ],
+      "served_duration_seconds": 44,
+      "exact_buffer_id_mapping_verified": false,
+      "served_original_frame_match_verified": false,
+      "audio_stream_verified": false,
+      "does_not_authorize_repost": true
+    }
+  ]
 }
