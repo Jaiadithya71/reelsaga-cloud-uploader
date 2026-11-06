@@ -162,7 +162,11 @@
       },
       "source_sha256": "4a7561df6173707ba640ca1b759af143531b5a257a3ed02ec87754c8a26a3507",
       "source_bytes": 58618023,
-      "media_qa_at": "2026-11-06T21:34:06+05:30"
+      "media_qa_at": "2026-11-06T21:34:06+05:30",
+      "relay_cleanup": "deleted_absence_verified",
+      "relay_cleanup_at": "2026-11-06T16:06:06Z",
+      "relay_cleanup_basis": "independent_publication_and_exact_served_source_qa",
+      "relay_original_deadline": "2026-11-11T08:34:31.879+05:30"
     }
   ]
 }
