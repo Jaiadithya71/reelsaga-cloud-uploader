@@ -39,3 +39,9 @@ The source relay for the unresolved post may remain staged; do not delete before
 No Buffer traffic, account change, spend, new upload or publication occurred in this investigation. Independent Instagram evidence is the first recovery fallback for an unknown write when available, without switching to Buffer UI to bypass its API restriction.
 
 A separate `ig-recovery/read_soldier_pending.py` is now available for that future exact-ID read. It accepts only the existing saved post/channel identities, calls `post` once, inherits cooldown checks, and has no mutation or ledger/host imports. It has NOT been run against Buffer. It is not wired to a scheduled workflow or an automatic retry.
+
+## Media QA follow-through21:34IST
+
+The current S3 original matched58618023bytes and SHA4a7561df6173707ba640ca1b759af143531b5a257a3ed02ec87754c8a26a3507. Normal public embed retrieval succeeded. Served duration44.117seconds,720x1280, audio present, full decode passed. Four source/served frame correlations0.99866–0.99916; cover0.99882; caption exact. Actual cover and four frames were visually inspected. Journal now records these checks. Exact Buffer-record mapping and full spoken-word certification remain unverified.
+
+Only one relay object currently exists, the original E2P1 uploaded November5 05:13:31Z. Exact encrypted batch deadline/host binding awaits access approval; no source object deleted. Conservative deadline-review checkpoint is November10 evening, before the code-derived six-day limit around November11 morning. Do not extend retention silently.

@@ -121,9 +121,48 @@
       ],
       "served_duration_seconds": 44,
       "exact_buffer_id_mapping_verified": false,
-      "served_original_frame_match_verified": false,
-      "audio_stream_verified": false,
-      "does_not_authorize_repost": true
+      "served_original_frame_match_verified": true,
+      "audio_stream_verified": true,
+      "does_not_authorize_repost": true,
+      "audio_verification_scope": "served audio stream present and full media decode; not spoken-word identity certification",
+      "served": {
+        "shortcode": "DfWQUDsFCEX",
+        "width": 720,
+        "height": 1280,
+        "duration": 44.117,
+        "audio_present": true,
+        "decode_ok": true,
+        "frames": [
+          {
+            "seconds": 2.0,
+            "correlation": 0.9986945527129283,
+            "mean_error": 1.7014250578703705
+          },
+          {
+            "seconds": 10,
+            "correlation": 0.9991614261034395,
+            "mean_error": 1.2175491898148147
+          },
+          {
+            "seconds": 22.0585,
+            "correlation": 0.998955893190283,
+            "mean_error": 1.3521397569444444
+          },
+          {
+            "seconds": 39.117,
+            "correlation": 0.9986642980650602,
+            "mean_error": 1.9470167824074074
+          }
+        ],
+        "cover": {
+          "correlation": 0.9988170637298934,
+          "mean_error": 2.1629340277777778
+        },
+        "status": "public_frame_and_cover_match"
+      },
+      "source_sha256": "4a7561df6173707ba640ca1b759af143531b5a257a3ed02ec87754c8a26a3507",
+      "source_bytes": 58618023,
+      "media_qa_at": "2026-11-06T21:34:06+05:30"
     }
   ]
 }
