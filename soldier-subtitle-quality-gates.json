@@ -36,12 +36,12 @@
       "publication_unknown": false,
       "candidate": {
         "source_sha256": "46158ac397a40080988e5af0d5c9c72cb5c27132da751ffdeb22ad01ef9baf0d",
-        "new_sha256": "55117efef0b4d97dbd5b531f19fbe1a484933639c37460a61fe1678a529aeb89",
-        "bytes": 47477199,
+        "new_sha256": "ffc5cc796bb60ac43a81fa9439946aa9acbd5da877afec1264a32919d0c6e4d1",
+        "bytes": 47473972,
         "audio_stream_sha256": "e170b08be18972a09706b43299088137d8c0992c8e8e7b7fbaa07d6a27a604b0",
         "audio_byte_exact": true,
         "timing": [
-          32.96,
+          33.0,
           34.4
         ],
         "text": "just two weeks after surgery.",
@@ -52,7 +52,7 @@
           100
         ],
         "duration": "42.520000",
-        "final_review": "corrected_line_audio_and_pixels_checked",
+        "final_review": "visual_boundary_overlap_fixed_not_audio_certified",
         "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog."
       }
     },
