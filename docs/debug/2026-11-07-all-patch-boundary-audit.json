@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-07",
+  "scope": "Fresh reproduction of all seven corrected renders, then exact boundary pixel checks for all eight patches. Not whole-part audio clearance.",
+  "new_visual_defects_fixed": [
+    "E3P1 patch onset32.96\u219233.00 prevents prior-line protrusion",
+    "E10P1 patch end46.48\u219246.50 covers last wrong-caption frame"
+  ],
+  "other_patches_no_protrusion_in_checked_frames": [
+    "E5P3",
+    "E6P1",
+    "E6P2 both patches",
+    "E7P1",
+    "E9P3"
+  ],
+  "E10P1": {
+    "new_sha256": "62abd05ba6c1b05ed0261a60c4cf3464a0bd265aff90273c0602b8da25e06466",
+    "old_sha256": "57be1c160e61bc915acabd5d91acda73383593bda954d8bd74e31f727cbd1750",
+    "bytes": 55383372,
+    "audio_byte_exact": true,
+    "metadata_preserved": {
+      "width": 1080,
+      "height": 1920,
+      "duration": "48.000000",
+      "nb_frames": "1200"
+    },
+    "decode_pass": true,
+    "tail_pixels_inspected": [
+      46.44,
+      46.48,
+      46.52
+    ]
+  },
+  "remaining": "All caption release hashes null. Independent word identity/full-dialogue synchronization still unresolved. No ordered publication skipped."
+}

@@ -257,13 +257,13 @@
     {
       "part": "ep10-part1",
       "source_sha256": "96344b9cfd2b9d156e2325cb7c9ffbe537119630586a1fe445fd2f6e69fc65f6",
-      "new_sha256": "57be1c160e61bc915acabd5d91acda73383593bda954d8bd74e31f727cbd1750",
-      "bytes": 55384732,
+      "new_sha256": "62abd05ba6c1b05ed0261a60c4cf3464a0bd265aff90273c0602b8da25e06466",
+      "bytes": 55383372,
       "audio_stream_sha256": "e81be0d3f281aa8ff86c03e69cedbb988aaa68276f3cad1f26ba55beb83ed1c8",
       "audio_byte_exact": true,
       "timing": [
         45.16,
-        46.48
+        46.5
       ],
       "text": "Oh, boo-hoo!",
       "rect": [
@@ -274,7 +274,8 @@
       ],
       "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
       "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
-      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
+      "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
+      "boundary_revision": "2026-11-07: extend through46.48 final old-caption frame; clear46.52; prevents old wording flashback. Visual boundary only, not acoustic certification."
     }
   ],
   "original_audio": "stream-copy; verify extracted AAC SHA256",
