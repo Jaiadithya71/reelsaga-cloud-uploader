@@ -1,11 +1,32 @@
 """No implicit retries. Mutation uncertainty is durable reconciliation work."""
-import json,urllib.request,urllib.error,pathlib,datetime,email.utils
+import json,urllib.request,urllib.error,pathlib,datetime,email.utils,re
 class Uncertain(RuntimeError):pass
 class Rejected(RuntimeError):pass
 class Inventory(list):
  complete=True
 class Buffer:
- def __init__(self,key):self.key=key;self._quota_blocked=False
+ def __init__(self,key):self.key=key;self._quota_blocked=False;self._requests=0
+ @staticmethod
+ def low_budget_until(event):
+  # Match a policy's quota/window to remaining/reset, not a hard-coded plan name.
+  def policies(value):
+   if isinstance(value,str):value=[value]
+   result={}
+   for line in value or []:
+    for match in re.finditer(r'"([^"\n]+)"\s*;([^"\n]*?)(?=,\s*"|$)',line):
+     fields=dict(re.findall(r'(?:^|;)\s*([qrtw])\s*=\s*(\d+)',match.group(2)))
+     result[match.group(1)]={k:int(v)for k,v in fields.items()}
+   return result
+  hs=event.get('headers',{});limits=policies(hs.get('RateLimit'));plans=policies(hs.get('RateLimit-Policy'))
+  at=datetime.datetime.fromisoformat(event['at'].replace('Z','+00:00'))
+  if at.tzinfo is None:raise ValueError('Quota receipt needs timezone')
+  until=[]
+  for name,v in limits.items():
+   p=plans.get(name,{})
+   if all(k in v for k in ('r','t'))and all(k in p for k in ('q','w'))and p['q']>0:
+    # Retain at least ten percent; never exhaust a budget to discover its boundary.
+    if v['r']*10<=p['q']:until.append(at+datetime.timedelta(seconds=v['t']))
+  return max(until)if until else None
  def gql(self,query,variables):
   # A fresh process must not silently forget the last known provider cooldown.
   cooldown=pathlib.Path(__file__).resolve().parent.parent/'buffer-api-cooldown.json'
@@ -20,7 +41,10 @@ class Buffer:
    try:
     events=json.loads(path.read_text())
     for event in events:
-     if event.get('http_status')!=429:continue
+     if event.get('http_status')!=429:
+      until=self.low_budget_until(event)
+      if until and datetime.datetime.now(datetime.timezone.utc)<until:raise Rejected('Saved API budget below ten percent; no further request before reset/review')
+      continue
      raw=event.get('headers',{}).get('Retry-After')
      if isinstance(raw,list):raw=raw[0]if raw else None
      at=datetime.datetime.fromisoformat(event['at'].replace('Z','+00:00'))
@@ -31,6 +55,8 @@ class Buffer:
    except Rejected:raise
    except Exception:raise Rejected('Saved Buffer quota receipt unverifiable; no API request')from None
   if self._quota_blocked:raise Rejected('Prior429 in this process; no further API requests permitted')
+  if self._requests>=25:raise Rejected('Per-run API request budget exhausted; no further requests')
+  self._requests+=1
   req=urllib.request.Request('https://api.buffer.com',data=json.dumps({'query':query,'variables':variables}).encode(),headers={'Authorization':'Bearer '+self.key,'Content-Type':'application/json'})
   def evidence(response,body=None):
    # Never persist Authorization, cookies, response text, signed media URLs or keys.
@@ -45,7 +71,7 @@ class Buffer:
      ext=error.get('extensions',{})
      windows.append({k:ext[k] for k in ('code','window') if isinstance(ext.get(k),(str,int,float))})
    path=pathlib.Path('buffer-rate-limit-receipt.json')
-   event={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'http_status':getattr(response,'status',getattr(response,'code',None)),'headers':headers,'errors':windows}
+   event={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'http_status':getattr(response,'status',getattr(response,'code',None)),'run_request_index':self._requests,'headers':headers,'errors':windows}
    prior=[]
    if path.exists():
     try:prior=json.loads(path.read_text())
