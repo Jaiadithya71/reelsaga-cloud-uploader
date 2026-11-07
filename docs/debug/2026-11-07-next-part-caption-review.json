@@ -1,0 +1,32 @@
+{
+  "reviewed_at": "2026-11-07T10:13:00+05:30",
+  "part": "ep2-part2",
+  "render_sha256": "09155eb03c9a6fab081cb2885844b308e632923476b8c902ea418f4bb95e9499",
+  "duration_seconds": 44.236,
+  "full_decode_pass": true,
+  "caption_line_pixels_inspected": [
+    "untouched-review/ep2-part2-0.jpg",
+    "untouched-review/ep2-part2-1.jpg"
+  ],
+  "caption_masking": "original masked profanity retained",
+  "source_video_audio_changed": false,
+  "body_comparison": "Visible caption lines from Chat you see that through priority seat agree in wording with archived original-audio transcript except ordinary contraction/number expansion; this is transcript/pixel agreement, not independent direct listening certification.",
+  "opening_ambiguity": {
+    "interval_seconds": [
+      0,
+      2.63
+    ],
+    "visible_captions": [
+      "Ma\u2019am, I hear what you\u2019re saying,",
+      "but I...",
+      "You\u2019re not hearing sh*t!"
+    ],
+    "source_transcript": "hear what you're saying, but I'm not hearing shit.",
+    "cause": "Overlapping interrupted turns merged by ASR. Forced alignment inherits supplied text and cannot decide speaker/pronoun identity.",
+    "decision": "Retain original audio and text; no guessed correction; release gate closed.",
+    "needed_evidence": "Direct intelligible playback judgment of the two interrupted turns, not another identical recognizer or forced alignment."
+  },
+  "release_ready": false,
+  "timing_certificate": false,
+  "no_skip_or_publish": true
+}

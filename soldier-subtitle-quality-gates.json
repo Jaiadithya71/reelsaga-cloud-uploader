@@ -2,7 +2,7 @@
   "schema": 1,
   "series": "soldier",
   "status": "held_quality_repair",
-  "publication_unknown_post": "6aec10813ddb81d22107892b",
+  "publication_unknown_post": null,
   "requirements": [
     "all_spoken_words_verified",
     "timing_verified",
@@ -15,13 +15,19 @@
       "status": "review_required",
       "approved_render_sha256": null,
       "original_render_sha256": "4a7561df6173707ba640ca1b759af143531b5a257a3ed02ec87754c8a26a3507",
-      "publication_unknown": true
+      "publication_unknown": false,
+      "publication_status": "independently_verified_public",
+      "public_url": "https://www.instagram.com/reelsaga3000/reel/DfWQUDsFCEX/",
+      "publication_evidence": "docs/debug/2026-11-06-buffer-investigation.md; soldier-release-journal.json independent_instagram_confirmations",
+      "provider_record_mapping_verified": false
     },
     "dramabox-soldier42000030015-ep2-part2-v1": {
-      "status": "review_required",
+      "status": "opening_interrupted_dialogue_word_identity_unresolved",
       "approved_render_sha256": null,
       "original_render_sha256": "09155eb03c9a6fab081cb2885844b308e632923476b8c902ea418f4bb95e9499",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "review_evidence": "docs/debug/2026-11-07-next-part-caption-review.json",
+      "whole_part_release_ready": false
     },
     "dramabox-soldier42000030015-ep3-part1-v1": {
       "status": "known_wording_fixed_final_review_pending",
@@ -218,5 +224,6 @@
       "original_render_sha256": "0feaff8a5560ff75f4ae8b8e49037f7e49f0f226d4c50fe2d4e152c5198c3e47",
       "publication_unknown": false
     }
-  }
+  },
+  "provider_record_mapping_pending_post": "6aec10813ddb81d22107892b"
 }
