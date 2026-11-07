@@ -30,11 +30,12 @@
       "whole_part_release_ready": false
     },
     "dramabox-soldier42000030015-ep3-part1-v1": {
-      "status": "known_wording_fixed_final_review_pending",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "46158ac397a40080988e5af0d5c9c72cb5c27132da751ffdeb22ad01ef9baf0d",
       "publication_unknown": false,
       "candidate": {
+        "part": "ep3-part1",
         "source_sha256": "46158ac397a40080988e5af0d5c9c72cb5c27132da751ffdeb22ad01ef9baf0d",
         "new_sha256": "ffc5cc796bb60ac43a81fa9439946aa9acbd5da877afec1264a32919d0c6e4d1",
         "bytes": 47473972,
@@ -52,9 +53,16 @@
           100
         ],
         "duration": "42.520000",
-        "final_review": "visual_boundary_overlap_fixed_not_audio_certified",
-        "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog."
-      }
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
+        "frame_count_preserved": true,
+        "decode_verified": true,
+        "source_profanity_masking_retained": true,
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+        "boundary_revision": "2026-11-07: moved onset32.96to33.00 to avoid prior two-line caption protrusion; frame32.96 original retained,33.00 new line,34.44 removed; no acoustic certification"
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep3-part2-v1": {
       "status": "review_required",
@@ -87,26 +95,75 @@
       "publication_unknown": false
     },
     "dramabox-soldier42000030015-ep5-part3-v1": {
-      "status": "review_required",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "b5c9ed679f6c071bb95afcaaa82a557c3a6a9302d6ee70c137f6dde7a5178f1e",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "candidate": {
+        "part": "ep5-part3",
+        "source_sha256": "b5c9ed679f6c071bb95afcaaa82a557c3a6a9302d6ee70c137f6dde7a5178f1e",
+        "new_sha256": "f663197213c8fca8fdfced8a95e24e38e8617196c5e625a440189a29ca29d2cc",
+        "bytes": 73520493,
+        "audio_stream_sha256": "8e1909594f0da51ac1e3e0568af9721aa5cefe0ade64bad18f0bd967d39548f3",
+        "audio_byte_exact": true,
+        "timing": [
+          34.24,
+          35.26
+        ],
+        "text": "Notify the hangar.",
+        "rect": [
+          300,
+          1350,
+          480,
+          100
+        ],
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep6-part1-v1": {
-      "status": "review_required",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "f4c1e8106bfaf49f3ef4a2e28c49b74d71c37b94c9c0f1578f9a8aa07199482e",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "candidate": {
+        "part": "ep6-part1",
+        "source_sha256": "f4c1e8106bfaf49f3ef4a2e28c49b74d71c37b94c9c0f1578f9a8aa07199482e",
+        "new_sha256": "dcfbe8c9f137660854cc725b22c30ac1f18391b51d404d6f91e58d0eb8c6296f",
+        "bytes": 55536295,
+        "audio_stream_sha256": "525b77875170e732466bd2e2d52052fbdd462f26b5f51953cb680492d2fbe987",
+        "audio_byte_exact": true,
+        "timing": [
+          25.26,
+          26.94
+        ],
+        "text": "He's the regional director\nof the Horton Group!",
+        "rect": [
+          170,
+          1340,
+          740,
+          165
+        ],
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep6-part2-v1": {
-      "status": "known_wording_fixed_final_review_pending",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "7eb8237913a923f1bd7d29400c7f13a29710b8851359565e8f13119f74cf2b02",
       "publication_unknown": false,
       "candidate": {
+        "part": "ep6-part2",
         "source_sha256": "7eb8237913a923f1bd7d29400c7f13a29710b8851359565e8f13119f74cf2b02",
-        "new_sha256": "3e6da84b04200a7e5fed863726dfc7f4c3cb9715e097ebb0fa9fdfa24ff4b6f0",
-        "bytes": 56322052,
+        "new_sha256": "87204c2dbd0180bab5dfd5c624ca3c6b8f7aed9c9b478ed045cfc7eb84375f1f",
+        "bytes": 56292835,
         "audio_stream_sha256": "2441afba2f9d025b314f062ab14a9789af15534284d92e0f85ef7278a13af239",
         "audio_byte_exact": true,
         "timing": [
@@ -121,15 +178,73 @@
           155
         ],
         "duration": "42.335000",
-        "final_review": "corrected_line_audio_and_pixels_checked",
-        "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog."
-      }
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
+        "frame_count_preserved": true,
+        "decode_verified": true,
+        "source_profanity_masking_retained": true,
+        "patches": [
+          {
+            "timing": [
+              19.4,
+              21.72
+            ],
+            "text": "Show them the kind of monster\nthat harasses old ladies!",
+            "rect": [
+              140,
+              1350,
+              800,
+              155
+            ]
+          },
+          {
+            "timing": [
+              28.64,
+              29.84
+            ],
+            "text": "but just let it go, okay?",
+            "rect": [
+              210,
+              1350,
+              660,
+              100
+            ]
+          }
+        ],
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain"
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep7-part1-v1": {
-      "status": "review_required",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "df7eb6ce8ab9a538de27748fe080d6a037aac5436b7d62f80a733af72a789920",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "candidate": {
+        "part": "ep7-part1",
+        "source_sha256": "df7eb6ce8ab9a538de27748fe080d6a037aac5436b7d62f80a733af72a789920",
+        "new_sha256": "7d544dbc1171819e6cb7bdf36b0f5c5f1b55e01d3a9d9459d68bc4f12490b5bc",
+        "bytes": 51040930,
+        "audio_stream_sha256": "4dd5b3407382f409761993246fff9d201090ae5c4470a0a03540c3c9df8e3c65",
+        "audio_byte_exact": true,
+        "timing": [
+          3.88,
+          5.72
+        ],
+        "text": "Oh, I'm feeling dizzy.",
+        "rect": [
+          280,
+          1350,
+          520,
+          100
+        ],
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep7-part2-v1": {
       "status": "review_required",
@@ -162,11 +277,12 @@
       "publication_unknown": false
     },
     "dramabox-soldier42000030015-ep9-part3-v1": {
-      "status": "known_wording_fixed_final_review_pending",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "8cb323a69b9b981610d371e1a206c1f99eebe73ada300950a59eca3dcf7ef77f",
       "publication_unknown": false,
       "candidate": {
+        "part": "ep9-part3",
         "source_sha256": "8cb323a69b9b981610d371e1a206c1f99eebe73ada300950a59eca3dcf7ef77f",
         "new_sha256": "6fc7f6590ba208e757f0c936a95c707dd4eaeb24e1b39efc8adea43f0bf84948",
         "bytes": 52089681,
@@ -184,15 +300,46 @@
           170
         ],
         "duration": "47.270000",
-        "final_review": "corrected_line_audio_and_pixels_checked",
-        "caveat": "Three confirmed wording defects corrected locally; full part every-word certification pending; not installed into publication catalog."
-      }
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
+        "frame_count_preserved": true,
+        "decode_verified": true,
+        "source_profanity_masking_retained": true,
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain"
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep10-part1-v1": {
-      "status": "review_required",
+      "status": "known_wording_fixed_full_part_review_pending",
       "approved_render_sha256": null,
       "original_render_sha256": "96344b9cfd2b9d156e2325cb7c9ffbe537119630586a1fe445fd2f6e69fc65f6",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "candidate": {
+        "part": "ep10-part1",
+        "source_sha256": "96344b9cfd2b9d156e2325cb7c9ffbe537119630586a1fe445fd2f6e69fc65f6",
+        "new_sha256": "62abd05ba6c1b05ed0261a60c4cf3464a0bd265aff90273c0602b8da25e06466",
+        "bytes": 55383372,
+        "audio_stream_sha256": "e81be0d3f281aa8ff86c03e69cedbb988aaa68276f3cad1f26ba55beb83ed1c8",
+        "audio_byte_exact": true,
+        "timing": [
+          45.16,
+          46.5
+        ],
+        "text": "Oh, boo-hoo!",
+        "rect": [
+          340,
+          1350,
+          400,
+          100
+        ],
+        "final_review": "bounded_patch_wording_pixels_and_timing_evidence_checked_not_whole_part_certificate",
+        "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
+        "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held.",
+        "boundary_revision": "2026-11-07: extend through46.48 final old-caption frame; clear46.52; prevents old wording flashback. Visual boundary only, not acoustic certification."
+      },
+      "whole_part_release_ready": false,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
     },
     "dramabox-soldier42000030015-ep10-part2-v1": {
       "status": "review_required",

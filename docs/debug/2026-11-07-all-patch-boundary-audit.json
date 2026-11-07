@@ -28,7 +28,9 @@
       46.44,
       46.48,
       46.52
-    ]
+    ],
+    "deterministic_helper_reproduced_exact_hash": true
   },
-  "remaining": "All caption release hashes null. Independent word identity/full-dialogue synchronization still unresolved. No ordered publication skipped."
+  "remaining": "All caption release hashes null. Independent word identity/full-dialogue synchronization still unresolved. No ordered publication skipped.",
+  "gate_candidate_records": "All seven synchronized to current recipe/catalog, every approved_render_sha256 remains null."
 }
