@@ -1,0 +1,55 @@
+name: YT video status read (read-only)
+on:
+  workflow_dispatch:
+    inputs:
+      video_id:
+        description: Video ID to read (snippet,status,processingDetails,contentDetails)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        sparse-checkout-cone-mode: false
+        sparse-checkout: '/*.py'
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python -m pip install cryptography==46.0.5
+    - name: Video status read
+      env:
+        REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
+        VIDEO_ID: ${{ inputs.video_id }}
+      run: |
+        cat > status_read.py <<'READ'
+        import os
+        from actions_canary import Store
+        from desktop_setup import CHANNEL,SCOPES
+        from provision_actions import validated_record
+        from credentials import GoogleCredentials
+        from transport import Transport,GoogleTokenForms
+        vid=os.environ.pop('VIDEO_ID','')
+        if not vid or not vid.replace('-','').replace('_','').isalnum():raise SystemExit('bad video id')
+        record=validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS',''))
+        credential=GoogleCredentials(Store(record),GoogleTokenForms(),SCOPES)
+        token=credential.access_token()
+        api=Transport(lambda:token,{'www.googleapis.com'})
+        identity=api('GET','https://www.googleapis.com/youtube/v3/channels',params={'part':'id','mine':'true'})
+        if identity.status!=200 or {x.get('id') for x in identity.data.get('items',[])}!={CHANNEL}:
+            print('STATUS_READ identity failure',identity.status);raise SystemExit(1)
+        r=api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status,processingDetails,contentDetails','id':vid})
+        rows=r.data.get('items',[]) if r.status==200 else []
+        if len(rows)!=1:print('STATUS_READ missing',r.status);raise SystemExit(1)
+        row=rows[0]
+        st=row.get('status',{});pd=row.get('processingDetails',{});cd=row.get('contentDetails',{})
+        print('STATUS_READ',{'id':vid,'channelId':row['snippet'].get('channelId'),'title':row['snippet'].get('title'),'privacyStatus':st.get('privacyStatus'),'uploadStatus':st.get('uploadStatus'),'failureReason':st.get('failureReason'),'rejectionReason':st.get('rejectionReason'),'license':st.get('license'),'licensedContent':cd.get('licensedContent'),'processingStatus':pd.get('processingStatus'),'processingFailureReason':pd.get('processingFailureReason')})
+        READ
+        python status_read.py
