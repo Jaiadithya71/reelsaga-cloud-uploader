@@ -30,12 +30,31 @@ not evidence of "not published".
 
 ## Active run
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
-  1/26 parts sent and served verified at 2026-11-05 08:36:03.879 IST.
+  3/26 parts public (E1P1, E1P2, E2P1; latest
+  https://www.instagram.com/reelsaga3000/reel/DfWQUDsFCEX/).
   11 supplied free episodes; ordered hourly no-skip run.
   Evidence: soldier-release-journal.json and soldier-prepared-catalog.json.
   Per-series IG/skip-YT-check approval Nov5 08:31:38, original WhatsApp
   wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMzQkMwRUJGMkM5RkQ2NEM4MUY1MTI5RENFOUNFREQA.
-  Public YouTube remains held, zero spend, no paid unlocks.
+  YouTube hold lifted Nov9 00:22:58 ("Yes and s",
+  wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFNTUyQUNCMDdBMTU2Q0U5QTVFNTQ5N0MwNkVBRDYA),
+  restart approved both lanes.
+  YT 3/26 parts public, all private-first probes with clean Studio claims,
+  >=30min spacing, signed-in playback verified on each:
+  E1P1 public 2026-11-09 02:02 IST
+  https://www.youtube.com/shorts/TwCni7ipeKs ;
+  E1P2 public 02:34 IST https://www.youtube.com/shorts/eqZxi4i5VaY ;
+  E2P1 public 03:21 IST https://www.youtube.com/shorts/dPCcGLXUzdQ .
+  Playlist https://www.youtube.com/playlist?list=PLD5vEa-35ZMU (Date
+  published oldest; 3 videos in story order). Late-claims recheck 03:21:
+  all three clean.
+  E2P2 private probe done (video BsS-sYfc9lg, claims clean) but PUBLIC
+  RELEASE HELD ON BOTH LANES: opening caption wording ("You're" vs "I'm"
+  not hearing sh*t!) unsettled - user question asked Nov8 20:48 remains
+  open; source-audio evidence strengthens "I'm" but is not independent
+  verification. Patched master (recipe ep2-part2) kept private/reversible.
+  Story-order ceiling: no E3+ public release until E2P2 resolves.
+  Zero spend, no paid unlocks.
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
