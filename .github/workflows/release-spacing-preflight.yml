@@ -22,5 +22,6 @@ jobs:
       env:
         REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
         REELSAGA_IG_READ_KEY: ${{ secrets.REELSAGA_IG_READ_KEY }}
+        REELSAGA_BUFFER_API_KEY: ${{ secrets.REELSAGA_BUFFER_API_KEY }}
         REELSAGA_IG_READER_URL: https://kathirvelan-boutique.vercel.app/api/instagram/reelsaga-reader
       run: python release_preflight.py
