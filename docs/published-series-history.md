@@ -39,8 +39,21 @@ not evidence of "not published".
   YouTube hold lifted Nov9 00:22:58 ("Yes and s",
   wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNFNTUyQUNCMDdBMTU2Q0U5QTVFNTQ5N0MwNkVBRDYA),
   restart approved both lanes.
+  Pacing rule (owner, WhatsApp 2026-11-01 22:16:22 IST: "Upload much slower
+  from now on, 1 per hour"; agent ack 22:16:31 "one post per hour, measured
+  from each actual post"): at most ONE ReelSaga public post per hour across
+  BOTH lanes, measured from the newest actual public post on either lane.
+  Executable guard: release_spacing.py + release_preflight.py +
+  .github/workflows/release-spacing-preflight.yml; tests
+  tests/test_release_spacing.py. No newer owner instruction narrows it
+  (user-message sweep Nov1-Nov9 2026-11-09).
+  CORRECTION 2026-11-09: the restart below applied a stale >=30min guard;
+  E1P1->E1P2 was +32min and E1P2->E2P1 +47min, breaching the 1/hour rule.
+  Posts stay public unchanged (deleting/reposting would not undo the
+  intervals); all future releases require >=60min from the newest actual
+  public post on either lane.
   YT 3/26 parts public, all private-first probes with clean Studio claims,
-  >=30min spacing, signed-in playback verified on each:
+  signed-in playback verified on each:
   E1P1 public 2026-11-09 02:02 IST
   https://www.youtube.com/shorts/TwCni7ipeKs ;
   E1P2 public 02:34 IST https://www.youtube.com/shorts/eqZxi4i5VaY ;
