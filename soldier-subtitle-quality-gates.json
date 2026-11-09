@@ -153,8 +153,8 @@
       }
     },
     "dramabox-soldier42000030015-ep5-part3-v1": {
-      "status": "known_wording_fixed_full_part_review_pending",
-      "approved_render_sha256": null,
+      "status": "reviewed_repair_approved",
+      "approved_render_sha256": "f663197213c8fca8fdfced8a95e24e38e8617196c5e625a440189a29ca29d2cc",
       "original_render_sha256": "b5c9ed679f6c071bb95afcaaa82a557c3a6a9302d6ee70c137f6dde7a5178f1e",
       "publication_unknown": false,
       "candidate": {
@@ -179,8 +179,15 @@
         "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
         "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
       },
-      "whole_part_release_ready": false,
-      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
+      "whole_part_release_ready": true,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json",
+      "review": {
+        "reviewed_at": "2026-11-09T23:31:00+05:30",
+        "method": "byte-exact base and patched render; audio stream byte-exact; full base.en transcript + targeted 0-7,7-12,38-end passes vs 4fps subtitle-band OCR; pixel review opening/card gaps and patch",
+        "coverage": "All 16 spoken cards covered including No at 13s and Notify the hangar at 34.24-35.26; music-only tail 38-end. ASR deaths vs source debts is recognizer error, source card correct.",
+        "visual_evidence": "docs/debug/e5p3-contact.png",
+        "repair": "Notify the hangar. only, existing recipe f6631972; no new changes"
+      }
     },
     "dramabox-soldier42000030015-ep6-part1-v1": {
       "status": "known_wording_fixed_full_part_review_pending",
