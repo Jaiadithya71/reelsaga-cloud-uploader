@@ -203,8 +203,9 @@ not evidence of "not published".
   assert (85.018 was Episode3's; Episode4.mp4 is 75.46s, fixed
   ad4e867), run 42598177580 raced an unlanded push (masked SSH
   failure; see docs/studio-write-verification.md push guard).
-  Ledger reconcile to published via workflow pending (claim held
-  from failed run 42601314865). Next-post floor (both lanes):
+  Ledger reconciled to published (run 42605006857 success,
+  reconcile-soldier-ep4p1-yt-public; pre-state private_locked with
+  external_id already oN2vHr4iQgU). Next-post floor (both lanes):
   >=17:20:31 IST (60min after exact YT actual 16:20:31).
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
