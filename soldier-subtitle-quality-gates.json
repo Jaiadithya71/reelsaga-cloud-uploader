@@ -92,10 +92,24 @@
    }
   },
   "dramabox-soldier42000030015-ep4-part2-v1": {
-   "status": "review_required",
-   "approved_render_sha256": null,
+   "status": "reviewed_clean_approved",
+   "approved_render_sha256": "7e70728538ad5bc81f89b7ed90f390c01884bf7f0743eda8bd132c16e05627a4",
    "original_render_sha256": "7e70728538ad5bc81f89b7ed90f390c01884bf7f0743eda8bd132c16e05627a4",
-   "publication_unknown": false
+   "publication_unknown": false,
+   "review": {
+    "reviewed_at": "2026-11-09T16:52+05:30",
+    "method": "staging artifact render (run 42605435360, decrypted, byte-exact to pin 56666236/7e7072) reviewed: full-part audio transcription (faster-whisper base.en, plus targeted window re-passes where the first pass skipped overlapping speakers) vs subtitle-band OCR at 4fps; ambiguous/low-confidence cards confirmed in actual pixels; timing alignment checked against transcript windows; phone readability spot-checked",
+    "result": "all spoken words covered; caption wording matches audio exactly; no wording defects found; timing aligned; readable. Meme/comment overlays (e.g. 'Bro is so chopped!', karma comment) are source content, not subtitles.",
+    "suspect_spots_visually_confirmed": [
+     "opening narration card '...is to help you stand...' ~1s matches audio",
+     "'you could have just asked.' ~15.25s (OCR mangled could/would; pixels confirm 'could', matches audio)",
+     "'So I have a right to tell you to piss off.' ~21s matches audio",
+     "'Now leave me alone before I call the cops.' ~23s matches audio",
+     "'Call the cops?' ~30.25s matches audio"
+    ],
+    "audio_unchanged": "plain cut+fade re-render, byte-exact to catalog pin 56666236/7e7072; no overlay applied",
+    "caveat": "4fps OCR sampling with pixel confirmation of weak spots and whisper window re-passes; not a frame-perfect certification"
+   }
   },
   "dramabox-soldier42000030015-ep5-part1-v1": {
    "status": "review_required",
