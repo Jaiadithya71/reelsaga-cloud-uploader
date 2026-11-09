@@ -126,6 +126,22 @@ not evidence of "not published".
   sha check passed in-runner).
   Story-order ceiling: no E3+ public release until E2P2 resolves.
   Zero spend, no paid unlocks.
+  IG lane: E3P2 PUBLIC 2026-11-09 12:52:50 IST (IG 6/26):
+  https://www.instagram.com/reelsaga3000/reel/DfgyHpNGZP6/ via
+  SocialChamp Bulk CSV (Tigris presigned <=3h, keys xfer/e3p2.mp4 +
+  xfer/e3p2-cover.jpg deleted after landing; bucket xfer/ verified
+  empty). Scheduled 12:51 (floor: YT actual 11:49:37 + 60min =
+  12:49:37). Verified live (taken_at=1794208970 = 12:52:50 IST,
+  page time element 2026-11-09T07:22:50Z): AI-content label visible
+  under username, caption verified on live reel (Ad, hook, Episode 3
+  Part 2/2, affiliate champ.ly/XGRsxm9N -> 302 r.reelsgo.tv/GFBBQsIQ1FBz,
+  hashtags), cover = real 2s frame, playback OK (video readyState 4,
+  frames advancing). Composer switches persisted post-save re-open
+  [Feed=true, Trial=false, MobileNotif=false, AI-generated=true].
+  Next-post floor (both lanes): >=13:52:50 IST (60min after exact
+  IG actual 12:52:50). Repair boundary respected: subtitle overlay
+  only; footage and original audio untouched (pin-verified byte-exact
+  57516662 bytes sha eb6567e6).
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
