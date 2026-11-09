@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
+    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core >/dev/null
     - name: Re-render EP3P1 (repaired), verify pinned shas, encrypt
       env:
         PUB: ${{ inputs.gpg_pub }}
@@ -45,6 +46,9 @@ jobs:
         Path('line-0.txt').write_text("just two weeks after surgery.")
         subprocess.run(['ffmpeg','-v','error','-threads','2','-i','p1base.mp4','-vf',"drawbox=x=200:y=1360:w=680:h=100:color=black:t=fill:enable='between(t,33.0,34.4)',drawtext=fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf:textfile=line-0.txt:fontcolor=white:fontsize=46:borderw=2:bordercolor=black:line_spacing=9:x=(w-text_w)/2:y=1372:enable='between(t,33.0,34.4)'",'-c:v','libx264','-threads:v','2','-preset','ultrafast','-crf','18','-c:a','copy','-movflags','+faststart','-y','p1.mp4'],check=True)
         subprocess.run(['ffmpeg','-v','error','-i','p1.mp4','-f','null','-'],check=True)
+        _a1=hashlib.sha256(subprocess.check_output(['ffmpeg','-v','error','-i','p1base.mp4','-map','0:a:0','-c','copy','-f','adts','-'])).hexdigest()
+        _a2=hashlib.sha256(subprocess.check_output(['ffmpeg','-v','error','-i','p1.mp4','-map','0:a:0','-c','copy','-f','adts','-'])).hexdigest()
+        if _a1!=_a2 or _a2!='e170b08be18972a09706b43299088137d8c0992c8e8e7b7fbaa07d6a27a604b0':raise RuntimeError('Audio stream changed by repair; fail closed')
         rb=Path('p1.mp4').read_bytes();hs=hashlib.sha256(rb).hexdigest()
         print('EP3P1_BYTES '+str(len(rb)),flush=True);print('EP3P1_SHA256 '+hs,flush=True)
         if len(rb)!=47473972 or hs!='ffc5cc796bb60ac43a81fa9439946aa9acbd5da877afec1264a32919d0c6e4d1':raise SystemExit('Re-render mismatch - NOT byte-identical to probe-pinned part, stop')
