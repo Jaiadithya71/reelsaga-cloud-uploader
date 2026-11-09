@@ -30,8 +30,8 @@ not evidence of "not published".
 
 ## Active run
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
-  11/26 parts public (E1P1..E5P3; latest
-  https://www.instagram.com/reelsaga3000/reel/DfiBsuZHM_t/).
+  12/26 parts public (E1P1..E6P1; latest
+  https://www.instagram.com/reel/DfiQYFvCO0w/).
   11 supplied free episodes; ordered hourly no-skip run.
   Evidence: soldier-release-journal.json and soldier-prepared-catalog.json.
   Per-series IG/skip-YT-check approval Nov5 08:31:38, original WhatsApp
@@ -363,6 +363,23 @@ not evidence of "not published".
   f6631972 audio unchanged; commit35446ad. Private probe42670317343.
   Reconcile workflow reconcile-soldier-ep5p3-yt-public.
   Next floor02:33:09 IST; YT4h boundary05:33:09 IST Nov10.
+
+  E6P1 both lanes published (12/26), Nov10:
+  IG provider-confirmed Sent/isPosted=true, postId18035971358880221,
+  https://www.instagram.com/reel/DfiQYFvCO0w/ . EXACT IG TIME
+  UNVERIFIED. Scheduled02:35 is not actual; progress02:35:02.912
+  is not publication. Sent observed02:45:06 bounds actual<=02:45:06.
+  Parent accepted conservative release03:46. Instagram blank/429:
+  traffic stopped, no direct label/cover/playback assertion.
+  Provider flags AI=true FEED pushNotification=false persisted.
+  YT https://www.youtube.com/watch?v=tPe4KltDB98 actual03:50:21IST
+  (publishDate2026-11-09T14:20:21-08:00), >=65m15s after upper
+  bound IG publication. Claims clear; Save/toast/reloadUndoDisabled,
+  anonymousOK and playlist12 in story order verified. Prior YT gap
+  2h17m12s. Gate repaired pin dcfbe8c9 audio unchanged, commit52e605a.
+  Probe42671287911 attempt2success; first prejob GitHub error.
+  Reconcile workflow reconcile-soldier-ep6p1-yt-public.
+  Next floor04:50:21IST, YT boundary07:50:21IST Nov10.
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
