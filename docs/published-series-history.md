@@ -30,8 +30,8 @@ not evidence of "not published".
 
 ## Active run
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
-  3/26 parts public (E1P1, E1P2, E2P1; latest
-  https://www.instagram.com/reelsaga3000/reel/DfWQUDsFCEX/).
+  8/26 parts public (E1P1..E4P2; latest
+  https://www.instagram.com/reelsaga3000/reel/DfhSkrZjWxe/).
   11 supplied free episodes; ordered hourly no-skip run.
   Evidence: soldier-release-journal.json and soldier-prepared-catalog.json.
   Per-series IG/skip-YT-check approval Nov5 08:31:38, original WhatsApp
@@ -52,7 +52,7 @@ not evidence of "not published".
   Posts stay public unchanged (deleting/reposting would not undo the
   intervals); all future releases require >=60min from the newest actual
   public post on either lane.
-  YT 3/26 parts public, all private-first probes with clean Studio claims,
+  YT 8/26 parts public, all private-first probes with clean Studio claims,
   signed-in playback verified on each:
   E1P1 public 2026-11-09 02:02 IST
   https://www.youtube.com/shorts/TwCni7ipeKs ;
@@ -207,6 +207,52 @@ not evidence of "not published".
   reconcile-soldier-ep4p1-yt-public; pre-state private_locked with
   external_id already oN2vHr4iQgU). Next-post floor (both lanes):
   >=17:20:31 IST (60min after exact YT actual 16:20:31).
+
+  IG lane: E4P2 PUBLIC 2026-11-09 17:35:38 IST (IG 8/26):
+  https://www.instagram.com/reelsaga3000/reel/DfhSkrZjWxe/ via
+  SocialChamp Bulk CSV (Tigris presigned <=3h SigV4, xfer/e4p2.mp4
+  + xfer/e4p2-cover.jpg; deleted after landing, xfer/ empty).
+  Scheduled 17:35 (floor: YT actual 16:20:31 + 60min = 17:20:31).
+  Subtitle gate: per-part check done (full faster-whisper base.en
+  + targeted window re-passes vs OCR band fps=4 crop=880:320:100:1300,
+  weak spots pixel-confirmed: "you could have just asked." ~15.25s,
+  "So I have a right to tell you to piss off." ~21s, "Now leave me
+  alone before I call the cops." ~23s, "Call the cops?" ~30.25s),
+  soldier-subtitle-quality-gates.json ep4-part2 approved (b4d813c),
+  render pin byte-exact (56666236 bytes sha 7e707285). Verified live:
+  page time element 2026-11-09T12:05:38Z = 17:35:38 IST, AI-content
+  label visible under username, caption verified on live reel (Ad,
+  hook, Episode 4 Part 2/2, affiliate champ.ly/XGRsxm9N -> 302
+  r.reelsgo.tv/GFBBQsIQ1FBz, hashtags), cover = real 2s frame.
+  Composer switches persisted [Feed=true, Trial=false,
+  MobileNotif=false, AI-generated=true].
+  Next-post floor (both lanes): >=18:35:38 IST (60min after exact
+  IG actual 17:35:38).
+  YT lane: E4P2 PUBLIC 2026-11-09 18:39:17 IST (YT 8/26):
+  https://www.youtube.com/shorts/45e9Iihtigs (publishDate
+  2026-11-09T05:09:17-08:00). Recovery path, no re-upload: probe run
+  42608982839 uploaded the private video then failed closed at the
+  playlist-add step. Root cause DIAGNOSED via sanitized-reason
+  diagnostic (run 42615266141): playlistItems.insert deterministically
+  403 insufficientPermissions - the upload-queue OAuth grant scopes
+  are youtube.upload + youtube.readonly only; playlist writes need
+  auth/youtube(/force-ssl). Decision (main, 17:51): keep Studio UI
+  playlist add at flip time; no OAuth widening; probe generator to
+  skip API playlist add and report upload success explicitly.
+  Pre-flip evidence: ledger read-only run 42611229459 state
+  private_locked external_id 45e9Iihtigs resume=do_not_create;
+  Studio exactly one E4P2 video, Private, correct metadata, Notices
+  clean; video processing succeeded. Playlist PLD5vEa-35ZMU add +
+  Public flip committed 18:38-18:39 via two-stage Studio write,
+  verified per docs/studio-write-verification.md: "Changes saved"
+  toast + reload (Visibility Public, playlist chip persisted, Undo
+  changes disabled), anonymous playabilityStatus OK, oembed 200.
+  Playlist page verified = 8 videos E1P1..E4P2 story order.
+  60-min floor respected: IG actual 17:35:38 -> 18:39:17 = 63m39s.
+  Ledger reconciled to published (run 42623185224 success,
+  reconcile-soldier-ep4p2-yt-public). Next-post floor (both lanes):
+  >=19:39:17 IST (60min after exact YT actual 18:39:17); YT 4h
+  boundary 22:39:17.
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.

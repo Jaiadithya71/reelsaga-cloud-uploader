@@ -24,6 +24,24 @@ thumbnail, audience):
    verification method named. A screenshot showing an enabled "Undo changes"
    button is proof of an UNCOMMITTED state, not of success.
 
+## Probe playlist-add pattern (added 2026-11-09 after 403 diagnosis)
+
+playlistItems.insert requires the auth/youtube(/force-ssl) scope; the
+upload-queue grant carries only youtube.upload + youtube.readonly, so the
+API playlist add deterministically fails 403 insufficientPermissions
+(diagnostic run 42615266141, 5/5). Decision (main 2026-11-09 17:51):
+no OAuth widening. Probe scripts therefore:
+
+1. Never call playlistItems.insert. Playlist membership is set at the
+   Studio flip closeout (video-edit Playlists dialog + page Save) and
+   verified per rules 2-4 above on every flip.
+2. Checkpoint ready_for_review after a verified private upload and print
+   an explicit upload success result with playlist_pending set.
+3. On rerun, a channel title hit with a matching ledger record
+   (private_locked/ready_for_review/published) prints an explicit
+   already_uploaded result and exits 0; a title hit WITHOUT ledger proof
+   still fails closed (reconcile only).
+
 ## Push and dispatch verification (added 2026-11-09 after masked-push incident)
 
 A push is not done until read back from the remote:
