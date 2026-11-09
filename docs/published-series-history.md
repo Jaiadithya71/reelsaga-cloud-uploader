@@ -142,6 +142,23 @@ not evidence of "not published".
   IG actual 12:52:50). Repair boundary respected: subtitle overlay
   only; footage and original audio untouched (pin-verified byte-exact
   57516662 bytes sha eb6567e6).
+  YT lane: E3P2 PUBLIC 2026-11-09 13:56:44 IST (YT 6/26):
+  https://www.youtube.com/shorts/z-_m8dmdtg8 (publishDate
+  2026-11-09T00:26:44-08:00). Probe run 42582482305 success (full
+  channel inventory 457 checked, no duplicate part, stop-control
+  readback verified). Claims CLEAN re-verified immediately before flip
+  (13:30 and 13:55:35, "No claims were found in this video"). Flip
+  committed 13:56 via two-stage Studio write (visibility dialog Public
+  + Done stages; page-level Save commits) and verified per
+  docs/studio-write-verification.md: saved toast + reload (Undo changes
+  disabled), anonymous playabilityStatus OK (calibration: private =
+  LOGIN_REQUIRED), signed-OUT playback on no-login profile advancing
+  (0 -> 2.43s, dur 42.5). 60-min floor respected: IG actual 12:52:50
+  -> 13:56:44 = 63m54s. Playlist PLD5vEa-35ZMU: video was NOT
+  auto-added by the probe upload; added via video-edit Playlists
+  dialog + page Save, verified on the playlist page = 6 videos in
+  story order (E1P1..E3P2). Next-post floor (both lanes): >=14:56:44
+  IST (60min after exact YT actual 13:56:44).
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
