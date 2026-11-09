@@ -86,6 +86,28 @@ not evidence of "not published".
   auto-shortened champ.ly -> 302 to r.reelsgo.tv/GFBBQsIQ1FBz, correct),
   playback advancing (44.2s). 60-min cross-lane guard kept (YT 08:35 ->
   IG 09:35).
+  YT lane: E3P1 PRIVATE 2026-11-09 ~09:50 IST (video CYAKA8ESnC0, item
+  ep3-part1-v1, pinned repaired render sha ffc5cc796bb6...c6e4d1,
+  47473972 bytes; caption-defect repair under user repair authority
+  2026-11-05 14:16 IST, observation-verified). Probe run 42561023158
+  success on ubuntu-22.04 (ffmpeg-version-sensitive pins; 24.04 ffmpeg
+  6.x produces different x264 bytes - staging pinned to 22.04).
+  Studio claims check pending; public flip earliest >=60min after the
+  latest actual post and only with clean claims + preflight.
+  IG lane: E3P1 PUBLIC 2026-11-09 10:37:11 IST (IG 5/26):
+  https://www.instagram.com/reelsaga3000/reel/DfgipZhDdCr/ via
+  SocialChamp Bulk CSV (Tigris presigned <=3h, keys deleted after
+  landing; bucket xfer/ empty). Scheduled 10:36 (moved +1min from 10:35:
+  exact E2P2 actual taken_at=1794197150 = 09:35:50 IST, so 10:35:00
+  would have shortened the 60-min floor to 59m10s). Verified live
+  (taken_at=1794200831 = 10:37:11 IST): AI-content label ON, caption
+  verified in composer and on live reel (Ad, hook, Episode 3 Part 1/2,
+  affiliate champ.ly/XGRsxm9N -> 302 r.reelsgo.tv/GFBBQsIQ1FBz,
+  hashtags), cover = real frame, playback advancing (42.52s duration,
+  currentTime 6.75->9.25). Next-post floor: >=11:37:11 IST (60min after
+  exact actual). Repair boundary respected: only 33.0-34.4s caption
+  overlay; footage and original audio untouched (audio-preservation
+  sha check passed in-runner).
   Story-order ceiling: no E3+ public release until E2P2 resolves.
   Zero spend, no paid unlocks.
 
