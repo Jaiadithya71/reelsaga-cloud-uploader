@@ -94,6 +94,22 @@ not evidence of "not published".
   6.x produces different x264 bytes - staging pinned to 22.04).
   Studio claims check pending; public flip earliest >=60min after the
   latest actual post and only with clean claims + preflight.
+  YT lane: E3P1 PUBLIC 2026-11-09 11:49:37 IST (YT 5/26):
+  https://www.youtube.com/shorts/CYAKA8ESnC0 (publishDate
+  2026-11-08T22:19:37-08:00). Claims re-verified clean immediately
+  before flip. Signed-in playback verified (0.27->2.77s, dur 42.56);
+  signed-OUT playback verified on a no-login browser profile
+  (0.24->2.74s). Flip commit required the page-level Save after the
+  visibility dialog (Done alone stages only); verified via anonymous
+  playabilityStatus OK (calibrated: private = LOGIN_REQUIRED).
+  60-min floor respected: IG actual 10:37:11 -> 11:49:37 = 72m26s.
+  CORRECTION: E2P2 (x-7dMTTpUns) was found ABSENT from playlist
+  PLD5vEa-35ZMU during the E3P1 flip (the 08:39 playlist-add had a
+  visible "Undo changes" dirty state in its proof screenshot; the add
+  never committed). Re-added and saved 11:52; playlist verified at 5
+  videos (E1P1, E1P2, E2P1, E2P2, E3P1), sort Date published oldest.
+  Next-post floor (both lanes): >= 12:49:37 IST (60min after exact
+  YT actual 11:49:37).
   IG lane: E3P1 PUBLIC 2026-11-09 10:37:11 IST (IG 5/26):
   https://www.instagram.com/reelsaga3000/reel/DfgipZhDdCr/ via
   SocialChamp Bulk CSV (Tigris presigned <=3h, keys deleted after
