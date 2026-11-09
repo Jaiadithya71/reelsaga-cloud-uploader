@@ -90,52 +90,13 @@ def instagram_last_public_graph(record):
     return datetime.datetime.fromisoformat(newest)
 
 
-BUFFER_ORG = '6adb4a329ef1e740831f7879'
-BUFFER_CHANNEL = '6adb4d02778b240e2f9c6d48'
-
-
-def instagram_last_public_buffer():
-    """Fallback: last SENT post time on the ReelSaga IG channel via Buffer.
-
-    Covers Buffer-published posts only; SocialChamp-published posts would not
-    appear here (none exist as of 2026-11-09 - queue verified empty)."""
-    import urllib.request
-    key = os.environ.pop('REELSAGA_BUFFER_API_KEY', '')
-    if not key:
-        raise RuntimeError('Buffer API key missing')
-    q = ('query($input:PostsInput!){posts(input:$input,first:100){edges{node{id status sentAt}}}}')
-    body = json.dumps({'query': q, 'variables': {'input': {
-        'organizationId': BUFFER_ORG,
-        'filter': {'channelIds': [BUFFER_CHANNEL], 'status': ['sent']}}}}).encode()
-    req = urllib.request.Request('https://api.buffer.com', data=body, headers={
-        'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
-    with urllib.request.urlopen(req, timeout=90) as response:
-        data = json.loads(response.read(2 * 1024 * 1024 + 1))
-    if data.get('errors'):
-        raise RuntimeError('Buffer read rejected')
-    sent = [e['node']['sentAt'] for e in data['data']['posts']['edges']
-            if e['node'].get('status') == 'sent' and e['node'].get('sentAt')]
-    if not sent:
-        return None  # verified: no sent posts on the channel
-    newest = max(sent)
-    return datetime.datetime.fromisoformat(newest.replace('Z', '+00:00'))
-
-
-def instagram_last_public():
-    try:
-        return instagram_last_public_graph(instagram_read_token()), 'graph_reader'
-    except Exception as graph_error:
-        last = instagram_last_public_buffer()
-        return last, 'buffer_fallback (graph reader error: %s)' % graph_error
-
-
 def main():
     record = validated_record(os.environ.pop('REELSAGA_GOOGLE_CREDENTIALS', ''))
     credential = GoogleCredentials(Store(record), GoogleTokenForms(), SCOPES)
     token = credential.access_token()
     api = Transport(lambda: token, {'www.googleapis.com'})
     yt_last = youtube_last_public(api)
-    ig_last, ig_source = instagram_last_public()
+    ig_last = instagram_last_public_graph(instagram_read_token())
     now = datetime.datetime.now(datetime.timezone.utc)
     decision = require_release(now, {'youtube': yt_last, 'instagram': ig_last})
     out = {
@@ -143,7 +104,6 @@ def main():
         'checked_at': now.isoformat(),
         'youtube_last_public': yt_last.isoformat() if yt_last else None,
         'instagram_last_public': ig_last.isoformat() if ig_last else None,
-        'instagram_source': ig_source,
         'newest_lane': decision['newest_lane'],
         'earliest': decision['earliest'].isoformat() if decision['earliest'] else None,
     }
