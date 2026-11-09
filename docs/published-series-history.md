@@ -77,8 +77,15 @@ not evidence of "not published".
   Playlist https://www.youtube.com/playlist?list=PLD5vEa-35ZMU (Date
   published oldest; 4 videos in story order). Late-claims recheck 03:21:
   all three clean.
-  IG lane: E2P2 approved-version release in progress via SocialChamp
-  bulk route (60min shared guard: earliest 09:35 IST after the YT flip).
+  IG lane: E2P2 PUBLIC 2026-11-09 09:35 IST (IG 4/26):
+  https://www.instagram.com/reelsaga3000/reel/Dfgbo9DAF3j/ via
+  SocialChamp Bulk CSV (link-referenced media from Tigris presigned <=3h,
+  deleted after landing; bucket clean). Same approved ORIGINAL render as
+  YT. Verified live: AI-content label ON, Show-on-Feed ON, cover = real
+  frame (not black), caption template matches E2P1 (affiliate link
+  auto-shortened champ.ly -> 302 to r.reelsgo.tv/GFBBQsIQ1FBz, correct),
+  playback advancing (44.2s). 60-min cross-lane guard kept (YT 08:35 ->
+  IG 09:35).
   Story-order ceiling: no E3+ public release until E2P2 resolves.
   Zero spend, no paid unlocks.
 
