@@ -183,6 +183,29 @@ not evidence of "not published".
   save only after the upload completes and read the toast text.
   Next-post floor (both lanes): >=16:00:41 IST (60min after exact
   IG actual 15:00:41).
+  YT lane: E4P1 PUBLIC 2026-11-09 16:20:31 IST (YT 7/26):
+  https://www.youtube.com/shorts/oN2vHr4iQgU (publishDate
+  2026-11-09T02:50:31-08:00). Recovery path, no re-upload: probe run
+  42601314865 uploaded the private video then failed at playlist add
+  (safe-failure scrubbed the step; instrumented re-run 42603076713
+  proved the duplicate guard fail-closed: "Existing episode part,
+  reconcile only", ledger resume do_not_create). Studio evidence:
+  exactly one E4P1 video, Private, correct metadata, Claims CLEAN
+  ("No claims were found in this video"). Playlist PLD5vEa-35ZMU add
+  via video-edit Playlists dialog + page Save (committed 16:19,
+  reload-verified chip persisted, Undo changes disabled). Flip Public
+  16:20:31 via two-stage Studio write, verified per
+  docs/studio-write-verification.md: "Changes saved" toast + reload
+  (Visibility Public, Undo disabled), anonymous playabilityStatus OK,
+  oembed 200. Playlist page verified = 7 videos E1P1..E4P1 story
+  order. 60-min floor respected: IG actual 15:00:41 -> 16:20:31 =
+  79m50s. Earlier probe failures: run 42595396867 stale duration
+  assert (85.018 was Episode3's; Episode4.mp4 is 75.46s, fixed
+  ad4e867), run 42598177580 raced an unlanded push (masked SSH
+  failure; see docs/studio-write-verification.md push guard).
+  Ledger reconcile to published via workflow pending (claim held
+  from failed run 42601314865). Next-post floor (both lanes):
+  >=17:20:31 IST (60min after exact YT actual 16:20:31).
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.
