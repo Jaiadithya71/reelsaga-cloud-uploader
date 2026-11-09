@@ -253,6 +253,66 @@ not evidence of "not published".
   reconcile-soldier-ep4p2-yt-public). Next-post floor (both lanes):
   >=19:39:17 IST (60min after exact YT actual 18:39:17); YT 4h
   boundary 22:39:17.
+  IG lane: E5P1 PUBLIC 2026-11-09 20:02:03 IST (IG 9/26):
+  https://www.instagram.com/reelsaga3000/reel/DfhjOayCFh5/ via
+  SocialChamp Bulk CSV (Tigris presigned <=3h SigV4,
+  xfer/dramabox-soldier42000030015-ep5-part1-v1-b93707a2.mp4 +
+  cover jpg; deleted after landing, xfer/ empty). Scheduled 20:00
+  (floor: YT actual 18:39:17 + 60min = 19:39:17). Subtitle gate:
+  CLEAN, no repair needed - local byte-exact re-render of catalog
+  pin (53726289 bytes sha 0f633eb1, ffmpeg 4.4.2 ubuntu-22.04,
+  source Episode5.mp4 sha cef0d63f verified) reviewed: full
+  faster-whisper base.en + 7 targeted vad_filter=False beam5 window
+  re-passes vs OCR band fps=4 crop=880:320:100:1300; weak spots
+  pixel-confirmed (10.5s "but he never showed.", 16.5s "Contact the
+  MTA.", 20.25s "I mean... we're just the VA.", 24.75s "Who
+  doesn't?", 26.75s "Ethan North, twenty-six. Silver star,",
+  48.25s "We absolutely cannot mess this up!"; opening 0-6.5s no
+  speech/no cards, correct). soldier-subtitle-quality-gates.json
+  ep5-part1 approved (06ec6e1). Verified live: page time element
+  2026-11-09T14:32:03Z = 20:02:03 IST, AI-content label visible
+  under username, caption verified on live reel (Ad, hook, Episode
+  5 Part 1/3, affiliate champ.ly/XGRsxm9N -> 302
+  r.reelsgo.tv/GFBBQsIQ1FBz, hashtags), cover = real 2s frame.
+  Composer switches persisted [Feed=true, Trial=false,
+  MobileNotif=false, AI-generated=true].
+  Next-post floor (both lanes): >=21:02:03 IST (60min after exact
+  IG actual 20:02:03).
+  YT lane: E5P1 PUBLIC 2026-11-09 21:13:20 IST (YT 9/26):
+  https://www.youtube.com/shorts/TTKc-jOq63Y (publishDate
+  2026-11-09T07:43:20-08:00). Patched probe path: private probe run
+  42628665282 (head_sha 97b3108) uploaded private video, no
+  playlistItems call, ready_for_review + playlist_pending
+  PLD5vEa-35ZMU, duplicate guard intact. Pre-flip: Studio exactly
+  one E5P1 video, Private, correct metadata, Notices clean; video
+  processing succeeded. Claims check: Studio Notices/Restrictions
+  clean before flip. Playlist PLD5vEa-35ZMU add + Public flip
+  committed ~21:13 via two-stage Studio write, verified per
+  docs/studio-write-verification.md: "Changes saved" toast +
+  reload (Visibility Public, Undo changes DISABLED), anonymous
+  playabilityStatus OK, oembed 200. Playlist page verified = 9
+  videos E1P1..E5P1 story order.
+  60-min floor respected: IG actual 20:02:03 -> 21:13:20 = 71m17s.
+  YT 4h max-gap respected: 18:39:17 -> 21:13:20 = 2h34m.
+  Ledger reconciled to published (run 42648033375,
+  reconcile-soldier-ep5p1-yt-public). Next-post floor (both
+  lanes): >=22:13:20 IST (60min after exact YT actual 21:13:20);
+  YT 4h boundary 2026-11-10 01:13:20.
+
+  Pipeline reliability note (2026-11-09): the boutique IG reader
+  endpoint (kathirvelan-boutique.vercel.app reelsaga-reader)
+  returned HTTP 502 on the authorized path 20:19-20:24 IST (3
+  preflight runs 42638375847/42638620377/42638999433). Boutique
+  diagnosis (tentative, via main): reelsaga_token_not_verified at
+  stage live_verify - Meta OAuthException "API access blocked"
+  (http400_code200); token-refresh cause not established.
+  Unauthenticated GET answers 404, so the function is alive; the
+  failure is on the authorized live-verify path. Fallback used
+  tonight and retained: direct live-page reads (IG reel page time
+  element; anonymous YT watch page playabilityStatus/publishDate)
+  with fail-closed spacing when neither endpoint nor direct
+  timestamps can establish a lane floor.
+
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.
