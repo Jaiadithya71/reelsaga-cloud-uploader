@@ -134,10 +134,23 @@
       }
     },
     "dramabox-soldier42000030015-ep5-part2-v1": {
-      "status": "review_required",
-      "approved_render_sha256": null,
+      "status": "reviewed_clean_approved",
+      "approved_render_sha256": "7a3134a98ed7ab4400e44b6e625370b393c86532415be1a840e2dba6b715d357",
       "original_render_sha256": "7a3134a98ed7ab4400e44b6e625370b393c86532415be1a840e2dba6b715d357",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "review": {
+        "reviewed_at": "2026-11-09T21:26+05:30",
+        "method": "local byte-exact re-render of catalog pin (88830955/7a3134a9, ffmpeg 4.4.2 ubuntu-22.04, source sha cef0d63f verified) reviewed: full-part faster-whisper base.en + targeted vad_filter=False beam5 gap re-passes (0-10s,16-23.5s,26-30s,46-48.5s) vs subtitle-band OCR at 4fps; weak spots pixel-confirmed",
+        "result": "all 10 spoken lines covered by subtitle cards; wording matches audio; no defects; timing aligned; readable",
+        "suspect_spots_visually_confirmed": [
+          "opening card 'We absolutely cannot mess this up!' 0.75-2.0s present (continuation from part 1)",
+          "'My hero... he's back in New York now.' ~12s readable on patterned background",
+          "houndstooth jacket pattern fills band 9-29s producing OCR texture noise; sampled frames 9.25/17/21.5/23.5/26.75/28.75s show no hidden cards; whisper gap re-passes confirm no speech there",
+          "'The Horton family must repay [this debt].' ~24.25s, 'otherwise he'd be perfect for you.' ~32.5s, 'You're around [the same age].' ~34s, 'Only a man like that is worthy of my granddaughter.' ~36-38.5s, 'Come on, Grandma.' ~40s, 'I know you love setting me up... never available.' ~42-45.5s, 'Especially to someone like me.' ~46.25-48s all present"
+        ],
+        "audio_unchanged": "plain cut+fade render, byte-exact to catalog pin 88830955/7a3134a9; no overlay applied",
+        "caveat": "4fps OCR sampling with pixel confirmation of weak spots and whisper window re-passes; not a frame-perfect certification"
+      }
     },
     "dramabox-soldier42000030015-ep5-part3-v1": {
       "status": "known_wording_fixed_full_part_review_pending",
