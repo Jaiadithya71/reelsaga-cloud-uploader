@@ -30,8 +30,8 @@ not evidence of "not published".
 
 ## Active run
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
-  10/26 parts public (E1P1..E5P2; latest
-  https://www.instagram.com/reelsaga3000/reel/Dfhynp7DnDX/).
+  11/26 parts public (E1P1..E5P3; latest
+  https://www.instagram.com/reelsaga3000/reel/DfiBsuZHM_t/).
   11 supplied free episodes; ordered hourly no-skip run.
   Evidence: soldier-release-journal.json and soldier-prepared-catalog.json.
   Per-series IG/skip-YT-check approval Nov5 08:31:38, original WhatsApp
@@ -346,6 +346,23 @@ not evidence of "not published".
   Next-post floor (both lanes): >=2026-11-10 00:24:26 IST (60min
   after exact YT actual 23:24:26); YT 4h boundary 2026-11-10
   03:24:26.
+
+  E5P3 both lanes PUBLIC (11/26):
+  IG https://www.instagram.com/reelsaga3000/reel/DfiBsuZHM_t/
+  actual2026-11-09T18:58:34Z = Nov10 00:28:34 IST, direct live
+  time element verified. AI content label/caption/cover verified;
+  champ.ly/XGRsxm9N 302 -> r.reelsgo.tv/GFBBQsIQ1FBz. SocialChamp
+  bulk00:26 slot, Feed/AI true Trial/MobileNotif false persisted.
+  YT https://www.youtube.com/watch?v=P_RJUm9wHk8 public actual
+  publishDate2026-11-09T12:03:09-08:00 = Nov10 01:33:09 IST.
+  Claims tab No claims were found; playlist+public committed with
+  page Save, Changes saved toast, reload Undo disabled/Public,
+  anonymous playabilityStatus OK. Playlist11 ordered, E5P3 last.
+  IG->YT64m35s; YT prior23:24:26 ->01:33:09 =2h08m43s.
+  Subtitle gate: full-part review, byte-exact existing hangar repair
+  f6631972 audio unchanged; commit35446ad. Private probe42670317343.
+  Reconcile workflow reconcile-soldier-ep5p3-yt-public.
+  Next floor02:33:09 IST; YT4h boundary05:33:09 IST Nov10.
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
