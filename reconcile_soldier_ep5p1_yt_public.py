@@ -24,7 +24,7 @@ if len(rows)!=1:raise RuntimeError('Video readback missing')
 row=rows[0]
 if row['snippet']['channelId']!=CHANNEL or row['status']['privacyStatus']!='public':raise RuntimeError('Public state not verified; no reconcile')
 saved,_=backend.get(DurableLedger.key(ITEM,'youtube'))
-if not saved or saved.get('external_id')!=VID or saved.get('state')!='private_locked':raise RuntimeError('Unexpected ledger state: '+json.dumps(saved))
+if not saved or saved.get('external_id')!=VID or saved.get('state') not in ('private_locked','ready_for_review'):raise RuntimeError('Unexpected ledger state: '+json.dumps(saved))
 DurableLedger(backend).checkpoint(ITEM,'youtube','published',external_id=VID)
 saved,_=backend.get(DurableLedger.key(ITEM,'youtube'))
 if saved.get('state')!='published' or saved.get('external_id')!=VID:raise RuntimeError('Reconcile readback failed')
