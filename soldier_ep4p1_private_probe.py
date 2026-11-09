@@ -179,8 +179,16 @@ def main():
         result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)
         print(json.dumps(result,sort_keys=True))
         open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Soldier EP4P1 episode probe verified\n\n```json\n"+json.dumps(result,indent=2)+"\n```\n")
-    except Exception:
+    except Exception as _exc:
+        import re as _re
         print('Safe failure stage: '+stage)
+        _msg=_re.sub(r'(ya29\.[A-Za-z0-9_\-\.]+|Bearer\s+\S+|tid_[A-Za-z0-9]+|[0-9a-f]{48,})','[scrubbed]',str(_exc))
+        print('Failure detail: '+type(_exc).__name__+': '+_msg[:300])
+        try:
+            _st=DurableLedger(backend).resume(item['id'],'youtube') if backend else 'unknown'
+        except Exception as _e2:
+            _st='read-error:'+type(_e2).__name__
+        print('Ledger resume state at failure: '+str(_st))
         print('Real-part upload stopped. Reconcile encrypted ledger and Studio before retry; secrets not shown.')
         raise SystemExit(1) from None
     finally:
