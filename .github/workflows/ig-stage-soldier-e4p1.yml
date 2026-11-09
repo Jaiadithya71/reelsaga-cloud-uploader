@@ -1,0 +1,59 @@
+name: Soldier EP4P1 IG staging (encrypted render artifact)
+on:
+  workflow_dispatch:
+    inputs:
+      gpg_pub:
+        description: armored one-time public key
+        required: true
+permissions:
+  actions: read
+concurrency:
+  group: reelsaga-canary
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    steps:
+    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-dejavu-core >/dev/null
+    - name: Re-render EP4P1, verify pinned shas, encrypt
+      env:
+        PUB: ${{ inputs.gpg_pub }}
+      run: |
+        set -euo pipefail
+        python - <<'PY'
+        import hashlib,subprocess,requests,io,zipfile
+        from pathlib import Path
+        u='https://cps-distr.ikyuedu.com/distribution/11/DramaBox%E8%B5%84%E6%BA%90%E5%8C%85-42000030015-a2271090e1a760ac5345d014ae9a7fbd.zip'
+        s=requests.Session();response=s.head(u,timeout=30);response.raise_for_status();size=int(response.headers['Content-Length'])
+        class Remote(io.RawIOBase):
+         def __init__(self):self.pos=0
+         def seekable(self):return True
+         def readable(self):return True
+         def tell(self):return self.pos
+         def seek(self,o,w=0):self.pos=o if w==0 else self.pos+o if w==1 else size+o;return self.pos
+         def read(self,n=-1):
+          if n<0:n=size-self.pos
+          if not n:return b''
+          r=s.get(u,headers={'Range':f'bytes={self.pos}-{min(size-1,self.pos+n-1)}'},timeout=40);r.raise_for_status();assert r.status_code==206;self.pos+=len(r.content);return r.content
+        z=zipfile.ZipFile(Remote());assert 'Episode4.mp4' in z.namelist();Path('source.mp4').write_bytes(z.read('Episode4.mp4'))
+        assert hashlib.sha256(Path('source.mp4').read_bytes()).hexdigest()=='63b6fe8fc8993edb316378800e31c7dbcfed6719342f19c81a1a3d543edf2ff8','Source episode differs'
+        subprocess.run(['ffmpeg','-v','error','-i','source.mp4','-f','null','-'],check=True)
+        subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-ss','0','-i','source.mp4','-t','37.5','-vf','fade=t=in:st=0:d=0.5,fade=t=out:st=37.0:d=0.5','-af','afade=t=in:st=0:d=0.5,afade=t=out:st=37.0:d=0.5','-c:v','libx264','-threads:v','2','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','p1.mp4'],check=True)
+        subprocess.run(['ffmpeg','-v','error','-i','p1.mp4','-f','null','-'],check=True)
+        rb=Path('p1.mp4').read_bytes();hs=hashlib.sha256(rb).hexdigest()
+        print('EP4P1_BYTES '+str(len(rb)),flush=True);print('EP4P1_SHA256 '+hs,flush=True)
+        if len(rb)!=52799456 or hs!='ad8eb6f53d07902dac27a3fe688401050421f74fee3d84847eb8ecf9510d7a45':raise SystemExit('Re-render mismatch - NOT byte-identical to probe-pinned part, stop')
+        PY
+        printf '%s
+        ' "$PUB" | gpg --batch --import
+        gpg --batch --yes --trust-model always --compress-level 0 --encrypt --recipient rs-xfer-onetime --output p1.mp4.gpg p1.mp4
+        sync
+        sudo shred -u p1.mp4 source.mp4 2>/dev/null || sudo rm -f p1.mp4 source.mp4
+        ls -la p1.mp4.gpg
+    - name: upload encrypted artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: soldier-e4p1-ig
+        path: p1.mp4.gpg
+        retention-days: 1
