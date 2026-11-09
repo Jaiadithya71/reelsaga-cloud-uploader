@@ -226,8 +226,8 @@
       }
     },
     "dramabox-soldier42000030015-ep6-part2-v1": {
-      "status": "known_wording_fixed_full_part_review_pending",
-      "approved_render_sha256": null,
+      "status": "reviewed_repair_approved",
+      "approved_render_sha256": "87204c2dbd0180bab5dfd5c624ca3c6b8f7aed9c9b478ed045cfc7eb84375f1f",
       "original_render_sha256": "7eb8237913a923f1bd7d29400c7f13a29710b8851359565e8f13119f74cf2b02",
       "publication_unknown": false,
       "candidate": {
@@ -284,8 +284,14 @@
         ],
         "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain"
       },
-      "whole_part_release_ready": false,
-      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
+      "whole_part_release_ready": true,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json",
+      "review": {
+        "reviewed_at": "2026-11-10T01:38:00+05:30",
+        "method": "byte-exact base+existing two-patch render; audio stream unchanged; full base.en + targeted0-11/16-22/25.5-30.25/37.5-end vs4fpsOCR and pixel contact sheet",
+        "coverage": "All dialogue cards covered incl Are you getting this/Show them/Its just a phone. Music-action0.6-11 and tail40-end. Isolated tailASR hallucination excluded by broader windows+tail speech check. Existing monster/let it go wording repairs only.",
+        "visual_evidence": "docs/debug/e6p2-contact.png"
+      }
     },
     "dramabox-soldier42000030015-ep7-part1-v1": {
       "status": "known_wording_fixed_full_part_review_pending",
