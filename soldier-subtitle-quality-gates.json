@@ -190,8 +190,8 @@
       }
     },
     "dramabox-soldier42000030015-ep6-part1-v1": {
-      "status": "known_wording_fixed_full_part_review_pending",
-      "approved_render_sha256": null,
+      "status": "reviewed_repair_approved",
+      "approved_render_sha256": "dcfbe8c9f137660854cc725b22c30ac1f18391b51d404d6f91e58d0eb8c6296f",
       "original_render_sha256": "f4c1e8106bfaf49f3ef4a2e28c49b74d71c37b94c9c0f1578f9a8aa07199482e",
       "publication_unknown": false,
       "candidate": {
@@ -216,8 +216,14 @@
         "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
         "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
       },
-      "whole_part_release_ready": false,
-      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
+      "whole_part_release_ready": true,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json",
+      "review": {
+        "reviewed_at": "2026-11-09T23:38:00+05:30",
+        "method": "byte-exact base and patched render, audio stream unchanged; full base.en and targeted windows vs 4fps OCR; pixel review weak cards My bag / You ruined my bag / What a ripoff and regional director patch",
+        "coverage": "All dialogue cards covered; opening 0-8 music/action. Source profanity unchanged. No new repair needed beyond existing regional director wording patch.",
+        "visual_evidence": "docs/debug/e6p1-contact.png"
+      }
     },
     "dramabox-soldier42000030015-ep6-part2-v1": {
       "status": "known_wording_fixed_full_part_review_pending",
