@@ -294,8 +294,8 @@
       }
     },
     "dramabox-soldier42000030015-ep7-part1-v1": {
-      "status": "known_wording_fixed_full_part_review_pending",
-      "approved_render_sha256": null,
+      "status": "reviewed_repair_approved",
+      "approved_render_sha256": "7d544dbc1171819e6cb7bdf36b0f5c5f1b55e01d3a9d9459d68bc4f12490b5bc",
       "original_render_sha256": "df7eb6ce8ab9a538de27748fe080d6a037aac5436b7d62f80a733af72a789920",
       "publication_unknown": false,
       "candidate": {
@@ -320,8 +320,17 @@
         "verification_status": "bounded_patch_supported_full_part_coverage_limits_remain",
         "caveat": "No complete spoken-word/listening certificate. Unsupported regions and two ambiguous source phrases remain held."
       },
-      "whole_part_release_ready": false,
-      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json"
+      "whole_part_release_ready": true,
+      "boundary_review_evidence": "docs/debug/2026-11-07-all-patch-boundary-audit.json",
+      "review": {
+        "reviewed_at": "2026-11-10T03:56:00+05:30",
+        "method": "byte-exact base+existing single-patch render; audio byte-exact; full base.en plus targeted windows vs 4fps OCR, full-frame contact and targeted subtitle pixels",
+        "coverage": "All dialogue cards covered incl Nothing/Look what she did and Come on man. First 3.8s action/music: isolated ASR repeats contradicted by broader 0-5.8/0-10/full passes, excluded. Existing dizzy wording repair only. Source profanity mask retained.",
+        "visual_evidence": [
+          "docs/debug/e7p1-contact.png",
+          "docs/debug/e7p1-crops.png"
+        ]
+      }
     },
     "dramabox-soldier42000030015-ep7-part2-v1": {
       "status": "review_required",
