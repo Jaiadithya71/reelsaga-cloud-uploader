@@ -58,14 +58,27 @@ not evidence of "not published".
   https://www.youtube.com/shorts/TwCni7ipeKs ;
   E1P2 public 02:34 IST https://www.youtube.com/shorts/eqZxi4i5VaY ;
   E2P1 public 03:21 IST https://www.youtube.com/shorts/dPCcGLXUzdQ .
+  E2P2 public 2026-11-09 08:35 IST (YT 4/26): ORIGINAL wording
+  https://www.youtube.com/shorts/x-7dMTTpUns (item ep2-part2-v2, pinned
+  original render sha 09155eb03c9a...9499). User approved the shown
+  ORIGINAL version ("This is ok, post" 2026-11-09 08:07:49 IST,
+  wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM0M0MxRjY0MEVGNTc1RUNCQUQ0QTVBRDE0NDkzOTIA,
+  replying to the original-clip question). Studio claims clean,
+  playlist-added, signed-in playback verified (44.28s advancing).
+  Superseded patched v1 candidate (BsS-sYfc9lg) retitled "(SUPERSEDED
+  caption patch, do not publish)", kept private, never published.
+  Spacing preflight: graph reader endpoint returned HTTP 502 x3
+  (endpoint failure only); Buffer API untouched (saved provider cooldown
+  until 2026-11-22). Manual equivalent live reads per main 08:29 ruling:
+  YT last actual public E2P1 03:21 IST (API), IG last actual public E2P1
+  2026-11-05T05:14:32Z (owner-profile time element) -> 60min shared floor
+  satisfied before flip. Workflow preflight stays mandatory once the
+  reader endpoint recovers.
   Playlist https://www.youtube.com/playlist?list=PLD5vEa-35ZMU (Date
-  published oldest; 3 videos in story order). Late-claims recheck 03:21:
+  published oldest; 4 videos in story order). Late-claims recheck 03:21:
   all three clean.
-  E2P2 private probe done (video BsS-sYfc9lg, claims clean) but PUBLIC
-  RELEASE HELD ON BOTH LANES: opening caption wording ("You're" vs "I'm"
-  not hearing sh*t!) unsettled - user question asked Nov8 20:48 remains
-  open; source-audio evidence strengthens "I'm" but is not independent
-  verification. Patched master (recipe ep2-part2) kept private/reversible.
+  IG lane: E2P2 approved-version release in progress via SocialChamp
+  bulk route (60min shared guard: earliest 09:35 IST after the YT flip).
   Story-order ceiling: no E3+ public release until E2P2 resolves.
   Zero spend, no paid unlocks.
 
