@@ -30,8 +30,8 @@ not evidence of "not published".
 
 ## Active run
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
-  8/26 parts public (E1P1..E4P2; latest
-  https://www.instagram.com/reelsaga3000/reel/DfhSkrZjWxe/).
+  10/26 parts public (E1P1..E5P2; latest
+  https://www.instagram.com/reelsaga3000/reel/Dfhynp7DnDX/).
   11 supplied free episodes; ordered hourly no-skip run.
   Evidence: soldier-release-journal.json and soldier-prepared-catalog.json.
   Per-series IG/skip-YT-check approval Nov5 08:31:38, original WhatsApp
@@ -312,6 +312,40 @@ not evidence of "not published".
   element; anonymous YT watch page playabilityStatus/publishDate)
   with fail-closed spacing when neither endpoint nor direct
   timestamps can establish a lane floor.
+
+  IG lane: E5P2 PUBLIC 2026-11-09 22:15:39 IST (IG 10/26):
+  https://www.instagram.com/reelsaga3000/reel/Dfhynp7DnDX/ via
+  SocialChamp Bulk CSV (Tigris presigned <=3h SigV4, xfer/ e5p2
+  video + cover; deleted after landing, xfer/ empty). Scheduled
+  22:15 (floor: YT actual 21:13:20 + 60min = 22:13:20). Composer
+  edit pass verified persisted: Feed on, AI-generated label on,
+  Trial/MobileNotif off; live reel page shows AI content label,
+  caption, champ.ly/XGRsxm9N 302 -> r.reelsgo.tv/GFBBQsIQ1FBz.
+  Exact taken_at 2026-11-09T16:45:39Z from live reel page time
+  element. Subtitle gate: CLEAN, no repair needed - local
+  byte-exact re-render of catalog pin (bytes 88830955 sha
+  7a3134a9, ffmpeg 4.4.2 ubuntu-22.04) + full whisper and gap
+  re-passes vs 4fps OCR; houndstooth jacket texture noise
+  pixel-confirmed as no hidden cards (gates json ep5-part2
+  reviewed_clean_approved, commit 3960116).
+  YT lane: E5P2 PUBLIC 2026-11-09 23:24:26 IST (YT 10/26):
+  https://www.youtube.com/shorts/uk2zfC-pauk (publishDate
+  2026-11-09T09:54:26-08:00). Private probe run 42649793256
+  (head_sha e04a94a) uploaded private video, no playlistItems
+  call, ready_for_review + playlist_pending PLD5vEa-35ZMU.
+  Claims check: Studio Claims tab "No claims were found", Notices
+  clean before flip. Playlist PLD5vEa-35ZMU add + Public flip
+  committed ~23:24 via two-stage Studio write, verified per
+  docs/studio-write-verification.md: "Changes saved" toast +
+  reload (Visibility Public, Undo changes DISABLED), anonymous
+  playabilityStatus OK. Playlist page verified = 10 videos
+  E1P1..E5P2 story order.
+  60-min floor respected: IG actual 22:15:39 -> 23:24:26 = 68m47s.
+  YT 4h max-gap respected: 21:13:20 -> 23:24:26 = 2h11m.
+  Ledger reconciled to published (reconcile-soldier-ep5p2-yt-public).
+  Next-post floor (both lanes): >=2026-11-10 00:24:26 IST (60min
+  after exact YT actual 23:24:26); YT 4h boundary 2026-11-10
+  03:24:26.
 
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
