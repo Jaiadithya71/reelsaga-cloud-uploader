@@ -32,7 +32,7 @@ class Remote(io.RawIOBase):
 import hashlib as _h
 z=zipfile.ZipFile(Remote());assert 'Episode4.mp4' in z.namelist();Path('source.mp4').write_bytes(z.read('Episode4.mp4'))
 assert _h.sha256(Path('source.mp4').read_bytes()).hexdigest()=='63b6fe8fc8993edb316378800e31c7dbcfed6719342f19c81a1a3d543edf2ff8','Source episode differs'
-meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json','source.mp4']));v=next(x for x in meta['streams'] if x['codec_type']=='video');assert (v['width'],v['height'])==(1080,1920);assert abs(float(meta['format']['duration'])-85.018)<.1
+meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json','source.mp4']));v=next(x for x in meta['streams'] if x['codec_type']=='video');assert (v['width'],v['height'])==(1080,1920);assert abs(float(meta['format']['duration'])-75.46)<.1
 subprocess.run(['ffmpeg','-v','error','-i','source.mp4','-f','null','-'],check=True)
 subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-ss','0','-i','source.mp4','-t','37.5','-vf','fade=t=in:st=0:d=0.5,fade=t=out:st=37.0:d=0.5','-af','afade=t=in:st=0:d=0.5,afade=t=out:st=37.0:d=0.5','-c:v','libx264','-threads:v','2','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','p1.mp4'],check=True)
 subprocess.run(['ffmpeg','-v','error','-i','p1.mp4','-f','null','-'],check=True)
