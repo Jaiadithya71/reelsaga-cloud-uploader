@@ -160,6 +160,29 @@ not evidence of "not published".
   story order (E1P1..E3P2). Next-post floor (both lanes): >=14:56:44
   IST (60min after exact YT actual 13:56:44).
 
+  IG lane: E4P1 PUBLIC 2026-11-09 15:00:41 IST (IG 7/26):
+  https://www.instagram.com/reelsaga3000/reel/DfhA1piFmjM/ via
+  SocialChamp Bulk CSV (Tigris presigned <=3h; keys xfer/e4p1.mp4 +
+  xfer/e4p1-cover.jpg retained until the E4P1 YT probe consumes the
+  presigned URL, then deleted). Scheduled 14:46 (floor: YT actual
+  13:56:44 + 60min = 14:56:44; slot 15:00). Subtitle gate: per-part
+  check done (faster-whisper base.en transcript vs tesseract OCR of
+  subtitle band fps=4 crop=880:320:100:1300, weak spots
+  pixel-confirmed), soldier-subtitle-quality-gates.json ep4-part1
+  approved, render pin byte-exact (52799456 bytes sha ad8eb6f5).
+  Verified live (page time element 2026-11-09T09:30:41Z = 15:00:41
+  IST): AI-content label visible under username, caption verified on
+  live reel (Ad, hook, Episode 4 Part 1/2, affiliate
+  champ.ly/XGRsxm9N -> 302 r.reelsgo.tv/GFBBQsIQ1FBz, hashtags),
+  cover = real 2s subway frame, playback OK (video readyState 4).
+  Composer switches persisted post-save re-open
+  [Feed=true, Trial=false, MobileNotif=false, AI-generated=true].
+  Composer note: bulk-created posts re-upload media from the URL on
+  first Edit; Save during that upload fails with an "Oops... Please
+  wait while we upload the media file" toast and nothing persists -
+  save only after the upload completes and read the toast text.
+  Next-post floor (both lanes): >=16:00:41 IST (60min after exact
+  IG actual 15:00:41).
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.
