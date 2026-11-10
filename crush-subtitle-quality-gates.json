@@ -125,6 +125,19 @@
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42853261092",
       "probe_expected_head": "93dbf32db831130f0f0ede9eaf82f692a6d58a9a",
       "probe_checkpoint_stop_verified": true
+    },
+    "dramabox-crush42000028219-ep2-part1-v1": {
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "0c84dc207ae6fc52a43ea995e032fcf7b262f608a07e53f7126d56919c2d0938",
+      "source_sha256": "833385aad46ebd82517fd9b2f0912410612910f2b2a3b8bea6f1162f97656e9e",
+      "source_start": 0.0,
+      "source_end": 35.25,
+      "review": "Whole base.en+small.enVADASR/4fpsOCR/fullcontact+17targetedwholeframes andsource32.5-36boundarygridinspected22:02-22:04. Cut35.25 after Your husband complete34.78 before flashbacknextspeech; remainder35.25-end preserved forP2. Housefades/originalaudio/no subtitleedits.",
+      "claims_verified": false,
+      "public_release_ready": false,
+      "source_audio_unchanged": true,
+      "caption_repairs": false
     }
   }
 }
