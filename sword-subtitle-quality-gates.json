@@ -214,7 +214,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "75f076897d54267ba35d318b57e22496899ffd57f7c23d10ec79cf205a520a68",
       "render_bytes": 83632154,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "private_clean_ready",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -226,11 +226,29 @@
       "source_duration": 88.212,
       "source_sha256": "d87ed6a678179cb0a1806cd55eea1a2c5dd327d542855e1118cd2a08261e342e",
       "boundary_note": "45.25s after What way speech44.56/caption44.75, nextspeech45.72/caption46; no source footage omitted",
-      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "video_id": "AGQz5R44gyI",
+      "studio_url": "https://studio.youtube.com/video/AGQz5R44gyI/edit",
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42900314089",
+      "probe_head_sha": "c543efc8516b6a1add118881ab67c83a31c53db5",
+      "claims_checked_at": "2026-11-11T02:39:09+05:30",
+      "claims": "none",
+      "ai_yes_saved_reload_verified": true,
+      "own_playlist": "PLSDxRohmmBQk",
+      "save_reload_disabled_at": "2026-11-11T02:38:57+05:30"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
   "playlist_url": "https://www.youtube.com/playlist?list=PLSDxRohmmBQk",
   "playlist_visibility": "public",
-  "playlist_order": "date_published_oldest"
+  "playlist_order": "date_published_oldest",
+  "playlist_inventory_verified_at": "2026-11-11T02:39:33+05:30",
+  "playlist_inventory_order": [
+    "uTQqmfkMJbc",
+    "icg5_DXP5Uc",
+    "4sDKhKEuewM",
+    "vsz0utf5IDA",
+    "pr-CBXtJ4SA",
+    "AGQz5R44gyI"
+  ]
 }
