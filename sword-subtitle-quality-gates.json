@@ -174,7 +174,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "7ad1f15a182da3abcc6584510694bf549d42a21ae60024117c07e913d879dac3",
       "render_bytes": 44770615,
-      "status": "whole_part_review_passed_private_claims_clean",
+      "status": "public_verified",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -185,7 +185,7 @@
       "source_start": 43.5,
       "source_end": 86.28,
       "claims_verified": true,
-      "claims_checked_at": "2026-11-11T00:37:28+05:30",
+      "claims_checked_at": "2026-11-11T04:13:17+05:30",
       "private_video_id": "vsz0utf5IDA",
       "private_video_url": "https://studio.youtube.com/video/vsz0utf5IDA/edit",
       "native_ai_yes": true,
@@ -194,7 +194,13 @@
       "playlist_membership_saved": true,
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42880923177",
       "probe_expected_head": "24d5fe42cce63382403b9840bf0a904ecd5cf015",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "video_url": "https://www.youtube.com/watch?v=vsz0utf5IDA",
+      "public_at": "2026-11-11T04:13:51+05:30",
+      "publish_date_raw": "2026-11-10T14:43:51-08:00",
+      "public_watch_player_ok": true,
+      "public_studio_reload_save_disabled": true,
+      "claims": "none"
     },
     "yourchannel-sword829261-ep3-part1-v1": {
       "whole_part_release_ready": true,
