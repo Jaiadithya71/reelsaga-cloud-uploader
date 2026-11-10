@@ -1,0 +1,834 @@
+[
+  {
+    "start": 4.799999999999996,
+    "end": 7.12,
+    "text": " Zero Mara, commoner. Next.",
+    "words": [
+      {
+        "start": 4.799999999999996,
+        "end": 5.28,
+        "word": " Zero"
+      },
+      {
+        "start": 5.28,
+        "end": 5.52,
+        "word": " Mara,"
+      },
+      {
+        "start": 6.18,
+        "end": 6.48,
+        "word": " commoner."
+      },
+      {
+        "start": 7.12,
+        "end": 7.12,
+        "word": " Next."
+      }
+    ]
+  },
+  {
+    "start": 9.02,
+    "end": 11.92,
+    "text": " That's weird. Why won't Nola's hands light up?",
+    "words": [
+      {
+        "start": 9.02,
+        "end": 9.5,
+        "word": " That's"
+      },
+      {
+        "start": 9.5,
+        "end": 9.7,
+        "word": " weird."
+      },
+      {
+        "start": 10.36,
+        "end": 10.58,
+        "word": " Why"
+      },
+      {
+        "start": 10.58,
+        "end": 10.82,
+        "word": " won't"
+      },
+      {
+        "start": 10.82,
+        "end": 11.12,
+        "word": " Nola's"
+      },
+      {
+        "start": 11.12,
+        "end": 11.28,
+        "word": " hands"
+      },
+      {
+        "start": 11.28,
+        "end": 11.56,
+        "word": " light"
+      },
+      {
+        "start": 11.56,
+        "end": 11.92,
+        "word": " up?"
+      }
+    ]
+  },
+  {
+    "start": 13.26,
+    "end": 16.12,
+    "text": " Told you. A country beggar trying to join us. Pathetic.",
+    "words": [
+      {
+        "start": 13.26,
+        "end": 13.74,
+        "word": " Told"
+      },
+      {
+        "start": 13.74,
+        "end": 13.9,
+        "word": " you."
+      },
+      {
+        "start": 14.2,
+        "end": 14.26,
+        "word": " A"
+      },
+      {
+        "start": 14.26,
+        "end": 14.48,
+        "word": " country"
+      },
+      {
+        "start": 14.48,
+        "end": 14.86,
+        "word": " beggar"
+      },
+      {
+        "start": 14.86,
+        "end": 14.98,
+        "word": " trying"
+      },
+      {
+        "start": 14.98,
+        "end": 15.1,
+        "word": " to"
+      },
+      {
+        "start": 15.1,
+        "end": 15.3,
+        "word": " join"
+      },
+      {
+        "start": 15.3,
+        "end": 15.48,
+        "word": " us."
+      },
+      {
+        "start": 15.82,
+        "end": 16.12,
+        "word": " Pathetic."
+      }
+    ]
+  },
+  {
+    "start": 16.9,
+    "end": 20.54,
+    "text": " No wait. Nola has to get in. Nola needs to find her big brother.",
+    "words": [
+      {
+        "start": 16.9,
+        "end": 17.24,
+        "word": " No"
+      },
+      {
+        "start": 17.24,
+        "end": 17.5,
+        "word": " wait."
+      },
+      {
+        "start": 17.94,
+        "end": 18.08,
+        "word": " Nola"
+      },
+      {
+        "start": 18.08,
+        "end": 18.32,
+        "word": " has"
+      },
+      {
+        "start": 18.32,
+        "end": 18.5,
+        "word": " to"
+      },
+      {
+        "start": 18.5,
+        "end": 18.7,
+        "word": " get"
+      },
+      {
+        "start": 18.7,
+        "end": 18.86,
+        "word": " in."
+      },
+      {
+        "start": 19.24,
+        "end": 19.38,
+        "word": " Nola"
+      },
+      {
+        "start": 19.38,
+        "end": 19.62,
+        "word": " needs"
+      },
+      {
+        "start": 19.62,
+        "end": 19.76,
+        "word": " to"
+      },
+      {
+        "start": 19.76,
+        "end": 19.92,
+        "word": " find"
+      },
+      {
+        "start": 19.92,
+        "end": 20.1,
+        "word": " her"
+      },
+      {
+        "start": 20.1,
+        "end": 20.26,
+        "word": " big"
+      },
+      {
+        "start": 20.26,
+        "end": 20.54,
+        "word": " brother."
+      }
+    ]
+  },
+  {
+    "start": 21.16,
+    "end": 22.8,
+    "text": " And who exactly is this big brother of yours?",
+    "words": [
+      {
+        "start": 21.16,
+        "end": 21.22,
+        "word": " And"
+      },
+      {
+        "start": 21.22,
+        "end": 21.34,
+        "word": " who"
+      },
+      {
+        "start": 21.34,
+        "end": 21.54,
+        "word": " exactly"
+      },
+      {
+        "start": 21.54,
+        "end": 21.9,
+        "word": " is"
+      },
+      {
+        "start": 21.9,
+        "end": 22.04,
+        "word": " this"
+      },
+      {
+        "start": 22.04,
+        "end": 22.2,
+        "word": " big"
+      },
+      {
+        "start": 22.2,
+        "end": 22.44,
+        "word": " brother"
+      },
+      {
+        "start": 22.44,
+        "end": 22.68,
+        "word": " of"
+      },
+      {
+        "start": 22.68,
+        "end": 22.8,
+        "word": " yours?"
+      }
+    ]
+  },
+  {
+    "start": 23.18,
+    "end": 25.4,
+    "text": " Arthur. The Supreme Paladin Arthur.",
+    "words": [
+      {
+        "start": 23.18,
+        "end": 23.36,
+        "word": " Arthur."
+      },
+      {
+        "start": 24.04,
+        "end": 24.04,
+        "word": " The"
+      },
+      {
+        "start": 24.04,
+        "end": 24.34,
+        "word": " Supreme"
+      },
+      {
+        "start": 24.34,
+        "end": 24.8,
+        "word": " Paladin"
+      },
+      {
+        "start": 24.8,
+        "end": 25.4,
+        "word": " Arthur."
+      }
+    ]
+  },
+  {
+    "start": 28.56,
+    "end": 32.12,
+    "text": " The Supreme Paladin's her brother? Is this hillbilly out of her mind?",
+    "words": [
+      {
+        "start": 28.56,
+        "end": 29.0,
+        "word": " The"
+      },
+      {
+        "start": 29.0,
+        "end": 29.44,
+        "word": " Supreme"
+      },
+      {
+        "start": 29.44,
+        "end": 30.04,
+        "word": " Paladin's"
+      },
+      {
+        "start": 30.04,
+        "end": 30.1,
+        "word": " her"
+      },
+      {
+        "start": 30.1,
+        "end": 30.36,
+        "word": " brother?"
+      },
+      {
+        "start": 30.88,
+        "end": 30.96,
+        "word": " Is"
+      },
+      {
+        "start": 30.96,
+        "end": 31.06,
+        "word": " this"
+      },
+      {
+        "start": 31.06,
+        "end": 31.5,
+        "word": " hillbilly"
+      },
+      {
+        "start": 31.5,
+        "end": 31.7,
+        "word": " out"
+      },
+      {
+        "start": 31.7,
+        "end": 31.8,
+        "word": " of"
+      },
+      {
+        "start": 31.8,
+        "end": 31.9,
+        "word": " her"
+      },
+      {
+        "start": 31.9,
+        "end": 32.12,
+        "word": " mind?"
+      }
+    ]
+  },
+  {
+    "start": 32.76,
+    "end": 35.54,
+    "text": " Enough. You dare drag the Paladin's name through the mud.",
+    "words": [
+      {
+        "start": 32.76,
+        "end": 32.98,
+        "word": " Enough."
+      },
+      {
+        "start": 33.78,
+        "end": 34.1,
+        "word": " You"
+      },
+      {
+        "start": 34.1,
+        "end": 34.26,
+        "word": " dare"
+      },
+      {
+        "start": 34.26,
+        "end": 34.48,
+        "word": " drag"
+      },
+      {
+        "start": 34.48,
+        "end": 34.6,
+        "word": " the"
+      },
+      {
+        "start": 34.6,
+        "end": 35.0,
+        "word": " Paladin's"
+      },
+      {
+        "start": 35.0,
+        "end": 35.12,
+        "word": " name"
+      },
+      {
+        "start": 35.12,
+        "end": 35.3,
+        "word": " through"
+      },
+      {
+        "start": 35.3,
+        "end": 35.4,
+        "word": " the"
+      },
+      {
+        "start": 35.4,
+        "end": 35.54,
+        "word": " mud."
+      }
+    ]
+  },
+  {
+    "start": 36.52,
+    "end": 38.16,
+    "text": " That's what my master told me.",
+    "words": [
+      {
+        "start": 36.52,
+        "end": 36.96,
+        "word": " That's"
+      },
+      {
+        "start": 36.96,
+        "end": 37.06,
+        "word": " what"
+      },
+      {
+        "start": 37.06,
+        "end": 37.24,
+        "word": " my"
+      },
+      {
+        "start": 37.24,
+        "end": 37.48,
+        "word": " master"
+      },
+      {
+        "start": 37.48,
+        "end": 37.94,
+        "word": " told"
+      },
+      {
+        "start": 37.94,
+        "end": 38.16,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 39.0,
+    "end": 41.28,
+    "text": " Impersonating a relative of the Paladin is a serious crime.",
+    "words": [
+      {
+        "start": 39.0,
+        "end": 39.44,
+        "word": " Impersonating"
+      },
+      {
+        "start": 39.44,
+        "end": 39.58,
+        "word": " a"
+      },
+      {
+        "start": 39.58,
+        "end": 39.76,
+        "word": " relative"
+      },
+      {
+        "start": 39.76,
+        "end": 40.0,
+        "word": " of"
+      },
+      {
+        "start": 40.0,
+        "end": 40.08,
+        "word": " the"
+      },
+      {
+        "start": 40.08,
+        "end": 40.34,
+        "word": " Paladin"
+      },
+      {
+        "start": 40.34,
+        "end": 40.56,
+        "word": " is"
+      },
+      {
+        "start": 40.56,
+        "end": 40.64,
+        "word": " a"
+      },
+      {
+        "start": 40.64,
+        "end": 40.98,
+        "word": " serious"
+      },
+      {
+        "start": 40.98,
+        "end": 41.28,
+        "word": " crime."
+      }
+    ]
+  },
+  {
+    "start": 43.620000000000005,
+    "end": 47.44,
+    "text": " I don't care what backwater you crawled out of. Leave now before you dig yourself a deeper grave.",
+    "words": [
+      {
+        "start": 43.620000000000005,
+        "end": 44.06,
+        "word": " I"
+      },
+      {
+        "start": 44.06,
+        "end": 44.16,
+        "word": " don't"
+      },
+      {
+        "start": 44.16,
+        "end": 44.26,
+        "word": " care"
+      },
+      {
+        "start": 44.26,
+        "end": 44.4,
+        "word": " what"
+      },
+      {
+        "start": 44.4,
+        "end": 44.76,
+        "word": " backwater"
+      },
+      {
+        "start": 44.76,
+        "end": 44.96,
+        "word": " you"
+      },
+      {
+        "start": 44.96,
+        "end": 45.08,
+        "word": " crawled"
+      },
+      {
+        "start": 45.08,
+        "end": 45.32,
+        "word": " out"
+      },
+      {
+        "start": 45.32,
+        "end": 45.56,
+        "word": " of."
+      },
+      {
+        "start": 45.8,
+        "end": 45.92,
+        "word": " Leave"
+      },
+      {
+        "start": 45.92,
+        "end": 46.12,
+        "word": " now"
+      },
+      {
+        "start": 46.12,
+        "end": 46.32,
+        "word": " before"
+      },
+      {
+        "start": 46.32,
+        "end": 46.52,
+        "word": " you"
+      },
+      {
+        "start": 46.52,
+        "end": 46.62,
+        "word": " dig"
+      },
+      {
+        "start": 46.62,
+        "end": 46.82,
+        "word": " yourself"
+      },
+      {
+        "start": 46.82,
+        "end": 46.98,
+        "word": " a"
+      },
+      {
+        "start": 46.98,
+        "end": 47.12,
+        "word": " deeper"
+      },
+      {
+        "start": 47.12,
+        "end": 47.44,
+        "word": " grave."
+      }
+    ]
+  },
+  {
+    "start": 47.8,
+    "end": 48.9,
+    "text": " Nola's not lying.",
+    "words": [
+      {
+        "start": 47.8,
+        "end": 48.24,
+        "word": " Nola's"
+      },
+      {
+        "start": 48.24,
+        "end": 48.44,
+        "word": " not"
+      },
+      {
+        "start": 48.44,
+        "end": 48.9,
+        "word": " lying."
+      }
+    ]
+  },
+  {
+    "start": 53.6,
+    "end": 55.94,
+    "text": " God's. Get her out of my sight.",
+    "words": [
+      {
+        "start": 53.6,
+        "end": 54.14,
+        "word": " God's."
+      },
+      {
+        "start": 54.74,
+        "end": 55.16,
+        "word": " Get"
+      },
+      {
+        "start": 55.16,
+        "end": 55.3,
+        "word": " her"
+      },
+      {
+        "start": 55.3,
+        "end": 55.44,
+        "word": " out"
+      },
+      {
+        "start": 55.44,
+        "end": 55.52,
+        "word": " of"
+      },
+      {
+        "start": 55.52,
+        "end": 55.64,
+        "word": " my"
+      },
+      {
+        "start": 55.64,
+        "end": 55.94,
+        "word": " sight."
+      }
+    ]
+  },
+  {
+    "start": 57.04,
+    "end": 60.86,
+    "text": " Nola's not leaving. Nola hasn't even seen her big brother yet.",
+    "words": [
+      {
+        "start": 57.04,
+        "end": 57.58,
+        "word": " Nola's"
+      },
+      {
+        "start": 57.58,
+        "end": 57.78,
+        "word": " not"
+      },
+      {
+        "start": 57.78,
+        "end": 58.26,
+        "word": " leaving."
+      },
+      {
+        "start": 58.88,
+        "end": 59.02,
+        "word": " Nola"
+      },
+      {
+        "start": 59.02,
+        "end": 59.46,
+        "word": " hasn't"
+      },
+      {
+        "start": 59.46,
+        "end": 59.58,
+        "word": " even"
+      },
+      {
+        "start": 59.58,
+        "end": 59.86,
+        "word": " seen"
+      },
+      {
+        "start": 59.86,
+        "end": 60.04,
+        "word": " her"
+      },
+      {
+        "start": 60.04,
+        "end": 60.22,
+        "word": " big"
+      },
+      {
+        "start": 60.22,
+        "end": 60.52,
+        "word": " brother"
+      },
+      {
+        "start": 60.52,
+        "end": 60.86,
+        "word": " yet."
+      }
+    ]
+  },
+  {
+    "start": 65.34,
+    "end": 66.08,
+    "text": " Hold it.",
+    "words": [
+      {
+        "start": 65.34,
+        "end": 65.88,
+        "word": " Hold"
+      },
+      {
+        "start": 65.88,
+        "end": 66.08,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 72.92,
+    "end": 77.08,
+    "text": " Since you lugged that giant sword all the way here, I'll give you a shot.",
+    "words": [
+      {
+        "start": 72.92,
+        "end": 73.46,
+        "word": " Since"
+      },
+      {
+        "start": 73.46,
+        "end": 73.66,
+        "word": " you"
+      },
+      {
+        "start": 73.66,
+        "end": 73.92,
+        "word": " lugged"
+      },
+      {
+        "start": 73.92,
+        "end": 74.04,
+        "word": " that"
+      },
+      {
+        "start": 74.04,
+        "end": 74.3,
+        "word": " giant"
+      },
+      {
+        "start": 74.3,
+        "end": 74.64,
+        "word": " sword"
+      },
+      {
+        "start": 74.64,
+        "end": 74.86,
+        "word": " all"
+      },
+      {
+        "start": 74.86,
+        "end": 74.96,
+        "word": " the"
+      },
+      {
+        "start": 74.96,
+        "end": 75.08,
+        "word": " way"
+      },
+      {
+        "start": 75.08,
+        "end": 75.38,
+        "word": " here,"
+      },
+      {
+        "start": 75.8,
+        "end": 76.52,
+        "word": " I'll"
+      },
+      {
+        "start": 76.52,
+        "end": 76.62,
+        "word": " give"
+      },
+      {
+        "start": 76.62,
+        "end": 76.76,
+        "word": " you"
+      },
+      {
+        "start": 76.76,
+        "end": 76.84,
+        "word": " a"
+      },
+      {
+        "start": 76.84,
+        "end": 77.08,
+        "word": " shot."
+      }
+    ]
+  }
+]

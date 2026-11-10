@@ -249,6 +249,42 @@
       "ai_yes_saved_reload_verified": true,
       "own_playlist": "PLSDxRohmmBQk",
       "save_reload_disabled_at": "2026-11-11T02:38:57+05:30"
+    },
+    "yourchannel-sword829261-ep4-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "e1bc1d3edaa3f8940b00431cec10e86ef40993f92e131c2d7043644c326813ee",
+      "render_bytes": 71276183,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 78.919,
+      "source_sha256": "ec820a9c6953d8ca26cbb314685cfc6718d5bf4eb07c3bba3620d77a6734645c",
+      "boundary_note": "42.5s after serious crime speech41.36/caption41.5; nextspeech43.62/caption44; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep4-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "04fa41b5244b4fdb489f28be6c12ad92c8b787cd34cad475770e35c8eb994ac8",
+      "render_bytes": 60140926,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 78.919,
+      "source_sha256": "ec820a9c6953d8ca26cbb314685cfc6718d5bf4eb07c3bba3620d77a6734645c",
+      "boundary_note": "42.5s after serious crime speech41.36/caption41.5; nextspeech43.62/caption44; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
