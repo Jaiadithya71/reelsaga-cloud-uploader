@@ -135,7 +135,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "7ad1f15a182da3abcc6584510694bf549d42a21ae60024117c07e913d879dac3",
       "render_bytes": 44770615,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "whole_part_review_passed_private_claims_clean",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -144,7 +144,18 @@
       "repairs": "none; original audio and burned captions; house0.5sedgefades",
       "source_episode_sha256": "d221fff7cbc923d500738cb7042ac5b2921d64276ddbd18bf494da578402c8f8",
       "source_start": 43.5,
-      "source_end": 86.28
+      "source_end": 86.28,
+      "claims_verified": true,
+      "claims_checked_at": "2026-11-11T00:37:28+05:30",
+      "private_video_id": "vsz0utf5IDA",
+      "private_video_url": "https://studio.youtube.com/video/vsz0utf5IDA/edit",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "playlist_id": "PLSDxRohmmBQk",
+      "playlist_membership_saved": true,
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42880923177",
+      "probe_expected_head": "24d5fe42cce63382403b9840bf0a904ecd5cf015",
+      "probe_checkpoint_stop_verified": true
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
