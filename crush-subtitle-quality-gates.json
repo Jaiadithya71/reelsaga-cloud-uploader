@@ -75,17 +75,28 @@
       "playlist_inventory_verified_at": "2026-11-10T20:40:52+05:30"
     },
     "dramabox-crush42000028219-ep1-part3-v1": {
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "whole_part_review_passed_private_claims_clean",
       "whole_part_release_ready": true,
       "approved_render_sha256": "32fa5219177aefd083c45e1a6bb9079a4f23388d0c626a17369799b3913f8985",
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
       "source_start": 94.0,
       "source_end": 141.0,
       "review": "Whole base.en and small.en VAD ASR, 4fps OCR full part plus tight crop, full-frame contact and17targetedfullframes inspected. Base hallucination Breaktheseashells at30s absent in small/VAD and no matching caption; surgical flashback silent there. Opening driver mom line recovered secondary model. All cards complete; last spoken No way in hell finishes42s before47sboundary. Originalaudiohousefades,no repairs.",
-      "claims_verified": false,
+      "claims_verified": true,
       "public_release_ready": false,
       "source_audio_unchanged": true,
-      "caption_repairs": false
+      "caption_repairs": false,
+      "claims_checked_at": "2026-11-10T21:07:54+05:30",
+      "private_video_id": "y5lj-fCp9a0",
+      "private_video_url": "https://studio.youtube.com/video/y5lj-fCp9a0/edit",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "playlist_id": "PLG6wYdXHv9_c",
+      "playlist_membership_saved": true,
+      "playlist_inventory_recheck_pending": true,
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42844416325",
+      "probe_expected_head": "0c026414150e3c5c578e9f22bfc4261400412112",
+      "probe_checkpoint_stop_verified": true
     }
   }
 }
