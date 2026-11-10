@@ -1,0 +1,56 @@
+{
+  "part": "ep9-part2",
+  "source_sha256": "24000e894f90b376bbbbf3187274042736418bb146dbe6f9e7505a5c4f08f0a7",
+  "new_sha256": "2e2082146281cb6dd85489bcd4ea56d94d9d6a0bdf39f1b3207dfbe8282fa61b",
+  "bytes": 60672891,
+  "audio_stream_sha256": "a71c85a5bdb9d591c207a52d9f11ccf3c13656c8be35ad925e46951f012804cd",
+  "audio_byte_exact": true,
+  "timing": [
+    45.4,
+    47.0
+  ],
+  "text": "apologize to me and",
+  "rect": [
+    100,
+    1320,
+    880,
+    200
+  ],
+  "text_y": 1365,
+  "text_alpha": "min(1,max(0,(47-t)/0.5))",
+  "preservation_samples": [
+    {
+      "at": 0.5,
+      "outside_patch_mae_255": 0.807
+    },
+    {
+      "at": 10,
+      "outside_patch_mae_255": 0.27
+    },
+    {
+      "at": 30,
+      "outside_patch_mae_255": 0.139
+    },
+    {
+      "at": 45.36,
+      "outside_patch_mae_255": 0.931
+    },
+    {
+      "at": 45.4,
+      "outside_patch_mae_255": 0.938
+    },
+    {
+      "at": 46,
+      "outside_patch_mae_255": 0.977
+    },
+    {
+      "at": 46.92,
+      "outside_patch_mae_255": 0.233
+    }
+  ],
+  "frame_count_preserved": true,
+  "decode_verified": true,
+  "source_profanity_masking_retained": true,
+  "reason": "Last sourcecard includes pay me a million, spoken in nextpart, afterthiscut. Replaceonlyfinalcardwithwordsactuallyheardbeforecut.",
+  "duration": "47.000000"
+}

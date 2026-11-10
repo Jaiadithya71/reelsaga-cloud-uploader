@@ -1,0 +1,42 @@
+[
+  {
+    "file": "/tmp/e9p2-audio.wav",
+    "segments": [
+      {
+        "start": 5.8,
+        "end": 12.8,
+        "text": " Oh my gosh."
+      },
+      {
+        "start": 23.5,
+        "end": 25.5,
+        "text": " Oh"
+      },
+      {
+        "start": 37.800000000000004,
+        "end": 38.64000000000001,
+        "text": " Bye."
+      },
+      {
+        "start": 43.2,
+        "end": 46.86,
+        "text": " It'll be enough after you apologize to me and"
+      }
+    ]
+  },
+  {
+    "file": "/tmp/e9source.mp4",
+    "segments": [
+      {
+        "start": 89.0,
+        "end": 90.0,
+        "text": " That's enough."
+      },
+      {
+        "start": 90.0,
+        "end": 97.0,
+        "text": " It'll be enough after you apologize to me and pay me a million and not a second before that!"
+      }
+    ]
+  }
+]

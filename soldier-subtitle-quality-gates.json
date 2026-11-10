@@ -398,10 +398,23 @@
       }
     },
     "dramabox-soldier42000030015-ep9-part2-v1": {
-      "status": "review_required",
+      "status": "held_boundary_caption_ahead_of_audio_clean_removal_needed",
       "approved_render_sha256": null,
       "original_render_sha256": "24000e894f90b376bbbbf3187274042736418bb146dbe6f9e7505a5c4f08f0a7",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "whole_part_release_ready": false,
+      "review": {
+        "reviewed_at": "2026-11-10T15:09:00+05:30",
+        "source_render_sha256": "24000e894f90b376bbbbf3187274042736418bb146dbe6f9e7505a5c4f08f0a7",
+        "issue": "Finalcard45.40-end says apologize to me and pay me a million, but47-94sourcecut endsafterand. Followingpart contains paymeamillion. AllothercardsmatchedfullASRsecondarysmall.enVAD4fpsOCRpixels.",
+        "failed_candidates": "Blackbackedtextcandidate rejected:visiblebar. Glyphinpaint andmotioncleanplate rejected:visibleghosting/smears. No upload. No cut/audiochange.",
+        "visual_evidence": [
+          "docs/debug/e9p2-contact.png",
+          "docs/debug/e9p2-crops.png",
+          "docs/debug/e9p2-boundary.png",
+          "docs/debug/e9p2-tail-candidate-boundary.png"
+        ]
+      }
     },
     "dramabox-soldier42000030015-ep9-part3-v1": {
       "status": "known_wording_fixed_full_part_review_pending",
