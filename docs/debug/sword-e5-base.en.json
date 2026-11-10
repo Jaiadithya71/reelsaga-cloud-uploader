@@ -1,0 +1,841 @@
+[
+  {
+    "start": 1.2000000000000006,
+    "end": 2.8,
+    "text": " Really? What shot?",
+    "words": [
+      {
+        "start": 1.2000000000000006,
+        "end": 1.6,
+        "word": " Really?"
+      },
+      {
+        "start": 2.3,
+        "end": 2.5,
+        "word": " What"
+      },
+      {
+        "start": 2.5,
+        "end": 2.8,
+        "word": " shot?"
+      }
+    ]
+  },
+  {
+    "start": 8.620000000000001,
+    "end": 10.48,
+    "text": " See that trial boulder over there?",
+    "words": [
+      {
+        "start": 8.620000000000001,
+        "end": 9.02,
+        "word": " See"
+      },
+      {
+        "start": 9.02,
+        "end": 9.42,
+        "word": " that"
+      },
+      {
+        "start": 9.42,
+        "end": 9.66,
+        "word": " trial"
+      },
+      {
+        "start": 9.66,
+        "end": 9.94,
+        "word": " boulder"
+      },
+      {
+        "start": 9.94,
+        "end": 10.24,
+        "word": " over"
+      },
+      {
+        "start": 10.24,
+        "end": 10.48,
+        "word": " there?"
+      }
+    ]
+  },
+  {
+    "start": 12.0,
+    "end": 13.86,
+    "text": " If you can get that off the ground, I'll pass you.",
+    "words": [
+      {
+        "start": 12.0,
+        "end": 12.4,
+        "word": " If"
+      },
+      {
+        "start": 12.4,
+        "end": 12.48,
+        "word": " you"
+      },
+      {
+        "start": 12.48,
+        "end": 12.58,
+        "word": " can"
+      },
+      {
+        "start": 12.58,
+        "end": 12.7,
+        "word": " get"
+      },
+      {
+        "start": 12.7,
+        "end": 12.82,
+        "word": " that"
+      },
+      {
+        "start": 12.82,
+        "end": 12.94,
+        "word": " off"
+      },
+      {
+        "start": 12.94,
+        "end": 13.04,
+        "word": " the"
+      },
+      {
+        "start": 13.04,
+        "end": 13.2,
+        "word": " ground,"
+      },
+      {
+        "start": 13.38,
+        "end": 13.44,
+        "word": " I'll"
+      },
+      {
+        "start": 13.44,
+        "end": 13.66,
+        "word": " pass"
+      },
+      {
+        "start": 13.66,
+        "end": 13.86,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 14.3,
+    "end": 19.22,
+    "text": " Her? Lift the trial boulder? In her dreams? Even high-level knights struggle with that.",
+    "words": [
+      {
+        "start": 14.3,
+        "end": 14.46,
+        "word": " Her?"
+      },
+      {
+        "start": 15.08,
+        "end": 15.12,
+        "word": " Lift"
+      },
+      {
+        "start": 15.12,
+        "end": 15.28,
+        "word": " the"
+      },
+      {
+        "start": 15.28,
+        "end": 15.46,
+        "word": " trial"
+      },
+      {
+        "start": 15.46,
+        "end": 15.78,
+        "word": " boulder?"
+      },
+      {
+        "start": 16.48,
+        "end": 16.5,
+        "word": " In"
+      },
+      {
+        "start": 16.5,
+        "end": 16.64,
+        "word": " her"
+      },
+      {
+        "start": 16.64,
+        "end": 16.9,
+        "word": " dreams?"
+      },
+      {
+        "start": 17.72,
+        "end": 17.82,
+        "word": " Even"
+      },
+      {
+        "start": 17.82,
+        "end": 18.02,
+        "word": " high"
+      },
+      {
+        "start": 18.02,
+        "end": 18.26,
+        "word": "-level"
+      },
+      {
+        "start": 18.26,
+        "end": 18.44,
+        "word": " knights"
+      },
+      {
+        "start": 18.44,
+        "end": 18.78,
+        "word": " struggle"
+      },
+      {
+        "start": 18.78,
+        "end": 19.04,
+        "word": " with"
+      },
+      {
+        "start": 19.04,
+        "end": 19.22,
+        "word": " that."
+      }
+    ]
+  },
+  {
+    "start": 23.860000000000003,
+    "end": 26.84,
+    "text": " Mr. I just have to make it leave the ground, right?",
+    "words": [
+      {
+        "start": 23.860000000000003,
+        "end": 24.26,
+        "word": " Mr."
+      },
+      {
+        "start": 24.6,
+        "end": 25.0,
+        "word": " I"
+      },
+      {
+        "start": 25.0,
+        "end": 25.18,
+        "word": " just"
+      },
+      {
+        "start": 25.18,
+        "end": 25.38,
+        "word": " have"
+      },
+      {
+        "start": 25.38,
+        "end": 25.52,
+        "word": " to"
+      },
+      {
+        "start": 25.52,
+        "end": 25.68,
+        "word": " make"
+      },
+      {
+        "start": 25.68,
+        "end": 25.84,
+        "word": " it"
+      },
+      {
+        "start": 25.84,
+        "end": 26.0,
+        "word": " leave"
+      },
+      {
+        "start": 26.0,
+        "end": 26.18,
+        "word": " the"
+      },
+      {
+        "start": 26.18,
+        "end": 26.4,
+        "word": " ground,"
+      },
+      {
+        "start": 26.56,
+        "end": 26.84,
+        "word": " right?"
+      }
+    ]
+  },
+  {
+    "start": 26.84,
+    "end": 30.06,
+    "text": " Exactly. If you can move it even an inch.",
+    "words": [
+      {
+        "start": 26.84,
+        "end": 27.7,
+        "word": " Exactly."
+      },
+      {
+        "start": 28.56,
+        "end": 28.92,
+        "word": " If"
+      },
+      {
+        "start": 28.92,
+        "end": 29.02,
+        "word": " you"
+      },
+      {
+        "start": 29.02,
+        "end": 29.12,
+        "word": " can"
+      },
+      {
+        "start": 29.12,
+        "end": 29.28,
+        "word": " move"
+      },
+      {
+        "start": 29.28,
+        "end": 29.38,
+        "word": " it"
+      },
+      {
+        "start": 29.38,
+        "end": 29.56,
+        "word": " even"
+      },
+      {
+        "start": 29.56,
+        "end": 29.7,
+        "word": " an"
+      },
+      {
+        "start": 29.7,
+        "end": 30.06,
+        "word": " inch."
+      }
+    ]
+  },
+  {
+    "start": 34.84,
+    "end": 37.82,
+    "text": " Look at this idiot. That's three tons of obsidian.",
+    "words": [
+      {
+        "start": 34.58,
+        "end": 34.86,
+        "word": " Look"
+      },
+      {
+        "start": 34.86,
+        "end": 35.42,
+        "word": " at"
+      },
+      {
+        "start": 35.42,
+        "end": 35.56,
+        "word": " this"
+      },
+      {
+        "start": 35.56,
+        "end": 35.86,
+        "word": " idiot."
+      },
+      {
+        "start": 36.46,
+        "end": 36.6,
+        "word": " That's"
+      },
+      {
+        "start": 36.6,
+        "end": 36.84,
+        "word": " three"
+      },
+      {
+        "start": 36.84,
+        "end": 37.14,
+        "word": " tons"
+      },
+      {
+        "start": 37.14,
+        "end": 37.38,
+        "word": " of"
+      },
+      {
+        "start": 37.38,
+        "end": 37.82,
+        "word": " obsidian."
+      }
+    ]
+  },
+  {
+    "start": 38.1,
+    "end": 40.04,
+    "text": " She's gonna snap her spine in half.",
+    "words": [
+      {
+        "start": 38.1,
+        "end": 38.44,
+        "word": " She's"
+      },
+      {
+        "start": 38.44,
+        "end": 38.54,
+        "word": " gonna"
+      },
+      {
+        "start": 38.54,
+        "end": 38.96,
+        "word": " snap"
+      },
+      {
+        "start": 38.96,
+        "end": 39.2,
+        "word": " her"
+      },
+      {
+        "start": 39.2,
+        "end": 39.6,
+        "word": " spine"
+      },
+      {
+        "start": 39.6,
+        "end": 39.8,
+        "word": " in"
+      },
+      {
+        "start": 39.8,
+        "end": 40.04,
+        "word": " half."
+      }
+    ]
+  },
+  {
+    "start": 49.879999999999995,
+    "end": 52.84,
+    "text": " Mr. Is this high enough?",
+    "words": [
+      {
+        "start": 49.879999999999995,
+        "end": 50.44,
+        "word": " Mr."
+      },
+      {
+        "start": 51.9,
+        "end": 52.1,
+        "word": " Is"
+      },
+      {
+        "start": 52.1,
+        "end": 52.28,
+        "word": " this"
+      },
+      {
+        "start": 52.28,
+        "end": 52.56,
+        "word": " high"
+      },
+      {
+        "start": 52.56,
+        "end": 52.84,
+        "word": " enough?"
+      }
+    ]
+  },
+  {
+    "start": 53.58,
+    "end": 55.36,
+    "text": " Yes. Put it down.",
+    "words": [
+      {
+        "start": 53.58,
+        "end": 54.14,
+        "word": " Yes."
+      },
+      {
+        "start": 54.9,
+        "end": 55.02,
+        "word": " Put"
+      },
+      {
+        "start": 55.02,
+        "end": 55.14,
+        "word": " it"
+      },
+      {
+        "start": 55.14,
+        "end": 55.36,
+        "word": " down."
+      }
+    ]
+  },
+  {
+    "start": 59.040000000000006,
+    "end": 59.56,
+    "text": " Hugh.",
+    "words": [
+      {
+        "start": 59.040000000000006,
+        "end": 59.56,
+        "word": " Hugh."
+      }
+    ]
+  },
+  {
+    "start": 60.96,
+    "end": 63.26,
+    "text": " Just now how much of your strength did you use?",
+    "words": [
+      {
+        "start": 60.96,
+        "end": 61.48,
+        "word": " Just"
+      },
+      {
+        "start": 61.48,
+        "end": 61.68,
+        "word": " now"
+      },
+      {
+        "start": 61.68,
+        "end": 61.92,
+        "word": " how"
+      },
+      {
+        "start": 61.92,
+        "end": 62.08,
+        "word": " much"
+      },
+      {
+        "start": 62.08,
+        "end": 62.22,
+        "word": " of"
+      },
+      {
+        "start": 62.22,
+        "end": 62.32,
+        "word": " your"
+      },
+      {
+        "start": 62.32,
+        "end": 62.58,
+        "word": " strength"
+      },
+      {
+        "start": 62.58,
+        "end": 62.82,
+        "word": " did"
+      },
+      {
+        "start": 62.82,
+        "end": 62.94,
+        "word": " you"
+      },
+      {
+        "start": 62.94,
+        "end": 63.26,
+        "word": " use?"
+      }
+    ]
+  },
+  {
+    "start": 64.98,
+    "end": 66.6,
+    "text": " Just a teeny tiny bit.",
+    "words": [
+      {
+        "start": 64.98,
+        "end": 65.5,
+        "word": " Just"
+      },
+      {
+        "start": 65.5,
+        "end": 65.7,
+        "word": " a"
+      },
+      {
+        "start": 65.7,
+        "end": 66.04,
+        "word": " teeny"
+      },
+      {
+        "start": 66.04,
+        "end": 66.28,
+        "word": " tiny"
+      },
+      {
+        "start": 66.28,
+        "end": 66.6,
+        "word": " bit."
+      }
+    ]
+  },
+  {
+    "start": 67.72,
+    "end": 69.56,
+    "text": " What do you mean a teeny tiny bit?",
+    "words": [
+      {
+        "start": 67.72,
+        "end": 68.24,
+        "word": " What"
+      },
+      {
+        "start": 68.24,
+        "end": 68.38,
+        "word": " do"
+      },
+      {
+        "start": 68.38,
+        "end": 68.46,
+        "word": " you"
+      },
+      {
+        "start": 68.46,
+        "end": 68.62,
+        "word": " mean"
+      },
+      {
+        "start": 68.62,
+        "end": 68.76,
+        "word": " a"
+      },
+      {
+        "start": 68.76,
+        "end": 69.06,
+        "word": " teeny"
+      },
+      {
+        "start": 69.06,
+        "end": 69.24,
+        "word": " tiny"
+      },
+      {
+        "start": 69.24,
+        "end": 69.56,
+        "word": " bit?"
+      }
+    ]
+  },
+  {
+    "start": 70.36,
+    "end": 74.96,
+    "text": " Master said no is too strong, so I can't just use my force on other people.",
+    "words": [
+      {
+        "start": 70.36,
+        "end": 70.66,
+        "word": " Master"
+      },
+      {
+        "start": 70.66,
+        "end": 71.08,
+        "word": " said"
+      },
+      {
+        "start": 71.08,
+        "end": 71.34,
+        "word": " no"
+      },
+      {
+        "start": 71.34,
+        "end": 71.5,
+        "word": " is"
+      },
+      {
+        "start": 71.5,
+        "end": 71.7,
+        "word": " too"
+      },
+      {
+        "start": 71.7,
+        "end": 72.18,
+        "word": " strong,"
+      },
+      {
+        "start": 72.56,
+        "end": 72.8,
+        "word": " so"
+      },
+      {
+        "start": 72.8,
+        "end": 72.92,
+        "word": " I"
+      },
+      {
+        "start": 72.92,
+        "end": 73.26,
+        "word": " can't"
+      },
+      {
+        "start": 73.26,
+        "end": 73.42,
+        "word": " just"
+      },
+      {
+        "start": 73.42,
+        "end": 73.6,
+        "word": " use"
+      },
+      {
+        "start": 73.6,
+        "end": 73.82,
+        "word": " my"
+      },
+      {
+        "start": 73.82,
+        "end": 74.14,
+        "word": " force"
+      },
+      {
+        "start": 74.14,
+        "end": 74.36,
+        "word": " on"
+      },
+      {
+        "start": 74.36,
+        "end": 74.5,
+        "word": " other"
+      },
+      {
+        "start": 74.5,
+        "end": 74.96,
+        "word": " people."
+      }
+    ]
+  },
+  {
+    "start": 75.72,
+    "end": 80.52,
+    "text": " So, Nola only used the teeny tiny bit of strength I used for sword practice.",
+    "words": [
+      {
+        "start": 75.72,
+        "end": 76.02,
+        "word": " So,"
+      },
+      {
+        "start": 76.48,
+        "end": 76.74,
+        "word": " Nola"
+      },
+      {
+        "start": 76.74,
+        "end": 77.1,
+        "word": " only"
+      },
+      {
+        "start": 77.1,
+        "end": 77.54,
+        "word": " used"
+      },
+      {
+        "start": 77.54,
+        "end": 77.72,
+        "word": " the"
+      },
+      {
+        "start": 77.72,
+        "end": 78.14,
+        "word": " teeny"
+      },
+      {
+        "start": 78.14,
+        "end": 78.36,
+        "word": " tiny"
+      },
+      {
+        "start": 78.36,
+        "end": 78.68,
+        "word": " bit"
+      },
+      {
+        "start": 78.68,
+        "end": 78.84,
+        "word": " of"
+      },
+      {
+        "start": 78.84,
+        "end": 79.08,
+        "word": " strength"
+      },
+      {
+        "start": 79.08,
+        "end": 79.44,
+        "word": " I"
+      },
+      {
+        "start": 79.44,
+        "end": 79.7,
+        "word": " used"
+      },
+      {
+        "start": 79.7,
+        "end": 79.88,
+        "word": " for"
+      },
+      {
+        "start": 79.88,
+        "end": 80.06,
+        "word": " sword"
+      },
+      {
+        "start": 80.06,
+        "end": 80.52,
+        "word": " practice."
+      }
+    ]
+  },
+  {
+    "start": 83.5,
+    "end": 86.12,
+    "text": " The teeny bit? You call that a teeny bit?",
+    "words": [
+      {
+        "start": 83.5,
+        "end": 84.02,
+        "word": " The"
+      },
+      {
+        "start": 84.02,
+        "end": 84.34,
+        "word": " teeny"
+      },
+      {
+        "start": 84.34,
+        "end": 84.48,
+        "word": " bit?"
+      },
+      {
+        "start": 85.0,
+        "end": 85.16,
+        "word": " You"
+      },
+      {
+        "start": 85.16,
+        "end": 85.3,
+        "word": " call"
+      },
+      {
+        "start": 85.3,
+        "end": 85.52,
+        "word": " that"
+      },
+      {
+        "start": 85.52,
+        "end": 85.66,
+        "word": " a"
+      },
+      {
+        "start": 85.66,
+        "end": 85.96,
+        "word": " teeny"
+      },
+      {
+        "start": 85.96,
+        "end": 86.12,
+        "word": " bit?"
+      }
+    ]
+  }
+]
