@@ -539,3 +539,5 @@ not evidence of "not published".
 - Frozen start: own per-series waiver; published 2026-11-02 → 2026-11-03.
 - Star Princess start: per-series waiver granted 2026-11-03 17:36:58 IST
   (series-only skip of private YT checks); supplied free run complete.
+
+- SwordE2P2ledgerSUCCESS https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42917367259 exactad4203866921ff685b5af9fe942e72e4fc8a4199 stoppedreadbackverified22:45:54Z thenpublishedcheckpoint.
