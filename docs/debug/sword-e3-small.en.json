@@ -1,0 +1,1036 @@
+[
+  {
+    "start": 2.54,
+    "end": 4.44,
+    "text": " Stop! Move! I can't stop it!",
+    "words": [
+      {
+        "start": 2.54,
+        "end": 2.72,
+        "word": " Stop!"
+      },
+      {
+        "start": 2.96,
+        "end": 3.16,
+        "word": " Move!"
+      },
+      {
+        "start": 3.38,
+        "end": 3.48,
+        "word": " I"
+      },
+      {
+        "start": 3.48,
+        "end": 3.76,
+        "word": " can't"
+      },
+      {
+        "start": 3.76,
+        "end": 4.02,
+        "word": " stop"
+      },
+      {
+        "start": 4.02,
+        "end": 4.44,
+        "word": " it!"
+      }
+    ]
+  },
+  {
+    "start": 9.43,
+    "end": 12.03,
+    "text": " Silly horsey. Why won't you listen?",
+    "words": [
+      {
+        "start": 9.43,
+        "end": 9.95,
+        "word": " Silly"
+      },
+      {
+        "start": 9.95,
+        "end": 10.47,
+        "word": " horsey."
+      },
+      {
+        "start": 11.07,
+        "end": 11.29,
+        "word": " Why"
+      },
+      {
+        "start": 11.29,
+        "end": 11.49,
+        "word": " won't"
+      },
+      {
+        "start": 11.49,
+        "end": 11.67,
+        "word": " you"
+      },
+      {
+        "start": 11.67,
+        "end": 12.03,
+        "word": " listen?"
+      }
+    ]
+  },
+  {
+    "start": 14.79,
+    "end": 17.65,
+    "text": " She... she stopped a magic carriage with one hand?",
+    "words": [
+      {
+        "start": 14.79,
+        "end": 15.31,
+        "word": " She..."
+      },
+      {
+        "start": 15.31,
+        "end": 15.75,
+        "word": " she"
+      },
+      {
+        "start": 15.75,
+        "end": 16.03,
+        "word": " stopped"
+      },
+      {
+        "start": 16.03,
+        "end": 16.23,
+        "word": " a"
+      },
+      {
+        "start": 16.23,
+        "end": 16.49,
+        "word": " magic"
+      },
+      {
+        "start": 16.49,
+        "end": 16.81,
+        "word": " carriage"
+      },
+      {
+        "start": 16.81,
+        "end": 17.01,
+        "word": " with"
+      },
+      {
+        "start": 17.01,
+        "end": 17.23,
+        "word": " one"
+      },
+      {
+        "start": 17.23,
+        "end": 17.65,
+        "word": " hand?"
+      }
+    ]
+  },
+  {
+    "start": 22.24,
+    "end": 26.04,
+    "text": " Mr. Do you know Arthur? Nola's looking for him.",
+    "words": [
+      {
+        "start": 22.24,
+        "end": 22.76,
+        "word": " Mr."
+      },
+      {
+        "start": 23.3,
+        "end": 23.58,
+        "word": " Do"
+      },
+      {
+        "start": 23.58,
+        "end": 23.7,
+        "word": " you"
+      },
+      {
+        "start": 23.7,
+        "end": 23.88,
+        "word": " know"
+      },
+      {
+        "start": 23.88,
+        "end": 24.28,
+        "word": " Arthur?"
+      },
+      {
+        "start": 24.92,
+        "end": 25.12,
+        "word": " Nola's"
+      },
+      {
+        "start": 25.12,
+        "end": 25.34,
+        "word": " looking"
+      },
+      {
+        "start": 25.34,
+        "end": 25.66,
+        "word": " for"
+      },
+      {
+        "start": 25.66,
+        "end": 26.04,
+        "word": " him."
+      }
+    ]
+  },
+  {
+    "start": 26.2,
+    "end": 28.0,
+    "text": " Shh, kid. You can't just say that name.",
+    "words": [
+      {
+        "start": 26.2,
+        "end": 26.46,
+        "word": " Shh,"
+      },
+      {
+        "start": 26.68,
+        "end": 26.76,
+        "word": " kid."
+      },
+      {
+        "start": 27.12,
+        "end": 27.2,
+        "word": " You"
+      },
+      {
+        "start": 27.2,
+        "end": 27.36,
+        "word": " can't"
+      },
+      {
+        "start": 27.36,
+        "end": 27.46,
+        "word": " just"
+      },
+      {
+        "start": 27.46,
+        "end": 27.62,
+        "word": " say"
+      },
+      {
+        "start": 27.62,
+        "end": 27.78,
+        "word": " that"
+      },
+      {
+        "start": 27.78,
+        "end": 28.0,
+        "word": " name."
+      }
+    ]
+  },
+  {
+    "start": 28.6,
+    "end": 28.98,
+    "text": " Why not?",
+    "words": [
+      {
+        "start": 28.6,
+        "end": 28.74,
+        "word": " Why"
+      },
+      {
+        "start": 28.74,
+        "end": 28.98,
+        "word": " not?"
+      }
+    ]
+  },
+  {
+    "start": 29.54,
+    "end": 32.12,
+    "text": " He's the supreme paladin. The greatest man on the whole continent.",
+    "words": [
+      {
+        "start": 29.54,
+        "end": 29.78,
+        "word": " He's"
+      },
+      {
+        "start": 29.78,
+        "end": 29.92,
+        "word": " the"
+      },
+      {
+        "start": 29.92,
+        "end": 30.22,
+        "word": " supreme"
+      },
+      {
+        "start": 30.22,
+        "end": 30.6,
+        "word": " paladin."
+      },
+      {
+        "start": 30.92,
+        "end": 31.04,
+        "word": " The"
+      },
+      {
+        "start": 31.04,
+        "end": 31.2,
+        "word": " greatest"
+      },
+      {
+        "start": 31.2,
+        "end": 31.46,
+        "word": " man"
+      },
+      {
+        "start": 31.46,
+        "end": 31.58,
+        "word": " on"
+      },
+      {
+        "start": 31.58,
+        "end": 31.66,
+        "word": " the"
+      },
+      {
+        "start": 31.66,
+        "end": 31.82,
+        "word": " whole"
+      },
+      {
+        "start": 31.82,
+        "end": 32.12,
+        "word": " continent."
+      }
+    ]
+  },
+  {
+    "start": 33.24,
+    "end": 36.4,
+    "text": " A big shot, huh? So Nola can't see him.",
+    "words": [
+      {
+        "start": 33.24,
+        "end": 33.54,
+        "word": " A"
+      },
+      {
+        "start": 33.54,
+        "end": 33.74,
+        "word": " big"
+      },
+      {
+        "start": 33.74,
+        "end": 34.0,
+        "word": " shot,"
+      },
+      {
+        "start": 34.14,
+        "end": 34.28,
+        "word": " huh?"
+      },
+      {
+        "start": 34.98,
+        "end": 35.3,
+        "word": " So"
+      },
+      {
+        "start": 35.3,
+        "end": 35.56,
+        "word": " Nola"
+      },
+      {
+        "start": 35.56,
+        "end": 35.92,
+        "word": " can't"
+      },
+      {
+        "start": 35.92,
+        "end": 36.1,
+        "word": " see"
+      },
+      {
+        "start": 36.1,
+        "end": 36.4,
+        "word": " him."
+      }
+    ]
+  },
+  {
+    "start": 36.4,
+    "end": 39.86,
+    "text": " Not a chance. Even great navels never get to see him.",
+    "words": [
+      {
+        "start": 36.4,
+        "end": 36.94,
+        "word": " Not"
+      },
+      {
+        "start": 36.94,
+        "end": 37.64,
+        "word": " a"
+      },
+      {
+        "start": 37.64,
+        "end": 37.92,
+        "word": " chance."
+      },
+      {
+        "start": 38.42,
+        "end": 38.56,
+        "word": " Even"
+      },
+      {
+        "start": 38.56,
+        "end": 38.76,
+        "word": " great"
+      },
+      {
+        "start": 38.76,
+        "end": 39.18,
+        "word": " navels"
+      },
+      {
+        "start": 39.18,
+        "end": 39.24,
+        "word": " never"
+      },
+      {
+        "start": 39.24,
+        "end": 39.42,
+        "word": " get"
+      },
+      {
+        "start": 39.42,
+        "end": 39.54,
+        "word": " to"
+      },
+      {
+        "start": 39.54,
+        "end": 39.68,
+        "word": " see"
+      },
+      {
+        "start": 39.68,
+        "end": 39.86,
+        "word": " him."
+      }
+    ]
+  },
+  {
+    "start": 40.22,
+    "end": 43.32,
+    "text": " But if you really want to see him, there's one way.",
+    "words": [
+      {
+        "start": 40.22,
+        "end": 40.36,
+        "word": " But"
+      },
+      {
+        "start": 40.36,
+        "end": 41.38,
+        "word": " if"
+      },
+      {
+        "start": 41.38,
+        "end": 41.5,
+        "word": " you"
+      },
+      {
+        "start": 41.5,
+        "end": 41.7,
+        "word": " really"
+      },
+      {
+        "start": 41.7,
+        "end": 41.84,
+        "word": " want"
+      },
+      {
+        "start": 41.84,
+        "end": 41.92,
+        "word": " to"
+      },
+      {
+        "start": 41.92,
+        "end": 42.1,
+        "word": " see"
+      },
+      {
+        "start": 42.1,
+        "end": 42.38,
+        "word": " him,"
+      },
+      {
+        "start": 42.7,
+        "end": 42.9,
+        "word": " there's"
+      },
+      {
+        "start": 42.9,
+        "end": 43.04,
+        "word": " one"
+      },
+      {
+        "start": 43.04,
+        "end": 43.32,
+        "word": " way."
+      }
+    ]
+  },
+  {
+    "start": 44.1,
+    "end": 44.56,
+    "text": " What way?",
+    "words": [
+      {
+        "start": 44.1,
+        "end": 44.22,
+        "word": " What"
+      },
+      {
+        "start": 44.22,
+        "end": 44.56,
+        "word": " way?"
+      }
+    ]
+  },
+  {
+    "start": 46.04,
+    "end": 48.04,
+    "text": " The Holy Order's recruiting night trainees today.",
+    "words": [
+      {
+        "start": 46.04,
+        "end": 46.14,
+        "word": " The"
+      },
+      {
+        "start": 46.14,
+        "end": 46.38,
+        "word": " Holy"
+      },
+      {
+        "start": 46.38,
+        "end": 46.74,
+        "word": " Order's"
+      },
+      {
+        "start": 46.74,
+        "end": 47.08,
+        "word": " recruiting"
+      },
+      {
+        "start": 47.08,
+        "end": 47.3,
+        "word": " night"
+      },
+      {
+        "start": 47.3,
+        "end": 47.66,
+        "word": " trainees"
+      },
+      {
+        "start": 47.66,
+        "end": 48.04,
+        "word": " today."
+      }
+    ]
+  },
+  {
+    "start": 48.32,
+    "end": 49.0,
+    "text": " He built it himself.",
+    "words": [
+      {
+        "start": 48.32,
+        "end": 48.38,
+        "word": " He"
+      },
+      {
+        "start": 48.38,
+        "end": 48.52,
+        "word": " built"
+      },
+      {
+        "start": 48.52,
+        "end": 48.66,
+        "word": " it"
+      },
+      {
+        "start": 48.66,
+        "end": 49.0,
+        "word": " himself."
+      }
+    ]
+  },
+  {
+    "start": 50.14,
+    "end": 52.96,
+    "text": " Get in, train hard enough, and maybe you'll catch a glimpse of him.",
+    "words": [
+      {
+        "start": 50.14,
+        "end": 50.24,
+        "word": " Get"
+      },
+      {
+        "start": 50.24,
+        "end": 50.46,
+        "word": " in,"
+      },
+      {
+        "start": 50.76,
+        "end": 51.0,
+        "word": " train"
+      },
+      {
+        "start": 51.0,
+        "end": 51.26,
+        "word": " hard"
+      },
+      {
+        "start": 51.26,
+        "end": 51.44,
+        "word": " enough,"
+      },
+      {
+        "start": 51.74,
+        "end": 51.9,
+        "word": " and"
+      },
+      {
+        "start": 51.9,
+        "end": 52.02,
+        "word": " maybe"
+      },
+      {
+        "start": 52.02,
+        "end": 52.18,
+        "word": " you'll"
+      },
+      {
+        "start": 52.18,
+        "end": 52.3,
+        "word": " catch"
+      },
+      {
+        "start": 52.3,
+        "end": 52.46,
+        "word": " a"
+      },
+      {
+        "start": 52.46,
+        "end": 52.56,
+        "word": " glimpse"
+      },
+      {
+        "start": 52.56,
+        "end": 52.72,
+        "word": " of"
+      },
+      {
+        "start": 52.72,
+        "end": 52.96,
+        "word": " him."
+      }
+    ]
+  },
+  {
+    "start": 53.56,
+    "end": 53.84,
+    "text": " Way off.",
+    "words": [
+      {
+        "start": 53.56,
+        "end": 53.62,
+        "word": " Way"
+      },
+      {
+        "start": 53.62,
+        "end": 53.84,
+        "word": " off."
+      }
+    ]
+  },
+  {
+    "start": 54.94,
+    "end": 57.22,
+    "text": " Okay, Nola's going to be a night trainee.",
+    "words": [
+      {
+        "start": 54.94,
+        "end": 55.38,
+        "word": " Okay,"
+      },
+      {
+        "start": 56.04,
+        "end": 56.26,
+        "word": " Nola's"
+      },
+      {
+        "start": 56.26,
+        "end": 56.32,
+        "word": " going"
+      },
+      {
+        "start": 56.32,
+        "end": 56.4,
+        "word": " to"
+      },
+      {
+        "start": 56.4,
+        "end": 56.5,
+        "word": " be"
+      },
+      {
+        "start": 56.5,
+        "end": 56.62,
+        "word": " a"
+      },
+      {
+        "start": 56.62,
+        "end": 56.78,
+        "word": " night"
+      },
+      {
+        "start": 56.78,
+        "end": 57.22,
+        "word": " trainee."
+      }
+    ]
+  },
+  {
+    "start": 65.56,
+    "end": 67.58,
+    "text": " Top tier magic talent. Incredible.",
+    "words": [
+      {
+        "start": 65.56,
+        "end": 65.7,
+        "word": " Top"
+      },
+      {
+        "start": 65.7,
+        "end": 66.02,
+        "word": " tier"
+      },
+      {
+        "start": 66.02,
+        "end": 66.34,
+        "word": " magic"
+      },
+      {
+        "start": 66.34,
+        "end": 66.7,
+        "word": " talent."
+      },
+      {
+        "start": 67.2,
+        "end": 67.58,
+        "word": " Incredible."
+      }
+    ]
+  },
+  {
+    "start": 69.28,
+    "end": 72.7,
+    "text": " Whoa! So if I touch the glowing rock, I get to see Big Brother.",
+    "words": [
+      {
+        "start": 69.28,
+        "end": 69.72,
+        "word": " Whoa!"
+      },
+      {
+        "start": 70.1,
+        "end": 70.3,
+        "word": " So"
+      },
+      {
+        "start": 70.3,
+        "end": 70.4,
+        "word": " if"
+      },
+      {
+        "start": 70.4,
+        "end": 70.56,
+        "word": " I"
+      },
+      {
+        "start": 70.56,
+        "end": 70.74,
+        "word": " touch"
+      },
+      {
+        "start": 70.74,
+        "end": 70.94,
+        "word": " the"
+      },
+      {
+        "start": 70.94,
+        "end": 71.16,
+        "word": " glowing"
+      },
+      {
+        "start": 71.16,
+        "end": 71.48,
+        "word": " rock,"
+      },
+      {
+        "start": 71.68,
+        "end": 71.82,
+        "word": " I"
+      },
+      {
+        "start": 71.82,
+        "end": 71.98,
+        "word": " get"
+      },
+      {
+        "start": 71.98,
+        "end": 72.1,
+        "word": " to"
+      },
+      {
+        "start": 72.1,
+        "end": 72.28,
+        "word": " see"
+      },
+      {
+        "start": 72.28,
+        "end": 72.46,
+        "word": " Big"
+      },
+      {
+        "start": 72.46,
+        "end": 72.7,
+        "word": " Brother."
+      }
+    ]
+  },
+  {
+    "start": 75.03,
+    "end": 76.51,
+    "text": " Where'd this little beggar come from?",
+    "words": [
+      {
+        "start": 75.03,
+        "end": 75.45,
+        "word": " Where'd"
+      },
+      {
+        "start": 75.45,
+        "end": 75.55,
+        "word": " this"
+      },
+      {
+        "start": 75.55,
+        "end": 75.79,
+        "word": " little"
+      },
+      {
+        "start": 75.79,
+        "end": 76.09,
+        "word": " beggar"
+      },
+      {
+        "start": 76.09,
+        "end": 76.25,
+        "word": " come"
+      },
+      {
+        "start": 76.25,
+        "end": 76.51,
+        "word": " from?"
+      }
+    ]
+  },
+  {
+    "start": 76.91,
+    "end": 78.79,
+    "text": " Doesn't even have a wand and she wants to join the order?",
+    "words": [
+      {
+        "start": 76.91,
+        "end": 77.09,
+        "word": " Doesn't"
+      },
+      {
+        "start": 77.09,
+        "end": 77.25,
+        "word": " even"
+      },
+      {
+        "start": 77.25,
+        "end": 77.43,
+        "word": " have"
+      },
+      {
+        "start": 77.43,
+        "end": 77.55,
+        "word": " a"
+      },
+      {
+        "start": 77.55,
+        "end": 77.73,
+        "word": " wand"
+      },
+      {
+        "start": 77.73,
+        "end": 77.93,
+        "word": " and"
+      },
+      {
+        "start": 77.93,
+        "end": 78.03,
+        "word": " she"
+      },
+      {
+        "start": 78.03,
+        "end": 78.15,
+        "word": " wants"
+      },
+      {
+        "start": 78.15,
+        "end": 78.29,
+        "word": " to"
+      },
+      {
+        "start": 78.29,
+        "end": 78.43,
+        "word": " join"
+      },
+      {
+        "start": 78.43,
+        "end": 78.57,
+        "word": " the"
+      },
+      {
+        "start": 78.57,
+        "end": 78.79,
+        "word": " order?"
+      }
+    ]
+  },
+  {
+    "start": 79.37,
+    "end": 82.41,
+    "text": " Nola has a sword, and Nola is super duper strong.",
+    "words": [
+      {
+        "start": 79.37,
+        "end": 79.49,
+        "word": " Nola"
+      },
+      {
+        "start": 79.49,
+        "end": 79.73,
+        "word": " has"
+      },
+      {
+        "start": 79.73,
+        "end": 79.93,
+        "word": " a"
+      },
+      {
+        "start": 79.93,
+        "end": 80.25,
+        "word": " sword,"
+      },
+      {
+        "start": 80.45,
+        "end": 80.71,
+        "word": " and"
+      },
+      {
+        "start": 80.71,
+        "end": 80.97,
+        "word": " Nola"
+      },
+      {
+        "start": 80.97,
+        "end": 81.19,
+        "word": " is"
+      },
+      {
+        "start": 81.19,
+        "end": 81.63,
+        "word": " super"
+      },
+      {
+        "start": 81.63,
+        "end": 81.99,
+        "word": " duper"
+      },
+      {
+        "start": 81.99,
+        "end": 82.41,
+        "word": " strong."
+      }
+    ]
+  },
+  {
+    "start": 82.95,
+    "end": 87.13,
+    "text": " Next, you with the piece of scrap iron. Get up here.",
+    "words": [
+      {
+        "start": 82.95,
+        "end": 83.37,
+        "word": " Next,"
+      },
+      {
+        "start": 84.35,
+        "end": 84.55,
+        "word": " you"
+      },
+      {
+        "start": 84.55,
+        "end": 85.07,
+        "word": " with"
+      },
+      {
+        "start": 85.07,
+        "end": 85.17,
+        "word": " the"
+      },
+      {
+        "start": 85.17,
+        "end": 85.31,
+        "word": " piece"
+      },
+      {
+        "start": 85.31,
+        "end": 85.45,
+        "word": " of"
+      },
+      {
+        "start": 85.45,
+        "end": 85.69,
+        "word": " scrap"
+      },
+      {
+        "start": 85.69,
+        "end": 86.03,
+        "word": " iron."
+      },
+      {
+        "start": 86.69,
+        "end": 86.77,
+        "word": " Get"
+      },
+      {
+        "start": 86.77,
+        "end": 86.91,
+        "word": " up"
+      },
+      {
+        "start": 86.91,
+        "end": 87.13,
+        "word": " here."
+      }
+    ]
+  }
+]
