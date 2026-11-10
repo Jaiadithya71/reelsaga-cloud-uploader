@@ -76,6 +76,36 @@
       "native_source_not_upscaled_or_downscaled": true,
       "boundary_note": "47.5s after Okay ends46.27; next speech Nola begins50.3; no source footage omitted",
       "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep2-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "f75ed4f60e0491258f7c41b5af3426845f508ddddee57a65bfd8b1cfc5725c9b",
+      "render_bytes": 41188101,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "boundary_note": "43.5 after Nola loves jellybeans ends42.38 before next counting46.26; no footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "source_episode_sha256": "d221fff7cbc923d500738cb7042ac5b2921d64276ddbd18bf494da578402c8f8",
+      "source_start": 0,
+      "source_end": 43.5
+    },
+    "yourchannel-sword829261-ep2-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "7ad1f15a182da3abcc6584510694bf549d42a21ae60024117c07e913d879dac3",
+      "render_bytes": 44770615,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "boundary_note": "43.5 after Nola loves jellybeans ends42.38 before next counting46.26; no footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "source_episode_sha256": "d221fff7cbc923d500738cb7042ac5b2921d64276ddbd18bf494da578402c8f8",
+      "source_start": 43.5,
+      "source_end": 86.28
     }
   }
 }
