@@ -23,7 +23,19 @@
       "playlist_sort": "Date published (oldest)",
       "native_ai_yes": true,
       "studio_save_reload_undo_disabled": true,
-      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42800548906"
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42800548906",
+      "instagram_staged": {
+        "scheduled_local": "2026-11-10T19:15:00+05:30",
+        "updated_toast_observed_local": "2026-11-10T16:24:50+05:30",
+        "fresh_reopen_verified_local": "2026-11-10T16:25:02+05:30",
+        "feed": true,
+        "ai_generated": true,
+        "trial": false,
+        "mobile_notification": false,
+        "cover": "source frame 2 seconds, full pixels inspected",
+        "status": "scheduled_not_published",
+        "caveat": "19:15 slot assumes prior Soldier E9P1 YT actual no later than18:15; release followthrough will validate pacing"
+      }
     }
   }
 }
