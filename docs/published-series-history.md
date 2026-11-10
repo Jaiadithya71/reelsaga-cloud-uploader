@@ -29,6 +29,13 @@ not evidence of "not published".
 | The Blood Pact Game; Gone Before the Vows (31/31, complete Oct 6, both platforms); From F-Class Trash to Mech God; Wrong Door Right Girl; She Chose Her Lover. I Took Back My Empire.; Cast Me Out, Feed the Swarm; The Hidden Heiress; The Mute Heiress Speaks; My Robot Son will Save the World; A Love Left Unspoken; Don't Mess With That Airport Cleaner | IG | - | - | before/early Oct 2026 | index cards (pre-Buffer lane history) |
 
 ## Active run
+- Sword E2P14sDKhKEuewM public03:07:40ISTNov11 gap65m33s
+  https://www.youtube.com/watch?v=4sDKhKEuewM . Freshclaimsnone/AIyes/Ad/CTA,
+  ownplaylistSaveReloadDisabled,watchplayerOK/privatefalse/unlistedfalse,
+  publishDate2026-11-10T13:37:40-08:00. Inventory03:08 E1P1/P2/E2P1Public→
+  E2P2vsz0utf5IDA/E3P1pr-CBXtJ4SA/E3P2AGQz5R44gyIPrivate,allgatedready.
+  Nextfloor04:07:40/hardline07:07:40,E2P2release04:11-04:13arranged.
+
 - Sword E1P2icg5_DXP5Uc public02:02:07ISTNov11 gap64m54s
   https://www.youtube.com/watch?v=icg5_DXP5Uc . FreshaudioonlyclaimKnightErrant/
   Philleannnoimpactnostrike;standingOct1Yes;AIyes/Ad/playlistSaveReloadDisabled,
