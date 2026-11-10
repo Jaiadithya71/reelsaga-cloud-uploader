@@ -80,7 +80,14 @@
       "public_at": "2026-11-11T00:57:13+05:30",
       "publish_date_raw": "2026-11-10T11:27:13-08:00",
       "public_watch_player_ok": true,
-      "public_studio_reload_save_disabled": true
+      "public_studio_reload_save_disabled": true,
+      "ledger_reconcile": {
+        "status": "success",
+        "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42885647789",
+        "head_sha": "518ebdccaedbee5cbf002f386758a7f7b0498a97",
+        "readback": "published",
+        "checked_at": "2026-11-11T01:06:45+05:30"
+      }
     },
     "yourchannel-sword829261-ep1-part2-v1": {
       "whole_part_release_ready": true,
