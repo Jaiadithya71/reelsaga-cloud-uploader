@@ -156,17 +156,28 @@
       "playlist_inventory_verified_at": "2026-11-10T22:49:07+05:30"
     },
     "dramabox-crush42000028219-ep2-part2-v1": {
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "whole_part_review_passed_private_claims_clean",
       "whole_part_release_ready": true,
       "approved_render_sha256": "7b35fc3408a765f9dd52dcbb289aae7c9b738d7c5468a89eef8513d7c46ba036",
       "source_sha256": "833385aad46ebd82517fd9b2f0912410612910f2b2a3b8bea6f1162f97656e9e",
       "source_start": 35.25,
       "source_end": 73.967,
       "review": "Whole base.en+small.enVADASR/4fpsOCR/fullcontact+21targetedwholeframes inspected22:49-22:51. All source footage remainder retained no caption repairs. Yara misheard Yarn by ASR but correct name caption. Last secretson line complete36.9 before38.717endpoint; originalaudiohousefades.",
-      "claims_verified": false,
+      "claims_verified": true,
       "public_release_ready": false,
       "source_audio_unchanged": true,
-      "caption_repairs": false
+      "caption_repairs": false,
+      "claims_checked_at": "2026-11-10T23:02:21+05:30",
+      "private_video_id": "IQIV4H56Kj8",
+      "private_video_url": "https://studio.youtube.com/video/IQIV4H56Kj8/edit",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "playlist_id": "PLG6wYdXHv9_c",
+      "playlist_membership_saved": true,
+      "playlist_inventory_recheck_pending": true,
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42864117985",
+      "probe_expected_head": "7783e2399ced586829906b2518a8307a863e51ff",
+      "probe_checkpoint_stop_verified": true
     }
   }
 }
