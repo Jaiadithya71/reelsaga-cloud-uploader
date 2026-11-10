@@ -1,0 +1,81 @@
+{
+  "series": "The Child Who Guards the Sword",
+  "dramacps_id": 829261,
+  "source_platform": "yourchannel",
+  "source_url": "https://dramacps.com/dashboard",
+  "affiliate_drama_url": "https://r.reelsgo.tv/lkCnNDHih1HZ",
+  "free_episode_urls": [
+    {
+      "episode": "Episode 1 \u00b7 1",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2296a5f6-1a1aaeb5040-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 2 \u00b7 2",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/27d50087-1a1aaeb5044-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 3 \u00b7 3",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/39c46bc2-1a1aaeb5041-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 4 \u00b7 4",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/41636c62-1a1aaeb508d-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 5 \u00b7 5",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/47bd814c-1a1aaeb507a-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 6 \u00b7 6",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/47dff7ee-1a1aaeb507d-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 7 \u00b7 7",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/32452e74-1a1aaeb508f-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 8 \u00b7 8",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1a2032a9-1a1aaeb5042-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 9 \u00b7 9",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/38f0fbd7-1a1aaeb5042-0005-9573-534-c9280.mp4"
+    },
+    {
+      "episode": "Episode 10 \u00b7 10",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/35cf20b0-1a1aaeb5041-0005-9573-534-c9280.mp4"
+    }
+  ],
+  "source_sha256": "35bc92ee5035095de0eccddca2ca0bbcf37391a9e966801b6c7dcb25d256cb0c",
+  "source_duration": 91.202,
+  "source_native_resolution": [
+    720,
+    1282
+  ],
+  "parts": {
+    "yourchannel-sword829261-ep1-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "2227f31ca68ee91feaef474bf2ff7652dc3d1adff100510ac0ca3a39b8356d5f",
+      "render_bytes": 49748791,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "boundary_note": "47.5s after Okay ends46.27; next speech Nola begins50.3; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep1-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "79e3b236f23325beb63c74cc33f2f90e3d06f1b5bbbec7baed68d22d411e8b6d",
+      "render_bytes": 40561823,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "boundary_note": "47.5s after Okay ends46.27; next speech Nola begins50.3; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    }
+  }
+}

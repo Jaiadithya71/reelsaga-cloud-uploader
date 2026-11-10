@@ -1,0 +1,900 @@
+[
+  {
+    "start": 9.36,
+    "end": 11.4,
+    "text": " They ain't pick it up",
+    "words": [
+      {
+        "start": 9.36,
+        "end": 9.84,
+        "word": " They"
+      },
+      {
+        "start": 9.84,
+        "end": 10.34,
+        "word": " ain't"
+      },
+      {
+        "start": 10.34,
+        "end": 10.72,
+        "word": " pick"
+      },
+      {
+        "start": 10.72,
+        "end": 10.86,
+        "word": " it"
+      },
+      {
+        "start": 10.86,
+        "end": 11.4,
+        "word": " up"
+      }
+    ]
+  },
+  {
+    "start": 12.0,
+    "end": 18.98,
+    "text": " Even old Millers ox doesn't work this hard. I'm only six. Hold on. We'll head back once I catch a fish",
+    "words": [
+      {
+        "start": 12.0,
+        "end": 12.38,
+        "word": " Even"
+      },
+      {
+        "start": 12.38,
+        "end": 12.68,
+        "word": " old"
+      },
+      {
+        "start": 12.68,
+        "end": 13.06,
+        "word": " Millers"
+      },
+      {
+        "start": 13.06,
+        "end": 13.26,
+        "word": " ox"
+      },
+      {
+        "start": 13.26,
+        "end": 13.66,
+        "word": " doesn't"
+      },
+      {
+        "start": 13.66,
+        "end": 13.84,
+        "word": " work"
+      },
+      {
+        "start": 13.84,
+        "end": 14.06,
+        "word": " this"
+      },
+      {
+        "start": 14.06,
+        "end": 14.42,
+        "word": " hard."
+      },
+      {
+        "start": 14.42,
+        "end": 14.84,
+        "word": " I'm"
+      },
+      {
+        "start": 14.84,
+        "end": 15.1,
+        "word": " only"
+      },
+      {
+        "start": 15.1,
+        "end": 15.56,
+        "word": " six."
+      },
+      {
+        "start": 15.64,
+        "end": 16.3,
+        "word": " Hold"
+      },
+      {
+        "start": 16.3,
+        "end": 16.62,
+        "word": " on."
+      },
+      {
+        "start": 16.62,
+        "end": 17.26,
+        "word": " We'll"
+      },
+      {
+        "start": 17.26,
+        "end": 17.38,
+        "word": " head"
+      },
+      {
+        "start": 17.38,
+        "end": 17.64,
+        "word": " back"
+      },
+      {
+        "start": 17.64,
+        "end": 17.84,
+        "word": " once"
+      },
+      {
+        "start": 17.84,
+        "end": 18.02,
+        "word": " I"
+      },
+      {
+        "start": 18.02,
+        "end": 18.22,
+        "word": " catch"
+      },
+      {
+        "start": 18.22,
+        "end": 18.4,
+        "word": " a"
+      },
+      {
+        "start": 18.4,
+        "end": 18.98,
+        "word": " fish"
+      }
+    ]
+  },
+  {
+    "start": 21.8,
+    "end": 23.68,
+    "text": " Fishing's all about vibes kid",
+    "words": [
+      {
+        "start": 21.8,
+        "end": 22.46,
+        "word": " Fishing's"
+      },
+      {
+        "start": 22.46,
+        "end": 22.6,
+        "word": " all"
+      },
+      {
+        "start": 22.6,
+        "end": 22.86,
+        "word": " about"
+      },
+      {
+        "start": 22.86,
+        "end": 23.4,
+        "word": " vibes"
+      },
+      {
+        "start": 23.4,
+        "end": 23.68,
+        "word": " kid"
+      }
+    ]
+  },
+  {
+    "start": 34.04,
+    "end": 43.93,
+    "text": " Whatever chop it in half never mind no fish tonight",
+    "words": [
+      {
+        "start": 34.04,
+        "end": 34.7,
+        "word": " Whatever"
+      },
+      {
+        "start": 34.7,
+        "end": 35.36,
+        "word": " chop"
+      },
+      {
+        "start": 35.36,
+        "end": 35.5,
+        "word": " it"
+      },
+      {
+        "start": 35.5,
+        "end": 35.62,
+        "word": " in"
+      },
+      {
+        "start": 35.62,
+        "end": 35.96,
+        "word": " half"
+      },
+      {
+        "start": 35.96,
+        "end": 37.32,
+        "word": " never"
+      },
+      {
+        "start": 42.53,
+        "end": 42.85,
+        "word": " mind"
+      },
+      {
+        "start": 42.85,
+        "end": 43.39,
+        "word": " no"
+      },
+      {
+        "start": 43.39,
+        "end": 43.61,
+        "word": " fish"
+      },
+      {
+        "start": 43.61,
+        "end": 43.93,
+        "word": " tonight"
+      }
+    ]
+  },
+  {
+    "start": 45.61,
+    "end": 46.27,
+    "text": " Okay",
+    "words": [
+      {
+        "start": 45.61,
+        "end": 46.27,
+        "word": " Okay"
+      }
+    ]
+  },
+  {
+    "start": 50.3,
+    "end": 56.68,
+    "text": " Nola my battery's dead. I got to take a really long nap. How long who's gonna cook for Nola tomorrow?",
+    "words": [
+      {
+        "start": 50.3,
+        "end": 50.82,
+        "word": " Nola"
+      },
+      {
+        "start": 50.82,
+        "end": 51.34,
+        "word": " my"
+      },
+      {
+        "start": 51.34,
+        "end": 51.82,
+        "word": " battery's"
+      },
+      {
+        "start": 51.82,
+        "end": 52.0,
+        "word": " dead."
+      },
+      {
+        "start": 52.14,
+        "end": 52.66,
+        "word": " I"
+      },
+      {
+        "start": 52.66,
+        "end": 52.76,
+        "word": " got"
+      },
+      {
+        "start": 52.76,
+        "end": 52.88,
+        "word": " to"
+      },
+      {
+        "start": 52.88,
+        "end": 53.02,
+        "word": " take"
+      },
+      {
+        "start": 53.02,
+        "end": 53.18,
+        "word": " a"
+      },
+      {
+        "start": 53.18,
+        "end": 53.4,
+        "word": " really"
+      },
+      {
+        "start": 53.4,
+        "end": 53.68,
+        "word": " long"
+      },
+      {
+        "start": 53.68,
+        "end": 54.08,
+        "word": " nap."
+      },
+      {
+        "start": 54.3,
+        "end": 54.44,
+        "word": " How"
+      },
+      {
+        "start": 54.44,
+        "end": 54.8,
+        "word": " long"
+      },
+      {
+        "start": 54.8,
+        "end": 55.5,
+        "word": " who's"
+      },
+      {
+        "start": 55.5,
+        "end": 55.62,
+        "word": " gonna"
+      },
+      {
+        "start": 55.62,
+        "end": 55.82,
+        "word": " cook"
+      },
+      {
+        "start": 55.82,
+        "end": 56.02,
+        "word": " for"
+      },
+      {
+        "start": 56.02,
+        "end": 56.26,
+        "word": " Nola"
+      },
+      {
+        "start": 56.26,
+        "end": 56.68,
+        "word": " tomorrow?"
+      }
+    ]
+  },
+  {
+    "start": 57.66,
+    "end": 60.0,
+    "text": " Go down the mountain find your siblings",
+    "words": [
+      {
+        "start": 57.66,
+        "end": 58.18,
+        "word": " Go"
+      },
+      {
+        "start": 58.18,
+        "end": 58.34,
+        "word": " down"
+      },
+      {
+        "start": 58.34,
+        "end": 58.46,
+        "word": " the"
+      },
+      {
+        "start": 58.46,
+        "end": 58.78,
+        "word": " mountain"
+      },
+      {
+        "start": 58.78,
+        "end": 59.5,
+        "word": " find"
+      },
+      {
+        "start": 59.5,
+        "end": 59.68,
+        "word": " your"
+      },
+      {
+        "start": 59.68,
+        "end": 60.0,
+        "word": " siblings"
+      }
+    ]
+  },
+  {
+    "start": 61.88,
+    "end": 62.92,
+    "text": " One two",
+    "words": [
+      {
+        "start": 61.88,
+        "end": 62.4,
+        "word": " One"
+      },
+      {
+        "start": 62.4,
+        "end": 62.92,
+        "word": " two"
+      }
+    ]
+  },
+  {
+    "start": 63.88,
+    "end": 69.52,
+    "text": " Five I have five brothers and sisters. Yeah picked them up years ago. Then where are they they left?",
+    "words": [
+      {
+        "start": 63.88,
+        "end": 64.4,
+        "word": " Five"
+      },
+      {
+        "start": 64.4,
+        "end": 64.92,
+        "word": " I"
+      },
+      {
+        "start": 64.92,
+        "end": 65.02,
+        "word": " have"
+      },
+      {
+        "start": 65.02,
+        "end": 65.24,
+        "word": " five"
+      },
+      {
+        "start": 65.24,
+        "end": 65.52,
+        "word": " brothers"
+      },
+      {
+        "start": 65.52,
+        "end": 65.72,
+        "word": " and"
+      },
+      {
+        "start": 65.72,
+        "end": 66.08,
+        "word": " sisters."
+      },
+      {
+        "start": 66.08,
+        "end": 66.58,
+        "word": " Yeah"
+      },
+      {
+        "start": 66.58,
+        "end": 66.86,
+        "word": " picked"
+      },
+      {
+        "start": 66.86,
+        "end": 66.96,
+        "word": " them"
+      },
+      {
+        "start": 66.96,
+        "end": 67.12,
+        "word": " up"
+      },
+      {
+        "start": 67.12,
+        "end": 67.32,
+        "word": " years"
+      },
+      {
+        "start": 67.32,
+        "end": 67.58,
+        "word": " ago."
+      },
+      {
+        "start": 67.58,
+        "end": 68.02,
+        "word": " Then"
+      },
+      {
+        "start": 68.02,
+        "end": 68.16,
+        "word": " where"
+      },
+      {
+        "start": 68.16,
+        "end": 68.36,
+        "word": " are"
+      },
+      {
+        "start": 68.36,
+        "end": 68.62,
+        "word": " they"
+      },
+      {
+        "start": 68.62,
+        "end": 69.2,
+        "word": " they"
+      },
+      {
+        "start": 69.2,
+        "end": 69.52,
+        "word": " left?"
+      }
+    ]
+  },
+  {
+    "start": 69.88,
+    "end": 72.28,
+    "text": " Oldest ones been gone almost 300 years",
+    "words": [
+      {
+        "start": 69.88,
+        "end": 70.4,
+        "word": " Oldest"
+      },
+      {
+        "start": 70.4,
+        "end": 70.54,
+        "word": " ones"
+      },
+      {
+        "start": 70.54,
+        "end": 70.78,
+        "word": " been"
+      },
+      {
+        "start": 70.78,
+        "end": 70.98,
+        "word": " gone"
+      },
+      {
+        "start": 70.98,
+        "end": 71.28,
+        "word": " almost"
+      },
+      {
+        "start": 71.28,
+        "end": 71.6,
+        "word": " 300"
+      },
+      {
+        "start": 71.6,
+        "end": 72.28,
+        "word": " years"
+      }
+    ]
+  },
+  {
+    "start": 72.84,
+    "end": 77.62,
+    "text": " 300 years master did they starve to death? They won't die easily probably just busy",
+    "words": [
+      {
+        "start": 72.84,
+        "end": 73.1,
+        "word": " 300"
+      },
+      {
+        "start": 73.1,
+        "end": 73.78,
+        "word": " years"
+      },
+      {
+        "start": 73.78,
+        "end": 74.34,
+        "word": " master"
+      },
+      {
+        "start": 74.34,
+        "end": 74.64,
+        "word": " did"
+      },
+      {
+        "start": 74.64,
+        "end": 74.8,
+        "word": " they"
+      },
+      {
+        "start": 74.8,
+        "end": 75.1,
+        "word": " starve"
+      },
+      {
+        "start": 75.1,
+        "end": 75.26,
+        "word": " to"
+      },
+      {
+        "start": 75.26,
+        "end": 75.48,
+        "word": " death?"
+      },
+      {
+        "start": 75.68,
+        "end": 75.74,
+        "word": " They"
+      },
+      {
+        "start": 75.74,
+        "end": 75.98,
+        "word": " won't"
+      },
+      {
+        "start": 75.98,
+        "end": 76.14,
+        "word": " die"
+      },
+      {
+        "start": 76.14,
+        "end": 76.56,
+        "word": " easily"
+      },
+      {
+        "start": 76.56,
+        "end": 76.9,
+        "word": " probably"
+      },
+      {
+        "start": 76.9,
+        "end": 77.14,
+        "word": " just"
+      },
+      {
+        "start": 77.14,
+        "end": 77.62,
+        "word": " busy"
+      }
+    ]
+  },
+  {
+    "start": 77.62,
+    "end": 83.0,
+    "text": " Busy for 300 years and didn't come home. It must be too broke to even buy a little bread. Don't worry master",
+    "words": [
+      {
+        "start": 77.62,
+        "end": 78.16,
+        "word": " Busy"
+      },
+      {
+        "start": 78.16,
+        "end": 78.32,
+        "word": " for"
+      },
+      {
+        "start": 78.32,
+        "end": 78.74,
+        "word": " 300"
+      },
+      {
+        "start": 78.74,
+        "end": 79.1,
+        "word": " years"
+      },
+      {
+        "start": 79.1,
+        "end": 79.3,
+        "word": " and"
+      },
+      {
+        "start": 79.3,
+        "end": 79.56,
+        "word": " didn't"
+      },
+      {
+        "start": 79.56,
+        "end": 79.7,
+        "word": " come"
+      },
+      {
+        "start": 79.7,
+        "end": 80.02,
+        "word": " home."
+      },
+      {
+        "start": 80.28,
+        "end": 80.38,
+        "word": " It"
+      },
+      {
+        "start": 80.38,
+        "end": 80.52,
+        "word": " must"
+      },
+      {
+        "start": 80.52,
+        "end": 80.64,
+        "word": " be"
+      },
+      {
+        "start": 80.64,
+        "end": 80.84,
+        "word": " too"
+      },
+      {
+        "start": 80.84,
+        "end": 81.1,
+        "word": " broke"
+      },
+      {
+        "start": 81.1,
+        "end": 81.26,
+        "word": " to"
+      },
+      {
+        "start": 81.26,
+        "end": 81.42,
+        "word": " even"
+      },
+      {
+        "start": 81.42,
+        "end": 81.6,
+        "word": " buy"
+      },
+      {
+        "start": 81.6,
+        "end": 81.72,
+        "word": " a"
+      },
+      {
+        "start": 81.72,
+        "end": 81.86,
+        "word": " little"
+      },
+      {
+        "start": 81.86,
+        "end": 82.12,
+        "word": " bread."
+      },
+      {
+        "start": 82.4,
+        "end": 82.54,
+        "word": " Don't"
+      },
+      {
+        "start": 82.54,
+        "end": 82.7,
+        "word": " worry"
+      },
+      {
+        "start": 82.7,
+        "end": 83.0,
+        "word": " master"
+      }
+    ]
+  },
+  {
+    "start": 83.0,
+    "end": 85.36,
+    "text": " No, no, we'll bring all my poor brothers home",
+    "words": [
+      {
+        "start": 83.0,
+        "end": 83.5,
+        "word": " No,"
+      },
+      {
+        "start": 83.58,
+        "end": 83.64,
+        "word": " no,"
+      },
+      {
+        "start": 83.74,
+        "end": 83.82,
+        "word": " we'll"
+      },
+      {
+        "start": 83.82,
+        "end": 83.96,
+        "word": " bring"
+      },
+      {
+        "start": 83.96,
+        "end": 84.32,
+        "word": " all"
+      },
+      {
+        "start": 84.32,
+        "end": 84.52,
+        "word": " my"
+      },
+      {
+        "start": 84.52,
+        "end": 84.74,
+        "word": " poor"
+      },
+      {
+        "start": 84.74,
+        "end": 85.02,
+        "word": " brothers"
+      },
+      {
+        "start": 85.02,
+        "end": 85.36,
+        "word": " home"
+      }
+    ]
+  },
+  {
+    "start": 85.36,
+    "end": 90.04,
+    "text": " I'll give them all my leftover jelly beans poor those five little bastards are loaded beyond belief",
+    "words": [
+      {
+        "start": 85.36,
+        "end": 85.88,
+        "word": " I'll"
+      },
+      {
+        "start": 85.88,
+        "end": 85.98,
+        "word": " give"
+      },
+      {
+        "start": 85.98,
+        "end": 86.12,
+        "word": " them"
+      },
+      {
+        "start": 86.12,
+        "end": 86.26,
+        "word": " all"
+      },
+      {
+        "start": 86.26,
+        "end": 86.4,
+        "word": " my"
+      },
+      {
+        "start": 86.4,
+        "end": 86.74,
+        "word": " leftover"
+      },
+      {
+        "start": 86.74,
+        "end": 87.02,
+        "word": " jelly"
+      },
+      {
+        "start": 87.02,
+        "end": 87.38,
+        "word": " beans"
+      },
+      {
+        "start": 87.38,
+        "end": 87.68,
+        "word": " poor"
+      },
+      {
+        "start": 87.68,
+        "end": 88.06,
+        "word": " those"
+      },
+      {
+        "start": 88.06,
+        "end": 88.3,
+        "word": " five"
+      },
+      {
+        "start": 88.3,
+        "end": 88.52,
+        "word": " little"
+      },
+      {
+        "start": 88.52,
+        "end": 89.0,
+        "word": " bastards"
+      },
+      {
+        "start": 89.0,
+        "end": 89.1,
+        "word": " are"
+      },
+      {
+        "start": 89.1,
+        "end": 89.36,
+        "word": " loaded"
+      },
+      {
+        "start": 89.36,
+        "end": 89.72,
+        "word": " beyond"
+      },
+      {
+        "start": 89.72,
+        "end": 90.04,
+        "word": " belief"
+      }
+    ]
+  }
+]
