@@ -381,6 +381,18 @@ not evidence of "not published".
   Reconcile workflow reconcile-soldier-ep6p1-yt-public.
   Next floor04:50:21IST, YT boundary07:50:21IST Nov10.
 
+- 2026-11-10 E6P2 both lanes closed (13/26). IG provider Sent/isPosted=true
+  observed04:57:15.843IST; exact actual UNKNOWN, boundactual<=04:57:15.843.
+  https://www.instagram.com/reel/DfigDkFigmF/ postId17978703696143895.
+  Scheduled04:52/progress04:52:01.188 NOT actual. ProviderAI/FEED true,
+  mobilefalse; directIGcover/label/playback unverified after429, noIGtraffic.
+  YT https://www.youtube.com/watch?v=RMyDIEcH76M actual06:00:48IST
+  (publishDate2026-11-09T16:30:48-08:00), conservativegap>=63m32.157s.
+  Claims clear, Save/toast/reloadUndoDisabled, anonymousOK, playlist13
+  verified in order. PriorYT03:50:21 gap2h10m27s. Gate87204c2d,
+  originalaudio unchanged. Tigris two consumedobjects deleted04:57:39.
+  Nextfloor07:00:48IST, YTboundary10:00:48IST Nov10.
+
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.

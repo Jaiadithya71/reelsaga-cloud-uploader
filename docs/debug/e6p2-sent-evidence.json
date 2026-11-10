@@ -1,0 +1,18 @@
+{
+  "exact_ig_publication_time": null,
+  "observed_sent_at": "2026-11-09T23:27:15.843Z",
+  "publication_upper_bound": "2026-11-09T23:27:15.843Z",
+  "next_youtube_earliest": "2026-11-10T05:57:15.843+05:30",
+  "verification_limitation": "No direct Instagram cover/label/playback verification after HTTP429; provider observation only.",
+  "_id": "6af24798851d1ed936279cef",
+  "postId": "17978703696143895",
+  "permalinkUrl": "https://www.instagram.com/reel/DfigDkFigmF/",
+  "isPosted": true,
+  "dateTime": "2026-11-09T23:22:00.000Z",
+  "publishMode": "API",
+  "igExtras": {
+    "isAiGenerated": true,
+    "reelType": "FEED",
+    "pushNotification": false
+  }
+}
