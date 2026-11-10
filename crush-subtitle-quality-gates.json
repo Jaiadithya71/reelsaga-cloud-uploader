@@ -50,7 +50,7 @@
       "playlist_inventory_verified_at": "2026-11-10T20:40:52+05:30"
     },
     "dramabox-crush42000028219-ep1-part2-v1": {
-      "status": "whole_part_review_passed_private_claims_clean",
+      "status": "published_youtube",
       "whole_part_release_ready": true,
       "approved_render_sha256": "6e085786422734858960e7bd7a054e5a170739dbe0be717d37b6ed6615568950",
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
@@ -58,10 +58,10 @@
       "source_end": 94.0,
       "review": "Original identical render reviewed 2026-11-10 16:07-16:15 with full base.en ASR + 4fps OCR + small.en VAD, targeted small.en 13-24 and25-32 resolving Yara and How could; full-frame contact, targeted and 16-frame timing pixels inspected. Local evidence files lost at16:25; render rebuilt17:18 exact SHA and contact pixels re-inspected. Prior transcript retains original outputs.",
       "claims_verified": true,
-      "public_release_ready": false,
+      "public_release_ready": true,
       "source_audio_unchanged": true,
       "caption_repairs": false,
-      "claims_checked_at": "2026-11-10T17:45:25+05:30",
+      "claims_checked_at": "2026-11-10T21:43:29+05:30",
       "private_video_id": "akhmLTBtkiM",
       "private_video_url": "https://studio.youtube.com/video/akhmLTBtkiM/edit",
       "native_ai_yes": true,
@@ -72,7 +72,10 @@
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42810481418",
       "probe_expected_head": "0bbd859e63d5aa97ddfde33d41d792e8a54afefa",
       "probe_checkpoint_stop_verified": true,
-      "playlist_inventory_verified_at": "2026-11-10T20:40:52+05:30"
+      "playlist_inventory_verified_at": "2026-11-10T20:40:52+05:30",
+      "public_video_url": "https://www.youtube.com/watch?v=akhmLTBtkiM",
+      "public_at": "2026-11-10T21:43:58+05:30",
+      "anonymous_playability": "OK"
     },
     "dramabox-crush42000028219-ep1-part3-v1": {
       "status": "whole_part_review_passed_private_claims_clean",
@@ -93,10 +96,11 @@
       "studio_save_reload_undo_disabled": true,
       "playlist_id": "PLG6wYdXHv9_c",
       "playlist_membership_saved": true,
-      "playlist_inventory_recheck_pending": true,
+      "playlist_inventory_recheck_pending": false,
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42844416325",
       "probe_expected_head": "0c026414150e3c5c578e9f22bfc4261400412112",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "playlist_inventory_verified_at": "2026-11-10T21:44:30+05:30"
     }
   }
 }

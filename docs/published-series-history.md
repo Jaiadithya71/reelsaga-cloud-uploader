@@ -41,6 +41,11 @@ not evidence of "not published".
   interpretation, not direct user cross-platform instruction; YT4hline
   takes priority and IG never holds YT. YTlane minimum60min retained.
   Actual IG time unknown, no false cross-lane-gap assertion.
+  E1P2 YT public21:43:58ISTNov10 https://www.youtube.com/watch?v=akhmLTBtkiM
+  anonymousOK/claimsnone/AIyes/Ad/SaveReloadDisabled,gap63m50s.
+  Publicplaylist2ordered;StudioP3y5lj-fCp9a0privatecleanbuffer.
+  IG21:45stillPendingNeedsattention,providerCalendarexternalpostsrefresh
+  reconnectwarningReelsaga3000;noOAuthreconnectdueIG429stop,noRepost.
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
   12/26 parts public (E1P1..E6P1; latest
   https://www.instagram.com/reel/DfiQYFvCO0w/).
