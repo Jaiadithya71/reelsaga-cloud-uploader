@@ -122,7 +122,14 @@
       "public_watch_player_ok": true,
       "public_studio_reload_save_disabled": true,
       "claim": "audio-only The Knight Errant / Philleann; no reach/channel impact; no strike",
-      "next_floor": "2026-11-11T03:02:07+05:30"
+      "next_floor": "2026-11-11T03:02:07+05:30",
+      "ledger_reconcile": {
+        "status": "success",
+        "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42897649031",
+        "head_sha": "e271742ab9f80dcb74ec580dcf4021b7a8b13e9c",
+        "readback": "published",
+        "checked_at": "2026-11-11T02:13:30+05:30"
+      }
     },
     "yourchannel-sword829261-ep2-part1-v1": {
       "whole_part_release_ready": true,
