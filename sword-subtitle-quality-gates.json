@@ -281,7 +281,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "04fa41b5244b4fdb489f28be6c12ad92c8b787cd34cad475770e35c8eb994ac8",
       "render_bytes": 60140926,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "private_clean_ready",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -293,20 +293,31 @@
       "source_duration": 78.919,
       "source_sha256": "ec820a9c6953d8ca26cbb314685cfc6718d5bf4eb07c3bba3620d77a6734645c",
       "boundary_note": "42.5s after serious crime speech41.36/caption41.5; nextspeech43.62/caption44; no source footage omitted",
-      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "video_id": "kF3nUhEki4s",
+      "studio_url": "https://studio.youtube.com/video/kF3nUhEki4s/edit",
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42910775373",
+      "probe_head_sha": "7c4e84610241d99ce934cab8718d6d57469b722a",
+      "claims_checked_at": "2026-11-11T03:43:06+05:30",
+      "claims": "none",
+      "ai_yes_saved_reload_verified": true,
+      "own_playlist": "PLSDxRohmmBQk",
+      "save_reload_disabled_at": "2026-11-11T03:43:42+05:30"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
   "playlist_url": "https://www.youtube.com/playlist?list=PLSDxRohmmBQk",
   "playlist_visibility": "public",
   "playlist_order": "date_published_oldest",
-  "playlist_inventory_verified_at": "2026-11-11T02:39:33+05:30",
+  "playlist_inventory_verified_at": "2026-11-11T03:44:00+05:30",
   "playlist_inventory_order": [
     "uTQqmfkMJbc",
     "icg5_DXP5Uc",
     "4sDKhKEuewM",
     "vsz0utf5IDA",
     "pr-CBXtJ4SA",
-    "AGQz5R44gyI"
+    "AGQz5R44gyI",
+    "a59YaGrMPhc",
+    "kF3nUhEki4s"
   ]
 }
