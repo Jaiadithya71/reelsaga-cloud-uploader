@@ -366,10 +366,20 @@
       }
     },
     "dramabox-soldier42000030015-ep8-part2-v1": {
-      "status": "review_required",
-      "approved_render_sha256": null,
+      "status": "reviewed_source_approved",
+      "approved_render_sha256": "4d02a96666b40da74fddbcf3bc8cb0c7cfe47ac979adf346c3f4b0f1cf5d9060",
       "original_render_sha256": "4d02a96666b40da74fddbcf3bc8cb0c7cfe47ac979adf346c3f4b0f1cf5d9060",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "whole_part_release_ready": true,
+      "review": {
+        "reviewed_at": "2026-11-10T10:29:00+05:30",
+        "method": "byte-exact catalog render; fullbase.en and targetedgaprepasses vs4fpsOCR and contact/croppixels",
+        "coverage": "All dialogue cards matched. Texture-noiseOCR on wideangle and patternedjacket checked in pixels. Dialoguefree0-.88,19.5-21.2,23.3-28.4,35.3-end checked withtargetedASR; no missing speech found. Source some times typography retained, no wordidentitydefect. No edits. Fullsourceaudio/footage retained.",
+        "visual_evidence": [
+          "docs/debug/e8p2-contact.png",
+          "docs/debug/e8p2-crops.png"
+        ]
+      }
     },
     "dramabox-soldier42000030015-ep9-part1-v1": {
       "status": "review_required",
