@@ -1,0 +1,16 @@
+{
+  "url": "https://www.youtube.com/watch?v=KSlTBUbkFwU",
+  "playability": {
+    "status": "OK",
+    "playableInEmbed": true,
+    "miniplayer": {
+      "miniplayerRenderer": {
+        "playbackMode": "PLAYBACK_MODE_ALLOW"
+      }
+    },
+    "contextParams": "Q0FFU0FnZ0M="
+  },
+  "videoId": "KSlTBUbkFwU",
+  "title": "The Soldier's Journey Home - Episode 7 Part 1/2 | DramaBox",
+  "publishDate": "2026-11-09T18:41:24-08:00"
+}
