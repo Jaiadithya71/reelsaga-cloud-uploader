@@ -187,7 +187,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "a8fc5db969db12caceb3efc76e7e67f09f0a98691b7c7f354e1fae3dceebdd8b",
       "render_bytes": 90040435,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "private_clean_ready",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -199,7 +199,16 @@
       "source_duration": 88.212,
       "source_sha256": "d87ed6a678179cb0a1806cd55eea1a2c5dd327d542855e1118cd2a08261e342e",
       "boundary_note": "45.25s after What way speech44.56/caption44.75, nextspeech45.72/caption46; no source footage omitted",
-      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "video_id": "pr-CBXtJ4SA",
+      "studio_url": "https://studio.youtube.com/video/pr-CBXtJ4SA/edit",
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42898610517",
+      "probe_head_sha": "ca615480b87598506636d4c95e67b1e3d665e2b1",
+      "claims_checked_at": "2026-11-11T02:26:37+05:30",
+      "claims": "none",
+      "ai_yes_saved_reload_verified": true,
+      "own_playlist": "PLSDxRohmmBQk",
+      "save_reload_disabled_at": "2026-11-11T02:27:20+05:30"
     },
     "yourchannel-sword829261-ep3-part2-v1": {
       "whole_part_release_ready": true,
