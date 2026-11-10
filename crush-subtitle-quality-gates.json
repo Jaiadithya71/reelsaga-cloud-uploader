@@ -103,17 +103,28 @@
       "playlist_inventory_verified_at": "2026-11-10T21:44:30+05:30"
     },
     "dramabox-crush42000028219-ep1-part4-v1": {
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "whole_part_review_passed_private_claims_clean",
       "whole_part_release_ready": true,
       "approved_render_sha256": "3d2e9731e6548f089d1b31f0673264ba7e2d74757fa09b432356ec4838c728a9",
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
       "source_start": 141.0,
       "source_end": 187.887,
       "review": "Whole base.en and small.en VAD ASR,4fpsOCR,fullframecontact and26targetedwholeframes inspected21:46-21:48. All spoken cards complete before episode endpoint, final husband line ends45.34s before46.887sboundary. Nativeendingglow transition not artifact. Originalaudiohousefades/no repairs.",
-      "claims_verified": false,
+      "claims_verified": true,
       "public_release_ready": false,
       "source_audio_unchanged": true,
-      "caption_repairs": false
+      "caption_repairs": false,
+      "claims_checked_at": "2026-11-10T21:59:33+05:30",
+      "private_video_id": "jkvCxsWoW28",
+      "private_video_url": "https://studio.youtube.com/video/jkvCxsWoW28/edit",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "playlist_id": "PLG6wYdXHv9_c",
+      "playlist_membership_saved": true,
+      "playlist_inventory_recheck_pending": true,
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42853261092",
+      "probe_expected_head": "93dbf32db831130f0f0ede9eaf82f692a6d58a9a",
+      "probe_checkpoint_stop_verified": true
     }
   }
 }
