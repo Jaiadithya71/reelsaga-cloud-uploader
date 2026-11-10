@@ -333,10 +333,20 @@
       }
     },
     "dramabox-soldier42000030015-ep7-part2-v1": {
-      "status": "review_required",
-      "approved_render_sha256": null,
+      "status": "reviewed_source_approved",
+      "approved_render_sha256": "c369808ebfff1a1acdd6ced3958fa873ecd6fb4bad3db0632a828299d1bd5dac",
       "original_render_sha256": "c369808ebfff1a1acdd6ced3958fa873ecd6fb4bad3db0632a828299d1bd5dac",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "whole_part_release_ready": true,
+      "review": {
+        "reviewed_at": "2026-11-10T06:06:00+05:30",
+        "method": "byte-exact catalog render; full base.en+targeted windows vs4fpsOCR and full-frame contact plus targeted subtitle pixels",
+        "coverage": "All dialogue covered. Seriously briefly present16.25/16.375 pixelchecked despite OCRmiss; final Is he the VIP/that announcement was talking about cards pixelchecked vsASR phonetic miss. report in immediately sourcecard matches despiteASR misrecognition. Sourceprofanitymask retained. No new edits. TailafterImpossible visual/music.",
+        "visual_evidence": [
+          "docs/debug/e7p2-contact.png",
+          "docs/debug/e7p2-crops.png"
+        ]
+      }
     },
     "dramabox-soldier42000030015-ep8-part1-v1": {
       "status": "review_required",
