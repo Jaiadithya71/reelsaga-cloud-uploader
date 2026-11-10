@@ -417,6 +417,18 @@ not evidence of "not published".
   Tigrisconsumedobjectsdeleted09:20:52,xferemptybeforeE8staging.
   Nextfloor11:24:27IST,YTboundary14:24:27IST Nov10.
 
+- 2026-11-10 E8P1 both lanes closed (16/26). IG provider Sent/isPosted=true
+  observed11:32:01.359IST; exactactualUNKNOWN,boundactual<=11:32:01.359.
+  https://www.instagram.com/reel/DfjNPh2DStz/ postId17966574249211091.
+  Scheduled11:26 NOTactual. ProviderAI/FEEDtrue,mobilefalse,thumbnailpresent;
+  directIGcover/label/playbackunverified after429,noIGtraffic.
+  YT https://www.youtube.com/watch?v=TQDC2CdwAMU actual12:38:29IST
+  (publishDate2026-11-09T23:08:29-08:00),conservativegap>=66m27.641s.
+  Claimsclear,Save/toast/reloadUndoDisabled,anonymousOK,playlist16ordered.
+  PriorYT10:24:27 gap2h14m02s. Gatee56dea7doriginal,noedits.
+  Tigrisconsumedobjectsdeleted11:32:18,xferemptybeforeE8P2staging.
+  Nextfloor13:38:29IST,YTboundary16:38:29IST Nov10.
+
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.
