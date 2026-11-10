@@ -154,6 +154,19 @@
       "probe_expected_head": "0f9d70f8fadfa685b21201ea2e42ef8d549dcab1",
       "probe_checkpoint_stop_verified": true,
       "playlist_inventory_verified_at": "2026-11-10T22:49:07+05:30"
+    },
+    "dramabox-crush42000028219-ep2-part2-v1": {
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "7b35fc3408a765f9dd52dcbb289aae7c9b738d7c5468a89eef8513d7c46ba036",
+      "source_sha256": "833385aad46ebd82517fd9b2f0912410612910f2b2a3b8bea6f1162f97656e9e",
+      "source_start": 35.25,
+      "source_end": 73.967,
+      "review": "Whole base.en+small.enVADASR/4fpsOCR/fullcontact+21targetedwholeframes inspected22:49-22:51. All source footage remainder retained no caption repairs. Yara misheard Yarn by ASR but correct name caption. Last secretson line complete36.9 before38.717endpoint; originalaudiohousefades.",
+      "claims_verified": false,
+      "public_release_ready": false,
+      "source_audio_unchanged": true,
+      "caption_repairs": false
     }
   }
 }
