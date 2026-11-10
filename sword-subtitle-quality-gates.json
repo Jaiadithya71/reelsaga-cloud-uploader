@@ -341,7 +341,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "2c78e5f238a50df3b1252e3432c19dd63c6eb2941356212763ef3584fac094c8",
       "render_bytes": 77800894,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "private_claims_clear_ai_playlist_saved",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -353,7 +353,16 @@
       "source_duration": 87.557,
       "source_sha256": "88bf54e507cba4178581f7a1fa1df4f2da33e3bd4a2863ad2be34d65acf7a3e5",
       "boundary_note": "43s in action beat after spine-in-half speech40.13/caption40; nextspeech49.88; no source footage omitted",
-      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "video_id": "vdyCSnCKuqE",
+      "claims": "none",
+      "claims_checked_at": "2026-11-11T04:53:05+05:30",
+      "native_ai_yes": true,
+      "own_playlist": "PLSDxRohmmBQk",
+      "playlist_save_reload_verified_at": "2026-11-11T04:53:49+05:30",
+      "playlist_inventory_verified_at": "2026-11-11T04:54:01+05:30",
+      "probe_run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42921338674",
+      "probe_head": "13008bf51b33f2df74588a9a68bc4f87e6d184c9"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
