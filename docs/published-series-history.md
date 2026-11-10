@@ -479,6 +479,15 @@ not evidence of "not published".
   Ownpublicplaylist3ordered;StudioP4jkvCxsWoW28andE2P1lGxFVlQWHSIprivateclean.
   NextYTfloor23:48:39,hard4hline02:48:39Nov11;IGstalledindependent.
 
+- Crush E1P4 public23:53:30ISTNov10 https://www.youtube.com/watch?v=jkvCxsWoW28
+  StudioSave/toast/reload disabled; watchplayer OK privatefalse/unlistedfalse,
+  publishDate2026-11-10T10:23:30-08:00. Gap64m51s.
+  Anonymous check hit sign-in bot challenge, so not independently verified.
+  At23:54 E1P1 found globally blocked (DramaBox video, no strike), corroborated
+  Gmail1a1c6b4ac9c4f881. Series now held; no appeal/reupload/deletion.
+  E1P2/P3/E2P1/E2P2 fresh claims clean23:55-23:56; E2 stays private.
+  Parent to ask user re permanent deletion/takedown. Replacement prep active.
+
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.
