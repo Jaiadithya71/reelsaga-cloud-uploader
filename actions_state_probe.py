@@ -1,9 +1,20 @@
 """One-time live encrypted checkpoint and stop-control test. No video operations."""
-import json,os,base64,hashlib
+import json,os,base64,hashlib,time
 from provision_actions import validated_record
 from transport import Transport
 from github_state import GitHubState,StateError
 from controls import Controls,ControlError
+
+def await_control(backend, enabled):
+    # Contents API branch reads can lag a successful CAS. Never permit an
+    # external operation until the requested value is actually read back.
+    for attempt in range(5):
+        record, _ = backend.get('account-control')
+        if record and record.get('enabled') is enabled:
+            return
+        if attempt < 4:
+            time.sleep(3)
+    raise RuntimeError('Control readback did not settle; no external operations')
 
 def probe(backend,run_id):
     key='probe-'+run_id
@@ -19,6 +30,7 @@ def probe(backend,run_id):
     controls=Controls(backend,lambda:None)
     print('Control stage: initial disable write')
     controls.set_access(False)
+    await_control(backend, False)
     print('Control stage: initial disabled readback')
     try:controls.require_enabled()
     except ControlError:pass
@@ -26,11 +38,13 @@ def probe(backend,run_id):
     try:
         print('Control stage: enable write')
         controls.set_access(True,verified=True)
+        await_control(backend, True)
         print('Control stage: enabled readback')
         controls.require_enabled()
     finally:
         print('Control stage: final disable write')
         controls.set_access(False)
+    await_control(backend, False)
     print('Control stage: final disabled readback')
     try:controls.require_enabled()
     except ControlError:pass
