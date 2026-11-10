@@ -9,10 +9,21 @@
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
       "duration": 47,
       "review": "base.en full + small.en VAD + targeted small.en shout resolved Hell yeah, 4fps OCR full part, full-frame contact and targeted pixels, all captions complete at cut; original source audio retained with house fades; no subtitle repairs",
-      "claims_verified": false,
+      "claims_verified": true,
       "public_release_ready": false,
       "tracked_link": "https://r.reelsgo.tv/6-Z4IodWn-hb",
-      "free_source_episodes": 10
+      "free_source_episodes": 10,
+      "claims_checked_at": "2026-11-10T16:10:03+05:30",
+      "private_video_id": "SmutozOrZ_E",
+      "private_video_url": "https://youtube.com/shorts/SmutozOrZ_E",
+      "playlist_id": "PLG6wYdXHv9_c",
+      "playlist_url": "https://studio.youtube.com/playlist/PLG6wYdXHv9_c/edit",
+      "playlist_visibility": "private",
+      "playlist_video_count": 1,
+      "playlist_sort": "Date published (oldest)",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42800548906"
     }
   }
 }
