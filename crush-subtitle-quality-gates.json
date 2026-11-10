@@ -45,10 +45,21 @@
       "source_start": 47.0,
       "source_end": 94.0,
       "review": "Original identical render reviewed 2026-11-10 16:07-16:15 with full base.en ASR + 4fps OCR + small.en VAD, targeted small.en 13-24 and25-32 resolving Yara and How could; full-frame contact, targeted and 16-frame timing pixels inspected. Local evidence files lost at16:25; render rebuilt17:18 exact SHA and contact pixels re-inspected. Prior transcript retains original outputs.",
-      "claims_verified": false,
+      "claims_verified": true,
       "public_release_ready": false,
       "source_audio_unchanged": true,
-      "caption_repairs": false
+      "caption_repairs": false,
+      "claims_checked_at": "2026-11-10T17:45:25+05:30",
+      "private_video_id": "akhmLTBtkiM",
+      "private_video_url": "https://studio.youtube.com/video/akhmLTBtkiM/edit",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "playlist_id": "PLG6wYdXHv9_c",
+      "playlist_membership_saved": true,
+      "playlist_inventory_recheck_pending": true,
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42810481418",
+      "probe_expected_head": "0bbd859e63d5aa97ddfde33d41d792e8a54afefa",
+      "probe_checkpoint_stop_verified": true
     }
   }
 }
