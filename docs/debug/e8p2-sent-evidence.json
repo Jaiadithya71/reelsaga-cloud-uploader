@@ -1,0 +1,17 @@
+{
+  "_id": "6af2c34a5afd0f48adebb2b3",
+  "isPosted": true,
+  "permalinkUrl": "https://www.instagram.com/reel/Dfjcea8kgW4/",
+  "postId": "17993118708112775",
+  "dateTime": "2026-11-10T08:10:00.000Z",
+  "publishMode": "API",
+  "observed_sent_at": "2026-11-10T08:15:06.608Z",
+  "igExtras": {
+    "isAiGenerated": true,
+    "reelType": "FEED",
+    "pushNotification": false
+  },
+  "thumbnail_present": true,
+  "exact_ig_publication_time": null,
+  "verification_limitation": "Provider Sent upper bound only. No direct Instagram traffic after429."
+}
