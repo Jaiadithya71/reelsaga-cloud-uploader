@@ -546,3 +546,5 @@ not evidence of "not published".
 
 - SwordE5P2 vdyCSnCKuqE privateprobe42921338674 SUCCESS exact13008bf51b33f2df74588a9a68bc4f87e6d184c9/privatecheckpointstopverified;freshclaimsnone04:53:05/nativeAIyes/ownplaylistSaveReloadUndoSavedisabled04:53:49;10inventoryordered04:54:01 E1P1/P2/E2P1/P2PublicthenE3P1/P2/E4P1/P2/E5P1/P2Private. https://studio.youtube.com/video/vdyCSnCKuqE/edit
 - IG04:54Nov11SocialChampqueuePendingNeedsattentionstillstuckdidnotgoout,CrushE1P1Nov10 19:15 noRepost/noeffects. https://app.socialchamp.com/publish/queue
+
+- SwordE3P1pr-CBXtJ4SA public05:18:11ISTNov11gap64m20s,freshclaimsnone05:17:45AIyesAdCTAownplaylistSaveReloadDisabled/watchOKprivatefalseunlistedfalsepublishDate2026-11-10T15:48:11-08:00. https://www.youtube.com/watch?v=pr-CBXtJ4SA . Teninventoryordered05:18first5PublicthenE3P2/E4P1/P2/E5P1/P2Privategatedready;nextfloor06:18:11/hardline09:18:11,E3P2release06:21-06:23arranged.
