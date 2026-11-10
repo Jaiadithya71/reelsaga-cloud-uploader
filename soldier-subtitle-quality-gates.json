@@ -382,10 +382,20 @@
       }
     },
     "dramabox-soldier42000030015-ep9-part1-v1": {
-      "status": "review_required",
-      "approved_render_sha256": null,
+      "status": "reviewed_source_approved",
+      "approved_render_sha256": "ef5d5fc7b84c23fbbfda7a47e81395dbce7d8d9d9e4aa08633f131685fb7f0b1",
       "original_render_sha256": "ef5d5fc7b84c23fbbfda7a47e81395dbce7d8d9d9e4aa08633f131685fb7f0b1",
-      "publication_unknown": false
+      "publication_unknown": false,
+      "whole_part_release_ready": true,
+      "review": {
+        "reviewed_at": "2026-11-10T12:51:00+05:30",
+        "method": "byteexactcatalogrender/fullbase.en/targetedgaps/secondarysmall.enVAD vs4fpsOCR+contactcroppixels",
+        "coverage": "All dialoguecardsmatched,textureOCRmissespixelchecked. Targetedbase.en hallucinated repeated sorry in dialoguefreegaps; independent small.enVAD fullpass found no suchspeech and allcards matched. No edits; originalaudiofootageretained.",
+        "visual_evidence": [
+          "docs/debug/e9p1-contact.png",
+          "docs/debug/e9p1-crops.png"
+        ]
+      }
     },
     "dramabox-soldier42000030015-ep9-part2-v1": {
       "status": "review_required",
