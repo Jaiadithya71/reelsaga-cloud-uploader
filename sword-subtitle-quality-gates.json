@@ -57,7 +57,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "2227f31ca68ee91feaef474bf2ff7652dc3d1adff100510ac0ca3a39b8356d5f",
       "render_bytes": 49748791,
-      "status": "whole_part_review_passed_private_claims_clean",
+      "status": "public_verified",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -65,7 +65,7 @@
       "boundary_note": "47.5s after Okay ends46.27; next speech Nola begins50.3; no source footage omitted",
       "repairs": "none; original audio and burned captions; house0.5sedgefades",
       "claims_verified": true,
-      "claims_checked_at": "2026-11-11T00:11:12+05:30",
+      "claims_checked_at": "2026-11-11T00:56:42+05:30",
       "private_video_id": "uTQqmfkMJbc",
       "private_video_url": "https://studio.youtube.com/video/uTQqmfkMJbc/edit",
       "native_ai_yes": true,
@@ -75,7 +75,12 @@
       "playlist_inventory_verified_at": "2026-11-11T00:13:19+05:30",
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42876496553",
       "probe_expected_head": "315a376e95d6b696446b529eb5cc8f566c7f2921",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "video_url": "https://www.youtube.com/watch?v=uTQqmfkMJbc",
+      "public_at": "2026-11-11T00:57:13+05:30",
+      "publish_date_raw": "2026-11-10T11:27:13-08:00",
+      "public_watch_player_ok": true,
+      "public_studio_reload_save_disabled": true
     },
     "yourchannel-sword829261-ep1-part2-v1": {
       "whole_part_release_ready": true,

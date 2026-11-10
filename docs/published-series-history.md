@@ -29,6 +29,18 @@ not evidence of "not published".
 | The Blood Pact Game; Gone Before the Vows (31/31, complete Oct 6, both platforms); From F-Class Trash to Mech God; Wrong Door Right Girl; She Chose Her Lover. I Took Back My Empire.; Cast Me Out, Feed the Swarm; The Hidden Heiress; The Mute Heiress Speaks; My Robot Son will Save the World; A Love Left Unspoken; Don't Mess With That Airport Cleaner | IG | - | - | before/early Oct 2026 | index cards (pre-Buffer lane history) |
 
 ## Active run
+- The Child Who Guards the Sword (DramaCPS829261,YOURCHANNEL,10free):
+  YT E1P1uTQqmfkMJbc public00:57:13ISTNov11
+  https://www.youtube.com/watch?v=uTQqmfkMJbc . Freshclaimsnone/AIyes/Ad,
+  Save/toast/reloadDisabled, watchplayerOK/privatefalse/unlistedfalse,
+  publishDate2026-11-10T11:27:13-08:00 gap63m43s.
+  OwnPUBLICdatepublishedoldestplaylist https://www.youtube.com/playlist?list=PLSDxRohmmBQk
+  inventory00:58 P1Public thenE1P2icg5_DXP5Uc/E2P14sDKhKEuewM/E2P2vsz0utf5IDAPrivate.
+  E1P2allowed audioonlyclaim noimpact;E2bothclean. FullASR/OCR/pixelsgates.
+  Nextfloor01:57:13,hardline04:57:13,release02:00-02:02Nov11arranged.
+  Crushlateblocks E1P1/P2/P3globallyblockedDramaBoxvideo/noStrike;futureheld,
+  noappeal/reupload/deletionpendingparentuserapproval.
+
 - Step on Me I'll Crush You All (DramaCPS811154,book42000028219):
   YT E1P1 public at2026-11-10 20:40:08IST, exact anonymous publishDate;
   https://www.youtube.com/watch?v=SmutozOrZ_E . Own public playlist
