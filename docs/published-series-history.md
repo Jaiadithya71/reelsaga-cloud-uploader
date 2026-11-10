@@ -29,6 +29,18 @@ not evidence of "not published".
 | The Blood Pact Game; Gone Before the Vows (31/31, complete Oct 6, both platforms); From F-Class Trash to Mech God; Wrong Door Right Girl; She Chose Her Lover. I Took Back My Empire.; Cast Me Out, Feed the Swarm; The Hidden Heiress; The Mute Heiress Speaks; My Robot Son will Save the World; A Love Left Unspoken; Don't Mess With That Airport Cleaner | IG | - | - | before/early Oct 2026 | index cards (pre-Buffer lane history) |
 
 ## Active run
+- Step on Me I'll Crush You All (DramaCPS811154,book42000028219):
+  YT E1P1 public at2026-11-10 20:40:08IST, exact anonymous publishDate;
+  https://www.youtube.com/watch?v=SmutozOrZ_E . Own public playlist
+  https://www.youtube.com/playlist?list=PLG6wYdXHv9_c date-published-oldest,
+  E1P1public then E1P2private verified. IG E1P1 NOT verified public:
+  SocialChamp queue6af2f56663e221b6aef8c39c at20:41:22.391 Pending,
+  Needs attention, isPosted=false, InProgress18131996998793253,
+  recoveryCount3. No duplicate/repost. Ten free source episodes.
+  Parent19:55:56 clarified prior cross-lane60min was conservative main
+  interpretation, not direct user cross-platform instruction; YT4hline
+  takes priority and IG never holds YT. YTlane minimum60min retained.
+  Actual IG time unknown, no false cross-lane-gap assertion.
 - The Soldier's Journey Home (DramaCPS 807559, book 42000030015): IG
   12/26 parts public (E1P1..E6P1; latest
   https://www.instagram.com/reel/DfiQYFvCO0w/).

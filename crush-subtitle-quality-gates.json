@@ -3,23 +3,23 @@
   "series": "crush",
   "parts": {
     "dramabox-crush42000028219-ep1-part1-v1": {
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "published_youtube_ig_stalled",
       "whole_part_release_ready": true,
       "approved_render_sha256": "149b17d1bf8d5a16e312fee0e5c96135a6393292f0aeb30d1a3fd59453927531",
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
       "duration": 47,
       "review": "base.en full + small.en VAD + targeted small.en shout resolved Hell yeah, 4fps OCR full part, full-frame contact and targeted pixels, all captions complete at cut; original source audio retained with house fades; no subtitle repairs",
       "claims_verified": true,
-      "public_release_ready": false,
+      "public_release_ready": true,
       "tracked_link": "https://r.reelsgo.tv/6-Z4IodWn-hb",
       "free_source_episodes": 10,
-      "claims_checked_at": "2026-11-10T16:10:03+05:30",
+      "claims_checked_at": "2026-11-10T20:39:48+05:30",
       "private_video_id": "SmutozOrZ_E",
       "private_video_url": "https://youtube.com/shorts/SmutozOrZ_E",
       "playlist_id": "PLG6wYdXHv9_c",
       "playlist_url": "https://studio.youtube.com/playlist/PLG6wYdXHv9_c/edit",
-      "playlist_visibility": "private",
-      "playlist_video_count": 1,
+      "playlist_visibility": "public",
+      "playlist_video_count": 2,
       "playlist_sort": "Date published (oldest)",
       "native_ai_yes": true,
       "studio_save_reload_undo_disabled": true,
@@ -33,12 +33,24 @@
         "trial": false,
         "mobile_notification": false,
         "cover": "source frame 2 seconds, full pixels inspected",
-        "status": "scheduled_not_published",
-        "caveat": "19:15 slot assumes prior Soldier E9P1 YT actual no later than18:15; release followthrough will validate pacing"
-      }
+        "status": "pending_needs_attention_not_verified_sent",
+        "caveat": "19:15 slot assumes prior Soldier E9P1 YT actual no later than18:15; release followthrough will validate pacing",
+        "provider_observed_at": "2026-11-10T20:41:22.391+05:30",
+        "queue_id": "6af2f56663e221b6aef8c39c",
+        "isPosted": false,
+        "in_progress_post_id": "18131996998793253",
+        "recovery_attempt_count": 3,
+        "actual_public_at": null
+      },
+      "public_video_id": "SmutozOrZ_E",
+      "public_video_url": "https://www.youtube.com/watch?v=SmutozOrZ_E",
+      "public_at": "2026-11-10T20:40:08+05:30",
+      "anonymous_playability": "OK",
+      "playlist_public_video_count": 1,
+      "playlist_inventory_verified_at": "2026-11-10T20:40:52+05:30"
     },
     "dramabox-crush42000028219-ep1-part2-v1": {
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "whole_part_review_passed_private_claims_clean",
       "whole_part_release_ready": true,
       "approved_render_sha256": "6e085786422734858960e7bd7a054e5a170739dbe0be717d37b6ed6615568950",
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
@@ -56,10 +68,11 @@
       "studio_save_reload_undo_disabled": true,
       "playlist_id": "PLG6wYdXHv9_c",
       "playlist_membership_saved": true,
-      "playlist_inventory_recheck_pending": true,
+      "playlist_inventory_recheck_pending": false,
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42810481418",
       "probe_expected_head": "0bbd859e63d5aa97ddfde33d41d792e8a54afefa",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "playlist_inventory_verified_at": "2026-11-10T20:40:52+05:30"
     }
   }
 }

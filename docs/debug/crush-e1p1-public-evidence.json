@@ -1,0 +1,40 @@
+{
+  "youtube": {
+    "video_id": "SmutozOrZ_E",
+    "url": "https://www.youtube.com/watch?v=SmutozOrZ_E",
+    "publishDate": "2026-11-10T07:10:08-08:00",
+    "actual_ist": "2026-11-10T20:40:08+05:30",
+    "anonymous": "OK",
+    "private": false,
+    "unlisted": false,
+    "claims": "none fresh before release",
+    "ai_yes": true,
+    "save_reload_disabled": true
+  },
+  "playlist": {
+    "url": "https://www.youtube.com/playlist?list=PLG6wYdXHv9_c",
+    "public": true,
+    "order": [
+      "SmutozOrZ_E",
+      "akhmLTBtkiM"
+    ],
+    "privacy": [
+      "public",
+      "private"
+    ]
+  },
+  "instagram": {
+    "queue": "6af2f56663e221b6aef8c39c",
+    "observed": "2026-11-10T20:41:22.391+05:30",
+    "isPosted": false,
+    "state": "Pending Needs attention",
+    "actual": null
+  },
+  "pacing": {
+    "last_youtube": "2026-11-10T17:06:16+05:30",
+    "gap": "3h33m52s",
+    "next_youtube_floor": "2026-11-10T21:40:08+05:30",
+    "youtube_four_hour_line": "2026-11-11T00:40:08+05:30",
+    "crosslane_exception": "parent clarified19:55:56 conservative crosslane rule not owner direct; YT hard4hpriority"
+  }
+}
