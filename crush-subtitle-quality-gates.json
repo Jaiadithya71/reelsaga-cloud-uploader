@@ -78,7 +78,7 @@
       "anonymous_playability": "OK"
     },
     "dramabox-crush42000028219-ep1-part3-v1": {
-      "status": "whole_part_review_passed_private_claims_clean",
+      "status": "published_youtube",
       "whole_part_release_ready": true,
       "approved_render_sha256": "32fa5219177aefd083c45e1a6bb9079a4f23388d0c626a17369799b3913f8985",
       "source_sha256": "c2c48e3df59b131c033a8cd60af91a0249e06db65cc482da93b36fb82c995806",
@@ -86,10 +86,10 @@
       "source_end": 141.0,
       "review": "Whole base.en and small.en VAD ASR, 4fps OCR full part plus tight crop, full-frame contact and17targetedfullframes inspected. Base hallucination Breaktheseashells at30s absent in small/VAD and no matching caption; surgical flashback silent there. Opening driver mom line recovered secondary model. All cards complete; last spoken No way in hell finishes42s before47sboundary. Originalaudiohousefades,no repairs.",
       "claims_verified": true,
-      "public_release_ready": false,
+      "public_release_ready": true,
       "source_audio_unchanged": true,
       "caption_repairs": false,
-      "claims_checked_at": "2026-11-10T21:07:54+05:30",
+      "claims_checked_at": "2026-11-10T22:48:08+05:30",
       "private_video_id": "y5lj-fCp9a0",
       "private_video_url": "https://studio.youtube.com/video/y5lj-fCp9a0/edit",
       "native_ai_yes": true,
@@ -100,7 +100,10 @@
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42844416325",
       "probe_expected_head": "0c026414150e3c5c578e9f22bfc4261400412112",
       "probe_checkpoint_stop_verified": true,
-      "playlist_inventory_verified_at": "2026-11-10T21:44:30+05:30"
+      "playlist_inventory_verified_at": "2026-11-10T21:44:30+05:30",
+      "public_video_url": "https://www.youtube.com/watch?v=y5lj-fCp9a0",
+      "public_at": "2026-11-10T22:48:39+05:30",
+      "anonymous_playability": "OK"
     },
     "dramabox-crush42000028219-ep1-part4-v1": {
       "status": "whole_part_review_passed_private_claims_clean",
@@ -121,10 +124,11 @@
       "studio_save_reload_undo_disabled": true,
       "playlist_id": "PLG6wYdXHv9_c",
       "playlist_membership_saved": true,
-      "playlist_inventory_recheck_pending": true,
+      "playlist_inventory_recheck_pending": false,
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42853261092",
       "probe_expected_head": "93dbf32db831130f0f0ede9eaf82f692a6d58a9a",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "playlist_inventory_verified_at": "2026-11-10T22:49:07+05:30"
     },
     "dramabox-crush42000028219-ep2-part1-v1": {
       "status": "whole_part_review_passed_private_claims_clean",
@@ -145,10 +149,11 @@
       "studio_save_reload_undo_disabled": true,
       "playlist_id": "PLG6wYdXHv9_c",
       "playlist_membership_saved": true,
-      "playlist_inventory_recheck_pending": true,
+      "playlist_inventory_recheck_pending": false,
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42855935505",
       "probe_expected_head": "0f9d70f8fadfa685b21201ea2e42ef8d549dcab1",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "playlist_inventory_verified_at": "2026-11-10T22:49:07+05:30"
     }
   }
 }

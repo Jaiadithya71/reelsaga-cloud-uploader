@@ -474,6 +474,11 @@ not evidence of "not published".
   ownprivateplaylistPLG6wYdXHv9_c; IG19:15scheduled saved16:24:50
   freshreopenFeedAItrueTrialMobilefalse.19:15 is beyond18:06:16floor.
 
+- Crush E1P3 YT public22:48:39ISTNov10 https://www.youtube.com/watch?v=y5lj-fCp9a0
+  anonymousOK/claimsnone/AIyes/Ad/SaveReloadDisabled,gap64m41s.
+  Ownpublicplaylist3ordered;StudioP4jkvCxsWoW28andE2P1lGxFVlQWHSIprivateclean.
+  NextYTfloor23:48:39,hard4hline02:48:39Nov11;IGstalledindependent.
+
 ## Dropped / blocked (do not revive without explicit user direction)
 - Daddy's Regret - stopped (claims wave).
 - The Divorced Billionaire Heiress - dropped, global block.
