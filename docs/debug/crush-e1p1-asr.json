@@ -1,0 +1,266 @@
+[
+  {
+    "start": 1.5400000000000018,
+    "end": 4.06,
+    "text": " My daughter was run down by some rich kid.",
+    "words": [
+      {
+        "start": 1.5400000000000018,
+        "end": 2.16,
+        "word": " My"
+      },
+      {
+        "start": 2.16,
+        "end": 2.4,
+        "word": " daughter"
+      },
+      {
+        "start": 2.4,
+        "end": 2.6,
+        "word": " was"
+      },
+      {
+        "start": 2.6,
+        "end": 2.8,
+        "word": " run"
+      },
+      {
+        "start": 2.8,
+        "end": 3.08,
+        "word": " down"
+      },
+      {
+        "start": 3.08,
+        "end": 3.28,
+        "word": " by"
+      },
+      {
+        "start": 3.28,
+        "end": 3.48,
+        "word": " some"
+      },
+      {
+        "start": 3.48,
+        "end": 3.68,
+        "word": " rich"
+      },
+      {
+        "start": 3.68,
+        "end": 4.06,
+        "word": " kid."
+      }
+    ]
+  },
+  {
+    "start": 5.02,
+    "end": 7.66,
+    "text": " His mother offered two million to buy my silence.",
+    "words": [
+      {
+        "start": 5.02,
+        "end": 5.48,
+        "word": " His"
+      },
+      {
+        "start": 5.48,
+        "end": 5.72,
+        "word": " mother"
+      },
+      {
+        "start": 5.72,
+        "end": 5.94,
+        "word": " offered"
+      },
+      {
+        "start": 5.94,
+        "end": 6.32,
+        "word": " two"
+      },
+      {
+        "start": 6.32,
+        "end": 6.64,
+        "word": " million"
+      },
+      {
+        "start": 6.64,
+        "end": 6.98,
+        "word": " to"
+      },
+      {
+        "start": 6.98,
+        "end": 7.16,
+        "word": " buy"
+      },
+      {
+        "start": 7.16,
+        "end": 7.28,
+        "word": " my"
+      },
+      {
+        "start": 7.28,
+        "end": 7.66,
+        "word": " silence."
+      }
+    ]
+  },
+  {
+    "start": 10.080000000000002,
+    "end": 13.02,
+    "text": " So I brought her ten million.",
+    "words": [
+      {
+        "start": 10.080000000000002,
+        "end": 10.7,
+        "word": " So"
+      },
+      {
+        "start": 10.7,
+        "end": 10.98,
+        "word": " I"
+      },
+      {
+        "start": 10.98,
+        "end": 12.12,
+        "word": " brought"
+      },
+      {
+        "start": 12.12,
+        "end": 12.38,
+        "word": " her"
+      },
+      {
+        "start": 12.38,
+        "end": 12.68,
+        "word": " ten"
+      },
+      {
+        "start": 12.68,
+        "end": 13.02,
+        "word": " million."
+      }
+    ]
+  },
+  {
+    "start": 15.440000000000001,
+    "end": 20.64,
+    "text": " Ten million for your son's life.",
+    "words": [
+      {
+        "start": 15.440000000000001,
+        "end": 16.06,
+        "word": " Ten"
+      },
+      {
+        "start": 16.06,
+        "end": 16.1,
+        "word": " million"
+      },
+      {
+        "start": 16.1,
+        "end": 19.92,
+        "word": " for"
+      },
+      {
+        "start": 19.92,
+        "end": 20.02,
+        "word": " your"
+      },
+      {
+        "start": 20.02,
+        "end": 20.4,
+        "word": " son's"
+      },
+      {
+        "start": 20.4,
+        "end": 20.64,
+        "word": " life."
+      }
+    ]
+  },
+  {
+    "start": 30.0,
+    "end": 32.54,
+    "text": " Help me! Help me!",
+    "words": [
+      {
+        "start": 30.0,
+        "end": 30.1,
+        "word": " Help"
+      },
+      {
+        "start": 30.1,
+        "end": 30.4,
+        "word": " me!"
+      },
+      {
+        "start": 31.3,
+        "end": 31.86,
+        "word": " Help"
+      },
+      {
+        "start": 31.86,
+        "end": 32.54,
+        "word": " me!"
+      }
+    ]
+  },
+  {
+    "start": 33.260000000000005,
+    "end": 35.7,
+    "text": " Finally, about time. Grab some food.",
+    "words": [
+      {
+        "start": 33.260000000000005,
+        "end": 33.88,
+        "word": " Finally,"
+      },
+      {
+        "start": 34.22,
+        "end": 34.42,
+        "word": " about"
+      },
+      {
+        "start": 34.42,
+        "end": 34.74,
+        "word": " time."
+      },
+      {
+        "start": 35.26,
+        "end": 35.34,
+        "word": " Grab"
+      },
+      {
+        "start": 35.34,
+        "end": 35.52,
+        "word": " some"
+      },
+      {
+        "start": 35.52,
+        "end": 35.7,
+        "word": " food."
+      }
+    ]
+  },
+  {
+    "start": 36.2,
+    "end": 36.92,
+    "text": " Yeah, let's go.",
+    "words": [
+      {
+        "start": 36.2,
+        "end": 36.26,
+        "word": " Yeah,"
+      },
+      {
+        "start": 36.5,
+        "end": 36.78,
+        "word": " let's"
+      },
+      {
+        "start": 36.78,
+        "end": 36.92,
+        "word": " go."
+      }
+    ]
+  }
+]

@@ -1,0 +1,234 @@
+[
+  {
+    "start": 1.74,
+    "end": 4.12,
+    "text": " My daughter was run down by some rich kid.",
+    "words": [
+      {
+        "word": " My",
+        "start": 1.74,
+        "end": 2.18
+      },
+      {
+        "word": " daughter",
+        "start": 2.18,
+        "end": 2.42
+      },
+      {
+        "word": " was",
+        "start": 2.42,
+        "end": 2.64
+      },
+      {
+        "word": " run",
+        "start": 2.64,
+        "end": 2.86
+      },
+      {
+        "word": " down",
+        "start": 2.86,
+        "end": 3.14
+      },
+      {
+        "word": " by",
+        "start": 3.14,
+        "end": 3.34
+      },
+      {
+        "word": " some",
+        "start": 3.34,
+        "end": 3.54
+      },
+      {
+        "word": " rich",
+        "start": 3.54,
+        "end": 3.76
+      },
+      {
+        "word": " kid.",
+        "start": 3.76,
+        "end": 4.12
+      }
+    ]
+  },
+  {
+    "start": 5.34,
+    "end": 7.84,
+    "text": " His mother offered $2 million to buy my silence.",
+    "words": [
+      {
+        "word": " His",
+        "start": 5.34,
+        "end": 5.52
+      },
+      {
+        "word": " mother",
+        "start": 5.52,
+        "end": 5.74
+      },
+      {
+        "word": " offered",
+        "start": 5.74,
+        "end": 6.1
+      },
+      {
+        "word": " $2",
+        "start": 6.1,
+        "end": 6.44
+      },
+      {
+        "word": " million",
+        "start": 6.44,
+        "end": 6.72
+      },
+      {
+        "word": " to",
+        "start": 6.72,
+        "end": 7.02
+      },
+      {
+        "word": " buy",
+        "start": 7.02,
+        "end": 7.18
+      },
+      {
+        "word": " my",
+        "start": 7.18,
+        "end": 7.38
+      },
+      {
+        "word": " silence.",
+        "start": 7.38,
+        "end": 7.84
+      }
+    ]
+  },
+  {
+    "start": 10.48,
+    "end": 13.14,
+    "text": " So I brought her $10 million.",
+    "words": [
+      {
+        "word": " So",
+        "start": 10.48,
+        "end": 10.74
+      },
+      {
+        "word": " I",
+        "start": 10.74,
+        "end": 11.1
+      },
+      {
+        "word": " brought",
+        "start": 11.1,
+        "end": 12.2
+      },
+      {
+        "word": " her",
+        "start": 12.2,
+        "end": 12.42
+      },
+      {
+        "word": " $10",
+        "start": 12.42,
+        "end": 12.76
+      },
+      {
+        "word": " million.",
+        "start": 12.76,
+        "end": 13.14
+      }
+    ]
+  },
+  {
+    "start": 18.85,
+    "end": 20.85,
+    "text": " $10 million for your son's life.",
+    "words": [
+      {
+        "word": " $10",
+        "start": 18.85,
+        "end": 19.41
+      },
+      {
+        "word": " million",
+        "start": 19.41,
+        "end": 19.65
+      },
+      {
+        "word": " for",
+        "start": 19.65,
+        "end": 19.95
+      },
+      {
+        "word": " your",
+        "start": 19.95,
+        "end": 20.09
+      },
+      {
+        "word": " son's",
+        "start": 20.09,
+        "end": 20.45
+      },
+      {
+        "word": " life.",
+        "start": 20.45,
+        "end": 20.85
+      }
+    ]
+  },
+  {
+    "start": 34.22,
+    "end": 35.8,
+    "text": " About time. Grab some food.",
+    "words": [
+      {
+        "word": " About",
+        "start": 34.22,
+        "end": 34.4
+      },
+      {
+        "word": " time.",
+        "start": 34.4,
+        "end": 34.78
+      },
+      {
+        "word": " Grab",
+        "start": 35.2,
+        "end": 35.38
+      },
+      {
+        "word": " some",
+        "start": 35.38,
+        "end": 35.58
+      },
+      {
+        "word": " food.",
+        "start": 35.58,
+        "end": 35.8
+      }
+    ]
+  },
+  {
+    "start": 36.2,
+    "end": 36.96,
+    "text": " Yeah, let's go.",
+    "words": [
+      {
+        "word": " Yeah,",
+        "start": 36.2,
+        "end": 36.34
+      },
+      {
+        "word": " let's",
+        "start": 36.56,
+        "end": 36.82
+      },
+      {
+        "word": " go.",
+        "start": 36.82,
+        "end": 36.96
+      }
+    ]
+  }
+]
