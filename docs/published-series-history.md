@@ -29,6 +29,13 @@ not evidence of "not published".
 | The Blood Pact Game; Gone Before the Vows (31/31, complete Oct 6, both platforms); From F-Class Trash to Mech God; Wrong Door Right Girl; She Chose Her Lover. I Took Back My Empire.; Cast Me Out, Feed the Swarm; The Hidden Heiress; The Mute Heiress Speaks; My Robot Son will Save the World; A Love Left Unspoken; Don't Mess With That Airport Cleaner | IG | - | - | before/early Oct 2026 | index cards (pre-Buffer lane history) |
 
 ## Active run
+- Sword E1P2icg5_DXP5Uc public02:02:07ISTNov11 gap64m54s
+  https://www.youtube.com/watch?v=icg5_DXP5Uc . FreshaudioonlyclaimKnightErrant/
+  Philleannnoimpactnostrike;standingOct1Yes;AIyes/Ad/playlistSaveReloadDisabled,
+  watchplayerOK/privatefalse/unlistedfalse publishDate2026-11-10T12:32:07-08:00.
+  Inventory02:02 E1P1/P2Public→E2P1/P2Private. Nextfloor03:02:07/hardline06:02:07,
+  E2P1release03:05-03:07arranged.
+
 - The Child Who Guards the Sword (DramaCPS829261,YOURCHANNEL,10free):
   YT E1P1uTQqmfkMJbc public00:57:13ISTNov11
   https://www.youtube.com/watch?v=uTQqmfkMJbc . Freshclaimsnone/AIyes/Ad,

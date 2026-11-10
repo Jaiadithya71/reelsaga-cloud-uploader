@@ -93,7 +93,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "79e3b236f23325beb63c74cc33f2f90e3d06f1b5bbbec7baed68d22d411e8b6d",
       "render_bytes": 40561823,
-      "status": "whole_part_review_passed_private_audio_only_no_reach_impact",
+      "status": "public_verified",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -106,7 +106,7 @@
       "artist": "Philleann",
       "claim_reach_impact": "none",
       "claim_channel_impact": "none_no_strike",
-      "claims_checked_at": "2026-11-11T00:21:22+05:30",
+      "claims_checked_at": "2026-11-11T02:01:43+05:30",
       "private_video_id": "icg5_DXP5Uc",
       "private_video_url": "https://studio.youtube.com/video/icg5_DXP5Uc/edit",
       "native_ai_yes": true,
@@ -115,7 +115,14 @@
       "playlist_membership_saved": true,
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42878092705",
       "probe_expected_head": "1494bec05b92405109fd3a8dd90b188905f59bcc",
-      "probe_checkpoint_stop_verified": true
+      "probe_checkpoint_stop_verified": true,
+      "video_url": "https://www.youtube.com/watch?v=icg5_DXP5Uc",
+      "public_at": "2026-11-11T02:02:07+05:30",
+      "publish_date_raw": "2026-11-10T12:32:07-08:00",
+      "public_watch_player_ok": true,
+      "public_studio_reload_save_disabled": true,
+      "claim": "audio-only The Knight Errant / Philleann; no reach/channel impact; no strike",
+      "next_floor": "2026-11-11T03:02:07+05:30"
     },
     "yourchannel-sword829261-ep2-part1-v1": {
       "whole_part_release_ready": true,
