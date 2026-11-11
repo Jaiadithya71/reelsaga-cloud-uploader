@@ -78,7 +78,10 @@
       "path": "/downloads/cake-e1p1.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
-      "caption_gate_pass": false
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "794484100ec2f9ec0c5818754559c4da5957cc404c24880fc3b711e935386331",
+      "part_gate_note": "Part1 captions/pixels/speech passed; whole series remains false due E2 extraoh question. This gate permits private upload only, no public release."
     },
     {
       "episode": 1,
@@ -162,5 +165,23 @@
     "caveat": "Does not prove no alternative-title footage, complete API duplicate check before upload remains necessary"
   },
   "canonical_history": "No prior829267/Cake title in canonical history before this prep entry",
-  "source_review_ready": false
+  "source_review_ready": false,
+  "part_gates": {
+    "yourchannel-cake829267-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 53.25,
+      "duration": 53.25,
+      "sha256": "794484100ec2f9ec0c5818754559c4da5957cc404c24880fc3b711e935386331",
+      "bytes": 34038728,
+      "path": "/downloads/cake-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "794484100ec2f9ec0c5818754559c4da5957cc404c24880fc3b711e935386331",
+      "part_gate_note": "Part1 captions/pixels/speech passed; whole series remains false due E2 extraoh question. This gate permits private upload only, no public release."
+    }
+  }
 }
