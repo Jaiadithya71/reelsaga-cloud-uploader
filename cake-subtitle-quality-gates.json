@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1P1_P2_public_E1P3_privateprep_E3held",
+  "status": "E1P1_P2_public_E1P3_executionblocked_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -406,18 +406,18 @@
       "public_reload_SaveUndoDisabled": true,
       "public_AIbadge_verified": "02:18:50IST",
       "actualplaylist_public_order": "E1P1,E1P2; E2P1private",
-      "ledger_reconciled_run_pending": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43098301684"
+      "ledger_reconciled_run_pending": "43098301684failed_before_steps_internalservererror"
     }
   },
   "next_public_part": {
     "episode": 1,
     "part": 3,
-    "earliest": "2026-11-12T03:17:00+05:30",
+    "earliest": "not_before2026-11-12T03:16:51+05:30_and_executionrecovery_privategates",
     "hardline": "2026-11-12T06:16:51+05:30",
     "gates_pending": [
-      "privateprobe43098298616initialstartupfailure_nojobs_oneUIrerunqueued02:30:59",
-      "nativeAI",
-      "ownplaylistactualmembership"
+      "GitHubserverfailureP3initial+oneboundedretryfailed0jobs",
+      "stage_deletedHEAD404signedGET40402:46newstageonlyafterrealrecoverysignal",
+      "privateupload_claims_nativeAI_playlist"
     ]
   }
 }
