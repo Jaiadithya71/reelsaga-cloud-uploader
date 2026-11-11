@@ -234,6 +234,21 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "91586e13f9d92f365cf1eaf41e5b778eab0c6b0c3d09ba12abbd6e22d5a43285"
+    },
+    "yourchannel-cake829267-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 53.25,
+      "source_end": 96.8,
+      "duration": 43.55,
+      "sha256": "c47124abf3090bf95243c7c966b086ca623a710f808a313a06fb5b3bf648701d",
+      "bytes": 22853464,
+      "path": "/downloads/cake-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "c47124abf3090bf95243c7c966b086ca623a710f808a313a06fb5b3bf648701d"
     }
   },
   "e2_parts": [
@@ -319,7 +334,9 @@
       "claims_fresh_none_at": "2026-11-12T01:12:35+05:30",
       "public_short_resolves": true,
       "public_native_ai_badge_verified": true,
-      "playlist_member_public_verified": true
+      "playlist_member_public_verified": true,
+      "api_published_at": "2026-11-12T01:12:51+05:30",
+      "ledger_reconciled_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43090026131"
     },
     "episode2part1": {
       "video_id": "yAr1o2RneMk",
