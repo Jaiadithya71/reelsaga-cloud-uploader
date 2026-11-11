@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "prepared_not_release_ready_E2_extra_oh_unresolved",
+  "status": "E1_E2_source_quality_ready_E1P1_private_clean_others_claim_pending",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -58,13 +58,39 @@
       "ocr_frames": 831,
       "whole_action_frames_inspected": 32,
       "targeted_caption_frames_inspected": 56,
-      "repairs": false
+      "repairs": false,
+      "repair": {
+        "reason": "Unsupported appended oh140.875-143.5; base.en/small.en/isolatedVAD/read-audio omit it",
+        "region": [
+          279,
+          647,
+          334,
+          684
+        ],
+        "affected_frames": 64,
+        "text_retained": "stop gawking and sit still",
+        "method": "local inpainting with small elliptical artifactcleanup on closeupframes42-68, no captionbar/voice/footage timing change",
+        "visual_review": "all64 repairedpixels plus all27updatedcloseupframes,10fullboundaryframes and encodedclipcontact inspected; original3frame sample insufficient and v1/v2 rejected",
+        "status": "accepted_wholeaffectedregion_and_encoded_part3pixels_checked",
+        "master": "/downloads/cake829267-e2-repaired-v4.mp4",
+        "sha256": "0f205712bbeaa3081bf6b28f49f60e28aa70d2c2732c126fa63b873f6434f8c3",
+        "bytes": 88471072,
+        "audio_stream_sha256": "b5175ce2db538b8a89d2eccefd011bbf17f7d80d2347ab0da46f1b22bfb6d39f",
+        "audio_unchanged": true,
+        "native_width": 540,
+        "native_height": 960,
+        "frames": 4985,
+        "duration": 207.723,
+        "master_sha256": "0f205712bbeaa3081bf6b28f49f60e28aa70d2c2732c126fa63b873f6434f8c3",
+        "encoded_part3_affected_frames_inspected": 64,
+        "final_artifact_cleanup": "27 closeup frames42-68 elliptical cleanup, inspected all. Earlier rectangular cleanup rejected."
+      }
     }
   },
   "open_checks": [
-    "E2 caption stop gawking and sit still oh at141-143: verify whether oh is real breath/voice or error before final caption gate",
-    "liveYT+IGindex title/aliases duplicate absence pending; Buffer embargo, no exhaustiveIGabsence claim",
-    "parts-render-pixels/metadata/privateclaims/nativeAI/ownplaylist still pending"
+    "Live IG index partial, Buffer history embargo; no exhaustiveIGabsence claim",
+    "E2P1+remainingparts privateclaims/nativeAI/ownplaylist pending",
+    "future E3-E8 not reviewed, no forwardquality guarantee"
   ],
   "parts": [
     {
@@ -94,7 +120,9 @@
       "path": "/downloads/cake-e1p2.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
-      "caption_gate_pass": false
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "c47124abf3090bf95243c7c966b086ca623a710f808a313a06fb5b3bf648701d"
     },
     {
       "episode": 1,
@@ -107,7 +135,9 @@
       "path": "/downloads/cake-e1p3.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
-      "caption_gate_pass": false
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "6f1bdebada632ab4e7994184a1ce96c024d40b853cda83ce70d96300ad83970e"
     },
     {
       "episode": 1,
@@ -120,7 +150,9 @@
       "path": "/downloads/cake-e1p4.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
-      "caption_gate_pass": false
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "d66bb525fab8de47952673852c3f84885ff1466f16088d0e8a1b9e28839a6345"
     },
     {
       "episode": 1,
@@ -133,7 +165,9 @@
       "path": "/downloads/cake-e1p5.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
-      "caption_gate_pass": false
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "4b13afd6f0538c9dbe78861c1d3da05ebf88916a8a36da13e51d1313d55a9d6b"
     },
     {
       "episode": 1,
@@ -146,7 +180,9 @@
       "path": "/downloads/cake-e1p6.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
-      "caption_gate_pass": false
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "1625dc20e7d5defd7c1dcb1ab4e3b0d0bbf8e070e9f930ba425795ceeb5dae88"
     }
   ],
   "resolved_checks": [
@@ -165,7 +201,7 @@
     "caveat": "Does not prove no alternative-title footage, complete API duplicate check before upload remains necessary"
   },
   "canonical_history": "No prior829267/Cake title in canonical history before this prep entry",
-  "source_review_ready": false,
+  "source_review_ready": true,
   "part_gates": {
     "yourchannel-cake829267-ep1-part1-v1": {
       "episode": 1,
@@ -182,6 +218,102 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "794484100ec2f9ec0c5818754559c4da5957cc404c24880fc3b711e935386331",
       "part_gate_note": "Part1 captions/pixels/speech passed; whole series remains false due E2 extraoh question. This gate permits private upload only, no public release."
+    },
+    "yourchannel-cake829267-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 52,
+      "duration": 52,
+      "measured_duration": 52.0,
+      "sha256": "91586e13f9d92f365cf1eaf41e5b778eab0c6b0c3d09ba12abbd6e22d5a43285",
+      "bytes": 26208768,
+      "path": "/downloads/cake-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "91586e13f9d92f365cf1eaf41e5b778eab0c6b0c3d09ba12abbd6e22d5a43285"
+    }
+  },
+  "e2_parts": [
+    {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 52,
+      "duration": 52,
+      "measured_duration": 52.0,
+      "sha256": "91586e13f9d92f365cf1eaf41e5b778eab0c6b0c3d09ba12abbd6e22d5a43285",
+      "bytes": 26208768,
+      "path": "/downloads/cake-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "91586e13f9d92f365cf1eaf41e5b778eab0c6b0c3d09ba12abbd6e22d5a43285"
+    },
+    {
+      "episode": 2,
+      "part": 2,
+      "source_start": 52,
+      "source_end": 103,
+      "duration": 51,
+      "measured_duration": 51.0,
+      "sha256": "fc4e39211b062b5ffb4da0fdef8a613532edc59bf3a3a62cab3c77f6758ef21b",
+      "bytes": 19234881,
+      "path": "/downloads/cake-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "fc4e39211b062b5ffb4da0fdef8a613532edc59bf3a3a62cab3c77f6758ef21b"
+    },
+    {
+      "episode": 2,
+      "part": 3,
+      "source_start": 103,
+      "source_end": 156.8,
+      "duration": 53.8,
+      "measured_duration": 53.834,
+      "sha256": "036fd17dcdefd5989649a77f70c8bb962a36d3638db0e7efc6d243b2bff97d7e",
+      "bytes": 18712448,
+      "path": "/downloads/cake-e2p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "036fd17dcdefd5989649a77f70c8bb962a36d3638db0e7efc6d243b2bff97d7e"
+    },
+    {
+      "episode": 2,
+      "part": 4,
+      "source_start": 156.8,
+      "source_end": 207.723,
+      "duration": 50.923,
+      "measured_duration": 50.923,
+      "sha256": "924e0111c2be5ff300d0f0606ee9916353aa389109d5ccaf2a95a9d5d0efc12e",
+      "bytes": 20385146,
+      "path": "/downloads/cake-e2p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "924e0111c2be5ff300d0f0606ee9916353aa389109d5ccaf2a95a9d5d0efc12e"
+    }
+  ],
+  "private_youtube": {
+    "episode1part1": {
+      "video_id": "piEcksNK-as",
+      "url": "https://youtube.com/shorts/piEcksNK-as",
+      "claims_checked_at": "2026-11-12T00:51:32+05:30",
+      "claims": "none",
+      "native_ai": "yes_saved_reloadchecked",
+      "privacy": "private",
+      "playlist_url": "https://www.youtube.com/playlist?list=PLaxuduupGThw",
+      "member_page": "https://studio.youtube.com/playlist/PLaxuduupGThw/videos",
+      "playlist": "one_private_member_oldest_first_saved_reloadchecked",
+      "stage_consumed_deleted_head404_signedget404": true
     }
   }
 }
