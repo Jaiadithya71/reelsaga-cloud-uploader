@@ -140,7 +140,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "ef71820c8c3766dcdf35b9d04c74b074705c91874c09c3b91ffd5a8f733a55ef",
       "render_bytes": 86950012,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "private_verified_ready",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -152,7 +152,18 @@
       "source_duration": 189.44,
       "source_sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a",
       "boundary_note": "44 after43.05 speech/caption43.0 before45.9;96.5 after95.8 speech/caption95.8 before97.12;148.75 aftervisualAthena entrance before149.5speech; housefades clear speech; no source omitted",
-      "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades"
+      "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades",
+      "claims_verified": true,
+      "claims_checked_at": "2026-11-11T16:39:34+05:30",
+      "private_video_id": "Lh6nnpvAB28",
+      "private_video_url": "https://studio.youtube.com/video/Lh6nnpvAB28/edit",
+      "native_ai_yes": true,
+      "studio_save_reload_undo_disabled": true,
+      "playlist_id": "PLOa3xTBfOOsk",
+      "playlist_membership_saved": true,
+      "playlist_inventory_verified_at": "2026-11-11T16:40:18+05:30",
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43006656272",
+      "probe_checkpoint_stop_verified": true
     }
   }
 }
