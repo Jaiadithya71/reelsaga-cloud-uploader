@@ -655,3 +655,11 @@ not evidence of "not published".
 - E2source205.099 native540x960, twoASR/820OCR/32action/82targeted reviewed. Confirmed except-for-Accept semantic/timing defect118-124s; additional trash/flesh and omitted profanity checks open. Two singleframeinpainting tests rejected for ghosting/texture smears. No repaired master, no E2renders/uploads; Water progression held to avoid starting another series with known quality blockers.
 
 - Targeted54.8 fullframe corrected provisional flesh finding: caption actually Trash, matches speech. No defect there. Targeted48.6 confirms no caption during spoken Fuck you Damon, a second confirmed omission. E2 remains caption-held, not a claim block.
+
+## Cake829267 replacement preparation Nov12 00:37 IST
+- The Don’s Bride Wants Cake, YourChannel829267. Eight free source URLs recovered from supplier UI https://dramacps.com/dashboard . E1/E2 wholedualASR,1112+831quartersecondOCR,64action+150targetedcaptionframes inspected. No upload or public release.
+- E1 six native720x1280 renders53.25/43.55/46.2/47.4/48.1/39.559s, contiguous0-278.059,150ms audio/video fades within chosen speechgaps,decodechecked+18renderpixelsinspected. Pinned in cake-subtitle-quality-gates.json but whole-release gate remains false pending final subtitle and live duplicate/claims/metadata/playlist checks.
+- E1 music-only ASR hallucinations126/242 rejected using isolated VAD-assisted small.en (both no speech); do not falsely label subtitle omissions. E2 extraoh after stop gawking and sit still at141-143 visible in source but not substantiated in three speechpasses. Remains unresolved, not ready.
+- Billionaire829262 remainsheld for GrandRegion/GrandRegent error; opticalflowrepair rejected for ghosts/warping. No upload. Water and Athena holds unchanged.
+- Supplier recovered after one sessionreplacement. Actual UI generated Cake affiliate https://r.reelsgo.tv/Ebqp-9SeZYH8 and apphome https://r.reelsgo.tv/ceIjOUsJ7-9l at00:36:40IST, no promotion release.
+- Live YouTube Studio Shorts Title contains Cake returned No matching videos at00:38:15IST; screenshot inspected. Scope is titlecheck only, complete channel API duplicate check required by any future privateprobe. Live index partial not exhaustiveIGabsence; Buffer cooldown respected. Browser released, no stage.

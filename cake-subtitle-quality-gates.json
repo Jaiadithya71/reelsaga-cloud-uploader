@@ -1,0 +1,166 @@
+{
+  "series": "The Don's Bride Wants Cake",
+  "dramacps_id": 829267,
+  "source_url": "https://dramacps.com/dashboard",
+  "status": "prepared_not_release_ready_E2_extra_oh_unresolved",
+  "episodes": {
+    "1": {
+      "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
+      "bytes": 22345824,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 720,
+            "height": 1280,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "278.059000"
+        }
+      },
+      "asr": [
+        "base.en",
+        "small.en-chunked100s"
+      ],
+      "ocr_frames": 1112,
+      "whole_action_frames_inspected": 32,
+      "targeted_caption_frames_inspected": 94,
+      "repairs": false
+    },
+    "2": {
+      "sha256": "092c3e49e6af10439696f16e5e65eb17d61c6673281d90817d9dbdbe1a9dedcf",
+      "bytes": 15883378,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 540,
+            "height": 960,
+            "r_frame_rate": "24/1"
+          },
+          {
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "207.723000"
+        }
+      },
+      "asr": [
+        "base.en",
+        "small.en-chunked100s"
+      ],
+      "ocr_frames": 831,
+      "whole_action_frames_inspected": 32,
+      "targeted_caption_frames_inspected": 56,
+      "repairs": false
+    }
+  },
+  "open_checks": [
+    "E2 caption stop gawking and sit still oh at141-143: verify whether oh is real breath/voice or error before final caption gate",
+    "liveYT+IGindex title/aliases duplicate absence pending; Buffer embargo, no exhaustiveIGabsence claim",
+    "parts-render-pixels/metadata/privateclaims/nativeAI/ownplaylist still pending"
+  ],
+  "parts": [
+    {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 53.25,
+      "duration": 53.25,
+      "sha256": "794484100ec2f9ec0c5818754559c4da5957cc404c24880fc3b711e935386331",
+      "bytes": 34038728,
+      "path": "/downloads/cake-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": false
+    },
+    {
+      "episode": 1,
+      "part": 2,
+      "source_start": 53.25,
+      "source_end": 96.8,
+      "duration": 43.55,
+      "sha256": "c47124abf3090bf95243c7c966b086ca623a710f808a313a06fb5b3bf648701d",
+      "bytes": 22853464,
+      "path": "/downloads/cake-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": false
+    },
+    {
+      "episode": 1,
+      "part": 3,
+      "source_start": 96.8,
+      "source_end": 143,
+      "duration": 46.2,
+      "sha256": "6f1bdebada632ab4e7994184a1ce96c024d40b853cda83ce70d96300ad83970e",
+      "bytes": 27023268,
+      "path": "/downloads/cake-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": false
+    },
+    {
+      "episode": 1,
+      "part": 4,
+      "source_start": 143,
+      "source_end": 190.4,
+      "duration": 47.400000000000006,
+      "sha256": "d66bb525fab8de47952673852c3f84885ff1466f16088d0e8a1b9e28839a6345",
+      "bytes": 28148891,
+      "path": "/downloads/cake-e1p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": false
+    },
+    {
+      "episode": 1,
+      "part": 5,
+      "source_start": 190.4,
+      "source_end": 238.5,
+      "duration": 48.099999999999994,
+      "sha256": "4b13afd6f0538c9dbe78861c1d3da05ebf88916a8a36da13e51d1313d55a9d6b",
+      "bytes": 23759619,
+      "path": "/downloads/cake-e1p5.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": false
+    },
+    {
+      "episode": 1,
+      "part": 6,
+      "source_start": 238.5,
+      "source_end": 278.059,
+      "duration": 39.559000000000026,
+      "sha256": "1625dc20e7d5defd7c1dcb1ab4e3b0d0bbf8e070e9f930ba425795ceeb5dae88",
+      "bytes": 24089195,
+      "path": "/downloads/cake-e1p6.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": false
+    }
+  ],
+  "resolved_checks": [
+    "E1 ASR-only utterances126/242 are not substantiated: isolated VAD-assisted small.en returns no speech atboth;126 audio read also no speech. Do not classify subtitle omissions.",
+    "E1 18renderframes inspected, readable native720x1280 no cropping/bar/patch; caption and speech-gap boundary checks53.25/96.8/143/190.4/238.5 pass against both ASR timestamps;150ms fades inside gaps.",
+    "E2 targets2/3 now visuallyinspected, complete56targetedframes. Extraoh remains unverified."
+  ],
+  "affiliate_url": "https://r.reelsgo.tv/Ebqp-9SeZYH8",
+  "app_home_url": "https://r.reelsgo.tv/ceIjOUsJ7-9l",
+  "affiliate_verified_at": "2026-11-12T00:36:40+05:30",
+  "live_youtube_duplicate_check": {
+    "at": "2026-11-12T00:38:15+05:30",
+    "channel": "UC71kSXnAt6Ipy7KqVVo3mdA",
+    "scope": "Shorts Title contains Cake",
+    "result": "No matching videos",
+    "caveat": "Does not prove no alternative-title footage, complete API duplicate check before upload remains necessary"
+  },
+  "canonical_history": "No prior829267/Cake title in canonical history before this prep entry",
+  "source_review_ready": false
+}

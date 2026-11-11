@@ -1,0 +1,16 @@
+[
+  {
+    "start": 1.71,
+    "end": 6.99,
+    "text": " Have you no manners? This is De Luca property. Stop gogging and sit still!",
+    "prob": -0.480173764557674,
+    "no_speech_prob": 0.04296329617500305
+  },
+  {
+    "start": 6.99,
+    "end": 9.95,
+    "text": " I'm just my-",
+    "prob": -0.480173764557674,
+    "no_speech_prob": 0.04296329617500305
+  }
+]
