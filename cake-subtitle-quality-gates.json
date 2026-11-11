@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1_E2_source_quality_ready_E1P1_private_clean_others_claim_pending",
+  "status": "E1P1_public_E2P1_private_audio_only_noimpact_rest_claims_pending",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -309,11 +309,42 @@
       "claims_checked_at": "2026-11-12T00:51:32+05:30",
       "claims": "none",
       "native_ai": "yes_saved_reloadchecked",
-      "privacy": "private",
+      "privacy": "public",
       "playlist_url": "https://www.youtube.com/playlist?list=PLaxuduupGThw",
       "member_page": "https://studio.youtube.com/playlist/PLaxuduupGThw/videos",
       "playlist": "one_private_member_oldest_first_saved_reloadchecked",
-      "stage_consumed_deleted_head404_signedget404": true
+      "stage_consumed_deleted_head404_signedget404": true,
+      "public_saved_at": "2026-11-12T01:12:49+05:30",
+      "public_reload_verified_at": "2026-11-12T01:13:06+05:30",
+      "claims_fresh_none_at": "2026-11-12T01:12:35+05:30",
+      "public_short_resolves": true,
+      "public_native_ai_badge_verified": true,
+      "playlist_member_public_verified": true
+    },
+    "episode2part1": {
+      "video_id": "yAr1o2RneMk",
+      "url": "https://youtube.com/shorts/yAr1o2RneMk",
+      "studio": "https://studio.youtube.com/video/yAr1o2RneMk/edit",
+      "claims_url": "https://studio.youtube.com/video/yAr1o2RneMk/claims",
+      "claims": "Audio only The Arrival by Kurt Oldman, no reachimpact/no strike",
+      "claims_checked_at": "2026-11-12T01:10:36+05:30",
+      "native_ai": "yes_saved_reloadchecked_disabled",
+      "playlist": "member_page_two_private_verified_beforeE1public",
+      "privacy": "private",
+      "stage_consumed_deleted_head404_signedget404": true,
+      "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43089148381",
+      "commit": "1663292b1f2288d9e14a1cda8c99f082c494785d"
     }
+  },
+  "next_public_part": {
+    "episode": 1,
+    "part": 2,
+    "earliest": "2026-11-12T02:13:00+05:30",
+    "hardline": "2026-11-12T05:12:49+05:30",
+    "gates_pending": [
+      "private_upload_claims",
+      "nativeAI",
+      "own_playlist_actualmembership"
+    ]
   }
 }
