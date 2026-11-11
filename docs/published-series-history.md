@@ -589,3 +589,5 @@ not evidence of "not published".
 
 - Sword E5P2 ledger SUCCESS https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42964800499 exact09d5879f9bfe39681689e5698b14dd1366ddbcc6 stoppedreadbackverified2026-11-11T05:18:28Z thenpublishedcheckpointvdyCSnCKuqE. No additional upload/publicflip.
 - Sword E9P2 SPbdx2fbqeI PRIVATE correctedprobeSUCCESS https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42963981617 exact23ae1aa1e37291c22570dbe450323d3ec93f154b checkpointprivate+stopreadback05:12:04Z. Freshclaimsnone10:55:13/nativeAIyes/AdCTAownplaylistSaveFreshTabReloadDisabled10:55:52/inventory18ordered10:56:02first10Public8Private. Eightreadyprivatebuffers,nextE6P1release11:49-11:51existingwake.
+
+- Sword E6P1 v4rZh3Tb9no PUBLIC 2026-11-11 11:49:57IST frompublishDate2026-11-10T22:19:57-08:00;gap64m02s. Freshclaimsnone11:49:35/AIyes/AdCTA/ownplaylist;PublicDoneSave+toast+freshTab3UndoSaveDisabled11:50:25;watchOKprivatefalseunlistedfalse11:50:24 https://www.youtube.com/shorts/v4rZh3Tb9no . Playlist18ordered11:50:33first11Public7Private. Ledgerreconcileprepared,noupload.
