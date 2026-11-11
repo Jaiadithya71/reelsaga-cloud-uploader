@@ -1,0 +1,975 @@
+[
+  {
+    "start": 0.85,
+    "end": 4.21,
+    "text": " Grandpa, why are you sitting on the ground? Are your legs all tingly?",
+    "words": [
+      {
+        "start": 0.85,
+        "end": 1.29,
+        "word": " Grandpa,"
+      },
+      {
+        "start": 1.49,
+        "end": 1.69,
+        "word": " why"
+      },
+      {
+        "start": 1.69,
+        "end": 1.79,
+        "word": " are"
+      },
+      {
+        "start": 1.79,
+        "end": 1.97,
+        "word": " you"
+      },
+      {
+        "start": 1.97,
+        "end": 2.11,
+        "word": " sitting"
+      },
+      {
+        "start": 2.11,
+        "end": 2.33,
+        "word": " on"
+      },
+      {
+        "start": 2.33,
+        "end": 2.49,
+        "word": " the"
+      },
+      {
+        "start": 2.49,
+        "end": 2.77,
+        "word": " ground?"
+      },
+      {
+        "start": 3.25,
+        "end": 3.33,
+        "word": " Are"
+      },
+      {
+        "start": 3.33,
+        "end": 3.49,
+        "word": " your"
+      },
+      {
+        "start": 3.49,
+        "end": 3.67,
+        "word": " legs"
+      },
+      {
+        "start": 3.67,
+        "end": 3.91,
+        "word": " all"
+      },
+      {
+        "start": 3.91,
+        "end": 4.21,
+        "word": " tingly?"
+      }
+    ]
+  },
+  {
+    "start": 4.67,
+    "end": 9.85,
+    "text": " No. No more jelly beans, please. My heart can't take it.",
+    "words": [
+      {
+        "start": 4.67,
+        "end": 5.11,
+        "word": " No."
+      },
+      {
+        "start": 6.05,
+        "end": 6.49,
+        "word": " No"
+      },
+      {
+        "start": 6.49,
+        "end": 6.71,
+        "word": " more"
+      },
+      {
+        "start": 6.71,
+        "end": 6.99,
+        "word": " jelly"
+      },
+      {
+        "start": 6.99,
+        "end": 7.33,
+        "word": " beans,"
+      },
+      {
+        "start": 7.39,
+        "end": 7.65,
+        "word": " please."
+      },
+      {
+        "start": 8.63,
+        "end": 8.75,
+        "word": " My"
+      },
+      {
+        "start": 8.75,
+        "end": 8.99,
+        "word": " heart"
+      },
+      {
+        "start": 8.99,
+        "end": 9.33,
+        "word": " can't"
+      },
+      {
+        "start": 9.33,
+        "end": 9.49,
+        "word": " take"
+      },
+      {
+        "start": 9.49,
+        "end": 9.85,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 10.27,
+    "end": 17.49,
+    "text": " Oh. Okay, Nora will put them away. Master says we're poor so we can't waste anything.",
+    "words": [
+      {
+        "start": 10.27,
+        "end": 10.57,
+        "word": " Oh."
+      },
+      {
+        "start": 11.91,
+        "end": 12.35,
+        "word": " Okay,"
+      },
+      {
+        "start": 12.93,
+        "end": 12.93,
+        "word": " Nora"
+      },
+      {
+        "start": 12.93,
+        "end": 13.15,
+        "word": " will"
+      },
+      {
+        "start": 13.15,
+        "end": 13.31,
+        "word": " put"
+      },
+      {
+        "start": 13.31,
+        "end": 13.53,
+        "word": " them"
+      },
+      {
+        "start": 13.53,
+        "end": 13.89,
+        "word": " away."
+      },
+      {
+        "start": 14.77,
+        "end": 15.05,
+        "word": " Master"
+      },
+      {
+        "start": 15.05,
+        "end": 15.37,
+        "word": " says"
+      },
+      {
+        "start": 15.37,
+        "end": 15.63,
+        "word": " we're"
+      },
+      {
+        "start": 15.63,
+        "end": 15.87,
+        "word": " poor"
+      },
+      {
+        "start": 15.87,
+        "end": 16.15,
+        "word": " so"
+      },
+      {
+        "start": 16.15,
+        "end": 16.31,
+        "word": " we"
+      },
+      {
+        "start": 16.31,
+        "end": 16.65,
+        "word": " can't"
+      },
+      {
+        "start": 16.65,
+        "end": 16.85,
+        "word": " waste"
+      },
+      {
+        "start": 16.85,
+        "end": 17.49,
+        "word": " anything."
+      }
+    ]
+  },
+  {
+    "start": 18.61,
+    "end": 21.65,
+    "text": " New trainees, gather up. The airship's about to depart. Come on, kid, keep up!",
+    "words": [
+      {
+        "start": 18.61,
+        "end": 18.77,
+        "word": " New"
+      },
+      {
+        "start": 18.77,
+        "end": 19.15,
+        "word": " trainees,"
+      },
+      {
+        "start": 19.25,
+        "end": 19.39,
+        "word": " gather"
+      },
+      {
+        "start": 19.39,
+        "end": 19.65,
+        "word": " up."
+      },
+      {
+        "start": 19.79,
+        "end": 19.81,
+        "word": " The"
+      },
+      {
+        "start": 19.81,
+        "end": 20.17,
+        "word": " airship's"
+      },
+      {
+        "start": 20.17,
+        "end": 20.31,
+        "word": " about"
+      },
+      {
+        "start": 20.31,
+        "end": 20.43,
+        "word": " to"
+      },
+      {
+        "start": 20.43,
+        "end": 20.65,
+        "word": " depart."
+      },
+      {
+        "start": 20.79,
+        "end": 20.85,
+        "word": " Come"
+      },
+      {
+        "start": 20.85,
+        "end": 21.05,
+        "word": " on,"
+      },
+      {
+        "start": 21.07,
+        "end": 21.17,
+        "word": " kid,"
+      },
+      {
+        "start": 21.29,
+        "end": 21.39,
+        "word": " keep"
+      },
+      {
+        "start": 21.39,
+        "end": 21.65,
+        "word": " up!"
+      }
+    ]
+  },
+  {
+    "start": 31.92,
+    "end": 34.86,
+    "text": " Little girl, that giant iron sword is in the way. Let me handle it.",
+    "words": [
+      {
+        "start": 31.92,
+        "end": 32.18,
+        "word": " Little"
+      },
+      {
+        "start": 32.18,
+        "end": 32.38,
+        "word": " girl,"
+      },
+      {
+        "start": 32.7,
+        "end": 32.92,
+        "word": " that"
+      },
+      {
+        "start": 32.92,
+        "end": 33.18,
+        "word": " giant"
+      },
+      {
+        "start": 33.18,
+        "end": 33.38,
+        "word": " iron"
+      },
+      {
+        "start": 33.38,
+        "end": 33.66,
+        "word": " sword"
+      },
+      {
+        "start": 33.66,
+        "end": 33.78,
+        "word": " is"
+      },
+      {
+        "start": 33.78,
+        "end": 33.88,
+        "word": " in"
+      },
+      {
+        "start": 33.88,
+        "end": 33.96,
+        "word": " the"
+      },
+      {
+        "start": 33.96,
+        "end": 34.14,
+        "word": " way."
+      },
+      {
+        "start": 34.36,
+        "end": 34.42,
+        "word": " Let"
+      },
+      {
+        "start": 34.42,
+        "end": 34.52,
+        "word": " me"
+      },
+      {
+        "start": 34.52,
+        "end": 34.7,
+        "word": " handle"
+      },
+      {
+        "start": 34.7,
+        "end": 34.86,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 35.6,
+    "end": 36.9,
+    "text": " You want to carry it for Nola?",
+    "words": [
+      {
+        "start": 35.6,
+        "end": 35.92,
+        "word": " You"
+      },
+      {
+        "start": 35.92,
+        "end": 36.04,
+        "word": " want"
+      },
+      {
+        "start": 36.04,
+        "end": 36.2,
+        "word": " to"
+      },
+      {
+        "start": 36.2,
+        "end": 36.34,
+        "word": " carry"
+      },
+      {
+        "start": 36.34,
+        "end": 36.52,
+        "word": " it"
+      },
+      {
+        "start": 36.52,
+        "end": 36.68,
+        "word": " for"
+      },
+      {
+        "start": 36.68,
+        "end": 36.9,
+        "word": " Nola?"
+      }
+    ]
+  },
+  {
+    "start": 36.9,
+    "end": 41.56,
+    "text": " Don't need my hands. This is a spatial pouch. It can hold a whole mountain. Piece of cake.",
+    "words": [
+      {
+        "start": 36.9,
+        "end": 37.74,
+        "word": " Don't"
+      },
+      {
+        "start": 37.74,
+        "end": 37.86,
+        "word": " need"
+      },
+      {
+        "start": 37.86,
+        "end": 38.02,
+        "word": " my"
+      },
+      {
+        "start": 38.02,
+        "end": 38.3,
+        "word": " hands."
+      },
+      {
+        "start": 38.88,
+        "end": 39.0,
+        "word": " This"
+      },
+      {
+        "start": 39.0,
+        "end": 39.14,
+        "word": " is"
+      },
+      {
+        "start": 39.14,
+        "end": 39.26,
+        "word": " a"
+      },
+      {
+        "start": 39.26,
+        "end": 39.5,
+        "word": " spatial"
+      },
+      {
+        "start": 39.5,
+        "end": 39.82,
+        "word": " pouch."
+      },
+      {
+        "start": 40.12,
+        "end": 40.14,
+        "word": " It"
+      },
+      {
+        "start": 40.14,
+        "end": 40.22,
+        "word": " can"
+      },
+      {
+        "start": 40.22,
+        "end": 40.36,
+        "word": " hold"
+      },
+      {
+        "start": 40.36,
+        "end": 40.44,
+        "word": " a"
+      },
+      {
+        "start": 40.44,
+        "end": 40.58,
+        "word": " whole"
+      },
+      {
+        "start": 40.58,
+        "end": 40.9,
+        "word": " mountain."
+      },
+      {
+        "start": 41.18,
+        "end": 41.2,
+        "word": " Piece"
+      },
+      {
+        "start": 41.2,
+        "end": 41.34,
+        "word": " of"
+      },
+      {
+        "start": 41.34,
+        "end": 41.56,
+        "word": " cake."
+      }
+    ]
+  },
+  {
+    "start": 46.92,
+    "end": 52.26,
+    "text": " What happened? Is this stupid pouch glitching again? Never mind. Carry it up yourself.",
+    "words": [
+      {
+        "start": 46.92,
+        "end": 47.4,
+        "word": " What"
+      },
+      {
+        "start": 47.4,
+        "end": 47.88,
+        "word": " happened?"
+      },
+      {
+        "start": 48.6,
+        "end": 48.8,
+        "word": " Is"
+      },
+      {
+        "start": 48.8,
+        "end": 48.88,
+        "word": " this"
+      },
+      {
+        "start": 48.88,
+        "end": 49.24,
+        "word": " stupid"
+      },
+      {
+        "start": 49.24,
+        "end": 49.6,
+        "word": " pouch"
+      },
+      {
+        "start": 49.6,
+        "end": 49.88,
+        "word": " glitching"
+      },
+      {
+        "start": 49.88,
+        "end": 50.18,
+        "word": " again?"
+      },
+      {
+        "start": 51.04,
+        "end": 51.24,
+        "word": " Never"
+      },
+      {
+        "start": 51.24,
+        "end": 51.44,
+        "word": " mind."
+      },
+      {
+        "start": 51.8,
+        "end": 51.84,
+        "word": " Carry"
+      },
+      {
+        "start": 51.84,
+        "end": 51.92,
+        "word": " it"
+      },
+      {
+        "start": 51.92,
+        "end": 52.02,
+        "word": " up"
+      },
+      {
+        "start": 52.02,
+        "end": 52.26,
+        "word": " yourself."
+      }
+    ]
+  },
+  {
+    "start": 52.68,
+    "end": 58.77,
+    "text": " Yeah, the clouds are right under Nella's feet.",
+    "words": [
+      {
+        "start": 52.68,
+        "end": 52.78,
+        "word": " Yeah,"
+      },
+      {
+        "start": 57.25,
+        "end": 57.33,
+        "word": " the"
+      },
+      {
+        "start": 57.33,
+        "end": 57.47,
+        "word": " clouds"
+      },
+      {
+        "start": 57.47,
+        "end": 57.63,
+        "word": " are"
+      },
+      {
+        "start": 57.63,
+        "end": 57.83,
+        "word": " right"
+      },
+      {
+        "start": 57.83,
+        "end": 58.13,
+        "word": " under"
+      },
+      {
+        "start": 58.13,
+        "end": 58.51,
+        "word": " Nella's"
+      },
+      {
+        "start": 58.51,
+        "end": 58.77,
+        "word": " feet."
+      }
+    ]
+  },
+  {
+    "start": 59.49,
+    "end": 61.49,
+    "text": " First time on an airship, huh? Fun, isn't it?",
+    "words": [
+      {
+        "start": 59.49,
+        "end": 59.61,
+        "word": " First"
+      },
+      {
+        "start": 59.61,
+        "end": 59.81,
+        "word": " time"
+      },
+      {
+        "start": 59.81,
+        "end": 59.95,
+        "word": " on"
+      },
+      {
+        "start": 59.95,
+        "end": 60.07,
+        "word": " an"
+      },
+      {
+        "start": 60.07,
+        "end": 60.39,
+        "word": " airship,"
+      },
+      {
+        "start": 60.51,
+        "end": 60.59,
+        "word": " huh?"
+      },
+      {
+        "start": 60.89,
+        "end": 61.13,
+        "word": " Fun,"
+      },
+      {
+        "start": 61.19,
+        "end": 61.33,
+        "word": " isn't"
+      },
+      {
+        "start": 61.33,
+        "end": 61.49,
+        "word": " it?"
+      }
+    ]
+  },
+  {
+    "start": 61.93,
+    "end": 67.77,
+    "text": " So fun! Nella's never flown this high before. How does a big ship like this even fly?",
+    "words": [
+      {
+        "start": 61.93,
+        "end": 62.31,
+        "word": " So"
+      },
+      {
+        "start": 62.31,
+        "end": 62.77,
+        "word": " fun!"
+      },
+      {
+        "start": 63.25,
+        "end": 63.53,
+        "word": " Nella's"
+      },
+      {
+        "start": 63.53,
+        "end": 63.73,
+        "word": " never"
+      },
+      {
+        "start": 63.73,
+        "end": 64.01,
+        "word": " flown"
+      },
+      {
+        "start": 64.01,
+        "end": 64.27,
+        "word": " this"
+      },
+      {
+        "start": 64.27,
+        "end": 64.51,
+        "word": " high"
+      },
+      {
+        "start": 64.51,
+        "end": 64.91,
+        "word": " before."
+      },
+      {
+        "start": 65.75,
+        "end": 66.01,
+        "word": " How"
+      },
+      {
+        "start": 66.01,
+        "end": 66.15,
+        "word": " does"
+      },
+      {
+        "start": 66.15,
+        "end": 66.29,
+        "word": " a"
+      },
+      {
+        "start": 66.29,
+        "end": 66.41,
+        "word": " big"
+      },
+      {
+        "start": 66.41,
+        "end": 66.69,
+        "word": " ship"
+      },
+      {
+        "start": 66.69,
+        "end": 66.89,
+        "word": " like"
+      },
+      {
+        "start": 66.89,
+        "end": 67.13,
+        "word": " this"
+      },
+      {
+        "start": 67.13,
+        "end": 67.37,
+        "word": " even"
+      },
+      {
+        "start": 67.37,
+        "end": 67.77,
+        "word": " fly?"
+      }
+    ]
+  },
+  {
+    "start": 68.81,
+    "end": 73.43,
+    "text": " This manna array. Pump enough manna into it, and even the heaviest things can fly.",
+    "words": [
+      {
+        "start": 68.81,
+        "end": 69.17,
+        "word": " This"
+      },
+      {
+        "start": 69.17,
+        "end": 69.53,
+        "word": " manna"
+      },
+      {
+        "start": 69.53,
+        "end": 69.79,
+        "word": " array."
+      },
+      {
+        "start": 70.55,
+        "end": 70.65,
+        "word": " Pump"
+      },
+      {
+        "start": 70.65,
+        "end": 70.89,
+        "word": " enough"
+      },
+      {
+        "start": 70.89,
+        "end": 71.25,
+        "word": " manna"
+      },
+      {
+        "start": 71.25,
+        "end": 71.51,
+        "word": " into"
+      },
+      {
+        "start": 71.51,
+        "end": 71.75,
+        "word": " it,"
+      },
+      {
+        "start": 71.91,
+        "end": 72.13,
+        "word": " and"
+      },
+      {
+        "start": 72.13,
+        "end": 72.27,
+        "word": " even"
+      },
+      {
+        "start": 72.27,
+        "end": 72.43,
+        "word": " the"
+      },
+      {
+        "start": 72.43,
+        "end": 72.63,
+        "word": " heaviest"
+      },
+      {
+        "start": 72.63,
+        "end": 72.93,
+        "word": " things"
+      },
+      {
+        "start": 72.93,
+        "end": 73.15,
+        "word": " can"
+      },
+      {
+        "start": 73.15,
+        "end": 73.43,
+        "word": " fly."
+      }
+    ]
+  },
+  {
+    "start": 73.43,
+    "end": 77.11,
+    "text": " Oh, so if you're strong enough, anything can fly.",
+    "words": [
+      {
+        "start": 73.43,
+        "end": 74.19,
+        "word": " Oh,"
+      },
+      {
+        "start": 74.67,
+        "end": 74.99,
+        "word": " so"
+      },
+      {
+        "start": 74.99,
+        "end": 75.11,
+        "word": " if"
+      },
+      {
+        "start": 75.11,
+        "end": 75.25,
+        "word": " you're"
+      },
+      {
+        "start": 75.25,
+        "end": 75.55,
+        "word": " strong"
+      },
+      {
+        "start": 75.55,
+        "end": 75.83,
+        "word": " enough,"
+      },
+      {
+        "start": 76.23,
+        "end": 76.41,
+        "word": " anything"
+      },
+      {
+        "start": 76.41,
+        "end": 76.75,
+        "word": " can"
+      },
+      {
+        "start": 76.75,
+        "end": 77.11,
+        "word": " fly."
+      }
+    ]
+  },
+  {
+    "start": 79.37,
+    "end": 83.11,
+    "text": " So what about a sword? Can a sword fly too?",
+    "words": [
+      {
+        "start": 79.37,
+        "end": 79.99,
+        "word": " So"
+      },
+      {
+        "start": 79.99,
+        "end": 80.61,
+        "word": " what"
+      },
+      {
+        "start": 80.61,
+        "end": 80.83,
+        "word": " about"
+      },
+      {
+        "start": 80.83,
+        "end": 81.01,
+        "word": " a"
+      },
+      {
+        "start": 81.01,
+        "end": 81.35,
+        "word": " sword?"
+      },
+      {
+        "start": 82.01,
+        "end": 82.13,
+        "word": " Can"
+      },
+      {
+        "start": 82.13,
+        "end": 82.25,
+        "word": " a"
+      },
+      {
+        "start": 82.25,
+        "end": 82.53,
+        "word": " sword"
+      },
+      {
+        "start": 82.53,
+        "end": 82.81,
+        "word": " fly"
+      },
+      {
+        "start": 82.81,
+        "end": 83.11,
+        "word": " too?"
+      }
+    ]
+  }
+]
