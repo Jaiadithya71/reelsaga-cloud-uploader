@@ -497,7 +497,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "facd43527a333c93be5759fb494fddddeb2d86b608196ba3d4b5ba2fd9db03b1",
       "render_bytes": 94021966,
-      "status": "whole_part_review_passed_private_claims_pending",
+      "status": "private_claims_clear_ai_playlist_saved",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -509,7 +509,16 @@
       "source_duration": 84.52,
       "source_sha256": "4c920a80c31b8b681cecd06ef578c48d3ea28aac26de299862f566327f105a6f",
       "boundary_note": "46s after pouch action settles before nextspeech46.92; no source footage omitted",
-      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+      "repairs": "none; original audio and burned captions; house0.5sedgefades",
+      "video_id": "pCIkoN9wLfg",
+      "claims": "none",
+      "claims_checked_at": "2026-11-11T09:05:02+05:30",
+      "native_ai_yes": true,
+      "own_playlist": "PLSDxRohmmBQk",
+      "playlist_save_reload_verified_at": "2026-11-11T09:05:42+05:30",
+      "playlist_inventory_verified_at": "2026-11-11T09:05:52+05:30",
+      "probe_run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42952303954",
+      "probe_head": "ba40e238f75c7f68d8340db6e8de306bf6447435"
     },
     "yourchannel-sword829261-ep8-part2-v1": {
       "whole_part_release_ready": true,
