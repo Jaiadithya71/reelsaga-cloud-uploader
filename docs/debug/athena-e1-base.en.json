@@ -1,0 +1,1611 @@
+[
+  {
+    "start": 4.200000000000002,
+    "end": 5.94,
+    "text": " Everyone in our class got an answer.",
+    "words": [
+      {
+        "start": 4.200000000000002,
+        "end": 4.66,
+        "word": " Everyone"
+      },
+      {
+        "start": 4.66,
+        "end": 4.9,
+        "word": " in"
+      },
+      {
+        "start": 4.9,
+        "end": 4.98,
+        "word": " our"
+      },
+      {
+        "start": 4.98,
+        "end": 5.22,
+        "word": " class"
+      },
+      {
+        "start": 5.22,
+        "end": 5.48,
+        "word": " got"
+      },
+      {
+        "start": 5.48,
+        "end": 5.58,
+        "word": " an"
+      },
+      {
+        "start": 5.58,
+        "end": 5.94,
+        "word": " answer."
+      }
+    ]
+  },
+  {
+    "start": 9.240000000000002,
+    "end": 10.6,
+    "text": " You can even get a spike.",
+    "words": [
+      {
+        "start": 9.240000000000002,
+        "end": 9.7,
+        "word": " You"
+      },
+      {
+        "start": 9.7,
+        "end": 9.8,
+        "word": " can"
+      },
+      {
+        "start": 9.8,
+        "end": 9.96,
+        "word": " even"
+      },
+      {
+        "start": 9.96,
+        "end": 10.16,
+        "word": " get"
+      },
+      {
+        "start": 10.16,
+        "end": 10.24,
+        "word": " a"
+      },
+      {
+        "start": 10.24,
+        "end": 10.6,
+        "word": " spike."
+      }
+    ]
+  },
+  {
+    "start": 12.040000000000003,
+    "end": 13.16,
+    "text": " You let it in.",
+    "words": [
+      {
+        "start": 12.040000000000003,
+        "end": 12.5,
+        "word": " You"
+      },
+      {
+        "start": 12.5,
+        "end": 12.76,
+        "word": " let"
+      },
+      {
+        "start": 12.76,
+        "end": 12.9,
+        "word": " it"
+      },
+      {
+        "start": 12.9,
+        "end": 13.16,
+        "word": " in."
+      }
+    ]
+  },
+  {
+    "start": 13.74,
+    "end": 15.04,
+    "text": " Daphne, I'm your sister.",
+    "words": [
+      {
+        "start": 13.74,
+        "end": 14.04,
+        "word": " Daphne,"
+      },
+      {
+        "start": 14.38,
+        "end": 14.68,
+        "word": " I'm"
+      },
+      {
+        "start": 14.68,
+        "end": 14.76,
+        "word": " your"
+      },
+      {
+        "start": 14.76,
+        "end": 15.04,
+        "word": " sister."
+      }
+    ]
+  },
+  {
+    "start": 16.0,
+    "end": 17.58,
+    "text": " Test at zero tomorrow and you're out.",
+    "words": [
+      {
+        "start": 16.0,
+        "end": 16.06,
+        "word": " Test"
+      },
+      {
+        "start": 16.06,
+        "end": 16.26,
+        "word": " at"
+      },
+      {
+        "start": 16.26,
+        "end": 16.48,
+        "word": " zero"
+      },
+      {
+        "start": 16.48,
+        "end": 16.86,
+        "word": " tomorrow"
+      },
+      {
+        "start": 16.86,
+        "end": 17.22,
+        "word": " and"
+      },
+      {
+        "start": 17.22,
+        "end": 17.4,
+        "word": " you're"
+      },
+      {
+        "start": 17.4,
+        "end": 17.58,
+        "word": " out."
+      }
+    ]
+  },
+  {
+    "start": 18.24,
+    "end": 19.32,
+    "text": " Who's going to look after you then?",
+    "words": [
+      {
+        "start": 18.24,
+        "end": 18.36,
+        "word": " Who's"
+      },
+      {
+        "start": 18.36,
+        "end": 18.5,
+        "word": " going"
+      },
+      {
+        "start": 18.5,
+        "end": 18.64,
+        "word": " to"
+      },
+      {
+        "start": 18.64,
+        "end": 18.76,
+        "word": " look"
+      },
+      {
+        "start": 18.76,
+        "end": 18.98,
+        "word": " after"
+      },
+      {
+        "start": 18.98,
+        "end": 19.12,
+        "word": " you"
+      },
+      {
+        "start": 19.12,
+        "end": 19.32,
+        "word": " then?"
+      }
+    ]
+  },
+  {
+    "start": 20.1,
+    "end": 21.42,
+    "text": " Maybe the gods hurt her.",
+    "words": [
+      {
+        "start": 20.1,
+        "end": 20.56,
+        "word": " Maybe"
+      },
+      {
+        "start": 20.56,
+        "end": 20.74,
+        "word": " the"
+      },
+      {
+        "start": 20.74,
+        "end": 20.9,
+        "word": " gods"
+      },
+      {
+        "start": 20.9,
+        "end": 21.24,
+        "word": " hurt"
+      },
+      {
+        "start": 21.24,
+        "end": 21.42,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 22.3,
+    "end": 23.38,
+    "text": " Maybe they just have standards.",
+    "words": [
+      {
+        "start": 22.3,
+        "end": 22.46,
+        "word": " Maybe"
+      },
+      {
+        "start": 22.46,
+        "end": 22.66,
+        "word": " they"
+      },
+      {
+        "start": 22.66,
+        "end": 22.86,
+        "word": " just"
+      },
+      {
+        "start": 22.86,
+        "end": 23.04,
+        "word": " have"
+      },
+      {
+        "start": 23.04,
+        "end": 23.38,
+        "word": " standards."
+      }
+    ]
+  },
+  {
+    "start": 33.2,
+    "end": 35.16,
+    "text": " After mom died, dad remarried.",
+    "words": [
+      {
+        "start": 33.2,
+        "end": 33.64,
+        "word": " After"
+      },
+      {
+        "start": 33.64,
+        "end": 33.8,
+        "word": " mom"
+      },
+      {
+        "start": 33.8,
+        "end": 34.18,
+        "word": " died,"
+      },
+      {
+        "start": 34.38,
+        "end": 34.62,
+        "word": " dad"
+      },
+      {
+        "start": 34.62,
+        "end": 35.16,
+        "word": " remarried."
+      }
+    ]
+  },
+  {
+    "start": 35.7,
+    "end": 36.92,
+    "text": " They moved into the house she left behind.",
+    "words": [
+      {
+        "start": 35.7,
+        "end": 35.76,
+        "word": " They"
+      },
+      {
+        "start": 35.76,
+        "end": 35.9,
+        "word": " moved"
+      },
+      {
+        "start": 35.9,
+        "end": 36.1,
+        "word": " into"
+      },
+      {
+        "start": 36.1,
+        "end": 36.22,
+        "word": " the"
+      },
+      {
+        "start": 36.22,
+        "end": 36.38,
+        "word": " house"
+      },
+      {
+        "start": 36.38,
+        "end": 36.56,
+        "word": " she"
+      },
+      {
+        "start": 36.56,
+        "end": 36.7,
+        "word": " left"
+      },
+      {
+        "start": 36.7,
+        "end": 36.92,
+        "word": " behind."
+      }
+    ]
+  },
+  {
+    "start": 37.5,
+    "end": 37.98,
+    "text": " I stayed too.",
+    "words": [
+      {
+        "start": 37.5,
+        "end": 37.54,
+        "word": " I"
+      },
+      {
+        "start": 37.54,
+        "end": 37.72,
+        "word": " stayed"
+      },
+      {
+        "start": 37.72,
+        "end": 37.98,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 38.82,
+    "end": 40.02,
+    "text": " As the one who cleaned it.",
+    "words": [
+      {
+        "start": 38.82,
+        "end": 39.26,
+        "word": " As"
+      },
+      {
+        "start": 39.26,
+        "end": 39.38,
+        "word": " the"
+      },
+      {
+        "start": 39.38,
+        "end": 39.5,
+        "word": " one"
+      },
+      {
+        "start": 39.5,
+        "end": 39.62,
+        "word": " who"
+      },
+      {
+        "start": 39.62,
+        "end": 39.82,
+        "word": " cleaned"
+      },
+      {
+        "start": 39.82,
+        "end": 40.02,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 40.74,
+    "end": 42.86,
+    "text": " If I get a rating, I can leave on my own terms.",
+    "words": [
+      {
+        "start": 40.74,
+        "end": 40.82,
+        "word": " If"
+      },
+      {
+        "start": 40.82,
+        "end": 40.92,
+        "word": " I"
+      },
+      {
+        "start": 40.92,
+        "end": 41.06,
+        "word": " get"
+      },
+      {
+        "start": 41.06,
+        "end": 41.12,
+        "word": " a"
+      },
+      {
+        "start": 41.12,
+        "end": 41.32,
+        "word": " rating,"
+      },
+      {
+        "start": 41.56,
+        "end": 41.62,
+        "word": " I"
+      },
+      {
+        "start": 41.62,
+        "end": 41.74,
+        "word": " can"
+      },
+      {
+        "start": 41.74,
+        "end": 41.96,
+        "word": " leave"
+      },
+      {
+        "start": 41.96,
+        "end": 42.36,
+        "word": " on"
+      },
+      {
+        "start": 42.36,
+        "end": 42.5,
+        "word": " my"
+      },
+      {
+        "start": 42.5,
+        "end": 42.64,
+        "word": " own"
+      },
+      {
+        "start": 42.64,
+        "end": 42.86,
+        "word": " terms."
+      }
+    ]
+  },
+  {
+    "start": 45.86,
+    "end": 48.06,
+    "text": " Aberians took most of the land beyond the walls.",
+    "words": [
+      {
+        "start": 45.86,
+        "end": 46.3,
+        "word": " Aberians"
+      },
+      {
+        "start": 46.3,
+        "end": 46.56,
+        "word": " took"
+      },
+      {
+        "start": 46.56,
+        "end": 46.84,
+        "word": " most"
+      },
+      {
+        "start": 46.84,
+        "end": 47.04,
+        "word": " of"
+      },
+      {
+        "start": 47.04,
+        "end": 47.12,
+        "word": " the"
+      },
+      {
+        "start": 47.12,
+        "end": 47.34,
+        "word": " land"
+      },
+      {
+        "start": 47.34,
+        "end": 47.68,
+        "word": " beyond"
+      },
+      {
+        "start": 47.68,
+        "end": 47.88,
+        "word": " the"
+      },
+      {
+        "start": 47.88,
+        "end": 48.06,
+        "word": " walls."
+      }
+    ]
+  },
+  {
+    "start": 48.7,
+    "end": 50.94,
+    "text": " At eighteen, we receive our formal rating.",
+    "words": [
+      {
+        "start": 48.7,
+        "end": 48.76,
+        "word": " At"
+      },
+      {
+        "start": 48.76,
+        "end": 49.08,
+        "word": " eighteen,"
+      },
+      {
+        "start": 49.7,
+        "end": 49.82,
+        "word": " we"
+      },
+      {
+        "start": 49.82,
+        "end": 50.08,
+        "word": " receive"
+      },
+      {
+        "start": 50.08,
+        "end": 50.32,
+        "word": " our"
+      },
+      {
+        "start": 50.32,
+        "end": 50.6,
+        "word": " formal"
+      },
+      {
+        "start": 50.6,
+        "end": 50.94,
+        "word": " rating."
+      }
+    ]
+  },
+  {
+    "start": 52.3,
+    "end": 54.98,
+    "text": " Those the gods answer can become sunny.",
+    "words": [
+      {
+        "start": 52.3,
+        "end": 52.52,
+        "word": " Those"
+      },
+      {
+        "start": 52.52,
+        "end": 52.68,
+        "word": " the"
+      },
+      {
+        "start": 52.68,
+        "end": 52.82,
+        "word": " gods"
+      },
+      {
+        "start": 52.82,
+        "end": 53.44,
+        "word": " answer"
+      },
+      {
+        "start": 53.44,
+        "end": 54.4,
+        "word": " can"
+      },
+      {
+        "start": 54.4,
+        "end": 54.74,
+        "word": " become"
+      },
+      {
+        "start": 54.74,
+        "end": 54.98,
+        "word": " sunny."
+      }
+    ]
+  },
+  {
+    "start": 63.74000000000001,
+    "end": 64.92,
+    "text": " Nicholas, help me.",
+    "words": [
+      {
+        "start": 63.74000000000001,
+        "end": 64.18,
+        "word": " Nicholas,"
+      },
+      {
+        "start": 64.18,
+        "end": 64.62,
+        "word": " help"
+      },
+      {
+        "start": 64.62,
+        "end": 64.92,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 72.58,
+    "end": 73.62,
+    "text": " You didn't tell her?",
+    "words": [
+      {
+        "start": 72.58,
+        "end": 73.02,
+        "word": " You"
+      },
+      {
+        "start": 73.02,
+        "end": 73.24,
+        "word": " didn't"
+      },
+      {
+        "start": 73.24,
+        "end": 73.44,
+        "word": " tell"
+      },
+      {
+        "start": 73.44,
+        "end": 73.62,
+        "word": " her?"
+      }
+    ]
+  },
+  {
+    "start": 73.88,
+    "end": 74.96,
+    "text": " There was nothing worth explaining.",
+    "words": [
+      {
+        "start": 73.88,
+        "end": 74.04,
+        "word": " There"
+      },
+      {
+        "start": 74.04,
+        "end": 74.14,
+        "word": " was"
+      },
+      {
+        "start": 74.14,
+        "end": 74.32,
+        "word": " nothing"
+      },
+      {
+        "start": 74.32,
+        "end": 74.52,
+        "word": " worth"
+      },
+      {
+        "start": 74.52,
+        "end": 74.96,
+        "word": " explaining."
+      }
+    ]
+  },
+  {
+    "start": 75.32,
+    "end": 76.54,
+    "text": " You promised you'd protect me.",
+    "words": [
+      {
+        "start": 75.32,
+        "end": 75.44,
+        "word": " You"
+      },
+      {
+        "start": 75.44,
+        "end": 75.7,
+        "word": " promised"
+      },
+      {
+        "start": 75.7,
+        "end": 76.02,
+        "word": " you'd"
+      },
+      {
+        "start": 76.02,
+        "end": 76.22,
+        "word": " protect"
+      },
+      {
+        "start": 76.22,
+        "end": 76.54,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 76.92,
+    "end": 77.78,
+    "text": " We're getting engaged.",
+    "words": [
+      {
+        "start": 76.92,
+        "end": 77.1,
+        "word": " We're"
+      },
+      {
+        "start": 77.1,
+        "end": 77.24,
+        "word": " getting"
+      },
+      {
+        "start": 77.24,
+        "end": 77.78,
+        "word": " engaged."
+      }
+    ]
+  },
+  {
+    "start": 78.82,
+    "end": 79.84,
+    "text": " You're happy for us, right?",
+    "words": [
+      {
+        "start": 78.82,
+        "end": 78.94,
+        "word": " You're"
+      },
+      {
+        "start": 78.94,
+        "end": 79.16,
+        "word": " happy"
+      },
+      {
+        "start": 79.16,
+        "end": 79.46,
+        "word": " for"
+      },
+      {
+        "start": 79.46,
+        "end": 79.64,
+        "word": " us,"
+      },
+      {
+        "start": 79.64,
+        "end": 79.84,
+        "word": " right?"
+      }
+    ]
+  },
+  {
+    "start": 80.34,
+    "end": 83.76,
+    "text": " Your tuition, your gear, your application fees.",
+    "words": [
+      {
+        "start": 80.34,
+        "end": 80.54,
+        "word": " Your"
+      },
+      {
+        "start": 80.54,
+        "end": 80.78,
+        "word": " tuition,"
+      },
+      {
+        "start": 81.66,
+        "end": 81.76,
+        "word": " your"
+      },
+      {
+        "start": 81.76,
+        "end": 82.04,
+        "word": " gear,"
+      },
+      {
+        "start": 82.82,
+        "end": 82.92,
+        "word": " your"
+      },
+      {
+        "start": 82.92,
+        "end": 83.28,
+        "word": " application"
+      },
+      {
+        "start": 83.28,
+        "end": 83.76,
+        "word": " fees."
+      }
+    ]
+  },
+  {
+    "start": 84.02,
+    "end": 85.92,
+    "text": " I paid for all of it with the money Mom left me.",
+    "words": [
+      {
+        "start": 84.02,
+        "end": 84.02,
+        "word": " I"
+      },
+      {
+        "start": 84.02,
+        "end": 84.18,
+        "word": " paid"
+      },
+      {
+        "start": 84.18,
+        "end": 84.4,
+        "word": " for"
+      },
+      {
+        "start": 84.4,
+        "end": 84.62,
+        "word": " all"
+      },
+      {
+        "start": 84.62,
+        "end": 84.76,
+        "word": " of"
+      },
+      {
+        "start": 84.76,
+        "end": 84.86,
+        "word": " it"
+      },
+      {
+        "start": 84.86,
+        "end": 84.98,
+        "word": " with"
+      },
+      {
+        "start": 84.98,
+        "end": 85.08,
+        "word": " the"
+      },
+      {
+        "start": 85.08,
+        "end": 85.26,
+        "word": " money"
+      },
+      {
+        "start": 85.26,
+        "end": 85.44,
+        "word": " Mom"
+      },
+      {
+        "start": 85.44,
+        "end": 85.72,
+        "word": " left"
+      },
+      {
+        "start": 85.72,
+        "end": 85.92,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 86.28,
+    "end": 87.3,
+    "text": " Why didn't you tell me then?",
+    "words": [
+      {
+        "start": 86.28,
+        "end": 86.52,
+        "word": " Why"
+      },
+      {
+        "start": 86.52,
+        "end": 86.7,
+        "word": " didn't"
+      },
+      {
+        "start": 86.7,
+        "end": 86.78,
+        "word": " you"
+      },
+      {
+        "start": 86.78,
+        "end": 86.98,
+        "word": " tell"
+      },
+      {
+        "start": 86.98,
+        "end": 87.12,
+        "word": " me"
+      },
+      {
+        "start": 87.12,
+        "end": 87.3,
+        "word": " then?"
+      }
+    ]
+  },
+  {
+    "start": 87.72,
+    "end": 88.6,
+    "text": " Things were different then.",
+    "words": [
+      {
+        "start": 87.72,
+        "end": 87.92,
+        "word": " Things"
+      },
+      {
+        "start": 87.92,
+        "end": 88.1,
+        "word": " were"
+      },
+      {
+        "start": 88.1,
+        "end": 88.36,
+        "word": " different"
+      },
+      {
+        "start": 88.36,
+        "end": 88.6,
+        "word": " then."
+      }
+    ]
+  },
+  {
+    "start": 89.48,
+    "end": 90.76,
+    "text": " I'm going to make A rank.",
+    "words": [
+      {
+        "start": 89.48,
+        "end": 89.92,
+        "word": " I'm"
+      },
+      {
+        "start": 89.92,
+        "end": 90.04,
+        "word": " going"
+      },
+      {
+        "start": 90.04,
+        "end": 90.22,
+        "word": " to"
+      },
+      {
+        "start": 90.22,
+        "end": 90.34,
+        "word": " make"
+      },
+      {
+        "start": 90.34,
+        "end": 90.56,
+        "word": " A"
+      },
+      {
+        "start": 90.56,
+        "end": 90.76,
+        "word": " rank."
+      }
+    ]
+  },
+  {
+    "start": 91.48,
+    "end": 92.58,
+    "text": " Daphne can give me a future.",
+    "words": [
+      {
+        "start": 91.48,
+        "end": 91.82,
+        "word": " Daphne"
+      },
+      {
+        "start": 91.82,
+        "end": 91.98,
+        "word": " can"
+      },
+      {
+        "start": 91.98,
+        "end": 92.14,
+        "word": " give"
+      },
+      {
+        "start": 92.14,
+        "end": 92.28,
+        "word": " me"
+      },
+      {
+        "start": 92.28,
+        "end": 92.34,
+        "word": " a"
+      },
+      {
+        "start": 92.34,
+        "end": 92.58,
+        "word": " future."
+      }
+    ]
+  },
+  {
+    "start": 93.38,
+    "end": 94.6,
+    "text": " I'm not going back to that life.",
+    "words": [
+      {
+        "start": 93.38,
+        "end": 93.54,
+        "word": " I'm"
+      },
+      {
+        "start": 93.54,
+        "end": 93.62,
+        "word": " not"
+      },
+      {
+        "start": 93.62,
+        "end": 93.86,
+        "word": " going"
+      },
+      {
+        "start": 93.86,
+        "end": 94.08,
+        "word": " back"
+      },
+      {
+        "start": 94.08,
+        "end": 94.26,
+        "word": " to"
+      },
+      {
+        "start": 94.26,
+        "end": 94.4,
+        "word": " that"
+      },
+      {
+        "start": 94.4,
+        "end": 94.6,
+        "word": " life."
+      }
+    ]
+  },
+  {
+    "start": 95.2,
+    "end": 95.7,
+    "text": " Not for you.",
+    "words": [
+      {
+        "start": 95.2,
+        "end": 95.36,
+        "word": " Not"
+      },
+      {
+        "start": 95.36,
+        "end": 95.54,
+        "word": " for"
+      },
+      {
+        "start": 95.54,
+        "end": 95.7,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 96.8,
+    "end": 97.38,
+    "text": " Come on.",
+    "words": [
+      {
+        "start": 96.8,
+        "end": 97.24,
+        "word": " Come"
+      },
+      {
+        "start": 97.24,
+        "end": 97.38,
+        "word": " on."
+      }
+    ]
+  },
+  {
+    "start": 98.0,
+    "end": 99.12,
+    "text": " Don't let her ruin our day.",
+    "words": [
+      {
+        "start": 98.0,
+        "end": 98.32,
+        "word": " Don't"
+      },
+      {
+        "start": 98.32,
+        "end": 98.44,
+        "word": " let"
+      },
+      {
+        "start": 98.44,
+        "end": 98.54,
+        "word": " her"
+      },
+      {
+        "start": 98.54,
+        "end": 98.8,
+        "word": " ruin"
+      },
+      {
+        "start": 98.8,
+        "end": 98.92,
+        "word": " our"
+      },
+      {
+        "start": 98.92,
+        "end": 99.12,
+        "word": " day."
+      }
+    ]
+  },
+  {
+    "start": 107.4,
+    "end": 108.92,
+    "text": " Liars, no one is coming.",
+    "words": [
+      {
+        "start": 107.4,
+        "end": 107.84,
+        "word": " Liars,"
+      },
+      {
+        "start": 108.2,
+        "end": 108.42,
+        "word": " no"
+      },
+      {
+        "start": 108.42,
+        "end": 108.62,
+        "word": " one"
+      },
+      {
+        "start": 108.62,
+        "end": 108.74,
+        "word": " is"
+      },
+      {
+        "start": 108.74,
+        "end": 108.92,
+        "word": " coming."
+      }
+    ]
+  },
+  {
+    "start": 109.64,
+    "end": 111.06,
+    "text": " Not my father, not Nicholas.",
+    "words": [
+      {
+        "start": 109.64,
+        "end": 109.84,
+        "word": " Not"
+      },
+      {
+        "start": 109.84,
+        "end": 110.0,
+        "word": " my"
+      },
+      {
+        "start": 110.0,
+        "end": 110.24,
+        "word": " father,"
+      },
+      {
+        "start": 110.72,
+        "end": 110.86,
+        "word": " not"
+      },
+      {
+        "start": 110.86,
+        "end": 111.06,
+        "word": " Nicholas."
+      }
+    ]
+  },
+  {
+    "start": 112.3,
+    "end": 112.96,
+    "text": " Not the gods.",
+    "words": [
+      {
+        "start": 112.3,
+        "end": 112.66,
+        "word": " Not"
+      },
+      {
+        "start": 112.66,
+        "end": 112.8,
+        "word": " the"
+      },
+      {
+        "start": 112.8,
+        "end": 112.96,
+        "word": " gods."
+      }
+    ]
+  },
+  {
+    "start": 113.88,
+    "end": 117.3,
+    "text": " If any god can hear me, I won't die here.",
+    "words": [
+      {
+        "start": 113.88,
+        "end": 114.32,
+        "word": " If"
+      },
+      {
+        "start": 114.32,
+        "end": 114.48,
+        "word": " any"
+      },
+      {
+        "start": 114.48,
+        "end": 114.76,
+        "word": " god"
+      },
+      {
+        "start": 114.76,
+        "end": 115.02,
+        "word": " can"
+      },
+      {
+        "start": 115.02,
+        "end": 115.24,
+        "word": " hear"
+      },
+      {
+        "start": 115.24,
+        "end": 115.44,
+        "word": " me,"
+      },
+      {
+        "start": 116.0,
+        "end": 116.3,
+        "word": " I"
+      },
+      {
+        "start": 116.3,
+        "end": 116.66,
+        "word": " won't"
+      },
+      {
+        "start": 116.66,
+        "end": 116.9,
+        "word": " die"
+      },
+      {
+        "start": 116.9,
+        "end": 117.3,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 117.3,
+    "end": 118.24,
+    "text": " Give me the strength.",
+    "words": [
+      {
+        "start": 117.3,
+        "end": 117.64,
+        "word": " Give"
+      },
+      {
+        "start": 117.64,
+        "end": 117.8,
+        "word": " me"
+      },
+      {
+        "start": 117.8,
+        "end": 117.92,
+        "word": " the"
+      },
+      {
+        "start": 117.92,
+        "end": 118.24,
+        "word": " strength."
+      }
+    ]
+  },
+  {
+    "start": 118.72,
+    "end": 119.72,
+    "text": " I'll get him!",
+    "words": [
+      {
+        "start": 118.72,
+        "end": 119.12,
+        "word": " I'll"
+      },
+      {
+        "start": 119.12,
+        "end": 119.3,
+        "word": " get"
+      },
+      {
+        "start": 119.3,
+        "end": 119.72,
+        "word": " him!"
+      }
+    ]
+  },
+  {
+    "start": 120.14,
+    "end": 120.3,
+    "text": " Get him!",
+    "words": [
+      {
+        "start": 120.14,
+        "end": 120.22,
+        "word": " Get"
+      },
+      {
+        "start": 120.22,
+        "end": 120.59,
+        "word": " him!"
+      }
+    ]
+  },
+  {
+    "start": 149.5,
+    "end": 151.26,
+    "text": " You are not asking for mercy.",
+    "words": [
+      {
+        "start": 149.5,
+        "end": 150.02,
+        "word": " You"
+      },
+      {
+        "start": 150.02,
+        "end": 150.14,
+        "word": " are"
+      },
+      {
+        "start": 150.14,
+        "end": 150.26,
+        "word": " not"
+      },
+      {
+        "start": 150.26,
+        "end": 150.68,
+        "word": " asking"
+      },
+      {
+        "start": 150.68,
+        "end": 150.94,
+        "word": " for"
+      },
+      {
+        "start": 150.94,
+        "end": 151.26,
+        "word": " mercy."
+      }
+    ]
+  },
+  {
+    "start": 151.82,
+    "end": 152.7,
+    "text": " I'm done with mercy.",
+    "words": [
+      {
+        "start": 151.82,
+        "end": 152.0,
+        "word": " I'm"
+      },
+      {
+        "start": 152.0,
+        "end": 152.16,
+        "word": " done"
+      },
+      {
+        "start": 152.16,
+        "end": 152.36,
+        "word": " with"
+      },
+      {
+        "start": 152.36,
+        "end": 152.7,
+        "word": " mercy."
+      }
+    ]
+  },
+  {
+    "start": 160.12,
+    "end": 161.82,
+    "text": " Then bind your blood to mine.",
+    "words": [
+      {
+        "start": 160.12,
+        "end": 160.64,
+        "word": " Then"
+      },
+      {
+        "start": 160.64,
+        "end": 160.86,
+        "word": " bind"
+      },
+      {
+        "start": 160.86,
+        "end": 161.12,
+        "word": " your"
+      },
+      {
+        "start": 161.12,
+        "end": 161.36,
+        "word": " blood"
+      },
+      {
+        "start": 161.36,
+        "end": 161.56,
+        "word": " to"
+      },
+      {
+        "start": 161.56,
+        "end": 161.82,
+        "word": " mine."
+      }
+    ]
+  },
+  {
+    "start": 162.2,
+    "end": 162.4,
+    "text": " Rise.",
+    "words": [
+      {
+        "start": 162.2,
+        "end": 162.4,
+        "word": " Rise."
+      }
+    ]
+  },
+  {
+    "start": 174.16,
+    "end": 174.88,
+    "text": " Rise.",
+    "words": [
+      {
+        "start": 174.16,
+        "end": 174.88,
+        "word": " Rise."
+      }
+    ]
+  },
+  {
+    "start": 175.24,
+    "end": 177.7,
+    "text": " Nova Starling, I answer you.",
+    "words": [
+      {
+        "start": 175.24,
+        "end": 175.8,
+        "word": " Nova"
+      },
+      {
+        "start": 175.8,
+        "end": 176.44,
+        "word": " Starling,"
+      },
+      {
+        "start": 176.82,
+        "end": 177.04,
+        "word": " I"
+      },
+      {
+        "start": 177.04,
+        "end": 177.4,
+        "word": " answer"
+      },
+      {
+        "start": 177.4,
+        "end": 177.7,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 178.58,
+    "end": 181.04,
+    "text": " War, wisdom and victory are yours to command.",
+    "words": [
+      {
+        "start": 178.58,
+        "end": 178.58,
+        "word": " War,"
+      },
+      {
+        "start": 179.26,
+        "end": 179.26,
+        "word": " wisdom"
+      },
+      {
+        "start": 179.26,
+        "end": 179.56,
+        "word": " and"
+      },
+      {
+        "start": 179.56,
+        "end": 179.92,
+        "word": " victory"
+      },
+      {
+        "start": 179.92,
+        "end": 180.26,
+        "word": " are"
+      },
+      {
+        "start": 180.26,
+        "end": 180.48,
+        "word": " yours"
+      },
+      {
+        "start": 180.48,
+        "end": 180.8,
+        "word": " to"
+      },
+      {
+        "start": 180.8,
+        "end": 181.04,
+        "word": " command."
+      }
+    ]
+  },
+  {
+    "start": 185.7,
+    "end": 187.96,
+    "text": " Tomorrow, in front of the whole academy.",
+    "words": [
+      {
+        "start": 185.7,
+        "end": 186.42,
+        "word": " Tomorrow,"
+      },
+      {
+        "start": 186.42,
+        "end": 187.14,
+        "word": " in"
+      },
+      {
+        "start": 187.14,
+        "end": 187.26,
+        "word": " front"
+      },
+      {
+        "start": 187.26,
+        "end": 187.4,
+        "word": " of"
+      },
+      {
+        "start": 187.4,
+        "end": 187.48,
+        "word": " the"
+      },
+      {
+        "start": 187.48,
+        "end": 187.6,
+        "word": " whole"
+      },
+      {
+        "start": 187.6,
+        "end": 187.96,
+        "word": " academy."
+      }
+    ]
+  }
+]

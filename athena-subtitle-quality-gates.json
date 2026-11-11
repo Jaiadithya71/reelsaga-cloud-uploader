@@ -1,0 +1,124 @@
+{
+  "series": "The Outcast Who Called Down Athena",
+  "dramacps_id": 829263,
+  "source_platform": "yourchannel",
+  "source_url": "https://dramacps.com/dashboard",
+  "affiliate_drama_url": "https://r.reelsgo.tv/SyqGbe__100g",
+  "free_episode_urls": [
+    {
+      "text": "Episode 1 \u00b7 EP001",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2656c954-1a1aad5201e-0005-9573-534-c9280.mp4",
+      "duration": "189.440000",
+      "size": "46283784",
+      "sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a"
+    },
+    {
+      "text": "Episode 2 \u00b7 EP002",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/151a6b30-1a1aad52062-0005-9573-534-c9280.mp4",
+      "duration": "121.344000",
+      "size": "25350869",
+      "sha256": "d3db1bd44833ffd2fa2e66c8b134e0ee896c2079c88f8c49a5cbb38c992ad3f9"
+    },
+    {
+      "text": "Episode 3 \u00b7 EP003",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2b59022e-1a1aad5201d-0005-9573-534-c9280.mp4",
+      "duration": "132.080000",
+      "size": "27368116",
+      "sha256": "b6f071079c2d9ccf4fe73099566cc6ad44f906b4c09b26b7971e496d00aa5da3"
+    },
+    {
+      "text": "Episode 4 \u00b7 EP004",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/49ed8bbf-1a1aad52067-0005-9573-534-c9280.mp4",
+      "duration": "93.680000",
+      "size": "20301955",
+      "sha256": "62b64801d6942ab11278018bf5175dd9d9a4ac8d956d2b1150d41257daae74e6"
+    },
+    {
+      "text": "Episode 5 \u00b7 EP005",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5a09d294-1a1aad52022-0005-9573-534-c9280.mp4",
+      "duration": "99.440000",
+      "size": "20329599",
+      "sha256": "91eaa43b1897030cc7a34c485eb0fc56d6dce81c323400f934dc148aff506b48"
+    }
+  ],
+  "source_sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a",
+  "source_duration": 189.44,
+  "source_native_resolution": [
+    1080,
+    1920
+  ],
+  "parts": {
+    "yourchannel-athena829263-ep1-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "28d058d325cc7ff50853a6c54d8852fb81cbc44e5bb6b23c2496a00a97be3c5c",
+      "render_bytes": 72798339,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1920
+      ],
+      "source_duration": 189.44,
+      "source_sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a",
+      "boundary_note": "44 after43.05 speech/caption43.0 before45.9;96.5 after95.8 speech/caption95.8 before97.12;148.75 aftervisualAthena entrance before149.5speech; housefades clear speech; no source omitted",
+      "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades"
+    },
+    "yourchannel-athena829263-ep1-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "42de86985324f493a536271dc1e2bcfc664439b3a3b8adeb2b1e2b814db70d1e",
+      "render_bytes": 96455017,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1920
+      ],
+      "source_duration": 189.44,
+      "source_sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a",
+      "boundary_note": "44 after43.05 speech/caption43.0 before45.9;96.5 after95.8 speech/caption95.8 before97.12;148.75 aftervisualAthena entrance before149.5speech; housefades clear speech; no source omitted",
+      "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades"
+    },
+    "yourchannel-athena829263-ep1-part3-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "5ec51821844f7d0857236a1ca57acc2459fab5c6f6231031921b0e81f0398e69",
+      "render_bytes": 99879985,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1920
+      ],
+      "source_duration": 189.44,
+      "source_sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a",
+      "boundary_note": "44 after43.05 speech/caption43.0 before45.9;96.5 after95.8 speech/caption95.8 before97.12;148.75 aftervisualAthena entrance before149.5speech; housefades clear speech; no source omitted",
+      "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades"
+    },
+    "yourchannel-athena829263-ep1-part4-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "ef71820c8c3766dcdf35b9d04c74b074705c91874c09c3b91ffd5a8f733a55ef",
+      "render_bytes": 86950012,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1920
+      ],
+      "source_duration": 189.44,
+      "source_sha256": "1422ead5140b026523e66bc8aa145c24411be179774a66e002a0db70dd4a5c1a",
+      "boundary_note": "44 after43.05 speech/caption43.0 before45.9;96.5 after95.8 speech/caption95.8 before97.12;148.75 aftervisualAthena entrance before149.5speech; housefades clear speech; no source omitted",
+      "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades"
+    }
+  }
+}
