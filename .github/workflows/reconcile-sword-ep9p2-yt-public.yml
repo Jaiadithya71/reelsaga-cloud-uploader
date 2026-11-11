@@ -1,4 +1,4 @@
-name: Sword E9P1 verified public ledger reconcile
+name: Sword E9P2 verified public ledger reconcile
 'on':
   workflow_dispatch: {}
 permissions:
@@ -10,7 +10,7 @@ concurrency:
 jobs:
   private-probes:
     runs-on: ubuntu-22.04
-    timeout-minutes: 40
+    timeout-minutes: 15
     steps:
     - uses: actions/checkout@v4
       with:
@@ -18,9 +18,8 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.12'
-    - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
     - run: python -m pip install cryptography==46.0.5 requests
-    - name: Sword E9P1 verified public ledger reconcile
+    - name: Sword E9P2 verified public ledger reconcile
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
