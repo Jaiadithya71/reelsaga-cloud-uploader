@@ -18,8 +18,11 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: '3.12'
-    - run: if ! command -v ffmpeg >/dev/null; then timeout 180 sudo apt-get update
-        -qq && timeout 180 sudo apt-get install -y -qq ffmpeg >/dev/null; fi
+    - run: "if ! command -v ffmpeg >/dev/null; then\n  echo 'http://archive.ubuntu.com/ubuntu'\
+        \ | sudo tee /etc/apt/apt-mirrors.txt >/dev/null\n  timeout 120 sudo apt-get\
+        \ -o Acquire::Retries=0 -o Acquire::http::Timeout=15 update -qq\n  timeout\
+        \ 120 sudo apt-get -o Acquire::Retries=0 -o Acquire::http::Timeout=15 install\
+        \ -y -qq ffmpeg >/dev/null\nfi\nffmpeg -version | head -1"
     - run: python -m pip install cryptography==46.0.5 requests
     - name: Single privately gated episode probe
       env:
