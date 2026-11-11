@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1P1_P2_P3_P4_public_E1P5privateprep_E3held",
+  "status": "E1P1_P2_P3_P4_public_E1P5_privatefullygated_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -473,7 +473,24 @@
       "public_reload_SaveUndoDisabled": true,
       "public_AIbadge_verified_at": "2026-11-12T04:25:26+05:30",
       "claims_fresh_none_at": "2026-11-12T04:23:35+05:30",
-      "playlist_public_order": "E1P1,P2,P3,P4;E2P1private"
+      "playlist_public_order": "E1P1,P2,P3,P4;E2P1private",
+      "ledger_reconciled_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43115863988",
+      "api_published_at": "2026-11-11T22:54:29Z"
+    },
+    "episode1part5": {
+      "video_id": "drGUPzPduZ4",
+      "url": "https://youtube.com/shorts/drGUPzPduZ4",
+      "privacy": "private",
+      "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43115859528",
+      "execution_sha": "c7b032e0cfd0e7da92526f888095b53a8750ac96",
+      "complete_inventory_count": 490,
+      "checkpoint_final_disabled_verified": true,
+      "claims_none_at": "2026-11-12T04:30:35+05:30",
+      "nativeAI_yes_saved_reloadverified": true,
+      "ownplaylist_saved_reload_actualmembership_verified": true,
+      "reload_SaveUndoDisabled": true,
+      "actual_playlist_at": "2026-11-12T04:32:04+05:30",
+      "stage_deleted_HEAD404_signedGET404": true
     }
   },
   "next_public_part": {
@@ -482,9 +499,9 @@
     "earliest": "2026-11-12T05:24:29+05:30",
     "hardline": "2026-11-12T08:24:29+05:30",
     "gates_pending": [
-      "private_upload_claims",
-      "nativeAI",
-      "ownplaylistactualmembership"
+      "freshclaims",
+      "hourlyspacing",
+      "freshmetadataAIplaylistreadback"
     ]
   }
 }
