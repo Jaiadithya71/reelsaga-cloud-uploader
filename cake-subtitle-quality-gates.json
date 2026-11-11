@@ -85,12 +85,33 @@
         "encoded_part3_affected_frames_inspected": 64,
         "final_artifact_cleanup": "27 closeup frames42-68 elliptical cleanup, inspected all. Earlier rectangular cleanup rejected."
       }
+    },
+    "3": {
+      "duration": 200.256,
+      "status": "timingrepairtrial_unaccepted",
+      "review": "wholebase+smallASR/801quartersecondOCR/32action+47targetedpixels,isolated108-118VADsmall",
+      "finding": "Timing: marry him so i get to live here absent spoken110.5-112.8 and late114.708333-116.375. Additional defect177.25-178.5 source um um big big guy versus single um,big in allASR and isolatedaudio. Actually spoken repetitions dont dont and Lucys Lucys retained.",
+      "trial": "Timingtrial assembled, not accepted: caption-derived alphaglyph at110.5-112.875; late40framesinpainted. Inspected all40removalpixels/all58addedcaptionframes after encoding plus fullframeboundaries. Motion and seconddefectrepair still pending.",
+      "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2211558a-1a1aaafe33b-0005-9573-534-c9280.mp4",
+      "trial_master": {
+        "path": "/downloads/cake829267-e3-repaired-trial.mp4",
+        "sha256": "e90b69264df827039e4d3795467dbf4e441c518ff03f5ec21f5dba37d9020cf1",
+        "bytes": 98197509,
+        "frames": 4806,
+        "duration": 200.257,
+        "audio_sha256": "2ffcb44c23f52f9509937df2e913a0c5b5888898c7b37e32e08452ab0c5a7c06",
+        "source_audio_identical": true,
+        "accepted": false
+      },
+      "isolated175_190": "smallVAD + readAudio confirm single um/big, repeated Lucys."
     }
   },
   "open_checks": [
     "Live IG index partial, Buffer history embargo; no exhaustiveIGabsence claim",
-    "E2P1+remainingparts privateclaims/nativeAI/ownplaylist pending",
-    "future E3-E8 not reviewed, no forwardquality guarantee"
+    "E1P2 privatepassed, release freshclaims/nativeAI/metadata/playlistcheck02:13IST+",
+    "E2P1 privateaudioonlynoimpact acceptedstandingexception; E2P2-P4privateclaims not checked",
+    "E3 timingtrial not accepted, um um big big guy seconddefect needsrepair",
+    "E4-E8 not reviewed; no forwardqualityguarantee"
   ],
   "parts": [
     {
@@ -351,6 +372,19 @@
       "stage_consumed_deleted_head404_signedget404": true,
       "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43089148381",
       "commit": "1663292b1f2288d9e14a1cda8c99f082c494785d"
+    },
+    "episode1part2": {
+      "video_id": "AUs1FF_iir0",
+      "url": "https://youtube.com/shorts/AUs1FF_iir0",
+      "studio": "https://studio.youtube.com/video/AUs1FF_iir0/edit",
+      "claims": "none01:38:11ISTNov12",
+      "nativeAI": "Yes_saved_verifiedfreshTab2_SaveUndoDisabled01:40:27",
+      "playlist": "actual3membersE1P1publicE2P1privateE1P2private01:40:40",
+      "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43093273142",
+      "commit": "c13b50f3e17bd798eb6f0ba882e5e409fc3a907a",
+      "checkpoint_stop_verified": true,
+      "stage_deleted_HEAD404_signedGET404": true,
+      "privacy": "private"
     }
   },
   "next_public_part": {
