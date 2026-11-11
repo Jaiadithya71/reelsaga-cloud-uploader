@@ -556,3 +556,5 @@ not evidence of "not published".
 - SwordE3P2ledgerSUCCESS https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42934947305 exacte3d26e919ddd9752d4ae7407d278752d8c49a05b stoppedreadbackverified00:55:11ZNov11thenpublishedcheckpointAGQz5R44gyI.
 
 - SwordE6P1v4rZh3Tb9no privateprobe42936636104SUCCESSexact7151b30c3955065476768709336b91706769863f/privatecheckpointstopverified;freshclaimsnone06:49:13/nativeAIyes/ownplaylistSaveReloadDisabled06:50:05;11inventoryordered06:51:15first6PublicthenE4P1/P2/E5P1/P2/E6P1Private. https://studio.youtube.com/video/v4rZh3Tb9no/edit
+
+- SwordE6P2 4O4lG96qy6o privateprobe42938363140SUCCESSexact92f0b86b6f383d19581b1f1342a53ce8d9e23dc3/privatecheckpointstopverified;freshclaimsnone07:02:38/nativeAIyes/ownplaylistSaveReloadDisabled07:03:27;12inventoryordered07:03:40first6PublicthenE4P1/P2/E5P1/P2/E6P1/P2Private. https://studio.youtube.com/video/4O4lG96qy6o/edit
