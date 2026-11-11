@@ -405,7 +405,8 @@
       "claims_fresh_none_at": "2026-11-12T02:15:47+05:30",
       "public_reload_SaveUndoDisabled": true,
       "public_AIbadge_verified": "02:18:50IST",
-      "actualplaylist_public_order": "E1P1,E1P2; E2P1private"
+      "actualplaylist_public_order": "E1P1,E1P2; E2P1private",
+      "ledger_reconciled_run_pending": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43098301684"
     }
   },
   "next_public_part": {
@@ -414,7 +415,7 @@
     "earliest": "2026-11-12T03:17:00+05:30",
     "hardline": "2026-11-12T06:16:51+05:30",
     "gates_pending": [
-      "private_upload_claims",
+      "privateprobe43098298616initialstartupfailure_nojobs_oneUIrerunqueued02:30:59",
       "nativeAI",
       "ownplaylistactualmembership"
     ]
