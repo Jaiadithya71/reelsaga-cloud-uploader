@@ -42,9 +42,11 @@ def validate(item,path):
 def run(backend,api,item,path):
     validate(item,path)
     controls=Controls(backend,lambda:None);ledger=DurableLedger(backend)
-    if ledger.resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item already claimed; reconcile only')
+    saved,_=backend.get(ledger.key(item['id'],'youtube'))
+    if not saved or saved.get('state')!='started' or saved.get('external_id') or saved.get('session'):raise RuntimeError('Not the diagnosed pre-external claim')
+    ledger.verify_item(item,'youtube')
     controls.require_enabled()
-    if not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')
+    # Reuse only the diagnosed started claim; never create a second claim.
     checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)
     checkpoint('uncertain');controls.require_enabled()
     youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)
@@ -153,7 +155,9 @@ def main():
             raise RuntimeError('Existing episode part without ledger proof; reconcile only')
         print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':_count,'duplicate_part_found':False}))
         stage="item_claim_read"
-        if DurableLedger(backend).resume(item['id'],'youtube')!='unclaimed':raise RuntimeError('Item already claimed')
+        saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))
+        if not saved or saved.get('state')!='started' or saved.get('external_id') or saved.get('session'):raise RuntimeError('Not pre-external claim')
+        DurableLedger(backend).verify_item(item,'youtube')
         stage="enable_control"
         controls.set_access(True,verified=True)
         stage="private_upload"
@@ -181,7 +185,8 @@ def main():
         result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)
         print(json.dumps(result,sort_keys=True))
         open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Athena EP1P4 episode probe verified\n\n```json\n"+json.dumps(result,indent=2)+"\n```\n")
-    except Exception:
+    except Exception as error:
+        print('Failure class: '+type(error).__name__)
         print('Safe failure stage: '+stage)
         print('Real-part upload stopped. Reconcile encrypted ledger and Studio before retry; secrets not shown.')
         raise SystemExit(1) from None
