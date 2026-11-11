@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1P1_P2_public_E1P3_executionblocked_E3held",
+  "status": "E1P1_P2_P3_public_E1P4privateprep_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -285,6 +285,21 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "6f1bdebada632ab4e7994184a1ce96c024d40b853cda83ce70d96300ad83970e"
+    },
+    "yourchannel-cake829267-ep1-part4-v1": {
+      "episode": 1,
+      "part": 4,
+      "source_start": 143,
+      "source_end": 190.4,
+      "duration": 47.400000000000006,
+      "sha256": "d66bb525fab8de47952673852c3f84885ff1466f16088d0e8a1b9e28839a6345",
+      "bytes": 28148891,
+      "path": "/downloads/cake-e1p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "d66bb525fab8de47952673852c3f84885ff1466f16088d0e8a1b9e28839a6345"
     }
   },
   "e2_parts": [
@@ -406,18 +421,34 @@
       "public_reload_SaveUndoDisabled": true,
       "public_AIbadge_verified": "02:18:50IST",
       "actualplaylist_public_order": "E1P1,E1P2; E2P1private",
-      "ledger_reconciled_run_pending": "43098301684failed_before_steps_internalservererror"
+      "ledger_reconciled_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43098301684"
+    },
+    "episode1part3": {
+      "video_id": "BWKclaaxU-8",
+      "url": "https://www.youtube.com/shorts/BWKclaaxU-8",
+      "privacy": "public",
+      "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43104933806",
+      "execution_sha": "ea6585140c25dd196d94887e19bec5a7c1692a73",
+      "complete_inventory_count": 487,
+      "checkpoint_final_disabled_verified": true,
+      "claims_none_at": "2026-11-12T03:19:25+05:30",
+      "nativeAI_yes_saved_reloadverified": true,
+      "public_player_published_at": "2026-11-12T03:20:45+05:30",
+      "public_reload_SaveUndoDisabled": true,
+      "playlist_public_order": "E1P1,P2,P3;E2P1private",
+      "public_AIbadge_verified_at": "2026-11-12T03:21:37+05:30",
+      "stage_deleted_HEAD404_signedGET404": true
     }
   },
   "next_public_part": {
     "episode": 1,
-    "part": 3,
-    "earliest": "not_before2026-11-12T03:16:51+05:30_and_executionrecovery_privategates",
-    "hardline": "2026-11-12T06:16:51+05:30",
+    "part": 4,
+    "earliest": "2026-11-12T04:21:00+05:30",
+    "hardline": "2026-11-12T07:20:45+05:30",
     "gates_pending": [
-      "GitHubserverfailureP3initial+oneboundedretryfailed0jobs",
-      "stage_deletedHEAD404signedGET40402:46newstageonlyafterrealrecoverysignal",
-      "privateupload_claims_nativeAI_playlist"
+      "private_upload_claims",
+      "nativeAI",
+      "ownplaylistmembership"
     ]
   }
 }
