@@ -582,3 +582,5 @@ not evidence of "not published".
 - Sword E9 whole84.237s native1080x1922 source reviewed base+smallASR/3364fpsOCR/wholeaction42contactframes+36targetedcaptionframes/bothrenderpixels. Originalaudio/burnedwhiteoutlinecaptions, no repair needed. Split39.5afterquestionends39.08/captionends39.0beforeresponse39.86-40.1; no source footage omitted. P1/P2 hash-pinned private-only probes prepared, claims/AI/playlist gates still pending, no public flip.
 
 - E9P1 privateprobe42959722327 failed before upload/control access on stale template E8 sourcehash; builder corrected to hash actual reviewed E9 source. Renderpins unchanged/allguards retained. One fresh private-only retry, no duplicate uploaded item.
+
+- Sword E9P1 dIQ-iO3xEjU PRIVATE correctedprobeSUCCESS https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42962408431 exact23ae1aa1e37291c22570dbe450323d3ec93f154b checkpointprivate+stopreadback04:57:50Z. Freshclaimsnone10:37:40IST/nativeAIyes/ownplaylistSaveReloadDisabled10:40:00/17inventoryordered10:40:19first9Public8Private. SavecommandtimedoutbutfreshTab2readbackconfirmedAIyesandplaylistSaved;noPublicflip. E9P2privateprobe20410:40:25 samehead.
