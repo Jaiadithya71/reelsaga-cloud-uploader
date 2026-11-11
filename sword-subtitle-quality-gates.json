@@ -302,7 +302,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "04fa41b5244b4fdb489f28be6c12ad92c8b787cd34cad475770e35c8eb994ac8",
       "render_bytes": 60140926,
-      "status": "private_clean_ready",
+      "status": "public_verified_ledger_pending",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -319,11 +319,14 @@
       "studio_url": "https://studio.youtube.com/video/kF3nUhEki4s/edit",
       "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42910775373",
       "probe_head_sha": "7c4e84610241d99ce934cab8718d6d57469b722a",
-      "claims_checked_at": "2026-11-11T03:43:06+05:30",
+      "claims_checked_at": "2026-11-11T08:33:19+05:30",
       "claims": "none",
       "ai_yes_saved_reload_verified": true,
       "own_playlist": "PLSDxRohmmBQk",
-      "save_reload_disabled_at": "2026-11-11T03:43:42+05:30"
+      "save_reload_disabled_at": "2026-11-11T03:43:42+05:30",
+      "public_verified_at": "2026-11-11T08:34:12+05:30",
+      "published_at": "2026-11-11T08:33:38+05:30",
+      "native_ai_yes": true
     },
     "yourchannel-sword829261-ep5-part1-v1": {
       "whole_part_release_ready": true,
