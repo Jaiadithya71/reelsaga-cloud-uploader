@@ -1,0 +1,1406 @@
+[
+  {
+    "start": 5.799999999999999,
+    "end": 8.9,
+    "text": " Warning. Hydraulic system total failure.",
+    "words": [
+      {
+        "start": 5.799999999999999,
+        "end": 6.84,
+        "word": " Warning."
+      },
+      {
+        "start": 7.36,
+        "end": 7.56,
+        "word": " Hydraulic"
+      },
+      {
+        "start": 7.56,
+        "end": 7.96,
+        "word": " system"
+      },
+      {
+        "start": 7.96,
+        "end": 8.34,
+        "word": " total"
+      },
+      {
+        "start": 8.34,
+        "end": 8.9,
+        "word": " failure."
+      }
+    ]
+  },
+  {
+    "start": 30.9,
+    "end": 32.96,
+    "text": " Doomsday game initiated.",
+    "words": [
+      {
+        "start": 30.9,
+        "end": 31.5,
+        "word": " Doomsday"
+      },
+      {
+        "start": 31.5,
+        "end": 32.02,
+        "word": " game"
+      },
+      {
+        "start": 32.02,
+        "end": 32.96,
+        "word": " initiated."
+      }
+    ]
+  },
+  {
+    "start": 36.08,
+    "end": 39.04,
+    "text": " In 100 days, the old world burns to ash.",
+    "words": [
+      {
+        "start": 36.08,
+        "end": 36.4,
+        "word": " In"
+      },
+      {
+        "start": 36.4,
+        "end": 36.64,
+        "word": " 100"
+      },
+      {
+        "start": 36.64,
+        "end": 37.06,
+        "word": " days,"
+      },
+      {
+        "start": 37.5,
+        "end": 37.6,
+        "word": " the"
+      },
+      {
+        "start": 37.6,
+        "end": 37.78,
+        "word": " old"
+      },
+      {
+        "start": 37.78,
+        "end": 38.08,
+        "word": " world"
+      },
+      {
+        "start": 38.08,
+        "end": 38.5,
+        "word": " burns"
+      },
+      {
+        "start": 38.5,
+        "end": 38.82,
+        "word": " to"
+      },
+      {
+        "start": 38.82,
+        "end": 39.04,
+        "word": " ash."
+      }
+    ]
+  },
+  {
+    "start": 39.22,
+    "end": 41.72,
+    "text": " 100 million survivors are chosen as lords.",
+    "words": [
+      {
+        "start": 39.22,
+        "end": 39.68,
+        "word": " 100"
+      },
+      {
+        "start": 39.68,
+        "end": 40.02,
+        "word": " million"
+      },
+      {
+        "start": 40.02,
+        "end": 40.5,
+        "word": " survivors"
+      },
+      {
+        "start": 40.5,
+        "end": 40.86,
+        "word": " are"
+      },
+      {
+        "start": 40.86,
+        "end": 41.14,
+        "word": " chosen"
+      },
+      {
+        "start": 41.14,
+        "end": 41.44,
+        "word": " as"
+      },
+      {
+        "start": 41.44,
+        "end": 41.72,
+        "word": " lords."
+      }
+    ]
+  },
+  {
+    "start": 42.7,
+    "end": 46.82,
+    "text": " Rosh, draw your sanctuary. Recruit followers. Build your domains.",
+    "words": [
+      {
+        "start": 42.7,
+        "end": 42.8,
+        "word": " Rosh,"
+      },
+      {
+        "start": 43.18,
+        "end": 43.44,
+        "word": " draw"
+      },
+      {
+        "start": 43.44,
+        "end": 43.66,
+        "word": " your"
+      },
+      {
+        "start": 43.66,
+        "end": 44.08,
+        "word": " sanctuary."
+      },
+      {
+        "start": 44.74,
+        "end": 45.0,
+        "word": " Recruit"
+      },
+      {
+        "start": 45.0,
+        "end": 45.46,
+        "word": " followers."
+      },
+      {
+        "start": 46.16,
+        "end": 46.28,
+        "word": " Build"
+      },
+      {
+        "start": 46.28,
+        "end": 46.48,
+        "word": " your"
+      },
+      {
+        "start": 46.48,
+        "end": 46.82,
+        "word": " domains."
+      }
+    ]
+  },
+  {
+    "start": 47.64,
+    "end": 51.0,
+    "text": " Attention. Your fate hinges on your sanctuary's rank.",
+    "words": [
+      {
+        "start": 47.64,
+        "end": 47.86,
+        "word": " Attention."
+      },
+      {
+        "start": 48.7,
+        "end": 48.82,
+        "word": " Your"
+      },
+      {
+        "start": 48.82,
+        "end": 49.1,
+        "word": " fate"
+      },
+      {
+        "start": 49.1,
+        "end": 49.56,
+        "word": " hinges"
+      },
+      {
+        "start": 49.56,
+        "end": 50.0,
+        "word": " on"
+      },
+      {
+        "start": 50.0,
+        "end": 50.18,
+        "word": " your"
+      },
+      {
+        "start": 50.18,
+        "end": 50.84,
+        "word": " sanctuary's"
+      },
+      {
+        "start": 50.84,
+        "end": 51.0,
+        "word": " rank."
+      }
+    ]
+  },
+  {
+    "start": 54.72,
+    "end": 56.28,
+    "text": " What the hell is this place?",
+    "words": [
+      {
+        "start": 54.72,
+        "end": 55.32,
+        "word": " What"
+      },
+      {
+        "start": 55.32,
+        "end": 55.48,
+        "word": " the"
+      },
+      {
+        "start": 55.48,
+        "end": 55.6,
+        "word": " hell"
+      },
+      {
+        "start": 55.6,
+        "end": 55.78,
+        "word": " is"
+      },
+      {
+        "start": 55.78,
+        "end": 55.96,
+        "word": " this"
+      },
+      {
+        "start": 55.96,
+        "end": 56.28,
+        "word": " place?"
+      }
+    ]
+  },
+  {
+    "start": 57.28,
+    "end": 59.22,
+    "text": " Let me out! Let me out!",
+    "words": [
+      {
+        "start": 57.28,
+        "end": 57.5,
+        "word": " Let"
+      },
+      {
+        "start": 57.5,
+        "end": 57.68,
+        "word": " me"
+      },
+      {
+        "start": 57.68,
+        "end": 57.94,
+        "word": " out!"
+      },
+      {
+        "start": 58.58,
+        "end": 58.74,
+        "word": " Let"
+      },
+      {
+        "start": 58.74,
+        "end": 58.92,
+        "word": " me"
+      },
+      {
+        "start": 58.92,
+        "end": 59.22,
+        "word": " out!"
+      }
+    ]
+  },
+  {
+    "start": 62.78,
+    "end": 65.0,
+    "text": " Sanctuary draw, starting now.",
+    "words": [
+      {
+        "start": 62.78,
+        "end": 63.34,
+        "word": " Sanctuary"
+      },
+      {
+        "start": 63.34,
+        "end": 63.8,
+        "word": " draw,"
+      },
+      {
+        "start": 64.18,
+        "end": 64.56,
+        "word": " starting"
+      },
+      {
+        "start": 64.56,
+        "end": 65.0,
+        "word": " now."
+      }
+    ]
+  },
+  {
+    "start": 71.46,
+    "end": 74.56,
+    "text": " Five slots! I can take four more! Who's coming with me?",
+    "words": [
+      {
+        "start": 71.46,
+        "end": 72.02,
+        "word": " Five"
+      },
+      {
+        "start": 72.02,
+        "end": 72.36,
+        "word": " slots!"
+      },
+      {
+        "start": 72.8,
+        "end": 72.84,
+        "word": " I"
+      },
+      {
+        "start": 72.84,
+        "end": 72.94,
+        "word": " can"
+      },
+      {
+        "start": 72.94,
+        "end": 73.08,
+        "word": " take"
+      },
+      {
+        "start": 73.08,
+        "end": 73.34,
+        "word": " four"
+      },
+      {
+        "start": 73.34,
+        "end": 73.58,
+        "word": " more!"
+      },
+      {
+        "start": 73.7,
+        "end": 73.86,
+        "word": " Who's"
+      },
+      {
+        "start": 73.86,
+        "end": 74.04,
+        "word": " coming"
+      },
+      {
+        "start": 74.04,
+        "end": 74.26,
+        "word": " with"
+      },
+      {
+        "start": 74.26,
+        "end": 74.56,
+        "word": " me?"
+      }
+    ]
+  },
+  {
+    "start": 76.16,
+    "end": 79.04,
+    "text": " Bragging over this pile of junk? Pathetic.",
+    "words": [
+      {
+        "start": 76.16,
+        "end": 76.72,
+        "word": " Bragging"
+      },
+      {
+        "start": 76.72,
+        "end": 76.96,
+        "word": " over"
+      },
+      {
+        "start": 76.96,
+        "end": 77.14,
+        "word": " this"
+      },
+      {
+        "start": 77.14,
+        "end": 77.4,
+        "word": " pile"
+      },
+      {
+        "start": 77.4,
+        "end": 77.58,
+        "word": " of"
+      },
+      {
+        "start": 77.58,
+        "end": 77.84,
+        "word": " junk?"
+      },
+      {
+        "start": 78.62,
+        "end": 79.04,
+        "word": " Pathetic."
+      }
+    ]
+  },
+  {
+    "start": 87.96000000000001,
+    "end": 91.94,
+    "text": " An epic rank? Holy shit! 100 slots!",
+    "words": [
+      {
+        "start": 87.96000000000001,
+        "end": 88.72,
+        "word": " An"
+      },
+      {
+        "start": 88.72,
+        "end": 89.48,
+        "word": " epic"
+      },
+      {
+        "start": 89.48,
+        "end": 89.88,
+        "word": " rank?"
+      },
+      {
+        "start": 90.54,
+        "end": 90.54,
+        "word": " Holy"
+      },
+      {
+        "start": 90.54,
+        "end": 91.0,
+        "word": " shit!"
+      },
+      {
+        "start": 91.3,
+        "end": 91.54,
+        "word": " 100"
+      },
+      {
+        "start": 91.54,
+        "end": 91.94,
+        "word": " slots!"
+      }
+    ]
+  },
+  {
+    "start": 92.54,
+    "end": 95.84,
+    "text": " See that? Now that's what you call a sanctuary.",
+    "words": [
+      {
+        "start": 92.54,
+        "end": 92.62,
+        "word": " See"
+      },
+      {
+        "start": 92.62,
+        "end": 93.6,
+        "word": " that?"
+      },
+      {
+        "start": 94.26,
+        "end": 94.4,
+        "word": " Now"
+      },
+      {
+        "start": 94.4,
+        "end": 94.7,
+        "word": " that's"
+      },
+      {
+        "start": 94.7,
+        "end": 94.8,
+        "word": " what"
+      },
+      {
+        "start": 94.8,
+        "end": 94.94,
+        "word": " you"
+      },
+      {
+        "start": 94.94,
+        "end": 95.16,
+        "word": " call"
+      },
+      {
+        "start": 95.16,
+        "end": 95.34,
+        "word": " a"
+      },
+      {
+        "start": 95.34,
+        "end": 95.84,
+        "word": " sanctuary."
+      }
+    ]
+  },
+  {
+    "start": 96.34,
+    "end": 100.74,
+    "text": " Want to get inside my castle? Men need combat skills. Vets, cops, hunters first.",
+    "words": [
+      {
+        "start": 96.34,
+        "end": 96.44,
+        "word": " Want"
+      },
+      {
+        "start": 96.44,
+        "end": 96.52,
+        "word": " to"
+      },
+      {
+        "start": 96.52,
+        "end": 96.62,
+        "word": " get"
+      },
+      {
+        "start": 96.62,
+        "end": 96.88,
+        "word": " inside"
+      },
+      {
+        "start": 96.88,
+        "end": 97.1,
+        "word": " my"
+      },
+      {
+        "start": 97.1,
+        "end": 97.48,
+        "word": " castle?"
+      },
+      {
+        "start": 97.92,
+        "end": 98.0,
+        "word": " Men"
+      },
+      {
+        "start": 98.0,
+        "end": 98.22,
+        "word": " need"
+      },
+      {
+        "start": 98.22,
+        "end": 98.6,
+        "word": " combat"
+      },
+      {
+        "start": 98.6,
+        "end": 99.02,
+        "word": " skills."
+      },
+      {
+        "start": 99.46,
+        "end": 99.56,
+        "word": " Vets,"
+      },
+      {
+        "start": 99.94,
+        "end": 99.94,
+        "word": " cops,"
+      },
+      {
+        "start": 100.36,
+        "end": 100.36,
+        "word": " hunters"
+      },
+      {
+        "start": 100.36,
+        "end": 100.74,
+        "word": " first."
+      }
+    ]
+  },
+  {
+    "start": 102.14,
+    "end": 107.02,
+    "text": " As for women, hot ones only. After my personal inspection.",
+    "words": [
+      {
+        "start": 102.14,
+        "end": 102.3,
+        "word": " As"
+      },
+      {
+        "start": 102.3,
+        "end": 102.52,
+        "word": " for"
+      },
+      {
+        "start": 102.52,
+        "end": 102.78,
+        "word": " women,"
+      },
+      {
+        "start": 103.68,
+        "end": 103.78,
+        "word": " hot"
+      },
+      {
+        "start": 103.78,
+        "end": 104.22,
+        "word": " ones"
+      },
+      {
+        "start": 104.22,
+        "end": 104.78,
+        "word": " only."
+      },
+      {
+        "start": 105.38,
+        "end": 105.7,
+        "word": " After"
+      },
+      {
+        "start": 105.7,
+        "end": 105.96,
+        "word": " my"
+      },
+      {
+        "start": 105.96,
+        "end": 106.4,
+        "word": " personal"
+      },
+      {
+        "start": 106.4,
+        "end": 107.02,
+        "word": " inspection."
+      }
+    ]
+  },
+  {
+    "start": 107.02,
+    "end": 109.08,
+    "text": " What the fuck are women to you?",
+    "words": [
+      {
+        "start": 107.02,
+        "end": 107.48,
+        "word": " What"
+      },
+      {
+        "start": 107.48,
+        "end": 107.66,
+        "word": " the"
+      },
+      {
+        "start": 107.66,
+        "end": 107.96,
+        "word": " fuck"
+      },
+      {
+        "start": 107.96,
+        "end": 108.14,
+        "word": " are"
+      },
+      {
+        "start": 108.14,
+        "end": 108.38,
+        "word": " women"
+      },
+      {
+        "start": 108.38,
+        "end": 108.68,
+        "word": " to"
+      },
+      {
+        "start": 108.68,
+        "end": 109.08,
+        "word": " you?"
+      }
+    ]
+  },
+  {
+    "start": 110.02,
+    "end": 114.6,
+    "text": " Talk when you own a castle. Don't like it? Get out and feed the monsters.",
+    "words": [
+      {
+        "start": 110.02,
+        "end": 110.48,
+        "word": " Talk"
+      },
+      {
+        "start": 110.48,
+        "end": 110.68,
+        "word": " when"
+      },
+      {
+        "start": 110.68,
+        "end": 110.82,
+        "word": " you"
+      },
+      {
+        "start": 110.82,
+        "end": 110.96,
+        "word": " own"
+      },
+      {
+        "start": 110.96,
+        "end": 111.14,
+        "word": " a"
+      },
+      {
+        "start": 111.14,
+        "end": 111.46,
+        "word": " castle."
+      },
+      {
+        "start": 111.94,
+        "end": 112.22,
+        "word": " Don't"
+      },
+      {
+        "start": 112.22,
+        "end": 112.44,
+        "word": " like"
+      },
+      {
+        "start": 112.44,
+        "end": 112.7,
+        "word": " it?"
+      },
+      {
+        "start": 113.28,
+        "end": 113.5,
+        "word": " Get"
+      },
+      {
+        "start": 113.5,
+        "end": 113.68,
+        "word": " out"
+      },
+      {
+        "start": 113.68,
+        "end": 113.84,
+        "word": " and"
+      },
+      {
+        "start": 113.84,
+        "end": 114.0,
+        "word": " feed"
+      },
+      {
+        "start": 114.0,
+        "end": 114.18,
+        "word": " the"
+      },
+      {
+        "start": 114.18,
+        "end": 114.6,
+        "word": " monsters."
+      }
+    ]
+  },
+  {
+    "start": 115.9,
+    "end": 118.18,
+    "text": " Don't worry. Whatever I get, I'll protect you.",
+    "words": [
+      {
+        "start": 115.9,
+        "end": 116.06,
+        "word": " Don't"
+      },
+      {
+        "start": 116.06,
+        "end": 116.26,
+        "word": " worry."
+      },
+      {
+        "start": 116.84,
+        "end": 117.12,
+        "word": " Whatever"
+      },
+      {
+        "start": 117.12,
+        "end": 117.36,
+        "word": " I"
+      },
+      {
+        "start": 117.36,
+        "end": 117.5,
+        "word": " get,"
+      },
+      {
+        "start": 117.54,
+        "end": 117.62,
+        "word": " I'll"
+      },
+      {
+        "start": 117.62,
+        "end": 117.88,
+        "word": " protect"
+      },
+      {
+        "start": 117.88,
+        "end": 118.18,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 118.66,
+    "end": 123.28,
+    "text": " Babe, I'm not here for a castle. Whatever you get, I'm with you.",
+    "words": [
+      {
+        "start": 118.66,
+        "end": 118.78,
+        "word": " Babe,"
+      },
+      {
+        "start": 119.06,
+        "end": 119.5,
+        "word": " I'm"
+      },
+      {
+        "start": 119.5,
+        "end": 119.64,
+        "word": " not"
+      },
+      {
+        "start": 119.64,
+        "end": 119.82,
+        "word": " here"
+      },
+      {
+        "start": 119.82,
+        "end": 119.96,
+        "word": " for"
+      },
+      {
+        "start": 119.96,
+        "end": 120.1,
+        "word": " a"
+      },
+      {
+        "start": 120.1,
+        "end": 120.4,
+        "word": " castle."
+      },
+      {
+        "start": 121.12,
+        "end": 121.4,
+        "word": " Whatever"
+      },
+      {
+        "start": 121.4,
+        "end": 121.68,
+        "word": " you"
+      },
+      {
+        "start": 121.68,
+        "end": 121.92,
+        "word": " get,"
+      },
+      {
+        "start": 122.32,
+        "end": 122.78,
+        "word": " I'm"
+      },
+      {
+        "start": 122.78,
+        "end": 122.88,
+        "word": " with"
+      },
+      {
+        "start": 122.88,
+        "end": 123.28,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 137.88000000000002,
+    "end": 142.2,
+    "text": " A water tower? A dry, rusty tower? Fitting three whole people?",
+    "words": [
+      {
+        "start": 137.88000000000002,
+        "end": 138.3,
+        "word": " A"
+      },
+      {
+        "start": 138.3,
+        "end": 138.68,
+        "word": " water"
+      },
+      {
+        "start": 138.68,
+        "end": 139.16,
+        "word": " tower?"
+      },
+      {
+        "start": 139.6,
+        "end": 139.6,
+        "word": " A"
+      },
+      {
+        "start": 139.6,
+        "end": 139.92,
+        "word": " dry,"
+      },
+      {
+        "start": 139.98,
+        "end": 140.3,
+        "word": " rusty"
+      },
+      {
+        "start": 140.3,
+        "end": 140.78,
+        "word": " tower?"
+      },
+      {
+        "start": 141.18,
+        "end": 141.28,
+        "word": " Fitting"
+      },
+      {
+        "start": 141.28,
+        "end": 141.54,
+        "word": " three"
+      },
+      {
+        "start": 141.54,
+        "end": 141.76,
+        "word": " whole"
+      },
+      {
+        "start": 141.76,
+        "end": 142.2,
+        "word": " people?"
+      }
+    ]
+  },
+  {
+    "start": 143.06,
+    "end": 147.08,
+    "text": " Leon, thought you'd pull something good. Are you gonna hang up there for them to eat you?",
+    "words": [
+      {
+        "start": 143.06,
+        "end": 143.48,
+        "word": " Leon,"
+      },
+      {
+        "start": 143.94,
+        "end": 144.2,
+        "word": " thought"
+      },
+      {
+        "start": 144.2,
+        "end": 144.42,
+        "word": " you'd"
+      },
+      {
+        "start": 144.42,
+        "end": 144.58,
+        "word": " pull"
+      },
+      {
+        "start": 144.58,
+        "end": 144.9,
+        "word": " something"
+      },
+      {
+        "start": 144.9,
+        "end": 145.22,
+        "word": " good."
+      },
+      {
+        "start": 145.56,
+        "end": 145.62,
+        "word": " Are"
+      },
+      {
+        "start": 145.62,
+        "end": 145.72,
+        "word": " you"
+      },
+      {
+        "start": 145.72,
+        "end": 145.88,
+        "word": " gonna"
+      },
+      {
+        "start": 145.88,
+        "end": 146.04,
+        "word": " hang"
+      },
+      {
+        "start": 146.04,
+        "end": 146.22,
+        "word": " up"
+      },
+      {
+        "start": 146.22,
+        "end": 146.38,
+        "word": " there"
+      },
+      {
+        "start": 146.38,
+        "end": 146.5,
+        "word": " for"
+      },
+      {
+        "start": 146.5,
+        "end": 146.64,
+        "word": " them"
+      },
+      {
+        "start": 146.64,
+        "end": 146.76,
+        "word": " to"
+      },
+      {
+        "start": 146.76,
+        "end": 146.92,
+        "word": " eat"
+      },
+      {
+        "start": 146.92,
+        "end": 147.08,
+        "word": " you?"
+      }
+    ]
+  },
+  {
+    "start": 149.0,
+    "end": 151.28,
+    "text": " Selena, at least it's high up. If we can reinforce-",
+    "words": [
+      {
+        "start": 149.0,
+        "end": 149.42,
+        "word": " Selena,"
+      },
+      {
+        "start": 149.54,
+        "end": 149.58,
+        "word": " at"
+      },
+      {
+        "start": 149.58,
+        "end": 149.68,
+        "word": " least"
+      },
+      {
+        "start": 149.68,
+        "end": 149.92,
+        "word": " it's"
+      },
+      {
+        "start": 149.92,
+        "end": 150.02,
+        "word": " high"
+      },
+      {
+        "start": 150.02,
+        "end": 150.24,
+        "word": " up."
+      },
+      {
+        "start": 150.68,
+        "end": 150.72,
+        "word": " If"
+      },
+      {
+        "start": 150.72,
+        "end": 150.82,
+        "word": " we"
+      },
+      {
+        "start": 150.82,
+        "end": 150.94,
+        "word": " can"
+      },
+      {
+        "start": 150.94,
+        "end": 151.2,
+        "word": " reinforce"
+      },
+      {
+        "start": 151.2,
+        "end": 151.28,
+        "word": "-"
+      }
+    ]
+  },
+  {
+    "start": 151.28,
+    "end": 153.82,
+    "text": " Reinforce with what? You don't even have a wall.",
+    "words": [
+      {
+        "start": 151.28,
+        "end": 151.76,
+        "word": " Reinforce"
+      },
+      {
+        "start": 151.76,
+        "end": 152.04,
+        "word": " with"
+      },
+      {
+        "start": 152.04,
+        "end": 152.36,
+        "word": " what?"
+      },
+      {
+        "start": 152.76,
+        "end": 152.96,
+        "word": " You"
+      },
+      {
+        "start": 152.96,
+        "end": 153.06,
+        "word": " don't"
+      },
+      {
+        "start": 153.06,
+        "end": 153.2,
+        "word": " even"
+      },
+      {
+        "start": 153.2,
+        "end": 153.4,
+        "word": " have"
+      },
+      {
+        "start": 153.4,
+        "end": 153.54,
+        "word": " a"
+      },
+      {
+        "start": 153.54,
+        "end": 153.82,
+        "word": " wall."
+      }
+    ]
+  },
+  {
+    "start": 156.68,
+    "end": 159.32,
+    "text": " But you said, no matter what I get-",
+    "words": [
+      {
+        "start": 156.68,
+        "end": 157.1,
+        "word": " But"
+      },
+      {
+        "start": 157.1,
+        "end": 157.22,
+        "word": " you"
+      },
+      {
+        "start": 157.22,
+        "end": 157.48,
+        "word": " said,"
+      },
+      {
+        "start": 158.56,
+        "end": 158.6,
+        "word": " no"
+      },
+      {
+        "start": 158.6,
+        "end": 158.74,
+        "word": " matter"
+      },
+      {
+        "start": 158.74,
+        "end": 158.96,
+        "word": " what"
+      },
+      {
+        "start": 158.96,
+        "end": 159.1,
+        "word": " I"
+      },
+      {
+        "start": 159.1,
+        "end": 159.24,
+        "word": " get"
+      },
+      {
+        "start": 159.24,
+        "end": 159.32,
+        "word": "-"
+      }
+    ]
+  },
+  {
+    "start": 159.32,
+    "end": 161.82,
+    "text": " Leon, I agree to stay with you, not die with you.",
+    "words": [
+      {
+        "start": 159.32,
+        "end": 159.52,
+        "word": " Leon,"
+      },
+      {
+        "start": 159.78,
+        "end": 160.0,
+        "word": " I"
+      },
+      {
+        "start": 160.0,
+        "end": 160.16,
+        "word": " agree"
+      },
+      {
+        "start": 160.16,
+        "end": 160.34,
+        "word": " to"
+      },
+      {
+        "start": 160.34,
+        "end": 160.52,
+        "word": " stay"
+      },
+      {
+        "start": 160.52,
+        "end": 160.68,
+        "word": " with"
+      },
+      {
+        "start": 160.68,
+        "end": 160.82,
+        "word": " you,"
+      },
+      {
+        "start": 160.9,
+        "end": 161.04,
+        "word": " not"
+      },
+      {
+        "start": 161.04,
+        "end": 161.34,
+        "word": " die"
+      },
+      {
+        "start": 161.34,
+        "end": 161.56,
+        "word": " with"
+      },
+      {
+        "start": 161.56,
+        "end": 161.82,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 168.88,
+    "end": 176.46,
+    "text": " Leon, your girl feels so damn smooth. Thanks. She's mine now.",
+    "words": [
+      {
+        "start": 168.88,
+        "end": 169.76,
+        "word": " Leon,"
+      },
+      {
+        "start": 170.4,
+        "end": 171.12,
+        "word": " your"
+      },
+      {
+        "start": 171.12,
+        "end": 171.56,
+        "word": " girl"
+      },
+      {
+        "start": 171.56,
+        "end": 172.48,
+        "word": " feels"
+      },
+      {
+        "start": 172.48,
+        "end": 172.92,
+        "word": " so"
+      },
+      {
+        "start": 172.92,
+        "end": 173.28,
+        "word": " damn"
+      },
+      {
+        "start": 173.28,
+        "end": 173.86,
+        "word": " smooth."
+      },
+      {
+        "start": 174.52,
+        "end": 174.92,
+        "word": " Thanks."
+      },
+      {
+        "start": 175.64,
+        "end": 175.78,
+        "word": " She's"
+      },
+      {
+        "start": 175.78,
+        "end": 175.96,
+        "word": " mine"
+      },
+      {
+        "start": 175.96,
+        "end": 176.46,
+        "word": " now."
+      }
+    ]
+  },
+  {
+    "start": 177.68,
+    "end": 179.78,
+    "text": " Sorry, Leon. I want to live.",
+    "words": [
+      {
+        "start": 177.68,
+        "end": 178.06,
+        "word": " Sorry,"
+      },
+      {
+        "start": 178.06,
+        "end": 178.4,
+        "word": " Leon."
+      },
+      {
+        "start": 179.1,
+        "end": 179.28,
+        "word": " I"
+      },
+      {
+        "start": 179.28,
+        "end": 179.4,
+        "word": " want"
+      },
+      {
+        "start": 179.4,
+        "end": 179.54,
+        "word": " to"
+      },
+      {
+        "start": 179.54,
+        "end": 179.78,
+        "word": " live."
+      }
+    ]
+  }
+]

@@ -1,0 +1,169 @@
+{
+  "series": "My Water Tower Took Flight",
+  "dramacps_id": 829264,
+  "source_platform": "yourchannel",
+  "source_url": "https://dramacps.com/dashboard",
+  "affiliate_drama_url": "https://r.reelsgo.tv/F5IZkEWxK31q",
+  "free_episode_urls": [
+    {
+      "text": "Episode 1 \u00b7 EP001",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/39465f14-1a1aacdda41-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 2 \u00b7 EP002",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2aa38e50-1a1aacdd98f-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 3 \u00b7 EP003",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/11551358-1a1aacdd990-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 4 \u00b7 EP004",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/468fc0ed-1a1aacdd98e-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 5 \u00b7 EP005",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2fb635a-1a1aacdd991-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 6 \u00b7 EP006",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/3532d857-1a1aacdd98f-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 7 \u00b7 EP007",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/52609609-1a1aacdda0a-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 8 \u00b7 EP008",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/45e69b61-1a1aacdd992-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 9 \u00b7 EP009",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5ea21b4a-1a1aacdda09-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 10 \u00b7 EP010",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/27606a1d-1a1aacdd9f7-0005-9573-534-c9280.mp4"
+    }
+  ],
+  "source_sha256": "33ec980a9f6154806d1ad52131b3be6c5216998bf9ac2fe640382918c1a093c6",
+  "source_duration": 186.5,
+  "source_native_resolution": [
+    720,
+    1280
+  ],
+  "parts": {
+    "yourchannel-water829264-ep1-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "349226a21203f7212f1c48ca59742adfb853c785a4f9a1ee066d7cd5a9ace9fd",
+      "render_bytes": 44373476,
+      "status": "prepared_not_uploaded",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        720,
+        1280
+      ],
+      "cuts": [
+        0,
+        52,
+        87,
+        136,
+        186.5
+      ],
+      "render_decode_verified": true,
+      "render_pixels_inspected": true,
+      "source_captions_retained": true,
+      "subtitle_repair": false,
+      "claims_verified": false,
+      "native_ai_pending": true,
+      "own_playlist_pending": true
+    },
+    "yourchannel-water829264-ep1-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "3cd6f374d9d98537cd3ded9a4fe088f09b055416a136c2ce80a93188c5c3d496",
+      "render_bytes": 30395586,
+      "status": "prepared_not_uploaded",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        720,
+        1280
+      ],
+      "cuts": [
+        0,
+        52,
+        87,
+        136,
+        186.5
+      ],
+      "render_decode_verified": true,
+      "render_pixels_inspected": true,
+      "source_captions_retained": true,
+      "subtitle_repair": false,
+      "claims_verified": false,
+      "native_ai_pending": true,
+      "own_playlist_pending": true
+    },
+    "yourchannel-water829264-ep1-part3-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "a256433e3bc51e369f3f4a436f80e60ae4f35e6b72958fab6172304f22fe879a",
+      "render_bytes": 34290640,
+      "status": "prepared_not_uploaded",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        720,
+        1280
+      ],
+      "cuts": [
+        0,
+        52,
+        87,
+        136,
+        186.5
+      ],
+      "render_decode_verified": true,
+      "render_pixels_inspected": true,
+      "source_captions_retained": true,
+      "subtitle_repair": false,
+      "claims_verified": false,
+      "native_ai_pending": true,
+      "own_playlist_pending": true
+    },
+    "yourchannel-water829264-ep1-part4-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "0dc8ffa7e6213f65fd6c18145747ad7ef979eaafa8c49e0ba6d75ba87c9a432d",
+      "render_bytes": 32055111,
+      "status": "prepared_not_uploaded",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        720,
+        1280
+      ],
+      "cuts": [
+        0,
+        52,
+        87,
+        136,
+        186.5
+      ],
+      "render_decode_verified": true,
+      "render_pixels_inspected": true,
+      "source_captions_retained": true,
+      "subtitle_repair": false,
+      "claims_verified": false,
+      "native_ai_pending": true,
+      "own_playlist_pending": true
+    }
+  }
+}

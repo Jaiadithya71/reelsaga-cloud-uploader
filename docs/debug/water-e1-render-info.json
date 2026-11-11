@@ -1,0 +1,34 @@
+[
+  {
+    "part": 1,
+    "start": 0,
+    "end": 52,
+    "duration": 52.0,
+    "size": 44373476,
+    "sha256": "349226a21203f7212f1c48ca59742adfb853c785a4f9a1ee066d7cd5a9ace9fd"
+  },
+  {
+    "part": 2,
+    "start": 52,
+    "end": 87,
+    "duration": 35.0,
+    "size": 30395586,
+    "sha256": "3cd6f374d9d98537cd3ded9a4fe088f09b055416a136c2ce80a93188c5c3d496"
+  },
+  {
+    "part": 3,
+    "start": 87,
+    "end": 136,
+    "duration": 49.0,
+    "size": 34290640,
+    "sha256": "a256433e3bc51e369f3f4a436f80e60ae4f35e6b72958fab6172304f22fe879a"
+  },
+  {
+    "part": 4,
+    "start": 136,
+    "end": 186.5,
+    "duration": 50.5,
+    "size": 32055111,
+    "sha256": "0dc8ffa7e6213f65fd6c18145747ad7ef979eaafa8c49e0ba6d75ba87c9a432d"
+  }
+]
