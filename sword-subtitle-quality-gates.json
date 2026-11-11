@@ -584,6 +584,42 @@
       "source_sha256": "6dc92a5e021b00feaf04111378b9925a3e4aebd7bb5e142ce167ebf07436fc6f",
       "boundary_note": "39.5s after questionends39.08/captionends39.0 before response39.86-40.1; no source footage omitted",
       "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep10-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "b34334875c04d6bd4c314635809515bd15a6cd0059f24ff92a3c1340c6cb6d5b",
+      "render_bytes": 74693834,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 73.072,
+      "source_sha256": "1f79b0b56f2365ec0e9ec36f252fd49fc49842572cca2a8a11a7874a53d8fd65",
+      "boundary_note": "40.5s after sentenceends39.56/captionends39.5 before nextphrase40.82-41.3; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep10-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "682c632e0ef3709295d3e6849be7a73483fbd61a00cfc5e2082cd9bea57a4f21",
+      "render_bytes": 53350193,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 73.072,
+      "source_sha256": "1f79b0b56f2365ec0e9ec36f252fd49fc49842572cca2a8a11a7874a53d8fd65",
+      "boundary_note": "40.5s after sentenceends39.56/captionends39.5 before nextphrase40.82-41.3; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",

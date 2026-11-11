@@ -1,0 +1,782 @@
+[
+  {
+    "start": 0.37,
+    "end": 2.77,
+    "text": " The order registries from three centuries ago.",
+    "words": [
+      {
+        "start": 0.37,
+        "end": 0.85,
+        "word": " The"
+      },
+      {
+        "start": 0.85,
+        "end": 1.03,
+        "word": " order"
+      },
+      {
+        "start": 1.03,
+        "end": 1.57,
+        "word": " registries"
+      },
+      {
+        "start": 1.57,
+        "end": 1.77,
+        "word": " from"
+      },
+      {
+        "start": 1.77,
+        "end": 2.01,
+        "word": " three"
+      },
+      {
+        "start": 2.01,
+        "end": 2.37,
+        "word": " centuries"
+      },
+      {
+        "start": 2.37,
+        "end": 2.77,
+        "word": " ago."
+      }
+    ]
+  },
+  {
+    "start": 3.57,
+    "end": 5.57,
+    "text": " Every record touching the word, Ashened.",
+    "words": [
+      {
+        "start": 3.57,
+        "end": 3.79,
+        "word": " Every"
+      },
+      {
+        "start": 3.79,
+        "end": 4.17,
+        "word": " record"
+      },
+      {
+        "start": 4.17,
+        "end": 4.55,
+        "word": " touching"
+      },
+      {
+        "start": 4.55,
+        "end": 4.71,
+        "word": " the"
+      },
+      {
+        "start": 4.71,
+        "end": 4.91,
+        "word": " word,"
+      },
+      {
+        "start": 5.07,
+        "end": 5.57,
+        "word": " Ashened."
+      }
+    ]
+  },
+  {
+    "start": 5.67,
+    "end": 6.41,
+    "text": " Dig it all out!",
+    "words": [
+      {
+        "start": 5.67,
+        "end": 5.83,
+        "word": " Dig"
+      },
+      {
+        "start": 5.83,
+        "end": 5.95,
+        "word": " it"
+      },
+      {
+        "start": 5.95,
+        "end": 6.13,
+        "word": " all"
+      },
+      {
+        "start": 6.13,
+        "end": 6.41,
+        "word": " out!"
+      }
+    ]
+  },
+  {
+    "start": 6.55,
+    "end": 8.37,
+    "text": " Your Grace, we've searched three centuries of records.",
+    "words": [
+      {
+        "start": 6.55,
+        "end": 6.67,
+        "word": " Your"
+      },
+      {
+        "start": 6.67,
+        "end": 6.87,
+        "word": " Grace,"
+      },
+      {
+        "start": 6.97,
+        "end": 7.11,
+        "word": " we've"
+      },
+      {
+        "start": 7.11,
+        "end": 7.31,
+        "word": " searched"
+      },
+      {
+        "start": 7.31,
+        "end": 7.59,
+        "word": " three"
+      },
+      {
+        "start": 7.59,
+        "end": 7.91,
+        "word": " centuries"
+      },
+      {
+        "start": 7.91,
+        "end": 8.11,
+        "word": " of"
+      },
+      {
+        "start": 8.11,
+        "end": 8.37,
+        "word": " records."
+      }
+    ]
+  },
+  {
+    "start": 8.53,
+    "end": 10.05,
+    "text": " There is no trace of any Ashened Abyss.",
+    "words": [
+      {
+        "start": 8.53,
+        "end": 8.59,
+        "word": " There"
+      },
+      {
+        "start": 8.59,
+        "end": 8.69,
+        "word": " is"
+      },
+      {
+        "start": 8.69,
+        "end": 8.89,
+        "word": " no"
+      },
+      {
+        "start": 8.89,
+        "end": 9.09,
+        "word": " trace"
+      },
+      {
+        "start": 9.09,
+        "end": 9.31,
+        "word": " of"
+      },
+      {
+        "start": 9.31,
+        "end": 9.47,
+        "word": " any"
+      },
+      {
+        "start": 9.47,
+        "end": 10.03,
+        "word": " Ashened"
+      },
+      {
+        "start": 10.03,
+        "end": 10.05,
+        "word": " Abyss."
+      }
+    ]
+  },
+  {
+    "start": 10.21,
+    "end": 10.31,
+    "text": " None.",
+    "words": [
+      {
+        "start": 10.21,
+        "end": 10.31,
+        "word": " None."
+      }
+    ]
+  },
+  {
+    "start": 10.93,
+    "end": 11.81,
+    "text": " Then go further back.",
+    "words": [
+      {
+        "start": 10.93,
+        "end": 11.07,
+        "word": " Then"
+      },
+      {
+        "start": 11.07,
+        "end": 11.23,
+        "word": " go"
+      },
+      {
+        "start": 11.23,
+        "end": 11.45,
+        "word": " further"
+      },
+      {
+        "start": 11.45,
+        "end": 11.81,
+        "word": " back."
+      }
+    ]
+  },
+  {
+    "start": 12.41,
+    "end": 14.31,
+    "text": " Search all the way to the order's founding, if you must.",
+    "words": [
+      {
+        "start": 12.41,
+        "end": 12.59,
+        "word": " Search"
+      },
+      {
+        "start": 12.59,
+        "end": 12.79,
+        "word": " all"
+      },
+      {
+        "start": 12.79,
+        "end": 12.89,
+        "word": " the"
+      },
+      {
+        "start": 12.89,
+        "end": 12.99,
+        "word": " way"
+      },
+      {
+        "start": 12.99,
+        "end": 13.11,
+        "word": " to"
+      },
+      {
+        "start": 13.11,
+        "end": 13.23,
+        "word": " the"
+      },
+      {
+        "start": 13.23,
+        "end": 13.49,
+        "word": " order's"
+      },
+      {
+        "start": 13.49,
+        "end": 13.73,
+        "word": " founding,"
+      },
+      {
+        "start": 13.91,
+        "end": 13.97,
+        "word": " if"
+      },
+      {
+        "start": 13.97,
+        "end": 14.07,
+        "word": " you"
+      },
+      {
+        "start": 14.07,
+        "end": 14.31,
+        "word": " must."
+      }
+    ]
+  },
+  {
+    "start": 20.76,
+    "end": 24.6,
+    "text": " Squiggly little lines really make such a heavy ship fly.",
+    "words": [
+      {
+        "start": 20.76,
+        "end": 21.2,
+        "word": " Squiggly"
+      },
+      {
+        "start": 21.2,
+        "end": 21.5,
+        "word": " little"
+      },
+      {
+        "start": 21.5,
+        "end": 22.04,
+        "word": " lines"
+      },
+      {
+        "start": 22.04,
+        "end": 22.52,
+        "word": " really"
+      },
+      {
+        "start": 22.52,
+        "end": 22.84,
+        "word": " make"
+      },
+      {
+        "start": 22.84,
+        "end": 23.24,
+        "word": " such"
+      },
+      {
+        "start": 23.24,
+        "end": 23.46,
+        "word": " a"
+      },
+      {
+        "start": 23.46,
+        "end": 23.7,
+        "word": " heavy"
+      },
+      {
+        "start": 23.7,
+        "end": 24.04,
+        "word": " ship"
+      },
+      {
+        "start": 24.04,
+        "end": 24.6,
+        "word": " fly."
+      }
+    ]
+  },
+  {
+    "start": 25.58,
+    "end": 27.44,
+    "text": " What's so fascinating about the array, kid?",
+    "words": [
+      {
+        "start": 25.58,
+        "end": 26.02,
+        "word": " What's"
+      },
+      {
+        "start": 26.02,
+        "end": 26.12,
+        "word": " so"
+      },
+      {
+        "start": 26.12,
+        "end": 26.54,
+        "word": " fascinating"
+      },
+      {
+        "start": 26.54,
+        "end": 26.82,
+        "word": " about"
+      },
+      {
+        "start": 26.82,
+        "end": 27.0,
+        "word": " the"
+      },
+      {
+        "start": 27.0,
+        "end": 27.22,
+        "word": " array,"
+      },
+      {
+        "start": 27.28,
+        "end": 27.44,
+        "word": " kid?"
+      }
+    ]
+  },
+  {
+    "start": 33.38,
+    "end": 35.72,
+    "text": " My master used to say...",
+    "words": [
+      {
+        "start": 33.38,
+        "end": 33.82,
+        "word": " My"
+      },
+      {
+        "start": 33.82,
+        "end": 34.24,
+        "word": " master"
+      },
+      {
+        "start": 34.24,
+        "end": 34.56,
+        "word": " used"
+      },
+      {
+        "start": 34.56,
+        "end": 34.84,
+        "word": " to"
+      },
+      {
+        "start": 34.84,
+        "end": 35.72,
+        "word": " say..."
+      }
+    ]
+  },
+  {
+    "start": 35.72,
+    "end": 36.24,
+    "text": " Remember, kid.",
+    "words": [
+      {
+        "start": 35.72,
+        "end": 35.96,
+        "word": " Remember,"
+      },
+      {
+        "start": 36.06,
+        "end": 36.24,
+        "word": " kid."
+      }
+    ]
+  },
+  {
+    "start": 36.72,
+    "end": 39.56,
+    "text": " If you're strong enough, anything under the sky can fly.",
+    "words": [
+      {
+        "start": 36.72,
+        "end": 37.0,
+        "word": " If"
+      },
+      {
+        "start": 37.0,
+        "end": 37.18,
+        "word": " you're"
+      },
+      {
+        "start": 37.18,
+        "end": 37.4,
+        "word": " strong"
+      },
+      {
+        "start": 37.4,
+        "end": 37.66,
+        "word": " enough,"
+      },
+      {
+        "start": 38.16,
+        "end": 38.34,
+        "word": " anything"
+      },
+      {
+        "start": 38.34,
+        "end": 38.68,
+        "word": " under"
+      },
+      {
+        "start": 38.68,
+        "end": 38.82,
+        "word": " the"
+      },
+      {
+        "start": 38.82,
+        "end": 39.04,
+        "word": " sky"
+      },
+      {
+        "start": 39.04,
+        "end": 39.24,
+        "word": " can"
+      },
+      {
+        "start": 39.24,
+        "end": 39.56,
+        "word": " fly."
+      }
+    ]
+  },
+  {
+    "start": 41.3,
+    "end": 45.44,
+    "text": " Norla's super strong, so Mr. Sword can definitely fly too.",
+    "words": [
+      {
+        "start": 41.3,
+        "end": 41.86,
+        "word": " Norla's"
+      },
+      {
+        "start": 41.86,
+        "end": 42.04,
+        "word": " super"
+      },
+      {
+        "start": 42.04,
+        "end": 42.56,
+        "word": " strong,"
+      },
+      {
+        "start": 42.98,
+        "end": 43.38,
+        "word": " so"
+      },
+      {
+        "start": 43.38,
+        "end": 43.64,
+        "word": " Mr."
+      },
+      {
+        "start": 43.96,
+        "end": 43.96,
+        "word": " Sword"
+      },
+      {
+        "start": 43.96,
+        "end": 44.24,
+        "word": " can"
+      },
+      {
+        "start": 44.24,
+        "end": 44.7,
+        "word": " definitely"
+      },
+      {
+        "start": 44.7,
+        "end": 45.04,
+        "word": " fly"
+      },
+      {
+        "start": 45.04,
+        "end": 45.44,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 48.74,
+    "end": 49.58,
+    "text": " Everyone, line up.",
+    "words": [
+      {
+        "start": 48.74,
+        "end": 49.0,
+        "word": " Everyone,"
+      },
+      {
+        "start": 49.16,
+        "end": 49.3,
+        "word": " line"
+      },
+      {
+        "start": 49.3,
+        "end": 49.58,
+        "word": " up."
+      }
+    ]
+  },
+  {
+    "start": 49.9,
+    "end": 52.2,
+    "text": " You'll get your quarters and uniforms after registration.",
+    "words": [
+      {
+        "start": 49.9,
+        "end": 50.06,
+        "word": " You'll"
+      },
+      {
+        "start": 50.06,
+        "end": 50.14,
+        "word": " get"
+      },
+      {
+        "start": 50.14,
+        "end": 50.3,
+        "word": " your"
+      },
+      {
+        "start": 50.3,
+        "end": 50.58,
+        "word": " quarters"
+      },
+      {
+        "start": 50.58,
+        "end": 50.84,
+        "word": " and"
+      },
+      {
+        "start": 50.84,
+        "end": 51.24,
+        "word": " uniforms"
+      },
+      {
+        "start": 51.24,
+        "end": 51.62,
+        "word": " after"
+      },
+      {
+        "start": 51.62,
+        "end": 52.2,
+        "word": " registration."
+      }
+    ]
+  },
+  {
+    "start": 56.64,
+    "end": 57.2,
+    "text": " Whoa!",
+    "words": [
+      {
+        "start": 56.64,
+        "end": 57.2,
+        "word": " Whoa!"
+      }
+    ]
+  },
+  {
+    "start": 58.66,
+    "end": 59.9,
+    "text": " It can fly way up there.",
+    "words": [
+      {
+        "start": 58.66,
+        "end": 58.66,
+        "word": " It"
+      },
+      {
+        "start": 58.66,
+        "end": 58.82,
+        "word": " can"
+      },
+      {
+        "start": 58.82,
+        "end": 59.1,
+        "word": " fly"
+      },
+      {
+        "start": 59.1,
+        "end": 59.34,
+        "word": " way"
+      },
+      {
+        "start": 59.34,
+        "end": 59.54,
+        "word": " up"
+      },
+      {
+        "start": 59.54,
+        "end": 59.9,
+        "word": " there."
+      }
+    ]
+  },
+  {
+    "start": 65.52,
+    "end": 68.9,
+    "text": " If a pup can fly, Mr. Sword can definitely fly too.",
+    "words": [
+      {
+        "start": 65.52,
+        "end": 65.66,
+        "word": " If"
+      },
+      {
+        "start": 65.66,
+        "end": 65.8,
+        "word": " a"
+      },
+      {
+        "start": 65.8,
+        "end": 65.9,
+        "word": " pup"
+      },
+      {
+        "start": 65.9,
+        "end": 66.14,
+        "word": " can"
+      },
+      {
+        "start": 66.14,
+        "end": 66.48,
+        "word": " fly,"
+      },
+      {
+        "start": 66.92,
+        "end": 67.1,
+        "word": " Mr."
+      },
+      {
+        "start": 67.42,
+        "end": 67.44,
+        "word": " Sword"
+      },
+      {
+        "start": 67.44,
+        "end": 67.7,
+        "word": " can"
+      },
+      {
+        "start": 67.7,
+        "end": 68.14,
+        "word": " definitely"
+      },
+      {
+        "start": 68.14,
+        "end": 68.54,
+        "word": " fly"
+      },
+      {
+        "start": 68.54,
+        "end": 68.9,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 69.76,
+    "end": 71.64,
+    "text": " First, I throw the sword out.",
+    "words": [
+      {
+        "start": 69.76,
+        "end": 70.04,
+        "word": " First,"
+      },
+      {
+        "start": 70.54,
+        "end": 70.76,
+        "word": " I"
+      },
+      {
+        "start": 70.76,
+        "end": 70.94,
+        "word": " throw"
+      },
+      {
+        "start": 70.94,
+        "end": 71.1,
+        "word": " the"
+      },
+      {
+        "start": 71.1,
+        "end": 71.34,
+        "word": " sword"
+      },
+      {
+        "start": 71.34,
+        "end": 71.64,
+        "word": " out."
+      }
+    ]
+  }
+]
