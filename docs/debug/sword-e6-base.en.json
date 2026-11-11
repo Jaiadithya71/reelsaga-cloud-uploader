@@ -1,0 +1,936 @@
+[
+  {
+    "start": 0.0,
+    "end": 3.86,
+    "text": " Impossible. You have zero mainra. This has to be some kind of trick.",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.58,
+        "word": " Impossible."
+      },
+      {
+        "start": 1.28,
+        "end": 1.44,
+        "word": " You"
+      },
+      {
+        "start": 1.44,
+        "end": 1.56,
+        "word": " have"
+      },
+      {
+        "start": 1.56,
+        "end": 1.86,
+        "word": " zero"
+      },
+      {
+        "start": 1.86,
+        "end": 2.28,
+        "word": " mainra."
+      },
+      {
+        "start": 2.66,
+        "end": 2.82,
+        "word": " This"
+      },
+      {
+        "start": 2.82,
+        "end": 2.96,
+        "word": " has"
+      },
+      {
+        "start": 2.96,
+        "end": 3.1,
+        "word": " to"
+      },
+      {
+        "start": 3.1,
+        "end": 3.2,
+        "word": " be"
+      },
+      {
+        "start": 3.2,
+        "end": 3.34,
+        "word": " some"
+      },
+      {
+        "start": 3.34,
+        "end": 3.56,
+        "word": " kind"
+      },
+      {
+        "start": 3.56,
+        "end": 3.66,
+        "word": " of"
+      },
+      {
+        "start": 3.66,
+        "end": 3.86,
+        "word": " trick."
+      }
+    ]
+  },
+  {
+    "start": 5.700000000000001,
+    "end": 8.54,
+    "text": " Let me see your sword. I want to see what kind of gadget you're hiding.",
+    "words": [
+      {
+        "start": 5.700000000000001,
+        "end": 6.12,
+        "word": " Let"
+      },
+      {
+        "start": 6.12,
+        "end": 6.2,
+        "word": " me"
+      },
+      {
+        "start": 6.2,
+        "end": 6.34,
+        "word": " see"
+      },
+      {
+        "start": 6.34,
+        "end": 6.46,
+        "word": " your"
+      },
+      {
+        "start": 6.46,
+        "end": 6.64,
+        "word": " sword."
+      },
+      {
+        "start": 7.26,
+        "end": 7.28,
+        "word": " I"
+      },
+      {
+        "start": 7.28,
+        "end": 7.36,
+        "word": " want"
+      },
+      {
+        "start": 7.36,
+        "end": 7.42,
+        "word": " to"
+      },
+      {
+        "start": 7.42,
+        "end": 7.54,
+        "word": " see"
+      },
+      {
+        "start": 7.54,
+        "end": 7.64,
+        "word": " what"
+      },
+      {
+        "start": 7.64,
+        "end": 7.76,
+        "word": " kind"
+      },
+      {
+        "start": 7.76,
+        "end": 7.86,
+        "word": " of"
+      },
+      {
+        "start": 7.86,
+        "end": 8.04,
+        "word": " gadget"
+      },
+      {
+        "start": 8.04,
+        "end": 8.26,
+        "word": " you're"
+      },
+      {
+        "start": 8.26,
+        "end": 8.54,
+        "word": " hiding."
+      }
+    ]
+  },
+  {
+    "start": 9.04,
+    "end": 12.84,
+    "text": " Okay. But be careful, mister. Mr. Sword is a little heavy.",
+    "words": [
+      {
+        "start": 9.04,
+        "end": 9.32,
+        "word": " Okay."
+      },
+      {
+        "start": 10.04,
+        "end": 10.22,
+        "word": " But"
+      },
+      {
+        "start": 10.22,
+        "end": 10.38,
+        "word": " be"
+      },
+      {
+        "start": 10.38,
+        "end": 10.8,
+        "word": " careful,"
+      },
+      {
+        "start": 10.8,
+        "end": 11.12,
+        "word": " mister."
+      },
+      {
+        "start": 11.78,
+        "end": 11.78,
+        "word": " Mr."
+      },
+      {
+        "start": 12.06,
+        "end": 12.06,
+        "word": " Sword"
+      },
+      {
+        "start": 12.06,
+        "end": 12.22,
+        "word": " is"
+      },
+      {
+        "start": 12.22,
+        "end": 12.34,
+        "word": " a"
+      },
+      {
+        "start": 12.34,
+        "end": 12.52,
+        "word": " little"
+      },
+      {
+        "start": 12.52,
+        "end": 12.84,
+        "word": " heavy."
+      }
+    ]
+  },
+  {
+    "start": 14.500000000000002,
+    "end": 16.96,
+    "text": " Heavy. I am a silver knight.",
+    "words": [
+      {
+        "start": 14.500000000000002,
+        "end": 14.92,
+        "word": " Heavy."
+      },
+      {
+        "start": 16.22,
+        "end": 16.24,
+        "word": " I"
+      },
+      {
+        "start": 16.24,
+        "end": 16.34,
+        "word": " am"
+      },
+      {
+        "start": 16.34,
+        "end": 16.42,
+        "word": " a"
+      },
+      {
+        "start": 16.42,
+        "end": 16.66,
+        "word": " silver"
+      },
+      {
+        "start": 16.66,
+        "end": 16.96,
+        "word": " knight."
+      }
+    ]
+  },
+  {
+    "start": 20.580000000000005,
+    "end": 23.52,
+    "text": " What happened? Why is the instructor on his knees?",
+    "words": [
+      {
+        "start": 20.580000000000005,
+        "end": 21.000000000000004,
+        "word": " What"
+      },
+      {
+        "start": 21.000000000000004,
+        "end": 21.42,
+        "word": " happened?"
+      },
+      {
+        "start": 22.14,
+        "end": 22.38,
+        "word": " Why"
+      },
+      {
+        "start": 22.38,
+        "end": 22.52,
+        "word": " is"
+      },
+      {
+        "start": 22.52,
+        "end": 22.62,
+        "word": " the"
+      },
+      {
+        "start": 22.62,
+        "end": 22.82,
+        "word": " instructor"
+      },
+      {
+        "start": 22.82,
+        "end": 23.2,
+        "word": " on"
+      },
+      {
+        "start": 23.2,
+        "end": 23.3,
+        "word": " his"
+      },
+      {
+        "start": 23.3,
+        "end": 23.52,
+        "word": " knees?"
+      }
+    ]
+  },
+  {
+    "start": 23.98,
+    "end": 26.36,
+    "text": " This sword. Just how heavy is it?",
+    "words": [
+      {
+        "start": 23.98,
+        "end": 24.06,
+        "word": " This"
+      },
+      {
+        "start": 24.06,
+        "end": 24.48,
+        "word": " sword."
+      },
+      {
+        "start": 25.3,
+        "end": 25.5,
+        "word": " Just"
+      },
+      {
+        "start": 25.5,
+        "end": 25.7,
+        "word": " how"
+      },
+      {
+        "start": 25.7,
+        "end": 26.0,
+        "word": " heavy"
+      },
+      {
+        "start": 26.0,
+        "end": 26.24,
+        "word": " is"
+      },
+      {
+        "start": 26.24,
+        "end": 26.36,
+        "word": " it?"
+      }
+    ]
+  },
+  {
+    "start": 27.839999999999996,
+    "end": 30.76,
+    "text": " Useless. Step aside. Let me do it.",
+    "words": [
+      {
+        "start": 27.839999999999996,
+        "end": 28.4,
+        "word": " Useless."
+      },
+      {
+        "start": 28.94,
+        "end": 29.42,
+        "word": " Step"
+      },
+      {
+        "start": 29.42,
+        "end": 29.78,
+        "word": " aside."
+      },
+      {
+        "start": 30.12,
+        "end": 30.18,
+        "word": " Let"
+      },
+      {
+        "start": 30.18,
+        "end": 30.34,
+        "word": " me"
+      },
+      {
+        "start": 30.34,
+        "end": 30.6,
+        "word": " do"
+      },
+      {
+        "start": 30.6,
+        "end": 30.76,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 37.599999999999994,
+    "end": 41.28,
+    "text": " Oh my god. Even the high paladin can't lift it?",
+    "words": [
+      {
+        "start": 37.599999999999994,
+        "end": 38.16,
+        "word": " Oh"
+      },
+      {
+        "start": 38.16,
+        "end": 38.72,
+        "word": " my"
+      },
+      {
+        "start": 38.72,
+        "end": 39.02,
+        "word": " god."
+      },
+      {
+        "start": 39.56,
+        "end": 39.88,
+        "word": " Even"
+      },
+      {
+        "start": 39.88,
+        "end": 40.06,
+        "word": " the"
+      },
+      {
+        "start": 40.06,
+        "end": 40.2,
+        "word": " high"
+      },
+      {
+        "start": 40.2,
+        "end": 40.62,
+        "word": " paladin"
+      },
+      {
+        "start": 40.62,
+        "end": 40.94,
+        "word": " can't"
+      },
+      {
+        "start": 40.94,
+        "end": 41.08,
+        "word": " lift"
+      },
+      {
+        "start": 41.08,
+        "end": 41.28,
+        "word": " it?"
+      }
+    ]
+  },
+  {
+    "start": 44.03999999999999,
+    "end": 48.44,
+    "text": " Nola told you. Mr. Sword is really heavy.",
+    "words": [
+      {
+        "start": 44.03999999999999,
+        "end": 44.599999999999994,
+        "word": " Nola"
+      },
+      {
+        "start": 44.599999999999994,
+        "end": 45.16,
+        "word": " told"
+      },
+      {
+        "start": 45.16,
+        "end": 45.62,
+        "word": " you."
+      },
+      {
+        "start": 46.14,
+        "end": 46.38,
+        "word": " Mr."
+      },
+      {
+        "start": 46.94,
+        "end": 46.94,
+        "word": " Sword"
+      },
+      {
+        "start": 46.94,
+        "end": 47.4,
+        "word": " is"
+      },
+      {
+        "start": 47.4,
+        "end": 48.1,
+        "word": " really"
+      },
+      {
+        "start": 48.1,
+        "end": 48.44,
+        "word": " heavy."
+      }
+    ]
+  },
+  {
+    "start": 49.08,
+    "end": 51.78,
+    "text": " Little girl. How in the world do you train with this thing?",
+    "words": [
+      {
+        "start": 49.08,
+        "end": 49.36,
+        "word": " Little"
+      },
+      {
+        "start": 49.36,
+        "end": 49.54,
+        "word": " girl."
+      },
+      {
+        "start": 50.34,
+        "end": 50.54,
+        "word": " How"
+      },
+      {
+        "start": 50.54,
+        "end": 50.66,
+        "word": " in"
+      },
+      {
+        "start": 50.66,
+        "end": 50.74,
+        "word": " the"
+      },
+      {
+        "start": 50.74,
+        "end": 50.9,
+        "word": " world"
+      },
+      {
+        "start": 50.9,
+        "end": 51.04,
+        "word": " do"
+      },
+      {
+        "start": 51.04,
+        "end": 51.08,
+        "word": " you"
+      },
+      {
+        "start": 51.08,
+        "end": 51.3,
+        "word": " train"
+      },
+      {
+        "start": 51.3,
+        "end": 51.46,
+        "word": " with"
+      },
+      {
+        "start": 51.46,
+        "end": 51.56,
+        "word": " this"
+      },
+      {
+        "start": 51.56,
+        "end": 51.78,
+        "word": " thing?"
+      }
+    ]
+  },
+  {
+    "start": 52.58,
+    "end": 54.56,
+    "text": " I swing it 10,000 times a day.",
+    "words": [
+      {
+        "start": 52.58,
+        "end": 52.8,
+        "word": " I"
+      },
+      {
+        "start": 52.8,
+        "end": 53.02,
+        "word": " swing"
+      },
+      {
+        "start": 53.02,
+        "end": 53.18,
+        "word": " it"
+      },
+      {
+        "start": 53.18,
+        "end": 53.5,
+        "word": " 10"
+      },
+      {
+        "start": 53.5,
+        "end": 53.9,
+        "word": ",000"
+      },
+      {
+        "start": 53.9,
+        "end": 54.08,
+        "word": " times"
+      },
+      {
+        "start": 54.08,
+        "end": 54.34,
+        "word": " a"
+      },
+      {
+        "start": 54.34,
+        "end": 54.56,
+        "word": " day."
+      }
+    ]
+  },
+  {
+    "start": 55.92,
+    "end": 60.38,
+    "text": " Master says Nola's too strong, so this training helps me keep my strength and check.",
+    "words": [
+      {
+        "start": 55.92,
+        "end": 56.42,
+        "word": " Master"
+      },
+      {
+        "start": 56.42,
+        "end": 56.82,
+        "word": " says"
+      },
+      {
+        "start": 56.82,
+        "end": 57.26,
+        "word": " Nola's"
+      },
+      {
+        "start": 57.26,
+        "end": 57.46,
+        "word": " too"
+      },
+      {
+        "start": 57.46,
+        "end": 57.84,
+        "word": " strong,"
+      },
+      {
+        "start": 58.16,
+        "end": 58.28,
+        "word": " so"
+      },
+      {
+        "start": 58.28,
+        "end": 58.44,
+        "word": " this"
+      },
+      {
+        "start": 58.44,
+        "end": 58.76,
+        "word": " training"
+      },
+      {
+        "start": 58.76,
+        "end": 59.04,
+        "word": " helps"
+      },
+      {
+        "start": 59.04,
+        "end": 59.28,
+        "word": " me"
+      },
+      {
+        "start": 59.28,
+        "end": 59.46,
+        "word": " keep"
+      },
+      {
+        "start": 59.46,
+        "end": 59.62,
+        "word": " my"
+      },
+      {
+        "start": 59.62,
+        "end": 59.92,
+        "word": " strength"
+      },
+      {
+        "start": 59.92,
+        "end": 60.16,
+        "word": " and"
+      },
+      {
+        "start": 60.16,
+        "end": 60.38,
+        "word": " check."
+      }
+    ]
+  },
+  {
+    "start": 61.32,
+    "end": 64.46,
+    "text": " And your order. Where are you from?",
+    "words": [
+      {
+        "start": 61.32,
+        "end": 61.54,
+        "word": " And"
+      },
+      {
+        "start": 61.54,
+        "end": 61.7,
+        "word": " your"
+      },
+      {
+        "start": 61.7,
+        "end": 62.66,
+        "word": " order."
+      },
+      {
+        "start": 63.54,
+        "end": 64.04,
+        "word": " Where"
+      },
+      {
+        "start": 64.04,
+        "end": 64.16,
+        "word": " are"
+      },
+      {
+        "start": 64.16,
+        "end": 64.24,
+        "word": " you"
+      },
+      {
+        "start": 64.24,
+        "end": 64.46,
+        "word": " from?"
+      }
+    ]
+  },
+  {
+    "start": 65.14,
+    "end": 65.96,
+    "text": " The Asin Abbey.",
+    "words": [
+      {
+        "start": 65.14,
+        "end": 65.2,
+        "word": " The"
+      },
+      {
+        "start": 65.2,
+        "end": 65.66,
+        "word": " Asin"
+      },
+      {
+        "start": 65.66,
+        "end": 65.96,
+        "word": " Abbey."
+      }
+    ]
+  },
+  {
+    "start": 67.06,
+    "end": 70.68,
+    "text": " The Asin Abbey? Never heard of it. Probably some crumbling shack out in the sticks.",
+    "words": [
+      {
+        "start": 67.06,
+        "end": 67.56,
+        "word": " The"
+      },
+      {
+        "start": 67.56,
+        "end": 67.88,
+        "word": " Asin"
+      },
+      {
+        "start": 67.88,
+        "end": 68.1,
+        "word": " Abbey?"
+      },
+      {
+        "start": 68.6,
+        "end": 68.7,
+        "word": " Never"
+      },
+      {
+        "start": 68.7,
+        "end": 68.94,
+        "word": " heard"
+      },
+      {
+        "start": 68.94,
+        "end": 69.08,
+        "word": " of"
+      },
+      {
+        "start": 69.08,
+        "end": 69.14,
+        "word": " it."
+      },
+      {
+        "start": 69.26,
+        "end": 69.34,
+        "word": " Probably"
+      },
+      {
+        "start": 69.34,
+        "end": 69.52,
+        "word": " some"
+      },
+      {
+        "start": 69.52,
+        "end": 69.84,
+        "word": " crumbling"
+      },
+      {
+        "start": 69.84,
+        "end": 70.1,
+        "word": " shack"
+      },
+      {
+        "start": 70.1,
+        "end": 70.34,
+        "word": " out"
+      },
+      {
+        "start": 70.34,
+        "end": 70.44,
+        "word": " in"
+      },
+      {
+        "start": 70.44,
+        "end": 70.48,
+        "word": " the"
+      },
+      {
+        "start": 70.48,
+        "end": 70.68,
+        "word": " sticks."
+      }
+    ]
+  },
+  {
+    "start": 71.56,
+    "end": 75.94,
+    "text": " Pick up your sword. This girl? Admitted by special exception.",
+    "words": [
+      {
+        "start": 71.56,
+        "end": 71.72,
+        "word": " Pick"
+      },
+      {
+        "start": 71.72,
+        "end": 71.86,
+        "word": " up"
+      },
+      {
+        "start": 71.86,
+        "end": 72.0,
+        "word": " your"
+      },
+      {
+        "start": 72.0,
+        "end": 72.2,
+        "word": " sword."
+      },
+      {
+        "start": 73.28,
+        "end": 73.38,
+        "word": " This"
+      },
+      {
+        "start": 73.38,
+        "end": 73.66,
+        "word": " girl?"
+      },
+      {
+        "start": 74.42,
+        "end": 74.68,
+        "word": " Admitted"
+      },
+      {
+        "start": 74.68,
+        "end": 75.22,
+        "word": " by"
+      },
+      {
+        "start": 75.22,
+        "end": 75.64,
+        "word": " special"
+      },
+      {
+        "start": 75.64,
+        "end": 75.94,
+        "word": " exception."
+      }
+    ]
+  },
+  {
+    "start": 76.58,
+    "end": 78.58,
+    "text": " Yay! No looking go find Big Brother.",
+    "words": [
+      {
+        "start": 76.58,
+        "end": 76.96,
+        "word": " Yay!"
+      },
+      {
+        "start": 77.24,
+        "end": 77.3,
+        "word": " No"
+      },
+      {
+        "start": 77.3,
+        "end": 77.52,
+        "word": " looking"
+      },
+      {
+        "start": 77.52,
+        "end": 77.76,
+        "word": " go"
+      },
+      {
+        "start": 77.76,
+        "end": 78.06,
+        "word": " find"
+      },
+      {
+        "start": 78.06,
+        "end": 78.24,
+        "word": " Big"
+      },
+      {
+        "start": 78.24,
+        "end": 78.58,
+        "word": " Brother."
+      }
+    ]
+  }
+]

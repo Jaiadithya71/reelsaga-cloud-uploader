@@ -373,6 +373,42 @@
       "playlist_inventory_verified_at": "2026-11-11T04:54:01+05:30",
       "probe_run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42921338674",
       "probe_head": "13008bf51b33f2df74588a9a68bc4f87e6d184c9"
+    },
+    "yourchannel-sword829261-ep6-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "878c14585a41a6f6937d8e972da9259ceb54b308406dff3d61322df98a2b7c01",
+      "render_bytes": 89823034,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 80.219,
+      "source_sha256": "a923cbb313544794f2d4e7b4ad5075db22324ff180ccbdf9979b1b188b21bc51",
+      "boundary_note": "42.5s after cannot-lift-it speech41.7/caption41.5 before nextspeech44.04; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep6-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "84525f8d02e34efeeb13c8a5a8fb4c6ecb0c3f541f900db64a9ef166e06c03b1",
+      "render_bytes": 81316368,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 80.219,
+      "source_sha256": "a923cbb313544794f2d4e7b4ad5075db22324ff180ccbdf9979b1b188b21bc51",
+      "boundary_note": "42.5s after cannot-lift-it speech41.7/caption41.5 before nextspeech44.04; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
