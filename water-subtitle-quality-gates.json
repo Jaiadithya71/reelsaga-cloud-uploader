@@ -57,7 +57,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "349226a21203f7212f1c48ca59742adfb853c785a4f9a1ee066d7cd5a9ace9fd",
       "render_bytes": 44373476,
-      "status": "prepared_not_uploaded",
+      "status": "private_clean_hold_series_e2_caption_review",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -77,9 +77,18 @@
       "render_pixels_inspected": true,
       "source_captions_retained": true,
       "subtitle_repair": false,
-      "claims_verified": false,
-      "native_ai_pending": true,
-      "own_playlist_pending": true
+      "claims_verified": true,
+      "native_ai_pending": false,
+      "own_playlist_pending": false,
+      "video_id": "SE2DNXW9Q0U",
+      "probe_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43073871511",
+      "stage_deleted_absence_verified": true,
+      "claims_checked_at": "2026-11-11T23:35:19+05:30",
+      "native_ai_yes_saved_reload_verified": true,
+      "own_playlist": "PLP-9hTsfKU1I",
+      "own_playlist_membership_saved_reload_verified": true,
+      "description_ad_cta_affiliate_verified": true,
+      "public_released": false
     },
     "yourchannel-water829264-ep1-part2-v1": {
       "whole_part_release_ready": true,
@@ -165,5 +174,28 @@
       "native_ai_pending": true,
       "own_playlist_pending": true
     }
+  },
+  "probe_result_caveat": "Copied runner output labeled Athena playlist pending; no membership mutation occurs in probe, corrected label before later execution. Water own playlist remains required.",
+  "playlist_url": "https://www.youtube.com/playlist?list=PLP-9hTsfKU1I",
+  "series_progression": "held_unstarted_pending_e2_caption_repair_or_alternative",
+  "episode2": {
+    "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2aa38e50-1a1aacdd98f-0005-9573-534-c9280.mp4",
+    "source_sha256": "9b1376f5bce2f7ed09497c41ef6d18c019aa8116adfc7b774a3381b2b4cfe38a",
+    "source_duration": 205.099,
+    "native_resolution": [
+      540,
+      960
+    ],
+    "whole_asr_base_small": true,
+    "ocr_quarter_second_frames": 820,
+    "whole_action_frames_inspected": 32,
+    "targeted_frames_inspected": 84,
+    "status": "quality_held_not_rendered_not_uploaded",
+    "findings": [
+      "118-124s: original caption joins spoken Accept system response to previous sentence as except, semantic/timing defect",
+      "48-49s: Fuck you Damon spoken per both ASR passes; targeted full frame48.6 shows no caption, confirmed omission",
+      "54.8s full frame confirms Trash tower caption is correct, earlier contact-sheet reading was wrong, no repair needed here"
+    ],
+    "repair_trials": "Two single-frame glyph-inpainting trials rejected: first residual caption ghosts, second visible texture smears. No black-bar repair permitted. No repaired master/render certified."
   }
 }

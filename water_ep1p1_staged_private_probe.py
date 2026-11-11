@@ -65,7 +65,7 @@ def run(backend,api,item,path):
     # Playlist membership is set at the Studio flip closeout: playlistItems.insert
     # requires auth/youtube scope this grant does not have (403 insufficientPermissions,
     # diagnosed run 42615266141). Never retry the API add here.
-    return {'item_id':item['id'],'upload':'success','video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'playlist_pending':'PLOa3xTBfOOsk','playlist_via':'studio_flip_closeout_oauth_scope_gap','claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}
+    return {'item_id':item['id'],'upload':'success','video_id':result['video_id'],'privacy':'private','channel_id':CHANNEL,'processing_status':row.get('processingDetails',{}).get('processingStatus','unknown'),'playlist_pending':'OWN_WATER_PLAYLIST_NOT_CREATED_YET','playlist_via':'studio_flip_closeout_oauth_scope_gap','claims_verified':False,'studio_review_required':True,'public_publishing_enabled':False}
 
 def main():
     controls=None
