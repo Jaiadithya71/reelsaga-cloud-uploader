@@ -580,3 +580,5 @@ not evidence of "not published".
 - Sword E5P1 ledger SUCCESS https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42957456602 exactacf53643060835c5c731ffe7fd914412d6d550af 2026-11-11T04:10:59Z stoppedreadbackverified then publishedcheckpoint FpeMUgGWr6I. No additional upload/publicflip. NextE5P2release10:43-10:45ISTexistingwake.
 
 - Sword E9 whole84.237s native1080x1922 source reviewed base+smallASR/3364fpsOCR/wholeaction42contactframes+36targetedcaptionframes/bothrenderpixels. Originalaudio/burnedwhiteoutlinecaptions, no repair needed. Split39.5afterquestionends39.08/captionends39.0beforeresponse39.86-40.1; no source footage omitted. P1/P2 hash-pinned private-only probes prepared, claims/AI/playlist gates still pending, no public flip.
+
+- E9P1 privateprobe42959722327 failed before upload/control access on stale template E8 sourcehash; builder corrected to hash actual reviewed E9 source. Renderpins unchanged/allguards retained. One fresh private-only retry, no duplicate uploaded item.

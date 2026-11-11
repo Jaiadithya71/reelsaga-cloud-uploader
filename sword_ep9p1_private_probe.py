@@ -19,7 +19,7 @@ import requests,subprocess
 assert os.environ['SOLDIER_EP']=='9p1'
 u='https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/38f0fbd7-1a1aaeb5042-0005-9573-534-c9280.mp4'
 r=requests.get(u,timeout=60);r.raise_for_status();Path('source.mp4').write_bytes(r.content)
-assert hashlib.sha256(r.content).hexdigest()=='4c920a80c31b8b681cecd06ef578c48d3ea28aac26de299862f566327f105a6f'
+assert hashlib.sha256(r.content).hexdigest()=='6dc92a5e021b00feaf04111378b9925a3e4aebd7bb5e142ce167ebf07436fc6f'
 meta=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json','source.mp4']));v=next(x for x in meta['streams'] if x['codec_type']=='video');assert (v['width'],v['height'])==(1080,1922);assert abs(float(meta['format']['duration'])-84.237)<.1
 subprocess.run(['ffmpeg','-v','error','-i','source.mp4','-f','null','-'],check=True)
 subprocess.run(['ffmpeg','-v','error','-filter_threads','1','-ss','0','-i','source.mp4','-t','39.5','-vf','fade=t=in:st=0:d=0.5,fade=t=out:st=39:d=0.5','-af','afade=t=in:st=0:d=0.5,afade=t=out:st=39:d=0.5','-c:v','libx264','-threads:v','2','-preset','ultrafast','-crf','18','-c:a','aac','-b:a','192k','-movflags','+faststart','-y','p2.mp4'],check=True)
