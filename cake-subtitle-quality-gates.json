@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1P1_public_E2P1_private_audio_only_noimpact_rest_claims_pending",
+  "status": "E1P1_P2_public_E1P3_privateprep_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -270,6 +270,21 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "c47124abf3090bf95243c7c966b086ca623a710f808a313a06fb5b3bf648701d"
+    },
+    "yourchannel-cake829267-ep1-part3-v1": {
+      "episode": 1,
+      "part": 3,
+      "source_start": 96.8,
+      "source_end": 143,
+      "duration": 46.2,
+      "sha256": "6f1bdebada632ab4e7994184a1ce96c024d40b853cda83ce70d96300ad83970e",
+      "bytes": 27023268,
+      "path": "/downloads/cake-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "6f1bdebada632ab4e7994184a1ce96c024d40b853cda83ce70d96300ad83970e"
     }
   },
   "e2_parts": [
@@ -384,18 +399,24 @@
       "commit": "c13b50f3e17bd798eb6f0ba882e5e409fc3a907a",
       "checkpoint_stop_verified": true,
       "stage_deleted_HEAD404_signedGET404": true,
-      "privacy": "private"
+      "privacy": "public",
+      "public_saved_at": "2026-11-12T02:16:51+05:30",
+      "public_time_source": "publicplayer microformat publishDate 2026-11-11T12:46:51-08:00",
+      "claims_fresh_none_at": "2026-11-12T02:15:47+05:30",
+      "public_reload_SaveUndoDisabled": true,
+      "public_AIbadge_verified": "02:18:50IST",
+      "actualplaylist_public_order": "E1P1,E1P2; E2P1private"
     }
   },
   "next_public_part": {
     "episode": 1,
-    "part": 2,
-    "earliest": "2026-11-12T02:13:00+05:30",
-    "hardline": "2026-11-12T05:12:49+05:30",
+    "part": 3,
+    "earliest": "2026-11-12T03:17:00+05:30",
+    "hardline": "2026-11-12T06:16:51+05:30",
     "gates_pending": [
       "private_upload_claims",
       "nativeAI",
-      "own_playlist_actualmembership"
+      "ownplaylistactualmembership"
     ]
   }
 }
