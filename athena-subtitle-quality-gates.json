@@ -172,7 +172,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "f5c6e4dcc28a476326db23ff5b6d5356ec84b7030349b96dc974bcdcd6eef22d",
       "render_bytes": 56453157,
-      "status": "whole_reviewed_private_probe_pending",
+      "status": "blocked_globally_private",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -185,14 +185,20 @@
       "source_sha256": "d3db1bd44833ffd2fa2e66c8b134e0ee896c2079c88f8c49a5cbb38c992ad3f9",
       "boundary_note": "whole source0-121.344; cuts35 and83 after speech34.28/82.06 and captions34.0/82.0, before next35.86/84.54; half-second house fades clear speech; no omitted footage",
       "repairs": "none; original audio and white outlined burned captions; house0.5sedgefades",
-      "claims_verified": false,
-      "playlist_id": "PLOa3xTBfOOsk"
+      "claims_verified": true,
+      "playlist_id": "PLOa3xTBfOOsk",
+      "claims_checked_at": "2026-11-11T22:57:29+05:30",
+      "private_video_id": "HUdpbdskQlw",
+      "claim_type": "visual",
+      "claim_title": "Awakening Athena Ascend as an SSS Rank Summone YXYH",
+      "copyright_strike": false,
+      "staged_object_consumed_deleted": true
     },
     "yourchannel-athena829263-ep2-part2-v1": {
       "whole_part_release_ready": true,
       "approved_render_sha256": "37702bc93afdfd833aff333c76aafd85f2d526da5d3d50c8cf3c20cdc37d4aea",
       "render_bytes": 82067705,
-      "status": "whole_reviewed_private_probe_pending",
+      "status": "held_not_uploaded",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -212,7 +218,7 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "00a78a112c6a99b11f78085810cf1673573a2edd57f012f662e7b215fd0f85bf",
       "render_bytes": 70787923,
-      "status": "whole_reviewed_private_probe_pending",
+      "status": "held_not_uploaded",
       "whole_episode_asr_base_small": true,
       "whole_episode_ocr_4fps": true,
       "targeted_whole_frames_inspected": true,
@@ -228,5 +234,7 @@
       "claims_verified": false,
       "playlist_id": "PLOa3xTBfOOsk"
     }
-  }
+  },
+  "series_progression_held": true,
+  "hold_reason": "E2P1 global visual footage block; E1 parts still no claims22:58Nov11, continuity risk"
 }
