@@ -1,0 +1,919 @@
+[
+  {
+    "start": 0.0,
+    "end": 4.04,
+    "text": " This year's trainee selection, any prospects worth my attention?",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.74,
+        "word": " This"
+      },
+      {
+        "start": 0.74,
+        "end": 1.04,
+        "word": " year's"
+      },
+      {
+        "start": 1.04,
+        "end": 1.4,
+        "word": " trainee"
+      },
+      {
+        "start": 1.4,
+        "end": 1.64,
+        "word": " selection,"
+      },
+      {
+        "start": 2.52,
+        "end": 2.7,
+        "word": " any"
+      },
+      {
+        "start": 2.7,
+        "end": 3.12,
+        "word": " prospects"
+      },
+      {
+        "start": 3.12,
+        "end": 3.48,
+        "word": " worth"
+      },
+      {
+        "start": 3.48,
+        "end": 3.72,
+        "word": " my"
+      },
+      {
+        "start": 3.72,
+        "end": 4.04,
+        "word": " attention?"
+      }
+    ]
+  },
+  {
+    "start": 10.82,
+    "end": 14.56,
+    "text": " What's this? Some gold-ranked knight lose control on the field?",
+    "words": [
+      {
+        "start": 10.82,
+        "end": 11.3,
+        "word": " What's"
+      },
+      {
+        "start": 11.3,
+        "end": 11.4,
+        "word": " this?"
+      },
+      {
+        "start": 12.4,
+        "end": 12.68,
+        "word": " Some"
+      },
+      {
+        "start": 12.68,
+        "end": 12.92,
+        "word": " gold"
+      },
+      {
+        "start": 12.92,
+        "end": 13.2,
+        "word": "-ranked"
+      },
+      {
+        "start": 13.2,
+        "end": 13.48,
+        "word": " knight"
+      },
+      {
+        "start": 13.48,
+        "end": 13.72,
+        "word": " lose"
+      },
+      {
+        "start": 13.72,
+        "end": 14.06,
+        "word": " control"
+      },
+      {
+        "start": 14.06,
+        "end": 14.28,
+        "word": " on"
+      },
+      {
+        "start": 14.28,
+        "end": 14.36,
+        "word": " the"
+      },
+      {
+        "start": 14.36,
+        "end": 14.56,
+        "word": " field?"
+      }
+    ]
+  },
+  {
+    "start": 16.4,
+    "end": 20.36,
+    "text": " You're Grace. The one who lifted that boulder was a six-year-old girl.",
+    "words": [
+      {
+        "start": 16.4,
+        "end": 16.48,
+        "word": " You're"
+      },
+      {
+        "start": 16.48,
+        "end": 16.68,
+        "word": " Grace."
+      },
+      {
+        "start": 17.86,
+        "end": 18.1,
+        "word": " The"
+      },
+      {
+        "start": 18.1,
+        "end": 18.24,
+        "word": " one"
+      },
+      {
+        "start": 18.24,
+        "end": 18.38,
+        "word": " who"
+      },
+      {
+        "start": 18.38,
+        "end": 18.56,
+        "word": " lifted"
+      },
+      {
+        "start": 18.56,
+        "end": 18.8,
+        "word": " that"
+      },
+      {
+        "start": 18.8,
+        "end": 19.02,
+        "word": " boulder"
+      },
+      {
+        "start": 19.02,
+        "end": 19.36,
+        "word": " was"
+      },
+      {
+        "start": 19.36,
+        "end": 19.46,
+        "word": " a"
+      },
+      {
+        "start": 19.46,
+        "end": 19.72,
+        "word": " six"
+      },
+      {
+        "start": 19.72,
+        "end": 19.98,
+        "word": "-year"
+      },
+      {
+        "start": 19.98,
+        "end": 20.14,
+        "word": "-old"
+      },
+      {
+        "start": 20.14,
+        "end": 20.36,
+        "word": " girl."
+      }
+    ]
+  },
+  {
+    "start": 24.7,
+    "end": 26.2,
+    "text": " Are you making a fool of me?",
+    "words": [
+      {
+        "start": 24.7,
+        "end": 25.18,
+        "word": " Are"
+      },
+      {
+        "start": 25.18,
+        "end": 25.28,
+        "word": " you"
+      },
+      {
+        "start": 25.28,
+        "end": 25.44,
+        "word": " making"
+      },
+      {
+        "start": 25.44,
+        "end": 25.68,
+        "word": " a"
+      },
+      {
+        "start": 25.68,
+        "end": 25.86,
+        "word": " fool"
+      },
+      {
+        "start": 25.86,
+        "end": 26.08,
+        "word": " of"
+      },
+      {
+        "start": 26.08,
+        "end": 26.2,
+        "word": " me?"
+      }
+    ]
+  },
+  {
+    "start": 26.2,
+    "end": 26.88,
+    "text": " I don't know.",
+    "words": [
+      {
+        "start": 26.2,
+        "end": 26.88,
+        "word": " I"
+      },
+      {
+        "start": 26.88,
+        "end": 26.88,
+        "word": " don't"
+      },
+      {
+        "start": 26.88,
+        "end": 26.88,
+        "word": " know."
+      }
+    ]
+  },
+  {
+    "start": 27.18,
+    "end": 32.24,
+    "text": " And she carries a whole pouch of mythical licksas. She eats them like candy.",
+    "words": [
+      {
+        "start": 27.18,
+        "end": 27.62,
+        "word": " And"
+      },
+      {
+        "start": 27.62,
+        "end": 29.36,
+        "word": " she"
+      },
+      {
+        "start": 29.36,
+        "end": 29.6,
+        "word": " carries"
+      },
+      {
+        "start": 29.6,
+        "end": 29.76,
+        "word": " a"
+      },
+      {
+        "start": 29.76,
+        "end": 29.9,
+        "word": " whole"
+      },
+      {
+        "start": 29.9,
+        "end": 30.22,
+        "word": " pouch"
+      },
+      {
+        "start": 30.22,
+        "end": 30.34,
+        "word": " of"
+      },
+      {
+        "start": 30.34,
+        "end": 30.6,
+        "word": " mythical"
+      },
+      {
+        "start": 30.6,
+        "end": 31.04,
+        "word": " licksas."
+      },
+      {
+        "start": 31.32,
+        "end": 31.42,
+        "word": " She"
+      },
+      {
+        "start": 31.42,
+        "end": 31.58,
+        "word": " eats"
+      },
+      {
+        "start": 31.58,
+        "end": 31.78,
+        "word": " them"
+      },
+      {
+        "start": 31.78,
+        "end": 31.94,
+        "word": " like"
+      },
+      {
+        "start": 31.94,
+        "end": 32.24,
+        "word": " candy."
+      }
+    ]
+  },
+  {
+    "start": 34.86000000000001,
+    "end": 39.08,
+    "text": " Mythical licksas eaten like candy. What order does this child come from?",
+    "words": [
+      {
+        "start": 34.86000000000001,
+        "end": 35.300000000000004,
+        "word": " Mythical"
+      },
+      {
+        "start": 35.300000000000004,
+        "end": 35.74,
+        "word": " licksas"
+      },
+      {
+        "start": 35.74,
+        "end": 36.14,
+        "word": " eaten"
+      },
+      {
+        "start": 36.14,
+        "end": 36.3,
+        "word": " like"
+      },
+      {
+        "start": 36.3,
+        "end": 36.6,
+        "word": " candy."
+      },
+      {
+        "start": 37.5,
+        "end": 37.7,
+        "word": " What"
+      },
+      {
+        "start": 37.7,
+        "end": 37.94,
+        "word": " order"
+      },
+      {
+        "start": 37.94,
+        "end": 38.18,
+        "word": " does"
+      },
+      {
+        "start": 38.18,
+        "end": 38.3,
+        "word": " this"
+      },
+      {
+        "start": 38.3,
+        "end": 38.54,
+        "word": " child"
+      },
+      {
+        "start": 38.54,
+        "end": 38.78,
+        "word": " come"
+      },
+      {
+        "start": 38.78,
+        "end": 39.08,
+        "word": " from?"
+      }
+    ]
+  },
+  {
+    "start": 40.1,
+    "end": 42.86,
+    "text": " She claims to hail from somewhere called the Ash and Abbey.",
+    "words": [
+      {
+        "start": 40.1,
+        "end": 40.34,
+        "word": " She"
+      },
+      {
+        "start": 40.34,
+        "end": 40.54,
+        "word": " claims"
+      },
+      {
+        "start": 40.54,
+        "end": 40.74,
+        "word": " to"
+      },
+      {
+        "start": 40.74,
+        "end": 40.86,
+        "word": " hail"
+      },
+      {
+        "start": 40.86,
+        "end": 41.06,
+        "word": " from"
+      },
+      {
+        "start": 41.06,
+        "end": 41.38,
+        "word": " somewhere"
+      },
+      {
+        "start": 41.38,
+        "end": 41.64,
+        "word": " called"
+      },
+      {
+        "start": 41.64,
+        "end": 42.34,
+        "word": " the"
+      },
+      {
+        "start": 42.34,
+        "end": 42.5,
+        "word": " Ash"
+      },
+      {
+        "start": 42.5,
+        "end": 42.66,
+        "word": " and"
+      },
+      {
+        "start": 42.66,
+        "end": 42.86,
+        "word": " Abbey."
+      }
+    ]
+  },
+  {
+    "start": 43.6,
+    "end": 46.22,
+    "text": " The Ash and Abbey, I've never heard of it. There's more.",
+    "words": [
+      {
+        "start": 43.6,
+        "end": 44.0,
+        "word": " The"
+      },
+      {
+        "start": 44.0,
+        "end": 44.14,
+        "word": " Ash"
+      },
+      {
+        "start": 44.14,
+        "end": 44.3,
+        "word": " and"
+      },
+      {
+        "start": 44.3,
+        "end": 44.5,
+        "word": " Abbey,"
+      },
+      {
+        "start": 44.64,
+        "end": 44.74,
+        "word": " I've"
+      },
+      {
+        "start": 44.74,
+        "end": 44.9,
+        "word": " never"
+      },
+      {
+        "start": 44.9,
+        "end": 45.1,
+        "word": " heard"
+      },
+      {
+        "start": 45.1,
+        "end": 45.22,
+        "word": " of"
+      },
+      {
+        "start": 45.22,
+        "end": 45.32,
+        "word": " it."
+      },
+      {
+        "start": 45.94,
+        "end": 46.08,
+        "word": " There's"
+      },
+      {
+        "start": 46.08,
+        "end": 46.22,
+        "word": " more."
+      }
+    ]
+  },
+  {
+    "start": 47.1,
+    "end": 49.14,
+    "text": " The child says she came to find her eldest brother.",
+    "words": [
+      {
+        "start": 47.1,
+        "end": 47.18,
+        "word": " The"
+      },
+      {
+        "start": 47.18,
+        "end": 47.38,
+        "word": " child"
+      },
+      {
+        "start": 47.38,
+        "end": 47.64,
+        "word": " says"
+      },
+      {
+        "start": 47.64,
+        "end": 47.82,
+        "word": " she"
+      },
+      {
+        "start": 47.82,
+        "end": 47.98,
+        "word": " came"
+      },
+      {
+        "start": 47.98,
+        "end": 48.12,
+        "word": " to"
+      },
+      {
+        "start": 48.12,
+        "end": 48.32,
+        "word": " find"
+      },
+      {
+        "start": 48.32,
+        "end": 48.54,
+        "word": " her"
+      },
+      {
+        "start": 48.54,
+        "end": 48.8,
+        "word": " eldest"
+      },
+      {
+        "start": 48.8,
+        "end": 49.14,
+        "word": " brother."
+      }
+    ]
+  },
+  {
+    "start": 49.72,
+    "end": 50.74,
+    "text": " And who might her brother be?",
+    "words": [
+      {
+        "start": 49.72,
+        "end": 49.88,
+        "word": " And"
+      },
+      {
+        "start": 49.88,
+        "end": 50.0,
+        "word": " who"
+      },
+      {
+        "start": 50.0,
+        "end": 50.14,
+        "word": " might"
+      },
+      {
+        "start": 50.14,
+        "end": 50.32,
+        "word": " her"
+      },
+      {
+        "start": 50.32,
+        "end": 50.54,
+        "word": " brother"
+      },
+      {
+        "start": 50.54,
+        "end": 50.74,
+        "word": " be?"
+      }
+    ]
+  },
+  {
+    "start": 51.98,
+    "end": 54.68,
+    "text": " The Supreme Paladin. Lord Arthur himself.",
+    "words": [
+      {
+        "start": 51.98,
+        "end": 52.1,
+        "word": " The"
+      },
+      {
+        "start": 52.1,
+        "end": 52.42,
+        "word": " Supreme"
+      },
+      {
+        "start": 52.42,
+        "end": 52.82,
+        "word": " Paladin."
+      },
+      {
+        "start": 53.9,
+        "end": 54.0,
+        "word": " Lord"
+      },
+      {
+        "start": 54.0,
+        "end": 54.24,
+        "word": " Arthur"
+      },
+      {
+        "start": 54.24,
+        "end": 54.68,
+        "word": " himself."
+      }
+    ]
+  },
+  {
+    "start": 56.84,
+    "end": 59.32,
+    "text": " Who did you say was her brother? That's not all.",
+    "words": [
+      {
+        "start": 56.84,
+        "end": 57.32,
+        "word": " Who"
+      },
+      {
+        "start": 57.32,
+        "end": 57.48,
+        "word": " did"
+      },
+      {
+        "start": 57.48,
+        "end": 57.6,
+        "word": " you"
+      },
+      {
+        "start": 57.6,
+        "end": 57.84,
+        "word": " say"
+      },
+      {
+        "start": 57.84,
+        "end": 58.04,
+        "word": " was"
+      },
+      {
+        "start": 58.04,
+        "end": 58.2,
+        "word": " her"
+      },
+      {
+        "start": 58.2,
+        "end": 58.46,
+        "word": " brother?"
+      },
+      {
+        "start": 58.88,
+        "end": 59.0,
+        "word": " That's"
+      },
+      {
+        "start": 59.0,
+        "end": 59.1,
+        "word": " not"
+      },
+      {
+        "start": 59.1,
+        "end": 59.32,
+        "word": " all."
+      }
+    ]
+  },
+  {
+    "start": 59.92,
+    "end": 63.08,
+    "text": " She says she has five such siblings and intends to find every one of them.",
+    "words": [
+      {
+        "start": 59.92,
+        "end": 60.06,
+        "word": " She"
+      },
+      {
+        "start": 60.06,
+        "end": 60.24,
+        "word": " says"
+      },
+      {
+        "start": 60.24,
+        "end": 60.38,
+        "word": " she"
+      },
+      {
+        "start": 60.38,
+        "end": 60.54,
+        "word": " has"
+      },
+      {
+        "start": 60.54,
+        "end": 60.86,
+        "word": " five"
+      },
+      {
+        "start": 60.86,
+        "end": 61.1,
+        "word": " such"
+      },
+      {
+        "start": 61.1,
+        "end": 61.44,
+        "word": " siblings"
+      },
+      {
+        "start": 61.44,
+        "end": 61.74,
+        "word": " and"
+      },
+      {
+        "start": 61.74,
+        "end": 61.94,
+        "word": " intends"
+      },
+      {
+        "start": 61.94,
+        "end": 62.18,
+        "word": " to"
+      },
+      {
+        "start": 62.18,
+        "end": 62.38,
+        "word": " find"
+      },
+      {
+        "start": 62.38,
+        "end": 62.64,
+        "word": " every"
+      },
+      {
+        "start": 62.64,
+        "end": 62.86,
+        "word": " one"
+      },
+      {
+        "start": 62.86,
+        "end": 62.96,
+        "word": " of"
+      },
+      {
+        "start": 62.96,
+        "end": 63.08,
+        "word": " them."
+      }
+    ]
+  },
+  {
+    "start": 70.66,
+    "end": 73.02,
+    "text": " Five. Beering's of the same origin as her.",
+    "words": [
+      {
+        "start": 70.66,
+        "end": 71.14,
+        "word": " Five."
+      },
+      {
+        "start": 71.14,
+        "end": 71.62,
+        "word": " Beering's"
+      },
+      {
+        "start": 71.62,
+        "end": 71.7,
+        "word": " of"
+      },
+      {
+        "start": 71.7,
+        "end": 71.8,
+        "word": " the"
+      },
+      {
+        "start": 71.8,
+        "end": 72.08,
+        "word": " same"
+      },
+      {
+        "start": 72.08,
+        "end": 72.42,
+        "word": " origin"
+      },
+      {
+        "start": 72.42,
+        "end": 72.82,
+        "word": " as"
+      },
+      {
+        "start": 72.82,
+        "end": 73.02,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 76.89999999999999,
+    "end": 82.36,
+    "text": " Investigate. This Ash and Abbey, I want to dug up to its very roots.",
+    "words": [
+      {
+        "start": 76.89999999999999,
+        "end": 77.38,
+        "word": " Investigate."
+      },
+      {
+        "start": 78.64,
+        "end": 78.86,
+        "word": " This"
+      },
+      {
+        "start": 78.86,
+        "end": 79.14,
+        "word": " Ash"
+      },
+      {
+        "start": 79.14,
+        "end": 79.3,
+        "word": " and"
+      },
+      {
+        "start": 79.3,
+        "end": 79.6,
+        "word": " Abbey,"
+      },
+      {
+        "start": 80.66,
+        "end": 80.74,
+        "word": " I"
+      },
+      {
+        "start": 80.74,
+        "end": 80.88,
+        "word": " want"
+      },
+      {
+        "start": 80.88,
+        "end": 80.98,
+        "word": " to"
+      },
+      {
+        "start": 80.98,
+        "end": 81.24,
+        "word": " dug"
+      },
+      {
+        "start": 81.24,
+        "end": 81.44,
+        "word": " up"
+      },
+      {
+        "start": 81.44,
+        "end": 81.6,
+        "word": " to"
+      },
+      {
+        "start": 81.6,
+        "end": 81.72,
+        "word": " its"
+      },
+      {
+        "start": 81.72,
+        "end": 81.96,
+        "word": " very"
+      },
+      {
+        "start": 81.96,
+        "end": 82.36,
+        "word": " roots."
+      }
+    ]
+  }
+]

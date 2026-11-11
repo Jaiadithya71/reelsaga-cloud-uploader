@@ -548,6 +548,42 @@
       "playlist_inventory_verified_at": "2026-11-11T09:20:38+05:30",
       "probe_run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/42953825959",
       "probe_head": "ba40e238f75c7f68d8340db6e8de306bf6447435"
+    },
+    "yourchannel-sword829261-ep9-part1-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "bd037d0d261d004f3c07cda438010e3b61ce0e15214915599b029576cc68eb14",
+      "render_bytes": 76713565,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 84.237,
+      "source_sha256": "4c920a80c31b8b681cecd06ef578c48d3ea28aac26de299862f566327f105a6f",
+      "boundary_note": "39.5s after questionends39.08/captionends39.0 before response39.86-40.1; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
+    },
+    "yourchannel-sword829261-ep9-part2-v1": {
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "565a68640f616baebc7f6a1f2a85b74445a17ce5383bde01b94be0525eb30559",
+      "render_bytes": 77032029,
+      "status": "whole_part_review_passed_private_claims_pending",
+      "whole_episode_asr_base_small": true,
+      "whole_episode_ocr_4fps": true,
+      "targeted_whole_frames_inspected": true,
+      "native_source_not_upscaled_or_downscaled": true,
+      "source_native_resolution": [
+        1080,
+        1922
+      ],
+      "source_duration": 84.237,
+      "source_sha256": "4c920a80c31b8b681cecd06ef578c48d3ea28aac26de299862f566327f105a6f",
+      "boundary_note": "39.5s after questionends39.08/captionends39.0 before response39.86-40.1; no source footage omitted",
+      "repairs": "none; original audio and burned captions; house0.5sedgefades"
     }
   },
   "playlist_id": "PLSDxRohmmBQk",
