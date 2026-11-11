@@ -1,0 +1,910 @@
+[
+  {
+    "start": 0.520000000000004,
+    "end": 3.2,
+    "text": " All personal potions must be handed over for inspection.",
+    "words": [
+      {
+        "start": 0.520000000000004,
+        "end": 1.04,
+        "word": " All"
+      },
+      {
+        "start": 1.04,
+        "end": 1.28,
+        "word": " personal"
+      },
+      {
+        "start": 1.28,
+        "end": 1.72,
+        "word": " potions"
+      },
+      {
+        "start": 1.72,
+        "end": 2.04,
+        "word": " must"
+      },
+      {
+        "start": 2.04,
+        "end": 2.2,
+        "word": " be"
+      },
+      {
+        "start": 2.2,
+        "end": 2.38,
+        "word": " handed"
+      },
+      {
+        "start": 2.38,
+        "end": 2.7,
+        "word": " over"
+      },
+      {
+        "start": 2.7,
+        "end": 2.84,
+        "word": " for"
+      },
+      {
+        "start": 2.84,
+        "end": 3.2,
+        "word": " inspection."
+      }
+    ]
+  },
+  {
+    "start": 3.7,
+    "end": 6.5,
+    "text": " The order will not tolerate unknown inferior toxins.",
+    "words": [
+      {
+        "start": 3.7,
+        "end": 3.72,
+        "word": " The"
+      },
+      {
+        "start": 3.72,
+        "end": 3.92,
+        "word": " order"
+      },
+      {
+        "start": 3.92,
+        "end": 4.1,
+        "word": " will"
+      },
+      {
+        "start": 4.1,
+        "end": 4.28,
+        "word": " not"
+      },
+      {
+        "start": 4.28,
+        "end": 4.7,
+        "word": " tolerate"
+      },
+      {
+        "start": 4.7,
+        "end": 5.08,
+        "word": " unknown"
+      },
+      {
+        "start": 5.08,
+        "end": 5.88,
+        "word": " inferior"
+      },
+      {
+        "start": 5.88,
+        "end": 6.5,
+        "word": " toxins."
+      }
+    ]
+  },
+  {
+    "start": 6.9,
+    "end": 9.36,
+    "text": " Grandpa, Mola doesn't have any magic potions.",
+    "words": [
+      {
+        "start": 6.9,
+        "end": 7.4,
+        "word": " Grandpa,"
+      },
+      {
+        "start": 7.9,
+        "end": 8.0,
+        "word": " Mola"
+      },
+      {
+        "start": 8.0,
+        "end": 8.44,
+        "word": " doesn't"
+      },
+      {
+        "start": 8.44,
+        "end": 8.62,
+        "word": " have"
+      },
+      {
+        "start": 8.62,
+        "end": 8.78,
+        "word": " any"
+      },
+      {
+        "start": 8.78,
+        "end": 9.1,
+        "word": " magic"
+      },
+      {
+        "start": 9.1,
+        "end": 9.36,
+        "word": " potions."
+      }
+    ]
+  },
+  {
+    "start": 10.24,
+    "end": 12.2,
+    "text": " Then what's in that pouch? It's bulging.",
+    "words": [
+      {
+        "start": 10.24,
+        "end": 10.56,
+        "word": " Then"
+      },
+      {
+        "start": 10.56,
+        "end": 10.8,
+        "word": " what's"
+      },
+      {
+        "start": 10.8,
+        "end": 10.88,
+        "word": " in"
+      },
+      {
+        "start": 10.88,
+        "end": 11.0,
+        "word": " that"
+      },
+      {
+        "start": 11.0,
+        "end": 11.22,
+        "word": " pouch?"
+      },
+      {
+        "start": 11.78,
+        "end": 11.84,
+        "word": " It's"
+      },
+      {
+        "start": 11.84,
+        "end": 12.2,
+        "word": " bulging."
+      }
+    ]
+  },
+  {
+    "start": 15.620000000000005,
+    "end": 20.66,
+    "text": " Jelly beans. Master was afraid Nola would get hungry on the road, so he gave me bees for snacks.",
+    "words": [
+      {
+        "start": 15.620000000000005,
+        "end": 16.14,
+        "word": " Jelly"
+      },
+      {
+        "start": 16.14,
+        "end": 16.46,
+        "word": " beans."
+      },
+      {
+        "start": 17.06,
+        "end": 17.26,
+        "word": " Master"
+      },
+      {
+        "start": 17.26,
+        "end": 17.4,
+        "word": " was"
+      },
+      {
+        "start": 17.4,
+        "end": 17.68,
+        "word": " afraid"
+      },
+      {
+        "start": 17.68,
+        "end": 17.96,
+        "word": " Nola"
+      },
+      {
+        "start": 17.96,
+        "end": 18.24,
+        "word": " would"
+      },
+      {
+        "start": 18.24,
+        "end": 18.4,
+        "word": " get"
+      },
+      {
+        "start": 18.4,
+        "end": 18.6,
+        "word": " hungry"
+      },
+      {
+        "start": 18.6,
+        "end": 18.86,
+        "word": " on"
+      },
+      {
+        "start": 18.86,
+        "end": 18.98,
+        "word": " the"
+      },
+      {
+        "start": 18.98,
+        "end": 19.2,
+        "word": " road,"
+      },
+      {
+        "start": 19.46,
+        "end": 19.64,
+        "word": " so"
+      },
+      {
+        "start": 19.64,
+        "end": 19.76,
+        "word": " he"
+      },
+      {
+        "start": 19.76,
+        "end": 19.94,
+        "word": " gave"
+      },
+      {
+        "start": 19.94,
+        "end": 20.12,
+        "word": " me"
+      },
+      {
+        "start": 20.12,
+        "end": 20.28,
+        "word": " bees"
+      },
+      {
+        "start": 20.28,
+        "end": 20.48,
+        "word": " for"
+      },
+      {
+        "start": 20.48,
+        "end": 20.66,
+        "word": " snacks."
+      }
+    ]
+  },
+  {
+    "start": 24.939999999999998,
+    "end": 30.16,
+    "text": " Oh my god, such pure holy energy. I feel my mana boiling.",
+    "words": [
+      {
+        "start": 24.939999999999998,
+        "end": 25.7,
+        "word": " Oh"
+      },
+      {
+        "start": 25.7,
+        "end": 26.46,
+        "word": " my"
+      },
+      {
+        "start": 26.46,
+        "end": 26.68,
+        "word": " god,"
+      },
+      {
+        "start": 26.86,
+        "end": 27.42,
+        "word": " such"
+      },
+      {
+        "start": 27.42,
+        "end": 27.74,
+        "word": " pure"
+      },
+      {
+        "start": 27.74,
+        "end": 28.02,
+        "word": " holy"
+      },
+      {
+        "start": 28.02,
+        "end": 28.34,
+        "word": " energy."
+      },
+      {
+        "start": 29.14,
+        "end": 29.14,
+        "word": " I"
+      },
+      {
+        "start": 29.14,
+        "end": 29.32,
+        "word": " feel"
+      },
+      {
+        "start": 29.32,
+        "end": 29.5,
+        "word": " my"
+      },
+      {
+        "start": 29.5,
+        "end": 29.68,
+        "word": " mana"
+      },
+      {
+        "start": 29.68,
+        "end": 30.16,
+        "word": " boiling."
+      }
+    ]
+  },
+  {
+    "start": 32.18,
+    "end": 32.94,
+    "text": " Stop!",
+    "words": [
+      {
+        "start": 32.18,
+        "end": 32.94,
+        "word": " Stop!"
+      }
+    ]
+  },
+  {
+    "start": 35.94,
+    "end": 39.1,
+    "text": " Grandpa, why are you yelling? You scared Nella.",
+    "words": [
+      {
+        "start": 35.94,
+        "end": 36.7,
+        "word": " Grandpa,"
+      },
+      {
+        "start": 36.72,
+        "end": 37.06,
+        "word": " why"
+      },
+      {
+        "start": 37.06,
+        "end": 37.22,
+        "word": " are"
+      },
+      {
+        "start": 37.22,
+        "end": 37.36,
+        "word": " you"
+      },
+      {
+        "start": 37.36,
+        "end": 37.78,
+        "word": " yelling?"
+      },
+      {
+        "start": 38.36,
+        "end": 38.38,
+        "word": " You"
+      },
+      {
+        "start": 38.38,
+        "end": 38.64,
+        "word": " scared"
+      },
+      {
+        "start": 38.64,
+        "end": 39.1,
+        "word": " Nella."
+      }
+    ]
+  },
+  {
+    "start": 40.74,
+    "end": 42.78,
+    "text": " This aura. Impossible.",
+    "words": [
+      {
+        "start": 40.74,
+        "end": 41.26,
+        "word": " This"
+      },
+      {
+        "start": 41.26,
+        "end": 41.52,
+        "word": " aura."
+      },
+      {
+        "start": 42.76,
+        "end": 42.78,
+        "word": " Impossible."
+      }
+    ]
+  },
+  {
+    "start": 45.88,
+    "end": 48.62,
+    "text": " Perfect purity. It even holds a trace of divinity.",
+    "words": [
+      {
+        "start": 45.88,
+        "end": 46.38,
+        "word": " Perfect"
+      },
+      {
+        "start": 46.38,
+        "end": 46.6,
+        "word": " purity."
+      },
+      {
+        "start": 47.36,
+        "end": 47.44,
+        "word": " It"
+      },
+      {
+        "start": 47.44,
+        "end": 47.56,
+        "word": " even"
+      },
+      {
+        "start": 47.56,
+        "end": 47.82,
+        "word": " holds"
+      },
+      {
+        "start": 47.82,
+        "end": 47.92,
+        "word": " a"
+      },
+      {
+        "start": 47.92,
+        "end": 48.12,
+        "word": " trace"
+      },
+      {
+        "start": 48.12,
+        "end": 48.24,
+        "word": " of"
+      },
+      {
+        "start": 48.24,
+        "end": 48.62,
+        "word": " divinity."
+      }
+    ]
+  },
+  {
+    "start": 48.86,
+    "end": 51.92,
+    "text": " Is this the legendary mythic elixir that can resurrect the dead?",
+    "words": [
+      {
+        "start": 48.86,
+        "end": 49.06,
+        "word": " Is"
+      },
+      {
+        "start": 49.06,
+        "end": 49.2,
+        "word": " this"
+      },
+      {
+        "start": 49.2,
+        "end": 49.84,
+        "word": " the"
+      },
+      {
+        "start": 49.84,
+        "end": 50.14,
+        "word": " legendary"
+      },
+      {
+        "start": 50.14,
+        "end": 50.62,
+        "word": " mythic"
+      },
+      {
+        "start": 50.62,
+        "end": 50.88,
+        "word": " elixir"
+      },
+      {
+        "start": 50.88,
+        "end": 51.08,
+        "word": " that"
+      },
+      {
+        "start": 51.08,
+        "end": 51.2,
+        "word": " can"
+      },
+      {
+        "start": 51.2,
+        "end": 51.52,
+        "word": " resurrect"
+      },
+      {
+        "start": 51.52,
+        "end": 51.72,
+        "word": " the"
+      },
+      {
+        "start": 51.72,
+        "end": 51.92,
+        "word": " dead?"
+      }
+    ]
+  },
+  {
+    "start": 52.3,
+    "end": 54.18,
+    "text": " What did you just say? This was!",
+    "words": [
+      {
+        "start": 52.3,
+        "end": 52.44,
+        "word": " What"
+      },
+      {
+        "start": 52.44,
+        "end": 52.62,
+        "word": " did"
+      },
+      {
+        "start": 52.62,
+        "end": 52.74,
+        "word": " you"
+      },
+      {
+        "start": 52.74,
+        "end": 52.92,
+        "word": " just"
+      },
+      {
+        "start": 52.92,
+        "end": 53.22,
+        "word": " say?"
+      },
+      {
+        "start": 53.68,
+        "end": 53.84,
+        "word": " This"
+      },
+      {
+        "start": 53.84,
+        "end": 54.18,
+        "word": " was!"
+      }
+    ]
+  },
+  {
+    "start": 54.8,
+    "end": 58.14,
+    "text": " Jelly beans. They're strawberry flavored, a little sticky on the teeth.",
+    "words": [
+      {
+        "start": 54.8,
+        "end": 55.02,
+        "word": " Jelly"
+      },
+      {
+        "start": 55.02,
+        "end": 55.34,
+        "word": " beans."
+      },
+      {
+        "start": 55.88,
+        "end": 55.98,
+        "word": " They're"
+      },
+      {
+        "start": 55.98,
+        "end": 56.28,
+        "word": " strawberry"
+      },
+      {
+        "start": 56.28,
+        "end": 56.74,
+        "word": " flavored,"
+      },
+      {
+        "start": 57.06,
+        "end": 57.12,
+        "word": " a"
+      },
+      {
+        "start": 57.12,
+        "end": 57.3,
+        "word": " little"
+      },
+      {
+        "start": 57.3,
+        "end": 57.58,
+        "word": " sticky"
+      },
+      {
+        "start": 57.58,
+        "end": 57.82,
+        "word": " on"
+      },
+      {
+        "start": 57.82,
+        "end": 57.94,
+        "word": " the"
+      },
+      {
+        "start": 57.94,
+        "end": 58.14,
+        "word": " teeth."
+      }
+    ]
+  },
+  {
+    "start": 59.76,
+    "end": 62.44,
+    "text": " Jelly bean. How many of these have you eaten?",
+    "words": [
+      {
+        "start": 59.76,
+        "end": 60.26,
+        "word": " Jelly"
+      },
+      {
+        "start": 60.26,
+        "end": 60.56,
+        "word": " bean."
+      },
+      {
+        "start": 61.32,
+        "end": 61.4,
+        "word": " How"
+      },
+      {
+        "start": 61.4,
+        "end": 61.76,
+        "word": " many"
+      },
+      {
+        "start": 61.76,
+        "end": 61.92,
+        "word": " of"
+      },
+      {
+        "start": 61.92,
+        "end": 62.0,
+        "word": " these"
+      },
+      {
+        "start": 62.0,
+        "end": 62.16,
+        "word": " have"
+      },
+      {
+        "start": 62.16,
+        "end": 62.28,
+        "word": " you"
+      },
+      {
+        "start": 62.28,
+        "end": 62.44,
+        "word": " eaten?"
+      }
+    ]
+  },
+  {
+    "start": 64.92,
+    "end": 66.78,
+    "text": " One, two, three.",
+    "words": [
+      {
+        "start": 64.92,
+        "end": 65.42,
+        "word": " One,"
+      },
+      {
+        "start": 65.74,
+        "end": 66.08,
+        "word": " two,"
+      },
+      {
+        "start": 66.78,
+        "end": 66.78,
+        "word": " three."
+      }
+    ]
+  },
+  {
+    "start": 70.36,
+    "end": 71.54,
+    "text": " I ran out of fingers.",
+    "words": [
+      {
+        "start": 70.36,
+        "end": 70.86,
+        "word": " I"
+      },
+      {
+        "start": 70.86,
+        "end": 71.0,
+        "word": " ran"
+      },
+      {
+        "start": 71.0,
+        "end": 71.2,
+        "word": " out"
+      },
+      {
+        "start": 71.2,
+        "end": 71.28,
+        "word": " of"
+      },
+      {
+        "start": 71.28,
+        "end": 71.54,
+        "word": " fingers."
+      }
+    ]
+  },
+  {
+    "start": 71.54,
+    "end": 74.38,
+    "text": " These? Who gave you all of these?",
+    "words": [
+      {
+        "start": 71.54,
+        "end": 72.1,
+        "word": " These?"
+      },
+      {
+        "start": 73.06,
+        "end": 73.5,
+        "word": " Who"
+      },
+      {
+        "start": 73.5,
+        "end": 73.7,
+        "word": " gave"
+      },
+      {
+        "start": 73.7,
+        "end": 73.88,
+        "word": " you"
+      },
+      {
+        "start": 73.88,
+        "end": 74.1,
+        "word": " all"
+      },
+      {
+        "start": 74.1,
+        "end": 74.24,
+        "word": " of"
+      },
+      {
+        "start": 74.24,
+        "end": 74.38,
+        "word": " these?"
+      }
+    ]
+  },
+  {
+    "start": 74.8,
+    "end": 78.7,
+    "text": " My master. He said they're leftover jelly beans from home for snacking on the road.",
+    "words": [
+      {
+        "start": 74.8,
+        "end": 74.94,
+        "word": " My"
+      },
+      {
+        "start": 74.94,
+        "end": 75.24,
+        "word": " master."
+      },
+      {
+        "start": 75.72,
+        "end": 75.76,
+        "word": " He"
+      },
+      {
+        "start": 75.76,
+        "end": 75.94,
+        "word": " said"
+      },
+      {
+        "start": 75.94,
+        "end": 76.1,
+        "word": " they're"
+      },
+      {
+        "start": 76.1,
+        "end": 76.54,
+        "word": " leftover"
+      },
+      {
+        "start": 76.54,
+        "end": 76.76,
+        "word": " jelly"
+      },
+      {
+        "start": 76.76,
+        "end": 77.04,
+        "word": " beans"
+      },
+      {
+        "start": 77.04,
+        "end": 77.26,
+        "word": " from"
+      },
+      {
+        "start": 77.26,
+        "end": 77.5,
+        "word": " home"
+      },
+      {
+        "start": 77.5,
+        "end": 77.88,
+        "word": " for"
+      },
+      {
+        "start": 77.88,
+        "end": 78.18,
+        "word": " snacking"
+      },
+      {
+        "start": 78.18,
+        "end": 78.38,
+        "word": " on"
+      },
+      {
+        "start": 78.38,
+        "end": 78.5,
+        "word": " the"
+      },
+      {
+        "start": 78.5,
+        "end": 78.7,
+        "word": " road."
+      }
+    ]
+  },
+  {
+    "start": 81.10000000000001,
+    "end": 82.08,
+    "text": " Grandpa, you want one?",
+    "words": [
+      {
+        "start": 81.10000000000001,
+        "end": 81.54,
+        "word": " Grandpa,"
+      },
+      {
+        "start": 81.54,
+        "end": 81.7,
+        "word": " you"
+      },
+      {
+        "start": 81.7,
+        "end": 81.86,
+        "word": " want"
+      },
+      {
+        "start": 81.86,
+        "end": 82.08,
+        "word": " one?"
+      }
+    ]
+  }
+]
