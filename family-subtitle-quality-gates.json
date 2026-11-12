@@ -175,5 +175,22 @@
     "future E2-E12 unreviewed",
     "IG Buffer embargo/no exhaustiveIGabsence claim"
   ],
-  "status": "E1_quality_ready_privateclaims_pending"
+  "status": "E1_quality_ready_privateclaims_pending",
+  "private_youtube": {
+    "episode1part1": {
+      "video_id": "jVVWtZa5ZdA",
+      "url": "https://youtube.com/shorts/jVVWtZa5ZdA",
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43208051534",
+      "run_exact_sha": "66c9b44bd3bc7d9ab59d37ac32c8de3ec6d3645b",
+      "complete_inventory_count": 502,
+      "no_series_alias_duplicate": true,
+      "checkpoint_verified": true,
+      "stop_verified_at": "2026-11-12T11:19:43Z",
+      "stage_deleted_head404_signedget404": true,
+      "claims_verified": false,
+      "native_ai_verified": false,
+      "playlist_verified": false,
+      "privacy": "private"
+    }
+  }
 }
