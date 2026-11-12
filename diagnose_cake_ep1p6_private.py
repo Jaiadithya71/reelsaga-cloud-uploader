@@ -33,3 +33,13 @@ for n in range(0,len(ids),50):
   assert v['snippet']['channelId']==CHANNEL
   if v['snippet']['title']==item['title']:matches.append({'id':v['id'],'privacy':v['status']['privacyStatus'],'title':v['snippet']['title'],'description_match':v['snippet']['description']==item['description']})
 print(json.dumps({'complete_inventory':True,'count':len(ids),'exact_matches':matches}),flush=True)
+# Immutable per-path history proves whether pre-upload uncertainty was ever persisted.
+import base64,hashlib
+key=DurableLedger.key(item['id'],'youtube');path='state-v2/'+key+'.enc'
+h=checked(backend.request('GET',backend.base+'/commits',params={'sha':backend.branch,'path':path,'per_page':'100'})).data
+assert len(h)<100
+history=[]
+for commit in h:
+ d=checked(backend.request('GET',backend.base+'/contents/'+path,params={'ref':commit['sha']})).data
+ raw=base64.b64decode(d['content']);v=json.loads(backend.aes.decrypt(raw[:12],raw[12:],key.encode()));history.append({'commit':commit['sha'],'at':commit['commit']['committer']['date'],'state':v.get('state'),'external_id':v.get('external_id'),'session_exists':bool(v.get('session')),'metadata_hash':v.get('metadata_hash')})
+print(json.dumps({'immutable_item_history':history}),flush=True)
