@@ -299,7 +299,31 @@
       "pixels_inspected": true,
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
-      "approved_render_sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2"
+      "approved_render_sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2",
+      "private_video_id": "yeHUA6K0u-g",
+      "probe_run": 43224823583,
+      "probe_exact_commit": "b3b2e9918f4199ab31e72e29e10a5b9d9b525445",
+      "probe_success": true,
+      "stop_control_verified": true,
+      "stage_cleanup": {
+        "bucket": "reelsaga-private-staging-71",
+        "key": "xfer/family-e2p2-3343715a42594df4af780e229836c833.mp4",
+        "created": "2026-11-12T13:10:47.463663+00:00",
+        "deadline": "2026-11-12T16:10:47.463686+00:00",
+        "bytes": 23012942,
+        "sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2",
+        "deleted": true,
+        "head_404": true,
+        "original_signed_get_404": true
+      },
+      "claims_verified_none_at": "2026-11-12T18:45:13+05:30",
+      "native_ai_yes_reload_verified_at": "2026-11-12T18:46:30+05:30",
+      "native_ai_pixels": "/downloads/cloud-browser-20261112-131630.png",
+      "own_playlist": "PLJl7I6jzl00I",
+      "own_playlist_actual_membership_verified_at": "2026-11-12T18:46:38+05:30",
+      "private_gate_complete": true,
+      "visibility": "private",
+      "ad_affiliate_cta_notforkids_verified": true
     },
     "yourchannel-family829268-ep2-part3-v1": {
       "episode": 2,
