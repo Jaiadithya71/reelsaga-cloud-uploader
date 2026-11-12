@@ -43,6 +43,21 @@
         "master_sha256": "3f24cd84bfcbcd9696fbcb8461a5381352d0fee54b90652f797a3cec8a4c17e0",
         "all27_encoded_boundary_frames_inspected": true
       }
+    },
+    "2": {
+      "source_sha256": "5cf56cc4af0f22ff802a8df5d136933863cd89d24a6dbc6e9dc4f62554d12888",
+      "source_bytes": 4228408,
+      "source_duration": 131.076,
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 524,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 38,
+      "targeted_caption_frames_inspected": 36,
+      "repair": null,
+      "notes": "Whole dialogue compared with OCR and targeted pixels. No confirmed caption defect; audio and footage unchanged except 0.15s boundary fades in split parts. ASR me/Mia disagreement at62s resolved by context and visible Mia caption, no edit."
     }
   },
   "parts": [
@@ -105,6 +120,51 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "aaa92a48a8374f65f5c2996515d3236112921b5c0a22cdb021ff90809246b72b"
+    },
+    {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 43.5,
+      "duration": 43.5,
+      "sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a",
+      "bytes": 23127333,
+      "path": "/downloads/family-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a"
+    },
+    {
+      "episode": 2,
+      "part": 2,
+      "source_start": 43.5,
+      "source_end": 84.45,
+      "duration": 40.95,
+      "sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2",
+      "bytes": 23012942,
+      "path": "/downloads/family-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2"
+    },
+    {
+      "episode": 2,
+      "part": 3,
+      "source_start": 84.45,
+      "source_end": 131.076,
+      "duration": 46.62599999999999,
+      "sha256": "2e9dfe3b54d42ff5536a67513d2e89a73b8f6309efa3249f4c81791f0e6fdda5",
+      "bytes": 25302947,
+      "path": "/downloads/family-e2p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "2e9dfe3b54d42ff5536a67513d2e89a73b8f6309efa3249f4c81791f0e6fdda5"
     }
   ],
   "part_gates": {
@@ -167,15 +227,60 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "aaa92a48a8374f65f5c2996515d3236112921b5c0a22cdb021ff90809246b72b"
+    },
+    "yourchannel-family829268-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 43.5,
+      "duration": 43.5,
+      "sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a",
+      "bytes": 23127333,
+      "path": "/downloads/family-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a"
+    },
+    "yourchannel-family829268-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 43.5,
+      "source_end": 84.45,
+      "duration": 40.95,
+      "sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2",
+      "bytes": 23012942,
+      "path": "/downloads/family-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "af6fad9dfe35389d0fa5be767db62e9c573fa37c4cd7c8187f7e2a91e545d3a2"
+    },
+    "yourchannel-family829268-ep2-part3-v1": {
+      "episode": 2,
+      "part": 3,
+      "source_start": 84.45,
+      "source_end": 131.076,
+      "duration": 46.62599999999999,
+      "sha256": "2e9dfe3b54d42ff5536a67513d2e89a73b8f6309efa3249f4c81791f0e6fdda5",
+      "bytes": 25302947,
+      "path": "/downloads/family-e2p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "2e9dfe3b54d42ff5536a67513d2e89a73b8f6309efa3249f4c81791f0e6fdda5"
     }
   },
   "open_checks": [
-    "complete live duplicate inventory before private upload",
-    "private claims/native AI/own playlist before public",
-    "future E2-E12 unreviewed",
+    "E2 complete live duplicate inventory before private upload",
+    "E2 private claims/native AI/own playlist before public",
+    "future E3-E12 unreviewed",
     "IG Buffer embargo/no exhaustiveIGabsence claim"
   ],
-  "status": "E1_quality_ready_privateclaims_pending",
+  "status": "E1_private_gated_E2_quality_ready_privateclaims_pending",
   "private_youtube": {
     "episode1part1": {
       "video_id": "jVVWtZa5ZdA",
