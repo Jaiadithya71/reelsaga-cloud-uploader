@@ -732,10 +732,13 @@
     }
   },
   "next_public_part": {
-    "episode": 2,
+    "series": "His Unexpected Little Family",
+    "episode": 1,
     "part": 2,
-    "earliest_after_latest_YT": "2026-11-12T11:45:31+05:30",
-    "hardline": "2026-11-12T14:45:31+05:30"
+    "video_id": "HGruFJW7Ek4",
+    "earliest_after_latest_YT": "2026-11-12T20:25:37+05:30",
+    "hardline": "2026-11-12T23:25:37+05:30",
+    "no_cake_E4_skip": true
   },
   "e3_parts": [
     {
@@ -815,6 +818,19 @@
       "ledger_run_exact_sha": "a824b60ce3bed4e6e4266fb2df402cad924f5bb7",
       "published_at_api": "2026-11-12T11:44:13Z",
       "strict_stop_at": "2026-11-12T11:47:34Z"
+    },
+    "episode3part4": {
+      "video_id": "0QuHoKS77W4",
+      "actual_public_at": "2026-11-12T19:25:37+05:30",
+      "claims": "audio_Russia_only_fresh19:24:30_pixels",
+      "explicit_approval_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUM1QTU2NTIzOTZCOEY2ODZDQzgzNEJFRjY5RDRBQjcA",
+      "AI": "yes_savedStudio_pixels19:24:45_publicAXpresent_publicpixels_unverified",
+      "ordered_playlist": "14members_13public_P4private_verified_preflip",
+      "ledger_pending": false,
+      "ledger_run_id": 43232134809,
+      "ledger_run_exact_sha": "2d7626e81cf6ce094c98d10ed312acb021801144",
+      "published_at_api": "2026-11-12T13:55:37Z",
+      "strict_stop_at": "2026-11-12T13:57:11Z"
     }
   }
 }
