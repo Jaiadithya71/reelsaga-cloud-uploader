@@ -187,10 +187,19 @@
       "checkpoint_verified": true,
       "stop_verified_at": "2026-11-12T11:19:43Z",
       "stage_deleted_head404_signedget404": true,
-      "claims_verified": false,
-      "native_ai_verified": false,
+      "claims_verified": true,
+      "native_ai_verified": true,
       "playlist_verified": false,
-      "privacy": "private"
+      "privacy": "private",
+      "claims": "none",
+      "claims_checked_at": "2026-11-12T16:53:40+05:30",
+      "native_ai": "yes_saved_reloaded_checked_pixels16:56:18",
+      "description_verified": true,
+      "not_for_kids_verified": true,
+      "private_reloaded_verified": true,
+      "playlist_selected_saved": true,
+      "playlist_id": "PLJl7I6jzl00I",
+      "playlist_actual_member_pending": true
     }
   }
 }
