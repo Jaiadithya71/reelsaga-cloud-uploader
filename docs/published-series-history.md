@@ -762,3 +762,5 @@ Live DramaCPS His Unexpected Little Family YourChannel829268 provided12free sour
 16:58:30 FamilyE1P1 actual ownplaylist https://studio.youtube.com/playlist/PLJl7I6jzl00I/videos verified only jVVWtZa5ZdAPrivate; Publicplaylist Datepublishedoldest confirmeddetailspage; Adaffiliate description savedack. PublicURL observed https://www.youtube.com/playlist?list=PLJl7I6jzl00I . Studio recovery cleared toparent16:58:37AIpixelsattached. No publicflip, freshcheck requiredafterCakeE3P3. Browserlease released; noactivestage.
 
 17:05:10 FamilyE1P2 private HGruFJW7Ek4 exactf982077e run43210276514SUCCESS/503completeinventory/checkpoint/strictstop.29,151,686B consumedstage exactdeleted17:06 HEAD404originalsignedGET404;URL/tempTigriscopiesremoved. FreshStudiogatespending, no publicflip.
+
+17:07:47 FamilyE1P2 HGruFJW7Ek4 privatefreshclaimsnone17:06:53/pixels, nativeAIYes+ownplaylist saved17:07:26ack, freshreloadSaveUndoDisabled/AIYes/AdCTAaffiliate/notforkids/privatepixels checked. ActualplaylistPLJl7I6jzl00I P1P2Privateorderverified. No publicflip, noactivestage.
