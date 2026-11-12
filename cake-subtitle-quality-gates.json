@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1_allpublic_E2P1public_E2P2P3privatefullygated_E3held",
+  "status": "E1_allpublic_E2P1P2public_E2P3privatefullygated_E2P4prepared_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -362,6 +362,22 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "036fd17dcdefd5989649a77f70c8bb962a36d3638db0e7efc6d243b2bff97d7e"
+    },
+    "yourchannel-cake829267-ep2-part4-v1": {
+      "episode": 2,
+      "part": 4,
+      "source_start": 156.8,
+      "source_end": 207.723,
+      "duration": 50.923,
+      "measured_duration": 50.923,
+      "sha256": "924e0111c2be5ff300d0f0606ee9916353aa389109d5ccaf2a95a9d5d0efc12e",
+      "bytes": 20385146,
+      "path": "/downloads/cake-e2p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "924e0111c2be5ff300d0f0606ee9916353aa389109d5ccaf2a95a9d5d0efc12e"
     }
   },
   "e2_parts": [
