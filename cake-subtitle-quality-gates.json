@@ -452,7 +452,14 @@
       "public_reload_SaveUndoDisabled": true,
       "public_AIbadge_verified_at": "2026-11-12T07:36:17+05:30",
       "claims_fresh_audio_only_noimpact_at": "2026-11-12T07:34:28+05:30",
-      "playlist_public_order": "E1P1-P6,E2P1Public;E2P2Private"
+      "playlist_public_order": "E1P1-P6,E2P1Public;E2P2Private",
+      "public_ledger": {
+        "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43139140375",
+        "status": "success",
+        "sha": "1b772fa6a6d3992794dbde87641b8e80779b3d4f",
+        "api_published_at": "2026-11-12T02:05:12Z",
+        "strict_disabled_stop_verified": "2026-11-12T02:07:47Z"
+      }
     },
     "episode1part2": {
       "video_id": "AUs1FF_iir0",
