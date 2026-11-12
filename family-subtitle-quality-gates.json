@@ -181,7 +181,17 @@
       "pixels_inspected": true,
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
-      "approved_render_sha256": "1f5004933cdcaa2bd7d51b467fbba4631bca279a3528ad64adeb20d9070b9746"
+      "approved_render_sha256": "1f5004933cdcaa2bd7d51b467fbba4631bca279a3528ad64adeb20d9070b9746",
+      "visibility": "public",
+      "actual_public_at": "2026-11-12T18:19:16+05:30",
+      "fresh_claims_none_at": "2026-11-12T18:17:21+05:30",
+      "native_ai_saved_reload_verified": true,
+      "actual_playlist_membership_before_public_verified": true,
+      "public_player_ok": true,
+      "public_isprivate_false": true,
+      "public_isunlisted_false": true,
+      "public_save_reload_disabled": true,
+      "ledger_reconcile_pending": true
     },
     "yourchannel-family829268-ep1-part2-v1": {
       "episode": 1,
