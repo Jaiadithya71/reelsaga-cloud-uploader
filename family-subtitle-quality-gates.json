@@ -614,5 +614,24 @@
       "playlist_id": "PLJl7I6jzl00I",
       "gated_at": "2026-11-12T17:33:12+05:30"
     }
+  },
+  "public_releases": {
+    "episode1part2": {
+      "video_id": "HGruFJW7Ek4",
+      "actual_public_at": "2026-11-12T20:31:54+05:30",
+      "claims": "none_fresh20:30:03_pixels",
+      "AI": "yes_savedStudio_pixels20:30:24_publicAXfresh20:33:39_publicpixels_unverified",
+      "playlist": "7orderedmembers_P1P2public_restPrivate_afterflip",
+      "ledger_run": 43243495506,
+      "ledger_exact_sha": "f4649b4365e6e27ab420b6541f6d23f46f3c0a7d",
+      "strict_stop_at": "2026-11-12T15:03:15Z"
+    }
+  },
+  "next_public_part": {
+    "episode": 1,
+    "part": 3,
+    "video_id": "UDAQ02Ppjdg",
+    "earliest": "2026-11-12T21:31:54+05:30",
+    "hardline": "2026-11-13T00:31:54+05:30"
   }
 }
