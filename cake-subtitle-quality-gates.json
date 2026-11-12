@@ -802,5 +802,15 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "d658ec49eb6ec3eae88efe50a4fcf04d235144fccf5760bd5a5d2bfee568661a"
     }
-  ]
+  ],
+  "public_releases": {
+    "episode3part3": {
+      "video_id": "XYBs-2a67Tg",
+      "actual_public_at": "2026-11-12T17:14:13+05:30",
+      "claims": "none_fresh17:12:54_pixels17:13:09",
+      "AI": "yes_publicbadgepixels17:15:06",
+      "ordered_playlist": "14members_13public_P4private_verified",
+      "ledger_pending": true
+    }
+  }
 }
