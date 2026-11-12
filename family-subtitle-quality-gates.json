@@ -88,6 +88,23 @@
       "targeted_caption_frames_inspected": 72,
       "repair": null,
       "notes": "Whole dialogue compared with OCR and targeted pixels. No confirmed caption defect. Food therapy present at98.5-99.25s higher in frame despite OCR crop miss;15targetedframes and isolated audio verified. ASR-only music hallucinations89-93s rejected by pixels/context. Three ordered cuts0/42.4/83.2/124.922 with0.15s fades only;18encoded pixels inspected."
+    },
+    "5": {
+      "source_sha256": "d986c66ed5126d955e9e74d6ef48144679455d54f079a0f6cadf5105a9efdc2b",
+      "source_bytes": 4584546,
+      "source_duration": 135.255,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/13792b40-1a1a9cfc96c-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T03:30:18+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 541,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 48,
+      "targeted_caption_frames_inspected": 64,
+      "repair": null,
+      "notes": "Whole source ASR/OCR/action/targeted pixels compared. No confirmed caption defect. ASR burly/Bernie and Vale/valet and let-go/lets-go differences not repair authority. Supplied captions kept. No changes except 0.15s part boundary fades."
     }
   },
   "parts": [
@@ -309,6 +326,51 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "65275bcb26ab10257cf30fe66778996509a17072012b8422e2635378908614fb"
+    },
+    {
+      "episode": 5,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 44.4,
+      "duration": 44.4,
+      "sha256": "1e39e806d12789e55b2e932324a019b2ac976ac59b008cd94bee3145a944095b",
+      "bytes": 25631518,
+      "path": "/downloads/family-e5p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "1e39e806d12789e55b2e932324a019b2ac976ac59b008cd94bee3145a944095b"
+    },
+    {
+      "episode": 5,
+      "part": 2,
+      "source_start": 44.4,
+      "source_end": 91.7,
+      "duration": 47.300000000000004,
+      "sha256": "9db59fb01974d7ef11fc245d6d5ff896f76803e0404352294924f00110c78cd4",
+      "bytes": 25406691,
+      "path": "/downloads/family-e5p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "9db59fb01974d7ef11fc245d6d5ff896f76803e0404352294924f00110c78cd4"
+    },
+    {
+      "episode": 5,
+      "part": 3,
+      "source_start": 91.7,
+      "source_end": 135.255,
+      "duration": 43.55499999999999,
+      "sha256": "7b02bdc54afe342177739c4de5124fa424876e8e7a67d31dc080be761de7f37f",
+      "bytes": 24194660,
+      "path": "/downloads/family-e5p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "7b02bdc54afe342177739c4de5124fa424876e8e7a67d31dc080be761de7f37f"
     }
   ],
   "part_gates": {
@@ -597,15 +659,60 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "65275bcb26ab10257cf30fe66778996509a17072012b8422e2635378908614fb"
+    },
+    "yourchannel-family829268-ep5-part1-v1": {
+      "episode": 5,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 44.4,
+      "duration": 44.4,
+      "sha256": "1e39e806d12789e55b2e932324a019b2ac976ac59b008cd94bee3145a944095b",
+      "bytes": 25631518,
+      "path": "/downloads/family-e5p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "1e39e806d12789e55b2e932324a019b2ac976ac59b008cd94bee3145a944095b"
+    },
+    "yourchannel-family829268-ep5-part2-v1": {
+      "episode": 5,
+      "part": 2,
+      "source_start": 44.4,
+      "source_end": 91.7,
+      "duration": 47.300000000000004,
+      "sha256": "9db59fb01974d7ef11fc245d6d5ff896f76803e0404352294924f00110c78cd4",
+      "bytes": 25406691,
+      "path": "/downloads/family-e5p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "9db59fb01974d7ef11fc245d6d5ff896f76803e0404352294924f00110c78cd4"
+    },
+    "yourchannel-family829268-ep5-part3-v1": {
+      "episode": 5,
+      "part": 3,
+      "source_start": 91.7,
+      "source_end": 135.255,
+      "duration": 43.55499999999999,
+      "sha256": "7b02bdc54afe342177739c4de5124fa424876e8e7a67d31dc080be761de7f37f",
+      "bytes": 24194660,
+      "path": "/downloads/family-e5p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "7b02bdc54afe342177739c4de5124fa424876e8e7a67d31dc080be761de7f37f"
     }
   },
   "open_checks": [
-    "E3 complete live duplicate inventory before private upload",
-    "E3 private claims/native AI/own playlist before public",
-    "future E4-E12 unreviewed",
+    "E5 full live duplicate inventory before private upload",
+    "E5 private claims/native AI/actual own playlist before public",
+    "future E6-E12 unreviewed",
     "IG Buffer embargo/no exhaustiveIGabsence claim"
   ],
-  "status": "E1_public_started_E2_private_gated_E3_quality_ready",
+  "status": "E1_E2_public_E3_started_E4_private_gated_E5_quality_ready",
   "private_youtube": {
     "episode1part1": {
       "video_id": "jVVWtZa5ZdA",
