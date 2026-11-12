@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1P1_P2_P3_P4_P5_public_E1P6privateprep_E3held",
+  "status": "E1P1_P2_P3_P4_P5_public_E1P6_privatefullygated_audioexception_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -510,7 +510,31 @@
       "public_reload_SaveUndoDisabled": true,
       "public_AIbadge_verified_at": "2026-11-12T05:30:21+05:30",
       "claims_fresh_none_at": "2026-11-12T05:28:27+05:30",
-      "playlist_public_order": "E1P1,P2,P3,P4,P5;E2P1private"
+      "playlist_public_order": "E1P1,P2,P3,P4,P5;E2P1private",
+      "ledger_reconciled_run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43124139248",
+      "api_published_at": "2026-11-11T23:59:18Z"
+    },
+    "episode1part6": {
+      "video_id": "9TWOonxH5bo",
+      "url": "https://youtube.com/shorts/9TWOonxH5bo",
+      "privacy": "private",
+      "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43126197334",
+      "execution_sha": "9138233869c103972cd84b6ad60395ab28d36978",
+      "complete_inventory_count": 491,
+      "checkpoint_final_disabled_verified": true,
+      "claims_at": "2026-11-12T05:51:59+05:30",
+      "claim": "Lost and Found STEM PIANO / Evolving Sound Ltd CAE 825740925",
+      "claim_type": "Audio",
+      "reach_impact": false,
+      "channel_impact": false,
+      "strike": false,
+      "Oct1_audio_only_exception_original_recovered": true,
+      "nativeAI_yes_saved_reloadverified": true,
+      "ownplaylist_saved_reload_actualmembership_verified": true,
+      "reload_SaveUndoDisabled": true,
+      "actual_playlist_at": "2026-11-12T05:52:34+05:30",
+      "stage_deleted_HEAD404_signedGET404": true,
+      "recovery": "same initial claim retained, immutable history only started before original failure; no reset or safety test changes"
     }
   },
   "next_public_part": {
@@ -519,9 +543,9 @@
     "earliest": "2026-11-12T06:29:18+05:30",
     "hardline": "2026-11-12T09:29:18+05:30",
     "gates_pending": [
-      "private_upload_claims",
-      "nativeAI",
-      "ownplaylistactualmembership"
+      "freshclaims",
+      "hourlyspacing",
+      "freshmetadataAIplaylistreadback"
     ]
   }
 }
