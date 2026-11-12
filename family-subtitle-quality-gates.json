@@ -207,6 +207,20 @@
       ],
       "playlist_order": "Date published (oldest)",
       "gated_at": "2026-11-12T16:58:30+05:30"
+    },
+    "episode1part2": {
+      "video_id": "HGruFJW7Ek4",
+      "privacy": "private",
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43210276514",
+      "run_exact_sha": "f982077e58226c09e924e61b04441bf87a52d70d",
+      "complete_inventory_count": 503,
+      "no_exact_part_duplicate": true,
+      "checkpoint_verified": true,
+      "stop_verified_at": "2026-11-12T11:35:10Z",
+      "stage_deleted_head404_signedget404": true,
+      "claims_verified": false,
+      "native_ai_verified": false,
+      "playlist_verified": false
     }
   }
 }
