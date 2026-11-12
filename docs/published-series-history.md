@@ -772,4 +772,4 @@ Freshclaimsnone17:12:54/pixels17:13:09;AdCTAaffiliate/notforkids/AIYesownplaylis
 
 17:21:36 FamilyE1P3UDAQ02Ppjdg privatefreshclaimsnone17:20:42/pixels,AIYes+ownplaylist saved17:21:10ack,freshreloadSaveUndoDisabled/AIYes/AdCTAaffiliate/notforkids/privatepixelschecked. ActualplaylistP1P2P3Privatecorrectorderverified17:21:29. Noactivestage/browser;P4localready/privateworkflowpreparednotdispatched.
 
-17:29:36 FamilyE1P4fc5rABS_RxM PRIVATE run43213764020SUCCESSexactf59d0186 inventory503/checkpoint/strictstop11:59:36Z.25,985,998B consumedstage exactdeleted17:30 HEAD404originalsignedGET404/URLtempTigriscopiesremoved. FreshStudiogatespending/no publicflip.
+17:29:36 FamilyE1P4fc5rABS_RxM PRIVATE run43213764020SUCCESSexactf59d0186 inventory503/checkpoint/strictstop11:59:36Z.CORRECTION:25,985,998B consumedstage17:30deleteHEAD404butoriginalsignedGETnot404; script continued and prematurelyremovedURL/tempcredentials andloggedfalsecompletion. Parentalert17:31. Exactdelete repeated17:31, fresh HEAD404 and freshly signedGET404 verified. OriginalURLfinalcheckunavailable; do not claimoriginalsignedGET404. Studiogatespending/no publicflip.

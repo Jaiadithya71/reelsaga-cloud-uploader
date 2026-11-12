@@ -268,10 +268,12 @@
       "complete_inventory_count": 503,
       "checkpoint_verified": true,
       "stop_verified_at": "2026-11-12T11:59:36Z",
-      "stage_deleted_head404_signedget404": true,
+      "stage_deleted_head404_signedget404": false,
       "claims_verified": false,
       "native_ai_verified": false,
-      "playlist_verified": false
+      "playlist_verified": false,
+      "stage_deleted_head404_freshsignedget404": true,
+      "original_signed_url_final_check_unavailable": true
     }
   }
 }
