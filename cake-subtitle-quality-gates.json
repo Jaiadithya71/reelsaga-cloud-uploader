@@ -427,6 +427,22 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "09e69332705ed29dcea4e16b5a69c3ba70a82b666fa38e55b639046ae081c2af"
+    },
+    "yourchannel-cake829267-ep3-part2-v1": {
+      "episode": 3,
+      "part": 2,
+      "source_start": 50.5,
+      "source_end": 100,
+      "duration": 49.5,
+      "measured_duration": 49.5,
+      "sha256": "37dae64140fb3a8df2fd059583121d115ec9425aa79faedb5182b47501ef5eec",
+      "bytes": 6669475,
+      "path": "/downloads/cake-e3p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "37dae64140fb3a8df2fd059583121d115ec9425aa79faedb5182b47501ef5eec"
     }
   },
   "e2_parts": [
