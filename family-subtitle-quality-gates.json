@@ -73,6 +73,21 @@
       "targeted_caption_frames_inspected": 36,
       "repair": null,
       "notes": "Whole dialogue compared with OCR and targeted pixels. No confirmed caption defect; audio and footage unchanged except 0.15s boundary fades in split parts. ASR rumor/roommate, team phrasing and pronoun disagreements resolved by context and visible captions, no edit."
+    },
+    "4": {
+      "source_sha256": "ede1c796f97b1234c0f5f5598ab9050292dcce515b90aafbf8530187467c9645",
+      "source_bytes": 3451420,
+      "source_duration": 124.922,
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 500,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 48,
+      "targeted_caption_frames_inspected": 72,
+      "repair": null,
+      "notes": "Whole dialogue compared with OCR and targeted pixels. No confirmed caption defect. Food therapy present at98.5-99.25s higher in frame despite OCR crop miss;15targetedframes and isolated audio verified. ASR-only music hallucinations89-93s rejected by pixels/context. Three ordered cuts0/42.4/83.2/124.922 with0.15s fades only;18encoded pixels inspected."
     }
   },
   "parts": [
@@ -249,6 +264,51 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "746a4e437e31e281a7711ddb4ffd3a1aad872f7fbb3c3ee3a802648c7210f0ae"
+    },
+    {
+      "episode": 4,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 42.4,
+      "duration": 42.4,
+      "sha256": "48522e6c8e146e9a765a072cded2546c633b984c60428ee80149d79f8e65ecb7",
+      "bytes": 20420621,
+      "path": "/downloads/family-e4p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "48522e6c8e146e9a765a072cded2546c633b984c60428ee80149d79f8e65ecb7"
+    },
+    {
+      "episode": 4,
+      "part": 2,
+      "source_start": 42.4,
+      "source_end": 83.2,
+      "duration": 40.800000000000004,
+      "sha256": "87b91f4974dd96b0e92bcc38a4303c088a351bffb931b018a86f8acea109498c",
+      "bytes": 22103397,
+      "path": "/downloads/family-e4p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "87b91f4974dd96b0e92bcc38a4303c088a351bffb931b018a86f8acea109498c"
+    },
+    {
+      "episode": 4,
+      "part": 3,
+      "source_start": 83.2,
+      "source_end": 124.922,
+      "duration": 41.721999999999994,
+      "sha256": "65275bcb26ab10257cf30fe66778996509a17072012b8422e2635378908614fb",
+      "bytes": 22121896,
+      "path": "/downloads/family-e4p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "65275bcb26ab10257cf30fe66778996509a17072012b8422e2635378908614fb"
     }
   ],
   "part_gates": {
@@ -492,6 +552,51 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "746a4e437e31e281a7711ddb4ffd3a1aad872f7fbb3c3ee3a802648c7210f0ae"
+    },
+    "yourchannel-family829268-ep4-part1-v1": {
+      "episode": 4,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 42.4,
+      "duration": 42.4,
+      "sha256": "48522e6c8e146e9a765a072cded2546c633b984c60428ee80149d79f8e65ecb7",
+      "bytes": 20420621,
+      "path": "/downloads/family-e4p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "48522e6c8e146e9a765a072cded2546c633b984c60428ee80149d79f8e65ecb7"
+    },
+    "yourchannel-family829268-ep4-part2-v1": {
+      "episode": 4,
+      "part": 2,
+      "source_start": 42.4,
+      "source_end": 83.2,
+      "duration": 40.800000000000004,
+      "sha256": "87b91f4974dd96b0e92bcc38a4303c088a351bffb931b018a86f8acea109498c",
+      "bytes": 22103397,
+      "path": "/downloads/family-e4p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "87b91f4974dd96b0e92bcc38a4303c088a351bffb931b018a86f8acea109498c"
+    },
+    "yourchannel-family829268-ep4-part3-v1": {
+      "episode": 4,
+      "part": 3,
+      "source_start": 83.2,
+      "source_end": 124.922,
+      "duration": 41.721999999999994,
+      "sha256": "65275bcb26ab10257cf30fe66778996509a17072012b8422e2635378908614fb",
+      "bytes": 22121896,
+      "path": "/downloads/family-e4p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "65275bcb26ab10257cf30fe66778996509a17072012b8422e2635378908614fb"
     }
   },
   "open_checks": [
