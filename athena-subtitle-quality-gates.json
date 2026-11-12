@@ -189,7 +189,14 @@
       "probe_checkpoint_stop_verified": true,
       "published_at": "2026-11-12T10:45:31+05:30",
       "public_save_reload_undo_disabled": true,
-      "public_ai_badge_pixels_verified": "2026-11-12T10:46:23+05:30"
+      "public_ai_badge_pixels_verified": "2026-11-12T10:46:23+05:30",
+      "public_ledger": {
+        "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43160319934",
+        "status": "success",
+        "sha": "ffdfc62c3633f993124b135aa7b4ef8e7f4894a4",
+        "api_published_at": "2026-11-12T05:15:31Z",
+        "strict_disabled_stop_verified_at": "2026-11-12T05:17:21Z"
+      }
     },
     "yourchannel-athena829263-ep2-part1-v1": {
       "whole_part_release_ready": true,
