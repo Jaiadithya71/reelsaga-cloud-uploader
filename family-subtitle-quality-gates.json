@@ -241,7 +241,24 @@
       "pixels_inspected": true,
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
-      "approved_render_sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a"
+      "approved_render_sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a",
+      "private_video_id": "BrH2-68DphU",
+      "probe_run": 43216612627,
+      "probe_exact_commit": "f0cb7fe36fb1bedc34dc7cb77b97058a0ee2093d",
+      "probe_success": true,
+      "private_probe_checkpoint_verified": true,
+      "stop_control_verified": true,
+      "stage_cleanup": {
+        "bucket": "reelsaga-private-staging-71",
+        "key": "xfer/family-e2p1-d7c119eb1bc34147be2827f8644e07b0.mp4",
+        "created": "2026-11-12T12:17:46.758608+00:00",
+        "deadline": "2026-11-12T15:17:46.758640+00:00",
+        "bytes": 23127333,
+        "sha256": "3b3da1c70fff88816f7615104a1f6a1ceeae4f284fb89cb003eb38ffc737852a",
+        "deleted": true,
+        "head_404": true,
+        "original_signed_get_404": true
+      }
     },
     "yourchannel-family829268-ep2-part2-v1": {
       "episode": 2,
