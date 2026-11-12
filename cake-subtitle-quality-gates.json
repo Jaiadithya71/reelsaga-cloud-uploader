@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1_allpublic_E2P1_P2_privatefullygated_E3held",
+  "status": "E1_allpublic_E2P1public_E2P2privatefullygated_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -444,10 +444,15 @@
       "claims_checked_at": "2026-11-12T01:10:36+05:30",
       "native_ai": "yes_saved_reloadchecked_disabled",
       "playlist": "member_page_two_private_verified_beforeE1public",
-      "privacy": "private",
+      "privacy": "public",
       "stage_consumed_deleted_head404_signedget404": true,
       "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43089148381",
-      "commit": "1663292b1f2288d9e14a1cda8c99f082c494785d"
+      "commit": "1663292b1f2288d9e14a1cda8c99f082c494785d",
+      "public_player_published_at": "2026-11-12T07:35:12+05:30",
+      "public_reload_SaveUndoDisabled": true,
+      "public_AIbadge_verified_at": "2026-11-12T07:36:17+05:30",
+      "claims_fresh_audio_only_noimpact_at": "2026-11-12T07:34:28+05:30",
+      "playlist_public_order": "E1P1-P6,E2P1Public;E2P2Private"
     },
     "episode1part2": {
       "video_id": "AUs1FF_iir0",
@@ -577,13 +582,8 @@
   },
   "next_public_part": {
     "episode": 2,
-    "part": 1,
-    "earliest": "2026-11-12T07:32:57+05:30",
-    "hardline": "2026-11-12T10:32:57+05:30",
-    "gates_pending": [
-      "freshclaims",
-      "hourlyspacing",
-      "freshmetadataAIplaylistreadback"
-    ]
+    "part": 2,
+    "earliest_after_latest_YT": "2026-11-12T08:35:12+05:30",
+    "note": "Athena E1P2-P4 approved Nov12 07:33, next hourly YT slots routed to Athena, keep CakeP2 private until ordered continuation. Global4h11:35:12."
   }
 }
