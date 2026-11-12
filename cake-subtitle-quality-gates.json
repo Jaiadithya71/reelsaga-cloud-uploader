@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1P1_P2_P3_P4_P5_public_E1P6_privatefullygated_audioexception_E3held",
+  "status": "E1_allpublic_E2P1privatefullygated_E2P2prep_E3held",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -330,6 +330,22 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "1625dc20e7d5defd7c1dcb1ab4e3b0d0bbf8e070e9f930ba425795ceeb5dae88"
+    },
+    "yourchannel-cake829267-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 52,
+      "source_end": 103,
+      "duration": 51,
+      "measured_duration": 51.0,
+      "sha256": "fc4e39211b062b5ffb4da0fdef8a613532edc59bf3a3a62cab3c77f6758ef21b",
+      "bytes": 19234881,
+      "path": "/downloads/cake-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "fc4e39211b062b5ffb4da0fdef8a613532edc59bf3a3a62cab3c77f6758ef21b"
     }
   },
   "e2_parts": [
@@ -517,7 +533,7 @@
     "episode1part6": {
       "video_id": "9TWOonxH5bo",
       "url": "https://youtube.com/shorts/9TWOonxH5bo",
-      "privacy": "private",
+      "privacy": "public",
       "run": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43126197334",
       "execution_sha": "9138233869c103972cd84b6ad60395ab28d36978",
       "complete_inventory_count": 491,
@@ -534,14 +550,19 @@
       "reload_SaveUndoDisabled": true,
       "actual_playlist_at": "2026-11-12T05:52:34+05:30",
       "stage_deleted_HEAD404_signedGET404": true,
-      "recovery": "same initial claim retained, immutable history only started before original failure; no reset or safety test changes"
+      "recovery": "same initial claim retained, immutable history only started before original failure; no reset or safety test changes",
+      "public_player_published_at": "2026-11-12T06:32:57+05:30",
+      "public_reload_SaveUndoDisabled": true,
+      "public_AIbadge_verified_at": "2026-11-12T06:34:05+05:30",
+      "claims_fresh_audio_only_noimpact_at": "2026-11-12T06:32:35+05:30",
+      "playlist_public_order": "E1P1,P2,P3,P4,P5,P6;E2P1private"
     }
   },
   "next_public_part": {
-    "episode": 1,
-    "part": 6,
-    "earliest": "2026-11-12T06:29:18+05:30",
-    "hardline": "2026-11-12T09:29:18+05:30",
+    "episode": 2,
+    "part": 1,
+    "earliest": "2026-11-12T07:32:57+05:30",
+    "hardline": "2026-11-12T10:32:57+05:30",
     "gates_pending": [
       "freshclaims",
       "hourlyspacing",
