@@ -189,7 +189,7 @@
       "stage_deleted_head404_signedget404": true,
       "claims_verified": true,
       "native_ai_verified": true,
-      "playlist_verified": false,
+      "playlist_verified": true,
       "privacy": "private",
       "claims": "none",
       "claims_checked_at": "2026-11-12T16:53:40+05:30",
@@ -199,7 +199,14 @@
       "private_reloaded_verified": true,
       "playlist_selected_saved": true,
       "playlist_id": "PLJl7I6jzl00I",
-      "playlist_actual_member_pending": true
+      "playlist_actual_member_pending": false,
+      "playlist_url": "https://www.youtube.com/playlist?list=PLJl7I6jzl00I",
+      "playlist_member_url": "https://studio.youtube.com/playlist/PLJl7I6jzl00I/videos",
+      "playlist_actual_members": [
+        "jVVWtZa5ZdA"
+      ],
+      "playlist_order": "Date published (oldest)",
+      "gated_at": "2026-11-12T16:58:30+05:30"
     }
   }
 }
