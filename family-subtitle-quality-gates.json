@@ -1,0 +1,179 @@
+{
+  "series": "His Unexpected Little Family",
+  "dramacps_id": 829268,
+  "source_url": "https://dramacps.com/dashboard",
+  "affiliate": "https://r.reelsgo.tv/qINi-2LTQUfo",
+  "free_episode_urls": [
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2b2b99c5-1a1a9cfc94f-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5d2d62ae-1a1a9cfc963-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/7536af5-1a1a9cfc8b1-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/6018ed61-1a1a9cfc90e-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/13792b40-1a1a9cfc96c-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/d36c7d3-1a1a9cfc8b7-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/648aa286-1a1a9cfc955-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/3b1e683b-1a1a9cfc8b5-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/4cfdfe7-1a1a9cfc926-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/bb0d61a-1a1a9cfc8b4-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/495f2d00-1a1a9cfc974-0005-9573-534-c9280.mp4",
+    "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1e4e79c8-1a1a9cfc8b8-0005-9573-534-c9280.mp4"
+  ],
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "source_sha256": "e928823d7771c416d62f4936c6ed61a2e69f8af60c5aaacddbf70931a30cc587",
+      "source_bytes": 7023992,
+      "source_duration": 191.401,
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 765,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 48,
+      "targeted_caption_frames_inspected": 28,
+      "repair": {
+        "original": "You mother is right",
+        "replacement": "Your mother is right",
+        "frames": [
+          2367,
+          2385
+        ],
+        "all19_repaired_frames_pixels_inspected": true,
+        "unchanged_audio_adts_sha256": "7b497e0156c9511ced65f7f7eab02763922b726c9c0a761bdacfd9c89bb29f97",
+        "master_sha256": "3f24cd84bfcbcd9696fbcb8461a5381352d0fee54b90652f797a3cec8a4c17e0",
+        "all27_encoded_boundary_frames_inspected": true
+      }
+    }
+  },
+  "parts": [
+    {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 53,
+      "duration": 53,
+      "sha256": "1f5004933cdcaa2bd7d51b467fbba4631bca279a3528ad64adeb20d9070b9746",
+      "bytes": 36540636,
+      "path": "/downloads/family-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "1f5004933cdcaa2bd7d51b467fbba4631bca279a3528ad64adeb20d9070b9746"
+    },
+    {
+      "episode": 1,
+      "part": 2,
+      "source_start": 53,
+      "source_end": 104,
+      "duration": 51,
+      "sha256": "d3bf3bb22e6f8b2974709a81fbe82d1593ae6d8122c8127f38255bfdb2e49f03",
+      "bytes": 29151686,
+      "path": "/downloads/family-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "d3bf3bb22e6f8b2974709a81fbe82d1593ae6d8122c8127f38255bfdb2e49f03"
+    },
+    {
+      "episode": 1,
+      "part": 3,
+      "source_start": 104,
+      "source_end": 153.5,
+      "duration": 49.5,
+      "sha256": "fdb28796c58ef7762fd1343e2bbab2f3a36e018241d11cd16703b15788cba7be",
+      "bytes": 34489275,
+      "path": "/downloads/family-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "fdb28796c58ef7762fd1343e2bbab2f3a36e018241d11cd16703b15788cba7be"
+    },
+    {
+      "episode": 1,
+      "part": 4,
+      "source_start": 153.5,
+      "source_end": 191.401,
+      "duration": 37.90100000000001,
+      "sha256": "aaa92a48a8374f65f5c2996515d3236112921b5c0a22cdb021ff90809246b72b",
+      "bytes": 25985998,
+      "path": "/downloads/family-e1p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "aaa92a48a8374f65f5c2996515d3236112921b5c0a22cdb021ff90809246b72b"
+    }
+  ],
+  "part_gates": {
+    "yourchannel-family829268-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 53,
+      "duration": 53,
+      "sha256": "1f5004933cdcaa2bd7d51b467fbba4631bca279a3528ad64adeb20d9070b9746",
+      "bytes": 36540636,
+      "path": "/downloads/family-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "1f5004933cdcaa2bd7d51b467fbba4631bca279a3528ad64adeb20d9070b9746"
+    },
+    "yourchannel-family829268-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 53,
+      "source_end": 104,
+      "duration": 51,
+      "sha256": "d3bf3bb22e6f8b2974709a81fbe82d1593ae6d8122c8127f38255bfdb2e49f03",
+      "bytes": 29151686,
+      "path": "/downloads/family-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "d3bf3bb22e6f8b2974709a81fbe82d1593ae6d8122c8127f38255bfdb2e49f03"
+    },
+    "yourchannel-family829268-ep1-part3-v1": {
+      "episode": 1,
+      "part": 3,
+      "source_start": 104,
+      "source_end": 153.5,
+      "duration": 49.5,
+      "sha256": "fdb28796c58ef7762fd1343e2bbab2f3a36e018241d11cd16703b15788cba7be",
+      "bytes": 34489275,
+      "path": "/downloads/family-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "fdb28796c58ef7762fd1343e2bbab2f3a36e018241d11cd16703b15788cba7be"
+    },
+    "yourchannel-family829268-ep1-part4-v1": {
+      "episode": 1,
+      "part": 4,
+      "source_start": 153.5,
+      "source_end": 191.401,
+      "duration": 37.90100000000001,
+      "sha256": "aaa92a48a8374f65f5c2996515d3236112921b5c0a22cdb021ff90809246b72b",
+      "bytes": 25985998,
+      "path": "/downloads/family-e1p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "aaa92a48a8374f65f5c2996515d3236112921b5c0a22cdb021ff90809246b72b"
+    }
+  },
+  "open_checks": [
+    "complete live duplicate inventory before private upload",
+    "private claims/native AI/own playlist before public",
+    "future E2-E12 unreviewed",
+    "IG Buffer embargo/no exhaustiveIGabsence claim"
+  ],
+  "status": "E1_quality_ready_privateclaims_pending"
+}
