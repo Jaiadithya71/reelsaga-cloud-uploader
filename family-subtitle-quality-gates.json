@@ -259,6 +259,19 @@
       ],
       "playlist_id": "PLJl7I6jzl00I",
       "gated_at": "2026-11-12T17:21:36+05:30"
+    },
+    "episode1part4": {
+      "video_id": "fc5rABS_RxM",
+      "privacy": "private",
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43213764020",
+      "run_exact_sha": "f59d01869d1cf4486ab7dc65c8b17064c84b0720",
+      "complete_inventory_count": 503,
+      "checkpoint_verified": true,
+      "stop_verified_at": "2026-11-12T11:59:36Z",
+      "stage_deleted_head404_signedget404": true,
+      "claims_verified": false,
+      "native_ai_verified": false,
+      "playlist_verified": false
     }
   }
 }
