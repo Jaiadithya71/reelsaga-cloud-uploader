@@ -258,7 +258,15 @@
         "deleted": true,
         "head_404": true,
         "original_signed_get_404": true
-      }
+      },
+      "claims_verified_none_at": "2026-11-12T17:50:03+05:30",
+      "native_ai_yes_reload_verified_at": "2026-11-12T17:55:20+05:30",
+      "native_ai_pixels": "/downloads/cloud-browser-20261112-122520.png",
+      "own_playlist": "PLJl7I6jzl00I",
+      "own_playlist_actual_membership_verified_at": "2026-11-12T17:53:12+05:30",
+      "private_gate_complete": true,
+      "visibility": "private",
+      "ad_affiliate_cta_notforkids_verified": true
     },
     "yourchannel-family829268-ep2-part2-v1": {
       "episode": 2,
