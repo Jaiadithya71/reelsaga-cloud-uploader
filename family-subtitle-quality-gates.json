@@ -191,7 +191,15 @@
       "public_isprivate_false": true,
       "public_isunlisted_false": true,
       "public_save_reload_disabled": true,
-      "ledger_reconcile_pending": true
+      "ledger_reconcile_pending": false,
+      "public_ledger_run": 43221614126,
+      "public_ledger_commit": "acfd10c6a7958edf44fc3e890e345fc7bad42594",
+      "public_api_published_at": "2026-11-12T12:49:16Z",
+      "public_ledger_verified": true,
+      "public_ledger_stop_at": "2026-11-12T12:51:02Z",
+      "public_ai_badge_ax_verified": true,
+      "public_ai_badge_pixels_verified": false,
+      "public_ai_badge_pixels_caveat": "Screenshot compositor/scroll view out of sync; savedStudioAIYes verifiedbeforeflip, publicAX AIbadge present. Do not claim publicbadge pixelverification."
     },
     "yourchannel-family829268-ep1-part2-v1": {
       "episode": 1,
