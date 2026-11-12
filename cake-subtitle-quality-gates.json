@@ -2,7 +2,7 @@
   "series": "The Don's Bride Wants Cake",
   "dramacps_id": 829267,
   "source_url": "https://dramacps.com/dashboard",
-  "status": "E1_allpublic_E2P1P2public_E2P3P4privatefullygated_E3held",
+  "status": "E1_allpublic_E2P1P2public_E2P3P4privatefullygated_E3_QAaccepted_partsready",
   "episodes": {
     "1": {
       "sha256": "3bf98259ce0d9e53706835aad0a3c6dee8c941086211687f7419d26005e8a62e",
@@ -88,9 +88,9 @@
     },
     "3": {
       "duration": 200.256,
-      "status": "timingrepairtrial_unaccepted",
+      "status": "whole_episode_repaired_QA_accepted",
       "review": "wholebase+smallASR/801quartersecondOCR/32action+47targetedpixels,isolated108-118VADsmall",
-      "finding": "Timing: marry him so i get to live here absent spoken110.5-112.8 and late114.708333-116.375. Additional defect177.25-178.5 source um um big big guy versus single um,big in allASR and isolatedaudio. Actually spoken repetitions dont dont and Lucys Lucys retained.",
+      "finding": "Timing caption moved to spoken110.5-112.875; late40framesremoved. Unsupported repeated um/big corrected35frames177.125-178.583333. Other spoken repeats retained.",
       "trial": "Timingtrial assembled, not accepted: caption-derived alphaglyph at110.5-112.875; late40framesinpainted. Inspected all40removalpixels/all58addedcaptionframes after encoding plus fullframeboundaries. Motion and seconddefectrepair still pending.",
       "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2211558a-1a1aaafe33b-0005-9573-534-c9280.mp4",
       "trial_master": {
@@ -103,14 +103,47 @@
         "source_audio_identical": true,
         "accepted": false
       },
-      "isolated175_190": "smallVAD + readAudio confirm single um/big, repeated Lucys."
+      "isolated175_190": "smallVAD + readAudio confirm single um/big, repeated Lucys.",
+      "repairs_accepted": true,
+      "master": {
+        "path": "/downloads/cake829267-e3-repaired-v2.mp4",
+        "bytes": 36279057,
+        "sha256": "c5c2aaf7e6dfb9876993c08ade36d666d0e70520a69144ab919230a78db991e4",
+        "duration": 200.257,
+        "frames": 4806,
+        "audio_adts_sha256": "01a4d5fdd6692907cd77db0859d97502ab1173b94c48c8459708d0f2a7065922",
+        "audio_original_identical": true
+      },
+      "repair_review": {
+        "timing_add_frames": 57,
+        "timing_add_range": "110.5<=t<112.875",
+        "timing_remove_frames": 40,
+        "duplicate_repair_frames": 35,
+        "duplicate_exact_frames": [
+          4251,
+          4285
+        ],
+        "duplicate_exact_time": [
+          177.125,
+          178.583333333
+        ],
+        "text_replacement": "um big guy",
+        "method": "Local inpainting and supplier-caption glyph extraction, white outlined style retained, no bars or audio/footage timing edits",
+        "visual_review": "Every changed frame and immediate boundaries inspected in encoded master and encoded parts; full frames and shortvideo sampled contact sheets inspected, whole part sampled pixels checked. Earlier wholebase+smallASR/801quartersecondOCR/32action+47targetedpixels retained.",
+        "spoken_repetitions_retained": [
+          "one one",
+          "two two",
+          "three three",
+          "dont dont",
+          "Lucys Lucys"
+        ]
+      }
     }
   },
   "open_checks": [
     "Live IG index partial, Buffer history embargo; no exhaustiveIGabsence claim",
-    "E1P2 privatepassed, release freshclaims/nativeAI/metadata/playlistcheck02:13IST+",
-    "E2P1 privateaudioonlynoimpact acceptedstandingexception; E2P2-P4privateclaims not checked",
-    "E3 timingtrial not accepted, um um big big guy seconddefect needsrepair",
+    "E2P3P4 private fullygated, freshclaims required before hourlypublic",
+    "E3 partsQA accepted, private upload/claims/nativeAI/playlist pending",
     "E4-E8 not reviewed; no forwardqualityguarantee"
   ],
   "parts": [
@@ -378,6 +411,22 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "924e0111c2be5ff300d0f0606ee9916353aa389109d5ccaf2a95a9d5d0efc12e"
+    },
+    "yourchannel-cake829267-ep3-part1-v1": {
+      "episode": 3,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 50.5,
+      "duration": 50.5,
+      "measured_duration": 50.5,
+      "sha256": "09e69332705ed29dcea4e16b5a69c3ba70a82b666fa38e55b639046ae081c2af",
+      "bytes": 8638416,
+      "path": "/downloads/cake-e3p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "09e69332705ed29dcea4e16b5a69c3ba70a82b666fa38e55b639046ae081c2af"
     }
   },
   "e2_parts": [
@@ -639,5 +688,71 @@
     "part": 2,
     "earliest_after_latest_YT": "2026-11-12T11:45:31+05:30",
     "hardline": "2026-11-12T14:45:31+05:30"
-  }
+  },
+  "e3_parts": [
+    {
+      "episode": 3,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 50.5,
+      "duration": 50.5,
+      "measured_duration": 50.5,
+      "sha256": "09e69332705ed29dcea4e16b5a69c3ba70a82b666fa38e55b639046ae081c2af",
+      "bytes": 8638416,
+      "path": "/downloads/cake-e3p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "09e69332705ed29dcea4e16b5a69c3ba70a82b666fa38e55b639046ae081c2af"
+    },
+    {
+      "episode": 3,
+      "part": 2,
+      "source_start": 50.5,
+      "source_end": 100,
+      "duration": 49.5,
+      "measured_duration": 49.5,
+      "sha256": "37dae64140fb3a8df2fd059583121d115ec9425aa79faedb5182b47501ef5eec",
+      "bytes": 6669475,
+      "path": "/downloads/cake-e3p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "37dae64140fb3a8df2fd059583121d115ec9425aa79faedb5182b47501ef5eec"
+    },
+    {
+      "episode": 3,
+      "part": 3,
+      "source_start": 100,
+      "source_end": 151.5,
+      "duration": 51.5,
+      "measured_duration": 51.5,
+      "sha256": "4ca71f6ea739ec35f95cba09973b37ebf36e05fc74ab7dadb928674782a4b7f5",
+      "bytes": 7831333,
+      "path": "/downloads/cake-e3p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "4ca71f6ea739ec35f95cba09973b37ebf36e05fc74ab7dadb928674782a4b7f5"
+    },
+    {
+      "episode": 3,
+      "part": 4,
+      "source_start": 151.5,
+      "source_end": 200.256,
+      "duration": 48.756,
+      "measured_duration": 48.757,
+      "sha256": "d658ec49eb6ec3eae88efe50a4fcf04d235144fccf5760bd5a5d2bfee568661a",
+      "bytes": 7894623,
+      "path": "/downloads/cake-e3p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "d658ec49eb6ec3eae88efe50a4fcf04d235144fccf5760bd5a5d2bfee568661a"
+    }
+  ]
 }
