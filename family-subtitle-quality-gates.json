@@ -210,6 +210,23 @@
       "local_part_count": 2,
       "repair": null,
       "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR super-curity/overrun/frees resolved cybersecurity/overridden/Freeze pixels. Supplied N No stutter and outside bolt singular preserved. Child distress, throat grab and threat of lethal violence remain unchanged. Cuts0/42.2/84.428 in speech gap;0.15s fades only;12encoded frames inspected. Canonicalcount2/all measured rendered duration gates passed before manifest/probe preparation. Additional10previouslyomittedcaptiontransitionspixelsverified21:28:16. Speechgap40.46-45.04 supports42.2cut."
+    },
+    "12": {
+      "source_sha256": "1873a458ba104c8039b71ca92308dc04d7aa3026088d43f09c07ad0999c469c9",
+      "source_bytes": 2414527,
+      "source_duration": 68.428,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1e4e79c8-1a1a9cfc8b8-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T23:15:56+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 274,
+      "whole_action_frames_inspected": 28,
+      "targeted_caption_frames_inspected": 73,
+      "local_part_count": 2,
+      "caption_gate_pass": false,
+      "notes": "HOLD wording disagreement19.2: supplied You broke street rat vs both ASR You broken street rat. Original retained pending auditory resolution. Other ASR errors resolved: PapaNoah/notmama;handcuffs;badpeoplehurtyou;MrVale. Childdistress/throatgrab/bottlebroken/raisedchairandviolencethreatunchanged. Local2parts rendered35.713/32.734 measuredcap+fullDecode/12encodedpixels passed but NOmanifests/probes/upload untilwordingresolved."
     }
   },
   "parts": [
