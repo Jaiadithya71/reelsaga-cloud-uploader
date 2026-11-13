@@ -192,6 +192,24 @@
       "local_part_count": 3,
       "repair": null,
       "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR media walker/Vail/step-thought resolved supplied Mediocre/Vale/stepdad pixels. Supplied fresh strawberry singular preserved. Disability bullying, child confinement and distress remain as supplied. Cuts0/36.15/74.3/110.201 speech gaps;0.15s fades only;18encoded frames inspected. Canonical count3 and every measured rendered duration gate passed before manifest/probe preparation."
+    },
+    "11": {
+      "source_sha256": "d318f6c64dafa5584b3c72dbef50be04a320fedbde86f1daed968fdb78aedde9",
+      "source_bytes": 2864126,
+      "source_duration": 84.428,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/495f2d00-1a1a9cfc974-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T21:25:03+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 338,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 28,
+      "targeted_caption_frames_inspected": 74,
+      "local_part_count": 2,
+      "repair": null,
+      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR super-curity/overrun/frees resolved cybersecurity/overridden/Freeze pixels. Supplied N No stutter and outside bolt singular preserved. Child distress, throat grab and threat of lethal violence remain unchanged. Cuts0/42.2/84.428 in speech gap;0.15s fades only;12encoded frames inspected. Canonicalcount2/all measured rendered duration gates passed before manifest/probe preparation."
     }
   },
   "parts": [
@@ -1124,6 +1142,38 @@
       "whole_part_release_ready": true,
       "measured_duration": 35.901,
       "approved_render_sha256": "6382609b2705983bf433798bc38d5fa4b1fdeed43ff88e2bbf34517088533cca"
+    },
+    "yourchannel-family829268-ep11-part1-v1": {
+      "episode": 11,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 42.2,
+      "duration": 42.2,
+      "sha256": "7f76eada05bfeef88afe0513027d530dc58a46063f8eed7cfde9378f7a4bf1c7",
+      "bytes": 20942182,
+      "path": "/downloads/family-e11p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 42.214,
+      "approved_render_sha256": "7f76eada05bfeef88afe0513027d530dc58a46063f8eed7cfde9378f7a4bf1c7"
+    },
+    "yourchannel-family829268-ep11-part2-v1": {
+      "episode": 11,
+      "part": 2,
+      "source_start": 42.2,
+      "source_end": 84.428,
+      "duration": 42.227999999999994,
+      "sha256": "fe8e615cf506d4f83895280aa1e3b83a5cfe9fef87f0d1b06a7071dbb6d4685d",
+      "bytes": 18523967,
+      "path": "/downloads/family-e11p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 42.234,
+      "approved_render_sha256": "fe8e615cf506d4f83895280aa1e3b83a5cfe9fef87f0d1b06a7071dbb6d4685d"
     }
   },
   "open_checks": [
