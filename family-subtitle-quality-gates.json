@@ -156,6 +156,24 @@
       "targeted_caption_frames_inspected": 48,
       "repair": null,
       "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR Fug/Fugg and Papa No resolved visually to supplied Thug and Papa Noah. Pta casing preserved. No bars or replacement captions. Cuts0/46.3/90.093 in speech gap with0.15s fades only;12encoded frames inspected. Story includes disability bullying and a threat to knock teeth out; source unchanged."
+    },
+    "9": {
+      "source_sha256": "66d96232d6146e647d118414bada3f2c6d4782df6b3a062772892ea276fde2a1",
+      "source_bytes": 4791449,
+      "source_duration": 164.93,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/4cfdfe7-1a1a9cfc926-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T16:35:44+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 659,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 41,
+      "targeted_caption_frames_inspected": 84,
+      "repair": null,
+      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR Vail/Valet/notiprated versus supplied Vale/notarized resolved visually. ASR little versus caption literal not a confirmed defect, supplied wording preserved. No bars or replacement captions. Cuts0/53.95/110.7/164.93 in speech gaps with0.15s fades only;18encoded frames inspected. Class insults and mild profanity remain as supplied.",
+      "local_part_count": 3
     }
   },
   "parts": [
@@ -995,6 +1013,51 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "a6a3dc253db1a5e4ff077e94c41420f8e270efef9c7e8404139fba778f6a4a9e"
+    },
+    "yourchannel-family829268-ep9-part1-v1": {
+      "episode": 9,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 53.95,
+      "duration": 53.95,
+      "sha256": "9446ffc225bf29934cdb072d2763c5745020df464ef462cb56e76019422eeaab",
+      "bytes": 25076575,
+      "path": "/downloads/family-e9p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "9446ffc225bf29934cdb072d2763c5745020df464ef462cb56e76019422eeaab"
+    },
+    "yourchannel-family829268-ep9-part2-v1": {
+      "episode": 9,
+      "part": 2,
+      "source_start": 53.95,
+      "source_end": 110.7,
+      "duration": 56.75,
+      "sha256": "a210f996e196f499dbd121487a2c0818294d6187397a10abaae3106f5420c9d6",
+      "bytes": 30216708,
+      "path": "/downloads/family-e9p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "a210f996e196f499dbd121487a2c0818294d6187397a10abaae3106f5420c9d6"
+    },
+    "yourchannel-family829268-ep9-part3-v1": {
+      "episode": 9,
+      "part": 3,
+      "source_start": 110.7,
+      "source_end": 164.93,
+      "duration": 54.230000000000004,
+      "sha256": "8ee02f8e753128b5b783c625ad826c51e1670fa2a2116cf503263e6f3687b30d",
+      "bytes": 27925777,
+      "path": "/downloads/family-e9p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "8ee02f8e753128b5b783c625ad826c51e1670fa2a2116cf503263e6f3687b30d"
     }
   },
   "open_checks": [
