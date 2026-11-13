@@ -172,7 +172,7 @@
       "whole_action_frames_inspected": 41,
       "targeted_caption_frames_inspected": 84,
       "repair": null,
-      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR Vail/Valet/notiprated versus supplied Vale/notarized resolved visually. ASR little versus caption literal not a confirmed defect, supplied wording preserved. No bars or replacement captions. Cuts0/53.95/110.7/164.93 in speech gaps with0.15s fades only;18encoded frames inspected. Class insults and mild profanity remain as supplied.",
+      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR Vail/Valet/notiprated versus supplied Vale/notarized resolved visually. ASR little versus caption literal not a confirmed defect, supplied wording preserved. No bars or replacement captions. Cuts0/53.95/109.65/164.93 in speech gaps with0.15s fades only;18encoded frames inspected. Class insults and mild profanity remain as supplied. P1 preserved byte-for-byte after private upload. P2 initial56.75s failed canonical measured56.05 gate before credentials/upload; P2/P3 recut to55.70/55.28s and gate_measured ffprobe verified, count remains canonical3.",
       "local_part_count": 3
     }
   },
@@ -1033,31 +1033,31 @@
       "episode": 9,
       "part": 2,
       "source_start": 53.95,
-      "source_end": 110.7,
-      "duration": 56.75,
-      "sha256": "a210f996e196f499dbd121487a2c0818294d6187397a10abaae3106f5420c9d6",
-      "bytes": 30216708,
+      "source_end": 109.65,
+      "duration": 55.7,
+      "sha256": "4d32ade8994253203bf6bf046d427747015b198f4cfae086dee945a8ea512037",
+      "bytes": 29641573,
       "path": "/downloads/family-e9p2.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
-      "approved_render_sha256": "a210f996e196f499dbd121487a2c0818294d6187397a10abaae3106f5420c9d6"
+      "approved_render_sha256": "4d32ade8994253203bf6bf046d427747015b198f4cfae086dee945a8ea512037"
     },
     "yourchannel-family829268-ep9-part3-v1": {
       "episode": 9,
       "part": 3,
-      "source_start": 110.7,
+      "source_start": 109.65,
       "source_end": 164.93,
-      "duration": 54.230000000000004,
-      "sha256": "8ee02f8e753128b5b783c625ad826c51e1670fa2a2116cf503263e6f3687b30d",
-      "bytes": 27925777,
+      "duration": 55.28,
+      "sha256": "96097a9c2923dd07b494170ae21c3d1a93e892c99872742404042dfbb6c4a719",
+      "bytes": 28368876,
       "path": "/downloads/family-e9p3.mp4",
       "decode_checked": true,
       "pixels_inspected": true,
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
-      "approved_render_sha256": "8ee02f8e753128b5b783c625ad826c51e1670fa2a2116cf503263e6f3687b30d"
+      "approved_render_sha256": "96097a9c2923dd07b494170ae21c3d1a93e892c99872742404042dfbb6c4a719"
     }
   },
   "open_checks": [

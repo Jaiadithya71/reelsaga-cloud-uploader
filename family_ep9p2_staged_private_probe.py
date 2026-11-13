@@ -29,7 +29,7 @@ assert gate['whole_part_release_ready'] and gate['approved_render_sha256']==item
 assert len(r.content)==item['bytes'] and hashlib.sha256(r.content).hexdigest()==item['sha256']
 from scripts.part_cap import compute_parts,gate_measured
 assert len(compute_parts(164.93))==3
-gate_measured(56.75,56.75)
+gate_measured(55.7,55.7)
 
 def validate(item,path):
     expected=json.loads(Path(MANIFEST).read_text())
