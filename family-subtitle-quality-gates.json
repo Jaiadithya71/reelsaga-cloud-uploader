@@ -105,6 +105,23 @@
       "targeted_caption_frames_inspected": 64,
       "repair": null,
       "notes": "Whole source ASR/OCR/action/targeted pixels compared. No confirmed caption defect. ASR burly/Bernie and Vale/valet and let-go/lets-go differences not repair authority. Supplied captions kept. No changes except 0.15s part boundary fades."
+    },
+    "6": {
+      "source_sha256": "5814e061fc19474513c1f4aa2b714ffd25df10c12d42c922b90287e76edec663",
+      "source_bytes": 5836589,
+      "source_duration": 192.539,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/d36c7d3-1a1a9cfc8b7-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T07:42:59+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 770,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 72,
+      "targeted_caption_frames_inspected": 102,
+      "repair": null,
+      "notes": "Whole source ASR/OCR/action/targeted pixels compared. No confirmed caption defect. Bellhaven, Vale and anti-trope ASR disagreements resolved by captions/context. Supplied captions kept. No changes except 0.15s part boundary fades."
     }
   },
   "parts": [
@@ -371,6 +388,66 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "7b02bdc54afe342177739c4de5124fa424876e8e7a67d31dc080be761de7f37f"
+    },
+    {
+      "episode": 6,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 45.0,
+      "duration": 45.0,
+      "sha256": "5ddc34ff0cac4b87922a7e3944b25737ddf5bde140a80ffd4539524cda6d35c8",
+      "bytes": 22296481,
+      "path": "/downloads/family-e6p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "5ddc34ff0cac4b87922a7e3944b25737ddf5bde140a80ffd4539524cda6d35c8"
+    },
+    {
+      "episode": 6,
+      "part": 2,
+      "source_start": 45.0,
+      "source_end": 93.0,
+      "duration": 48.0,
+      "sha256": "01c161887f02d14917830c6ec40995f65abc0835f726c8d75a7946714cde6193",
+      "bytes": 25795598,
+      "path": "/downloads/family-e6p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "01c161887f02d14917830c6ec40995f65abc0835f726c8d75a7946714cde6193"
+    },
+    {
+      "episode": 6,
+      "part": 3,
+      "source_start": 93.0,
+      "source_end": 141.0,
+      "duration": 48.0,
+      "sha256": "8410d6d372a41ee7bcbd27c300da3b0c04f7da63958cb555d6a758faa2a08498",
+      "bytes": 22465175,
+      "path": "/downloads/family-e6p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "8410d6d372a41ee7bcbd27c300da3b0c04f7da63958cb555d6a758faa2a08498"
+    },
+    {
+      "episode": 6,
+      "part": 4,
+      "source_start": 141.0,
+      "source_end": 192.539,
+      "duration": 51.53899999999999,
+      "sha256": "a5cacc48da96b5cd20d3378d0f02c60648c029fd2620e4c1af83cad32366469e",
+      "bytes": 28035751,
+      "path": "/downloads/family-e6p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "a5cacc48da96b5cd20d3378d0f02c60648c029fd2620e4c1af83cad32366469e"
     }
   ],
   "part_gates": {
@@ -704,15 +781,75 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "7b02bdc54afe342177739c4de5124fa424876e8e7a67d31dc080be761de7f37f"
+    },
+    "yourchannel-family829268-ep6-part1-v1": {
+      "episode": 6,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 45.0,
+      "duration": 45.0,
+      "sha256": "5ddc34ff0cac4b87922a7e3944b25737ddf5bde140a80ffd4539524cda6d35c8",
+      "bytes": 22296481,
+      "path": "/downloads/family-e6p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "5ddc34ff0cac4b87922a7e3944b25737ddf5bde140a80ffd4539524cda6d35c8"
+    },
+    "yourchannel-family829268-ep6-part2-v1": {
+      "episode": 6,
+      "part": 2,
+      "source_start": 45.0,
+      "source_end": 93.0,
+      "duration": 48.0,
+      "sha256": "01c161887f02d14917830c6ec40995f65abc0835f726c8d75a7946714cde6193",
+      "bytes": 25795598,
+      "path": "/downloads/family-e6p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "01c161887f02d14917830c6ec40995f65abc0835f726c8d75a7946714cde6193"
+    },
+    "yourchannel-family829268-ep6-part3-v1": {
+      "episode": 6,
+      "part": 3,
+      "source_start": 93.0,
+      "source_end": 141.0,
+      "duration": 48.0,
+      "sha256": "8410d6d372a41ee7bcbd27c300da3b0c04f7da63958cb555d6a758faa2a08498",
+      "bytes": 22465175,
+      "path": "/downloads/family-e6p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "8410d6d372a41ee7bcbd27c300da3b0c04f7da63958cb555d6a758faa2a08498"
+    },
+    "yourchannel-family829268-ep6-part4-v1": {
+      "episode": 6,
+      "part": 4,
+      "source_start": 141.0,
+      "source_end": 192.539,
+      "duration": 51.53899999999999,
+      "sha256": "a5cacc48da96b5cd20d3378d0f02c60648c029fd2620e4c1af83cad32366469e",
+      "bytes": 28035751,
+      "path": "/downloads/family-e6p4.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "a5cacc48da96b5cd20d3378d0f02c60648c029fd2620e4c1af83cad32366469e"
     }
   },
   "open_checks": [
-    "E5 full live duplicate inventory before private upload",
-    "E5 private claims/native AI/actual own playlist before public",
-    "future E6-E12 unreviewed",
+    "E6 full live duplicate inventory before private upload",
+    "E6 private claims/native AI/actual own playlist before public",
+    "future E7-E12 unreviewed",
     "IG Buffer embargo/no exhaustiveIGabsence claim"
   ],
-  "status": "E1_E2_public_E3_started_E4_private_gated_E5_quality_ready",
+  "status": "E1_E3_public_E4_public_started_E5_private_gated_E6_quality_ready",
   "private_youtube": {
     "episode1part1": {
       "video_id": "jVVWtZa5ZdA",
