@@ -122,6 +122,23 @@
       "targeted_caption_frames_inspected": 102,
       "repair": null,
       "notes": "Whole source ASR/OCR/action/targeted pixels compared. No confirmed caption defect. Bellhaven, Vale and anti-trope ASR disagreements resolved by captions/context. Supplied captions kept. No changes except 0.15s part boundary fades."
+    },
+    "7": {
+      "source_sha256": "728474df2fc2176d306d41f169bbd2515bc30e6723317de911a5d8e5bf88934d",
+      "source_bytes": 4828115,
+      "source_duration": 142.175,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/648aa286-1a1a9cfc955-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T12:13:04+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 568,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 48,
+      "targeted_caption_frames_inspected": 79,
+      "repair": null,
+      "notes": "Whole ASR/OCR/action/targeted caption pixels compared. No confirmed defect. Mia and I versus ASR me and I and titanium casing versus ASR coasting resolved visually. Bye present84.5-85 despite OCR miss. Supplied captions preserved. Cuts0/44.1/88.8/142.175 with0.15s fades only;18encoded pixels inspected."
     }
   },
   "parts": [
@@ -448,6 +465,51 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "a5cacc48da96b5cd20d3378d0f02c60648c029fd2620e4c1af83cad32366469e"
+    },
+    {
+      "episode": 7,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 44.1,
+      "duration": 44.1,
+      "sha256": "123388cb70b96509d636f36795e996cd3c14a893868cfd3268d7e9b24486597b",
+      "bytes": 25079341,
+      "path": "/downloads/family-e7p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "123388cb70b96509d636f36795e996cd3c14a893868cfd3268d7e9b24486597b"
+    },
+    {
+      "episode": 7,
+      "part": 2,
+      "source_start": 44.1,
+      "source_end": 88.8,
+      "duration": 44.699999999999996,
+      "sha256": "b4e70423e40e1a0f1dace5b057c18b829226af16b85bff394426aea303ac81c5",
+      "bytes": 25700238,
+      "path": "/downloads/family-e7p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "b4e70423e40e1a0f1dace5b057c18b829226af16b85bff394426aea303ac81c5"
+    },
+    {
+      "episode": 7,
+      "part": 3,
+      "source_start": 88.8,
+      "source_end": 142.175,
+      "duration": 53.375000000000014,
+      "sha256": "b4a93690acd66e397acf048a73cd08a3a2a3c9140507ccb551f1e8dc8a20e2da",
+      "bytes": 31716477,
+      "path": "/downloads/family-e7p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "b4a93690acd66e397acf048a73cd08a3a2a3c9140507ccb551f1e8dc8a20e2da"
     }
   ],
   "part_gates": {
@@ -841,15 +903,60 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "a5cacc48da96b5cd20d3378d0f02c60648c029fd2620e4c1af83cad32366469e"
+    },
+    "yourchannel-family829268-ep7-part1-v1": {
+      "episode": 7,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 44.1,
+      "duration": 44.1,
+      "sha256": "123388cb70b96509d636f36795e996cd3c14a893868cfd3268d7e9b24486597b",
+      "bytes": 25079341,
+      "path": "/downloads/family-e7p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "123388cb70b96509d636f36795e996cd3c14a893868cfd3268d7e9b24486597b"
+    },
+    "yourchannel-family829268-ep7-part2-v1": {
+      "episode": 7,
+      "part": 2,
+      "source_start": 44.1,
+      "source_end": 88.8,
+      "duration": 44.699999999999996,
+      "sha256": "b4e70423e40e1a0f1dace5b057c18b829226af16b85bff394426aea303ac81c5",
+      "bytes": 25700238,
+      "path": "/downloads/family-e7p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "b4e70423e40e1a0f1dace5b057c18b829226af16b85bff394426aea303ac81c5"
+    },
+    "yourchannel-family829268-ep7-part3-v1": {
+      "episode": 7,
+      "part": 3,
+      "source_start": 88.8,
+      "source_end": 142.175,
+      "duration": 53.375000000000014,
+      "sha256": "b4a93690acd66e397acf048a73cd08a3a2a3c9140507ccb551f1e8dc8a20e2da",
+      "bytes": 31716477,
+      "path": "/downloads/family-e7p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "b4a93690acd66e397acf048a73cd08a3a2a3c9140507ccb551f1e8dc8a20e2da"
     }
   },
   "open_checks": [
-    "E6 full live duplicate inventory before private upload",
-    "E6 private claims/native AI/actual own playlist before public",
-    "future E7-E12 unreviewed",
-    "IG Buffer embargo/no exhaustiveIGabsence claim"
+    "E7 full live duplicate inventory before private upload",
+    "E7 private claims/native AI/actual own playlist before public",
+    "future E8-E12 unreviewed",
+    "IG Buffer embargo/no exhaustive IG absence claim"
   ],
-  "status": "E1_E3_public_E4_public_started_E5_private_gated_E6_quality_ready",
+  "status": "E1-E5_public_E6_private_gated_E7_quality_ready",
   "private_youtube": {
     "episode1part1": {
       "video_id": "jVVWtZa5ZdA",
