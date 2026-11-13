@@ -139,6 +139,23 @@
       "targeted_caption_frames_inspected": 79,
       "repair": null,
       "notes": "Whole ASR/OCR/action/targeted caption pixels compared. No confirmed defect. Mia and I versus ASR me and I and titanium casing versus ASR coasting resolved visually. Bye present84.5-85 despite OCR miss. Supplied captions preserved. Cuts0/44.1/88.8/142.175 with0.15s fades only;18encoded pixels inspected."
+    },
+    "8": {
+      "source_sha256": "a6efd90874ed95e52feed7e314cd39bce5def1c548bf0b18592d8ebd704deee3",
+      "source_bytes": 2787617,
+      "source_duration": 90.093,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/3b1e683b-1a1a9cfc8b5-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T14:23:38+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 360,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 30,
+      "targeted_caption_frames_inspected": 48,
+      "repair": null,
+      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR Fug/Fugg and Papa No resolved visually to supplied Thug and Papa Noah. Pta casing preserved. No bars or replacement captions. Cuts0/46.3/90.093 in speech gap with0.15s fades only;12encoded frames inspected. Story includes disability bullying and a threat to knock teeth out; source unchanged."
     }
   },
   "parts": [
@@ -948,6 +965,36 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "b4a93690acd66e397acf048a73cd08a3a2a3c9140507ccb551f1e8dc8a20e2da"
+    },
+    "yourchannel-family829268-ep8-part1-v1": {
+      "episode": 8,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 46.3,
+      "duration": 46.3,
+      "sha256": "c692092397fd381bdb7483736c63fa2e933b9af118937a84f52d2a3031c935b3",
+      "bytes": 28139141,
+      "path": "/downloads/family-e8p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "c692092397fd381bdb7483736c63fa2e933b9af118937a84f52d2a3031c935b3"
+    },
+    "yourchannel-family829268-ep8-part2-v1": {
+      "episode": 8,
+      "part": 2,
+      "source_start": 46.3,
+      "source_end": 90.093,
+      "duration": 43.793000000000006,
+      "sha256": "a6a3dc253db1a5e4ff077e94c41420f8e270efef9c7e8404139fba778f6a4a9e",
+      "bytes": 25143447,
+      "path": "/downloads/family-e8p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "a6a3dc253db1a5e4ff077e94c41420f8e270efef9c7e8404139fba778f6a4a9e"
     }
   },
   "open_checks": [
