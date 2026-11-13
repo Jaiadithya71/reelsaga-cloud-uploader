@@ -206,10 +206,10 @@
       "ocr_frames": 338,
       "ocr_interval_seconds": 0.25,
       "whole_action_frames_inspected": 28,
-      "targeted_caption_frames_inspected": 74,
+      "targeted_caption_frames_inspected": 84,
       "local_part_count": 2,
       "repair": null,
-      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR super-curity/overrun/frees resolved cybersecurity/overridden/Freeze pixels. Supplied N No stutter and outside bolt singular preserved. Child distress, throat grab and threat of lethal violence remain unchanged. Cuts0/42.2/84.428 in speech gap;0.15s fades only;12encoded frames inspected. Canonicalcount2/all measured rendered duration gates passed before manifest/probe preparation."
+      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR super-curity/overrun/frees resolved cybersecurity/overridden/Freeze pixels. Supplied N No stutter and outside bolt singular preserved. Child distress, throat grab and threat of lethal violence remain unchanged. Cuts0/42.2/84.428 in speech gap;0.15s fades only;12encoded frames inspected. Canonicalcount2/all measured rendered duration gates passed before manifest/probe preparation. Additional10previouslyomittedcaptiontransitionspixelsverified21:28:16. Speechgap40.46-45.04 supports42.2cut."
     }
   },
   "parts": [
