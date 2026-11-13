@@ -174,6 +174,24 @@
       "repair": null,
       "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR Vail/Valet/notiprated versus supplied Vale/notarized resolved visually. ASR little versus caption literal not a confirmed defect, supplied wording preserved. No bars or replacement captions. Cuts0/53.95/109.65/164.93 in speech gaps with0.15s fades only;18encoded frames inspected. Class insults and mild profanity remain as supplied. P1 preserved byte-for-byte after private upload. P2 initial56.75s failed canonical measured56.05 gate before credentials/upload; P2/P3 recut to55.70/55.28s and gate_measured ffprobe verified, count remains canonical3.",
       "local_part_count": 3
+    },
+    "10": {
+      "source_sha256": "d5d80d9a703ead95b6c2b28a955f72a863031dd07ff0ad6d974c035e2b23f22d",
+      "source_bytes": 3843679,
+      "source_duration": 110.201,
+      "source_url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/bb0d61a-1a1a9cfc8b4-0005-9573-534-c9280.mp4",
+      "free_source_live_verified_at": "2026-11-13T19:09:01+05:30",
+      "asr": [
+        "base.en",
+        "small.en"
+      ],
+      "ocr_frames": 441,
+      "ocr_interval_seconds": 0.25,
+      "whole_action_frames_inspected": 37,
+      "targeted_caption_frames_inspected": 109,
+      "local_part_count": 3,
+      "repair": null,
+      "notes": "Whole ASR/OCR/action and caption pixels compared. No confirmed defect. ASR media walker/Vail/step-thought resolved supplied Mediocre/Vale/stepdad pixels. Supplied fresh strawberry singular preserved. Disability bullying, child confinement and distress remain as supplied. Cuts0/36.15/74.3/110.201 speech gaps;0.15s fades only;18encoded frames inspected. Canonical count3 and every measured rendered duration gate passed before manifest/probe preparation."
     }
   },
   "parts": [
@@ -1058,6 +1076,54 @@
       "caption_gate_pass": true,
       "whole_part_release_ready": true,
       "approved_render_sha256": "96097a9c2923dd07b494170ae21c3d1a93e892c99872742404042dfbb6c4a719"
+    },
+    "yourchannel-family829268-ep10-part1-v1": {
+      "episode": 10,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 36.15,
+      "duration": 36.15,
+      "sha256": "06eec7b06ff49e3634d67b4f3a52a9fda90b8650d8151663ff289add580e436b",
+      "bytes": 21051987,
+      "path": "/downloads/family-e10p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 36.167,
+      "approved_render_sha256": "06eec7b06ff49e3634d67b4f3a52a9fda90b8650d8151663ff289add580e436b"
+    },
+    "yourchannel-family829268-ep10-part2-v1": {
+      "episode": 10,
+      "part": 2,
+      "source_start": 36.15,
+      "source_end": 74.3,
+      "duration": 38.15,
+      "sha256": "6105c8021f5abfca4926da1c1b46a600ab12b30623d0de5cc450dc93ca8a81ed",
+      "bytes": 19403082,
+      "path": "/downloads/family-e10p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 38.167,
+      "approved_render_sha256": "6105c8021f5abfca4926da1c1b46a600ab12b30623d0de5cc450dc93ca8a81ed"
+    },
+    "yourchannel-family829268-ep10-part3-v1": {
+      "episode": 10,
+      "part": 3,
+      "source_start": 74.3,
+      "source_end": 110.201,
+      "duration": 35.900999999999996,
+      "sha256": "6382609b2705983bf433798bc38d5fa4b1fdeed43ff88e2bbf34517088533cca",
+      "bytes": 18971479,
+      "path": "/downloads/family-e10p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 35.901,
+      "approved_render_sha256": "6382609b2705983bf433798bc38d5fa4b1fdeed43ff88e2bbf34517088533cca"
     }
   },
   "open_checks": [
