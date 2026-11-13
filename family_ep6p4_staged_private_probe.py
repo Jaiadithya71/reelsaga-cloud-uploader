@@ -44,7 +44,17 @@ def run(backend,api,item,path):
     controls.require_enabled()
     if not ledger.claim(item,'youtube'):raise RuntimeError('Claim conflict')
     checkpoint=lambda state,**kw:ledger.checkpoint(item['id'],'youtube',state,**kw)
-    checkpoint('uncertain');controls.require_enabled()
+    import time
+    def await_checkpoint(expected):
+        for attempt in range(8):
+            value,_=backend.get(DurableLedger.key(item['id'],'youtube'))
+            if value and value.get('metadata_hash')==ledger.metadata_hash(item) and value.get('state')==expected and not value.get('external_id') and not value.get('session'):return
+            if attempt<7:time.sleep(3)
+        raise RuntimeError('Claim checkpoint readback unsettled; no external operation')
+    await_checkpoint('started')
+    checkpoint('uncertain')
+    await_checkpoint('uncertain')
+    controls.require_enabled()
     youtube=YouTube(api);session=youtube.start(item,item['bytes'],checkpoint)
     offset=0
     while offset<item['bytes']:
@@ -146,7 +156,7 @@ def main():
             saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))
             if saved and saved.get('external_id') and saved.get('state') in ('private_locked','ready_for_review','published'):
                 print(json.dumps({'already_uploaded':True,'video_id':saved['external_id'],'ledger_state':saved['state'],'playlist_pending':saved['state']=='ready_for_review','duplicate_upload_prevented':True},sort_keys=True))
-                open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Family EP4P3 episode probe: already uploaded (explicit)\n\n```json\n"+json.dumps({'already_uploaded':True,'video_id':saved['external_id'],'ledger_state':saved['state']},indent=2)+"\n```\n")
+                open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Family EP4P2 episode probe: already uploaded (explicit)\n\n```json\n"+json.dumps({'already_uploaded':True,'video_id':saved['external_id'],'ledger_state':saved['state']},indent=2)+"\n```\n")
                 return
             raise RuntimeError('Existing episode part without ledger proof; reconcile only')
         print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':_count,'duplicate_part_found':False}))
@@ -178,7 +188,7 @@ def main():
         if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint mismatch')
         result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)
         print(json.dumps(result,sort_keys=True))
-        open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Family EP4P3 episode probe verified\n\n```json\n"+json.dumps(result,indent=2)+"\n```\n")
+        open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Family EP4P2 episode probe verified\n\n```json\n"+json.dumps(result,indent=2)+"\n```\n")
     except Exception:
         print('Safe failure stage: '+stage)
         print('Real-part upload stopped. Reconcile encrypted ledger and Studio before retry; secrets not shown.')
