@@ -1,4 +1,4 @@
-name: Mom E3P1 verified public ledger reconcile
+name: Demon E1P3 verified public ledger reconcile
 'on':
   workflow_dispatch: {}
 permissions:
@@ -19,7 +19,7 @@ jobs:
       with:
         python-version: '3.12'
     - run: python -m pip install cryptography==46.0.5 requests
-    - name: Mom E3P1 verified public ledger reconcile
+    - name: Demon E1P3 verified public ledger reconcile
       env:
         GH_TOKEN: ${{ github.token }}
         REELSAGA_GOOGLE_CREDENTIALS: ${{ secrets.REELSAGA_GOOGLE_CREDENTIALS }}
