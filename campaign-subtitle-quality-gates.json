@@ -1,0 +1,75 @@
+{
+  "series": "I Became His Campaign Scandal",
+  "dramacps_id": 833137,
+  "alias": null,
+  "affiliate": "https://r.reelsgo.tv/fnjE5LeGE8pI",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "source_duration": 162.222971,
+      "source_sha256": "842ab76aab7a0f44d6ff2fba29a8e8a2503fe4208d792ddd8e1e72ca6caa0a02",
+      "asr": [
+        "base.en whole",
+        "small.en whole",
+        "base.en+small.en VAD19-22 empty",
+        "independent19-25 no Whoa"
+      ],
+      "ocr_frames": 649,
+      "whole_action_frames_inspected": 55,
+      "targeted_caption_frames_inspected": 181,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole649quarterOCR/55action/163caption18targetpixels inspected. Opening crowd Woah not corroborated by independentaudio or both VADtargetpasses, no fabricatedsubtitle. BriefRhett/Hey/Youokay/thanks/name linespresent. Rhett/Reed ASR spelling differs but source Rhett retained. Base tail Thankyou hallucination not supported by small/source. Highschool rivalry, bullying, profanity, bangable-list dialogue, fullyclothed kiss afteraccidentalfall; no nudity/explicitsex/graphicviolence. Cuts54.5/108silentscenes; all3fulldecode18encodedpixels."
+    }
+  },
+  "part_gates": {
+    "yourchannel-campaign833137-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 54.5,
+      "duration": 54.5,
+      "sha256": "2dd8cc41f3817f5ddeeb68cde963d38ed2d6575dbc5267d0586743680da6aab6",
+      "bytes": 18845759,
+      "path": "/downloads/campaign-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 54.5,
+      "approved_render_sha256": "2dd8cc41f3817f5ddeeb68cde963d38ed2d6575dbc5267d0586743680da6aab6"
+    },
+    "yourchannel-campaign833137-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 54.5,
+      "source_end": 108,
+      "duration": 53.5,
+      "sha256": "39491791ddcee2675ab5aaca44fea819ab84725746cf7f0272d0632bcbb3da24",
+      "bytes": 18879630,
+      "path": "/downloads/campaign-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 53.5,
+      "approved_render_sha256": "39491791ddcee2675ab5aaca44fea819ab84725746cf7f0272d0632bcbb3da24"
+    },
+    "yourchannel-campaign833137-ep1-part3-v1": {
+      "episode": 1,
+      "part": 3,
+      "source_start": 108,
+      "source_end": 162.222971,
+      "duration": 54.222971,
+      "sha256": "2632734fbffaa2413cbd7c9e46f396433c3104a51cd153ae6e01f16fc459039c",
+      "bytes": 17374823,
+      "path": "/downloads/campaign-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 54.169,
+      "approved_render_sha256": "2632734fbffaa2413cbd7c9e46f396433c3104a51cd153ae6e01f16fc459039c"
+    }
+  }
+}

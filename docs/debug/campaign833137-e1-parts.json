@@ -1,0 +1,47 @@
+[
+  {
+    "episode": 1,
+    "part": 1,
+    "source_start": 0,
+    "source_end": 54.5,
+    "duration": 54.5,
+    "sha256": "2dd8cc41f3817f5ddeeb68cde963d38ed2d6575dbc5267d0586743680da6aab6",
+    "bytes": 18845759,
+    "path": "/downloads/campaign-e1p1.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 54.5
+  },
+  {
+    "episode": 1,
+    "part": 2,
+    "source_start": 54.5,
+    "source_end": 108,
+    "duration": 53.5,
+    "sha256": "39491791ddcee2675ab5aaca44fea819ab84725746cf7f0272d0632bcbb3da24",
+    "bytes": 18879630,
+    "path": "/downloads/campaign-e1p2.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 53.5
+  },
+  {
+    "episode": 1,
+    "part": 3,
+    "source_start": 108,
+    "source_end": 162.222971,
+    "duration": 54.222971,
+    "sha256": "2632734fbffaa2413cbd7c9e46f396433c3104a51cd153ae6e01f16fc459039c",
+    "bytes": 17374823,
+    "path": "/downloads/campaign-e1p3.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 54.169
+  }
+]
