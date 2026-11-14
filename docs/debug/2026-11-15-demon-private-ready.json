@@ -36,5 +36,18 @@
   "initialfailure": {
     "run": 43626169098,
     "result": "WronginheritedDragonseriesguard failclosed item_claim_read,full lognoVIDandstoppedverified. Correctedbeforev2success."
+  },
+  "QA": {
+    "source_duration_seconds": 141.034671,
+    "source_bytes": 15577107,
+    "quarter_OCR_frames": 564,
+    "action_frames": 141,
+    "caption_frames": 46,
+    "target_frames": 18,
+    "encoded_parts_pixels": "passedall3",
+    "audio": "original unchanged",
+    "captions": "source unchanged",
+    "ending_small_ASR_hallucination": "139s I am sorry: isolated ending WAV had no speech",
+    "safety": "nongraphic fantasy childbirth/swaddled newborn horns/wings, family rejection; no explicit nudity/sex/graphicviolence observed"
   }
 }

@@ -1,0 +1,1351 @@
+[
+  {
+    "start": 1.1999999999999986,
+    "end": 3.76,
+    "text": " The baby's crowning. One more push. Now!",
+    "words": [
+      {
+        "start": 1.1999999999999986,
+        "end": 1.8,
+        "word": " The"
+      },
+      {
+        "start": 1.8,
+        "end": 2.14,
+        "word": " baby's"
+      },
+      {
+        "start": 2.14,
+        "end": 2.52,
+        "word": " crowning."
+      },
+      {
+        "start": 2.7,
+        "end": 2.82,
+        "word": " One"
+      },
+      {
+        "start": 2.82,
+        "end": 3.0,
+        "word": " more"
+      },
+      {
+        "start": 3.0,
+        "end": 3.3,
+        "word": " push."
+      },
+      {
+        "start": 3.56,
+        "end": 3.76,
+        "word": " Now!"
+      }
+    ]
+  },
+  {
+    "start": 7.06,
+    "end": 8.06,
+    "text": " It's a boy.",
+    "words": [
+      {
+        "start": 7.06,
+        "end": 7.66,
+        "word": " It's"
+      },
+      {
+        "start": 7.66,
+        "end": 7.76,
+        "word": " a"
+      },
+      {
+        "start": 7.76,
+        "end": 8.06,
+        "word": " boy."
+      }
+    ]
+  },
+  {
+    "start": 19.879999999999995,
+    "end": 21.08,
+    "text": " What happened?",
+    "words": [
+      {
+        "start": 19.879999999999995,
+        "end": 20.479999999999997,
+        "word": " What"
+      },
+      {
+        "start": 20.479999999999997,
+        "end": 21.08,
+        "word": " happened?"
+      }
+    ]
+  },
+  {
+    "start": 23.46,
+    "end": 24.46,
+    "text": " Demon horns.",
+    "words": [
+      {
+        "start": 23.46,
+        "end": 24.06,
+        "word": " Demon"
+      },
+      {
+        "start": 24.06,
+        "end": 24.46,
+        "word": " horns."
+      }
+    ]
+  },
+  {
+    "start": 25.42,
+    "end": 27.58,
+    "text": " There's a 300-year-old legend in St. Hollow.",
+    "words": [
+      {
+        "start": 25.42,
+        "end": 25.6,
+        "word": " There's"
+      },
+      {
+        "start": 25.6,
+        "end": 25.72,
+        "word": " a"
+      },
+      {
+        "start": 25.72,
+        "end": 26.16,
+        "word": " 300"
+      },
+      {
+        "start": 26.16,
+        "end": 26.36,
+        "word": "-year"
+      },
+      {
+        "start": 26.36,
+        "end": 26.54,
+        "word": "-old"
+      },
+      {
+        "start": 26.54,
+        "end": 26.82,
+        "word": " legend"
+      },
+      {
+        "start": 26.82,
+        "end": 27.12,
+        "word": " in"
+      },
+      {
+        "start": 27.12,
+        "end": 27.28,
+        "word": " St."
+      },
+      {
+        "start": 27.5,
+        "end": 27.58,
+        "word": " Hollow."
+      }
+    ]
+  },
+  {
+    "start": 27.58,
+    "end": 32.36,
+    "text": " When a devil's child is born on Halloween, the lights go out. The crows gather.",
+    "words": [
+      {
+        "start": 27.58,
+        "end": 28.0,
+        "word": " When"
+      },
+      {
+        "start": 28.0,
+        "end": 28.18,
+        "word": " a"
+      },
+      {
+        "start": 28.18,
+        "end": 28.56,
+        "word": " devil's"
+      },
+      {
+        "start": 28.56,
+        "end": 28.74,
+        "word": " child"
+      },
+      {
+        "start": 28.74,
+        "end": 29.0,
+        "word": " is"
+      },
+      {
+        "start": 29.0,
+        "end": 29.24,
+        "word": " born"
+      },
+      {
+        "start": 29.24,
+        "end": 29.46,
+        "word": " on"
+      },
+      {
+        "start": 29.46,
+        "end": 29.92,
+        "word": " Halloween,"
+      },
+      {
+        "start": 30.08,
+        "end": 30.4,
+        "word": " the"
+      },
+      {
+        "start": 30.4,
+        "end": 30.6,
+        "word": " lights"
+      },
+      {
+        "start": 30.6,
+        "end": 30.86,
+        "word": " go"
+      },
+      {
+        "start": 30.86,
+        "end": 31.16,
+        "word": " out."
+      },
+      {
+        "start": 31.46,
+        "end": 31.56,
+        "word": " The"
+      },
+      {
+        "start": 31.56,
+        "end": 31.9,
+        "word": " crows"
+      },
+      {
+        "start": 31.9,
+        "end": 32.36,
+        "word": " gather."
+      }
+    ]
+  },
+  {
+    "start": 32.88,
+    "end": 34.42,
+    "text": " You're saying he's a demon?",
+    "words": [
+      {
+        "start": 32.88,
+        "end": 33.06,
+        "word": " You're"
+      },
+      {
+        "start": 33.06,
+        "end": 33.28,
+        "word": " saying"
+      },
+      {
+        "start": 33.28,
+        "end": 34.06,
+        "word": " he's"
+      },
+      {
+        "start": 34.06,
+        "end": 34.18,
+        "word": " a"
+      },
+      {
+        "start": 34.18,
+        "end": 34.42,
+        "word": " demon?"
+      }
+    ]
+  },
+  {
+    "start": 35.84,
+    "end": 37.62,
+    "text": " Stay with me. The other baby's coming.",
+    "words": [
+      {
+        "start": 35.84,
+        "end": 36.32,
+        "word": " Stay"
+      },
+      {
+        "start": 36.32,
+        "end": 36.48,
+        "word": " with"
+      },
+      {
+        "start": 36.48,
+        "end": 36.64,
+        "word": " me."
+      },
+      {
+        "start": 36.76,
+        "end": 36.78,
+        "word": " The"
+      },
+      {
+        "start": 36.78,
+        "end": 36.94,
+        "word": " other"
+      },
+      {
+        "start": 36.94,
+        "end": 37.3,
+        "word": " baby's"
+      },
+      {
+        "start": 37.3,
+        "end": 37.62,
+        "word": " coming."
+      }
+    ]
+  },
+  {
+    "start": 43.800000000000004,
+    "end": 44.28,
+    "text": " Wings.",
+    "words": [
+      {
+        "start": 43.800000000000004,
+        "end": 44.28,
+        "word": " Wings."
+      }
+    ]
+  },
+  {
+    "start": 45.8,
+    "end": 50.24,
+    "text": " An angel? God has an abandoned St. Hollow. He sent a true angel with the demon.",
+    "words": [
+      {
+        "start": 45.8,
+        "end": 45.92,
+        "word": " An"
+      },
+      {
+        "start": 45.92,
+        "end": 46.24,
+        "word": " angel?"
+      },
+      {
+        "start": 46.88,
+        "end": 47.26,
+        "word": " God"
+      },
+      {
+        "start": 47.26,
+        "end": 47.48,
+        "word": " has"
+      },
+      {
+        "start": 47.48,
+        "end": 47.6,
+        "word": " an"
+      },
+      {
+        "start": 47.6,
+        "end": 47.94,
+        "word": " abandoned"
+      },
+      {
+        "start": 47.94,
+        "end": 48.18,
+        "word": " St."
+      },
+      {
+        "start": 48.4,
+        "end": 48.46,
+        "word": " Hollow."
+      },
+      {
+        "start": 48.86,
+        "end": 48.94,
+        "word": " He"
+      },
+      {
+        "start": 48.94,
+        "end": 49.1,
+        "word": " sent"
+      },
+      {
+        "start": 49.1,
+        "end": 49.24,
+        "word": " a"
+      },
+      {
+        "start": 49.24,
+        "end": 49.44,
+        "word": " true"
+      },
+      {
+        "start": 49.44,
+        "end": 49.66,
+        "word": " angel"
+      },
+      {
+        "start": 49.66,
+        "end": 49.86,
+        "word": " with"
+      },
+      {
+        "start": 49.86,
+        "end": 50.0,
+        "word": " the"
+      },
+      {
+        "start": 50.0,
+        "end": 50.24,
+        "word": " demon."
+      }
+    ]
+  },
+  {
+    "start": 50.52,
+    "end": 53.3,
+    "text": " Laura, our son's an angel, a real angel in our family.",
+    "words": [
+      {
+        "start": 50.52,
+        "end": 50.62,
+        "word": " Laura,"
+      },
+      {
+        "start": 51.08,
+        "end": 51.5,
+        "word": " our"
+      },
+      {
+        "start": 51.5,
+        "end": 51.76,
+        "word": " son's"
+      },
+      {
+        "start": 51.76,
+        "end": 51.86,
+        "word": " an"
+      },
+      {
+        "start": 51.86,
+        "end": 52.06,
+        "word": " angel,"
+      },
+      {
+        "start": 52.16,
+        "end": 52.26,
+        "word": " a"
+      },
+      {
+        "start": 52.26,
+        "end": 52.44,
+        "word": " real"
+      },
+      {
+        "start": 52.44,
+        "end": 52.7,
+        "word": " angel"
+      },
+      {
+        "start": 52.7,
+        "end": 52.86,
+        "word": " in"
+      },
+      {
+        "start": 52.86,
+        "end": 52.98,
+        "word": " our"
+      },
+      {
+        "start": 52.98,
+        "end": 53.3,
+        "word": " family."
+      }
+    ]
+  },
+  {
+    "start": 53.3,
+    "end": 57.74,
+    "text": " Let me see my baby. My baby. My little angel.",
+    "words": [
+      {
+        "start": 53.3,
+        "end": 53.7,
+        "word": " Let"
+      },
+      {
+        "start": 53.7,
+        "end": 53.84,
+        "word": " me"
+      },
+      {
+        "start": 53.84,
+        "end": 53.98,
+        "word": " see"
+      },
+      {
+        "start": 53.98,
+        "end": 54.14,
+        "word": " my"
+      },
+      {
+        "start": 54.14,
+        "end": 54.48,
+        "word": " baby."
+      },
+      {
+        "start": 55.06,
+        "end": 55.36,
+        "word": " My"
+      },
+      {
+        "start": 55.36,
+        "end": 55.82,
+        "word": " baby."
+      },
+      {
+        "start": 56.72,
+        "end": 56.9,
+        "word": " My"
+      },
+      {
+        "start": 56.9,
+        "end": 57.16,
+        "word": " little"
+      },
+      {
+        "start": 57.16,
+        "end": 57.74,
+        "word": " angel."
+      }
+    ]
+  },
+  {
+    "start": 70.58,
+    "end": 77.46,
+    "text": " Gabriel, right here. Perfect. Spread your wings a little wider.",
+    "words": [
+      {
+        "start": 70.58,
+        "end": 71.14,
+        "word": " Gabriel,"
+      },
+      {
+        "start": 74.72,
+        "end": 74.88,
+        "word": " right"
+      },
+      {
+        "start": 74.88,
+        "end": 75.2,
+        "word": " here."
+      },
+      {
+        "start": 75.72,
+        "end": 75.72,
+        "word": " Perfect."
+      },
+      {
+        "start": 76.42,
+        "end": 76.56,
+        "word": " Spread"
+      },
+      {
+        "start": 76.56,
+        "end": 76.72,
+        "word": " your"
+      },
+      {
+        "start": 76.72,
+        "end": 76.86,
+        "word": " wings"
+      },
+      {
+        "start": 76.86,
+        "end": 77.0,
+        "word": " a"
+      },
+      {
+        "start": 77.0,
+        "end": 77.12,
+        "word": " little"
+      },
+      {
+        "start": 77.12,
+        "end": 77.46,
+        "word": " wider."
+      }
+    ]
+  },
+  {
+    "start": 81.2,
+    "end": 82.46,
+    "text": " Don't stare. Come on.",
+    "words": [
+      {
+        "start": 81.2,
+        "end": 81.76,
+        "word": " Don't"
+      },
+      {
+        "start": 81.76,
+        "end": 82.02,
+        "word": " stare."
+      },
+      {
+        "start": 82.2,
+        "end": 82.28,
+        "word": " Come"
+      },
+      {
+        "start": 82.28,
+        "end": 82.46,
+        "word": " on."
+      }
+    ]
+  },
+  {
+    "start": 82.46,
+    "end": 82.96,
+    "text": " Why?",
+    "words": [
+      {
+        "start": 82.46,
+        "end": 82.96,
+        "word": " Why?"
+      }
+    ]
+  },
+  {
+    "start": 83.3,
+    "end": 87.12,
+    "text": " He's the devil's child. Stay away. You don't want that evil following us home.",
+    "words": [
+      {
+        "start": 83.3,
+        "end": 83.46,
+        "word": " He's"
+      },
+      {
+        "start": 83.46,
+        "end": 83.58,
+        "word": " the"
+      },
+      {
+        "start": 83.58,
+        "end": 83.92,
+        "word": " devil's"
+      },
+      {
+        "start": 83.92,
+        "end": 84.2,
+        "word": " child."
+      },
+      {
+        "start": 84.46,
+        "end": 84.64,
+        "word": " Stay"
+      },
+      {
+        "start": 84.64,
+        "end": 84.94,
+        "word": " away."
+      },
+      {
+        "start": 85.62,
+        "end": 85.7,
+        "word": " You"
+      },
+      {
+        "start": 85.7,
+        "end": 85.8,
+        "word": " don't"
+      },
+      {
+        "start": 85.8,
+        "end": 85.96,
+        "word": " want"
+      },
+      {
+        "start": 85.96,
+        "end": 86.08,
+        "word": " that"
+      },
+      {
+        "start": 86.08,
+        "end": 86.28,
+        "word": " evil"
+      },
+      {
+        "start": 86.28,
+        "end": 86.64,
+        "word": " following"
+      },
+      {
+        "start": 86.64,
+        "end": 86.88,
+        "word": " us"
+      },
+      {
+        "start": 86.88,
+        "end": 87.12,
+        "word": " home."
+      }
+    ]
+  },
+  {
+    "start": 89.78,
+    "end": 92.58,
+    "text": " I'm going as a vampire. I'm a werewolf this year.",
+    "words": [
+      {
+        "start": 89.78,
+        "end": 90.26,
+        "word": " I'm"
+      },
+      {
+        "start": 90.26,
+        "end": 90.4,
+        "word": " going"
+      },
+      {
+        "start": 90.4,
+        "end": 90.6,
+        "word": " as"
+      },
+      {
+        "start": 90.6,
+        "end": 90.74,
+        "word": " a"
+      },
+      {
+        "start": 90.74,
+        "end": 91.08,
+        "word": " vampire."
+      },
+      {
+        "start": 91.38,
+        "end": 91.56,
+        "word": " I'm"
+      },
+      {
+        "start": 91.56,
+        "end": 91.66,
+        "word": " a"
+      },
+      {
+        "start": 91.66,
+        "end": 91.98,
+        "word": " werewolf"
+      },
+      {
+        "start": 91.98,
+        "end": 92.24,
+        "word": " this"
+      },
+      {
+        "start": 92.24,
+        "end": 92.58,
+        "word": " year."
+      }
+    ]
+  },
+  {
+    "start": 94.88,
+    "end": 96.46,
+    "text": " Mom? What is it?",
+    "words": [
+      {
+        "start": 94.88,
+        "end": 95.36,
+        "word": " Mom?"
+      },
+      {
+        "start": 95.9,
+        "end": 96.12,
+        "word": " What"
+      },
+      {
+        "start": 96.12,
+        "end": 96.26,
+        "word": " is"
+      },
+      {
+        "start": 96.26,
+        "end": 96.46,
+        "word": " it?"
+      }
+    ]
+  },
+  {
+    "start": 97.46,
+    "end": 101.38,
+    "text": " It's the town's 300th birthday. They said every kid can be in the Halloween parade.",
+    "words": [
+      {
+        "start": 97.46,
+        "end": 97.68,
+        "word": " It's"
+      },
+      {
+        "start": 97.68,
+        "end": 97.82,
+        "word": " the"
+      },
+      {
+        "start": 97.82,
+        "end": 98.16,
+        "word": " town's"
+      },
+      {
+        "start": 98.16,
+        "end": 98.7,
+        "word": " 300th"
+      },
+      {
+        "start": 98.7,
+        "end": 98.98,
+        "word": " birthday."
+      },
+      {
+        "start": 99.3,
+        "end": 99.38,
+        "word": " They"
+      },
+      {
+        "start": 99.38,
+        "end": 99.6,
+        "word": " said"
+      },
+      {
+        "start": 99.6,
+        "end": 99.98,
+        "word": " every"
+      },
+      {
+        "start": 99.98,
+        "end": 100.22,
+        "word": " kid"
+      },
+      {
+        "start": 100.22,
+        "end": 100.38,
+        "word": " can"
+      },
+      {
+        "start": 100.38,
+        "end": 100.52,
+        "word": " be"
+      },
+      {
+        "start": 100.52,
+        "end": 100.64,
+        "word": " in"
+      },
+      {
+        "start": 100.64,
+        "end": 100.72,
+        "word": " the"
+      },
+      {
+        "start": 100.72,
+        "end": 101.06,
+        "word": " Halloween"
+      },
+      {
+        "start": 101.06,
+        "end": 101.38,
+        "word": " parade."
+      }
+    ]
+  },
+  {
+    "start": 103.9,
+    "end": 109.18,
+    "text": " Lucian, you don't like crowds, remember? We can get candy and do Halloween at home. Same thing, right?",
+    "words": [
+      {
+        "start": 103.9,
+        "end": 104.14,
+        "word": " Lucian,"
+      },
+      {
+        "start": 104.16,
+        "end": 104.26,
+        "word": " you"
+      },
+      {
+        "start": 104.26,
+        "end": 104.4,
+        "word": " don't"
+      },
+      {
+        "start": 104.4,
+        "end": 104.6,
+        "word": " like"
+      },
+      {
+        "start": 104.6,
+        "end": 104.92,
+        "word": " crowds,"
+      },
+      {
+        "start": 105.02,
+        "end": 105.26,
+        "word": " remember?"
+      },
+      {
+        "start": 105.96,
+        "end": 106.18,
+        "word": " We"
+      },
+      {
+        "start": 106.18,
+        "end": 106.34,
+        "word": " can"
+      },
+      {
+        "start": 106.34,
+        "end": 106.5,
+        "word": " get"
+      },
+      {
+        "start": 106.5,
+        "end": 106.8,
+        "word": " candy"
+      },
+      {
+        "start": 106.8,
+        "end": 107.0,
+        "word": " and"
+      },
+      {
+        "start": 107.0,
+        "end": 107.14,
+        "word": " do"
+      },
+      {
+        "start": 107.14,
+        "end": 107.5,
+        "word": " Halloween"
+      },
+      {
+        "start": 107.5,
+        "end": 107.7,
+        "word": " at"
+      },
+      {
+        "start": 107.7,
+        "end": 107.94,
+        "word": " home."
+      },
+      {
+        "start": 108.54,
+        "end": 108.68,
+        "word": " Same"
+      },
+      {
+        "start": 108.68,
+        "end": 108.94,
+        "word": " thing,"
+      },
+      {
+        "start": 108.94,
+        "end": 109.18,
+        "word": " right?"
+      }
+    ]
+  },
+  {
+    "start": 109.18,
+    "end": 116.38,
+    "text": " I won't scare anybody. I can hide my horns. I'll be good. I promise.",
+    "words": [
+      {
+        "start": 109.18,
+        "end": 109.74,
+        "word": " I"
+      },
+      {
+        "start": 109.74,
+        "end": 111.88,
+        "word": " won't"
+      },
+      {
+        "start": 111.88,
+        "end": 112.14,
+        "word": " scare"
+      },
+      {
+        "start": 112.14,
+        "end": 112.54,
+        "word": " anybody."
+      },
+      {
+        "start": 113.46,
+        "end": 113.66,
+        "word": " I"
+      },
+      {
+        "start": 113.66,
+        "end": 113.78,
+        "word": " can"
+      },
+      {
+        "start": 113.78,
+        "end": 113.96,
+        "word": " hide"
+      },
+      {
+        "start": 113.96,
+        "end": 114.16,
+        "word": " my"
+      },
+      {
+        "start": 114.16,
+        "end": 114.44,
+        "word": " horns."
+      },
+      {
+        "start": 115.02,
+        "end": 115.18,
+        "word": " I'll"
+      },
+      {
+        "start": 115.18,
+        "end": 115.32,
+        "word": " be"
+      },
+      {
+        "start": 115.32,
+        "end": 115.54,
+        "word": " good."
+      },
+      {
+        "start": 115.94,
+        "end": 115.98,
+        "word": " I"
+      },
+      {
+        "start": 115.98,
+        "end": 116.38,
+        "word": " promise."
+      }
+    ]
+  },
+  {
+    "start": 117.84,
+    "end": 120.22,
+    "text": " Lucian, your brother's representing the whole town this year.",
+    "words": [
+      {
+        "start": 117.84,
+        "end": 118.04,
+        "word": " Lucian,"
+      },
+      {
+        "start": 118.26,
+        "end": 118.44,
+        "word": " your"
+      },
+      {
+        "start": 118.44,
+        "end": 118.78,
+        "word": " brother's"
+      },
+      {
+        "start": 118.78,
+        "end": 119.16,
+        "word": " representing"
+      },
+      {
+        "start": 119.16,
+        "end": 119.36,
+        "word": " the"
+      },
+      {
+        "start": 119.36,
+        "end": 119.54,
+        "word": " whole"
+      },
+      {
+        "start": 119.54,
+        "end": 119.78,
+        "word": " town"
+      },
+      {
+        "start": 119.78,
+        "end": 120.0,
+        "word": " this"
+      },
+      {
+        "start": 120.0,
+        "end": 120.22,
+        "word": " year."
+      }
+    ]
+  },
+  {
+    "start": 120.64,
+    "end": 124.96,
+    "text": " There'll be reporters, tourists, investors. If you lose control, how will we look?",
+    "words": [
+      {
+        "start": 120.64,
+        "end": 120.82,
+        "word": " There'll"
+      },
+      {
+        "start": 120.82,
+        "end": 120.92,
+        "word": " be"
+      },
+      {
+        "start": 120.92,
+        "end": 121.38,
+        "word": " reporters,"
+      },
+      {
+        "start": 121.78,
+        "end": 122.14,
+        "word": " tourists,"
+      },
+      {
+        "start": 122.42,
+        "end": 122.84,
+        "word": " investors."
+      },
+      {
+        "start": 123.54,
+        "end": 123.62,
+        "word": " If"
+      },
+      {
+        "start": 123.62,
+        "end": 123.74,
+        "word": " you"
+      },
+      {
+        "start": 123.74,
+        "end": 123.9,
+        "word": " lose"
+      },
+      {
+        "start": 123.9,
+        "end": 124.28,
+        "word": " control,"
+      },
+      {
+        "start": 124.38,
+        "end": 124.5,
+        "word": " how"
+      },
+      {
+        "start": 124.5,
+        "end": 124.64,
+        "word": " will"
+      },
+      {
+        "start": 124.64,
+        "end": 124.74,
+        "word": " we"
+      },
+      {
+        "start": 124.74,
+        "end": 124.96,
+        "word": " look?"
+      }
+    ]
+  },
+  {
+    "start": 125.34,
+    "end": 128.58,
+    "text": " Mom, let's go see the floats. Of course, sweetheart. Let's go.",
+    "words": [
+      {
+        "start": 125.34,
+        "end": 125.52,
+        "word": " Mom,"
+      },
+      {
+        "start": 125.74,
+        "end": 125.98,
+        "word": " let's"
+      },
+      {
+        "start": 125.98,
+        "end": 126.1,
+        "word": " go"
+      },
+      {
+        "start": 126.1,
+        "end": 126.24,
+        "word": " see"
+      },
+      {
+        "start": 126.24,
+        "end": 126.42,
+        "word": " the"
+      },
+      {
+        "start": 126.42,
+        "end": 126.66,
+        "word": " floats."
+      },
+      {
+        "start": 127.12,
+        "end": 127.26,
+        "word": " Of"
+      },
+      {
+        "start": 127.26,
+        "end": 127.52,
+        "word": " course,"
+      },
+      {
+        "start": 127.66,
+        "end": 127.94,
+        "word": " sweetheart."
+      },
+      {
+        "start": 128.2,
+        "end": 128.38,
+        "word": " Let's"
+      },
+      {
+        "start": 128.38,
+        "end": 128.58,
+        "word": " go."
+      }
+    ]
+  },
+  {
+    "start": 130.78,
+    "end": 134.06,
+    "text": " Mom? Dad, am I the town's biggest star this year?",
+    "words": [
+      {
+        "start": 130.78,
+        "end": 131.24,
+        "word": " Mom?"
+      },
+      {
+        "start": 132.06,
+        "end": 132.34,
+        "word": " Dad,"
+      },
+      {
+        "start": 132.58,
+        "end": 132.68,
+        "word": " am"
+      },
+      {
+        "start": 132.68,
+        "end": 132.8,
+        "word": " I"
+      },
+      {
+        "start": 132.8,
+        "end": 132.92,
+        "word": " the"
+      },
+      {
+        "start": 132.92,
+        "end": 133.2,
+        "word": " town's"
+      },
+      {
+        "start": 133.2,
+        "end": 133.36,
+        "word": " biggest"
+      },
+      {
+        "start": 133.36,
+        "end": 133.64,
+        "word": " star"
+      },
+      {
+        "start": 133.64,
+        "end": 133.84,
+        "word": " this"
+      },
+      {
+        "start": 133.84,
+        "end": 134.06,
+        "word": " year?"
+      }
+    ]
+  },
+  {
+    "start": 134.32,
+    "end": 137.84,
+    "text": " Of course. You're our little angel. Nobody comes close.",
+    "words": [
+      {
+        "start": 134.32,
+        "end": 134.58,
+        "word": " Of"
+      },
+      {
+        "start": 134.58,
+        "end": 134.92,
+        "word": " course."
+      },
+      {
+        "start": 135.62,
+        "end": 135.82,
+        "word": " You're"
+      },
+      {
+        "start": 135.82,
+        "end": 135.92,
+        "word": " our"
+      },
+      {
+        "start": 135.92,
+        "end": 136.12,
+        "word": " little"
+      },
+      {
+        "start": 136.12,
+        "end": 136.46,
+        "word": " angel."
+      },
+      {
+        "start": 137.08,
+        "end": 137.26,
+        "word": " Nobody"
+      },
+      {
+        "start": 137.26,
+        "end": 137.56,
+        "word": " comes"
+      },
+      {
+        "start": 137.56,
+        "end": 137.84,
+        "word": " close."
+      }
+    ]
+  },
+  {
+    "start": 139.18,
+    "end": 140.54,
+    "text": " I'm sorry.",
+    "words": [
+      {
+        "start": 139.18,
+        "end": 139.7,
+        "word": " I'm"
+      },
+      {
+        "start": 139.7,
+        "end": 140.54,
+        "word": " sorry."
+      }
+    ]
+  }
+]
