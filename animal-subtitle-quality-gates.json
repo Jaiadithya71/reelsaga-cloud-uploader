@@ -16,6 +16,19 @@
       "part_pixels": 12,
       "confirmed_defect": null,
       "notes": "Whole source captions/action reviewed. Brief Daddy/Mommydid/Evelyn/Stop present. ASR pig versus visible pin is phonetic error; sleepwithyourmommy base corrected by small/pixels. Nongraphic unresponsive/dead mother, dirty/bruised face, child neglect and dog threat. No explicit sex/nudity/graphic wound observed; no platform-policy guarantee."
+    },
+    "2": {
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "quarter_ocr": 473,
+      "action_pixels": 60,
+      "caption_pixels": 118,
+      "target_pixels": 16,
+      "part_pixels": 18,
+      "confirmed_defect": null,
+      "notes": "Whole captions/action checked. Brief Whatsyourname31.5 and Rex/Getup16-17.75 confirmed targeted pixels; Mia/Here/Iwill/Takemetoo observed. No graphic violence; unresponsive mother moved to ambulance and child asks for mother."
     }
   },
   "part_gates": {
@@ -50,6 +63,54 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "634e07af96b979f247c4e5ae3ecbd4d8ea8cc5fc2ed8d4086529bce6c6a4d336",
       "measured_duration": 46.434
+    },
+    "yourchannel-animal833166-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 38.0,
+      "duration": 38.0,
+      "sha256": "c113f027aaa63dceb2637bcefa166782c4b7564cfc7de06b178600518ae54c6b",
+      "bytes": 25169775,
+      "path": "/downloads/animal-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "c113f027aaa63dceb2637bcefa166782c4b7564cfc7de06b178600518ae54c6b",
+      "measured_duration": 38.0
+    },
+    "yourchannel-animal833166-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 38.0,
+      "source_end": 78.8,
+      "duration": 40.8,
+      "sha256": "c41f52a443a637d4fc2c2cf7ba6fa062a891653fc1eecd1adaa26f8613a392ad",
+      "bytes": 27921605,
+      "path": "/downloads/animal-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "c41f52a443a637d4fc2c2cf7ba6fa062a891653fc1eecd1adaa26f8613a392ad",
+      "measured_duration": 40.8
+    },
+    "yourchannel-animal833166-ep2-part3-v1": {
+      "episode": 2,
+      "part": 3,
+      "source_start": 78.8,
+      "source_end": 118.328,
+      "duration": 39.528000000000006,
+      "sha256": "46f75d84c33fa5b0b1eebc371fc7fd1df0b63b187777147214712f94d14896c9",
+      "bytes": 26818675,
+      "path": "/downloads/animal-e2p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "46f75d84c33fa5b0b1eebc371fc7fd1df0b63b187777147214712f94d14896c9",
+      "measured_duration": 39.534
     }
   }
 }
