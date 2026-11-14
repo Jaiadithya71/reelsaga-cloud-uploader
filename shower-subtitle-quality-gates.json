@@ -48,6 +48,23 @@
       "caption_gate_pass": true,
       "repair": null,
       "notes": "Whole274quarterOCR,35action,69caption12targetpixels. Darling7.75,But20.5,Boss39.15/39.4/39.65 all present. Belowdecks/drydock/site correct in source captions despite ASR spelling. Originalaudio/captions retained. Cut33.0 during silent hangup before yacht establishing sequence. No nudity/explicitsex/graphicviolence. Two fullDecode12encodedpixels inspected."
+    },
+    "4": {
+      "source_duration": 70.917,
+      "source_sha256": "7b868575932ba573fcf34f8c1ac7740bea36aecd20e19e1be9947b4e4339e689",
+      "asr": [
+        "base.en whole",
+        "small.en whole",
+        "base.en targeted49-55",
+        "small.en targeted49-55",
+        "independent targeted audio read"
+      ],
+      "ocr_frames": 284,
+      "whole_action_frames_inspected": 36,
+      "targeted_caption_frames_inspected": 83,
+      "caption_gate_pass": false,
+      "repair": null,
+      "notes": "HOLD UNUPLOADED. Extra subtitle trace-removal records at51.75-54 beyond audio let me see her past. Whole284OCR/36action/71caption12targetpixels. Brief I swear/Maybe/Boss present. No nudity/explicitsex/graphicviolence. No cut/render/upload; do not skip. Parent informed17:36:53."
     }
   },
   "part_gates": {

@@ -1,0 +1,609 @@
+[
+  {
+    "start": 4.0,
+    "end": 4.96,
+    "text": " $50 million.",
+    "words": [
+      {
+        "start": 4.0,
+        "end": 4.48,
+        "word": " $50"
+      },
+      {
+        "start": 4.48,
+        "end": 4.96,
+        "word": " million."
+      }
+    ]
+  },
+  {
+    "start": 10.319999999999999,
+    "end": 13.26,
+    "text": " Harvey, this is our love boat, just yours and mine.",
+    "words": [
+      {
+        "start": 10.319999999999999,
+        "end": 10.799999999999999,
+        "word": " Harvey,"
+      },
+      {
+        "start": 10.799999999999999,
+        "end": 11.28,
+        "word": " this"
+      },
+      {
+        "start": 11.28,
+        "end": 11.42,
+        "word": " is"
+      },
+      {
+        "start": 11.42,
+        "end": 11.56,
+        "word": " our"
+      },
+      {
+        "start": 11.56,
+        "end": 11.76,
+        "word": " love"
+      },
+      {
+        "start": 11.76,
+        "end": 12.1,
+        "word": " boat,"
+      },
+      {
+        "start": 12.38,
+        "end": 12.58,
+        "word": " just"
+      },
+      {
+        "start": 12.58,
+        "end": 12.8,
+        "word": " yours"
+      },
+      {
+        "start": 12.8,
+        "end": 13.0,
+        "word": " and"
+      },
+      {
+        "start": 13.0,
+        "end": 13.26,
+        "word": " mine."
+      }
+    ]
+  },
+  {
+    "start": 14.4,
+    "end": 18.06,
+    "text": " I swear, no man but you has any right to set foot on this deck.",
+    "words": [
+      {
+        "start": 14.4,
+        "end": 14.52,
+        "word": " I"
+      },
+      {
+        "start": 14.52,
+        "end": 14.84,
+        "word": " swear,"
+      },
+      {
+        "start": 15.14,
+        "end": 15.36,
+        "word": " no"
+      },
+      {
+        "start": 15.36,
+        "end": 15.56,
+        "word": " man"
+      },
+      {
+        "start": 15.56,
+        "end": 15.76,
+        "word": " but"
+      },
+      {
+        "start": 15.76,
+        "end": 16.0,
+        "word": " you"
+      },
+      {
+        "start": 16.0,
+        "end": 16.44,
+        "word": " has"
+      },
+      {
+        "start": 16.44,
+        "end": 16.7,
+        "word": " any"
+      },
+      {
+        "start": 16.7,
+        "end": 16.9,
+        "word": " right"
+      },
+      {
+        "start": 16.9,
+        "end": 17.08,
+        "word": " to"
+      },
+      {
+        "start": 17.08,
+        "end": 17.24,
+        "word": " set"
+      },
+      {
+        "start": 17.24,
+        "end": 17.4,
+        "word": " foot"
+      },
+      {
+        "start": 17.4,
+        "end": 17.58,
+        "word": " on"
+      },
+      {
+        "start": 17.58,
+        "end": 17.76,
+        "word": " this"
+      },
+      {
+        "start": 17.76,
+        "end": 18.06,
+        "word": " deck."
+      }
+    ]
+  },
+  {
+    "start": 25.14,
+    "end": 29.98,
+    "text": " Boss, we've checked the structure below bags, the engine room, and the power distribution system.",
+    "words": [
+      {
+        "start": 25.14,
+        "end": 25.62,
+        "word": " Boss,"
+      },
+      {
+        "start": 26.14,
+        "end": 26.48,
+        "word": " we've"
+      },
+      {
+        "start": 26.48,
+        "end": 26.64,
+        "word": " checked"
+      },
+      {
+        "start": 26.64,
+        "end": 26.8,
+        "word": " the"
+      },
+      {
+        "start": 26.8,
+        "end": 27.06,
+        "word": " structure"
+      },
+      {
+        "start": 27.06,
+        "end": 27.38,
+        "word": " below"
+      },
+      {
+        "start": 27.38,
+        "end": 27.7,
+        "word": " bags,"
+      },
+      {
+        "start": 28.12,
+        "end": 28.2,
+        "word": " the"
+      },
+      {
+        "start": 28.2,
+        "end": 28.42,
+        "word": " engine"
+      },
+      {
+        "start": 28.42,
+        "end": 28.64,
+        "word": " room,"
+      },
+      {
+        "start": 28.72,
+        "end": 28.82,
+        "word": " and"
+      },
+      {
+        "start": 28.82,
+        "end": 28.9,
+        "word": " the"
+      },
+      {
+        "start": 28.9,
+        "end": 29.06,
+        "word": " power"
+      },
+      {
+        "start": 29.06,
+        "end": 29.48,
+        "word": " distribution"
+      },
+      {
+        "start": 29.48,
+        "end": 29.98,
+        "word": " system."
+      }
+    ]
+  },
+  {
+    "start": 29.98,
+    "end": 34.3,
+    "text": " No safety hazards, no listening devices, and no devices planted to sabotage the yacht.",
+    "words": [
+      {
+        "start": 29.98,
+        "end": 30.46,
+        "word": " No"
+      },
+      {
+        "start": 30.46,
+        "end": 30.74,
+        "word": " safety"
+      },
+      {
+        "start": 30.74,
+        "end": 31.14,
+        "word": " hazards,"
+      },
+      {
+        "start": 31.4,
+        "end": 31.5,
+        "word": " no"
+      },
+      {
+        "start": 31.5,
+        "end": 31.76,
+        "word": " listening"
+      },
+      {
+        "start": 31.76,
+        "end": 32.2,
+        "word": " devices,"
+      },
+      {
+        "start": 32.52,
+        "end": 32.6,
+        "word": " and"
+      },
+      {
+        "start": 32.6,
+        "end": 32.72,
+        "word": " no"
+      },
+      {
+        "start": 32.72,
+        "end": 33.04,
+        "word": " devices"
+      },
+      {
+        "start": 33.04,
+        "end": 33.32,
+        "word": " planted"
+      },
+      {
+        "start": 33.32,
+        "end": 33.52,
+        "word": " to"
+      },
+      {
+        "start": 33.52,
+        "end": 33.9,
+        "word": " sabotage"
+      },
+      {
+        "start": 33.9,
+        "end": 34.14,
+        "word": " the"
+      },
+      {
+        "start": 34.14,
+        "end": 34.3,
+        "word": " yacht."
+      }
+    ]
+  },
+  {
+    "start": 35.18,
+    "end": 37.82,
+    "text": " Maybe I really was imagining things.",
+    "words": [
+      {
+        "start": 35.18,
+        "end": 35.32,
+        "word": " Maybe"
+      },
+      {
+        "start": 35.32,
+        "end": 36.24,
+        "word": " I"
+      },
+      {
+        "start": 36.24,
+        "end": 36.42,
+        "word": " really"
+      },
+      {
+        "start": 36.42,
+        "end": 36.64,
+        "word": " was"
+      },
+      {
+        "start": 36.64,
+        "end": 37.02,
+        "word": " imagining"
+      },
+      {
+        "start": 37.02,
+        "end": 37.82,
+        "word": " things."
+      }
+    ]
+  },
+  {
+    "start": 49.08,
+    "end": 52.7,
+    "text": " She'd rather delete the entire account than let me see her past.",
+    "words": [
+      {
+        "start": 49.08,
+        "end": 49.64,
+        "word": " She'd"
+      },
+      {
+        "start": 49.64,
+        "end": 49.84,
+        "word": " rather"
+      },
+      {
+        "start": 49.84,
+        "end": 50.16,
+        "word": " delete"
+      },
+      {
+        "start": 50.16,
+        "end": 50.34,
+        "word": " the"
+      },
+      {
+        "start": 50.34,
+        "end": 50.68,
+        "word": " entire"
+      },
+      {
+        "start": 50.68,
+        "end": 51.16,
+        "word": " account"
+      },
+      {
+        "start": 51.16,
+        "end": 51.7,
+        "word": " than"
+      },
+      {
+        "start": 51.7,
+        "end": 51.84,
+        "word": " let"
+      },
+      {
+        "start": 51.84,
+        "end": 51.96,
+        "word": " me"
+      },
+      {
+        "start": 51.96,
+        "end": 52.12,
+        "word": " see"
+      },
+      {
+        "start": 52.12,
+        "end": 52.3,
+        "word": " her"
+      },
+      {
+        "start": 52.3,
+        "end": 52.7,
+        "word": " past."
+      }
+    ]
+  },
+  {
+    "start": 56.84,
+    "end": 60.76,
+    "text": " Zach, yes boss, routine checks are useless.",
+    "words": [
+      {
+        "start": 56.84,
+        "end": 57.4,
+        "word": " Zach,"
+      },
+      {
+        "start": 58.04,
+        "end": 58.54,
+        "word": " yes"
+      },
+      {
+        "start": 58.54,
+        "end": 58.82,
+        "word": " boss,"
+      },
+      {
+        "start": 59.6,
+        "end": 59.84,
+        "word": " routine"
+      },
+      {
+        "start": 59.84,
+        "end": 60.18,
+        "word": " checks"
+      },
+      {
+        "start": 60.18,
+        "end": 60.36,
+        "word": " are"
+      },
+      {
+        "start": 60.36,
+        "end": 60.76,
+        "word": " useless."
+      }
+    ]
+  },
+  {
+    "start": 61.6,
+    "end": 63.56,
+    "text": " Pry open every hidden space in the master cabin.",
+    "words": [
+      {
+        "start": 61.6,
+        "end": 61.62,
+        "word": " Pry"
+      },
+      {
+        "start": 61.62,
+        "end": 61.82,
+        "word": " open"
+      },
+      {
+        "start": 61.82,
+        "end": 62.14,
+        "word": " every"
+      },
+      {
+        "start": 62.14,
+        "end": 62.34,
+        "word": " hidden"
+      },
+      {
+        "start": 62.34,
+        "end": 62.66,
+        "word": " space"
+      },
+      {
+        "start": 62.66,
+        "end": 62.86,
+        "word": " in"
+      },
+      {
+        "start": 62.86,
+        "end": 62.96,
+        "word": " the"
+      },
+      {
+        "start": 62.96,
+        "end": 63.22,
+        "word": " master"
+      },
+      {
+        "start": 63.22,
+        "end": 63.56,
+        "word": " cabin."
+      }
+    ]
+  },
+  {
+    "start": 64.1,
+    "end": 68.32,
+    "text": " The ventilation system, the wall cavities, whatever it costs, find what's hidden in there.",
+    "words": [
+      {
+        "start": 64.1,
+        "end": 64.18,
+        "word": " The"
+      },
+      {
+        "start": 64.18,
+        "end": 64.46,
+        "word": " ventilation"
+      },
+      {
+        "start": 64.46,
+        "end": 65.02,
+        "word": " system,"
+      },
+      {
+        "start": 65.2,
+        "end": 65.2,
+        "word": " the"
+      },
+      {
+        "start": 65.2,
+        "end": 65.4,
+        "word": " wall"
+      },
+      {
+        "start": 65.4,
+        "end": 65.84,
+        "word": " cavities,"
+      },
+      {
+        "start": 65.98,
+        "end": 66.12,
+        "word": " whatever"
+      },
+      {
+        "start": 66.12,
+        "end": 66.38,
+        "word": " it"
+      },
+      {
+        "start": 66.38,
+        "end": 66.76,
+        "word": " costs,"
+      },
+      {
+        "start": 67.08,
+        "end": 67.38,
+        "word": " find"
+      },
+      {
+        "start": 67.38,
+        "end": 67.64,
+        "word": " what's"
+      },
+      {
+        "start": 67.64,
+        "end": 67.76,
+        "word": " hidden"
+      },
+      {
+        "start": 67.76,
+        "end": 67.94,
+        "word": " in"
+      },
+      {
+        "start": 67.94,
+        "end": 68.32,
+        "word": " there."
+      }
+    ]
+  },
+  {
+    "start": 69.0,
+    "end": 69.38,
+    "text": " Yes, sir.",
+    "words": [
+      {
+        "start": 69.0,
+        "end": 69.14,
+        "word": " Yes,"
+      },
+      {
+        "start": 69.24,
+        "end": 69.38,
+        "word": " sir."
+      }
+    ]
+  }
+]
