@@ -1,0 +1,24 @@
+{
+  "series": "The Maid in Charge",
+  "dramacps_id": 833168,
+  "status": "UNQUALIFIED unuploaded",
+  "episode1": {
+    "whole_action_frames": 71,
+    "whole_caption_frames": 140,
+    "quarter_ocr": 561,
+    "audio_passes": [
+      "base.en",
+      "small.en"
+    ],
+    "resolved": "Initial gown/Hey/Andtonight concerns cleared with targeted pixels",
+    "remaining": "Ending about138.25 supplied Sis; isolated ASR stop/sir/No, wholeASR omits. Not proven defect; no pass granted."
+  },
+  "episode2": "Downloaded131.169s, unreviewed",
+  "effects": "No affiliate generation/render/stage/upload/public",
+  "evidence": [
+    "/downloads/maid833168-review/e1-brief.jpg",
+    "/downloads/maid833168-review/e1-end.jpg",
+    "/downloads/maid-sis-check.wav",
+    "/downloads/maid-end-check.wav"
+  ]
+}
