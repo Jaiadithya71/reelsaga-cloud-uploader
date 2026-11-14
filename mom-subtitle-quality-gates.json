@@ -19,6 +19,21 @@
       "caption_gate_pass": true,
       "repair": null,
       "notes": "Whole286quarterOCR/36action/72caption18targetpixels inspected. BriefThreehundred/MaggieReed/Takemetoher/Now/Mags/Evelyn all present. SmallASR Yes30s rejected by independent isolated audio no speech. Nongraphicfight/medicalwheelchair, no nudity/explicitsex/graphicviolence. Cuts34.5silent/wholeend71.462. FullDecode12encodedpixels inspected."
+    },
+    "2": {
+      "source_duration": 66.78,
+      "source_sha256": "88331d718a5401a26f8029573adb21e7fa4f2d825ea20fedb40717f076bf224f",
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "ocr_frames": 267,
+      "whole_action_frames_inspected": 34,
+      "whole_caption_frames_inspected": 67,
+      "target_caption_frames_inspected": 15,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole267quarterOCR/34action/67caption+15targetpixels checked. Ilookedeverywhere/Cancer/anotherdoctor/TheysayIhave/Tellmewhatyouneed/Betheirmother all present, no confirmed captiondefect. Nongraphicseparation/cancer/illness. Originalsourceaudio/captions,0.15housefades only, continuous30sboundarybetweenComeonandTheysay. FullDecode12encodedpixels inspected."
     }
   },
   "part_gates": {
@@ -53,6 +68,38 @@
       "whole_part_release_ready": true,
       "measured_duration": 36.967,
       "approved_render_sha256": "fa746a69edca3138105e60169291bdd11ff6d8871a6a614336291ad17f778ff6"
+    },
+    "yourchannel-mom833149-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 30,
+      "duration": 30,
+      "sha256": "363a3845f1a3d55f153ceb464f0019d2bcf29fc8f8be26bb85f5693a7f9b2690",
+      "bytes": 19212820,
+      "path": "/downloads/mom-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 30.0,
+      "approved_render_sha256": "363a3845f1a3d55f153ceb464f0019d2bcf29fc8f8be26bb85f5693a7f9b2690"
+    },
+    "yourchannel-mom833149-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 30,
+      "source_end": 66.78,
+      "duration": 36.78,
+      "sha256": "fa8d7083692a95224c0d1247b7dc0838d66d9d75ce16fee3e15a6cae42912d73",
+      "bytes": 20961556,
+      "path": "/downloads/mom-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 36.78,
+      "approved_render_sha256": "fa8d7083692a95224c0d1247b7dc0838d66d9d75ce16fee3e15a6cae42912d73"
     }
   }
 }
