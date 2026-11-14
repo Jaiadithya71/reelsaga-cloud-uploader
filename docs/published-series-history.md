@@ -1004,3 +1004,5 @@ Nov14 06:58:37IST Magic833138E1P1zgYydFqGVAc PRIVATEHELDglobalAVclaim KuaikanInt
 
 ###2026-11-14 07:18IST replacement Downstairs, I Planned His Fall
 DramaCPS833136/YourChannel60%,six free episodes https://dramacps.com/dashboard ,affiliate https://r.reelsgo.tv/PCtcfEqFNAqm . No repository history/title/id repeat before prep; no alternate titlecard in E1. WholeE1source73.208333s1080x1920,base.enASR,293quarterOCRframes,30whole-action and64captionpixels checked. No obvious caption error. Non-graphic intimidation/wristgrab/slapthreat and childemotionaldistress, no graphic injury/sex. Two36.334/36.917measured parts/fullDecode/12encodedpixels passed. Originalaudio/captions preserved with house0.15sfades. PrivateP1-onlyclaimprobe next; P2notuploadeduntilP1claimpass. Publicgatesoutstanding.
+
+07:21IST DownstairsP1IhHBOpw4pt4 Studio claims pixels no claims/no copyrighted content. Probe43542790033SUCCESS/533inventory/stopped. ConsumedstageHEAD404signedGET404. P2privateprobe now permitted, freshclaims mandatoryatpublicflip. https://studio.youtube.com/video/IhHBOpw4pt4/claims
