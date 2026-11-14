@@ -34,6 +34,20 @@
       "caption_gate_pass": true,
       "repair": null,
       "notes": "Whole321quarterOCR,41action,81caption12targetpixels. As you asked caption present44.5/44.75. FinalbaseASRrepeat hallucination: bothVADtailASRempty. All originalaudio/captions retained. Cut40.5lounge establishing beforeMrSterlingline. Clothedkissing,impliedaffair/bodilyfluid-cleaningdialogue,no nudity/explicitsex/graphicviolence. Two fullDecode12encodedpixels inspected."
+    },
+    "3": {
+      "source_duration": 68.417,
+      "source_sha256": "fb98c244ce647c28f43a4e0d2da1828247ae8166a117b7a707b27b8aace68e47",
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "ocr_frames": 274,
+      "whole_action_frames_inspected": 35,
+      "targeted_caption_frames_inspected": 81,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole274quarterOCR,35action,69caption12targetpixels. Darling7.75,But20.5,Boss39.15/39.4/39.65 all present. Belowdecks/drydock/site correct in source captions despite ASR spelling. Originalaudio/captions retained. Cut33.0 during silent hangup before yacht establishing sequence. No nudity/explicitsex/graphicviolence. Two fullDecode12encodedpixels inspected."
     }
   },
   "part_gates": {
@@ -100,6 +114,38 @@
       "whole_part_release_ready": true,
       "measured_duration": 39.671,
       "approved_render_sha256": "a69c50e29f87efa4d592fb3fe016edc228115dd688309169a6930eea6a66c67d"
+    },
+    "yourchannel-shower833140-ep3-part1-v1": {
+      "episode": 3,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 33.0,
+      "duration": 33.0,
+      "sha256": "d17c6ea673d5b4e9fd258131f5050e990730ffa193b10df0c172e5a4f51f7606",
+      "bytes": 18332328,
+      "path": "/downloads/shower-e3p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 33.0,
+      "approved_render_sha256": "d17c6ea673d5b4e9fd258131f5050e990730ffa193b10df0c172e5a4f51f7606"
+    },
+    "yourchannel-shower833140-ep3-part2-v1": {
+      "episode": 3,
+      "part": 2,
+      "source_start": 33.0,
+      "source_end": 68.417,
+      "duration": 35.417,
+      "sha256": "fa6efea7adece76b7e98f33ee9ac88ebed1c08341daad47ccf25398af78b8b49",
+      "bytes": 17420753,
+      "path": "/downloads/shower-e3p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 35.417,
+      "approved_render_sha256": "fa6efea7adece76b7e98f33ee9ac88ebed1c08341daad47ccf25398af78b8b49"
     }
   }
 }

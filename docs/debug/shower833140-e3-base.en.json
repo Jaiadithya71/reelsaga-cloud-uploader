@@ -1,0 +1,899 @@
+[
+  {
+    "start": 1.599999999999997,
+    "end": 2.82,
+    "text": " A private dryback?",
+    "words": [
+      {
+        "start": 1.599999999999997,
+        "end": 1.96,
+        "word": " A"
+      },
+      {
+        "start": 1.96,
+        "end": 2.26,
+        "word": " private"
+      },
+      {
+        "start": 2.26,
+        "end": 2.82,
+        "word": " dryback?"
+      }
+    ]
+  },
+  {
+    "start": 3.48,
+    "end": 4.26,
+    "text": " Why is he going there?",
+    "words": [
+      {
+        "start": 3.48,
+        "end": 3.66,
+        "word": " Why"
+      },
+      {
+        "start": 3.66,
+        "end": 3.76,
+        "word": " is"
+      },
+      {
+        "start": 3.76,
+        "end": 3.8,
+        "word": " he"
+      },
+      {
+        "start": 3.8,
+        "end": 3.96,
+        "word": " going"
+      },
+      {
+        "start": 3.96,
+        "end": 4.26,
+        "word": " there?"
+      }
+    ]
+  },
+  {
+    "start": 7.399999999999997,
+    "end": 10.18,
+    "text": " Darling, didn't you say the cleaning company was taking care of the yacht?",
+    "words": [
+      {
+        "start": 7.399999999999997,
+        "end": 7.76,
+        "word": " Darling,"
+      },
+      {
+        "start": 8.08,
+        "end": 8.36,
+        "word": " didn't"
+      },
+      {
+        "start": 8.36,
+        "end": 8.44,
+        "word": " you"
+      },
+      {
+        "start": 8.44,
+        "end": 8.58,
+        "word": " say"
+      },
+      {
+        "start": 8.58,
+        "end": 8.7,
+        "word": " the"
+      },
+      {
+        "start": 8.7,
+        "end": 8.86,
+        "word": " cleaning"
+      },
+      {
+        "start": 8.86,
+        "end": 9.24,
+        "word": " company"
+      },
+      {
+        "start": 9.24,
+        "end": 9.42,
+        "word": " was"
+      },
+      {
+        "start": 9.42,
+        "end": 9.58,
+        "word": " taking"
+      },
+      {
+        "start": 9.58,
+        "end": 9.82,
+        "word": " care"
+      },
+      {
+        "start": 9.82,
+        "end": 9.92,
+        "word": " of"
+      },
+      {
+        "start": 9.92,
+        "end": 10.0,
+        "word": " the"
+      },
+      {
+        "start": 10.0,
+        "end": 10.18,
+        "word": " yacht?"
+      }
+    ]
+  },
+  {
+    "start": 10.72,
+    "end": 12.48,
+    "text": " Why is the tracker showing it at a dryback?",
+    "words": [
+      {
+        "start": 10.72,
+        "end": 10.94,
+        "word": " Why"
+      },
+      {
+        "start": 10.94,
+        "end": 11.04,
+        "word": " is"
+      },
+      {
+        "start": 11.04,
+        "end": 11.14,
+        "word": " the"
+      },
+      {
+        "start": 11.14,
+        "end": 11.28,
+        "word": " tracker"
+      },
+      {
+        "start": 11.28,
+        "end": 11.7,
+        "word": " showing"
+      },
+      {
+        "start": 11.7,
+        "end": 11.88,
+        "word": " it"
+      },
+      {
+        "start": 11.88,
+        "end": 11.98,
+        "word": " at"
+      },
+      {
+        "start": 11.98,
+        "end": 12.06,
+        "word": " a"
+      },
+      {
+        "start": 12.06,
+        "end": 12.48,
+        "word": " dryback?"
+      }
+    ]
+  },
+  {
+    "start": 13.52,
+    "end": 15.4,
+    "text": " The cleaner's equipment isn't up to the job.",
+    "words": [
+      {
+        "start": 13.52,
+        "end": 13.82,
+        "word": " The"
+      },
+      {
+        "start": 13.82,
+        "end": 14.2,
+        "word": " cleaner's"
+      },
+      {
+        "start": 14.2,
+        "end": 14.44,
+        "word": " equipment"
+      },
+      {
+        "start": 14.44,
+        "end": 14.84,
+        "word": " isn't"
+      },
+      {
+        "start": 14.84,
+        "end": 14.94,
+        "word": " up"
+      },
+      {
+        "start": 14.94,
+        "end": 15.06,
+        "word": " to"
+      },
+      {
+        "start": 15.06,
+        "end": 15.18,
+        "word": " the"
+      },
+      {
+        "start": 15.18,
+        "end": 15.4,
+        "word": " job."
+      }
+    ]
+  },
+  {
+    "start": 16.08,
+    "end": 17.86,
+    "text": " You can't handle the stubborn stain below bags.",
+    "words": [
+      {
+        "start": 16.08,
+        "end": 16.14,
+        "word": " You"
+      },
+      {
+        "start": 16.14,
+        "end": 16.4,
+        "word": " can't"
+      },
+      {
+        "start": 16.4,
+        "end": 16.66,
+        "word": " handle"
+      },
+      {
+        "start": 16.66,
+        "end": 16.78,
+        "word": " the"
+      },
+      {
+        "start": 16.78,
+        "end": 16.98,
+        "word": " stubborn"
+      },
+      {
+        "start": 16.98,
+        "end": 17.34,
+        "word": " stain"
+      },
+      {
+        "start": 17.34,
+        "end": 17.6,
+        "word": " below"
+      },
+      {
+        "start": 17.6,
+        "end": 17.86,
+        "word": " bags."
+      }
+    ]
+  },
+  {
+    "start": 18.3,
+    "end": 19.26,
+    "text": " I had to bring her here myself.",
+    "words": [
+      {
+        "start": 18.3,
+        "end": 18.36,
+        "word": " I"
+      },
+      {
+        "start": 18.36,
+        "end": 18.46,
+        "word": " had"
+      },
+      {
+        "start": 18.46,
+        "end": 18.56,
+        "word": " to"
+      },
+      {
+        "start": 18.56,
+        "end": 18.7,
+        "word": " bring"
+      },
+      {
+        "start": 18.7,
+        "end": 18.8,
+        "word": " her"
+      },
+      {
+        "start": 18.8,
+        "end": 18.94,
+        "word": " here"
+      },
+      {
+        "start": 18.94,
+        "end": 19.26,
+        "word": " myself."
+      }
+    ]
+  },
+  {
+    "start": 20.659999999999993,
+    "end": 22.66,
+    "text": " But it's just a little red wine stain.",
+    "words": [
+      {
+        "start": 20.659999999999993,
+        "end": 21.019999999999996,
+        "word": " But"
+      },
+      {
+        "start": 21.019999999999996,
+        "end": 21.38,
+        "word": " it's"
+      },
+      {
+        "start": 21.38,
+        "end": 21.52,
+        "word": " just"
+      },
+      {
+        "start": 21.52,
+        "end": 21.7,
+        "word": " a"
+      },
+      {
+        "start": 21.7,
+        "end": 21.88,
+        "word": " little"
+      },
+      {
+        "start": 21.88,
+        "end": 22.08,
+        "word": " red"
+      },
+      {
+        "start": 22.08,
+        "end": 22.34,
+        "word": " wine"
+      },
+      {
+        "start": 22.34,
+        "end": 22.66,
+        "word": " stain."
+      }
+    ]
+  },
+  {
+    "start": 23.58,
+    "end": 25.38,
+    "text": " Did you really have to take it to a dry dock?",
+    "words": [
+      {
+        "start": 23.58,
+        "end": 23.84,
+        "word": " Did"
+      },
+      {
+        "start": 23.84,
+        "end": 23.98,
+        "word": " you"
+      },
+      {
+        "start": 23.98,
+        "end": 24.16,
+        "word": " really"
+      },
+      {
+        "start": 24.16,
+        "end": 24.36,
+        "word": " have"
+      },
+      {
+        "start": 24.36,
+        "end": 24.48,
+        "word": " to"
+      },
+      {
+        "start": 24.48,
+        "end": 24.66,
+        "word": " take"
+      },
+      {
+        "start": 24.66,
+        "end": 24.74,
+        "word": " it"
+      },
+      {
+        "start": 24.74,
+        "end": 24.84,
+        "word": " to"
+      },
+      {
+        "start": 24.84,
+        "end": 24.94,
+        "word": " a"
+      },
+      {
+        "start": 24.94,
+        "end": 25.12,
+        "word": " dry"
+      },
+      {
+        "start": 25.12,
+        "end": 25.38,
+        "word": " dock?"
+      }
+    ]
+  },
+  {
+    "start": 26.6,
+    "end": 27.8,
+    "text": " You hate dirt, don't you?",
+    "words": [
+      {
+        "start": 26.6,
+        "end": 26.96,
+        "word": " You"
+      },
+      {
+        "start": 26.96,
+        "end": 27.14,
+        "word": " hate"
+      },
+      {
+        "start": 27.14,
+        "end": 27.32,
+        "word": " dirt,"
+      },
+      {
+        "start": 27.36,
+        "end": 27.68,
+        "word": " don't"
+      },
+      {
+        "start": 27.68,
+        "end": 27.8,
+        "word": " you?"
+      }
+    ]
+  },
+  {
+    "start": 27.8,
+    "end": 29.6,
+    "text": " Then I'll make sure it's spotless.",
+    "words": [
+      {
+        "start": 27.8,
+        "end": 28.58,
+        "word": " Then"
+      },
+      {
+        "start": 28.58,
+        "end": 28.7,
+        "word": " I'll"
+      },
+      {
+        "start": 28.7,
+        "end": 28.82,
+        "word": " make"
+      },
+      {
+        "start": 28.82,
+        "end": 29.0,
+        "word": " sure"
+      },
+      {
+        "start": 29.0,
+        "end": 29.18,
+        "word": " it's"
+      },
+      {
+        "start": 29.18,
+        "end": 29.6,
+        "word": " spotless."
+      }
+    ]
+  },
+  {
+    "start": 30.28,
+    "end": 30.86,
+    "text": " I have to go.",
+    "words": [
+      {
+        "start": 30.28,
+        "end": 30.48,
+        "word": " I"
+      },
+      {
+        "start": 30.48,
+        "end": 30.58,
+        "word": " have"
+      },
+      {
+        "start": 30.58,
+        "end": 30.68,
+        "word": " to"
+      },
+      {
+        "start": 30.68,
+        "end": 30.86,
+        "word": " go."
+      }
+    ]
+  },
+  {
+    "start": 38.739999999999995,
+    "end": 41.52,
+    "text": " Boss, the dismantling crew and heavy equipment are ready.",
+    "words": [
+      {
+        "start": 38.739999999999995,
+        "end": 39.3,
+        "word": " Boss,"
+      },
+      {
+        "start": 39.7,
+        "end": 40.0,
+        "word": " the"
+      },
+      {
+        "start": 40.0,
+        "end": 40.24,
+        "word": " dismantling"
+      },
+      {
+        "start": 40.24,
+        "end": 40.58,
+        "word": " crew"
+      },
+      {
+        "start": 40.58,
+        "end": 40.74,
+        "word": " and"
+      },
+      {
+        "start": 40.74,
+        "end": 40.88,
+        "word": " heavy"
+      },
+      {
+        "start": 40.88,
+        "end": 41.2,
+        "word": " equipment"
+      },
+      {
+        "start": 41.2,
+        "end": 41.32,
+        "word": " are"
+      },
+      {
+        "start": 41.32,
+        "end": 41.52,
+        "word": " ready."
+      }
+    ]
+  },
+  {
+    "start": 43.88,
+    "end": 45.1,
+    "text": " Tear this boat apart.",
+    "words": [
+      {
+        "start": 43.88,
+        "end": 44.44,
+        "word": " Tear"
+      },
+      {
+        "start": 44.44,
+        "end": 44.58,
+        "word": " this"
+      },
+      {
+        "start": 44.58,
+        "end": 44.76,
+        "word": " boat"
+      },
+      {
+        "start": 44.76,
+        "end": 45.1,
+        "word": " apart."
+      }
+    ]
+  },
+  {
+    "start": 47.84,
+    "end": 51.1,
+    "text": " The air conditioning vents, the hidden compartments below bags,",
+    "words": [
+      {
+        "start": 47.84,
+        "end": 48.4,
+        "word": " The"
+      },
+      {
+        "start": 48.4,
+        "end": 48.52,
+        "word": " air"
+      },
+      {
+        "start": 48.52,
+        "end": 48.72,
+        "word": " conditioning"
+      },
+      {
+        "start": 48.72,
+        "end": 49.12,
+        "word": " vents,"
+      },
+      {
+        "start": 49.76,
+        "end": 49.86,
+        "word": " the"
+      },
+      {
+        "start": 49.86,
+        "end": 50.02,
+        "word": " hidden"
+      },
+      {
+        "start": 50.02,
+        "end": 50.44,
+        "word": " compartments"
+      },
+      {
+        "start": 50.44,
+        "end": 50.84,
+        "word": " below"
+      },
+      {
+        "start": 50.84,
+        "end": 51.1,
+        "word": " bags,"
+      }
+    ]
+  },
+  {
+    "start": 51.66,
+    "end": 53.46,
+    "text": " every data cable in the security system.",
+    "words": [
+      {
+        "start": 51.66,
+        "end": 51.78,
+        "word": " every"
+      },
+      {
+        "start": 51.78,
+        "end": 52.06,
+        "word": " data"
+      },
+      {
+        "start": 52.06,
+        "end": 52.42,
+        "word": " cable"
+      },
+      {
+        "start": 52.42,
+        "end": 52.6,
+        "word": " in"
+      },
+      {
+        "start": 52.6,
+        "end": 52.66,
+        "word": " the"
+      },
+      {
+        "start": 52.66,
+        "end": 52.94,
+        "word": " security"
+      },
+      {
+        "start": 52.94,
+        "end": 53.46,
+        "word": " system."
+      }
+    ]
+  },
+  {
+    "start": 53.98,
+    "end": 55.26,
+    "text": " Search every inch.",
+    "words": [
+      {
+        "start": 53.98,
+        "end": 54.2,
+        "word": " Search"
+      },
+      {
+        "start": 54.2,
+        "end": 54.74,
+        "word": " every"
+      },
+      {
+        "start": 54.74,
+        "end": 55.26,
+        "word": " inch."
+      }
+    ]
+  },
+  {
+    "start": 55.26,
+    "end": 56.88,
+    "text": " Don't miss a single corner.",
+    "words": [
+      {
+        "start": 55.26,
+        "end": 55.94,
+        "word": " Don't"
+      },
+      {
+        "start": 55.94,
+        "end": 56.06,
+        "word": " miss"
+      },
+      {
+        "start": 56.06,
+        "end": 56.16,
+        "word": " a"
+      },
+      {
+        "start": 56.16,
+        "end": 56.46,
+        "word": " single"
+      },
+      {
+        "start": 56.46,
+        "end": 56.88,
+        "word": " corner."
+      }
+    ]
+  },
+  {
+    "start": 58.02,
+    "end": 60.1,
+    "text": " I want to know exactly what's hidden on this boat.",
+    "words": [
+      {
+        "start": 58.02,
+        "end": 58.42,
+        "word": " I"
+      },
+      {
+        "start": 58.42,
+        "end": 58.52,
+        "word": " want"
+      },
+      {
+        "start": 58.52,
+        "end": 58.58,
+        "word": " to"
+      },
+      {
+        "start": 58.58,
+        "end": 58.7,
+        "word": " know"
+      },
+      {
+        "start": 58.7,
+        "end": 59.02,
+        "word": " exactly"
+      },
+      {
+        "start": 59.02,
+        "end": 59.46,
+        "word": " what's"
+      },
+      {
+        "start": 59.46,
+        "end": 59.58,
+        "word": " hidden"
+      },
+      {
+        "start": 59.58,
+        "end": 59.74,
+        "word": " on"
+      },
+      {
+        "start": 59.74,
+        "end": 59.9,
+        "word": " this"
+      },
+      {
+        "start": 59.9,
+        "end": 60.1,
+        "word": " boat."
+      }
+    ]
+  },
+  {
+    "start": 60.6,
+    "end": 62.26,
+    "text": " Lock down the seat, tape off the area.",
+    "words": [
+      {
+        "start": 60.6,
+        "end": 60.84,
+        "word": " Lock"
+      },
+      {
+        "start": 60.84,
+        "end": 61.08,
+        "word": " down"
+      },
+      {
+        "start": 61.08,
+        "end": 61.2,
+        "word": " the"
+      },
+      {
+        "start": 61.2,
+        "end": 61.38,
+        "word": " seat,"
+      },
+      {
+        "start": 61.66,
+        "end": 61.7,
+        "word": " tape"
+      },
+      {
+        "start": 61.7,
+        "end": 61.9,
+        "word": " off"
+      },
+      {
+        "start": 61.9,
+        "end": 62.06,
+        "word": " the"
+      },
+      {
+        "start": 62.06,
+        "end": 62.26,
+        "word": " area."
+      }
+    ]
+  },
+  {
+    "start": 62.68,
+    "end": 64.16,
+    "text": " No one comes near without Mr. Sterling's permission.",
+    "words": [
+      {
+        "start": 62.68,
+        "end": 62.72,
+        "word": " No"
+      },
+      {
+        "start": 62.72,
+        "end": 62.84,
+        "word": " one"
+      },
+      {
+        "start": 62.84,
+        "end": 62.96,
+        "word": " comes"
+      },
+      {
+        "start": 62.96,
+        "end": 63.2,
+        "word": " near"
+      },
+      {
+        "start": 63.2,
+        "end": 63.36,
+        "word": " without"
+      },
+      {
+        "start": 63.36,
+        "end": 63.64,
+        "word": " Mr."
+      },
+      {
+        "start": 63.72,
+        "end": 64.02,
+        "word": " Sterling's"
+      },
+      {
+        "start": 64.02,
+        "end": 64.16,
+        "word": " permission."
+      }
+    ]
+  }
+]
