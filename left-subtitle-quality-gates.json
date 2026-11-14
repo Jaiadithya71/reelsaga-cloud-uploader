@@ -1,0 +1,57 @@
+{
+  "series": "When You Left Me, I Chose Him",
+  "dramacps_id": 833145,
+  "alias": "You Replaced Me, I Replaced You",
+  "affiliate": "https://r.reelsgo.tv/Prml57vqNr_5",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "source_duration": 69.84,
+      "source_sha256": "7a993a745ecd82760f2ccf03f34f9dc5a230b8a6196d2d29e6f0510b5ce1a83f",
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "ocr_frames": 279,
+      "whole_action_frames_inspected": 28,
+      "targeted_caption_frames_inspected": 140,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole source/action/caption QA. Targeted pixels resolve Mom/Emily and with me this year. Cut 34.2 falls in dialogue-free footage. Both encoded parts decoded and 12 pixels inspected. Original audio and captions unchanged; established 0.15 second boundary fades."
+    }
+  },
+  "part_gates": {
+    "yourchannel-left833145-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 34.2,
+      "duration": 34.2,
+      "sha256": "71ff8327be710f5652505c0ff46dbfee46f97b48a0dc3d6d880c3b9030e2dfef",
+      "bytes": 43532378,
+      "path": "/downloads/left-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 34.2,
+      "approved_render_sha256": "71ff8327be710f5652505c0ff46dbfee46f97b48a0dc3d6d880c3b9030e2dfef"
+    },
+    "yourchannel-left833145-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 34.2,
+      "source_end": 69.84,
+      "duration": 35.64,
+      "sha256": "90310a7b1589cf38800e3a96b1ddddf0fc4b3416a401e6b7e2c5188abf6df86b",
+      "bytes": 46442744,
+      "path": "/downloads/left-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 35.64,
+      "approved_render_sha256": "90310a7b1589cf38800e3a96b1ddddf0fc4b3416a401e6b7e2c5188abf6df86b"
+    }
+  }
+}

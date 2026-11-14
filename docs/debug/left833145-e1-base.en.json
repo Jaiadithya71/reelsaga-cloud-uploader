@@ -1,0 +1,843 @@
+[
+  {
+    "start": 3.2199999999999998,
+    "end": 4.74,
+    "text": " Who said you could blow out the candles?",
+    "words": [
+      {
+        "start": 3.2199999999999998,
+        "end": 3.7,
+        "word": " Who"
+      },
+      {
+        "start": 3.7,
+        "end": 3.9,
+        "word": " said"
+      },
+      {
+        "start": 3.9,
+        "end": 4.02,
+        "word": " you"
+      },
+      {
+        "start": 4.02,
+        "end": 4.12,
+        "word": " could"
+      },
+      {
+        "start": 4.12,
+        "end": 4.28,
+        "word": " blow"
+      },
+      {
+        "start": 4.28,
+        "end": 4.44,
+        "word": " out"
+      },
+      {
+        "start": 4.44,
+        "end": 4.54,
+        "word": " the"
+      },
+      {
+        "start": 4.54,
+        "end": 4.74,
+        "word": " candles?"
+      }
+    ]
+  },
+  {
+    "start": 5.42,
+    "end": 6.5,
+    "text": " This birthday cake isn't yours.",
+    "words": [
+      {
+        "start": 5.42,
+        "end": 5.5,
+        "word": " This"
+      },
+      {
+        "start": 5.5,
+        "end": 5.74,
+        "word": " birthday"
+      },
+      {
+        "start": 5.74,
+        "end": 6.02,
+        "word": " cake"
+      },
+      {
+        "start": 6.02,
+        "end": 6.28,
+        "word": " isn't"
+      },
+      {
+        "start": 6.28,
+        "end": 6.5,
+        "word": " yours."
+      }
+    ]
+  },
+  {
+    "start": 7.84,
+    "end": 10.8,
+    "text": " This is Emily's first birthday at our house, so don't compete with her.",
+    "words": [
+      {
+        "start": 7.84,
+        "end": 8.04,
+        "word": " This"
+      },
+      {
+        "start": 8.04,
+        "end": 8.12,
+        "word": " is"
+      },
+      {
+        "start": 8.12,
+        "end": 8.56,
+        "word": " Emily's"
+      },
+      {
+        "start": 8.56,
+        "end": 8.7,
+        "word": " first"
+      },
+      {
+        "start": 8.7,
+        "end": 9.12,
+        "word": " birthday"
+      },
+      {
+        "start": 9.12,
+        "end": 9.3,
+        "word": " at"
+      },
+      {
+        "start": 9.3,
+        "end": 9.4,
+        "word": " our"
+      },
+      {
+        "start": 9.4,
+        "end": 9.64,
+        "word": " house,"
+      },
+      {
+        "start": 9.64,
+        "end": 9.94,
+        "word": " so"
+      },
+      {
+        "start": 9.94,
+        "end": 10.2,
+        "word": " don't"
+      },
+      {
+        "start": 10.2,
+        "end": 10.42,
+        "word": " compete"
+      },
+      {
+        "start": 10.42,
+        "end": 10.64,
+        "word": " with"
+      },
+      {
+        "start": 10.64,
+        "end": 10.8,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 14.36,
+    "end": 16.08,
+    "text": " Mom, today's also my birthday.",
+    "words": [
+      {
+        "start": 14.36,
+        "end": 14.84,
+        "word": " Mom,"
+      },
+      {
+        "start": 14.84,
+        "end": 15.32,
+        "word": " today's"
+      },
+      {
+        "start": 15.32,
+        "end": 15.6,
+        "word": " also"
+      },
+      {
+        "start": 15.6,
+        "end": 15.78,
+        "word": " my"
+      },
+      {
+        "start": 15.78,
+        "end": 16.08,
+        "word": " birthday."
+      }
+    ]
+  },
+  {
+    "start": 16.62,
+    "end": 17.98,
+    "text": " I'm your biological daughter.",
+    "words": [
+      {
+        "start": 16.62,
+        "end": 16.84,
+        "word": " I'm"
+      },
+      {
+        "start": 16.84,
+        "end": 16.94,
+        "word": " your"
+      },
+      {
+        "start": 16.94,
+        "end": 17.3,
+        "word": " biological"
+      },
+      {
+        "start": 17.3,
+        "end": 17.98,
+        "word": " daughter."
+      }
+    ]
+  },
+  {
+    "start": 19.4,
+    "end": 22.22,
+    "text": " You're my daughter, which is exactly why you should know better.",
+    "words": [
+      {
+        "start": 19.4,
+        "end": 19.88,
+        "word": " You're"
+      },
+      {
+        "start": 19.88,
+        "end": 20.04,
+        "word": " my"
+      },
+      {
+        "start": 20.04,
+        "end": 20.32,
+        "word": " daughter,"
+      },
+      {
+        "start": 20.32,
+        "end": 20.8,
+        "word": " which"
+      },
+      {
+        "start": 20.8,
+        "end": 20.9,
+        "word": " is"
+      },
+      {
+        "start": 20.9,
+        "end": 21.24,
+        "word": " exactly"
+      },
+      {
+        "start": 21.24,
+        "end": 21.56,
+        "word": " why"
+      },
+      {
+        "start": 21.56,
+        "end": 21.7,
+        "word": " you"
+      },
+      {
+        "start": 21.7,
+        "end": 21.82,
+        "word": " should"
+      },
+      {
+        "start": 21.82,
+        "end": 22.0,
+        "word": " know"
+      },
+      {
+        "start": 22.0,
+        "end": 22.22,
+        "word": " better."
+      }
+    ]
+  },
+  {
+    "start": 24.64,
+    "end": 27.08,
+    "text": " Mommy, let Zoe blow out the candles with me.",
+    "words": [
+      {
+        "start": 24.64,
+        "end": 25.12,
+        "word": " Mommy,"
+      },
+      {
+        "start": 25.28,
+        "end": 25.54,
+        "word": " let"
+      },
+      {
+        "start": 25.54,
+        "end": 25.68,
+        "word": " Zoe"
+      },
+      {
+        "start": 25.68,
+        "end": 26.0,
+        "word": " blow"
+      },
+      {
+        "start": 26.0,
+        "end": 26.16,
+        "word": " out"
+      },
+      {
+        "start": 26.16,
+        "end": 26.28,
+        "word": " the"
+      },
+      {
+        "start": 26.28,
+        "end": 26.56,
+        "word": " candles"
+      },
+      {
+        "start": 26.56,
+        "end": 26.84,
+        "word": " with"
+      },
+      {
+        "start": 26.84,
+        "end": 27.08,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 27.3,
+    "end": 28.32,
+    "text": " It's her birthday, too.",
+    "words": [
+      {
+        "start": 27.3,
+        "end": 27.56,
+        "word": " It's"
+      },
+      {
+        "start": 27.56,
+        "end": 27.66,
+        "word": " her"
+      },
+      {
+        "start": 27.66,
+        "end": 27.84,
+        "word": " birthday,"
+      },
+      {
+        "start": 27.84,
+        "end": 28.32,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 29.28,
+    "end": 31.42,
+    "text": " Don't worry about her. Today is just for you.",
+    "words": [
+      {
+        "start": 29.28,
+        "end": 29.64,
+        "word": " Don't"
+      },
+      {
+        "start": 29.64,
+        "end": 29.78,
+        "word": " worry"
+      },
+      {
+        "start": 29.78,
+        "end": 30.0,
+        "word": " about"
+      },
+      {
+        "start": 30.0,
+        "end": 30.18,
+        "word": " her."
+      },
+      {
+        "start": 30.84,
+        "end": 30.84,
+        "word": " Today"
+      },
+      {
+        "start": 30.84,
+        "end": 30.96,
+        "word": " is"
+      },
+      {
+        "start": 30.96,
+        "end": 31.12,
+        "word": " just"
+      },
+      {
+        "start": 31.12,
+        "end": 31.28,
+        "word": " for"
+      },
+      {
+        "start": 31.28,
+        "end": 31.42,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 35.14,
+    "end": 39.58,
+    "text": " Zoe, don't block the camera. I want to take pictures of Emily.",
+    "words": [
+      {
+        "start": 35.14,
+        "end": 35.5,
+        "word": " Zoe,"
+      },
+      {
+        "start": 37.76,
+        "end": 37.98,
+        "word": " don't"
+      },
+      {
+        "start": 37.98,
+        "end": 38.1,
+        "word": " block"
+      },
+      {
+        "start": 38.1,
+        "end": 38.24,
+        "word": " the"
+      },
+      {
+        "start": 38.24,
+        "end": 38.46,
+        "word": " camera."
+      },
+      {
+        "start": 38.74,
+        "end": 38.76,
+        "word": " I"
+      },
+      {
+        "start": 38.76,
+        "end": 38.84,
+        "word": " want"
+      },
+      {
+        "start": 38.84,
+        "end": 38.88,
+        "word": " to"
+      },
+      {
+        "start": 38.88,
+        "end": 39.02,
+        "word": " take"
+      },
+      {
+        "start": 39.02,
+        "end": 39.26,
+        "word": " pictures"
+      },
+      {
+        "start": 39.26,
+        "end": 39.4,
+        "word": " of"
+      },
+      {
+        "start": 39.4,
+        "end": 39.58,
+        "word": " Emily."
+      }
+    ]
+  },
+  {
+    "start": 40.3,
+    "end": 42.72,
+    "text": " Last year you said you would blow out candles with me this year.",
+    "words": [
+      {
+        "start": 40.3,
+        "end": 40.52,
+        "word": " Last"
+      },
+      {
+        "start": 40.52,
+        "end": 40.78,
+        "word": " year"
+      },
+      {
+        "start": 40.78,
+        "end": 40.94,
+        "word": " you"
+      },
+      {
+        "start": 40.94,
+        "end": 41.12,
+        "word": " said"
+      },
+      {
+        "start": 41.12,
+        "end": 41.26,
+        "word": " you"
+      },
+      {
+        "start": 41.26,
+        "end": 41.36,
+        "word": " would"
+      },
+      {
+        "start": 41.36,
+        "end": 41.52,
+        "word": " blow"
+      },
+      {
+        "start": 41.52,
+        "end": 41.68,
+        "word": " out"
+      },
+      {
+        "start": 41.68,
+        "end": 41.88,
+        "word": " candles"
+      },
+      {
+        "start": 41.88,
+        "end": 42.16,
+        "word": " with"
+      },
+      {
+        "start": 42.16,
+        "end": 42.32,
+        "word": " me"
+      },
+      {
+        "start": 42.32,
+        "end": 42.44,
+        "word": " this"
+      },
+      {
+        "start": 42.44,
+        "end": 42.72,
+        "word": " year."
+      }
+    ]
+  },
+  {
+    "start": 43.22,
+    "end": 43.76,
+    "text": " Maybe next time.",
+    "words": [
+      {
+        "start": 43.22,
+        "end": 43.34,
+        "word": " Maybe"
+      },
+      {
+        "start": 43.34,
+        "end": 43.52,
+        "word": " next"
+      },
+      {
+        "start": 43.52,
+        "end": 43.76,
+        "word": " time."
+      }
+    ]
+  },
+  {
+    "start": 45.7,
+    "end": 46.94,
+    "text": " Daddy will blow out the candles with you.",
+    "words": [
+      {
+        "start": 45.7,
+        "end": 45.98,
+        "word": " Daddy"
+      },
+      {
+        "start": 45.98,
+        "end": 46.14,
+        "word": " will"
+      },
+      {
+        "start": 46.14,
+        "end": 46.28,
+        "word": " blow"
+      },
+      {
+        "start": 46.28,
+        "end": 46.36,
+        "word": " out"
+      },
+      {
+        "start": 46.36,
+        "end": 46.44,
+        "word": " the"
+      },
+      {
+        "start": 46.44,
+        "end": 46.64,
+        "word": " candles"
+      },
+      {
+        "start": 46.64,
+        "end": 46.82,
+        "word": " with"
+      },
+      {
+        "start": 46.82,
+        "end": 46.94,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 55.22,
+    "end": 56.8,
+    "text": " Mom, I haven't had any yet.",
+    "words": [
+      {
+        "start": 55.22,
+        "end": 55.58,
+        "word": " Mom,"
+      },
+      {
+        "start": 55.88,
+        "end": 55.98,
+        "word": " I"
+      },
+      {
+        "start": 55.98,
+        "end": 56.22,
+        "word": " haven't"
+      },
+      {
+        "start": 56.22,
+        "end": 56.4,
+        "word": " had"
+      },
+      {
+        "start": 56.4,
+        "end": 56.54,
+        "word": " any"
+      },
+      {
+        "start": 56.54,
+        "end": 56.8,
+        "word": " yet."
+      }
+    ]
+  },
+  {
+    "start": 58.28,
+    "end": 59.98,
+    "text": " Save this piece for Emily. She might want some more tonight.",
+    "words": [
+      {
+        "start": 58.28,
+        "end": 58.56,
+        "word": " Save"
+      },
+      {
+        "start": 58.56,
+        "end": 58.7,
+        "word": " this"
+      },
+      {
+        "start": 58.7,
+        "end": 58.84,
+        "word": " piece"
+      },
+      {
+        "start": 58.84,
+        "end": 58.98,
+        "word": " for"
+      },
+      {
+        "start": 58.98,
+        "end": 59.1,
+        "word": " Emily."
+      },
+      {
+        "start": 59.36,
+        "end": 59.36,
+        "word": " She"
+      },
+      {
+        "start": 59.36,
+        "end": 59.48,
+        "word": " might"
+      },
+      {
+        "start": 59.48,
+        "end": 59.6,
+        "word": " want"
+      },
+      {
+        "start": 59.6,
+        "end": 59.72,
+        "word": " some"
+      },
+      {
+        "start": 59.72,
+        "end": 59.84,
+        "word": " more"
+      },
+      {
+        "start": 59.84,
+        "end": 59.98,
+        "word": " tonight."
+      }
+    ]
+  },
+  {
+    "start": 60.8,
+    "end": 62.24,
+    "text": " I didn't eat a single bite.",
+    "words": [
+      {
+        "start": 60.8,
+        "end": 61.08,
+        "word": " I"
+      },
+      {
+        "start": 61.08,
+        "end": 61.28,
+        "word": " didn't"
+      },
+      {
+        "start": 61.28,
+        "end": 61.42,
+        "word": " eat"
+      },
+      {
+        "start": 61.42,
+        "end": 61.52,
+        "word": " a"
+      },
+      {
+        "start": 61.52,
+        "end": 61.88,
+        "word": " single"
+      },
+      {
+        "start": 61.88,
+        "end": 62.24,
+        "word": " bite."
+      }
+    ]
+  },
+  {
+    "start": 63.16,
+    "end": 64.7,
+    "text": " It's just a piece of cake. I'll buy you another tomorrow.",
+    "words": [
+      {
+        "start": 63.16,
+        "end": 63.44,
+        "word": " It's"
+      },
+      {
+        "start": 63.44,
+        "end": 63.54,
+        "word": " just"
+      },
+      {
+        "start": 63.54,
+        "end": 63.6,
+        "word": " a"
+      },
+      {
+        "start": 63.6,
+        "end": 63.74,
+        "word": " piece"
+      },
+      {
+        "start": 63.74,
+        "end": 63.86,
+        "word": " of"
+      },
+      {
+        "start": 63.86,
+        "end": 63.98,
+        "word": " cake."
+      },
+      {
+        "start": 64.08,
+        "end": 64.08,
+        "word": " I'll"
+      },
+      {
+        "start": 64.08,
+        "end": 64.26,
+        "word": " buy"
+      },
+      {
+        "start": 64.26,
+        "end": 64.34,
+        "word": " you"
+      },
+      {
+        "start": 64.34,
+        "end": 64.48,
+        "word": " another"
+      },
+      {
+        "start": 64.48,
+        "end": 64.7,
+        "word": " tomorrow."
+      }
+    ]
+  },
+  {
+    "start": 65.68,
+    "end": 66.64,
+    "text": " Emily, come open your presents.",
+    "words": [
+      {
+        "start": 65.68,
+        "end": 65.96,
+        "word": " Emily,"
+      },
+      {
+        "start": 66.06,
+        "end": 66.18,
+        "word": " come"
+      },
+      {
+        "start": 66.18,
+        "end": 66.32,
+        "word": " open"
+      },
+      {
+        "start": 66.32,
+        "end": 66.42,
+        "word": " your"
+      },
+      {
+        "start": 66.42,
+        "end": 66.64,
+        "word": " presents."
+      }
+    ]
+  }
+]
