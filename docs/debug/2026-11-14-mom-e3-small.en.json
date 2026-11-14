@@ -1,0 +1,698 @@
+[
+  {
+    "start": 1.3800000000000003,
+    "end": 6.6,
+    "text": " You want me to pretend I'm you? Noah quits school. Everything he earns goes to his girlfriend.",
+    "words": [
+      {
+        "start": 1.3800000000000003,
+        "end": 1.9,
+        "word": " You"
+      },
+      {
+        "start": 1.9,
+        "end": 2.08,
+        "word": " want"
+      },
+      {
+        "start": 2.08,
+        "end": 2.2,
+        "word": " me"
+      },
+      {
+        "start": 2.2,
+        "end": 2.3,
+        "word": " to"
+      },
+      {
+        "start": 2.3,
+        "end": 2.56,
+        "word": " pretend"
+      },
+      {
+        "start": 2.56,
+        "end": 2.84,
+        "word": " I'm"
+      },
+      {
+        "start": 2.84,
+        "end": 3.04,
+        "word": " you?"
+      },
+      {
+        "start": 3.52,
+        "end": 3.56,
+        "word": " Noah"
+      },
+      {
+        "start": 3.56,
+        "end": 3.88,
+        "word": " quits"
+      },
+      {
+        "start": 3.88,
+        "end": 4.2,
+        "word": " school."
+      },
+      {
+        "start": 4.82,
+        "end": 5.16,
+        "word": " Everything"
+      },
+      {
+        "start": 5.16,
+        "end": 5.4,
+        "word": " he"
+      },
+      {
+        "start": 5.4,
+        "end": 5.66,
+        "word": " earns"
+      },
+      {
+        "start": 5.66,
+        "end": 5.88,
+        "word": " goes"
+      },
+      {
+        "start": 5.88,
+        "end": 6.06,
+        "word": " to"
+      },
+      {
+        "start": 6.06,
+        "end": 6.2,
+        "word": " his"
+      },
+      {
+        "start": 6.2,
+        "end": 6.6,
+        "word": " girlfriend."
+      }
+    ]
+  },
+  {
+    "start": 9.04,
+    "end": 12.38,
+    "text": " Dylan skips school. His gym keeps promising he'll go pro.",
+    "words": [
+      {
+        "start": 9.04,
+        "end": 9.18,
+        "word": " Dylan"
+      },
+      {
+        "start": 9.18,
+        "end": 9.52,
+        "word": " skips"
+      },
+      {
+        "start": 9.52,
+        "end": 9.9,
+        "word": " school."
+      },
+      {
+        "start": 10.6,
+        "end": 10.76,
+        "word": " His"
+      },
+      {
+        "start": 10.76,
+        "end": 10.96,
+        "word": " gym"
+      },
+      {
+        "start": 10.96,
+        "end": 11.22,
+        "word": " keeps"
+      },
+      {
+        "start": 11.22,
+        "end": 11.66,
+        "word": " promising"
+      },
+      {
+        "start": 11.66,
+        "end": 11.94,
+        "word": " he'll"
+      },
+      {
+        "start": 11.94,
+        "end": 12.06,
+        "word": " go"
+      },
+      {
+        "start": 12.06,
+        "end": 12.38,
+        "word": " pro."
+      }
+    ]
+  },
+  {
+    "start": 16.28,
+    "end": 18.24,
+    "text": " For this much, they'd better teach him to fly.",
+    "words": [
+      {
+        "start": 16.28,
+        "end": 16.8,
+        "word": " For"
+      },
+      {
+        "start": 16.8,
+        "end": 16.94,
+        "word": " this"
+      },
+      {
+        "start": 16.94,
+        "end": 17.14,
+        "word": " much,"
+      },
+      {
+        "start": 17.24,
+        "end": 17.36,
+        "word": " they'd"
+      },
+      {
+        "start": 17.36,
+        "end": 17.5,
+        "word": " better"
+      },
+      {
+        "start": 17.5,
+        "end": 17.68,
+        "word": " teach"
+      },
+      {
+        "start": 17.68,
+        "end": 17.82,
+        "word": " him"
+      },
+      {
+        "start": 17.82,
+        "end": 17.96,
+        "word": " to"
+      },
+      {
+        "start": 17.96,
+        "end": 18.24,
+        "word": " fly."
+      }
+    ]
+  },
+  {
+    "start": 22.08,
+    "end": 26.02,
+    "text": " Chloe gets bullied, even in her own home. Where's their father?",
+    "words": [
+      {
+        "start": 22.08,
+        "end": 22.18,
+        "word": " Chloe"
+      },
+      {
+        "start": 22.18,
+        "end": 22.44,
+        "word": " gets"
+      },
+      {
+        "start": 22.44,
+        "end": 22.78,
+        "word": " bullied,"
+      },
+      {
+        "start": 23.34,
+        "end": 23.64,
+        "word": " even"
+      },
+      {
+        "start": 23.64,
+        "end": 23.82,
+        "word": " in"
+      },
+      {
+        "start": 23.82,
+        "end": 23.94,
+        "word": " her"
+      },
+      {
+        "start": 23.94,
+        "end": 24.12,
+        "word": " own"
+      },
+      {
+        "start": 24.12,
+        "end": 24.52,
+        "word": " home."
+      },
+      {
+        "start": 25.38,
+        "end": 25.6,
+        "word": " Where's"
+      },
+      {
+        "start": 25.6,
+        "end": 25.72,
+        "word": " their"
+      },
+      {
+        "start": 25.72,
+        "end": 26.02,
+        "word": " father?"
+      }
+    ]
+  },
+  {
+    "start": 27.14,
+    "end": 31.02,
+    "text": " Making her apologize to the people who hurt her. And you let him?",
+    "words": [
+      {
+        "start": 27.14,
+        "end": 27.66,
+        "word": " Making"
+      },
+      {
+        "start": 27.66,
+        "end": 27.98,
+        "word": " her"
+      },
+      {
+        "start": 27.98,
+        "end": 28.32,
+        "word": " apologize"
+      },
+      {
+        "start": 28.32,
+        "end": 28.76,
+        "word": " to"
+      },
+      {
+        "start": 28.76,
+        "end": 28.86,
+        "word": " the"
+      },
+      {
+        "start": 28.86,
+        "end": 29.06,
+        "word": " people"
+      },
+      {
+        "start": 29.06,
+        "end": 29.26,
+        "word": " who"
+      },
+      {
+        "start": 29.26,
+        "end": 29.46,
+        "word": " hurt"
+      },
+      {
+        "start": 29.46,
+        "end": 29.96,
+        "word": " her."
+      },
+      {
+        "start": 30.32,
+        "end": 30.44,
+        "word": " And"
+      },
+      {
+        "start": 30.44,
+        "end": 30.58,
+        "word": " you"
+      },
+      {
+        "start": 30.58,
+        "end": 30.78,
+        "word": " let"
+      },
+      {
+        "start": 30.78,
+        "end": 31.02,
+        "word": " him?"
+      }
+    ]
+  },
+  {
+    "start": 32.44,
+    "end": 36.26,
+    "text": " I kept telling her I'd handle it. I never did.",
+    "words": [
+      {
+        "start": 32.44,
+        "end": 32.96,
+        "word": " I"
+      },
+      {
+        "start": 32.96,
+        "end": 33.1,
+        "word": " kept"
+      },
+      {
+        "start": 33.1,
+        "end": 33.4,
+        "word": " telling"
+      },
+      {
+        "start": 33.4,
+        "end": 33.58,
+        "word": " her"
+      },
+      {
+        "start": 33.58,
+        "end": 33.78,
+        "word": " I'd"
+      },
+      {
+        "start": 33.78,
+        "end": 34.02,
+        "word": " handle"
+      },
+      {
+        "start": 34.02,
+        "end": 34.5,
+        "word": " it."
+      },
+      {
+        "start": 35.38,
+        "end": 35.7,
+        "word": " I"
+      },
+      {
+        "start": 35.7,
+        "end": 35.88,
+        "word": " never"
+      },
+      {
+        "start": 35.88,
+        "end": 36.26,
+        "word": " did."
+      }
+    ]
+  },
+  {
+    "start": 40.60000000000001,
+    "end": 44.52,
+    "text": " This is my last wish. Please take care of my children.",
+    "words": [
+      {
+        "start": 40.60000000000001,
+        "end": 41.120000000000005,
+        "word": " This"
+      },
+      {
+        "start": 41.120000000000005,
+        "end": 41.64,
+        "word": " is"
+      },
+      {
+        "start": 41.64,
+        "end": 41.82,
+        "word": " my"
+      },
+      {
+        "start": 41.82,
+        "end": 42.12,
+        "word": " last"
+      },
+      {
+        "start": 42.12,
+        "end": 42.42,
+        "word": " wish."
+      },
+      {
+        "start": 43.38,
+        "end": 43.64,
+        "word": " Please"
+      },
+      {
+        "start": 43.64,
+        "end": 43.84,
+        "word": " take"
+      },
+      {
+        "start": 43.84,
+        "end": 44.04,
+        "word": " care"
+      },
+      {
+        "start": 44.04,
+        "end": 44.16,
+        "word": " of"
+      },
+      {
+        "start": 44.16,
+        "end": 44.32,
+        "word": " my"
+      },
+      {
+        "start": 44.32,
+        "end": 44.52,
+        "word": " children."
+      }
+    ]
+  },
+  {
+    "start": 45.72,
+    "end": 51.38,
+    "text": " I promise. I'll take care of them. You keep fighting. They still need you.",
+    "words": [
+      {
+        "start": 45.72,
+        "end": 46.1,
+        "word": " I"
+      },
+      {
+        "start": 46.1,
+        "end": 46.38,
+        "word": " promise."
+      },
+      {
+        "start": 47.52,
+        "end": 47.72,
+        "word": " I'll"
+      },
+      {
+        "start": 47.72,
+        "end": 47.88,
+        "word": " take"
+      },
+      {
+        "start": 47.88,
+        "end": 48.06,
+        "word": " care"
+      },
+      {
+        "start": 48.06,
+        "end": 48.2,
+        "word": " of"
+      },
+      {
+        "start": 48.2,
+        "end": 48.4,
+        "word": " them."
+      },
+      {
+        "start": 48.98,
+        "end": 49.18,
+        "word": " You"
+      },
+      {
+        "start": 49.18,
+        "end": 49.36,
+        "word": " keep"
+      },
+      {
+        "start": 49.36,
+        "end": 49.78,
+        "word": " fighting."
+      },
+      {
+        "start": 50.38,
+        "end": 50.64,
+        "word": " They"
+      },
+      {
+        "start": 50.64,
+        "end": 50.88,
+        "word": " still"
+      },
+      {
+        "start": 50.88,
+        "end": 51.12,
+        "word": " need"
+      },
+      {
+        "start": 51.12,
+        "end": 51.38,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 59.4,
+    "end": 61.76,
+    "text": " My children are in your hands now, Maggie.",
+    "words": [
+      {
+        "start": 59.4,
+        "end": 60.0,
+        "word": " My"
+      },
+      {
+        "start": 60.0,
+        "end": 60.26,
+        "word": " children"
+      },
+      {
+        "start": 60.26,
+        "end": 60.58,
+        "word": " are"
+      },
+      {
+        "start": 60.58,
+        "end": 60.7,
+        "word": " in"
+      },
+      {
+        "start": 60.7,
+        "end": 60.84,
+        "word": " your"
+      },
+      {
+        "start": 60.84,
+        "end": 61.14,
+        "word": " hands"
+      },
+      {
+        "start": 61.14,
+        "end": 61.44,
+        "word": " now,"
+      },
+      {
+        "start": 61.76,
+        "end": 61.76,
+        "word": " Maggie."
+      }
+    ]
+  },
+  {
+    "start": 66.52000000000001,
+    "end": 68.32,
+    "text": " Apologize to Sienna. Now!",
+    "words": [
+      {
+        "start": 66.52000000000001,
+        "end": 67.12,
+        "word": " Apologize"
+      },
+      {
+        "start": 67.12,
+        "end": 67.3,
+        "word": " to"
+      },
+      {
+        "start": 67.3,
+        "end": 67.7,
+        "word": " Sienna."
+      },
+      {
+        "start": 68.06,
+        "end": 68.32,
+        "word": " Now!"
+      }
+    ]
+  },
+  {
+    "start": 69.3,
+    "end": 70.7,
+    "text": " I didn't tear it.",
+    "words": [
+      {
+        "start": 69.3,
+        "end": 69.74,
+        "word": " I"
+      },
+      {
+        "start": 69.74,
+        "end": 70.04,
+        "word": " didn't"
+      },
+      {
+        "start": 70.04,
+        "end": 70.22,
+        "word": " tear"
+      },
+      {
+        "start": 70.22,
+        "end": 70.7,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 73.0,
+    "end": 74.06,
+    "text": " Put it down.",
+    "words": [
+      {
+        "start": 73.0,
+        "end": 73.6,
+        "word": " Put"
+      },
+      {
+        "start": 73.6,
+        "end": 73.76,
+        "word": " it"
+      },
+      {
+        "start": 73.76,
+        "end": 74.06,
+        "word": " down."
+      }
+    ]
+  },
+  {
+    "start": 79.7,
+    "end": 81.34,
+    "text": " Who threw that bowl at my daughter?",
+    "words": [
+      {
+        "start": 79.7,
+        "end": 80.3,
+        "word": " Who"
+      },
+      {
+        "start": 80.3,
+        "end": 80.5,
+        "word": " threw"
+      },
+      {
+        "start": 80.5,
+        "end": 80.66,
+        "word": " that"
+      },
+      {
+        "start": 80.66,
+        "end": 80.84,
+        "word": " bowl"
+      },
+      {
+        "start": 80.84,
+        "end": 80.98,
+        "word": " at"
+      },
+      {
+        "start": 80.98,
+        "end": 81.1,
+        "word": " my"
+      },
+      {
+        "start": 81.1,
+        "end": 81.34,
+        "word": " daughter?"
+      }
+    ]
+  }
+]

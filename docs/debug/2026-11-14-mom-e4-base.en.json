@@ -1,0 +1,891 @@
+[
+  {
+    "start": 0.6199999999999979,
+    "end": 1.48,
+    "text": " I threw it.",
+    "words": [
+      {
+        "start": 0.6199999999999979,
+        "end": 1.02,
+        "word": " I"
+      },
+      {
+        "start": 1.02,
+        "end": 1.28,
+        "word": " threw"
+      },
+      {
+        "start": 1.28,
+        "end": 1.48,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 2.18,
+    "end": 3.46,
+    "text": " She needs to learn some manners.",
+    "words": [
+      {
+        "start": 2.18,
+        "end": 2.46,
+        "word": " She"
+      },
+      {
+        "start": 2.46,
+        "end": 2.62,
+        "word": " needs"
+      },
+      {
+        "start": 2.62,
+        "end": 2.82,
+        "word": " to"
+      },
+      {
+        "start": 2.82,
+        "end": 2.98,
+        "word": " learn"
+      },
+      {
+        "start": 2.98,
+        "end": 3.2,
+        "word": " some"
+      },
+      {
+        "start": 3.2,
+        "end": 3.46,
+        "word": " manners."
+      }
+    ]
+  },
+  {
+    "start": 4.4,
+    "end": 5.26,
+    "text": " Then use your words.",
+    "words": [
+      {
+        "start": 4.4,
+        "end": 4.6,
+        "word": " Then"
+      },
+      {
+        "start": 4.6,
+        "end": 4.76,
+        "word": " use"
+      },
+      {
+        "start": 4.76,
+        "end": 4.94,
+        "word": " your"
+      },
+      {
+        "start": 4.94,
+        "end": 5.26,
+        "word": " words."
+      }
+    ]
+  },
+  {
+    "start": 6.4,
+    "end": 7.56,
+    "text": " Don't throw things at her.",
+    "words": [
+      {
+        "start": 6.4,
+        "end": 6.8,
+        "word": " Don't"
+      },
+      {
+        "start": 6.8,
+        "end": 6.96,
+        "word": " throw"
+      },
+      {
+        "start": 6.96,
+        "end": 7.18,
+        "word": " things"
+      },
+      {
+        "start": 7.18,
+        "end": 7.38,
+        "word": " at"
+      },
+      {
+        "start": 7.38,
+        "end": 7.56,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 8.26,
+    "end": 9.12,
+    "text": " She ruined my dress.",
+    "words": [
+      {
+        "start": 8.26,
+        "end": 8.48,
+        "word": " She"
+      },
+      {
+        "start": 8.48,
+        "end": 8.68,
+        "word": " ruined"
+      },
+      {
+        "start": 8.68,
+        "end": 8.88,
+        "word": " my"
+      },
+      {
+        "start": 8.88,
+        "end": 9.12,
+        "word": " dress."
+      }
+    ]
+  },
+  {
+    "start": 10.02,
+    "end": 11.28,
+    "text": " All I asked for was an apology.",
+    "words": [
+      {
+        "start": 10.02,
+        "end": 10.26,
+        "word": " All"
+      },
+      {
+        "start": 10.26,
+        "end": 10.4,
+        "word": " I"
+      },
+      {
+        "start": 10.4,
+        "end": 10.54,
+        "word": " asked"
+      },
+      {
+        "start": 10.54,
+        "end": 10.8,
+        "word": " for"
+      },
+      {
+        "start": 10.8,
+        "end": 10.96,
+        "word": " was"
+      },
+      {
+        "start": 10.96,
+        "end": 11.04,
+        "word": " an"
+      },
+      {
+        "start": 11.04,
+        "end": 11.28,
+        "word": " apology."
+      }
+    ]
+  },
+  {
+    "start": 12.02,
+    "end": 12.88,
+    "text": " It wasn't me.",
+    "words": [
+      {
+        "start": 12.02,
+        "end": 12.42,
+        "word": " It"
+      },
+      {
+        "start": 12.42,
+        "end": 12.7,
+        "word": " wasn't"
+      },
+      {
+        "start": 12.7,
+        "end": 12.88,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 13.74,
+    "end": 14.94,
+    "text": " You were holding it!",
+    "words": [
+      {
+        "start": 13.74,
+        "end": 14.14,
+        "word": " You"
+      },
+      {
+        "start": 14.14,
+        "end": 14.26,
+        "word": " were"
+      },
+      {
+        "start": 14.26,
+        "end": 14.6,
+        "word": " holding"
+      },
+      {
+        "start": 14.6,
+        "end": 14.94,
+        "word": " it!"
+      }
+    ]
+  },
+  {
+    "start": 15.24,
+    "end": 15.9,
+    "text": " Tell me what happened.",
+    "words": [
+      {
+        "start": 15.24,
+        "end": 15.38,
+        "word": " Tell"
+      },
+      {
+        "start": 15.38,
+        "end": 15.5,
+        "word": " me"
+      },
+      {
+        "start": 15.5,
+        "end": 15.62,
+        "word": " what"
+      },
+      {
+        "start": 15.62,
+        "end": 15.9,
+        "word": " happened."
+      }
+    ]
+  },
+  {
+    "start": 16.76,
+    "end": 19.08,
+    "text": " She asked me to hang it up. I only touched the hanger.",
+    "words": [
+      {
+        "start": 16.76,
+        "end": 17.16,
+        "word": " She"
+      },
+      {
+        "start": 17.16,
+        "end": 17.34,
+        "word": " asked"
+      },
+      {
+        "start": 17.34,
+        "end": 17.52,
+        "word": " me"
+      },
+      {
+        "start": 17.52,
+        "end": 17.58,
+        "word": " to"
+      },
+      {
+        "start": 17.58,
+        "end": 17.74,
+        "word": " hang"
+      },
+      {
+        "start": 17.74,
+        "end": 17.86,
+        "word": " it"
+      },
+      {
+        "start": 17.86,
+        "end": 18.0,
+        "word": " up."
+      },
+      {
+        "start": 18.14,
+        "end": 18.2,
+        "word": " I"
+      },
+      {
+        "start": 18.2,
+        "end": 18.36,
+        "word": " only"
+      },
+      {
+        "start": 18.36,
+        "end": 18.64,
+        "word": " touched"
+      },
+      {
+        "start": 18.64,
+        "end": 18.84,
+        "word": " the"
+      },
+      {
+        "start": 18.84,
+        "end": 19.08,
+        "word": " hanger."
+      }
+    ]
+  },
+  {
+    "start": 19.58,
+    "end": 21.24,
+    "text": " It was fine before I gave it to you.",
+    "words": [
+      {
+        "start": 19.58,
+        "end": 19.76,
+        "word": " It"
+      },
+      {
+        "start": 19.76,
+        "end": 19.86,
+        "word": " was"
+      },
+      {
+        "start": 19.86,
+        "end": 20.18,
+        "word": " fine"
+      },
+      {
+        "start": 20.18,
+        "end": 20.44,
+        "word": " before"
+      },
+      {
+        "start": 20.44,
+        "end": 20.68,
+        "word": " I"
+      },
+      {
+        "start": 20.68,
+        "end": 20.82,
+        "word": " gave"
+      },
+      {
+        "start": 20.82,
+        "end": 20.96,
+        "word": " it"
+      },
+      {
+        "start": 20.96,
+        "end": 21.08,
+        "word": " to"
+      },
+      {
+        "start": 21.08,
+        "end": 21.24,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 29.299999999999994,
+    "end": 30.2,
+    "text": " Careful! That's expensive.",
+    "words": [
+      {
+        "start": 29.299999999999994,
+        "end": 29.66,
+        "word": " Careful!"
+      },
+      {
+        "start": 29.78,
+        "end": 29.94,
+        "word": " That's"
+      },
+      {
+        "start": 29.94,
+        "end": 30.2,
+        "word": " expensive."
+      }
+    ]
+  },
+  {
+    "start": 31.8,
+    "end": 33.18,
+    "text": " Then why was it glued together?",
+    "words": [
+      {
+        "start": 31.8,
+        "end": 32.16,
+        "word": " Then"
+      },
+      {
+        "start": 32.16,
+        "end": 32.3,
+        "word": " why"
+      },
+      {
+        "start": 32.3,
+        "end": 32.48,
+        "word": " was"
+      },
+      {
+        "start": 32.48,
+        "end": 32.58,
+        "word": " it"
+      },
+      {
+        "start": 32.58,
+        "end": 32.72,
+        "word": " glued"
+      },
+      {
+        "start": 32.72,
+        "end": 33.18,
+        "word": " together?"
+      }
+    ]
+  },
+  {
+    "start": 34.65999999999999,
+    "end": 35.98,
+    "text": " It was already torn.",
+    "words": [
+      {
+        "start": 34.65999999999999,
+        "end": 35.019999999999996,
+        "word": " It"
+      },
+      {
+        "start": 35.019999999999996,
+        "end": 35.38,
+        "word": " was"
+      },
+      {
+        "start": 35.38,
+        "end": 35.62,
+        "word": " already"
+      },
+      {
+        "start": 35.62,
+        "end": 35.98,
+        "word": " torn."
+      }
+    ]
+  },
+  {
+    "start": 36.58,
+    "end": 37.58,
+    "text": " Maybe the store fixed it.",
+    "words": [
+      {
+        "start": 36.58,
+        "end": 36.66,
+        "word": " Maybe"
+      },
+      {
+        "start": 36.66,
+        "end": 36.86,
+        "word": " the"
+      },
+      {
+        "start": 36.86,
+        "end": 37.04,
+        "word": " store"
+      },
+      {
+        "start": 37.04,
+        "end": 37.28,
+        "word": " fixed"
+      },
+      {
+        "start": 37.28,
+        "end": 37.58,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 38.62,
+    "end": 39.24,
+    "text": " How would I know?",
+    "words": [
+      {
+        "start": 38.62,
+        "end": 38.84,
+        "word": " How"
+      },
+      {
+        "start": 38.84,
+        "end": 38.96,
+        "word": " would"
+      },
+      {
+        "start": 38.96,
+        "end": 39.08,
+        "word": " I"
+      },
+      {
+        "start": 39.08,
+        "end": 39.24,
+        "word": " know?"
+      }
+    ]
+  },
+  {
+    "start": 40.1,
+    "end": 41.16,
+    "text": " You just said it was fine.",
+    "words": [
+      {
+        "start": 40.1,
+        "end": 40.34,
+        "word": " You"
+      },
+      {
+        "start": 40.34,
+        "end": 40.48,
+        "word": " just"
+      },
+      {
+        "start": 40.48,
+        "end": 40.66,
+        "word": " said"
+      },
+      {
+        "start": 40.66,
+        "end": 40.76,
+        "word": " it"
+      },
+      {
+        "start": 40.76,
+        "end": 40.86,
+        "word": " was"
+      },
+      {
+        "start": 40.86,
+        "end": 41.16,
+        "word": " fine."
+      }
+    ]
+  },
+  {
+    "start": 47.22,
+    "end": 48.32,
+    "text": " Richard, I don't want to fight.",
+    "words": [
+      {
+        "start": 47.22,
+        "end": 47.58,
+        "word": " Richard,"
+      },
+      {
+        "start": 47.74,
+        "end": 47.82,
+        "word": " I"
+      },
+      {
+        "start": 47.82,
+        "end": 47.96,
+        "word": " don't"
+      },
+      {
+        "start": 47.96,
+        "end": 48.06,
+        "word": " want"
+      },
+      {
+        "start": 48.06,
+        "end": 48.14,
+        "word": " to"
+      },
+      {
+        "start": 48.14,
+        "end": 48.32,
+        "word": " fight."
+      }
+    ]
+  },
+  {
+    "start": 49.2,
+    "end": 50.28,
+    "text": " I just want my dress back.",
+    "words": [
+      {
+        "start": 49.2,
+        "end": 49.38,
+        "word": " I"
+      },
+      {
+        "start": 49.38,
+        "end": 49.5,
+        "word": " just"
+      },
+      {
+        "start": 49.5,
+        "end": 49.66,
+        "word": " want"
+      },
+      {
+        "start": 49.66,
+        "end": 49.82,
+        "word": " my"
+      },
+      {
+        "start": 49.82,
+        "end": 50.0,
+        "word": " dress"
+      },
+      {
+        "start": 50.0,
+        "end": 50.28,
+        "word": " back."
+      }
+    ]
+  },
+  {
+    "start": 50.28,
+    "end": 51.48,
+    "text": " Chloe, apologize.",
+    "words": [
+      {
+        "start": 50.28,
+        "end": 50.98,
+        "word": " Chloe,"
+      },
+      {
+        "start": 51.12,
+        "end": 51.48,
+        "word": " apologize."
+      }
+    ]
+  },
+  {
+    "start": 52.56,
+    "end": 53.22,
+    "text": " We'll pay for the repair.",
+    "words": [
+      {
+        "start": 52.56,
+        "end": 52.58,
+        "word": " We'll"
+      },
+      {
+        "start": 52.58,
+        "end": 52.72,
+        "word": " pay"
+      },
+      {
+        "start": 52.72,
+        "end": 52.88,
+        "word": " for"
+      },
+      {
+        "start": 52.88,
+        "end": 52.94,
+        "word": " the"
+      },
+      {
+        "start": 52.94,
+        "end": 53.22,
+        "word": " repair."
+      }
+    ]
+  },
+  {
+    "start": 54.620000000000005,
+    "end": 56.56,
+    "text": " It was already torn. Look.",
+    "words": [
+      {
+        "start": 54.620000000000005,
+        "end": 55.14,
+        "word": " It"
+      },
+      {
+        "start": 55.14,
+        "end": 55.66,
+        "word": " was"
+      },
+      {
+        "start": 55.66,
+        "end": 55.92,
+        "word": " already"
+      },
+      {
+        "start": 55.92,
+        "end": 56.18,
+        "word": " torn."
+      },
+      {
+        "start": 56.5,
+        "end": 56.56,
+        "word": " Look."
+      }
+    ]
+  },
+  {
+    "start": 57.38,
+    "end": 57.76,
+    "text": " It's a dress.",
+    "words": [
+      {
+        "start": 57.38,
+        "end": 57.5,
+        "word": " It's"
+      },
+      {
+        "start": 57.5,
+        "end": 57.5,
+        "word": " a"
+      },
+      {
+        "start": 57.5,
+        "end": 57.76,
+        "word": " dress."
+      }
+    ]
+  },
+  {
+    "start": 59.1,
+    "end": 60.14,
+    "text": " Don't embarrass Sienna over it.",
+    "words": [
+      {
+        "start": 59.1,
+        "end": 59.16,
+        "word": " Don't"
+      },
+      {
+        "start": 59.16,
+        "end": 59.42,
+        "word": " embarrass"
+      },
+      {
+        "start": 59.42,
+        "end": 59.76,
+        "word": " Sienna"
+      },
+      {
+        "start": 59.76,
+        "end": 60.0,
+        "word": " over"
+      },
+      {
+        "start": 60.0,
+        "end": 60.14,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 61.260000000000005,
+    "end": 62.8,
+    "text": " So Chloe has to take the blame?",
+    "words": [
+      {
+        "start": 61.260000000000005,
+        "end": 61.78,
+        "word": " So"
+      },
+      {
+        "start": 61.78,
+        "end": 61.98,
+        "word": " Chloe"
+      },
+      {
+        "start": 61.98,
+        "end": 62.24,
+        "word": " has"
+      },
+      {
+        "start": 62.24,
+        "end": 62.38,
+        "word": " to"
+      },
+      {
+        "start": 62.38,
+        "end": 62.54,
+        "word": " take"
+      },
+      {
+        "start": 62.54,
+        "end": 62.66,
+        "word": " the"
+      },
+      {
+        "start": 62.66,
+        "end": 62.8,
+        "word": " blame?"
+      }
+    ]
+  },
+  {
+    "start": 63.42,
+    "end": 65.26,
+    "text": " One apology, and we can all eat.",
+    "words": [
+      {
+        "start": 63.42,
+        "end": 63.58,
+        "word": " One"
+      },
+      {
+        "start": 63.58,
+        "end": 63.86,
+        "word": " apology,"
+      },
+      {
+        "start": 64.54,
+        "end": 64.72,
+        "word": " and"
+      },
+      {
+        "start": 64.72,
+        "end": 64.82,
+        "word": " we"
+      },
+      {
+        "start": 64.82,
+        "end": 64.94,
+        "word": " can"
+      },
+      {
+        "start": 64.94,
+        "end": 65.08,
+        "word": " all"
+      },
+      {
+        "start": 65.08,
+        "end": 65.26,
+        "word": " eat."
+      }
+    ]
+  },
+  {
+    "start": 68.02000000000001,
+    "end": 69.38,
+    "text": " Which one is your daughter?",
+    "words": [
+      {
+        "start": 68.02000000000001,
+        "end": 68.54,
+        "word": " Which"
+      },
+      {
+        "start": 68.54,
+        "end": 68.78,
+        "word": " one"
+      },
+      {
+        "start": 68.78,
+        "end": 68.96,
+        "word": " is"
+      },
+      {
+        "start": 68.96,
+        "end": 69.08,
+        "word": " your"
+      },
+      {
+        "start": 69.08,
+        "end": 69.38,
+        "word": " daughter?"
+      }
+    ]
+  }
+]
