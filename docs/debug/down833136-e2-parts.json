@@ -1,0 +1,47 @@
+[
+  {
+    "episode": 2,
+    "part": 1,
+    "source_start": 0,
+    "source_end": 41.5,
+    "duration": 41.5,
+    "sha256": "3210ed2a038ae166f313d72b3644269aef789dbbd7d54d5404fdf1b66e7cf91c",
+    "bytes": 52132701,
+    "path": "/downloads/down-e2p1.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 41.518
+  },
+  {
+    "episode": 2,
+    "part": 2,
+    "source_start": 41.5,
+    "source_end": 88.5,
+    "duration": 47.0,
+    "sha256": "65df2ece81f3632176d9e40bcde9bc5101f4f22bc7ff04a067727d698c9c2fdc",
+    "bytes": 50319539,
+    "path": "/downloads/down-e2p2.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 47.0
+  },
+  {
+    "episode": 2,
+    "part": 3,
+    "source_start": 88.5,
+    "source_end": 131.875,
+    "duration": 43.375,
+    "sha256": "e4d90f7ebad0b86432c598d4fb8f21948592b9332ece1027b887ee47b5c90f8b",
+    "bytes": 48441180,
+    "path": "/downloads/down-e2p3.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 43.375
+  }
+]

@@ -1,0 +1,915 @@
+[
+  {
+    "start": 0.0,
+    "end": 1.88,
+    "text": " Hey! Help me!",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.46,
+        "word": " Hey!"
+      },
+      {
+        "start": 1.22,
+        "end": 1.44,
+        "word": " Help"
+      },
+      {
+        "start": 1.44,
+        "end": 1.88,
+        "word": " me!"
+      }
+    ]
+  },
+  {
+    "start": 7.100000000000001,
+    "end": 16.68,
+    "text": " What the hell is going on?",
+    "words": [
+      {
+        "start": 7.100000000000001,
+        "end": 7.82,
+        "word": " What"
+      },
+      {
+        "start": 7.82,
+        "end": 7.82,
+        "word": " the"
+      },
+      {
+        "start": 7.82,
+        "end": 16.02,
+        "word": " hell"
+      },
+      {
+        "start": 16.02,
+        "end": 16.16,
+        "word": " is"
+      },
+      {
+        "start": 16.16,
+        "end": 16.32,
+        "word": " going"
+      },
+      {
+        "start": 16.32,
+        "end": 16.68,
+        "word": " on?"
+      }
+    ]
+  },
+  {
+    "start": 20.2,
+    "end": 21.02,
+    "text": " You attacked me!",
+    "words": [
+      {
+        "start": 19.96,
+        "end": 20.32,
+        "word": " You"
+      },
+      {
+        "start": 20.32,
+        "end": 20.62,
+        "word": " attacked"
+      },
+      {
+        "start": 20.62,
+        "end": 21.02,
+        "word": " me!"
+      }
+    ]
+  },
+  {
+    "start": 21.76,
+    "end": 22.84,
+    "text": " She was about to hit Emma.",
+    "words": [
+      {
+        "start": 21.76,
+        "end": 22.04,
+        "word": " She"
+      },
+      {
+        "start": 22.04,
+        "end": 22.16,
+        "word": " was"
+      },
+      {
+        "start": 22.16,
+        "end": 22.34,
+        "word": " about"
+      },
+      {
+        "start": 22.34,
+        "end": 22.48,
+        "word": " to"
+      },
+      {
+        "start": 22.48,
+        "end": 22.66,
+        "word": " hit"
+      },
+      {
+        "start": 22.66,
+        "end": 22.84,
+        "word": " Emma."
+      }
+    ]
+  },
+  {
+    "start": 24.0,
+    "end": 24.64,
+    "text": " I didn't ask you.",
+    "words": [
+      {
+        "start": 23.72,
+        "end": 24.08,
+        "word": " I"
+      },
+      {
+        "start": 24.08,
+        "end": 24.26,
+        "word": " didn't"
+      },
+      {
+        "start": 24.26,
+        "end": 24.44,
+        "word": " ask"
+      },
+      {
+        "start": 24.44,
+        "end": 24.64,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 30.139999999999993,
+    "end": 31.24,
+    "text": " They stole my cake!",
+    "words": [
+      {
+        "start": 30.139999999999993,
+        "end": 30.54,
+        "word": " They"
+      },
+      {
+        "start": 30.54,
+        "end": 30.72,
+        "word": " stole"
+      },
+      {
+        "start": 30.72,
+        "end": 30.96,
+        "word": " my"
+      },
+      {
+        "start": 30.96,
+        "end": 31.24,
+        "word": " cake!"
+      }
+    ]
+  },
+  {
+    "start": 32.0,
+    "end": 33.28,
+    "text": " And your gardener threatened me.",
+    "words": [
+      {
+        "start": 32.0,
+        "end": 32.08,
+        "word": " And"
+      },
+      {
+        "start": 32.08,
+        "end": 32.2,
+        "word": " your"
+      },
+      {
+        "start": 32.2,
+        "end": 32.64,
+        "word": " gardener"
+      },
+      {
+        "start": 32.64,
+        "end": 32.88,
+        "word": " threatened"
+      },
+      {
+        "start": 32.88,
+        "end": 33.28,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 33.78,
+    "end": 34.72,
+    "text": " That's not what happened.",
+    "words": [
+      {
+        "start": 33.78,
+        "end": 34.08,
+        "word": " That's"
+      },
+      {
+        "start": 34.08,
+        "end": 34.26,
+        "word": " not"
+      },
+      {
+        "start": 34.26,
+        "end": 34.42,
+        "word": " what"
+      },
+      {
+        "start": 34.42,
+        "end": 34.72,
+        "word": " happened."
+      }
+    ]
+  },
+  {
+    "start": 38.0,
+    "end": 40.2,
+    "text": " Touch her again, and you're fired.",
+    "words": [
+      {
+        "start": 38.0,
+        "end": 38.4,
+        "word": " Touch"
+      },
+      {
+        "start": 38.4,
+        "end": 38.56,
+        "word": " her"
+      },
+      {
+        "start": 38.56,
+        "end": 38.82,
+        "word": " again,"
+      },
+      {
+        "start": 39.6,
+        "end": 39.78,
+        "word": " and"
+      },
+      {
+        "start": 39.78,
+        "end": 39.9,
+        "word": " you're"
+      },
+      {
+        "start": 39.9,
+        "end": 40.2,
+        "word": " fired."
+      }
+    ]
+  },
+  {
+    "start": 42.68,
+    "end": 44.08,
+    "text": " God, I want to break his face.",
+    "words": [
+      {
+        "start": 42.68,
+        "end": 43.08,
+        "word": " God,"
+      },
+      {
+        "start": 43.2,
+        "end": 43.28,
+        "word": " I"
+      },
+      {
+        "start": 43.28,
+        "end": 43.38,
+        "word": " want"
+      },
+      {
+        "start": 43.38,
+        "end": 43.46,
+        "word": " to"
+      },
+      {
+        "start": 43.46,
+        "end": 43.64,
+        "word": " break"
+      },
+      {
+        "start": 43.64,
+        "end": 43.82,
+        "word": " his"
+      },
+      {
+        "start": 43.82,
+        "end": 44.08,
+        "word": " face."
+      }
+    ]
+  },
+  {
+    "start": 44.82,
+    "end": 46.2,
+    "text": " But one punch could ruin everything.",
+    "words": [
+      {
+        "start": 44.82,
+        "end": 44.84,
+        "word": " But"
+      },
+      {
+        "start": 44.84,
+        "end": 45.04,
+        "word": " one"
+      },
+      {
+        "start": 45.04,
+        "end": 45.42,
+        "word": " punch"
+      },
+      {
+        "start": 45.42,
+        "end": 45.6,
+        "word": " could"
+      },
+      {
+        "start": 45.6,
+        "end": 45.8,
+        "word": " ruin"
+      },
+      {
+        "start": 45.8,
+        "end": 46.2,
+        "word": " everything."
+      }
+    ]
+  },
+  {
+    "start": 47.04,
+    "end": 47.74,
+    "text": " I came here to do.",
+    "words": [
+      {
+        "start": 47.04,
+        "end": 47.1,
+        "word": " I"
+      },
+      {
+        "start": 47.1,
+        "end": 47.24,
+        "word": " came"
+      },
+      {
+        "start": 47.24,
+        "end": 47.46,
+        "word": " here"
+      },
+      {
+        "start": 47.46,
+        "end": 47.56,
+        "word": " to"
+      },
+      {
+        "start": 47.56,
+        "end": 47.74,
+        "word": " do."
+      }
+    ]
+  },
+  {
+    "start": 48.6,
+    "end": 49.64,
+    "text": " Enjoy this while you can, bastard.",
+    "words": [
+      {
+        "start": 48.6,
+        "end": 48.6,
+        "word": " Enjoy"
+      },
+      {
+        "start": 48.6,
+        "end": 48.82,
+        "word": " this"
+      },
+      {
+        "start": 48.82,
+        "end": 48.98,
+        "word": " while"
+      },
+      {
+        "start": 48.98,
+        "end": 49.1,
+        "word": " you"
+      },
+      {
+        "start": 49.1,
+        "end": 49.3,
+        "word": " can,"
+      },
+      {
+        "start": 49.5,
+        "end": 49.64,
+        "word": " bastard."
+      }
+    ]
+  },
+  {
+    "start": 52.09999999999999,
+    "end": 53.66,
+    "text": " Soon, you'll pay for all of it.",
+    "words": [
+      {
+        "start": 52.09999999999999,
+        "end": 52.49999999999999,
+        "word": " Soon,"
+      },
+      {
+        "start": 52.49999999999999,
+        "end": 52.9,
+        "word": " you'll"
+      },
+      {
+        "start": 52.9,
+        "end": 53.06,
+        "word": " pay"
+      },
+      {
+        "start": 53.06,
+        "end": 53.26,
+        "word": " for"
+      },
+      {
+        "start": 53.26,
+        "end": 53.44,
+        "word": " all"
+      },
+      {
+        "start": 53.44,
+        "end": 53.54,
+        "word": " of"
+      },
+      {
+        "start": 53.54,
+        "end": 53.66,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 61.519999999999996,
+    "end": 63.52,
+    "text": " Daddy, it's my birthday too.",
+    "words": [
+      {
+        "start": 61.519999999999996,
+        "end": 61.96,
+        "word": " Daddy,"
+      },
+      {
+        "start": 62.32,
+        "end": 62.48,
+        "word": " it's"
+      },
+      {
+        "start": 62.48,
+        "end": 62.64,
+        "word": " my"
+      },
+      {
+        "start": 62.64,
+        "end": 63.0,
+        "word": " birthday"
+      },
+      {
+        "start": 63.0,
+        "end": 63.52,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 65.26,
+    "end": 66.76,
+    "text": " Did you get me a present?",
+    "words": [
+      {
+        "start": 65.26,
+        "end": 65.7,
+        "word": " Did"
+      },
+      {
+        "start": 65.7,
+        "end": 65.86,
+        "word": " you"
+      },
+      {
+        "start": 65.86,
+        "end": 66.08,
+        "word": " get"
+      },
+      {
+        "start": 66.08,
+        "end": 66.24,
+        "word": " me"
+      },
+      {
+        "start": 66.24,
+        "end": 66.38,
+        "word": " a"
+      },
+      {
+        "start": 66.38,
+        "end": 66.76,
+        "word": " present?"
+      }
+    ]
+  },
+  {
+    "start": 73.42,
+    "end": 74.24,
+    "text": " There's your present.",
+    "words": [
+      {
+        "start": 73.42,
+        "end": 73.86,
+        "word": " There's"
+      },
+      {
+        "start": 73.86,
+        "end": 73.94,
+        "word": " your"
+      },
+      {
+        "start": 73.94,
+        "end": 74.24,
+        "word": " present."
+      }
+    ]
+  },
+  {
+    "start": 76.82,
+    "end": 77.68,
+    "text": " It's all you deserve.",
+    "words": [
+      {
+        "start": 76.82,
+        "end": 77.26,
+        "word": " It's"
+      },
+      {
+        "start": 77.26,
+        "end": 77.34,
+        "word": " all"
+      },
+      {
+        "start": 77.34,
+        "end": 77.48,
+        "word": " you"
+      },
+      {
+        "start": 77.48,
+        "end": 77.68,
+        "word": " deserve."
+      }
+    ]
+  },
+  {
+    "start": 81.16,
+    "end": 82.7,
+    "text": " Why don't you love me, Daddy?",
+    "words": [
+      {
+        "start": 81.16,
+        "end": 81.6,
+        "word": " Why"
+      },
+      {
+        "start": 81.6,
+        "end": 81.74,
+        "word": " don't"
+      },
+      {
+        "start": 81.74,
+        "end": 81.9,
+        "word": " you"
+      },
+      {
+        "start": 81.9,
+        "end": 82.12,
+        "word": " love"
+      },
+      {
+        "start": 82.12,
+        "end": 82.3,
+        "word": " me,"
+      },
+      {
+        "start": 82.3,
+        "end": 82.7,
+        "word": " Daddy?"
+      }
+    ]
+  },
+  {
+    "start": 83.54,
+    "end": 84.34,
+    "text": " Because you're trash.",
+    "words": [
+      {
+        "start": 83.54,
+        "end": 83.94,
+        "word": " Because"
+      },
+      {
+        "start": 83.94,
+        "end": 84.16,
+        "word": " you're"
+      },
+      {
+        "start": 84.16,
+        "end": 84.34,
+        "word": " trash."
+      }
+    ]
+  },
+  {
+    "start": 85.68,
+    "end": 86.4,
+    "text": " Just like your mother.",
+    "words": [
+      {
+        "start": 85.68,
+        "end": 85.86,
+        "word": " Just"
+      },
+      {
+        "start": 85.86,
+        "end": 86.02,
+        "word": " like"
+      },
+      {
+        "start": 86.02,
+        "end": 86.18,
+        "word": " your"
+      },
+      {
+        "start": 86.18,
+        "end": 86.4,
+        "word": " mother."
+      }
+    ]
+  },
+  {
+    "start": 90.8,
+    "end": 92.64,
+    "text": " Don't you ever speak to her like that again?",
+    "words": [
+      {
+        "start": 90.8,
+        "end": 91.24,
+        "word": " Don't"
+      },
+      {
+        "start": 91.24,
+        "end": 91.34,
+        "word": " you"
+      },
+      {
+        "start": 91.34,
+        "end": 91.6,
+        "word": " ever"
+      },
+      {
+        "start": 91.6,
+        "end": 91.86,
+        "word": " speak"
+      },
+      {
+        "start": 91.86,
+        "end": 92.0,
+        "word": " to"
+      },
+      {
+        "start": 92.0,
+        "end": 92.1,
+        "word": " her"
+      },
+      {
+        "start": 92.1,
+        "end": 92.26,
+        "word": " like"
+      },
+      {
+        "start": 92.26,
+        "end": 92.42,
+        "word": " that"
+      },
+      {
+        "start": 92.42,
+        "end": 92.64,
+        "word": " again?"
+      }
+    ]
+  },
+  {
+    "start": 97.42,
+    "end": 97.86,
+    "text": " Careful.",
+    "words": [
+      {
+        "start": 97.42,
+        "end": 97.86,
+        "word": " Careful."
+      }
+    ]
+  },
+  {
+    "start": 100.46000000000001,
+    "end": 101.64,
+    "text": " You live in my house.",
+    "words": [
+      {
+        "start": 100.46000000000001,
+        "end": 100.9,
+        "word": " You"
+      },
+      {
+        "start": 100.9,
+        "end": 101.04,
+        "word": " live"
+      },
+      {
+        "start": 101.04,
+        "end": 101.2,
+        "word": " in"
+      },
+      {
+        "start": 101.2,
+        "end": 101.34,
+        "word": " my"
+      },
+      {
+        "start": 101.34,
+        "end": 101.64,
+        "word": " house."
+      }
+    ]
+  },
+  {
+    "start": 103.4,
+    "end": 104.58,
+    "text": " Because I allow it.",
+    "words": [
+      {
+        "start": 103.4,
+        "end": 103.84,
+        "word": " Because"
+      },
+      {
+        "start": 103.84,
+        "end": 104.04,
+        "word": " I"
+      },
+      {
+        "start": 104.04,
+        "end": 104.24,
+        "word": " allow"
+      },
+      {
+        "start": 104.24,
+        "end": 104.58,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 106.06,
+    "end": 107.5,
+    "text": " This used to be my house too.",
+    "words": [
+      {
+        "start": 106.06,
+        "end": 106.5,
+        "word": " This"
+      },
+      {
+        "start": 106.5,
+        "end": 106.6,
+        "word": " used"
+      },
+      {
+        "start": 106.6,
+        "end": 106.76,
+        "word": " to"
+      },
+      {
+        "start": 106.76,
+        "end": 106.86,
+        "word": " be"
+      },
+      {
+        "start": 106.86,
+        "end": 106.98,
+        "word": " my"
+      },
+      {
+        "start": 106.98,
+        "end": 107.24,
+        "word": " house"
+      },
+      {
+        "start": 107.24,
+        "end": 107.5,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 109.78,
+    "end": 110.98,
+    "text": " It used to be.",
+    "words": [
+      {
+        "start": 109.78,
+        "end": 110.22,
+        "word": " It"
+      },
+      {
+        "start": 110.22,
+        "end": 110.66,
+        "word": " used"
+      },
+      {
+        "start": 110.66,
+        "end": 110.84,
+        "word": " to"
+      },
+      {
+        "start": 110.84,
+        "end": 110.98,
+        "word": " be."
+      }
+    ]
+  },
+  {
+    "start": 114.3,
+    "end": 115.14,
+    "text": " Now you have nothing.",
+    "words": [
+      {
+        "start": 114.3,
+        "end": 114.74,
+        "word": " Now"
+      },
+      {
+        "start": 114.74,
+        "end": 114.84,
+        "word": " you"
+      },
+      {
+        "start": 114.84,
+        "end": 114.96,
+        "word": " have"
+      },
+      {
+        "start": 114.96,
+        "end": 115.14,
+        "word": " nothing."
+      }
+    ]
+  },
+  {
+    "start": 128.58,
+    "end": 130.92,
+    "text": " You have nothing to do.",
+    "words": [
+      {
+        "start": 128.58,
+        "end": 129.5,
+        "word": " You"
+      },
+      {
+        "start": 129.5,
+        "end": 130.42,
+        "word": " have"
+      },
+      {
+        "start": 130.42,
+        "end": 130.5,
+        "word": " nothing"
+      },
+      {
+        "start": 130.5,
+        "end": 130.84,
+        "word": " to"
+      },
+      {
+        "start": 130.84,
+        "end": 130.92,
+        "word": " do."
+      }
+    ]
+  }
+]
