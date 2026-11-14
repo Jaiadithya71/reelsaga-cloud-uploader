@@ -1,0 +1,56 @@
+{
+  "series": "Downstairs, I Planned His Fall",
+  "dramacps_id": 833136,
+  "alias": "No alternate title card in source",
+  "affiliate": "https://r.reelsgo.tv/PCtcfEqFNAqm",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "source_duration": 73.208333,
+      "source_sha256": "d4319f05f83ad4093b73419171f72d5e1071e50749bcf94fbaa16c8e38821282",
+      "asr": [
+        "base.en whole"
+      ],
+      "ocr_frames": 293,
+      "whole_action_frames_inspected": 30,
+      "targeted_caption_frames_inspected": 64,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole source/action/caption QA. ASR and all 293 OCR frames plus64 caption pixels checked. No alternate title card. Cut36.3 falls between dialogue/caption lines. Both encoded parts decoded and 12 pixels inspected. Original audio and captions unchanged; established 0.15 second boundary fades."
+    }
+  },
+  "part_gates": {
+    "yourchannel-down833136-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 36.3,
+      "duration": 36.3,
+      "sha256": "f60e63eb6cbc26584228d0fc31b6523221babdae80a48f4a283b996cdaa31bee",
+      "bytes": 41050078,
+      "path": "/downloads/down-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 36.334,
+      "approved_render_sha256": "f60e63eb6cbc26584228d0fc31b6523221babdae80a48f4a283b996cdaa31bee"
+    },
+    "yourchannel-down833136-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 36.3,
+      "source_end": 73.208333,
+      "duration": 36.908333,
+      "sha256": "be33ab3330b648aab1406fd14c2b6b900ec4591a102f6f849a739f3837acf733",
+      "bytes": 42548401,
+      "path": "/downloads/down-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 36.917,
+      "approved_render_sha256": "be33ab3330b648aab1406fd14c2b6b900ec4591a102f6f849a739f3837acf733"
+    }
+  }
+}
