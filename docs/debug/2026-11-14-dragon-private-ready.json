@@ -1,0 +1,29 @@
+{
+  "series": "Bound to the Dragon's Heart",
+  "dramacps_id": 829270,
+  "free_episodes": 7,
+  "affiliate": "https://r.reelsgo.tv/guQXBckMOURG",
+  "playlist": "https://www.youtube.com/playlist?list=PLLVXUWLLOexY",
+  "playlist_order": "MANUAL E1P1,E1P2 both PRIVATE verified2026-11-14T23:41:15+05:30",
+  "e1p1": {
+    "id": "fuxxN6uR_78",
+    "run": 43624291792,
+    "sha": "ed3c04f9b8620b4b1629206a319c15addf338207",
+    "claims_none_ist": "23:37:49",
+    "ai_yes_saved_pixels": "/downloads/cloud-browser-20261114-180904.png"
+  },
+  "e1p2": {
+    "id": "50Cxq_l2Sh4",
+    "run": 43624952898,
+    "sha": "5e08c11bda74a78fd719c39be2f3cd81e9531827",
+    "claims_none_ist": "23:40:35",
+    "ai_yes_saved_pixels": "/downloads/cloud-browser-20261114-181108.png"
+  },
+  "metadata": "Exact manifest titles/descriptions/notforkids/Private; upfrontAd/affiliate verified.",
+  "cleanup": "All consumedE1stagesdeletedHEAD404+originalsignedGET404,cleanupwakescanceled",
+  "e2": "whole-review passed,2renders/cap/full-decode+pixels,unuploaded",
+  "e3": "source downloaded4675141B,QA pending",
+  "release": "After MomE3 only; freshclaimsneeded",
+  "source_urls_file": "docs/debug/2026-11-14-dragon-sources.json",
+  "note": "Maturethemes:adultclothedkissing/impliedsex,bedsheetcouple,maleshirtless,drugging,strongprofanity. No explicitnudity/sex/graphicviolenceobserved."
+}
