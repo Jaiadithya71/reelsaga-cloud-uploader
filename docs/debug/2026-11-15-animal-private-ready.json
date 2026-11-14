@@ -1,0 +1,75 @@
+{
+  "series": "The Animal Whisperer of Bright Castle",
+  "dramacps_id": 833166,
+  "free_episodes": 10,
+  "affiliate": "https://r.reelsgo.tv/E6Aqpkfu21BR",
+  "apphome": "https://r.reelsgo.tv/JLaP1UEmb7AE",
+  "source": "https://dramacps.com/dashboard",
+  "playlist": "https://www.youtube.com/playlist?list=PLbKtmTxosZnM",
+  "playlist_studio": "https://studio.youtube.com/playlist/PLbKtmTxosZnM/videos",
+  "playlist_order": "MANUAL created public; actual E1P1,E1P2,E2P1,E2P2 all private visually verified02:06:38; E2P3 held not added",
+  "parts": [
+    {
+      "episode": 1,
+      "part": 1,
+      "video_id": "Km3C5Y2CVDU",
+      "run": 43637473378,
+      "state": "clean02:06",
+      "privacy": "private",
+      "native_ai": "Yes saved verified",
+      "url": "https://studio.youtube.com/video/Km3C5Y2CVDU/edit"
+    },
+    {
+      "episode": 1,
+      "part": 2,
+      "video_id": "OwR0vknrHrU",
+      "run": 43637627932,
+      "state": "clean02:06",
+      "privacy": "private",
+      "native_ai": "Yes saved verified",
+      "url": "https://studio.youtube.com/video/OwR0vknrHrU/edit"
+    },
+    {
+      "episode": 2,
+      "part": 1,
+      "video_id": "dTrBbwbEf70",
+      "run": 43637739514,
+      "state": "clean02:06",
+      "privacy": "private",
+      "native_ai": "Yes saved verified",
+      "url": "https://studio.youtube.com/video/dTrBbwbEf70/edit"
+    },
+    {
+      "episode": 2,
+      "part": 2,
+      "video_id": "m2V6n1FVU-U",
+      "run": 43637776534,
+      "state": "HELD delayed no-impact melodylyrics Sad Piano and Cello",
+      "privacy": "private",
+      "native_ai": "Yes saved verified",
+      "url": "https://studio.youtube.com/video/m2V6n1FVU-U/edit"
+    },
+    {
+      "episode": 2,
+      "part": 3,
+      "video_id": "b5xCgfWE5KA",
+      "run": 43637784990,
+      "state": "HELD no-impact audio Sad Piano and Cello BeardMusicStock HAAWK for a 3rd Party",
+      "privacy": "private",
+      "native_ai": "not configured held",
+      "url": "https://studio.youtube.com/video/b5xCgfWE5KA/edit"
+    }
+  ],
+  "cleanup": "All five consumed private objects HEAD404 original signedGET404; cleanupwake canceled",
+  "public_release": "none; freshclaims required before each release; E2P2/P3 held no appeal/reedit/skip",
+  "concurrency": "Initial E2P2 run canceled before any job. Zero jobs verified twice then rerun201, completed success. E2P3 private upload preceded P2 but playlist order E2P1/P2 verified. Never dispatch concurrent pending canary workflows: later pending cancels earlier pending.",
+  "pixels": [
+    "/downloads/cloud-browser-20261114-202812.png",
+    "/downloads/cloud-browser-20261114-203016.png",
+    "/downloads/cloud-browser-20261114-203132.png",
+    "/downloads/cloud-browser-20261114-203226.png",
+    "/downloads/cloud-browser-20261114-203528.png",
+    "/downloads/cloud-browser-20261114-203601.png",
+    "/downloads/cloud-browser-20261114-203638.png"
+  ]
+}
