@@ -111,5 +111,23 @@
       "measured_duration": 46.648,
       "approved_render_sha256": "8ffb1c48add592ff91174fce265355a2f536f8bbf7848642f7880a7a03af7c67"
     }
+  },
+  "release_status": "held_global_audio_visual_claim_E1P1",
+  "private_videos": {
+    "1": "zgYydFqGVAc",
+    "2": "cmegHIaQB4o",
+    "3": "VUeEGDgu0K8",
+    "4": "vMj5epzz97M",
+    "5": "OxugLKGXNZI"
+  },
+  "claim": {
+    "video_id": "zgYydFqGVAc",
+    "claimant": "Kuaikan International",
+    "reference": "The Defiant Storm My Family s Regret-01-01-klwv1210.mp4",
+    "type": "audio_visual",
+    "blocked_globally": true,
+    "strike": false,
+    "checked_at": "2026-11-14T01:28:37Z",
+    "source": "https://studio.youtube.com/video/zgYydFqGVAc/claims"
   }
 }
