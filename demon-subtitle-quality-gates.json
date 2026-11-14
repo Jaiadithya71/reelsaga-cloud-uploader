@@ -1,0 +1,71 @@
+{
+  "series": "They Called My Son a Demon",
+  "dramacps_id": 833157,
+  "affiliate": "https://r.reelsgo.tv/NENz7eQ58VbD",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "quarter_ocr": 564,
+      "action_pixels": 71,
+      "caption_pixels": 141,
+      "target_pixels": 46,
+      "part_pixels": 18,
+      "confirmed_defect": null,
+      "notes": "Late small.en Im sorry139 hallucination: isolated138-endnospeech. SourcecaptionsWhats happened20.5/Laura50.5/Why82present. Nongraphicchildbirthnewbornswaddledfantasyhornswings/familyneglectbullying, noexplicitnudity/sex/graphicviolenceobserved."
+    }
+  },
+  "part_gates": {
+    "yourchannel-demon833157-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 50.3,
+      "duration": 50.3,
+      "sha256": "400066cab2343aca52e791ee74940488b2ced07d9d6452737a8db98239fbf404",
+      "bytes": 36520595,
+      "path": "/downloads/demon-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "400066cab2343aca52e791ee74940488b2ced07d9d6452737a8db98239fbf404",
+      "measured_duration": 50.3
+    },
+    "yourchannel-demon833157-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 50.3,
+      "source_end": 94.0,
+      "duration": 43.7,
+      "sha256": "12b7e947513ec0623f250eb2d1327d72cc81bdd0bcc7104c18180d9884ce6f03",
+      "bytes": 41207716,
+      "path": "/downloads/demon-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "12b7e947513ec0623f250eb2d1327d72cc81bdd0bcc7104c18180d9884ce6f03",
+      "measured_duration": 43.7
+    },
+    "yourchannel-demon833157-ep1-part3-v1": {
+      "episode": 1,
+      "part": 3,
+      "source_start": 94.0,
+      "source_end": 141.034671,
+      "duration": 47.034671,
+      "sha256": "bdfab8f8269435bef0c6515c6d98ee6d9e02ba48437e52e7809d5a3f05ad84e1",
+      "bytes": 36289666,
+      "path": "/downloads/demon-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "bdfab8f8269435bef0c6515c6d98ee6d9e02ba48437e52e7809d5a3f05ad84e1",
+      "measured_duration": 47.035
+    }
+  }
+}
