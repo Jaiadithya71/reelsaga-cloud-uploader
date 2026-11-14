@@ -34,6 +34,28 @@
       "caption_gate_pass": true,
       "repair": null,
       "notes": "Whole267quarterOCR/34action/67caption+15targetpixels checked. Ilookedeverywhere/Cancer/anotherdoctor/TheysayIhave/Tellmewhatyouneed/Betheirmother all present, no confirmed captiondefect. Nongraphicseparation/cancer/illness. Originalsourceaudio/captions,0.15housefades only, continuous30sboundarybetweenComeonandTheysay. FullDecode12encodedpixels inspected."
+    },
+    "3": {
+      "source_duration": 84.706,
+      "source_sha256": "57044a1a54581fcd289a785128a821e14cd5bc57d8ee0fbf8b2955ab0db27a48",
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "ocr_frames": 339,
+      "whole_action_frames_inspected": 43,
+      "whole_caption_frames_inspected": 85,
+      "target_caption_frames_inspected": 20,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole339quarterOCR/43action/85caption+20targetpixels inspected. Noah/Chloe/Maggie/Sienna names consistent. No confirmed caption defect. Nongraphic family bullying/bowl threat, no nudity/explicitsex/graphicviolence. Continuous39.6s silent boundary. FullDecode12encodedpixels checked,0.15housefades only."
+    },
+    "4": {
+      "source_duration": 72.538,
+      "caption_gate_pass": false,
+      "uploaded": false,
+      "repair": null,
+      "notes": "Wholebase+smallASR290quarterOCR37action73captionpixels checked. Caption47.7-48.5 I dont want a fight versus bothwholeASRandindependent46.7-49audio I dont want to fight. Held/unuploaded/no repair or skip. Parentnotified23:12."
     }
   },
   "part_gates": {
@@ -100,6 +122,38 @@
       "whole_part_release_ready": true,
       "measured_duration": 36.78,
       "approved_render_sha256": "fa8d7083692a95224c0d1247b7dc0838d66d9d75ce16fee3e15a6cae42912d73"
+    },
+    "yourchannel-mom833149-ep3-part1-v1": {
+      "episode": 3,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 39.6,
+      "duration": 39.6,
+      "sha256": "e2d2721dd0211c4e05265d49b6e40df4f215e47e38231ac9a6e26fcf0eb2672d",
+      "bytes": 21779698,
+      "path": "/downloads/mom-e3p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 39.6,
+      "approved_render_sha256": "e2d2721dd0211c4e05265d49b6e40df4f215e47e38231ac9a6e26fcf0eb2672d"
+    },
+    "yourchannel-mom833149-ep3-part2-v1": {
+      "episode": 3,
+      "part": 2,
+      "source_start": 39.6,
+      "source_end": 84.706,
+      "duration": 45.106,
+      "sha256": "29c17ccf6747fd4709733c52fea2fe776fa4ea7e101ad323beab2f8c23bbc4b8",
+      "bytes": 24794792,
+      "path": "/downloads/mom-e3p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 45.107,
+      "approved_render_sha256": "29c17ccf6747fd4709733c52fea2fe776fa4ea7e101ad323beab2f8c23bbc4b8"
     }
   }
 }
