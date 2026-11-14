@@ -1,0 +1,18 @@
+{
+  "series": "Six Children, One Homecoming",
+  "dramacps_id": 833155,
+  "platform": "YourChannel60%",
+  "free_episodes": 4,
+  "source_dashboard": "https://dramacps.com/dashboard",
+  "affiliate": "https://r.reelsgo.tv/ake9NDf_Y3dd",
+  "app_home": "https://r.reelsgo.tv/2wf2N1uv39Kf",
+  "status": "HOLD_UNUPLOADED_SOURCE_CAPTION_REVIEW",
+  "E1_duration": 87.92,
+  "E1_bytes": 4745703,
+  "E2_downloaded_not_reviewed": true,
+  "QA": "E1base+smallwhole/352quarterOCR/44action/88captionpixels read",
+  "unresolved": "47.25-48.75 caption Mom gave you years of her life, bothASR+isolatedaudio read Mom gave you year of her life. No audioedit/captionrepair/render/stage/upload. Do not claim qualification passed.",
+  "other_lines": "Dad23.5/Letgo72.75/Him82.75 present viaquarterOCR",
+  "no_repeat_leads": "canonicalhistoryandliveindex no833155/title, fullchannelguardnotrun",
+  "next": "freshdifferentseries backup beforeDemonE1ends"
+}

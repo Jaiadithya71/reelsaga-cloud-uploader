@@ -16,5 +16,7 @@
   "playlist_actual_order": "E1P1/P2/E2P1/P2Public,E3P1/P2Private",
   "playlist_pixels": "/downloads/cloud-browser-20261114-194957.png",
   "next_floor": "2026-11-15T02:19:19+05:30",
-  "next_wake": "wakeschedule-01M7DSR21Y5NFKRBQX43RRRFQ3"
+  "next_wake": "wakeschedule-01M7DSR21Y5NFKRBQX43RRRFQ3",
+  "ledger_run": 43634220593,
+  "ledger_result": "SUCCESS exact9c22f105d33ecf0d184a5f6b90cbf41fd71a7abe publishedcheckpoint/stopped19:50:38Z verified"
 }

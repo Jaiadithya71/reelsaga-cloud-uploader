@@ -1,0 +1,857 @@
+[
+  {
+    "start": 7.239999999999999,
+    "end": 11.56,
+    "text": " Welcome to Sterling Group's Centennial Gala. North Star Holdings has worked against us",
+    "words": [
+      {
+        "start": 7.239999999999999,
+        "end": 7.72,
+        "word": " Welcome"
+      },
+      {
+        "start": 7.72,
+        "end": 8.02,
+        "word": " to"
+      },
+      {
+        "start": 8.02,
+        "end": 8.26,
+        "word": " Sterling"
+      },
+      {
+        "start": 8.26,
+        "end": 8.64,
+        "word": " Group's"
+      },
+      {
+        "start": 8.64,
+        "end": 9.04,
+        "word": " Centennial"
+      },
+      {
+        "start": 9.04,
+        "end": 9.54,
+        "word": " Gala."
+      },
+      {
+        "start": 10.12,
+        "end": 10.16,
+        "word": " North"
+      },
+      {
+        "start": 10.16,
+        "end": 10.38,
+        "word": " Star"
+      },
+      {
+        "start": 10.38,
+        "end": 10.66,
+        "word": " Holdings"
+      },
+      {
+        "start": 10.66,
+        "end": 10.88,
+        "word": " has"
+      },
+      {
+        "start": 10.88,
+        "end": 11.08,
+        "word": " worked"
+      },
+      {
+        "start": 11.08,
+        "end": 11.36,
+        "word": " against"
+      },
+      {
+        "start": 11.36,
+        "end": 11.56,
+        "word": " us"
+      }
+    ]
+  },
+  {
+    "start": 11.56,
+    "end": 16.36,
+    "text": " at every turn and tried to take the East Ridge Project. Now they're bankrupt, no one takes",
+    "words": [
+      {
+        "start": 11.56,
+        "end": 11.68,
+        "word": " at"
+      },
+      {
+        "start": 11.68,
+        "end": 11.92,
+        "word": " every"
+      },
+      {
+        "start": 11.92,
+        "end": 12.16,
+        "word": " turn"
+      },
+      {
+        "start": 12.16,
+        "end": 12.32,
+        "word": " and"
+      },
+      {
+        "start": 12.32,
+        "end": 12.48,
+        "word": " tried"
+      },
+      {
+        "start": 12.48,
+        "end": 12.62,
+        "word": " to"
+      },
+      {
+        "start": 12.62,
+        "end": 12.76,
+        "word": " take"
+      },
+      {
+        "start": 12.76,
+        "end": 12.88,
+        "word": " the"
+      },
+      {
+        "start": 12.88,
+        "end": 12.98,
+        "word": " East"
+      },
+      {
+        "start": 12.98,
+        "end": 13.18,
+        "word": " Ridge"
+      },
+      {
+        "start": 13.18,
+        "end": 13.58,
+        "word": " Project."
+      },
+      {
+        "start": 14.52,
+        "end": 14.86,
+        "word": " Now"
+      },
+      {
+        "start": 14.86,
+        "end": 15.02,
+        "word": " they're"
+      },
+      {
+        "start": 15.02,
+        "end": 15.38,
+        "word": " bankrupt,"
+      },
+      {
+        "start": 15.88,
+        "end": 16.04,
+        "word": " no"
+      },
+      {
+        "start": 16.04,
+        "end": 16.18,
+        "word": " one"
+      },
+      {
+        "start": 16.18,
+        "end": 16.36,
+        "word": " takes"
+      }
+    ]
+  },
+  {
+    "start": 16.36,
+    "end": 28.36,
+    "text": " what's mine. Dad, I finally found you! What did you just call me? Dad! Isn't he about",
+    "words": [
+      {
+        "start": 16.36,
+        "end": 16.6,
+        "word": " what's"
+      },
+      {
+        "start": 16.6,
+        "end": 16.9,
+        "word": " mine."
+      },
+      {
+        "start": 19.54,
+        "end": 19.94,
+        "word": " Dad,"
+      },
+      {
+        "start": 20.06,
+        "end": 20.4,
+        "word": " I"
+      },
+      {
+        "start": 20.4,
+        "end": 20.78,
+        "word": " finally"
+      },
+      {
+        "start": 20.78,
+        "end": 21.32,
+        "word": " found"
+      },
+      {
+        "start": 21.32,
+        "end": 21.86,
+        "word": " you!"
+      },
+      {
+        "start": 22.24,
+        "end": 22.48,
+        "word": " What"
+      },
+      {
+        "start": 22.48,
+        "end": 22.6,
+        "word": " did"
+      },
+      {
+        "start": 22.6,
+        "end": 22.74,
+        "word": " you"
+      },
+      {
+        "start": 22.74,
+        "end": 22.88,
+        "word": " just"
+      },
+      {
+        "start": 22.88,
+        "end": 23.1,
+        "word": " call"
+      },
+      {
+        "start": 23.1,
+        "end": 23.32,
+        "word": " me?"
+      },
+      {
+        "start": 23.58,
+        "end": 24.04,
+        "word": " Dad!"
+      },
+      {
+        "start": 27.6,
+        "end": 28.08,
+        "word": " Isn't"
+      },
+      {
+        "start": 28.08,
+        "end": 28.2,
+        "word": " he"
+      },
+      {
+        "start": 28.2,
+        "end": 28.36,
+        "word": " about"
+      }
+    ]
+  },
+  {
+    "start": 28.36,
+    "end": 33.32,
+    "text": " to marry the Whitmore heiress? You haven't paid child support in four years and two months.",
+    "words": [
+      {
+        "start": 28.36,
+        "end": 28.5,
+        "word": " to"
+      },
+      {
+        "start": 28.5,
+        "end": 28.66,
+        "word": " marry"
+      },
+      {
+        "start": 28.66,
+        "end": 28.82,
+        "word": " the"
+      },
+      {
+        "start": 28.82,
+        "end": 29.1,
+        "word": " Whitmore"
+      },
+      {
+        "start": 29.1,
+        "end": 29.5,
+        "word": " heiress?"
+      },
+      {
+        "start": 30.0,
+        "end": 30.12,
+        "word": " You"
+      },
+      {
+        "start": 30.12,
+        "end": 30.46,
+        "word": " haven't"
+      },
+      {
+        "start": 30.46,
+        "end": 30.66,
+        "word": " paid"
+      },
+      {
+        "start": 30.66,
+        "end": 31.04,
+        "word": " child"
+      },
+      {
+        "start": 31.04,
+        "end": 31.42,
+        "word": " support"
+      },
+      {
+        "start": 31.42,
+        "end": 31.66,
+        "word": " in"
+      },
+      {
+        "start": 31.66,
+        "end": 31.96,
+        "word": " four"
+      },
+      {
+        "start": 31.96,
+        "end": 32.3,
+        "word": " years"
+      },
+      {
+        "start": 32.3,
+        "end": 32.54,
+        "word": " and"
+      },
+      {
+        "start": 32.54,
+        "end": 32.78,
+        "word": " two"
+      },
+      {
+        "start": 32.78,
+        "end": 33.32,
+        "word": " months."
+      }
+    ]
+  },
+  {
+    "start": 33.88,
+    "end": 39.94,
+    "text": " Mom and I can barely get by. Please, help us. Is that his secret kid? Get the shot.",
+    "words": [
+      {
+        "start": 33.88,
+        "end": 34.0,
+        "word": " Mom"
+      },
+      {
+        "start": 34.0,
+        "end": 34.16,
+        "word": " and"
+      },
+      {
+        "start": 34.16,
+        "end": 34.34,
+        "word": " I"
+      },
+      {
+        "start": 34.34,
+        "end": 34.5,
+        "word": " can"
+      },
+      {
+        "start": 34.5,
+        "end": 34.78,
+        "word": " barely"
+      },
+      {
+        "start": 34.78,
+        "end": 35.14,
+        "word": " get"
+      },
+      {
+        "start": 35.14,
+        "end": 35.58,
+        "word": " by."
+      },
+      {
+        "start": 36.14,
+        "end": 36.54,
+        "word": " Please,"
+      },
+      {
+        "start": 37.14,
+        "end": 37.4,
+        "word": " help"
+      },
+      {
+        "start": 37.4,
+        "end": 37.9,
+        "word": " us."
+      },
+      {
+        "start": 38.36,
+        "end": 38.52,
+        "word": " Is"
+      },
+      {
+        "start": 38.52,
+        "end": 38.64,
+        "word": " that"
+      },
+      {
+        "start": 38.64,
+        "end": 38.76,
+        "word": " his"
+      },
+      {
+        "start": 38.76,
+        "end": 39.04,
+        "word": " secret"
+      },
+      {
+        "start": 39.04,
+        "end": 39.26,
+        "word": " kid?"
+      },
+      {
+        "start": 39.5,
+        "end": 39.6,
+        "word": " Get"
+      },
+      {
+        "start": 39.6,
+        "end": 39.72,
+        "word": " the"
+      },
+      {
+        "start": 39.72,
+        "end": 39.94,
+        "word": " shot."
+      }
+    ]
+  },
+  {
+    "start": 41.36,
+    "end": 47.4,
+    "text": " Hey buddy, you have the wrong guy. I don't have a son your age. Dad, that's cold. Mom",
+    "words": [
+      {
+        "start": 41.36,
+        "end": 41.64,
+        "word": " Hey"
+      },
+      {
+        "start": 41.64,
+        "end": 41.82,
+        "word": " buddy,"
+      },
+      {
+        "start": 42.2,
+        "end": 42.6,
+        "word": " you"
+      },
+      {
+        "start": 42.6,
+        "end": 42.7,
+        "word": " have"
+      },
+      {
+        "start": 42.7,
+        "end": 42.8,
+        "word": " the"
+      },
+      {
+        "start": 42.8,
+        "end": 42.96,
+        "word": " wrong"
+      },
+      {
+        "start": 42.96,
+        "end": 43.26,
+        "word": " guy."
+      },
+      {
+        "start": 43.66,
+        "end": 43.82,
+        "word": " I"
+      },
+      {
+        "start": 43.82,
+        "end": 43.9,
+        "word": " don't"
+      },
+      {
+        "start": 43.9,
+        "end": 44.02,
+        "word": " have"
+      },
+      {
+        "start": 44.02,
+        "end": 44.12,
+        "word": " a"
+      },
+      {
+        "start": 44.12,
+        "end": 44.26,
+        "word": " son"
+      },
+      {
+        "start": 44.26,
+        "end": 44.44,
+        "word": " your"
+      },
+      {
+        "start": 44.44,
+        "end": 44.64,
+        "word": " age."
+      },
+      {
+        "start": 45.16,
+        "end": 45.52,
+        "word": " Dad,"
+      },
+      {
+        "start": 45.7,
+        "end": 46.06,
+        "word": " that's"
+      },
+      {
+        "start": 46.06,
+        "end": 46.44,
+        "word": " cold."
+      },
+      {
+        "start": 47.24,
+        "end": 47.4,
+        "word": " Mom"
+      }
+    ]
+  },
+  {
+    "start": 47.4,
+    "end": 53.38,
+    "text": " gave you year of her life, even as your housekeeper, and you won't even claim us? Here's the DNA",
+    "words": [
+      {
+        "start": 47.4,
+        "end": 47.64,
+        "word": " gave"
+      },
+      {
+        "start": 47.64,
+        "end": 47.86,
+        "word": " you"
+      },
+      {
+        "start": 47.86,
+        "end": 48.14,
+        "word": " year"
+      },
+      {
+        "start": 48.14,
+        "end": 48.34,
+        "word": " of"
+      },
+      {
+        "start": 48.34,
+        "end": 48.5,
+        "word": " her"
+      },
+      {
+        "start": 48.5,
+        "end": 48.88,
+        "word": " life,"
+      },
+      {
+        "start": 49.04,
+        "end": 49.32,
+        "word": " even"
+      },
+      {
+        "start": 49.32,
+        "end": 49.54,
+        "word": " as"
+      },
+      {
+        "start": 49.54,
+        "end": 49.7,
+        "word": " your"
+      },
+      {
+        "start": 49.7,
+        "end": 50.3,
+        "word": " housekeeper,"
+      },
+      {
+        "start": 50.58,
+        "end": 50.88,
+        "word": " and"
+      },
+      {
+        "start": 50.88,
+        "end": 51.02,
+        "word": " you"
+      },
+      {
+        "start": 51.02,
+        "end": 51.16,
+        "word": " won't"
+      },
+      {
+        "start": 51.16,
+        "end": 51.36,
+        "word": " even"
+      },
+      {
+        "start": 51.36,
+        "end": 51.72,
+        "word": " claim"
+      },
+      {
+        "start": 51.72,
+        "end": 52.08,
+        "word": " us?"
+      },
+      {
+        "start": 52.5,
+        "end": 52.84,
+        "word": " Here's"
+      },
+      {
+        "start": 52.84,
+        "end": 53.0,
+        "word": " the"
+      },
+      {
+        "start": 53.0,
+        "end": 53.38,
+        "word": " DNA"
+      }
+    ]
+  },
+  {
+    "start": 53.38,
+    "end": 69.78,
+    "text": " report. Read it. He is number one on the rich list. One little sacrifice from me and the whole family eats.",
+    "words": [
+      {
+        "start": 53.38,
+        "end": 53.86,
+        "word": " report."
+      },
+      {
+        "start": 54.16,
+        "end": 54.3,
+        "word": " Read"
+      },
+      {
+        "start": 54.3,
+        "end": 55.32,
+        "word": " it."
+      },
+      {
+        "start": 59.62,
+        "end": 60.18,
+        "word": " He"
+      },
+      {
+        "start": 60.18,
+        "end": 64.34,
+        "word": " is"
+      },
+      {
+        "start": 64.34,
+        "end": 64.6,
+        "word": " number"
+      },
+      {
+        "start": 64.6,
+        "end": 64.88,
+        "word": " one"
+      },
+      {
+        "start": 64.88,
+        "end": 65.06,
+        "word": " on"
+      },
+      {
+        "start": 65.06,
+        "end": 65.2,
+        "word": " the"
+      },
+      {
+        "start": 65.2,
+        "end": 65.38,
+        "word": " rich"
+      },
+      {
+        "start": 65.38,
+        "end": 65.86,
+        "word": " list."
+      },
+      {
+        "start": 66.44,
+        "end": 66.58,
+        "word": " One"
+      },
+      {
+        "start": 66.58,
+        "end": 66.88,
+        "word": " little"
+      },
+      {
+        "start": 66.88,
+        "end": 67.46,
+        "word": " sacrifice"
+      },
+      {
+        "start": 67.46,
+        "end": 67.78,
+        "word": " from"
+      },
+      {
+        "start": 67.78,
+        "end": 68.06,
+        "word": " me"
+      },
+      {
+        "start": 68.06,
+        "end": 68.48,
+        "word": " and"
+      },
+      {
+        "start": 68.48,
+        "end": 68.58,
+        "word": " the"
+      },
+      {
+        "start": 68.58,
+        "end": 68.8,
+        "word": " whole"
+      },
+      {
+        "start": 68.8,
+        "end": 69.18,
+        "word": " family"
+      },
+      {
+        "start": 69.18,
+        "end": 69.78,
+        "word": " eats."
+      }
+    ]
+  },
+  {
+    "start": 72.08,
+    "end": 74.4,
+    "text": " Leo, let go of him. What the hell are you doing?",
+    "words": [
+      {
+        "start": 72.08,
+        "end": 72.36,
+        "word": " Leo,"
+      },
+      {
+        "start": 72.76,
+        "end": 72.98,
+        "word": " let"
+      },
+      {
+        "start": 72.98,
+        "end": 73.2,
+        "word": " go"
+      },
+      {
+        "start": 73.2,
+        "end": 73.32,
+        "word": " of"
+      },
+      {
+        "start": 73.32,
+        "end": 73.42,
+        "word": " him."
+      },
+      {
+        "start": 73.44,
+        "end": 73.54,
+        "word": " What"
+      },
+      {
+        "start": 73.54,
+        "end": 73.68,
+        "word": " the"
+      },
+      {
+        "start": 73.68,
+        "end": 73.8,
+        "word": " hell"
+      },
+      {
+        "start": 73.8,
+        "end": 73.92,
+        "word": " are"
+      },
+      {
+        "start": 73.92,
+        "end": 74.06,
+        "word": " you"
+      },
+      {
+        "start": 74.06,
+        "end": 74.4,
+        "word": " doing?"
+      }
+    ]
+  },
+  {
+    "start": 81.36,
+    "end": 85.08,
+    "text": " Him? The man from five years ago?",
+    "words": [
+      {
+        "start": 81.36,
+        "end": 81.84,
+        "word": " Him?"
+      },
+      {
+        "start": 83.74,
+        "end": 83.98,
+        "word": " The"
+      },
+      {
+        "start": 83.98,
+        "end": 84.12,
+        "word": " man"
+      },
+      {
+        "start": 84.12,
+        "end": 84.34,
+        "word": " from"
+      },
+      {
+        "start": 84.34,
+        "end": 84.56,
+        "word": " five"
+      },
+      {
+        "start": 84.56,
+        "end": 84.78,
+        "word": " years"
+      },
+      {
+        "start": 84.78,
+        "end": 85.08,
+        "word": " ago?"
+      }
+    ]
+  }
+]
