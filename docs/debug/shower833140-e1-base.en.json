@@ -1,0 +1,827 @@
+[
+  {
+    "start": 8.84,
+    "end": 12.32,
+    "text": " Tell the board not to give an inch on the merger. I'll be online to sign in 10.",
+    "words": [
+      {
+        "start": 8.84,
+        "end": 9.16,
+        "word": " Tell"
+      },
+      {
+        "start": 9.16,
+        "end": 9.26,
+        "word": " the"
+      },
+      {
+        "start": 9.26,
+        "end": 9.46,
+        "word": " board"
+      },
+      {
+        "start": 9.46,
+        "end": 9.64,
+        "word": " not"
+      },
+      {
+        "start": 9.64,
+        "end": 9.76,
+        "word": " to"
+      },
+      {
+        "start": 9.76,
+        "end": 9.9,
+        "word": " give"
+      },
+      {
+        "start": 9.9,
+        "end": 9.98,
+        "word": " an"
+      },
+      {
+        "start": 9.98,
+        "end": 10.24,
+        "word": " inch"
+      },
+      {
+        "start": 10.24,
+        "end": 10.32,
+        "word": " on"
+      },
+      {
+        "start": 10.32,
+        "end": 10.42,
+        "word": " the"
+      },
+      {
+        "start": 10.42,
+        "end": 10.64,
+        "word": " merger."
+      },
+      {
+        "start": 11.26,
+        "end": 11.36,
+        "word": " I'll"
+      },
+      {
+        "start": 11.36,
+        "end": 11.46,
+        "word": " be"
+      },
+      {
+        "start": 11.46,
+        "end": 11.58,
+        "word": " online"
+      },
+      {
+        "start": 11.58,
+        "end": 11.82,
+        "word": " to"
+      },
+      {
+        "start": 11.82,
+        "end": 12.0,
+        "word": " sign"
+      },
+      {
+        "start": 12.0,
+        "end": 12.12,
+        "word": " in"
+      },
+      {
+        "start": 12.12,
+        "end": 12.32,
+        "word": " 10."
+      }
+    ]
+  },
+  {
+    "start": 36.900000000000006,
+    "end": 40.54,
+    "text": " Harvey? Weren't you in Silicon Valley for a meeting? What are you doing back here?",
+    "words": [
+      {
+        "start": 36.900000000000006,
+        "end": 37.300000000000004,
+        "word": " Harvey?"
+      },
+      {
+        "start": 37.300000000000004,
+        "end": 37.7,
+        "word": " Weren't"
+      },
+      {
+        "start": 37.7,
+        "end": 37.78,
+        "word": " you"
+      },
+      {
+        "start": 37.78,
+        "end": 37.88,
+        "word": " in"
+      },
+      {
+        "start": 37.88,
+        "end": 38.06,
+        "word": " Silicon"
+      },
+      {
+        "start": 38.06,
+        "end": 38.48,
+        "word": " Valley"
+      },
+      {
+        "start": 38.48,
+        "end": 38.7,
+        "word": " for"
+      },
+      {
+        "start": 38.7,
+        "end": 38.72,
+        "word": " a"
+      },
+      {
+        "start": 38.72,
+        "end": 38.94,
+        "word": " meeting?"
+      },
+      {
+        "start": 39.68,
+        "end": 39.82,
+        "word": " What"
+      },
+      {
+        "start": 39.82,
+        "end": 39.86,
+        "word": " are"
+      },
+      {
+        "start": 39.86,
+        "end": 39.96,
+        "word": " you"
+      },
+      {
+        "start": 39.96,
+        "end": 40.1,
+        "word": " doing"
+      },
+      {
+        "start": 40.1,
+        "end": 40.26,
+        "word": " back"
+      },
+      {
+        "start": 40.26,
+        "end": 40.54,
+        "word": " here?"
+      }
+    ]
+  },
+  {
+    "start": 41.42,
+    "end": 45.96,
+    "text": " The meeting ended early. The security system just sent an alert. I was worried about you.",
+    "words": [
+      {
+        "start": 41.42,
+        "end": 41.62,
+        "word": " The"
+      },
+      {
+        "start": 41.62,
+        "end": 41.8,
+        "word": " meeting"
+      },
+      {
+        "start": 41.8,
+        "end": 41.98,
+        "word": " ended"
+      },
+      {
+        "start": 41.98,
+        "end": 42.28,
+        "word": " early."
+      },
+      {
+        "start": 43.18,
+        "end": 43.18,
+        "word": " The"
+      },
+      {
+        "start": 43.18,
+        "end": 43.42,
+        "word": " security"
+      },
+      {
+        "start": 43.42,
+        "end": 43.84,
+        "word": " system"
+      },
+      {
+        "start": 43.84,
+        "end": 44.02,
+        "word": " just"
+      },
+      {
+        "start": 44.02,
+        "end": 44.2,
+        "word": " sent"
+      },
+      {
+        "start": 44.2,
+        "end": 44.36,
+        "word": " an"
+      },
+      {
+        "start": 44.36,
+        "end": 44.56,
+        "word": " alert."
+      },
+      {
+        "start": 45.22,
+        "end": 45.28,
+        "word": " I"
+      },
+      {
+        "start": 45.28,
+        "end": 45.36,
+        "word": " was"
+      },
+      {
+        "start": 45.36,
+        "end": 45.52,
+        "word": " worried"
+      },
+      {
+        "start": 45.52,
+        "end": 45.76,
+        "word": " about"
+      },
+      {
+        "start": 45.76,
+        "end": 45.96,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 46.28,
+    "end": 53.02,
+    "text": " An alert? Oh, I must have triggered it by accident. I was down in the wine cellar trying to organize that new shipment of Bordeaux for you.",
+    "words": [
+      {
+        "start": 46.28,
+        "end": 46.38,
+        "word": " An"
+      },
+      {
+        "start": 46.38,
+        "end": 46.58,
+        "word": " alert?"
+      },
+      {
+        "start": 47.4,
+        "end": 47.54,
+        "word": " Oh,"
+      },
+      {
+        "start": 47.62,
+        "end": 47.7,
+        "word": " I"
+      },
+      {
+        "start": 47.7,
+        "end": 47.84,
+        "word": " must"
+      },
+      {
+        "start": 47.84,
+        "end": 48.0,
+        "word": " have"
+      },
+      {
+        "start": 48.0,
+        "end": 48.24,
+        "word": " triggered"
+      },
+      {
+        "start": 48.24,
+        "end": 48.4,
+        "word": " it"
+      },
+      {
+        "start": 48.4,
+        "end": 48.54,
+        "word": " by"
+      },
+      {
+        "start": 48.54,
+        "end": 48.84,
+        "word": " accident."
+      },
+      {
+        "start": 49.64,
+        "end": 49.74,
+        "word": " I"
+      },
+      {
+        "start": 49.74,
+        "end": 49.84,
+        "word": " was"
+      },
+      {
+        "start": 49.84,
+        "end": 50.02,
+        "word": " down"
+      },
+      {
+        "start": 50.02,
+        "end": 50.16,
+        "word": " in"
+      },
+      {
+        "start": 50.16,
+        "end": 50.22,
+        "word": " the"
+      },
+      {
+        "start": 50.22,
+        "end": 50.4,
+        "word": " wine"
+      },
+      {
+        "start": 50.4,
+        "end": 50.74,
+        "word": " cellar"
+      },
+      {
+        "start": 50.74,
+        "end": 51.08,
+        "word": " trying"
+      },
+      {
+        "start": 51.08,
+        "end": 51.22,
+        "word": " to"
+      },
+      {
+        "start": 51.22,
+        "end": 51.48,
+        "word": " organize"
+      },
+      {
+        "start": 51.48,
+        "end": 51.82,
+        "word": " that"
+      },
+      {
+        "start": 51.82,
+        "end": 51.92,
+        "word": " new"
+      },
+      {
+        "start": 51.92,
+        "end": 52.12,
+        "word": " shipment"
+      },
+      {
+        "start": 52.12,
+        "end": 52.34,
+        "word": " of"
+      },
+      {
+        "start": 52.34,
+        "end": 52.7,
+        "word": " Bordeaux"
+      },
+      {
+        "start": 52.7,
+        "end": 52.86,
+        "word": " for"
+      },
+      {
+        "start": 52.86,
+        "end": 53.02,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 53.52,
+    "end": 56.32,
+    "text": " It's stuffy down there. Let's go have champagne at the country club.",
+    "words": [
+      {
+        "start": 53.52,
+        "end": 53.88,
+        "word": " It's"
+      },
+      {
+        "start": 53.88,
+        "end": 54.22,
+        "word": " stuffy"
+      },
+      {
+        "start": 54.22,
+        "end": 54.38,
+        "word": " down"
+      },
+      {
+        "start": 54.38,
+        "end": 54.58,
+        "word": " there."
+      },
+      {
+        "start": 54.84,
+        "end": 55.02,
+        "word": " Let's"
+      },
+      {
+        "start": 55.02,
+        "end": 55.1,
+        "word": " go"
+      },
+      {
+        "start": 55.1,
+        "end": 55.26,
+        "word": " have"
+      },
+      {
+        "start": 55.26,
+        "end": 55.48,
+        "word": " champagne"
+      },
+      {
+        "start": 55.48,
+        "end": 55.78,
+        "word": " at"
+      },
+      {
+        "start": 55.78,
+        "end": 55.86,
+        "word": " the"
+      },
+      {
+        "start": 55.86,
+        "end": 56.06,
+        "word": " country"
+      },
+      {
+        "start": 56.06,
+        "end": 56.32,
+        "word": " club."
+      }
+    ]
+  },
+  {
+    "start": 56.32,
+    "end": 60.74,
+    "text": " Is that so? You've always hated the smell of engine oil on the lower deck.",
+    "words": [
+      {
+        "start": 56.32,
+        "end": 57.1,
+        "word": " Is"
+      },
+      {
+        "start": 57.1,
+        "end": 57.22,
+        "word": " that"
+      },
+      {
+        "start": 57.22,
+        "end": 57.46,
+        "word": " so?"
+      },
+      {
+        "start": 58.24,
+        "end": 58.58,
+        "word": " You've"
+      },
+      {
+        "start": 58.58,
+        "end": 58.68,
+        "word": " always"
+      },
+      {
+        "start": 58.68,
+        "end": 58.98,
+        "word": " hated"
+      },
+      {
+        "start": 58.98,
+        "end": 59.16,
+        "word": " the"
+      },
+      {
+        "start": 59.16,
+        "end": 59.36,
+        "word": " smell"
+      },
+      {
+        "start": 59.36,
+        "end": 59.54,
+        "word": " of"
+      },
+      {
+        "start": 59.54,
+        "end": 59.74,
+        "word": " engine"
+      },
+      {
+        "start": 59.74,
+        "end": 60.02,
+        "word": " oil"
+      },
+      {
+        "start": 60.02,
+        "end": 60.2,
+        "word": " on"
+      },
+      {
+        "start": 60.2,
+        "end": 60.28,
+        "word": " the"
+      },
+      {
+        "start": 60.28,
+        "end": 60.46,
+        "word": " lower"
+      },
+      {
+        "start": 60.46,
+        "end": 60.74,
+        "word": " deck."
+      }
+    ]
+  },
+  {
+    "start": 61.44,
+    "end": 63.74,
+    "text": " I want it to surprise you. Come on, darling.",
+    "words": [
+      {
+        "start": 61.44,
+        "end": 61.62,
+        "word": " I"
+      },
+      {
+        "start": 61.62,
+        "end": 61.76,
+        "word": " want"
+      },
+      {
+        "start": 61.76,
+        "end": 61.86,
+        "word": " it"
+      },
+      {
+        "start": 61.86,
+        "end": 61.96,
+        "word": " to"
+      },
+      {
+        "start": 61.96,
+        "end": 62.24,
+        "word": " surprise"
+      },
+      {
+        "start": 62.24,
+        "end": 62.58,
+        "word": " you."
+      },
+      {
+        "start": 63.22,
+        "end": 63.4,
+        "word": " Come"
+      },
+      {
+        "start": 63.4,
+        "end": 63.58,
+        "word": " on,"
+      },
+      {
+        "start": 63.64,
+        "end": 63.74,
+        "word": " darling."
+      }
+    ]
+  },
+  {
+    "start": 67.03999999999999,
+    "end": 71.88,
+    "text": " It takes serious for a Rolex southerners steel bracelet for you to scratch like that.",
+    "words": [
+      {
+        "start": 67.03999999999999,
+        "end": 67.52,
+        "word": " It"
+      },
+      {
+        "start": 67.52,
+        "end": 68.0,
+        "word": " takes"
+      },
+      {
+        "start": 68.0,
+        "end": 68.44,
+        "word": " serious"
+      },
+      {
+        "start": 68.44,
+        "end": 68.74,
+        "word": " for"
+      },
+      {
+        "start": 68.74,
+        "end": 68.86,
+        "word": " a"
+      },
+      {
+        "start": 68.86,
+        "end": 69.22,
+        "word": " Rolex"
+      },
+      {
+        "start": 69.22,
+        "end": 69.76,
+        "word": " southerners"
+      },
+      {
+        "start": 69.76,
+        "end": 70.18,
+        "word": " steel"
+      },
+      {
+        "start": 70.18,
+        "end": 70.46,
+        "word": " bracelet"
+      },
+      {
+        "start": 70.46,
+        "end": 70.88,
+        "word": " for"
+      },
+      {
+        "start": 70.88,
+        "end": 70.98,
+        "word": " you"
+      },
+      {
+        "start": 70.98,
+        "end": 71.14,
+        "word": " to"
+      },
+      {
+        "start": 71.14,
+        "end": 71.3,
+        "word": " scratch"
+      },
+      {
+        "start": 71.3,
+        "end": 71.64,
+        "word": " like"
+      },
+      {
+        "start": 71.64,
+        "end": 71.88,
+        "word": " that."
+      }
+    ]
+  },
+  {
+    "start": 72.5,
+    "end": 77.86,
+    "text": " Harvey? What are you looking at? Nothing. You just smell different today.",
+    "words": [
+      {
+        "start": 72.5,
+        "end": 72.74,
+        "word": " Harvey?"
+      },
+      {
+        "start": 73.6,
+        "end": 73.82,
+        "word": " What"
+      },
+      {
+        "start": 73.82,
+        "end": 73.88,
+        "word": " are"
+      },
+      {
+        "start": 73.88,
+        "end": 73.94,
+        "word": " you"
+      },
+      {
+        "start": 73.94,
+        "end": 74.12,
+        "word": " looking"
+      },
+      {
+        "start": 74.12,
+        "end": 74.36,
+        "word": " at?"
+      },
+      {
+        "start": 74.88,
+        "end": 75.34,
+        "word": " Nothing."
+      },
+      {
+        "start": 76.18,
+        "end": 76.42,
+        "word": " You"
+      },
+      {
+        "start": 76.42,
+        "end": 76.56,
+        "word": " just"
+      },
+      {
+        "start": 76.56,
+        "end": 76.8,
+        "word": " smell"
+      },
+      {
+        "start": 76.8,
+        "end": 77.44,
+        "word": " different"
+      },
+      {
+        "start": 77.44,
+        "end": 77.86,
+        "word": " today."
+      }
+    ]
+  },
+  {
+    "start": 80.5,
+    "end": 83.78,
+    "text": " Looks like this $50 million love boat when it's a thorough cleaning.",
+    "words": [
+      {
+        "start": 80.5,
+        "end": 80.98,
+        "word": " Looks"
+      },
+      {
+        "start": 80.98,
+        "end": 81.24,
+        "word": " like"
+      },
+      {
+        "start": 81.24,
+        "end": 81.42,
+        "word": " this"
+      },
+      {
+        "start": 81.42,
+        "end": 81.78,
+        "word": " $50"
+      },
+      {
+        "start": 81.78,
+        "end": 82.04,
+        "word": " million"
+      },
+      {
+        "start": 82.04,
+        "end": 82.56,
+        "word": " love"
+      },
+      {
+        "start": 82.56,
+        "end": 82.8,
+        "word": " boat"
+      },
+      {
+        "start": 82.8,
+        "end": 83.0,
+        "word": " when"
+      },
+      {
+        "start": 83.0,
+        "end": 83.16,
+        "word": " it's"
+      },
+      {
+        "start": 83.16,
+        "end": 83.2,
+        "word": " a"
+      },
+      {
+        "start": 83.2,
+        "end": 83.44,
+        "word": " thorough"
+      },
+      {
+        "start": 83.44,
+        "end": 83.78,
+        "word": " cleaning."
+      }
+    ]
+  }
+]

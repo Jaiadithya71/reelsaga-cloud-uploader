@@ -1,0 +1,32 @@
+[
+  {
+    "episode": 1,
+    "part": 1,
+    "source_start": 0,
+    "source_end": 40.9,
+    "duration": 40.9,
+    "sha256": "1783ddf2adfcde5be9185d7b6cd8b7c4c7363fe75f42e2af43c24dee6dde1c94",
+    "bytes": 31875750,
+    "path": "/downloads/shower-e1p1.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 40.917
+  },
+  {
+    "episode": 1,
+    "part": 2,
+    "source_start": 40.9,
+    "source_end": 86.293,
+    "duration": 45.39300000000001,
+    "sha256": "07cf4dbe42ccf32d48a6d087b4ca6ee5c68431aff928a913d4039216a36b65c7",
+    "bytes": 35887652,
+    "path": "/downloads/shower-e1p2.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 45.393
+  }
+]
