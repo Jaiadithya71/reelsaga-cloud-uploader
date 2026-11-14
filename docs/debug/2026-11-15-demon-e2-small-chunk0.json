@@ -1,0 +1,1320 @@
+[
+  {
+    "start": 0.6800000000000015,
+    "end": 2.68,
+    "text": " Sir, can I sign up for the kids parade?",
+    "words": [
+      {
+        "start": 0.6800000000000015,
+        "end": 1.08,
+        "word": " Sir,"
+      },
+      {
+        "start": 1.58,
+        "end": 1.64,
+        "word": " can"
+      },
+      {
+        "start": 1.64,
+        "end": 1.76,
+        "word": " I"
+      },
+      {
+        "start": 1.76,
+        "end": 1.92,
+        "word": " sign"
+      },
+      {
+        "start": 1.92,
+        "end": 2.02,
+        "word": " up"
+      },
+      {
+        "start": 2.02,
+        "end": 2.14,
+        "word": " for"
+      },
+      {
+        "start": 2.14,
+        "end": 2.24,
+        "word": " the"
+      },
+      {
+        "start": 2.24,
+        "end": 2.36,
+        "word": " kids"
+      },
+      {
+        "start": 2.36,
+        "end": 2.68,
+        "word": " parade?"
+      }
+    ]
+  },
+  {
+    "start": 3.16,
+    "end": 3.18,
+    "text": " Name?",
+    "words": [
+      {
+        "start": 3.16,
+        "end": 3.18,
+        "word": " Name?"
+      }
+    ]
+  },
+  {
+    "start": 4.12,
+    "end": 4.64,
+    "text": " Lucian Vane.",
+    "words": [
+      {
+        "start": 4.12,
+        "end": 4.36,
+        "word": " Lucian"
+      },
+      {
+        "start": 4.36,
+        "end": 4.64,
+        "word": " Vane."
+      }
+    ]
+  },
+  {
+    "start": 5.840000000000002,
+    "end": 6.24,
+    "text": " No.",
+    "words": [
+      {
+        "start": 5.840000000000002,
+        "end": 6.24,
+        "word": " No."
+      }
+    ]
+  },
+  {
+    "start": 7.44,
+    "end": 7.74,
+    "text": " Why?",
+    "words": [
+      {
+        "start": 7.44,
+        "end": 7.74,
+        "word": " Why?"
+      }
+    ]
+  },
+  {
+    "start": 9.04,
+    "end": 10.5,
+    "text": " Lucian, don't make this difficult.",
+    "words": [
+      {
+        "start": 9.04,
+        "end": 9.34,
+        "word": " Lucian,"
+      },
+      {
+        "start": 9.6,
+        "end": 9.82,
+        "word": " don't"
+      },
+      {
+        "start": 9.82,
+        "end": 10.0,
+        "word": " make"
+      },
+      {
+        "start": 10.0,
+        "end": 10.16,
+        "word": " this"
+      },
+      {
+        "start": 10.16,
+        "end": 10.5,
+        "word": " difficult."
+      }
+    ]
+  },
+  {
+    "start": 10.92,
+    "end": 12.84,
+    "text": " We've got tourists here for the 300th anniversary.",
+    "words": [
+      {
+        "start": 10.92,
+        "end": 11.04,
+        "word": " We've"
+      },
+      {
+        "start": 11.04,
+        "end": 11.18,
+        "word": " got"
+      },
+      {
+        "start": 11.18,
+        "end": 11.44,
+        "word": " tourists"
+      },
+      {
+        "start": 11.44,
+        "end": 11.72,
+        "word": " here"
+      },
+      {
+        "start": 11.72,
+        "end": 11.86,
+        "word": " for"
+      },
+      {
+        "start": 11.86,
+        "end": 11.98,
+        "word": " the"
+      },
+      {
+        "start": 11.98,
+        "end": 12.84,
+        "word": " 300th"
+      },
+      {
+        "start": 12.84,
+        "end": 12.84,
+        "word": " anniversary."
+      }
+    ]
+  },
+  {
+    "start": 13.34,
+    "end": 15.44,
+    "text": " If you lose control during the parade, who takes the blame?",
+    "words": [
+      {
+        "start": 13.34,
+        "end": 13.44,
+        "word": " If"
+      },
+      {
+        "start": 13.44,
+        "end": 13.56,
+        "word": " you"
+      },
+      {
+        "start": 13.56,
+        "end": 13.7,
+        "word": " lose"
+      },
+      {
+        "start": 13.7,
+        "end": 14.04,
+        "word": " control"
+      },
+      {
+        "start": 14.04,
+        "end": 14.26,
+        "word": " during"
+      },
+      {
+        "start": 14.26,
+        "end": 14.42,
+        "word": " the"
+      },
+      {
+        "start": 14.42,
+        "end": 14.68,
+        "word": " parade,"
+      },
+      {
+        "start": 14.78,
+        "end": 14.86,
+        "word": " who"
+      },
+      {
+        "start": 14.86,
+        "end": 15.06,
+        "word": " takes"
+      },
+      {
+        "start": 15.06,
+        "end": 15.24,
+        "word": " the"
+      },
+      {
+        "start": 15.24,
+        "end": 15.44,
+        "word": " blame?"
+      }
+    ]
+  },
+  {
+    "start": 15.68,
+    "end": 16.22,
+    "text": " I won't.",
+    "words": [
+      {
+        "start": 15.68,
+        "end": 15.82,
+        "word": " I"
+      },
+      {
+        "start": 15.82,
+        "end": 16.22,
+        "word": " won't."
+      }
+    ]
+  },
+  {
+    "start": 16.44,
+    "end": 19.26,
+    "text": " If you're worried I'll scare people, I can wear a hat, hide my horns.",
+    "words": [
+      {
+        "start": 16.44,
+        "end": 16.64,
+        "word": " If"
+      },
+      {
+        "start": 16.64,
+        "end": 16.78,
+        "word": " you're"
+      },
+      {
+        "start": 16.78,
+        "end": 16.96,
+        "word": " worried"
+      },
+      {
+        "start": 16.96,
+        "end": 17.16,
+        "word": " I'll"
+      },
+      {
+        "start": 17.16,
+        "end": 17.36,
+        "word": " scare"
+      },
+      {
+        "start": 17.36,
+        "end": 17.72,
+        "word": " people,"
+      },
+      {
+        "start": 17.86,
+        "end": 17.96,
+        "word": " I"
+      },
+      {
+        "start": 17.96,
+        "end": 18.08,
+        "word": " can"
+      },
+      {
+        "start": 18.08,
+        "end": 18.24,
+        "word": " wear"
+      },
+      {
+        "start": 18.24,
+        "end": 18.34,
+        "word": " a"
+      },
+      {
+        "start": 18.34,
+        "end": 18.54,
+        "word": " hat,"
+      },
+      {
+        "start": 18.72,
+        "end": 18.82,
+        "word": " hide"
+      },
+      {
+        "start": 18.82,
+        "end": 19.0,
+        "word": " my"
+      },
+      {
+        "start": 19.0,
+        "end": 19.26,
+        "word": " horns."
+      }
+    ]
+  },
+  {
+    "start": 20.84,
+    "end": 21.78,
+    "text": " He's already a demon.",
+    "words": [
+      {
+        "start": 20.84,
+        "end": 21.16,
+        "word": " He's"
+      },
+      {
+        "start": 21.16,
+        "end": 21.38,
+        "word": " already"
+      },
+      {
+        "start": 21.38,
+        "end": 21.58,
+        "word": " a"
+      },
+      {
+        "start": 21.58,
+        "end": 21.78,
+        "word": " demon."
+      }
+    ]
+  },
+  {
+    "start": 22.08,
+    "end": 22.68,
+    "text": " Why dress up?",
+    "words": [
+      {
+        "start": 22.08,
+        "end": 22.22,
+        "word": " Why"
+      },
+      {
+        "start": 22.22,
+        "end": 22.42,
+        "word": " dress"
+      },
+      {
+        "start": 22.42,
+        "end": 22.68,
+        "word": " up?"
+      }
+    ]
+  },
+  {
+    "start": 22.88,
+    "end": 24.02,
+    "text": " Yeah, just go as yourself.",
+    "words": [
+      {
+        "start": 22.88,
+        "end": 23.08,
+        "word": " Yeah,"
+      },
+      {
+        "start": 23.2,
+        "end": 23.38,
+        "word": " just"
+      },
+      {
+        "start": 23.38,
+        "end": 23.54,
+        "word": " go"
+      },
+      {
+        "start": 23.54,
+        "end": 23.66,
+        "word": " as"
+      },
+      {
+        "start": 23.66,
+        "end": 24.02,
+        "word": " yourself."
+      }
+    ]
+  },
+  {
+    "start": 24.34,
+    "end": 24.66,
+    "text": " A demon?",
+    "words": [
+      {
+        "start": 24.34,
+        "end": 24.42,
+        "word": " A"
+      },
+      {
+        "start": 24.42,
+        "end": 24.66,
+        "word": " demon?"
+      }
+    ]
+  },
+  {
+    "start": 24.94,
+    "end": 25.62,
+    "text": " Everybody run!",
+    "words": [
+      {
+        "start": 24.94,
+        "end": 25.22,
+        "word": " Everybody"
+      },
+      {
+        "start": 25.22,
+        "end": 25.62,
+        "word": " run!"
+      }
+    ]
+  },
+  {
+    "start": 27.02,
+    "end": 31.22,
+    "text": " See, one little comment and he loses it.",
+    "words": [
+      {
+        "start": 27.02,
+        "end": 27.42,
+        "word": " See,"
+      },
+      {
+        "start": 29.42,
+        "end": 29.58,
+        "word": " one"
+      },
+      {
+        "start": 29.58,
+        "end": 29.8,
+        "word": " little"
+      },
+      {
+        "start": 29.8,
+        "end": 30.14,
+        "word": " comment"
+      },
+      {
+        "start": 30.14,
+        "end": 30.44,
+        "word": " and"
+      },
+      {
+        "start": 30.44,
+        "end": 30.56,
+        "word": " he"
+      },
+      {
+        "start": 30.56,
+        "end": 30.8,
+        "word": " loses"
+      },
+      {
+        "start": 30.8,
+        "end": 31.22,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 31.42,
+    "end": 31.78,
+    "text": " Get out!",
+    "words": [
+      {
+        "start": 31.42,
+        "end": 31.5,
+        "word": " Get"
+      },
+      {
+        "start": 31.5,
+        "end": 31.78,
+        "word": " out!"
+      }
+    ]
+  },
+  {
+    "start": 32.18,
+    "end": 33.14,
+    "text": " Stop causing trouble.",
+    "words": [
+      {
+        "start": 32.18,
+        "end": 32.3,
+        "word": " Stop"
+      },
+      {
+        "start": 32.3,
+        "end": 32.72,
+        "word": " causing"
+      },
+      {
+        "start": 32.72,
+        "end": 33.14,
+        "word": " trouble."
+      }
+    ]
+  },
+  {
+    "start": 33.4,
+    "end": 34.78,
+    "text": " Kids like that shouldn't be allowed out.",
+    "words": [
+      {
+        "start": 33.4,
+        "end": 33.52,
+        "word": " Kids"
+      },
+      {
+        "start": 33.52,
+        "end": 33.68,
+        "word": " like"
+      },
+      {
+        "start": 33.68,
+        "end": 33.88,
+        "word": " that"
+      },
+      {
+        "start": 33.88,
+        "end": 34.1,
+        "word": " shouldn't"
+      },
+      {
+        "start": 34.1,
+        "end": 34.22,
+        "word": " be"
+      },
+      {
+        "start": 34.22,
+        "end": 34.48,
+        "word": " allowed"
+      },
+      {
+        "start": 34.48,
+        "end": 34.78,
+        "word": " out."
+      }
+    ]
+  },
+  {
+    "start": 34.94,
+    "end": 35.68,
+    "text": " Kick him out of town.",
+    "words": [
+      {
+        "start": 34.94,
+        "end": 35.04,
+        "word": " Kick"
+      },
+      {
+        "start": 35.04,
+        "end": 35.16,
+        "word": " him"
+      },
+      {
+        "start": 35.16,
+        "end": 35.3,
+        "word": " out"
+      },
+      {
+        "start": 35.3,
+        "end": 35.44,
+        "word": " of"
+      },
+      {
+        "start": 35.44,
+        "end": 35.68,
+        "word": " town."
+      }
+    ]
+  },
+  {
+    "start": 35.98,
+    "end": 37.18,
+    "text": " I wasn't trying to burn anything.",
+    "words": [
+      {
+        "start": 35.98,
+        "end": 36.0,
+        "word": " I"
+      },
+      {
+        "start": 36.0,
+        "end": 36.32,
+        "word": " wasn't"
+      },
+      {
+        "start": 36.32,
+        "end": 36.52,
+        "word": " trying"
+      },
+      {
+        "start": 36.52,
+        "end": 36.64,
+        "word": " to"
+      },
+      {
+        "start": 36.64,
+        "end": 36.8,
+        "word": " burn"
+      },
+      {
+        "start": 36.8,
+        "end": 37.18,
+        "word": " anything."
+      }
+    ]
+  },
+  {
+    "start": 37.36,
+    "end": 39.22,
+    "text": " I was trying to come all the way here.",
+    "words": [
+      {
+        "start": 37.36,
+        "end": 37.36,
+        "word": " I"
+      },
+      {
+        "start": 37.36,
+        "end": 37.52,
+        "word": " was"
+      },
+      {
+        "start": 37.52,
+        "end": 37.72,
+        "word": " trying"
+      },
+      {
+        "start": 37.72,
+        "end": 38.0,
+        "word": " to"
+      },
+      {
+        "start": 38.0,
+        "end": 38.18,
+        "word": " come"
+      },
+      {
+        "start": 38.18,
+        "end": 38.46,
+        "word": " all"
+      },
+      {
+        "start": 38.46,
+        "end": 38.64,
+        "word": " the"
+      },
+      {
+        "start": 38.64,
+        "end": 38.88,
+        "word": " way"
+      },
+      {
+        "start": 38.88,
+        "end": 39.22,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 39.26,
+    "end": 40.0,
+    "text": " Get out of here!",
+    "words": [
+      {
+        "start": 39.26,
+        "end": 39.48,
+        "word": " Get"
+      },
+      {
+        "start": 39.48,
+        "end": 39.68,
+        "word": " out"
+      },
+      {
+        "start": 39.68,
+        "end": 39.86,
+        "word": " of"
+      },
+      {
+        "start": 39.86,
+        "end": 40.0,
+        "word": " here!"
+      }
+    ]
+  },
+  {
+    "start": 41.599999999999994,
+    "end": 43.92,
+    "text": " Grown adults, ganging up on a six year old.",
+    "words": [
+      {
+        "start": 41.599999999999994,
+        "end": 42.0,
+        "word": " Grown"
+      },
+      {
+        "start": 42.0,
+        "end": 42.4,
+        "word": " adults,"
+      },
+      {
+        "start": 42.54,
+        "end": 42.82,
+        "word": " ganging"
+      },
+      {
+        "start": 42.82,
+        "end": 43.02,
+        "word": " up"
+      },
+      {
+        "start": 43.02,
+        "end": 43.16,
+        "word": " on"
+      },
+      {
+        "start": 43.16,
+        "end": 43.28,
+        "word": " a"
+      },
+      {
+        "start": 43.28,
+        "end": 43.5,
+        "word": " six"
+      },
+      {
+        "start": 43.5,
+        "end": 43.66,
+        "word": " year"
+      },
+      {
+        "start": 43.66,
+        "end": 43.92,
+        "word": " old."
+      }
+    ]
+  },
+  {
+    "start": 44.44,
+    "end": 45.06,
+    "text": " Aren't you ashamed?",
+    "words": [
+      {
+        "start": 44.44,
+        "end": 44.58,
+        "word": " Aren't"
+      },
+      {
+        "start": 44.58,
+        "end": 44.74,
+        "word": " you"
+      },
+      {
+        "start": 44.74,
+        "end": 45.06,
+        "word": " ashamed?"
+      }
+    ]
+  },
+  {
+    "start": 53.69999999999999,
+    "end": 55.14,
+    "text": " How much to sign him up?",
+    "words": [
+      {
+        "start": 53.69999999999999,
+        "end": 54.099999999999994,
+        "word": " How"
+      },
+      {
+        "start": 54.099999999999994,
+        "end": 54.5,
+        "word": " much"
+      },
+      {
+        "start": 54.5,
+        "end": 54.66,
+        "word": " to"
+      },
+      {
+        "start": 54.66,
+        "end": 54.84,
+        "word": " sign"
+      },
+      {
+        "start": 54.84,
+        "end": 54.98,
+        "word": " him"
+      },
+      {
+        "start": 54.98,
+        "end": 55.14,
+        "word": " up?"
+      }
+    ]
+  },
+  {
+    "start": 55.62,
+    "end": 56.5,
+    "text": " It's not about money.",
+    "words": [
+      {
+        "start": 55.62,
+        "end": 55.76,
+        "word": " It's"
+      },
+      {
+        "start": 55.76,
+        "end": 55.92,
+        "word": " not"
+      },
+      {
+        "start": 55.92,
+        "end": 56.14,
+        "word": " about"
+      },
+      {
+        "start": 56.14,
+        "end": 56.5,
+        "word": " money."
+      }
+    ]
+  },
+  {
+    "start": 57.14,
+    "end": 57.96,
+    "text": " So you just don't like him?",
+    "words": [
+      {
+        "start": 57.14,
+        "end": 57.22,
+        "word": " So"
+      },
+      {
+        "start": 57.22,
+        "end": 57.32,
+        "word": " you"
+      },
+      {
+        "start": 57.32,
+        "end": 57.46,
+        "word": " just"
+      },
+      {
+        "start": 57.46,
+        "end": 57.6,
+        "word": " don't"
+      },
+      {
+        "start": 57.6,
+        "end": 57.78,
+        "word": " like"
+      },
+      {
+        "start": 57.78,
+        "end": 57.96,
+        "word": " him?"
+      }
+    ]
+  },
+  {
+    "start": 58.22,
+    "end": 59.34,
+    "text": " Don't start with me, Elena.",
+    "words": [
+      {
+        "start": 58.22,
+        "end": 58.44,
+        "word": " Don't"
+      },
+      {
+        "start": 58.44,
+        "end": 58.68,
+        "word": " start"
+      },
+      {
+        "start": 58.68,
+        "end": 58.9,
+        "word": " with"
+      },
+      {
+        "start": 58.9,
+        "end": 59.1,
+        "word": " me,"
+      },
+      {
+        "start": 59.18,
+        "end": 59.34,
+        "word": " Elena."
+      }
+    ]
+  },
+  {
+    "start": 59.78,
+    "end": 61.64,
+    "text": " Everyone in town knows what that kid is.",
+    "words": [
+      {
+        "start": 59.78,
+        "end": 60.06,
+        "word": " Everyone"
+      },
+      {
+        "start": 60.06,
+        "end": 60.3,
+        "word": " in"
+      },
+      {
+        "start": 60.3,
+        "end": 60.44,
+        "word": " town"
+      },
+      {
+        "start": 60.44,
+        "end": 60.7,
+        "word": " knows"
+      },
+      {
+        "start": 60.7,
+        "end": 60.9,
+        "word": " what"
+      },
+      {
+        "start": 60.9,
+        "end": 61.1,
+        "word": " that"
+      },
+      {
+        "start": 61.1,
+        "end": 61.3,
+        "word": " kid"
+      },
+      {
+        "start": 61.3,
+        "end": 61.64,
+        "word": " is."
+      }
+    ]
+  },
+  {
+    "start": 62.16,
+    "end": 63.46,
+    "text": " He was asking nicely.",
+    "words": [
+      {
+        "start": 62.16,
+        "end": 62.26,
+        "word": " He"
+      },
+      {
+        "start": 62.26,
+        "end": 62.44,
+        "word": " was"
+      },
+      {
+        "start": 62.44,
+        "end": 62.94,
+        "word": " asking"
+      },
+      {
+        "start": 62.94,
+        "end": 63.46,
+        "word": " nicely."
+      }
+    ]
+  },
+  {
+    "start": 64.0,
+    "end": 66.76,
+    "text": " You're the ones who cornered him and called him a monster.",
+    "words": [
+      {
+        "start": 64.0,
+        "end": 64.24,
+        "word": " You're"
+      },
+      {
+        "start": 64.24,
+        "end": 64.38,
+        "word": " the"
+      },
+      {
+        "start": 64.38,
+        "end": 64.56,
+        "word": " ones"
+      },
+      {
+        "start": 64.56,
+        "end": 64.8,
+        "word": " who"
+      },
+      {
+        "start": 64.8,
+        "end": 65.16,
+        "word": " cornered"
+      },
+      {
+        "start": 65.16,
+        "end": 65.4,
+        "word": " him"
+      },
+      {
+        "start": 65.4,
+        "end": 65.74,
+        "word": " and"
+      },
+      {
+        "start": 65.74,
+        "end": 66.0,
+        "word": " called"
+      },
+      {
+        "start": 66.0,
+        "end": 66.22,
+        "word": " him"
+      },
+      {
+        "start": 66.22,
+        "end": 66.42,
+        "word": " a"
+      },
+      {
+        "start": 66.42,
+        "end": 66.76,
+        "word": " monster."
+      }
+    ]
+  },
+  {
+    "start": 67.34,
+    "end": 71.04,
+    "text": " You get to bully a kid, but one little flame makes him a public juris?",
+    "words": [
+      {
+        "start": 67.34,
+        "end": 67.5,
+        "word": " You"
+      },
+      {
+        "start": 67.5,
+        "end": 67.66,
+        "word": " get"
+      },
+      {
+        "start": 67.66,
+        "end": 67.8,
+        "word": " to"
+      },
+      {
+        "start": 67.8,
+        "end": 68.02,
+        "word": " bully"
+      },
+      {
+        "start": 68.02,
+        "end": 68.24,
+        "word": " a"
+      },
+      {
+        "start": 68.24,
+        "end": 68.48,
+        "word": " kid,"
+      },
+      {
+        "start": 68.62,
+        "end": 68.9,
+        "word": " but"
+      },
+      {
+        "start": 68.9,
+        "end": 69.16,
+        "word": " one"
+      },
+      {
+        "start": 69.16,
+        "end": 69.36,
+        "word": " little"
+      },
+      {
+        "start": 69.36,
+        "end": 69.74,
+        "word": " flame"
+      },
+      {
+        "start": 69.74,
+        "end": 70.02,
+        "word": " makes"
+      },
+      {
+        "start": 70.02,
+        "end": 70.16,
+        "word": " him"
+      },
+      {
+        "start": 70.16,
+        "end": 70.3,
+        "word": " a"
+      },
+      {
+        "start": 70.3,
+        "end": 70.6,
+        "word": " public"
+      },
+      {
+        "start": 70.6,
+        "end": 71.04,
+        "word": " juris?"
+      }
+    ]
+  },
+  {
+    "start": 71.72,
+    "end": 72.64,
+    "text": " What if something happens?",
+    "words": [
+      {
+        "start": 71.72,
+        "end": 71.86,
+        "word": " What"
+      },
+      {
+        "start": 71.86,
+        "end": 71.98,
+        "word": " if"
+      },
+      {
+        "start": 71.98,
+        "end": 72.18,
+        "word": " something"
+      },
+      {
+        "start": 72.18,
+        "end": 72.64,
+        "word": " happens?"
+      }
+    ]
+  },
+  {
+    "start": 73.62,
+    "end": 74.18,
+    "text": " What if?",
+    "words": [
+      {
+        "start": 73.62,
+        "end": 73.86,
+        "word": " What"
+      },
+      {
+        "start": 73.86,
+        "end": 74.18,
+        "word": " if?"
+      }
+    ]
+  },
+  {
+    "start": 74.74,
+    "end": 75.7,
+    "text": " Then stay home!",
+    "words": [
+      {
+        "start": 74.74,
+        "end": 74.9,
+        "word": " Then"
+      },
+      {
+        "start": 74.9,
+        "end": 75.28,
+        "word": " stay"
+      },
+      {
+        "start": 75.28,
+        "end": 75.7,
+        "word": " home!"
+      }
+    ]
+  },
+  {
+    "start": 76.2,
+    "end": 77.34,
+    "text": " What if you trip and die?",
+    "words": [
+      {
+        "start": 76.2,
+        "end": 76.38,
+        "word": " What"
+      },
+      {
+        "start": 76.38,
+        "end": 76.5,
+        "word": " if"
+      },
+      {
+        "start": 76.5,
+        "end": 76.66,
+        "word": " you"
+      },
+      {
+        "start": 76.66,
+        "end": 76.88,
+        "word": " trip"
+      },
+      {
+        "start": 76.88,
+        "end": 77.06,
+        "word": " and"
+      },
+      {
+        "start": 77.06,
+        "end": 77.34,
+        "word": " die?"
+      }
+    ]
+  },
+  {
+    "start": 81.12,
+    "end": 81.56,
+    "text": " Elena!",
+    "words": [
+      {
+        "start": 81.12,
+        "end": 81.56,
+        "word": " Elena!"
+      }
+    ]
+  },
+  {
+    "start": 83.5,
+    "end": 85.98,
+    "text": " Was my husband at your shop again yet?",
+    "words": [
+      {
+        "start": 83.5,
+        "end": 84.1,
+        "word": " Was"
+      },
+      {
+        "start": 84.1,
+        "end": 84.42,
+        "word": " my"
+      },
+      {
+        "start": 84.42,
+        "end": 84.82,
+        "word": " husband"
+      },
+      {
+        "start": 84.82,
+        "end": 85.08,
+        "word": " at"
+      },
+      {
+        "start": 85.08,
+        "end": 85.24,
+        "word": " your"
+      },
+      {
+        "start": 85.24,
+        "end": 85.54,
+        "word": " shop"
+      },
+      {
+        "start": 85.54,
+        "end": 85.84,
+        "word": " again"
+      },
+      {
+        "start": 85.84,
+        "end": 85.98,
+        "word": " yet?"
+      }
+    ]
+  }
+]

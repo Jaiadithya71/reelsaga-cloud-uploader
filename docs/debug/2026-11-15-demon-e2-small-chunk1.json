@@ -1,0 +1,863 @@
+[
+  {
+    "start": 86.0,
+    "end": 88.62,
+    "text": " He came to fix a pipe, so what?",
+    "words": [
+      {
+        "start": 86.0,
+        "end": 86.88,
+        "word": " He"
+      },
+      {
+        "start": 86.88,
+        "end": 87.1,
+        "word": " came"
+      },
+      {
+        "start": 87.1,
+        "end": 87.26,
+        "word": " to"
+      },
+      {
+        "start": 87.26,
+        "end": 87.42,
+        "word": " fix"
+      },
+      {
+        "start": 87.42,
+        "end": 87.58,
+        "word": " a"
+      },
+      {
+        "start": 87.58,
+        "end": 87.84,
+        "word": " pipe,"
+      },
+      {
+        "start": 88.1,
+        "end": 88.36,
+        "word": " so"
+      },
+      {
+        "start": 88.36,
+        "end": 88.62,
+        "word": " what?"
+      }
+    ]
+  },
+  {
+    "start": 89.96,
+    "end": 91.58,
+    "text": " Three hours to fix a pipe?",
+    "words": [
+      {
+        "start": 89.96,
+        "end": 89.96,
+        "word": " Three"
+      },
+      {
+        "start": 89.96,
+        "end": 90.44,
+        "word": " hours"
+      },
+      {
+        "start": 90.44,
+        "end": 90.8,
+        "word": " to"
+      },
+      {
+        "start": 90.8,
+        "end": 91.02,
+        "word": " fix"
+      },
+      {
+        "start": 91.02,
+        "end": 91.24,
+        "word": " a"
+      },
+      {
+        "start": 91.24,
+        "end": 91.58,
+        "word": " pipe?"
+      }
+    ]
+  },
+  {
+    "start": 92.04,
+    "end": 94.78,
+    "text": " Who knows what you two were doing behind closed doors?",
+    "words": [
+      {
+        "start": 92.04,
+        "end": 92.22,
+        "word": " Who"
+      },
+      {
+        "start": 92.22,
+        "end": 92.5,
+        "word": " knows"
+      },
+      {
+        "start": 92.5,
+        "end": 92.76,
+        "word": " what"
+      },
+      {
+        "start": 92.76,
+        "end": 92.98,
+        "word": " you"
+      },
+      {
+        "start": 92.98,
+        "end": 93.16,
+        "word": " two"
+      },
+      {
+        "start": 93.16,
+        "end": 93.36,
+        "word": " were"
+      },
+      {
+        "start": 93.36,
+        "end": 93.6,
+        "word": " doing"
+      },
+      {
+        "start": 93.6,
+        "end": 93.96,
+        "word": " behind"
+      },
+      {
+        "start": 93.96,
+        "end": 94.3,
+        "word": " closed"
+      },
+      {
+        "start": 94.3,
+        "end": 94.78,
+        "word": " doors?"
+      }
+    ]
+  },
+  {
+    "start": 95.96000000000001,
+    "end": 97.24,
+    "text": " He's lousy at it.",
+    "words": [
+      {
+        "start": 95.96000000000001,
+        "end": 96.18,
+        "word": " He's"
+      },
+      {
+        "start": 96.18,
+        "end": 96.44,
+        "word": " lousy"
+      },
+      {
+        "start": 96.44,
+        "end": 96.82,
+        "word": " at"
+      },
+      {
+        "start": 96.82,
+        "end": 97.24,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 97.7,
+    "end": 99.62,
+    "text": " He tried twice, and it still leaks.",
+    "words": [
+      {
+        "start": 97.7,
+        "end": 97.78,
+        "word": " He"
+      },
+      {
+        "start": 97.78,
+        "end": 98.02,
+        "word": " tried"
+      },
+      {
+        "start": 98.02,
+        "end": 98.4,
+        "word": " twice,"
+      },
+      {
+        "start": 98.68,
+        "end": 98.78,
+        "word": " and"
+      },
+      {
+        "start": 98.78,
+        "end": 98.92,
+        "word": " it"
+      },
+      {
+        "start": 98.92,
+        "end": 99.26,
+        "word": " still"
+      },
+      {
+        "start": 99.26,
+        "end": 99.62,
+        "word": " leaks."
+      }
+    ]
+  },
+  {
+    "start": 100.58,
+    "end": 102.34,
+    "text": " If you're that worried, lock him in the house.",
+    "words": [
+      {
+        "start": 100.58,
+        "end": 100.66,
+        "word": " If"
+      },
+      {
+        "start": 100.66,
+        "end": 100.78,
+        "word": " you're"
+      },
+      {
+        "start": 100.78,
+        "end": 100.92,
+        "word": " that"
+      },
+      {
+        "start": 100.92,
+        "end": 101.22,
+        "word": " worried,"
+      },
+      {
+        "start": 101.6,
+        "end": 101.72,
+        "word": " lock"
+      },
+      {
+        "start": 101.72,
+        "end": 101.86,
+        "word": " him"
+      },
+      {
+        "start": 101.86,
+        "end": 101.98,
+        "word": " in"
+      },
+      {
+        "start": 101.98,
+        "end": 102.08,
+        "word": " the"
+      },
+      {
+        "start": 102.08,
+        "end": 102.34,
+        "word": " house."
+      }
+    ]
+  },
+  {
+    "start": 103.14,
+    "end": 105.53999999999999,
+    "text": " Quit acting like every woman's after your husband.",
+    "words": [
+      {
+        "start": 103.14,
+        "end": 103.24,
+        "word": " Quit"
+      },
+      {
+        "start": 103.24,
+        "end": 103.6,
+        "word": " acting"
+      },
+      {
+        "start": 103.6,
+        "end": 103.78,
+        "word": " like"
+      },
+      {
+        "start": 103.78,
+        "end": 104.22,
+        "word": " every"
+      },
+      {
+        "start": 104.22,
+        "end": 104.76,
+        "word": " woman's"
+      },
+      {
+        "start": 104.76,
+        "end": 104.94,
+        "word": " after"
+      },
+      {
+        "start": 104.94,
+        "end": 105.16,
+        "word": " your"
+      },
+      {
+        "start": 105.16,
+        "end": 105.53999999999999,
+        "word": " husband."
+      }
+    ]
+  },
+  {
+    "start": 105.92,
+    "end": 106.0,
+    "text": " You!",
+    "words": [
+      {
+        "start": 105.92,
+        "end": 106.0,
+        "word": " You!"
+      }
+    ]
+  },
+  {
+    "start": 107.64,
+    "end": 111.48,
+    "text": " Since your husband died, you strut around dressed like that?",
+    "words": [
+      {
+        "start": 107.64,
+        "end": 108.1,
+        "word": " Since"
+      },
+      {
+        "start": 108.1,
+        "end": 108.36,
+        "word": " your"
+      },
+      {
+        "start": 108.36,
+        "end": 108.74,
+        "word": " husband"
+      },
+      {
+        "start": 108.74,
+        "end": 109.22,
+        "word": " died,"
+      },
+      {
+        "start": 109.62,
+        "end": 109.76,
+        "word": " you"
+      },
+      {
+        "start": 109.76,
+        "end": 110.16,
+        "word": " strut"
+      },
+      {
+        "start": 110.16,
+        "end": 110.52,
+        "word": " around"
+      },
+      {
+        "start": 110.52,
+        "end": 110.84,
+        "word": " dressed"
+      },
+      {
+        "start": 110.84,
+        "end": 111.18,
+        "word": " like"
+      },
+      {
+        "start": 111.18,
+        "end": 111.48,
+        "word": " that?"
+      }
+    ]
+  },
+  {
+    "start": 111.78,
+    "end": 114.28,
+    "text": " All those men at your shop you think we don't notice?",
+    "words": [
+      {
+        "start": 111.78,
+        "end": 112.12,
+        "word": " All"
+      },
+      {
+        "start": 112.12,
+        "end": 112.36,
+        "word": " those"
+      },
+      {
+        "start": 112.36,
+        "end": 112.56,
+        "word": " men"
+      },
+      {
+        "start": 112.56,
+        "end": 112.7,
+        "word": " at"
+      },
+      {
+        "start": 112.7,
+        "end": 112.86,
+        "word": " your"
+      },
+      {
+        "start": 112.86,
+        "end": 113.18,
+        "word": " shop"
+      },
+      {
+        "start": 113.18,
+        "end": 113.38,
+        "word": " you"
+      },
+      {
+        "start": 113.38,
+        "end": 113.52,
+        "word": " think"
+      },
+      {
+        "start": 113.52,
+        "end": 113.7,
+        "word": " we"
+      },
+      {
+        "start": 113.7,
+        "end": 113.94,
+        "word": " don't"
+      },
+      {
+        "start": 113.94,
+        "end": 114.28,
+        "word": " notice?"
+      }
+    ]
+  },
+  {
+    "start": 114.28,
+    "end": 117.06,
+    "text": " They say you're a witch. You put spells on men.",
+    "words": [
+      {
+        "start": 114.28,
+        "end": 114.76,
+        "word": " They"
+      },
+      {
+        "start": 114.76,
+        "end": 114.96000000000001,
+        "word": " say"
+      },
+      {
+        "start": 114.96000000000001,
+        "end": 115.16,
+        "word": " you're"
+      },
+      {
+        "start": 115.16,
+        "end": 115.32,
+        "word": " a"
+      },
+      {
+        "start": 115.32,
+        "end": 115.58,
+        "word": " witch."
+      },
+      {
+        "start": 115.92,
+        "end": 115.92,
+        "word": " You"
+      },
+      {
+        "start": 115.92,
+        "end": 116.08,
+        "word": " put"
+      },
+      {
+        "start": 116.08,
+        "end": 116.46000000000001,
+        "word": " spells"
+      },
+      {
+        "start": 116.46000000000001,
+        "end": 116.76,
+        "word": " on"
+      },
+      {
+        "start": 116.76,
+        "end": 117.06,
+        "word": " men."
+      }
+    ]
+  },
+  {
+    "start": 117.64,
+    "end": 119.82,
+    "text": " If I were, I'd break your husband's legs first.",
+    "words": [
+      {
+        "start": 117.64,
+        "end": 117.74,
+        "word": " If"
+      },
+      {
+        "start": 117.74,
+        "end": 117.92,
+        "word": " I"
+      },
+      {
+        "start": 117.92,
+        "end": 118.16,
+        "word": " were,"
+      },
+      {
+        "start": 118.47999999999999,
+        "end": 118.58,
+        "word": " I'd"
+      },
+      {
+        "start": 118.58,
+        "end": 118.7,
+        "word": " break"
+      },
+      {
+        "start": 118.7,
+        "end": 118.86,
+        "word": " your"
+      },
+      {
+        "start": 118.86,
+        "end": 119.3,
+        "word": " husband's"
+      },
+      {
+        "start": 119.3,
+        "end": 119.42,
+        "word": " legs"
+      },
+      {
+        "start": 119.42,
+        "end": 119.82,
+        "word": " first."
+      }
+    ]
+  },
+  {
+    "start": 120.36,
+    "end": 122.97999999999999,
+    "text": " Then he'd quit coming by every day after work to fix my pipes.",
+    "words": [
+      {
+        "start": 120.36,
+        "end": 120.56,
+        "word": " Then"
+      },
+      {
+        "start": 120.56,
+        "end": 120.74000000000001,
+        "word": " he'd"
+      },
+      {
+        "start": 120.74000000000001,
+        "end": 120.82,
+        "word": " quit"
+      },
+      {
+        "start": 120.82,
+        "end": 121.08,
+        "word": " coming"
+      },
+      {
+        "start": 121.08,
+        "end": 121.36,
+        "word": " by"
+      },
+      {
+        "start": 121.36,
+        "end": 121.52000000000001,
+        "word": " every"
+      },
+      {
+        "start": 121.52000000000001,
+        "end": 121.68,
+        "word": " day"
+      },
+      {
+        "start": 121.68,
+        "end": 121.92,
+        "word": " after"
+      },
+      {
+        "start": 121.92,
+        "end": 122.12,
+        "word": " work"
+      },
+      {
+        "start": 122.12,
+        "end": 122.3,
+        "word": " to"
+      },
+      {
+        "start": 122.3,
+        "end": 122.44,
+        "word": " fix"
+      },
+      {
+        "start": 122.44,
+        "end": 122.64,
+        "word": " my"
+      },
+      {
+        "start": 122.64,
+        "end": 122.97999999999999,
+        "word": " pipes."
+      }
+    ]
+  },
+  {
+    "start": 123.46000000000001,
+    "end": 124.78,
+    "text": " You shameless bitch!",
+    "words": [
+      {
+        "start": 123.46000000000001,
+        "end": 123.58,
+        "word": " You"
+      },
+      {
+        "start": 123.58,
+        "end": 124.1,
+        "word": " shameless"
+      },
+      {
+        "start": 124.1,
+        "end": 124.78,
+        "word": " bitch!"
+      }
+    ]
+  },
+  {
+    "start": 134.1,
+    "end": 137.44,
+    "text": " You love showing off for men. Not so hot now, huh?",
+    "words": [
+      {
+        "start": 134.1,
+        "end": 134.54,
+        "word": " You"
+      },
+      {
+        "start": 134.54,
+        "end": 134.78,
+        "word": " love"
+      },
+      {
+        "start": 134.78,
+        "end": 135.1,
+        "word": " showing"
+      },
+      {
+        "start": 135.1,
+        "end": 135.28,
+        "word": " off"
+      },
+      {
+        "start": 135.28,
+        "end": 135.46,
+        "word": " for"
+      },
+      {
+        "start": 135.46,
+        "end": 135.72,
+        "word": " men."
+      },
+      {
+        "start": 136.22,
+        "end": 136.42000000000002,
+        "word": " Not"
+      },
+      {
+        "start": 136.42000000000002,
+        "end": 136.64,
+        "word": " so"
+      },
+      {
+        "start": 136.64,
+        "end": 136.86,
+        "word": " hot"
+      },
+      {
+        "start": 136.86,
+        "end": 137.18,
+        "word": " now,"
+      },
+      {
+        "start": 137.26,
+        "end": 137.44,
+        "word": " huh?"
+      }
+    ]
+  },
+  {
+    "start": 137.54,
+    "end": 139.48,
+    "text": " Betty, I'll shove that bucket over your head!",
+    "words": [
+      {
+        "start": 137.54,
+        "end": 137.7,
+        "word": " Betty,"
+      },
+      {
+        "start": 137.8,
+        "end": 138.04,
+        "word": " I'll"
+      },
+      {
+        "start": 138.04,
+        "end": 138.18,
+        "word": " shove"
+      },
+      {
+        "start": 138.18,
+        "end": 138.4,
+        "word": " that"
+      },
+      {
+        "start": 138.4,
+        "end": 138.7,
+        "word": " bucket"
+      },
+      {
+        "start": 138.7,
+        "end": 138.96,
+        "word": " over"
+      },
+      {
+        "start": 138.96,
+        "end": 139.18,
+        "word": " your"
+      },
+      {
+        "start": 139.18,
+        "end": 139.48,
+        "word": " head!"
+      }
+    ]
+  },
+  {
+    "start": 163.18,
+    "end": 168.42000000000002,
+    "text": " Fugitive Silas Crow, still wanted for multiple violent crimes committed years ago,",
+    "words": [
+      {
+        "start": 163.18,
+        "end": 163.86,
+        "word": " Fugitive"
+      },
+      {
+        "start": 163.86,
+        "end": 164.5,
+        "word": " Silas"
+      },
+      {
+        "start": 164.5,
+        "end": 164.8,
+        "word": " Crow,"
+      },
+      {
+        "start": 165.14,
+        "end": 165.42000000000002,
+        "word": " still"
+      },
+      {
+        "start": 165.42000000000002,
+        "end": 165.72,
+        "word": " wanted"
+      },
+      {
+        "start": 165.72,
+        "end": 165.98000000000002,
+        "word": " for"
+      },
+      {
+        "start": 165.98000000000002,
+        "end": 166.32,
+        "word": " multiple"
+      },
+      {
+        "start": 166.32,
+        "end": 166.84,
+        "word": " violent"
+      },
+      {
+        "start": 166.84,
+        "end": 167.32,
+        "word": " crimes"
+      },
+      {
+        "start": 167.32,
+        "end": 167.66,
+        "word": " committed"
+      },
+      {
+        "start": 167.66,
+        "end": 168.01999999999998,
+        "word": " years"
+      },
+      {
+        "start": 168.01999999999998,
+        "end": 168.42000000000002,
+        "word": " ago,"
+      }
+    ]
+  },
+  {
+    "start": 168.57999999999998,
+    "end": 171.4,
+    "text": " has reportedly resurfaced here in recent days.",
+    "words": [
+      {
+        "start": 168.57999999999998,
+        "end": 168.9,
+        "word": " has"
+      },
+      {
+        "start": 168.9,
+        "end": 169.44,
+        "word": " reportedly"
+      },
+      {
+        "start": 169.44,
+        "end": 170.18,
+        "word": " resurfaced"
+      },
+      {
+        "start": 170.18,
+        "end": 170.45999999999998,
+        "word": " here"
+      },
+      {
+        "start": 170.45999999999998,
+        "end": 170.68,
+        "word": " in"
+      },
+      {
+        "start": 170.68,
+        "end": 170.94,
+        "word": " recent"
+      },
+      {
+        "start": 170.94,
+        "end": 171.4,
+        "word": " days."
+      }
+    ]
+  }
+]

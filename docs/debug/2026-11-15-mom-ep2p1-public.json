@@ -18,5 +18,6 @@
   "exact_Ad_affiliate_notforkids": true,
   "ledger_run": 43628115353,
   "next_floor_ist": "2026-11-15T01:12:04+05:30",
-  "next_wake": "wakeschedule-01M7DNWQ72QBZPMAGA8G4GM7WB"
+  "next_wake": "wakeschedule-01M7DNWQ72QBZPMAGA8G4GM7WB",
+  "ledger_result": "SUCCESS published checkpoint + stopped readback18:43:15Z"
 }

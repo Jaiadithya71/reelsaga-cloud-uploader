@@ -1,0 +1,14 @@
+{
+  "episode": 2,
+  "source_duration": 257.277596,
+  "source_bytes": 28238133,
+  "status": "HOLD_UNUPLOADED_CAPTION_MISMATCH",
+  "caption_at_165_25_167": "still wanted for multiple violent crime",
+  "audio": "still wanted for multiple violent crimes committed",
+  "confirmation": "base.en/small.en chunks/isolated audio read, full-frame target pixels",
+  "pixels": "/downloads/demon833157-review/e2-target-check.jpg",
+  "E1": "Three PRIVATE qualified parts remain usable in order freshclaimsrequired",
+  "subsequent_episodes": "not started; do not skip held E2",
+  "QA": "129actionframes/257captionframes/1029quarterOCR/basefull/small3chunks; suspected publicmenace/SaintValley/IfIwere cleared as ASRorOCR errors",
+  "action": "No edits or upload; newseriesbackup beforeE1ends"
+}
