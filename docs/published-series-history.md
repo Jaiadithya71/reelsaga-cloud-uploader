@@ -1076,3 +1076,9 @@ Nov14 18:17IST Lover833139 My One-Night Lover Is My Fiance free8sourceURLs live 
 Nov14 18:05GmailnoticesCampaignall6matchknownYBMediaFakeBoyfriendForVotesRealKissForLoveglobalAVblocks/nocopyrightstrike,no new enforcement. EmailIDs1a1da0cf2aa94e56/1a1da0cf4b9201eb/1a1da0cf2112c57f/1a1da0d0694e6040/1a1da0d0302d7ea6/1a1da0d0feb2080b. Watchpromptupdated18:10.
 
 Nov14 18:20IST Lover833139affiliate GENERATED and pixels verified18:18:23 https://r.reelsgo.tv/vAr8qmF2ln2X apphome https://r.reelsgo.tv/imSTUIiXF6Fm . E1wholebase+smallASRcomplete. 98actionpixelsinspected. Captionframes1fps194extracted/contact6sheetsuninspected;quarterOCRframeextractstartedbutJSONnoneyet,verifyfilesbeforecontinuation. No wholecaptiongatepass/no render/upload/stage/public. Bothbrowserleasesreleased/sitesreported. Sourcealiases/no-repeatlivechannelguardmustpassbeforeprivateprobe.
+
+
+### 2026-11-14 18:24 IST: Lover 833139 source-caption HOLD, unuploaded
+- My One-Night Lover Is My Fiancé, YourChannel 60%, eight free source episodes verified on DramaCPS. E1/E2 downloaded; E1 whole base.en/small.en audio reviewed, 779 quarter-second OCR frames, whole 98 action and 195 one-second caption frames inspected.
+- Clear omission: spoken "Whoa" about 134.5 seconds is uncaptained. Isolated 133.8-136.3 audio and full-frame sequence confirm it. The following "Wait" has captions. No replacement caption, render, staging or upload. Parent notified with decisive audio and pixels at 18:24.
+- Next research candidate: The Boss's Obsessive Prize 833141, six free source episodes verified. E1/E2 downloaded, base.en whole audio pass exists; small.en, whole action and caption QA unfinished. No approval or claims pass implied.
