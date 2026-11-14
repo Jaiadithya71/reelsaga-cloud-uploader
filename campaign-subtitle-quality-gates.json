@@ -135,5 +135,15 @@
       "measured_duration": 32.376,
       "approved_render_sha256": "7eb65782036040233ba904c91a67121b3060aedc3a1c61ebf984857bfb05decd"
     }
+  },
+  "claims_gate": {
+    "state": "HOLD_GLOBAL_AUDIOVISUAL_BLOCK",
+    "checked_at": "2026-11-14T18:00:17+05:30",
+    "claim": "Fake Boyfriend for Votes, Real Kiss for Love",
+    "claimant": "YB Media",
+    "impact": "globally blocked and ineligible to earn",
+    "scope": "all six PRIVATE uploaded E1/E2 parts show Blocked; E1P1 and E2P1 claim pages directly verified",
+    "earlier_clean_checks_superseded": true,
+    "public_launch_allowed": false
   }
 }
