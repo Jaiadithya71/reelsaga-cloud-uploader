@@ -1,0 +1,21 @@
+{
+  "source": "https://dramacps.com/dashboard",
+  "id": "833167",
+  "title": "The Billionaire's Blind Bargain",
+  "free_episodes": 8,
+  "review": "E1 whole source 97 action frames, 193 one-second caption frames, 773 quarter-second OCR, base and small English ASR, targeted full frames",
+  "status": "unqualified source hold, no render/staging/upload/affiliate creation",
+  "issues": [
+    {
+      "time": "87.20-87.64",
+      "audio": "Watch",
+      "caption": "No caption found during dense 87.0-87.56 full-frame checks; scene transition with brief black frame"
+    },
+    {
+      "time": "153.5-155.75",
+      "caption": "A blind guy and a cook who smells like glee",
+      "audio": "ASR base gleece, small Gleese, isolated read glee; lexical identity ambiguous, do not assert grease without stronger evidence"
+    }
+  ],
+  "other": "Ow non-lexical exclamation at97s uncaptained. Deal and Tomorrow short captions found in targeted frames."
+}

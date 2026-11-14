@@ -1,0 +1,823 @@
+[
+  {
+    "start": 5.7399999999999975,
+    "end": 7.46,
+    "text": " Mommy, the pasta's ready.",
+    "words": [
+      {
+        "start": 5.7399999999999975,
+        "end": 6.44,
+        "word": " Mommy,"
+      },
+      {
+        "start": 6.48,
+        "end": 6.56,
+        "word": " the"
+      },
+      {
+        "start": 6.56,
+        "end": 7.12,
+        "word": " pasta's"
+      },
+      {
+        "start": 7.12,
+        "end": 7.46,
+        "word": " ready."
+      }
+    ]
+  },
+  {
+    "start": 11.92,
+    "end": 14.24,
+    "text": " Mommy, are you playing with the mice again?",
+    "words": [
+      {
+        "start": 11.92,
+        "end": 12.62,
+        "word": " Mommy,"
+      },
+      {
+        "start": 12.66,
+        "end": 12.8,
+        "word": " are"
+      },
+      {
+        "start": 12.8,
+        "end": 12.98,
+        "word": " you"
+      },
+      {
+        "start": 12.98,
+        "end": 13.2,
+        "word": " playing"
+      },
+      {
+        "start": 13.2,
+        "end": 13.44,
+        "word": " with"
+      },
+      {
+        "start": 13.44,
+        "end": 13.6,
+        "word": " the"
+      },
+      {
+        "start": 13.6,
+        "end": 13.82,
+        "word": " mice"
+      },
+      {
+        "start": 13.82,
+        "end": 14.24,
+        "word": " again?"
+      }
+    ]
+  },
+  {
+    "start": 16.8,
+    "end": 18.98,
+    "text": " Mommy, wake up and eat, please.",
+    "words": [
+      {
+        "start": 16.8,
+        "end": 17.5,
+        "word": " Mommy,"
+      },
+      {
+        "start": 17.5,
+        "end": 17.68,
+        "word": " wake"
+      },
+      {
+        "start": 17.68,
+        "end": 17.9,
+        "word": " up"
+      },
+      {
+        "start": 17.9,
+        "end": 18.08,
+        "word": " and"
+      },
+      {
+        "start": 18.08,
+        "end": 18.42,
+        "word": " eat,"
+      },
+      {
+        "start": 18.52,
+        "end": 18.98,
+        "word": " please."
+      }
+    ]
+  },
+  {
+    "start": 21.7,
+    "end": 22.7,
+    "text": " Your mommy's dead.",
+    "words": [
+      {
+        "start": 21.7,
+        "end": 21.94,
+        "word": " Your"
+      },
+      {
+        "start": 21.94,
+        "end": 22.42,
+        "word": " mommy's"
+      },
+      {
+        "start": 22.42,
+        "end": 22.7,
+        "word": " dead."
+      }
+    ]
+  },
+  {
+    "start": 24.1,
+    "end": 25.46,
+    "text": " What does dead mean?",
+    "words": [
+      {
+        "start": 24.1,
+        "end": 24.56,
+        "word": " What"
+      },
+      {
+        "start": 24.56,
+        "end": 24.8,
+        "word": " does"
+      },
+      {
+        "start": 24.8,
+        "end": 25.1,
+        "word": " dead"
+      },
+      {
+        "start": 25.1,
+        "end": 25.46,
+        "word": " mean?"
+      }
+    ]
+  },
+  {
+    "start": 26.38,
+    "end": 29.1,
+    "text": " It means she's never waking up.",
+    "words": [
+      {
+        "start": 26.38,
+        "end": 26.74,
+        "word": " It"
+      },
+      {
+        "start": 26.74,
+        "end": 27.12,
+        "word": " means"
+      },
+      {
+        "start": 27.12,
+        "end": 27.76,
+        "word": " she's"
+      },
+      {
+        "start": 27.76,
+        "end": 28.08,
+        "word": " never"
+      },
+      {
+        "start": 28.08,
+        "end": 28.6,
+        "word": " waking"
+      },
+      {
+        "start": 28.6,
+        "end": 29.1,
+        "word": " up."
+      }
+    ]
+  },
+  {
+    "start": 31.020000000000003,
+    "end": 32.24,
+    "text": " Then that's good.",
+    "words": [
+      {
+        "start": 31.020000000000003,
+        "end": 31.52,
+        "word": " Then"
+      },
+      {
+        "start": 31.52,
+        "end": 31.94,
+        "word": " that's"
+      },
+      {
+        "start": 31.94,
+        "end": 32.24,
+        "word": " good."
+      }
+    ]
+  },
+  {
+    "start": 35.24,
+    "end": 40.02,
+    "text": " If she's dead, she won't be hungry, and nobody can be mean to her anymore.",
+    "words": [
+      {
+        "start": 35.24,
+        "end": 35.74,
+        "word": " If"
+      },
+      {
+        "start": 35.74,
+        "end": 36.1,
+        "word": " she's"
+      },
+      {
+        "start": 36.1,
+        "end": 36.42,
+        "word": " dead,"
+      },
+      {
+        "start": 36.76,
+        "end": 36.98,
+        "word": " she"
+      },
+      {
+        "start": 36.98,
+        "end": 37.2,
+        "word": " won't"
+      },
+      {
+        "start": 37.2,
+        "end": 37.38,
+        "word": " be"
+      },
+      {
+        "start": 37.38,
+        "end": 37.78,
+        "word": " hungry,"
+      },
+      {
+        "start": 38.2,
+        "end": 38.32,
+        "word": " and"
+      },
+      {
+        "start": 38.32,
+        "end": 38.58,
+        "word": " nobody"
+      },
+      {
+        "start": 38.58,
+        "end": 38.88,
+        "word": " can"
+      },
+      {
+        "start": 38.88,
+        "end": 39.06,
+        "word": " be"
+      },
+      {
+        "start": 39.06,
+        "end": 39.28,
+        "word": " mean"
+      },
+      {
+        "start": 39.28,
+        "end": 39.46,
+        "word": " to"
+      },
+      {
+        "start": 39.46,
+        "end": 39.66,
+        "word": " her"
+      },
+      {
+        "start": 39.66,
+        "end": 40.02,
+        "word": " anymore."
+      }
+    ]
+  },
+  {
+    "start": 41.56,
+    "end": 42.9,
+    "text": " I'll sleep with you, Mommy.",
+    "words": [
+      {
+        "start": 41.56,
+        "end": 41.8,
+        "word": " I'll"
+      },
+      {
+        "start": 41.8,
+        "end": 42.02,
+        "word": " sleep"
+      },
+      {
+        "start": 42.02,
+        "end": 42.26,
+        "word": " with"
+      },
+      {
+        "start": 42.26,
+        "end": 42.44,
+        "word": " you,"
+      },
+      {
+        "start": 42.6,
+        "end": 42.9,
+        "word": " Mommy."
+      }
+    ]
+  },
+  {
+    "start": 46.08,
+    "end": 49.52,
+    "text": " I found the woman who stole your money, hiding in a dump like this.",
+    "words": [
+      {
+        "start": 46.08,
+        "end": 46.58,
+        "word": " I"
+      },
+      {
+        "start": 46.58,
+        "end": 46.78,
+        "word": " found"
+      },
+      {
+        "start": 46.78,
+        "end": 46.94,
+        "word": " the"
+      },
+      {
+        "start": 46.94,
+        "end": 47.06,
+        "word": " woman"
+      },
+      {
+        "start": 47.06,
+        "end": 47.26,
+        "word": " who"
+      },
+      {
+        "start": 47.26,
+        "end": 47.46,
+        "word": " stole"
+      },
+      {
+        "start": 47.46,
+        "end": 47.64,
+        "word": " your"
+      },
+      {
+        "start": 47.64,
+        "end": 47.92,
+        "word": " money,"
+      },
+      {
+        "start": 48.1,
+        "end": 48.34,
+        "word": " hiding"
+      },
+      {
+        "start": 48.34,
+        "end": 48.52,
+        "word": " in"
+      },
+      {
+        "start": 48.52,
+        "end": 48.74,
+        "word": " a"
+      },
+      {
+        "start": 48.74,
+        "end": 48.86,
+        "word": " dump"
+      },
+      {
+        "start": 48.86,
+        "end": 49.08,
+        "word": " like"
+      },
+      {
+        "start": 49.08,
+        "end": 49.52,
+        "word": " this."
+      }
+    ]
+  },
+  {
+    "start": 50.1,
+    "end": 50.3,
+    "text": " Evelyn?",
+    "words": [
+      {
+        "start": 50.1,
+        "end": 50.3,
+        "word": " Evelyn?"
+      }
+    ]
+  },
+  {
+    "start": 51.7,
+    "end": 52.46,
+    "text": " She's dead.",
+    "words": [
+      {
+        "start": 51.7,
+        "end": 52.2,
+        "word": " She's"
+      },
+      {
+        "start": 52.2,
+        "end": 52.46,
+        "word": " dead."
+      }
+    ]
+  },
+  {
+    "start": 56.38,
+    "end": 56.88,
+    "text": " Daddy?",
+    "words": [
+      {
+        "start": 56.38,
+        "end": 56.88,
+        "word": " Daddy?"
+      }
+    ]
+  },
+  {
+    "start": 58.12,
+    "end": 61.12,
+    "text": " Mommy said the man with this pig is my daddy.",
+    "words": [
+      {
+        "start": 58.12,
+        "end": 58.64,
+        "word": " Mommy"
+      },
+      {
+        "start": 58.64,
+        "end": 58.82,
+        "word": " said"
+      },
+      {
+        "start": 58.82,
+        "end": 59.04,
+        "word": " the"
+      },
+      {
+        "start": 59.04,
+        "end": 59.28,
+        "word": " man"
+      },
+      {
+        "start": 59.28,
+        "end": 59.52,
+        "word": " with"
+      },
+      {
+        "start": 59.52,
+        "end": 59.76,
+        "word": " this"
+      },
+      {
+        "start": 59.76,
+        "end": 60.1,
+        "word": " pig"
+      },
+      {
+        "start": 60.1,
+        "end": 60.4,
+        "word": " is"
+      },
+      {
+        "start": 60.4,
+        "end": 60.66,
+        "word": " my"
+      },
+      {
+        "start": 60.66,
+        "end": 61.12,
+        "word": " daddy."
+      }
+    ]
+  },
+  {
+    "start": 61.6,
+    "end": 65.02,
+    "text": " You little brat. Is every rich man your daddy? Who taught you that?",
+    "words": [
+      {
+        "start": 61.6,
+        "end": 61.7,
+        "word": " You"
+      },
+      {
+        "start": 61.7,
+        "end": 61.9,
+        "word": " little"
+      },
+      {
+        "start": 61.9,
+        "end": 62.3,
+        "word": " brat."
+      },
+      {
+        "start": 62.84,
+        "end": 62.94,
+        "word": " Is"
+      },
+      {
+        "start": 62.94,
+        "end": 63.16,
+        "word": " every"
+      },
+      {
+        "start": 63.16,
+        "end": 63.36,
+        "word": " rich"
+      },
+      {
+        "start": 63.36,
+        "end": 63.54,
+        "word": " man"
+      },
+      {
+        "start": 63.54,
+        "end": 63.72,
+        "word": " your"
+      },
+      {
+        "start": 63.72,
+        "end": 63.94,
+        "word": " daddy?"
+      },
+      {
+        "start": 64.34,
+        "end": 64.48,
+        "word": " Who"
+      },
+      {
+        "start": 64.48,
+        "end": 64.66,
+        "word": " taught"
+      },
+      {
+        "start": 64.66,
+        "end": 64.86,
+        "word": " you"
+      },
+      {
+        "start": 64.86,
+        "end": 65.02,
+        "word": " that?"
+      }
+    ]
+  },
+  {
+    "start": 65.18,
+    "end": 65.92,
+    "text": " Mommy did.",
+    "words": [
+      {
+        "start": 65.18,
+        "end": 65.62,
+        "word": " Mommy"
+      },
+      {
+        "start": 65.62,
+        "end": 65.92,
+        "word": " did."
+      }
+    ]
+  },
+  {
+    "start": 66.34,
+    "end": 68.68,
+    "text": " She just stopped being hungry.",
+    "words": [
+      {
+        "start": 66.34,
+        "end": 66.62,
+        "word": " She"
+      },
+      {
+        "start": 66.62,
+        "end": 67.34,
+        "word": " just"
+      },
+      {
+        "start": 67.34,
+        "end": 67.68,
+        "word": " stopped"
+      },
+      {
+        "start": 67.68,
+        "end": 68.02,
+        "word": " being"
+      },
+      {
+        "start": 68.02,
+        "end": 68.68,
+        "word": " hungry."
+      }
+    ]
+  },
+  {
+    "start": 70.12,
+    "end": 71.78,
+    "text": " Your mother stole his money?",
+    "words": [
+      {
+        "start": 70.12,
+        "end": 70.34,
+        "word": " Your"
+      },
+      {
+        "start": 70.34,
+        "end": 70.62,
+        "word": " mother"
+      },
+      {
+        "start": 70.62,
+        "end": 71.08,
+        "word": " stole"
+      },
+      {
+        "start": 71.08,
+        "end": 71.4,
+        "word": " his"
+      },
+      {
+        "start": 71.4,
+        "end": 71.78,
+        "word": " money?"
+      }
+    ]
+  },
+  {
+    "start": 72.34,
+    "end": 74.3,
+    "text": " Now you're trying to steal a father?",
+    "words": [
+      {
+        "start": 72.34,
+        "end": 72.86,
+        "word": " Now"
+      },
+      {
+        "start": 72.86,
+        "end": 73.08,
+        "word": " you're"
+      },
+      {
+        "start": 73.08,
+        "end": 73.3,
+        "word": " trying"
+      },
+      {
+        "start": 73.3,
+        "end": 73.46,
+        "word": " to"
+      },
+      {
+        "start": 73.46,
+        "end": 73.72,
+        "word": " steal"
+      },
+      {
+        "start": 73.72,
+        "end": 73.92,
+        "word": " a"
+      },
+      {
+        "start": 73.92,
+        "end": 74.3,
+        "word": " father?"
+      }
+    ]
+  },
+  {
+    "start": 79.9,
+    "end": 83.88,
+    "text": " There's a woman here. She's unresponsive. The address is...",
+    "words": [
+      {
+        "start": 79.9,
+        "end": 80.42,
+        "word": " There's"
+      },
+      {
+        "start": 80.42,
+        "end": 80.5,
+        "word": " a"
+      },
+      {
+        "start": 80.5,
+        "end": 80.62,
+        "word": " woman"
+      },
+      {
+        "start": 80.62,
+        "end": 80.92,
+        "word": " here."
+      },
+      {
+        "start": 81.1,
+        "end": 81.28,
+        "word": " She's"
+      },
+      {
+        "start": 81.28,
+        "end": 81.74,
+        "word": " unresponsive."
+      },
+      {
+        "start": 82.06,
+        "end": 82.08,
+        "word": " The"
+      },
+      {
+        "start": 82.08,
+        "end": 82.34,
+        "word": " address"
+      },
+      {
+        "start": 82.34,
+        "end": 83.88,
+        "word": " is..."
+      }
+    ]
+  },
+  {
+    "start": 84.88,
+    "end": 87.62,
+    "text": " Rex! Get her!",
+    "words": [
+      {
+        "start": 84.88,
+        "end": 86.1,
+        "word": " Rex!"
+      },
+      {
+        "start": 87.12,
+        "end": 87.18,
+        "word": " Get"
+      },
+      {
+        "start": 87.18,
+        "end": 87.62,
+        "word": " her!"
+      }
+    ]
+  },
+  {
+    "start": 89.32,
+    "end": 91.42,
+    "text": " Don't step on Mommy's pasta!",
+    "words": [
+      {
+        "start": 89.32,
+        "end": 89.94,
+        "word": " Don't"
+      },
+      {
+        "start": 89.94,
+        "end": 90.2,
+        "word": " step"
+      },
+      {
+        "start": 90.2,
+        "end": 90.48,
+        "word": " on"
+      },
+      {
+        "start": 90.48,
+        "end": 91.08,
+        "word": " Mommy's"
+      },
+      {
+        "start": 91.08,
+        "end": 91.42,
+        "word": " pasta!"
+      }
+    ]
+  },
+  {
+    "start": 93.2,
+    "end": 93.9,
+    "text": " Stop!",
+    "words": [
+      {
+        "start": 93.2,
+        "end": 93.9,
+        "word": " Stop!"
+      }
+    ]
+  }
+]

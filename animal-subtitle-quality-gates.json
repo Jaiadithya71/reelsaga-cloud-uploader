@@ -1,0 +1,55 @@
+{
+  "series": "The Animal Whisperer of Bright Castle",
+  "dramacps_id": 833166,
+  "affiliate": "https://r.reelsgo.tv/E6Aqpkfu21BR",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "quarter_ocr": 385,
+      "action_pixels": 49,
+      "caption_pixels": 96,
+      "target_pixels": 16,
+      "part_pixels": 12,
+      "confirmed_defect": null,
+      "notes": "Whole source captions/action reviewed. Brief Daddy/Mommydid/Evelyn/Stop present. ASR pig versus visible pin is phonetic error; sleepwithyourmommy base corrected by small/pixels. Nongraphic unresponsive/dead mother, dirty/bruised face, child neglect and dog threat. No explicit sex/nudity/graphic wound observed; no platform-policy guarantee."
+    }
+  },
+  "part_gates": {
+    "yourchannel-animal833166-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 49.8,
+      "duration": 49.8,
+      "sha256": "35c11a2d50e73b12bebc9782ab1cbbcf0dae9c045eb76bae13cdea973a387c57",
+      "bytes": 35844955,
+      "path": "/downloads/animal-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "35c11a2d50e73b12bebc9782ab1cbbcf0dae9c045eb76bae13cdea973a387c57",
+      "measured_duration": 49.8
+    },
+    "yourchannel-animal833166-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 49.8,
+      "source_end": 96.228,
+      "duration": 46.428,
+      "sha256": "634e07af96b979f247c4e5ae3ecbd4d8ea8cc5fc2ed8d4086529bce6c6a4d336",
+      "bytes": 33266339,
+      "path": "/downloads/animal-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "634e07af96b979f247c4e5ae3ecbd4d8ea8cc5fc2ed8d4086529bce6c6a4d336",
+      "measured_duration": 46.434
+    }
+  }
+}
