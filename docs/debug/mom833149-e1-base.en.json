@@ -1,0 +1,430 @@
+[
+  {
+    "start": 0.0,
+    "end": 3.4,
+    "text": " I'm Maggie Reed. I work with cars and motor oil.",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "word": " I'm"
+      },
+      {
+        "start": 0.5,
+        "end": 0.68,
+        "word": " Maggie"
+      },
+      {
+        "start": 0.68,
+        "end": 0.94,
+        "word": " Reed."
+      },
+      {
+        "start": 1.52,
+        "end": 1.58,
+        "word": " I"
+      },
+      {
+        "start": 1.58,
+        "end": 1.74,
+        "word": " work"
+      },
+      {
+        "start": 1.74,
+        "end": 1.9,
+        "word": " with"
+      },
+      {
+        "start": 1.9,
+        "end": 2.18,
+        "word": " cars"
+      },
+      {
+        "start": 2.18,
+        "end": 2.84,
+        "word": " and"
+      },
+      {
+        "start": 2.84,
+        "end": 3.04,
+        "word": " motor"
+      },
+      {
+        "start": 3.04,
+        "end": 3.4,
+        "word": " oil."
+      }
+    ]
+  },
+  {
+    "start": 6.880000000000002,
+    "end": 8.14,
+    "text": " Tough comes with the job.",
+    "words": [
+      {
+        "start": 6.880000000000002,
+        "end": 7.36,
+        "word": " Tough"
+      },
+      {
+        "start": 7.36,
+        "end": 7.6,
+        "word": " comes"
+      },
+      {
+        "start": 7.6,
+        "end": 7.8,
+        "word": " with"
+      },
+      {
+        "start": 7.8,
+        "end": 7.9,
+        "word": " the"
+      },
+      {
+        "start": 7.9,
+        "end": 8.14,
+        "word": " job."
+      }
+    ]
+  },
+  {
+    "start": 10.440000000000001,
+    "end": 10.92,
+    "text": " 300.",
+    "words": [
+      {
+        "start": 10.440000000000001,
+        "end": 10.92,
+        "word": " 300."
+      }
+    ]
+  },
+  {
+    "start": 12.42,
+    "end": 14.86,
+    "text": " For that? You're not getting a dime.",
+    "words": [
+      {
+        "start": 12.42,
+        "end": 12.74,
+        "word": " For"
+      },
+      {
+        "start": 12.74,
+        "end": 12.92,
+        "word": " that?"
+      },
+      {
+        "start": 14.08,
+        "end": 14.14,
+        "word": " You're"
+      },
+      {
+        "start": 14.14,
+        "end": 14.28,
+        "word": " not"
+      },
+      {
+        "start": 14.28,
+        "end": 14.46,
+        "word": " getting"
+      },
+      {
+        "start": 14.46,
+        "end": 14.56,
+        "word": " a"
+      },
+      {
+        "start": 14.56,
+        "end": 14.86,
+        "word": " dime."
+      }
+    ]
+  },
+  {
+    "start": 15.28,
+    "end": 16.04,
+    "text": " Then you're not getting the car.",
+    "words": [
+      {
+        "start": 15.28,
+        "end": 15.32,
+        "word": " Then"
+      },
+      {
+        "start": 15.32,
+        "end": 15.42,
+        "word": " you're"
+      },
+      {
+        "start": 15.42,
+        "end": 15.54,
+        "word": " not"
+      },
+      {
+        "start": 15.54,
+        "end": 15.72,
+        "word": " getting"
+      },
+      {
+        "start": 15.72,
+        "end": 15.86,
+        "word": " the"
+      },
+      {
+        "start": 15.86,
+        "end": 16.04,
+        "word": " car."
+      }
+    ]
+  },
+  {
+    "start": 24.64,
+    "end": 27.5,
+    "text": " Okay, we pay.",
+    "words": [
+      {
+        "start": 24.64,
+        "end": 25.12,
+        "word": " Okay,"
+      },
+      {
+        "start": 27.3,
+        "end": 27.32,
+        "word": " we"
+      },
+      {
+        "start": 27.32,
+        "end": 27.5,
+        "word": " pay."
+      }
+    ]
+  },
+  {
+    "start": 35.56,
+    "end": 38.2,
+    "text": " Maggie Reed, my boss asked me to show you this.",
+    "words": [
+      {
+        "start": 35.56,
+        "end": 35.92,
+        "word": " Maggie"
+      },
+      {
+        "start": 35.92,
+        "end": 36.1,
+        "word": " Reed,"
+      },
+      {
+        "start": 36.78,
+        "end": 37.2,
+        "word": " my"
+      },
+      {
+        "start": 37.2,
+        "end": 37.34,
+        "word": " boss"
+      },
+      {
+        "start": 37.34,
+        "end": 37.58,
+        "word": " asked"
+      },
+      {
+        "start": 37.58,
+        "end": 37.72,
+        "word": " me"
+      },
+      {
+        "start": 37.72,
+        "end": 37.78,
+        "word": " to"
+      },
+      {
+        "start": 37.78,
+        "end": 37.94,
+        "word": " show"
+      },
+      {
+        "start": 37.94,
+        "end": 38.06,
+        "word": " you"
+      },
+      {
+        "start": 38.06,
+        "end": 38.2,
+        "word": " this."
+      }
+    ]
+  },
+  {
+    "start": 42.72,
+    "end": 44.84,
+    "text": " She has the original. She's waiting at the house.",
+    "words": [
+      {
+        "start": 42.72,
+        "end": 43.08,
+        "word": " She"
+      },
+      {
+        "start": 43.08,
+        "end": 43.2,
+        "word": " has"
+      },
+      {
+        "start": 43.2,
+        "end": 43.32,
+        "word": " the"
+      },
+      {
+        "start": 43.32,
+        "end": 43.46,
+        "word": " original."
+      },
+      {
+        "start": 44.06,
+        "end": 44.26,
+        "word": " She's"
+      },
+      {
+        "start": 44.26,
+        "end": 44.42,
+        "word": " waiting"
+      },
+      {
+        "start": 44.42,
+        "end": 44.58,
+        "word": " at"
+      },
+      {
+        "start": 44.58,
+        "end": 44.66,
+        "word": " the"
+      },
+      {
+        "start": 44.66,
+        "end": 44.84,
+        "word": " house."
+      }
+    ]
+  },
+  {
+    "start": 45.62,
+    "end": 46.62,
+    "text": " Take me to her. Now!",
+    "words": [
+      {
+        "start": 45.62,
+        "end": 45.82,
+        "word": " Take"
+      },
+      {
+        "start": 45.82,
+        "end": 45.96,
+        "word": " me"
+      },
+      {
+        "start": 45.96,
+        "end": 46.04,
+        "word": " to"
+      },
+      {
+        "start": 46.04,
+        "end": 46.18,
+        "word": " her."
+      },
+      {
+        "start": 46.56,
+        "end": 46.62,
+        "word": " Now!"
+      }
+    ]
+  },
+  {
+    "start": 53.56,
+    "end": 54.46,
+    "text": " Where is she?",
+    "words": [
+      {
+        "start": 53.56,
+        "end": 53.92,
+        "word": " Where"
+      },
+      {
+        "start": 53.92,
+        "end": 54.28,
+        "word": " is"
+      },
+      {
+        "start": 54.28,
+        "end": 54.46,
+        "word": " she?"
+      }
+    ]
+  },
+  {
+    "start": 54.46,
+    "end": 54.5,
+    "text": " Maggie.",
+    "words": [
+      {
+        "start": 54.46,
+        "end": 54.5,
+        "word": " Maggie."
+      }
+    ]
+  },
+  {
+    "start": 59.46,
+    "end": 59.92,
+    "text": " Max?",
+    "words": [
+      {
+        "start": 59.22,
+        "end": 59.92,
+        "word": " Max?"
+      }
+    ]
+  },
+  {
+    "start": 64.0,
+    "end": 65.4,
+    "text": " Evelyn?",
+    "words": [
+      {
+        "start": 64.0,
+        "end": 65.4,
+        "word": " Evelyn?"
+      }
+    ]
+  },
+  {
+    "start": 67.46000000000001,
+    "end": 68.48,
+    "text": " You found me, sis.",
+    "words": [
+      {
+        "start": 66.94,
+        "end": 67.64,
+        "word": " You"
+      },
+      {
+        "start": 67.64,
+        "end": 67.88,
+        "word": " found"
+      },
+      {
+        "start": 67.88,
+        "end": 68.16,
+        "word": " me,"
+      },
+      {
+        "start": 68.32,
+        "end": 68.48,
+        "word": " sis."
+      }
+    ]
+  }
+]

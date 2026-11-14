@@ -1,0 +1,58 @@
+{
+  "series": "Step Back: Mom's Rebuilding This Family",
+  "dramacps_id": 833149,
+  "alias": null,
+  "affiliate": "https://r.reelsgo.tv/k2MMES1twmnE",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "source_duration": 71.462,
+      "source_sha256": "b9f6f1b0f547045b88af5faa23083e83fd19d1ab3b094771654ab1279bb1d189",
+      "asr": [
+        "base.en whole",
+        "small.en whole",
+        "independent28.5-32 empty"
+      ],
+      "ocr_frames": 286,
+      "whole_action_frames_inspected": 36,
+      "targeted_caption_frames_inspected": 90,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole286quarterOCR/36action/72caption18targetpixels inspected. BriefThreehundred/MaggieReed/Takemetoher/Now/Mags/Evelyn all present. SmallASR Yes30s rejected by independent isolated audio no speech. Nongraphicfight/medicalwheelchair, no nudity/explicitsex/graphicviolence. Cuts34.5silent/wholeend71.462. FullDecode12encodedpixels inspected."
+    }
+  },
+  "part_gates": {
+    "yourchannel-mom833149-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 34.5,
+      "duration": 34.5,
+      "sha256": "6001703dbc14a29c8620fd4a1768f898e3e5973730eb872ad57c86a9e4acd64c",
+      "bytes": 32323226,
+      "path": "/downloads/mom-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 34.5,
+      "approved_render_sha256": "6001703dbc14a29c8620fd4a1768f898e3e5973730eb872ad57c86a9e4acd64c"
+    },
+    "yourchannel-mom833149-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 34.5,
+      "source_end": 71.462,
+      "duration": 36.962,
+      "sha256": "fa746a69edca3138105e60169291bdd11ff6d8871a6a614336291ad17f778ff6",
+      "bytes": 30434230,
+      "path": "/downloads/mom-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 36.967,
+      "approved_render_sha256": "fa746a69edca3138105e60169291bdd11ff6d8871a6a614336291ad17f778ff6"
+    }
+  }
+}
