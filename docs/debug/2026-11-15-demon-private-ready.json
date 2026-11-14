@@ -1,0 +1,40 @@
+{
+  "series": "They Called My Son a Demon",
+  "dramacps_id": 833157,
+  "affiliate": "https://r.reelsgo.tv/NENz7eQ58VbD",
+  "app_home": "https://r.reelsgo.tv/zZgcLPV7jRyd",
+  "free_episodes": 9,
+  "playlist": "https://www.youtube.com/playlist?list=PLe4o4zBaJwV4",
+  "playlist_order": "MANUAL P1/P2/P3 allPrivate00:05:50IST Nov15",
+  "nativeAI": "Yes saved/nochanges/pixels all3",
+  "metadata": "Exactmanifest/Ad/affiliate/notforkids/Private verified",
+  "parts": [
+    {
+      "part": 1,
+      "id": "m-8Qc6gYwYM",
+      "run": 43626526869,
+      "claims_none_ist": "00:00:42",
+      "ai_pixels": "/downloads/cloud-browser-20261114-183108.png"
+    },
+    {
+      "part": 2,
+      "id": "8Bg2cfLN8kA",
+      "run": 43627019236,
+      "claims_none_ist": "00:03:21",
+      "ai_pixels": "/downloads/cloud-browser-20261114-183402.png"
+    },
+    {
+      "part": 3,
+      "id": "nRBnOaU7edM",
+      "run": 43627273963,
+      "claims_none_ist": "00:05:11",
+      "ai_pixels": "/downloads/cloud-browser-20261114-183538.png"
+    }
+  ],
+  "cleanup": "All3consumedstages HEAD404originalsignedGET404wakescanceled",
+  "release": "BackupafterMomE3; freshclaims/restrictionsrequired; no publicyet",
+  "initialfailure": {
+    "run": 43626169098,
+    "result": "WronginheritedDragonseriesguard failclosed item_claim_read,full lognoVIDandstoppedverified. Correctedbeforev2success."
+  }
+}
