@@ -1,0 +1,57 @@
+{
+  "series": "The Nanny the Mafia Don Couldn't Let Go",
+  "dramacps_id": 833143,
+  "alias": "Divorced: Plus-Size Nanny Tamed the Mafia Don",
+  "affiliate": "https://r.reelsgo.tv/qGwBmtOlx9Zd",
+  "source_review_ready": true,
+  "episodes": {
+    "1": {
+      "source_duration": 75.599,
+      "source_sha256": "45c8eb5a8e0fd24b106e46e485ec6eaba1b7bbd257c611984013a8690f1cd2c6",
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "ocr_frames": 302,
+      "whole_action_frames_inspected": 38,
+      "targeted_caption_frames_inspected": 86,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole source/action/caption QA. All302quarterOCR,38action,76caption and10targetpixels checked. Drink and Speak captions confirmed. Originalaudio/captions unchanged. Cut37.2betweenlines/beforeflashback. Gun/pointblankthreat/impliedshot/passingbullet noimpactwound;babyredabradedfeet nongraphic;bodyshaming/bastard. Two encoded parts full decoded and12pixels inspected."
+    }
+  },
+  "part_gates": {
+    "yourchannel-nanny833143-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 37.2,
+      "duration": 37.2,
+      "sha256": "64f57f9a625275248b17028fa52a1d55da6492530b3f4a8e4571a7001390d506",
+      "bytes": 30080005,
+      "path": "/downloads/nanny-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 37.2,
+      "approved_render_sha256": "64f57f9a625275248b17028fa52a1d55da6492530b3f4a8e4571a7001390d506"
+    },
+    "yourchannel-nanny833143-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 37.2,
+      "source_end": 75.599,
+      "duration": 38.399,
+      "sha256": "6b2984101e146ce910add37938e5ef27d0ea57c31f13daf10e1eee7d95610edf",
+      "bytes": 29039950,
+      "path": "/downloads/nanny-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 38.4,
+      "approved_render_sha256": "6b2984101e146ce910add37938e5ef27d0ea57c31f13daf10e1eee7d95610edf"
+    }
+  }
+}

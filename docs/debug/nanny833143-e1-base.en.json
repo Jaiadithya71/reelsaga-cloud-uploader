@@ -1,0 +1,883 @@
+[
+  {
+    "start": 3.3599999999999994,
+    "end": 9.46,
+    "text": " My son has been crying for three hours, nine nannies, not one of you could make him stop.",
+    "words": [
+      {
+        "start": 3.3599999999999994,
+        "end": 3.82,
+        "word": " My"
+      },
+      {
+        "start": 3.82,
+        "end": 4.06,
+        "word": " son"
+      },
+      {
+        "start": 4.06,
+        "end": 4.22,
+        "word": " has"
+      },
+      {
+        "start": 4.22,
+        "end": 4.34,
+        "word": " been"
+      },
+      {
+        "start": 4.34,
+        "end": 4.58,
+        "word": " crying"
+      },
+      {
+        "start": 4.58,
+        "end": 4.84,
+        "word": " for"
+      },
+      {
+        "start": 4.84,
+        "end": 5.1,
+        "word": " three"
+      },
+      {
+        "start": 5.1,
+        "end": 5.56,
+        "word": " hours,"
+      },
+      {
+        "start": 5.56,
+        "end": 6.84,
+        "word": " nine"
+      },
+      {
+        "start": 6.84,
+        "end": 7.42,
+        "word": " nannies,"
+      },
+      {
+        "start": 7.66,
+        "end": 8.18,
+        "word": " not"
+      },
+      {
+        "start": 8.18,
+        "end": 8.42,
+        "word": " one"
+      },
+      {
+        "start": 8.42,
+        "end": 8.6,
+        "word": " of"
+      },
+      {
+        "start": 8.6,
+        "end": 8.68,
+        "word": " you"
+      },
+      {
+        "start": 8.68,
+        "end": 8.82,
+        "word": " could"
+      },
+      {
+        "start": 8.82,
+        "end": 8.98,
+        "word": " make"
+      },
+      {
+        "start": 8.98,
+        "end": 9.12,
+        "word": " him"
+      },
+      {
+        "start": 9.12,
+        "end": 9.46,
+        "word": " stop."
+      }
+    ]
+  },
+  {
+    "start": 11.04,
+    "end": 14.7,
+    "text": " I'll come to three, tell me why he's crying or you die in his plate.",
+    "words": [
+      {
+        "start": 11.04,
+        "end": 11.5,
+        "word": " I'll"
+      },
+      {
+        "start": 11.5,
+        "end": 11.6,
+        "word": " come"
+      },
+      {
+        "start": 11.6,
+        "end": 11.78,
+        "word": " to"
+      },
+      {
+        "start": 11.78,
+        "end": 12.0,
+        "word": " three,"
+      },
+      {
+        "start": 12.58,
+        "end": 12.94,
+        "word": " tell"
+      },
+      {
+        "start": 12.94,
+        "end": 13.06,
+        "word": " me"
+      },
+      {
+        "start": 13.06,
+        "end": 13.22,
+        "word": " why"
+      },
+      {
+        "start": 13.22,
+        "end": 13.36,
+        "word": " he's"
+      },
+      {
+        "start": 13.36,
+        "end": 13.6,
+        "word": " crying"
+      },
+      {
+        "start": 13.6,
+        "end": 13.86,
+        "word": " or"
+      },
+      {
+        "start": 13.86,
+        "end": 14.0,
+        "word": " you"
+      },
+      {
+        "start": 14.0,
+        "end": 14.24,
+        "word": " die"
+      },
+      {
+        "start": 14.24,
+        "end": 14.38,
+        "word": " in"
+      },
+      {
+        "start": 14.38,
+        "end": 14.5,
+        "word": " his"
+      },
+      {
+        "start": 14.5,
+        "end": 14.7,
+        "word": " plate."
+      }
+    ]
+  },
+  {
+    "start": 15.3,
+    "end": 17.6,
+    "text": " He must be hungry, sir, he hasn't eaten in three hours.",
+    "words": [
+      {
+        "start": 15.3,
+        "end": 15.4,
+        "word": " He"
+      },
+      {
+        "start": 15.4,
+        "end": 15.54,
+        "word": " must"
+      },
+      {
+        "start": 15.54,
+        "end": 15.7,
+        "word": " be"
+      },
+      {
+        "start": 15.7,
+        "end": 15.9,
+        "word": " hungry,"
+      },
+      {
+        "start": 15.9,
+        "end": 16.28,
+        "word": " sir,"
+      },
+      {
+        "start": 16.42,
+        "end": 16.48,
+        "word": " he"
+      },
+      {
+        "start": 16.48,
+        "end": 16.78,
+        "word": " hasn't"
+      },
+      {
+        "start": 16.78,
+        "end": 16.88,
+        "word": " eaten"
+      },
+      {
+        "start": 16.88,
+        "end": 17.06,
+        "word": " in"
+      },
+      {
+        "start": 17.06,
+        "end": 17.24,
+        "word": " three"
+      },
+      {
+        "start": 17.24,
+        "end": 17.6,
+        "word": " hours."
+      }
+    ]
+  },
+  {
+    "start": 21.4,
+    "end": 21.86,
+    "text": " Drink.",
+    "words": [
+      {
+        "start": 21.4,
+        "end": 21.86,
+        "word": " Drink."
+      }
+    ]
+  },
+  {
+    "start": 21.86,
+    "end": 22.04,
+    "text": " Drink.",
+    "words": [
+      {
+        "start": 21.86,
+        "end": 22.04,
+        "word": " Drink."
+      }
+    ]
+  },
+  {
+    "start": 28.06,
+    "end": 29.4,
+    "text": " One, two.",
+    "words": [
+      {
+        "start": 28.06,
+        "end": 28.56,
+        "word": " One,"
+      },
+      {
+        "start": 28.9,
+        "end": 29.4,
+        "word": " two."
+      }
+    ]
+  },
+  {
+    "start": 34.1,
+    "end": 34.78,
+    "text": " Who's there?",
+    "words": [
+      {
+        "start": 34.1,
+        "end": 34.6,
+        "word": " Who's"
+      },
+      {
+        "start": 34.6,
+        "end": 34.78,
+        "word": " there?"
+      }
+    ]
+  },
+  {
+    "start": 37.98,
+    "end": 42.22,
+    "text": " Look at yourself, all that weight, those stretch marks, you look like a drowned pig.",
+    "words": [
+      {
+        "start": 37.98,
+        "end": 38.48,
+        "word": " Look"
+      },
+      {
+        "start": 38.48,
+        "end": 38.98,
+        "word": " at"
+      },
+      {
+        "start": 38.98,
+        "end": 39.16,
+        "word": " yourself,"
+      },
+      {
+        "start": 39.54,
+        "end": 39.82,
+        "word": " all"
+      },
+      {
+        "start": 39.82,
+        "end": 39.94,
+        "word": " that"
+      },
+      {
+        "start": 39.94,
+        "end": 40.18,
+        "word": " weight,"
+      },
+      {
+        "start": 40.34,
+        "end": 40.44,
+        "word": " those"
+      },
+      {
+        "start": 40.44,
+        "end": 40.66,
+        "word": " stretch"
+      },
+      {
+        "start": 40.66,
+        "end": 40.96,
+        "word": " marks,"
+      },
+      {
+        "start": 40.98,
+        "end": 41.38,
+        "word": " you"
+      },
+      {
+        "start": 41.38,
+        "end": 41.48,
+        "word": " look"
+      },
+      {
+        "start": 41.48,
+        "end": 41.6,
+        "word": " like"
+      },
+      {
+        "start": 41.6,
+        "end": 41.66,
+        "word": " a"
+      },
+      {
+        "start": 41.66,
+        "end": 41.88,
+        "word": " drowned"
+      },
+      {
+        "start": 41.88,
+        "end": 42.22,
+        "word": " pig."
+      }
+    ]
+  },
+  {
+    "start": 42.5,
+    "end": 44.66,
+    "text": " The baby stays, face it, looking like that.",
+    "words": [
+      {
+        "start": 42.5,
+        "end": 42.6,
+        "word": " The"
+      },
+      {
+        "start": 42.6,
+        "end": 42.76,
+        "word": " baby"
+      },
+      {
+        "start": 42.76,
+        "end": 43.08,
+        "word": " stays,"
+      },
+      {
+        "start": 43.5,
+        "end": 43.76,
+        "word": " face"
+      },
+      {
+        "start": 43.76,
+        "end": 43.98,
+        "word": " it,"
+      },
+      {
+        "start": 44.12,
+        "end": 44.26,
+        "word": " looking"
+      },
+      {
+        "start": 44.26,
+        "end": 44.52,
+        "word": " like"
+      },
+      {
+        "start": 44.52,
+        "end": 44.66,
+        "word": " that."
+      }
+    ]
+  },
+  {
+    "start": 45.52,
+    "end": 47.02,
+    "text": " You couldn't even afford her formula.",
+    "words": [
+      {
+        "start": 45.52,
+        "end": 45.52,
+        "word": " You"
+      },
+      {
+        "start": 45.52,
+        "end": 46.32,
+        "word": " couldn't"
+      },
+      {
+        "start": 46.32,
+        "end": 46.38,
+        "word": " even"
+      },
+      {
+        "start": 46.38,
+        "end": 46.58,
+        "word": " afford"
+      },
+      {
+        "start": 46.58,
+        "end": 46.76,
+        "word": " her"
+      },
+      {
+        "start": 46.76,
+        "end": 47.02,
+        "word": " formula."
+      }
+    ]
+  },
+  {
+    "start": 48.96,
+    "end": 50.78,
+    "text": " I'm here about the nanny job.",
+    "words": [
+      {
+        "start": 48.96,
+        "end": 49.46,
+        "word": " I'm"
+      },
+      {
+        "start": 49.46,
+        "end": 49.96,
+        "word": " here"
+      },
+      {
+        "start": 49.96,
+        "end": 50.16,
+        "word": " about"
+      },
+      {
+        "start": 50.16,
+        "end": 50.32,
+        "word": " the"
+      },
+      {
+        "start": 50.32,
+        "end": 50.58,
+        "word": " nanny"
+      },
+      {
+        "start": 50.58,
+        "end": 50.78,
+        "word": " job."
+      }
+    ]
+  },
+  {
+    "start": 50.78,
+    "end": 54.12,
+    "text": " Is my security dead? Drag this woman out and shoot her.",
+    "words": [
+      {
+        "start": 50.78,
+        "end": 51.58,
+        "word": " Is"
+      },
+      {
+        "start": 51.58,
+        "end": 51.7,
+        "word": " my"
+      },
+      {
+        "start": 51.7,
+        "end": 51.92,
+        "word": " security"
+      },
+      {
+        "start": 51.92,
+        "end": 52.42,
+        "word": " dead?"
+      },
+      {
+        "start": 52.86,
+        "end": 53.06,
+        "word": " Drag"
+      },
+      {
+        "start": 53.06,
+        "end": 53.26,
+        "word": " this"
+      },
+      {
+        "start": 53.26,
+        "end": 53.44,
+        "word": " woman"
+      },
+      {
+        "start": 53.44,
+        "end": 53.62,
+        "word": " out"
+      },
+      {
+        "start": 53.62,
+        "end": 53.72,
+        "word": " and"
+      },
+      {
+        "start": 53.72,
+        "end": 53.92,
+        "word": " shoot"
+      },
+      {
+        "start": 53.92,
+        "end": 54.12,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 55.900000000000006,
+    "end": 58.38,
+    "text": " My feet, my feet are killing me.",
+    "words": [
+      {
+        "start": 55.900000000000006,
+        "end": 56.38,
+        "word": " My"
+      },
+      {
+        "start": 56.38,
+        "end": 56.68,
+        "word": " feet,"
+      },
+      {
+        "start": 57.04,
+        "end": 57.32,
+        "word": " my"
+      },
+      {
+        "start": 57.32,
+        "end": 57.56,
+        "word": " feet"
+      },
+      {
+        "start": 57.56,
+        "end": 57.74,
+        "word": " are"
+      },
+      {
+        "start": 57.74,
+        "end": 58.1,
+        "word": " killing"
+      },
+      {
+        "start": 58.1,
+        "end": 58.38,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 59.0,
+    "end": 61.26,
+    "text": " What sick bastard puts leather shoes on a baby?",
+    "words": [
+      {
+        "start": 59.0,
+        "end": 59.02,
+        "word": " What"
+      },
+      {
+        "start": 59.02,
+        "end": 59.3,
+        "word": " sick"
+      },
+      {
+        "start": 59.3,
+        "end": 59.64,
+        "word": " bastard"
+      },
+      {
+        "start": 59.64,
+        "end": 60.04,
+        "word": " puts"
+      },
+      {
+        "start": 60.04,
+        "end": 60.28,
+        "word": " leather"
+      },
+      {
+        "start": 60.28,
+        "end": 60.62,
+        "word": " shoes"
+      },
+      {
+        "start": 60.62,
+        "end": 60.9,
+        "word": " on"
+      },
+      {
+        "start": 60.9,
+        "end": 61.0,
+        "word": " a"
+      },
+      {
+        "start": 61.0,
+        "end": 61.26,
+        "word": " baby?"
+      }
+    ]
+  },
+  {
+    "start": 61.96,
+    "end": 65.76,
+    "text": " I've been screaming all night and this is the first person who's actually looking at my feet.",
+    "words": [
+      {
+        "start": 61.96,
+        "end": 62.02,
+        "word": " I've"
+      },
+      {
+        "start": 62.02,
+        "end": 62.14,
+        "word": " been"
+      },
+      {
+        "start": 62.14,
+        "end": 62.38,
+        "word": " screaming"
+      },
+      {
+        "start": 62.38,
+        "end": 62.78,
+        "word": " all"
+      },
+      {
+        "start": 62.78,
+        "end": 63.02,
+        "word": " night"
+      },
+      {
+        "start": 63.02,
+        "end": 63.28,
+        "word": " and"
+      },
+      {
+        "start": 63.28,
+        "end": 63.46,
+        "word": " this"
+      },
+      {
+        "start": 63.46,
+        "end": 63.58,
+        "word": " is"
+      },
+      {
+        "start": 63.58,
+        "end": 63.7,
+        "word": " the"
+      },
+      {
+        "start": 63.7,
+        "end": 63.94,
+        "word": " first"
+      },
+      {
+        "start": 63.94,
+        "end": 64.4,
+        "word": " person"
+      },
+      {
+        "start": 64.4,
+        "end": 64.62,
+        "word": " who's"
+      },
+      {
+        "start": 64.62,
+        "end": 64.86,
+        "word": " actually"
+      },
+      {
+        "start": 64.86,
+        "end": 65.16,
+        "word": " looking"
+      },
+      {
+        "start": 65.16,
+        "end": 65.38,
+        "word": " at"
+      },
+      {
+        "start": 65.38,
+        "end": 65.52,
+        "word": " my"
+      },
+      {
+        "start": 65.52,
+        "end": 65.76,
+        "word": " feet."
+      }
+    ]
+  },
+  {
+    "start": 66.1,
+    "end": 66.84,
+    "text": " Don't let her go!",
+    "words": [
+      {
+        "start": 66.1,
+        "end": 66.22,
+        "word": " Don't"
+      },
+      {
+        "start": 66.22,
+        "end": 66.38,
+        "word": " let"
+      },
+      {
+        "start": 66.38,
+        "end": 66.5,
+        "word": " her"
+      },
+      {
+        "start": 66.5,
+        "end": 66.84,
+        "word": " go!"
+      }
+    ]
+  },
+  {
+    "start": 67.64,
+    "end": 70.04,
+    "text": " Stop! I know why your son is crying!",
+    "words": [
+      {
+        "start": 67.64,
+        "end": 68.12,
+        "word": " Stop!"
+      },
+      {
+        "start": 68.84,
+        "end": 68.9,
+        "word": " I"
+      },
+      {
+        "start": 68.9,
+        "end": 69.08,
+        "word": " know"
+      },
+      {
+        "start": 69.08,
+        "end": 69.3,
+        "word": " why"
+      },
+      {
+        "start": 69.3,
+        "end": 69.42,
+        "word": " your"
+      },
+      {
+        "start": 69.42,
+        "end": 69.64,
+        "word": " son"
+      },
+      {
+        "start": 69.64,
+        "end": 69.78,
+        "word": " is"
+      },
+      {
+        "start": 69.78,
+        "end": 70.04,
+        "word": " crying!"
+      }
+    ]
+  },
+  {
+    "start": 70.62,
+    "end": 73.3,
+    "text": " Speak, and if you're wrong, the next bullet won't miss.",
+    "words": [
+      {
+        "start": 70.62,
+        "end": 70.86,
+        "word": " Speak,"
+      },
+      {
+        "start": 71.26,
+        "end": 71.46,
+        "word": " and"
+      },
+      {
+        "start": 71.46,
+        "end": 71.54,
+        "word": " if"
+      },
+      {
+        "start": 71.54,
+        "end": 71.7,
+        "word": " you're"
+      },
+      {
+        "start": 71.7,
+        "end": 71.86,
+        "word": " wrong,"
+      },
+      {
+        "start": 72.48,
+        "end": 72.5,
+        "word": " the"
+      },
+      {
+        "start": 72.5,
+        "end": 72.62,
+        "word": " next"
+      },
+      {
+        "start": 72.62,
+        "end": 72.88,
+        "word": " bullet"
+      },
+      {
+        "start": 72.88,
+        "end": 73.18,
+        "word": " won't"
+      },
+      {
+        "start": 73.18,
+        "end": 73.3,
+        "word": " miss."
+      }
+    ]
+  }
+]

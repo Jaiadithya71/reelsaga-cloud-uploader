@@ -1,0 +1,32 @@
+[
+  {
+    "episode": 1,
+    "part": 1,
+    "source_start": 0,
+    "source_end": 37.2,
+    "duration": 37.2,
+    "sha256": "64f57f9a625275248b17028fa52a1d55da6492530b3f4a8e4571a7001390d506",
+    "bytes": 30080005,
+    "path": "/downloads/nanny-e1p1.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 37.2
+  },
+  {
+    "episode": 1,
+    "part": 2,
+    "source_start": 37.2,
+    "source_end": 75.599,
+    "duration": 38.399,
+    "sha256": "6b2984101e146ce910add37938e5ef27d0ea57c31f13daf10e1eee7d95610edf",
+    "bytes": 29039950,
+    "path": "/downloads/nanny-e1p2.mp4",
+    "decode_checked": true,
+    "pixels_inspected": true,
+    "caption_gate_pass": true,
+    "whole_part_release_ready": true,
+    "measured_duration": 38.4
+  }
+]
