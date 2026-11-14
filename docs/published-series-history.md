@@ -1082,3 +1082,7 @@ Nov14 18:20IST Lover833139affiliate GENERATED and pixels verified18:18:23 https:
 - My One-Night Lover Is My Fiancé, YourChannel 60%, eight free source episodes verified on DramaCPS. E1/E2 downloaded; E1 whole base.en/small.en audio reviewed, 779 quarter-second OCR frames, whole 98 action and 195 one-second caption frames inspected.
 - Clear omission: spoken "Whoa" about 134.5 seconds is uncaptained. Isolated 133.8-136.3 audio and full-frame sequence confirm it. The following "Wait" has captions. No replacement caption, render, staging or upload. Parent notified with decisive audio and pixels at 18:24.
 - Next research candidate: The Boss's Obsessive Prize 833141, six free source episodes verified. E1/E2 downloaded, base.en whole audio pass exists; small.en, whole action and caption QA unfinished. No approval or claims pass implied.
+
+### 2026-11-14 18:30 IST: Boss 833141 source-caption HOLD, unuploaded
+- The Boss's Obsessive Prize: six free YourChannel source episodes, verified DramaCPS 18:26. E1/E2 downloaded. E1 whole base.en audio, action and one-second caption contact pixels inspected, no full QA pass.
+- At 55s, source audio says "On her way. Twenty minutes" while supplied captions say "on our way 20 minutes". Isolated audio and full-frame pixels confirm. No render, stage or upload. Parent notified with evidence.
