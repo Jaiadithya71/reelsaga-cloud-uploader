@@ -18,6 +18,20 @@
       "caption_gate_pass": true,
       "repair": null,
       "notes": "Whole source/action/caption QA. All302quarterOCR,38action,76caption and10targetpixels checked. Drink and Speak captions confirmed. Originalaudio/captions unchanged. Cut37.2betweenlines/beforeflashback. Gun/pointblankthreat/impliedshot/passingbullet noimpactwound;babyredabradedfeet nongraphic;bodyshaming/bastard. Two encoded parts full decoded and12pixels inspected."
+    },
+    "2": {
+      "source_duration": 91.644,
+      "source_sha256": "9a8532f9f4ce168388016f233ccf95dd2f997d0c6ff5d76df1e7c2436d0d5105",
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "ocr_frames": 366,
+      "whole_action_frames_inspected": 46,
+      "targeted_caption_frames_inspected": 107,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole source/action/caption QA. 92secondcaptionpixels+15targetpixels. Someone put him in confirmed11.75-12.25. Moretti/tenyears/whyher/deathstare pixels confirmed; ASR propername errors no sourcecaptiondefect. Nongraphic child redabradedfeet;gunpointthreat and bodybag dialogue;no graphic injury/sex. Original audio/captions retained. Cut48betweenlines duringmemorytransition, house0.15sfades. Two fullDecode12encodedpixels inspected."
     }
   },
   "part_gates": {
@@ -52,6 +66,38 @@
       "whole_part_release_ready": true,
       "measured_duration": 38.4,
       "approved_render_sha256": "6b2984101e146ce910add37938e5ef27d0ea57c31f13daf10e1eee7d95610edf"
+    },
+    "yourchannel-nanny833143-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 48,
+      "duration": 48,
+      "sha256": "4620a72dccc8737db8209be337a2235cbff4d342180f005b60a419c4c3e0533f",
+      "bytes": 50419310,
+      "path": "/downloads/nanny-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 48.0,
+      "approved_render_sha256": "4620a72dccc8737db8209be337a2235cbff4d342180f005b60a419c4c3e0533f"
+    },
+    "yourchannel-nanny833143-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 48,
+      "source_end": 91.644,
+      "duration": 43.644000000000005,
+      "sha256": "b268d157525e1378a05b037655d38ba9fbd74d566e719706a620af3debe15994",
+      "bytes": 48704001,
+      "path": "/downloads/nanny-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 43.626,
+      "approved_render_sha256": "b268d157525e1378a05b037655d38ba9fbd74d566e719706a620af3debe15994"
     }
   }
 }

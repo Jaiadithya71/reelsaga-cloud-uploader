@@ -1,0 +1,824 @@
+[
+  {
+    "start": 0.0,
+    "end": 7.98,
+    "text": " his shoes it's his shoes what did you say he's not hungry he's in pain he's",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.68,
+        "word": " his"
+      },
+      {
+        "start": 0.68,
+        "end": 2.12,
+        "word": " shoes"
+      },
+      {
+        "start": 2.12,
+        "end": 3.16,
+        "word": " it's"
+      },
+      {
+        "start": 3.16,
+        "end": 3.24,
+        "word": " his"
+      },
+      {
+        "start": 3.24,
+        "end": 3.58,
+        "word": " shoes"
+      },
+      {
+        "start": 3.58,
+        "end": 5.08,
+        "word": " what"
+      },
+      {
+        "start": 5.08,
+        "end": 5.18,
+        "word": " did"
+      },
+      {
+        "start": 5.18,
+        "end": 5.32,
+        "word": " you"
+      },
+      {
+        "start": 5.32,
+        "end": 5.5,
+        "word": " say"
+      },
+      {
+        "start": 5.5,
+        "end": 6.52,
+        "word": " he's"
+      },
+      {
+        "start": 6.52,
+        "end": 6.64,
+        "word": " not"
+      },
+      {
+        "start": 6.64,
+        "end": 7.0,
+        "word": " hungry"
+      },
+      {
+        "start": 7.0,
+        "end": 7.32,
+        "word": " he's"
+      },
+      {
+        "start": 7.32,
+        "end": 7.4,
+        "word": " in"
+      },
+      {
+        "start": 7.4,
+        "end": 7.6,
+        "word": " pain"
+      },
+      {
+        "start": 7.6,
+        "end": 7.98,
+        "word": " he's"
+      }
+    ]
+  },
+  {
+    "start": 7.98,
+    "end": 12.26,
+    "text": " 18 months old his foot bones are still soft as cartilage someone put him in",
+    "words": [
+      {
+        "start": 7.98,
+        "end": 8.18,
+        "word": " 18"
+      },
+      {
+        "start": 8.18,
+        "end": 8.52,
+        "word": " months"
+      },
+      {
+        "start": 8.52,
+        "end": 8.86,
+        "word": " old"
+      },
+      {
+        "start": 8.86,
+        "end": 9.46,
+        "word": " his"
+      },
+      {
+        "start": 9.46,
+        "end": 9.7,
+        "word": " foot"
+      },
+      {
+        "start": 9.7,
+        "end": 9.9,
+        "word": " bones"
+      },
+      {
+        "start": 9.9,
+        "end": 10.06,
+        "word": " are"
+      },
+      {
+        "start": 10.06,
+        "end": 10.28,
+        "word": " still"
+      },
+      {
+        "start": 10.28,
+        "end": 10.56,
+        "word": " soft"
+      },
+      {
+        "start": 10.56,
+        "end": 10.76,
+        "word": " as"
+      },
+      {
+        "start": 10.76,
+        "end": 11.22,
+        "word": " cartilage"
+      },
+      {
+        "start": 11.22,
+        "end": 11.82,
+        "word": " someone"
+      },
+      {
+        "start": 11.82,
+        "end": 12.08,
+        "word": " put"
+      },
+      {
+        "start": 12.08,
+        "end": 12.22,
+        "word": " him"
+      },
+      {
+        "start": 12.22,
+        "end": 12.26,
+        "word": " in"
+      }
+    ]
+  },
+  {
+    "start": 12.26,
+    "end": 16.38,
+    "text": " handmade hard leather shoes they're squeezing his toes raw nonsense those",
+    "words": [
+      {
+        "start": 12.26,
+        "end": 12.5,
+        "word": " handmade"
+      },
+      {
+        "start": 12.5,
+        "end": 12.94,
+        "word": " hard"
+      },
+      {
+        "start": 12.94,
+        "end": 13.14,
+        "word": " leather"
+      },
+      {
+        "start": 13.14,
+        "end": 13.44,
+        "word": " shoes"
+      },
+      {
+        "start": 13.44,
+        "end": 13.66,
+        "word": " they're"
+      },
+      {
+        "start": 13.66,
+        "end": 13.96,
+        "word": " squeezing"
+      },
+      {
+        "start": 13.96,
+        "end": 14.24,
+        "word": " his"
+      },
+      {
+        "start": 14.24,
+        "end": 14.46,
+        "word": " toes"
+      },
+      {
+        "start": 14.46,
+        "end": 14.76,
+        "word": " raw"
+      },
+      {
+        "start": 14.76,
+        "end": 15.5,
+        "word": " nonsense"
+      },
+      {
+        "start": 15.5,
+        "end": 16.38,
+        "word": " those"
+      }
+    ]
+  },
+  {
+    "start": 16.38,
+    "end": 19.94,
+    "text": " shoes are a Morelli family tradition every young master has worn them for",
+    "words": [
+      {
+        "start": 16.38,
+        "end": 16.66,
+        "word": " shoes"
+      },
+      {
+        "start": 16.66,
+        "end": 16.9,
+        "word": " are"
+      },
+      {
+        "start": 16.9,
+        "end": 17.0,
+        "word": " a"
+      },
+      {
+        "start": 17.0,
+        "end": 17.26,
+        "word": " Morelli"
+      },
+      {
+        "start": 17.26,
+        "end": 17.54,
+        "word": " family"
+      },
+      {
+        "start": 17.54,
+        "end": 17.9,
+        "word": " tradition"
+      },
+      {
+        "start": 17.9,
+        "end": 18.42,
+        "word": " every"
+      },
+      {
+        "start": 18.42,
+        "end": 18.8,
+        "word": " young"
+      },
+      {
+        "start": 18.8,
+        "end": 19.22,
+        "word": " master"
+      },
+      {
+        "start": 19.22,
+        "end": 19.44,
+        "word": " has"
+      },
+      {
+        "start": 19.44,
+        "end": 19.6,
+        "word": " worn"
+      },
+      {
+        "start": 19.6,
+        "end": 19.8,
+        "word": " them"
+      },
+      {
+        "start": 19.8,
+        "end": 19.94,
+        "word": " for"
+      }
+    ]
+  },
+  {
+    "start": 19.94,
+    "end": 26.48,
+    "text": " portraits you have 30 seconds one wrong move you know what happens hey little",
+    "words": [
+      {
+        "start": 19.94,
+        "end": 20.3,
+        "word": " portraits"
+      },
+      {
+        "start": 20.3,
+        "end": 20.88,
+        "word": " you"
+      },
+      {
+        "start": 20.88,
+        "end": 20.98,
+        "word": " have"
+      },
+      {
+        "start": 20.98,
+        "end": 21.24,
+        "word": " 30"
+      },
+      {
+        "start": 21.24,
+        "end": 21.62,
+        "word": " seconds"
+      },
+      {
+        "start": 21.62,
+        "end": 22.2,
+        "word": " one"
+      },
+      {
+        "start": 22.2,
+        "end": 22.4,
+        "word": " wrong"
+      },
+      {
+        "start": 22.4,
+        "end": 22.68,
+        "word": " move"
+      },
+      {
+        "start": 22.68,
+        "end": 23.32,
+        "word": " you"
+      },
+      {
+        "start": 23.32,
+        "end": 23.44,
+        "word": " know"
+      },
+      {
+        "start": 23.44,
+        "end": 23.56,
+        "word": " what"
+      },
+      {
+        "start": 23.56,
+        "end": 23.86,
+        "word": " happens"
+      },
+      {
+        "start": 23.86,
+        "end": 26.26,
+        "word": " hey"
+      },
+      {
+        "start": 26.26,
+        "end": 26.48,
+        "word": " little"
+      }
+    ]
+  },
+  {
+    "start": 26.48,
+    "end": 38.22,
+    "text": " man let me see those feet okay oh my god finally finally free at last handmade",
+    "words": [
+      {
+        "start": 26.48,
+        "end": 26.74,
+        "word": " man"
+      },
+      {
+        "start": 26.74,
+        "end": 27.18,
+        "word": " let"
+      },
+      {
+        "start": 27.18,
+        "end": 27.3,
+        "word": " me"
+      },
+      {
+        "start": 27.3,
+        "end": 27.44,
+        "word": " see"
+      },
+      {
+        "start": 27.44,
+        "end": 27.6,
+        "word": " those"
+      },
+      {
+        "start": 27.6,
+        "end": 27.88,
+        "word": " feet"
+      },
+      {
+        "start": 27.88,
+        "end": 28.24,
+        "word": " okay"
+      },
+      {
+        "start": 28.24,
+        "end": 29.44,
+        "word": " oh"
+      },
+      {
+        "start": 29.44,
+        "end": 32.38,
+        "word": " my"
+      },
+      {
+        "start": 32.38,
+        "end": 32.76,
+        "word": " god"
+      },
+      {
+        "start": 32.76,
+        "end": 33.72,
+        "word": " finally"
+      },
+      {
+        "start": 33.72,
+        "end": 34.44,
+        "word": " finally"
+      },
+      {
+        "start": 34.44,
+        "end": 35.42,
+        "word": " free"
+      },
+      {
+        "start": 35.42,
+        "end": 35.66,
+        "word": " at"
+      },
+      {
+        "start": 35.66,
+        "end": 36.3,
+        "word": " last"
+      },
+      {
+        "start": 36.3,
+        "end": 38.22,
+        "word": " handmade"
+      }
+    ]
+  },
+  {
+    "start": 38.22,
+    "end": 55.5,
+    "text": " Italian calfkin beautiful and completely rigid ten years boy how sir",
+    "words": [
+      {
+        "start": 38.22,
+        "end": 38.76,
+        "word": " Italian"
+      },
+      {
+        "start": 38.76,
+        "end": 39.4,
+        "word": " calfkin"
+      },
+      {
+        "start": 39.4,
+        "end": 40.14,
+        "word": " beautiful"
+      },
+      {
+        "start": 40.14,
+        "end": 41.86,
+        "word": " and"
+      },
+      {
+        "start": 41.86,
+        "end": 42.26,
+        "word": " completely"
+      },
+      {
+        "start": 42.26,
+        "end": 42.72,
+        "word": " rigid"
+      },
+      {
+        "start": 42.72,
+        "end": 50.16,
+        "word": " ten"
+      },
+      {
+        "start": 50.16,
+        "end": 50.46,
+        "word": " years"
+      },
+      {
+        "start": 50.46,
+        "end": 51.6,
+        "word": " boy"
+      },
+      {
+        "start": 51.6,
+        "end": 51.84,
+        "word": " how"
+      },
+      {
+        "start": 51.84,
+        "end": 55.5,
+        "word": " sir"
+      }
+    ]
+  },
+  {
+    "start": 55.5,
+    "end": 65.96,
+    "text": " your son still needs me she's hired 50 grand a week and Martha if anyone puts",
+    "words": [
+      {
+        "start": 55.5,
+        "end": 55.58,
+        "word": " your"
+      },
+      {
+        "start": 55.58,
+        "end": 56.78,
+        "word": " son"
+      },
+      {
+        "start": 56.78,
+        "end": 57.08,
+        "word": " still"
+      },
+      {
+        "start": 57.08,
+        "end": 57.28,
+        "word": " needs"
+      },
+      {
+        "start": 57.28,
+        "end": 57.52,
+        "word": " me"
+      },
+      {
+        "start": 57.52,
+        "end": 62.18,
+        "word": " she's"
+      },
+      {
+        "start": 62.18,
+        "end": 62.36,
+        "word": " hired"
+      },
+      {
+        "start": 62.36,
+        "end": 63.16,
+        "word": " 50"
+      },
+      {
+        "start": 63.16,
+        "end": 63.44,
+        "word": " grand"
+      },
+      {
+        "start": 63.44,
+        "end": 63.58,
+        "word": " a"
+      },
+      {
+        "start": 63.58,
+        "end": 63.76,
+        "word": " week"
+      },
+      {
+        "start": 63.76,
+        "end": 64.54,
+        "word": " and"
+      },
+      {
+        "start": 64.54,
+        "end": 64.72,
+        "word": " Martha"
+      },
+      {
+        "start": 64.72,
+        "end": 65.5,
+        "word": " if"
+      },
+      {
+        "start": 65.5,
+        "end": 65.72,
+        "word": " anyone"
+      },
+      {
+        "start": 65.72,
+        "end": 65.96,
+        "word": " puts"
+      }
+    ]
+  },
+  {
+    "start": 65.96,
+    "end": 75.38,
+    "text": " those shoes on my son again they'll be leaving this estate in a body bag she",
+    "words": [
+      {
+        "start": 65.96,
+        "end": 66.16,
+        "word": " those"
+      },
+      {
+        "start": 66.16,
+        "end": 66.38,
+        "word": " shoes"
+      },
+      {
+        "start": 66.38,
+        "end": 66.56,
+        "word": " on"
+      },
+      {
+        "start": 66.56,
+        "end": 66.68,
+        "word": " my"
+      },
+      {
+        "start": 66.68,
+        "end": 66.9,
+        "word": " son"
+      },
+      {
+        "start": 66.9,
+        "end": 67.16,
+        "word": " again"
+      },
+      {
+        "start": 67.16,
+        "end": 67.78,
+        "word": " they'll"
+      },
+      {
+        "start": 67.78,
+        "end": 67.9,
+        "word": " be"
+      },
+      {
+        "start": 67.9,
+        "end": 68.08,
+        "word": " leaving"
+      },
+      {
+        "start": 68.08,
+        "end": 68.28,
+        "word": " this"
+      },
+      {
+        "start": 68.28,
+        "end": 68.52,
+        "word": " estate"
+      },
+      {
+        "start": 68.52,
+        "end": 68.78,
+        "word": " in"
+      },
+      {
+        "start": 68.78,
+        "end": 68.86,
+        "word": " a"
+      },
+      {
+        "start": 68.86,
+        "end": 69.04,
+        "word": " body"
+      },
+      {
+        "start": 69.04,
+        "end": 69.34,
+        "word": " bag"
+      },
+      {
+        "start": 69.34,
+        "end": 75.38,
+        "word": " she"
+      }
+    ]
+  },
+  {
+    "start": 75.38,
+    "end": 79.6,
+    "text": " smells nice warm whatever she's passable",
+    "words": [
+      {
+        "start": 75.38,
+        "end": 75.62,
+        "word": " smells"
+      },
+      {
+        "start": 75.62,
+        "end": 76.1,
+        "word": " nice"
+      },
+      {
+        "start": 76.1,
+        "end": 77.04,
+        "word": " warm"
+      },
+      {
+        "start": 77.04,
+        "end": 78.12,
+        "word": " whatever"
+      },
+      {
+        "start": 78.12,
+        "end": 79.02,
+        "word": " she's"
+      },
+      {
+        "start": 79.02,
+        "end": 79.6,
+        "word": " passable"
+      }
+    ]
+  },
+  {
+    "start": 83.5,
+    "end": 89.38,
+    "text": " uh-oh the old witch is giving you the death star watch your back lady",
+    "words": [
+      {
+        "start": 83.36,
+        "end": 83.84,
+        "word": " uh"
+      },
+      {
+        "start": 83.84,
+        "end": 84.8,
+        "word": "-oh"
+      },
+      {
+        "start": 84.8,
+        "end": 85.4,
+        "word": " the"
+      },
+      {
+        "start": 85.4,
+        "end": 85.64,
+        "word": " old"
+      },
+      {
+        "start": 85.64,
+        "end": 85.96,
+        "word": " witch"
+      },
+      {
+        "start": 85.96,
+        "end": 86.18,
+        "word": " is"
+      },
+      {
+        "start": 86.18,
+        "end": 86.46,
+        "word": " giving"
+      },
+      {
+        "start": 86.46,
+        "end": 86.74,
+        "word": " you"
+      },
+      {
+        "start": 86.74,
+        "end": 86.9,
+        "word": " the"
+      },
+      {
+        "start": 86.9,
+        "end": 87.12,
+        "word": " death"
+      },
+      {
+        "start": 87.12,
+        "end": 87.6,
+        "word": " star"
+      },
+      {
+        "start": 87.6,
+        "end": 88.38,
+        "word": " watch"
+      },
+      {
+        "start": 88.38,
+        "end": 88.64,
+        "word": " your"
+      },
+      {
+        "start": 88.64,
+        "end": 88.88,
+        "word": " back"
+      },
+      {
+        "start": 88.88,
+        "end": 89.38,
+        "word": " lady"
+      }
+    ]
+  }
+]
