@@ -20,6 +20,22 @@
       "caption_gate_pass": true,
       "repair": null,
       "notes": "Whole649quarterOCR/55action/163caption18targetpixels inspected. Opening crowd Woah not corroborated by independentaudio or both VADtargetpasses, no fabricatedsubtitle. BriefRhett/Hey/Youokay/thanks/name linespresent. Rhett/Reed ASR spelling differs but source Rhett retained. Base tail Thankyou hallucination not supported by small/source. Highschool rivalry, bullying, profanity, bangable-list dialogue, fullyclothed kiss afteraccidentalfall; no nudity/explicitsex/graphicviolence. Cuts54.5/108silentscenes; all3fulldecode18encodedpixels."
+    },
+    "2": {
+      "source_duration": 112.875011,
+      "source_sha256": "67e719a231c601c7a7dba5c2f3026c14b13660f9de73d8ee12cee642b3037b18",
+      "asr": [
+        "base.en whole",
+        "small.en whole",
+        "base.en+small.enVAD108-end empty",
+        "independentopening0-4 no speech"
+      ],
+      "ocr_frames": 452,
+      "whole_action_frames_inspected": 38,
+      "targeted_caption_frames_inspected": 125,
+      "caption_gate_pass": true,
+      "repair": null,
+      "notes": "Whole452quarterOCR38action113caption12targetpixels. BriefYougood27.25/Yeah38.25present. Openingmusic/nonlexicalbreath, no confirmedOh; base You at108 unsupported small andbothVADtail empty. No confirmedcaptiondefect; originalaudio/captionsretained. Profanity/homophobiccharacterdialogue, domesticabusecollargrab/alcoholgambling;clothedkiss/nonudityexplicitsexgraphicviolence. Cut39/80.5silentscenes; all3decode18encodedpixels."
     }
   },
   "part_gates": {
@@ -70,6 +86,54 @@
       "whole_part_release_ready": true,
       "measured_duration": 54.169,
       "approved_render_sha256": "2632734fbffaa2413cbd7c9e46f396433c3104a51cd153ae6e01f16fc459039c"
+    },
+    "yourchannel-campaign833137-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 39,
+      "duration": 39,
+      "sha256": "0f52d30422164c9e1ddc46e70d6c302df1269b316f51bdc533b0efb6a3afc209",
+      "bytes": 13429921,
+      "path": "/downloads/campaign-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 39.0,
+      "approved_render_sha256": "0f52d30422164c9e1ddc46e70d6c302df1269b316f51bdc533b0efb6a3afc209"
+    },
+    "yourchannel-campaign833137-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 39,
+      "source_end": 80.5,
+      "duration": 41.5,
+      "sha256": "341e7a5134a86ef65628d6cdecc2978fce9ba0030f00a0392878797dcd5b58e2",
+      "bytes": 11932782,
+      "path": "/downloads/campaign-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 41.5,
+      "approved_render_sha256": "341e7a5134a86ef65628d6cdecc2978fce9ba0030f00a0392878797dcd5b58e2"
+    },
+    "yourchannel-campaign833137-ep2-part3-v1": {
+      "episode": 2,
+      "part": 3,
+      "source_start": 80.5,
+      "source_end": 112.875011,
+      "duration": 32.375011,
+      "sha256": "7eb65782036040233ba904c91a67121b3060aedc3a1c61ebf984857bfb05decd",
+      "bytes": 9861263,
+      "path": "/downloads/campaign-e2p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 32.376,
+      "approved_render_sha256": "7eb65782036040233ba904c91a67121b3060aedc3a1c61ebf984857bfb05decd"
     }
   }
 }
