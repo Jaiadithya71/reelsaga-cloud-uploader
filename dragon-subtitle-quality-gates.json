@@ -16,6 +16,19 @@
       "part_pixels": 12,
       "confirmed_defect": null,
       "notes": "Now1.6/What69.5 present quarterOCR despite wholeASRvariance. Nonexplicitadultclothedkiss/impliedsex/coupleunderbedsheet/maleshirtless/druggingtheme/strongprofanity. No explicitsex/graphicviolence/nudity observed in checked wholeactionframes. SourcepremiseElara differs actualE1Maya, use actualsource."
+    },
+    "2": {
+      "asr": [
+        "base.en whole",
+        "small.en whole"
+      ],
+      "quarter_ocr": 240,
+      "action_pixels": 30,
+      "caption_pixels": 60,
+      "target_pixels": 19,
+      "part_pixels": 12,
+      "confirmed_defect": null,
+      "notes": "Take it28.8-29.1visible sourcecaption;OCRmiss not defect. Isolated47-57no speech confirms latebase hallucination. Nonexplicit woman bedsheet/maleshirtless/fantasychestobjectremoval withoutvisibleblood/wound/graphicviolence."
     }
   },
   "part_gates": {
@@ -50,6 +63,38 @@
       "whole_part_release_ready": true,
       "measured_duration": 38.45,
       "approved_render_sha256": "95e5cd6d661424fab6a19779c875285ddd58bb138d6f5b8316f2cdf9ed2f6bab"
+    },
+    "yourchannel-dragon829270-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 30.5,
+      "duration": 30.5,
+      "sha256": "cc008f21601cdce104435fd9b957b9c3a604a9fa1400c46304f201db3d8bf5d3",
+      "bytes": 26590599,
+      "path": "/downloads/dragon-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "cc008f21601cdce104435fd9b957b9c3a604a9fa1400c46304f201db3d8bf5d3",
+      "measured_duration": 30.5
+    },
+    "yourchannel-dragon829270-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 30.5,
+      "source_end": 59.972,
+      "duration": 29.472,
+      "sha256": "a85d78278ca0adfd8821f59cbd56d4a8cb6b16f1d3c6b1e282527894a788d34c",
+      "bytes": 26229224,
+      "path": "/downloads/dragon-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "a85d78278ca0adfd8821f59cbd56d4a8cb6b16f1d3c6b1e282527894a788d34c",
+      "measured_duration": 29.454
     }
   }
 }
