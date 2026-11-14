@@ -21,9 +21,21 @@
   },
   "metadata": "Exact manifest titles/descriptions/notforkids/Private; upfrontAd/affiliate verified.",
   "cleanup": "All consumedE1stagesdeletedHEAD404+originalsignedGET404,cleanupwakescanceled",
-  "e2": "whole-review passed,2renders/cap/full-decode+pixels,unuploaded",
-  "e3": "source downloaded4675141B,QA pending",
-  "release": "After MomE3 only; freshclaimsneeded",
+  "e2": "P1ageheldPRIVATE;P2unuploaded",
+  "e3": "whole2ASR252quarterOCR32action63caption20target12encodedpixelspassed;renders35.3/27.737unuploaded underDragonhold",
+  "release": "ALL_DRAGON_HELD age restriction E2P1byYouTube23:44:18IST; noappeal/reedit/skip. E1no longer reliedonbackup.",
   "source_urls_file": "docs/debug/2026-11-14-dragon-sources.json",
-  "note": "Maturethemes:adultclothedkissing/impliedsex,bedsheetcouple,maleshirtless,drugging,strongprofanity. No explicitnudity/sex/graphicviolenceobserved."
+  "note": "Maturethemes:adultclothedkissing/impliedsex,bedsheetcouple,maleshirtless,drugging,strongprofanity. No explicitnudity/sex/graphicviolenceobserved.",
+  "e2p1": {
+    "id": "aQu1rdw5YsA",
+    "run": 43625282685,
+    "exact_sha": "cfd0353d501c4093c21124744d1b04d09c80893d",
+    "privacy": "private",
+    "age_restriction": "Set by YouTube18+",
+    "claims_none": "23:44:55IST",
+    "nativeAI": "YesSaved23:45:05IST",
+    "email": "71:1a1db4473557f383",
+    "notice": "Excludesunder18andsignedout;otherwiseyourchannelisntaffected",
+    "cleanup": "HEAD404originalsignedGET40423:44:51cleanupwakecanceled"
+  }
 }
