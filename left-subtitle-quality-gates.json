@@ -3,7 +3,7 @@
   "dramacps_id": 833145,
   "alias": "You Replaced Me, I Replaced You",
   "affiliate": "https://r.reelsgo.tv/Prml57vqNr_5",
-  "source_review_ready": true,
+  "source_review_ready": false,
   "episodes": {
     "1": {
       "source_duration": 69.84,
@@ -53,5 +53,8 @@
       "measured_duration": 35.64,
       "approved_render_sha256": "90310a7b1589cf38800e3a96b1ddddf0fc4b3416a401e6b7e2c5188abf6df86b"
     }
-  }
+  },
+  "youtube_claims_gate": "HOLD_GLOBAL_VISUAL_BLOCK",
+  "private_video_id": "mSe5-I0OZuM",
+  "claimant": "KK Culture on behalf of XSYD-CID"
 }
