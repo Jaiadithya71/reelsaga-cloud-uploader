@@ -425,5 +425,21 @@
       "player": "privatefalse/unlistedfalse/OK/exactchannel",
       "recovery": "InitialaccountsrouteERR_TUNNEL_CONNECTION_FAILED; parentapprovedfreshlease recovered normalchannelpicker/ReelSaga. No duplicateupload."
     }
-  ]
+  ],
+  "e1p3_public_closeout": {
+    "at": "2026-11-15T21:36:51+05:30",
+    "url": "https://www.youtube.com/shorts/ZKDJ0HOFVnA",
+    "actual_player_verified": "2026-11-15T21:37:05+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261115-160536.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261115-160605.png",
+    "public_saved_pixels": "cloud-browser-20261115-160653.png",
+    "ordered_playlist_pixels": "cloud-browser-20261115-160726.png",
+    "spacing": "1:07:18",
+    "next_floor": "2026-11-15T22:36:51+05:30",
+    "next_wake": "wakeschedule-01M7FZDBHJE5EFYPC96ZY3XG46",
+    "ledger_sha": "f8ccf143183c09fd6cbe1c530724014edbdef421"
+  }
 }
