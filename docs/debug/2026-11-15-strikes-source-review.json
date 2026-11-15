@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-15T15:48:18+05:30",
+  "as_of": "2026-11-15T19:31:00+05:30",
   "name": "The Heiress Strikes Back",
   "id": 833198,
   "source": "https://dramacps.com/dashboard",
@@ -181,6 +181,40 @@
       "measured_duration": 35.567,
       "approved_render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375",
       "render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375"
+    },
+    "yourchannel-strikes833198-ep3-part1-v1": {
+      "episode": 3,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 48.8,
+      "duration": 48.8,
+      "sha256": "ece59d13892bd9bd2b862ac8ade64d1712a2d3bdd2042387bd65d697eeb4945e",
+      "bytes": 29308479,
+      "path": "/downloads/strikes-e3p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 48.8,
+      "approved_render_sha256": "ece59d13892bd9bd2b862ac8ade64d1712a2d3bdd2042387bd65d697eeb4945e",
+      "render_sha256": "ece59d13892bd9bd2b862ac8ade64d1712a2d3bdd2042387bd65d697eeb4945e"
+    },
+    "yourchannel-strikes833198-ep3-part2-v1": {
+      "episode": 3,
+      "part": 2,
+      "source_start": 48.8,
+      "source_end": 95.48,
+      "duration": 46.68000000000001,
+      "sha256": "b71e900db44caa67e854c8eb75c68704a88920988f663d3fb008c32fe5f4088b",
+      "bytes": 26016611,
+      "path": "/downloads/strikes-e3p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 46.68,
+      "approved_render_sha256": "b71e900db44caa67e854c8eb75c68704a88920988f663d3fb008c32fe5f4088b",
+      "render_sha256": "b71e900db44caa67e854c8eb75c68704a88920988f663d3fb008c32fe5f4088b"
     }
   },
   "parts": [
@@ -271,5 +305,61 @@
     "probe_status": "all success and stopped readback verified",
     "consumed_stages": "all3 deleted HEAD404 and original signed GET404, cleanup wake deleted",
     "public_launch": "none, Child clean queue continues"
+  },
+  "e3": {
+    "duration": 95.48,
+    "status": "Whole-source QA passed;2contiguous renders inspected, unuploaded",
+    "evidence": "Whole base.en+small.en,382quartersecondOCR,95integercaptionpixels plus targets,48even+47oddactionpixels inspected. Suspected short caption omissions resolved by quarter OCR and target pixels. No confirmed defect. Full decode+12renderpixels inspected. Original captions/audio unchanged except standard edge fades.",
+    "bounds": [
+      0,
+      48.8,
+      95.48
+    ],
+    "renders": [
+      {
+        "episode": 3,
+        "part": 1,
+        "source_start": 0,
+        "source_end": 48.8,
+        "duration": 48.8,
+        "sha256": "ece59d13892bd9bd2b862ac8ade64d1712a2d3bdd2042387bd65d697eeb4945e",
+        "bytes": 29308479,
+        "path": "/downloads/strikes-e3p1.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": true,
+        "measured_duration": 48.8,
+        "approved_render_sha256": "ece59d13892bd9bd2b862ac8ade64d1712a2d3bdd2042387bd65d697eeb4945e",
+        "render_sha256": "ece59d13892bd9bd2b862ac8ade64d1712a2d3bdd2042387bd65d697eeb4945e"
+      },
+      {
+        "episode": 3,
+        "part": 2,
+        "source_start": 48.8,
+        "source_end": 95.48,
+        "duration": 46.68000000000001,
+        "sha256": "b71e900db44caa67e854c8eb75c68704a88920988f663d3fb008c32fe5f4088b",
+        "bytes": 26016611,
+        "path": "/downloads/strikes-e3p2.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": true,
+        "measured_duration": 46.68,
+        "approved_render_sha256": "b71e900db44caa67e854c8eb75c68704a88920988f663d3fb008c32fe5f4088b",
+        "render_sha256": "b71e900db44caa67e854c8eb75c68704a88920988f663d3fb008c32fe5f4088b"
+      }
+    ],
+    "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/55be859e-1a1bfff57e2-0005-9573-534-c9280.mp4",
+    "content": "Bodyshaming, abandonment/family hostility; no observed nudity/sex/graphic violence."
+  },
+  "e4": {
+    "duration": 64.829,
+    "status": "HOLD original captions,unuploaded,no silent repair or skip",
+    "defect": "15.75-16.5 visible big enough must belongs to you? vs wholebase+small+isolatedsmall must belong to you?",
+    "evidence": "Wholebase+small,259quarterOCR,65captionpixels,33even+32oddactionpixels inspected. Exactsourceframe /downloads/strikes-e4-16.jpg; isolated13-17.5 small /downloads/strikes-e4-13-isolated.json. Parent informed19:30:07IST.",
+    "content": "Bodyshaming, grabbing wrist to stop scissors near gown, no blood/injury observed.",
+    "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1d3f2254-1a1bfff5848-0005-9573-534-c9280.mp4"
   }
 }
