@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-15T19:44:39+05:30",
+  "as_of": "2026-11-15T20:29:49+05:30",
   "name": "The Heiress Strikes Back",
   "id": 833198,
   "source": "https://dramacps.com/dashboard",
@@ -13,7 +13,7 @@
     "status": "Whole-source QA passed, no confirmed defect",
     "evidence": "Whole base.en and small.en;451quartersecond OCR,113 1sec caption pixels,57even+56odd action pixels inspected. 3contiguous renders full-decode and18renderpixels passed. Original audio and source captions unchanged.",
     "content": "Family body-shaming and adoption/abandonment theme; no observed nudity/sex/graphic violence.",
-    "remaining": "E1P1PUBLIC19:21:59IST;E1P2/P3PRIVATEready freshclaimsgatesmandatory"
+    "remaining": "E1P1 PUBLIC19:21:59IST; E1P2 PUBLIC20:29:33IST; E1P3PRIVATE ready, freshgates mandatory"
   },
   "e2": {
     "duration": 69.566,
@@ -410,5 +410,20 @@
     "evidence": "Wholebase+small,259quarterOCR,65captionpixels,33even+32oddactionpixels inspected. Exactsourceframe /downloads/strikes-e4-16.jpg; isolated13-17.5 small /downloads/strikes-e4-13-isolated.json. Parent informed19:30:07IST.",
     "content": "Bodyshaming, grabbing wrist to stop scissors near gown, no blood/injury observed.",
     "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1d3f2254-1a1bfff5848-0005-9573-534-c9280.mp4"
-  }
+  },
+  "public_releases": [
+    {
+      "episode": 1,
+      "part": 2,
+      "video_id": "xEOiCBcskC4",
+      "url": "https://www.youtube.com/shorts/xEOiCBcskC4",
+      "published_at": "2026-11-15T14:59:33Z",
+      "verified_at": "2026-11-15T14:59:49Z",
+      "claims_none_pixels": "cloud-browser-20261115-145832.png",
+      "public_saved_pixels": "cloud-browser-20261115-145937.png",
+      "metadata": "fullAd/exactaffiliate/nativeAIYesSaved/notforkids/noage/ownorderedplaylist/latestchannelchecked",
+      "player": "privatefalse/unlistedfalse/OK/exactchannel",
+      "recovery": "InitialaccountsrouteERR_TUNNEL_CONNECTION_FAILED; parentapprovedfreshlease recovered normalchannelpicker/ReelSaga. No duplicateupload."
+    }
+  ]
 }

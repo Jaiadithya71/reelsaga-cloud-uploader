@@ -1,0 +1,105 @@
+{
+  "as_of": "2026-11-15T20:08:00+05:30",
+  "cooking833213": {
+    "name": "The Dragon Court Runs on My Cooking",
+    "free": 7,
+    "source_record": "/tmp/cooking-sources-clean.json",
+    "status": "Unqualified low-restriction-risk; no upload/GetLink",
+    "evidence": "E1all87evenactionpixels/E2first60evenactionpixels, wholebaseE1/E2+smallE1. Repeatedenslavedman kicks, visiblebloodyneck/chest wounds andcollar at84-98/140-146E1,deaththreats. No captionpass.",
+    "source": "https://dramacps.com/dashboard"
+  },
+  "willow833220": {
+    "name": "The Animal Whisperer of Willow Cottage",
+    "free": 7,
+    "status": "CaptionHOLD unuploaded,no repair/skip",
+    "evidence": "E1wholebase+small,404quarterOCR,101captionpixels/51evenactionpixels. Visible45-46theBROKEANTISBACK vsbothASRs The broke aunt is back. Otherbriefcaptionchecks unresolved,oddactionnotdone,E2notreviewed.",
+    "source_record": "/tmp/willow-sources-clean.json",
+    "source": "https://dramacps.com/dashboard",
+    "parent_notified": "2026-11-15T20:00:36+05:30"
+  },
+  "chairman833239": {
+    "name": "The Chairman Wore a Cheap Coat",
+    "free": 13,
+    "source": "https://dramacps.com/dashboard",
+    "source_record": "/tmp/chairman-sources-clean.json",
+    "status": "E1 caption HOLD, unuploaded unchanged",
+    "evidence": "Whole base+small E1/E2; E1 all176 integercaption/88 evenactionpixels. TargetquarterOCR120-149.75 andisolated128..134 confirm Dorson caption vsDawson spoken130.75-132.25. Missing no more working resolved129.5..130.25. E2notvisuallyreviewed,oddnotreviewed.",
+    "parent_notified": "2026-11-15T20:01:46+05:30"
+  },
+  "unseen833206": {
+    "name": "The Heiress They Never Saw Coming",
+    "free": 8,
+    "commission": "YourChannel60%",
+    "source": "https://dramacps.com/dashboard",
+    "source_record": "/tmp/unseen-sources-clean.json",
+    "status": "E1/E2 whole-source QA cleared, four local renders inspected; no affiliate/getlink/no-repeat live check/upload/staging yet",
+    "evidence": "E1 102.678/E2 79.295sec. Whole base+small;411/317quarterOCR compared;103/79 integercaptionpixels,52+51/40+39actionpixels even+odd inspected. Allsuspectedbriefomissions resolved byquarterOCR, including cash/blamesme/Richard/No/sons/Now. No confirmed captiondefect. E1 briefstairfall/kneeabrasion,handcuffs,non-graphic hospital/death references. No nudity/sex or graphicblood seen.",
+    "renders": [
+      {
+        "episode": 1,
+        "part": 1,
+        "source_start": 0,
+        "source_end": 51.6,
+        "duration": 51.619,
+        "sha256": "5425d9a2f45615f16af1e637ebea3329d775f41169f16529abcee41502683b33",
+        "bytes": 32997035,
+        "path": "/downloads/unseen-e1p1.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": false,
+        "source_qa_cleared": true,
+        "note": "Sourcewhole QA plus six renderpixels inspected; not yet private claims checked or nativeAI/metadata set. No-repeat inventory and affiliate pending."
+      },
+      {
+        "episode": 1,
+        "part": 2,
+        "source_start": 51.6,
+        "source_end": 102.678,
+        "duration": 51.079,
+        "sha256": "60e064e8627d9929388671370fc428f283e339589d840e5a245c846b0218d2a8",
+        "bytes": 29893942,
+        "path": "/downloads/unseen-e1p2.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": false,
+        "source_qa_cleared": true,
+        "note": "Sourcewhole QA plus six renderpixels inspected; not yet private claims checked or nativeAI/metadata set. No-repeat inventory and affiliate pending."
+      },
+      {
+        "episode": 2,
+        "part": 1,
+        "source_start": 0,
+        "source_end": 42.9,
+        "duration": 42.911,
+        "sha256": "ec4494fcbc5ec7eb7441cc51030ad6ec82e8b812d3608d0938549c84f87fb3f5",
+        "bytes": 22000572,
+        "path": "/downloads/unseen-e2p1.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": false,
+        "source_qa_cleared": true,
+        "note": "Sourcewhole QA plus six renderpixels inspected; not yet private claims checked or nativeAI/metadata set. No-repeat inventory and affiliate pending."
+      },
+      {
+        "episode": 2,
+        "part": 2,
+        "source_start": 42.9,
+        "source_end": 79.295,
+        "duration": 36.4,
+        "sha256": "e0c8ac1105c6fab5a8f8a341f4ea752922a5f1c0ed110b74a491ce3d285f1c03",
+        "bytes": 24697032,
+        "path": "/downloads/unseen-e2p2.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": false,
+        "source_qa_cleared": true,
+        "note": "Sourcewhole QA plus six renderpixels inspected; not yet private claims checked or nativeAI/metadata set. No-repeat inventory and affiliate pending."
+      }
+    ],
+    "qa_files": "/downloads/unseen833206-review"
+  }
+}
