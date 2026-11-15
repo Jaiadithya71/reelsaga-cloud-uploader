@@ -473,5 +473,22 @@
       "stopped_readback": "2026-11-15T17:14:55.1721432Z",
       "verified_at": "2026-11-15T22:48:02+05:30"
     }
+  },
+  "e2p2_public_closeout": {
+    "at": "2026-11-15T23:56:11+05:30",
+    "url": "https://www.youtube.com/shorts/kT6Sfvxy-tk",
+    "actual_player_verified": "2026-11-15T23:56:17+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261115-182443.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261115-182510.png",
+    "public_saved_pixels": "cloud-browser-20261115-182612.png",
+    "ordered_playlist_pixels": "cloud-browser-20261115-182634.png",
+    "spacing": "1:11:57",
+    "next_floor": "2026-11-16T00:56:11+05:30",
+    "next_wake": "wakeschedule-01M7G7C2QN0405ZTPENVYQQB67",
+    "ledger_sha": "8afedc24edd2dad9654cf0114ac4984ba9723f22",
+    "recovery": "blankdeepclaims+freshTabtimeout recovered singlefreshlease+normalStudioRootdashboard route; parent informed recovery"
   }
 }
