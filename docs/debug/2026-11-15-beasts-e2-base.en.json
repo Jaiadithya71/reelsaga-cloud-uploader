@@ -1,0 +1,322 @@
+[
+  {
+    "start": 2.0599999999999987,
+    "end": 3.02,
+    "text": " No.",
+    "words": [
+      {
+        "start": 2.0599999999999987,
+        "end": 3.02,
+        "word": " No."
+      }
+    ]
+  },
+  {
+    "start": 3.54,
+    "end": 7.02,
+    "text": " Are you saying he is cheating on me?",
+    "words": [
+      {
+        "start": 3.54,
+        "end": 4.46,
+        "word": " Are"
+      },
+      {
+        "start": 4.46,
+        "end": 4.62,
+        "word": " you"
+      },
+      {
+        "start": 4.62,
+        "end": 4.96,
+        "word": " saying"
+      },
+      {
+        "start": 4.96,
+        "end": 6.06,
+        "word": " he"
+      },
+      {
+        "start": 6.06,
+        "end": 6.24,
+        "word": " is"
+      },
+      {
+        "start": 6.24,
+        "end": 6.5,
+        "word": " cheating"
+      },
+      {
+        "start": 6.5,
+        "end": 6.84,
+        "word": " on"
+      },
+      {
+        "start": 6.84,
+        "end": 7.02,
+        "word": " me?"
+      }
+    ]
+  },
+  {
+    "start": 8.6,
+    "end": 10.28,
+    "text": " Mommy can hear us?",
+    "words": [
+      {
+        "start": 8.6,
+        "end": 9.56,
+        "word": " Mommy"
+      },
+      {
+        "start": 9.56,
+        "end": 9.68,
+        "word": " can"
+      },
+      {
+        "start": 9.68,
+        "end": 9.9,
+        "word": " hear"
+      },
+      {
+        "start": 9.9,
+        "end": 10.28,
+        "word": " us?"
+      }
+    ]
+  },
+  {
+    "start": 11.54,
+    "end": 13.54,
+    "text": " What? Truffle dog treats?",
+    "words": [
+      {
+        "start": 11.54,
+        "end": 11.98,
+        "word": " What?"
+      },
+      {
+        "start": 12.82,
+        "end": 13.08,
+        "word": " Truffle"
+      },
+      {
+        "start": 13.08,
+        "end": 13.26,
+        "word": " dog"
+      },
+      {
+        "start": 13.26,
+        "end": 13.54,
+        "word": " treats?"
+      }
+    ]
+  },
+  {
+    "start": 16.0,
+    "end": 18.5,
+    "text": " Inside. Now.",
+    "words": [
+      {
+        "start": 15.559999999999999,
+        "end": 16.04,
+        "word": " Inside."
+      },
+      {
+        "start": 18.5,
+        "end": 18.5,
+        "word": " Now."
+      }
+    ]
+  },
+  {
+    "start": 24.0,
+    "end": 25.04,
+    "text": " Talk first.",
+    "words": [
+      {
+        "start": 23.599999999999998,
+        "end": 24.08,
+        "word": " Talk"
+      },
+      {
+        "start": 24.08,
+        "end": 25.04,
+        "word": " first."
+      }
+    ]
+  },
+  {
+    "start": 26.62,
+    "end": 28.64,
+    "text": " Then you can have all the Truffle treats you want.",
+    "words": [
+      {
+        "start": 26.62,
+        "end": 27.1,
+        "word": " Then"
+      },
+      {
+        "start": 27.1,
+        "end": 27.18,
+        "word": " you"
+      },
+      {
+        "start": 27.18,
+        "end": 27.3,
+        "word": " can"
+      },
+      {
+        "start": 27.3,
+        "end": 27.46,
+        "word": " have"
+      },
+      {
+        "start": 27.46,
+        "end": 27.62,
+        "word": " all"
+      },
+      {
+        "start": 27.62,
+        "end": 27.74,
+        "word": " the"
+      },
+      {
+        "start": 27.74,
+        "end": 28.0,
+        "word": " Truffle"
+      },
+      {
+        "start": 28.0,
+        "end": 28.18,
+        "word": " treats"
+      },
+      {
+        "start": 28.18,
+        "end": 28.4,
+        "word": " you"
+      },
+      {
+        "start": 28.4,
+        "end": 28.64,
+        "word": " want."
+      }
+    ]
+  },
+  {
+    "start": 29.98,
+    "end": 31.78,
+    "text": " That woman was in your bed!",
+    "words": [
+      {
+        "start": 29.98,
+        "end": 30.44,
+        "word": " That"
+      },
+      {
+        "start": 30.44,
+        "end": 30.74,
+        "word": " woman"
+      },
+      {
+        "start": 30.74,
+        "end": 31.0,
+        "word": " was"
+      },
+      {
+        "start": 31.0,
+        "end": 31.2,
+        "word": " in"
+      },
+      {
+        "start": 31.2,
+        "end": 31.38,
+        "word": " your"
+      },
+      {
+        "start": 31.38,
+        "end": 31.78,
+        "word": " bed!"
+      }
+    ]
+  },
+  {
+    "start": 33.2,
+    "end": 35.86,
+    "text": " Daddy was on top of her moving up and down.",
+    "words": [
+      {
+        "start": 33.2,
+        "end": 33.68,
+        "word": " Daddy"
+      },
+      {
+        "start": 33.68,
+        "end": 33.94,
+        "word": " was"
+      },
+      {
+        "start": 33.94,
+        "end": 34.1,
+        "word": " on"
+      },
+      {
+        "start": 34.1,
+        "end": 34.32,
+        "word": " top"
+      },
+      {
+        "start": 34.32,
+        "end": 34.5,
+        "word": " of"
+      },
+      {
+        "start": 34.5,
+        "end": 34.68,
+        "word": " her"
+      },
+      {
+        "start": 34.68,
+        "end": 34.92,
+        "word": " moving"
+      },
+      {
+        "start": 34.92,
+        "end": 35.34,
+        "word": " up"
+      },
+      {
+        "start": 35.34,
+        "end": 35.54,
+        "word": " and"
+      },
+      {
+        "start": 35.54,
+        "end": 35.86,
+        "word": " down."
+      }
+    ]
+  },
+  {
+    "start": 36.56,
+    "end": 37.3,
+    "text": " It was disgusting.",
+    "words": [
+      {
+        "start": 36.56,
+        "end": 36.6,
+        "word": " It"
+      },
+      {
+        "start": 36.6,
+        "end": 36.74,
+        "word": " was"
+      },
+      {
+        "start": 36.74,
+        "end": 37.3,
+        "word": " disgusting."
+      }
+    ]
+  }
+]

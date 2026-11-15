@@ -1,0 +1,1431 @@
+[
+  {
+    "start": 2.7400000000000033,
+    "end": 5.6,
+    "text": " Clara! You snuck into the kitchen again!",
+    "words": [
+      {
+        "start": 2.7400000000000033,
+        "end": 3.22,
+        "word": " Clara!"
+      },
+      {
+        "start": 4.04,
+        "end": 4.3,
+        "word": " You"
+      },
+      {
+        "start": 4.3,
+        "end": 4.6,
+        "word": " snuck"
+      },
+      {
+        "start": 4.6,
+        "end": 4.8,
+        "word": " into"
+      },
+      {
+        "start": 4.8,
+        "end": 4.96,
+        "word": " the"
+      },
+      {
+        "start": 4.96,
+        "end": 5.2,
+        "word": " kitchen"
+      },
+      {
+        "start": 5.2,
+        "end": 5.6,
+        "word": " again!"
+      }
+    ]
+  },
+  {
+    "start": 6.12,
+    "end": 9.96,
+    "text": " Great! The sweetest cream in the world is taking shape. Don't stop it!",
+    "words": [
+      {
+        "start": 6.12,
+        "end": 6.22,
+        "word": " Great!"
+      },
+      {
+        "start": 6.58,
+        "end": 6.76,
+        "word": " The"
+      },
+      {
+        "start": 6.76,
+        "end": 7.12,
+        "word": " sweetest"
+      },
+      {
+        "start": 7.12,
+        "end": 7.34,
+        "word": " cream"
+      },
+      {
+        "start": 7.34,
+        "end": 7.52,
+        "word": " in"
+      },
+      {
+        "start": 7.52,
+        "end": 7.62,
+        "word": " the"
+      },
+      {
+        "start": 7.62,
+        "end": 7.78,
+        "word": " world"
+      },
+      {
+        "start": 7.78,
+        "end": 8.02,
+        "word": " is"
+      },
+      {
+        "start": 8.02,
+        "end": 8.22,
+        "word": " taking"
+      },
+      {
+        "start": 8.22,
+        "end": 8.68,
+        "word": " shape."
+      },
+      {
+        "start": 8.94,
+        "end": 9.18,
+        "word": " Don't"
+      },
+      {
+        "start": 9.18,
+        "end": 9.46,
+        "word": " stop"
+      },
+      {
+        "start": 9.46,
+        "end": 9.96,
+        "word": " it!"
+      }
+    ]
+  },
+  {
+    "start": 13.080000000000004,
+    "end": 15.56,
+    "text": " Today your biological parents are coming to take you home.",
+    "words": [
+      {
+        "start": 13.080000000000004,
+        "end": 13.56,
+        "word": " Today"
+      },
+      {
+        "start": 13.56,
+        "end": 13.7,
+        "word": " your"
+      },
+      {
+        "start": 13.7,
+        "end": 14.1,
+        "word": " biological"
+      },
+      {
+        "start": 14.1,
+        "end": 14.52,
+        "word": " parents"
+      },
+      {
+        "start": 14.52,
+        "end": 14.7,
+        "word": " are"
+      },
+      {
+        "start": 14.7,
+        "end": 14.86,
+        "word": " coming"
+      },
+      {
+        "start": 14.86,
+        "end": 15.02,
+        "word": " to"
+      },
+      {
+        "start": 15.02,
+        "end": 15.16,
+        "word": " take"
+      },
+      {
+        "start": 15.16,
+        "end": 15.32,
+        "word": " you"
+      },
+      {
+        "start": 15.32,
+        "end": 15.56,
+        "word": " home."
+      }
+    ]
+  },
+  {
+    "start": 16.3,
+    "end": 19.76,
+    "text": " When you get to your new home, you can't keep sneaking into the kitchen. It's dangerous.",
+    "words": [
+      {
+        "start": 16.3,
+        "end": 16.62,
+        "word": " When"
+      },
+      {
+        "start": 16.62,
+        "end": 16.72,
+        "word": " you"
+      },
+      {
+        "start": 16.72,
+        "end": 16.84,
+        "word": " get"
+      },
+      {
+        "start": 16.84,
+        "end": 16.96,
+        "word": " to"
+      },
+      {
+        "start": 16.96,
+        "end": 17.04,
+        "word": " your"
+      },
+      {
+        "start": 17.04,
+        "end": 17.2,
+        "word": " new"
+      },
+      {
+        "start": 17.2,
+        "end": 17.46,
+        "word": " home,"
+      },
+      {
+        "start": 17.64,
+        "end": 17.78,
+        "word": " you"
+      },
+      {
+        "start": 17.78,
+        "end": 17.98,
+        "word": " can't"
+      },
+      {
+        "start": 17.98,
+        "end": 18.1,
+        "word": " keep"
+      },
+      {
+        "start": 18.1,
+        "end": 18.34,
+        "word": " sneaking"
+      },
+      {
+        "start": 18.34,
+        "end": 18.58,
+        "word": " into"
+      },
+      {
+        "start": 18.58,
+        "end": 18.72,
+        "word": " the"
+      },
+      {
+        "start": 18.72,
+        "end": 18.98,
+        "word": " kitchen."
+      },
+      {
+        "start": 19.22,
+        "end": 19.42,
+        "word": " It's"
+      },
+      {
+        "start": 19.42,
+        "end": 19.76,
+        "word": " dangerous."
+      }
+    ]
+  },
+  {
+    "start": 20.86,
+    "end": 23.7,
+    "text": " But being a pastry chef is my dream. I won't give it up.",
+    "words": [
+      {
+        "start": 20.86,
+        "end": 20.96,
+        "word": " But"
+      },
+      {
+        "start": 20.96,
+        "end": 21.18,
+        "word": " being"
+      },
+      {
+        "start": 21.18,
+        "end": 21.56,
+        "word": " a"
+      },
+      {
+        "start": 21.56,
+        "end": 21.56,
+        "word": " pastry"
+      },
+      {
+        "start": 21.56,
+        "end": 21.82,
+        "word": " chef"
+      },
+      {
+        "start": 21.82,
+        "end": 22.02,
+        "word": " is"
+      },
+      {
+        "start": 22.02,
+        "end": 22.22,
+        "word": " my"
+      },
+      {
+        "start": 22.22,
+        "end": 22.48,
+        "word": " dream."
+      },
+      {
+        "start": 22.78,
+        "end": 22.96,
+        "word": " I"
+      },
+      {
+        "start": 22.96,
+        "end": 23.16,
+        "word": " won't"
+      },
+      {
+        "start": 23.16,
+        "end": 23.3,
+        "word": " give"
+      },
+      {
+        "start": 23.3,
+        "end": 23.44,
+        "word": " it"
+      },
+      {
+        "start": 23.44,
+        "end": 23.7,
+        "word": " up."
+      }
+    ]
+  },
+  {
+    "start": 24.28,
+    "end": 27.24,
+    "text": " Even pastry chefs have to be safe. Dreams need careful hands.",
+    "words": [
+      {
+        "start": 24.28,
+        "end": 24.46,
+        "word": " Even"
+      },
+      {
+        "start": 24.46,
+        "end": 24.78,
+        "word": " pastry"
+      },
+      {
+        "start": 24.78,
+        "end": 25.04,
+        "word": " chefs"
+      },
+      {
+        "start": 25.04,
+        "end": 25.22,
+        "word": " have"
+      },
+      {
+        "start": 25.22,
+        "end": 25.34,
+        "word": " to"
+      },
+      {
+        "start": 25.34,
+        "end": 25.48,
+        "word": " be"
+      },
+      {
+        "start": 25.48,
+        "end": 25.78,
+        "word": " safe."
+      },
+      {
+        "start": 26.26,
+        "end": 26.36,
+        "word": " Dreams"
+      },
+      {
+        "start": 26.36,
+        "end": 26.6,
+        "word": " need"
+      },
+      {
+        "start": 26.6,
+        "end": 26.92,
+        "word": " careful"
+      },
+      {
+        "start": 26.92,
+        "end": 27.24,
+        "word": " hands."
+      }
+    ]
+  },
+  {
+    "start": 32.599999999999994,
+    "end": 37.9,
+    "text": " That day, Mom and Dad brought me home to one of the most famous pastry families in America.",
+    "words": [
+      {
+        "start": 32.599999999999994,
+        "end": 33.16,
+        "word": " That"
+      },
+      {
+        "start": 33.16,
+        "end": 33.48,
+        "word": " day,"
+      },
+      {
+        "start": 33.72,
+        "end": 33.82,
+        "word": " Mom"
+      },
+      {
+        "start": 33.82,
+        "end": 34.0,
+        "word": " and"
+      },
+      {
+        "start": 34.0,
+        "end": 34.18,
+        "word": " Dad"
+      },
+      {
+        "start": 34.18,
+        "end": 34.42,
+        "word": " brought"
+      },
+      {
+        "start": 34.42,
+        "end": 34.66,
+        "word": " me"
+      },
+      {
+        "start": 34.66,
+        "end": 34.88,
+        "word": " home"
+      },
+      {
+        "start": 34.88,
+        "end": 35.42,
+        "word": " to"
+      },
+      {
+        "start": 35.42,
+        "end": 35.58,
+        "word": " one"
+      },
+      {
+        "start": 35.58,
+        "end": 35.7,
+        "word": " of"
+      },
+      {
+        "start": 35.7,
+        "end": 35.8,
+        "word": " the"
+      },
+      {
+        "start": 35.8,
+        "end": 35.96,
+        "word": " most"
+      },
+      {
+        "start": 35.96,
+        "end": 36.4,
+        "word": " famous"
+      },
+      {
+        "start": 36.4,
+        "end": 36.82,
+        "word": " pastry"
+      },
+      {
+        "start": 36.82,
+        "end": 37.24,
+        "word": " families"
+      },
+      {
+        "start": 37.24,
+        "end": 37.52,
+        "word": " in"
+      },
+      {
+        "start": 37.52,
+        "end": 37.9,
+        "word": " America."
+      }
+    ]
+  },
+  {
+    "start": 38.98,
+    "end": 43.04,
+    "text": " Dad said, Beulgard family members are born understanding ingredients.",
+    "words": [
+      {
+        "start": 38.98,
+        "end": 39.2,
+        "word": " Dad"
+      },
+      {
+        "start": 39.2,
+        "end": 39.6,
+        "word": " said,"
+      },
+      {
+        "start": 40.02,
+        "end": 40.3,
+        "word": " Beulgard"
+      },
+      {
+        "start": 40.3,
+        "end": 40.72,
+        "word": " family"
+      },
+      {
+        "start": 40.72,
+        "end": 41.16,
+        "word": " members"
+      },
+      {
+        "start": 41.16,
+        "end": 41.38,
+        "word": " are"
+      },
+      {
+        "start": 41.38,
+        "end": 41.74,
+        "word": " born"
+      },
+      {
+        "start": 41.74,
+        "end": 42.46,
+        "word": " understanding"
+      },
+      {
+        "start": 42.46,
+        "end": 43.04,
+        "word": " ingredients."
+      }
+    ]
+  },
+  {
+    "start": 46.32,
+    "end": 51.2,
+    "text": " I'm going to make my best cake. Once Mom and Dad taste it, they'll love me.",
+    "words": [
+      {
+        "start": 46.32,
+        "end": 46.88,
+        "word": " I'm"
+      },
+      {
+        "start": 46.88,
+        "end": 47.04,
+        "word": " going"
+      },
+      {
+        "start": 47.04,
+        "end": 47.22,
+        "word": " to"
+      },
+      {
+        "start": 47.22,
+        "end": 47.36,
+        "word": " make"
+      },
+      {
+        "start": 47.36,
+        "end": 47.58,
+        "word": " my"
+      },
+      {
+        "start": 47.58,
+        "end": 47.86,
+        "word": " best"
+      },
+      {
+        "start": 47.86,
+        "end": 48.22,
+        "word": " cake."
+      },
+      {
+        "start": 48.84,
+        "end": 49.02,
+        "word": " Once"
+      },
+      {
+        "start": 49.02,
+        "end": 49.24,
+        "word": " Mom"
+      },
+      {
+        "start": 49.24,
+        "end": 49.42,
+        "word": " and"
+      },
+      {
+        "start": 49.42,
+        "end": 49.62,
+        "word": " Dad"
+      },
+      {
+        "start": 49.62,
+        "end": 49.88,
+        "word": " taste"
+      },
+      {
+        "start": 49.88,
+        "end": 50.16,
+        "word": " it,"
+      },
+      {
+        "start": 50.44,
+        "end": 50.72,
+        "word": " they'll"
+      },
+      {
+        "start": 50.72,
+        "end": 50.86,
+        "word": " love"
+      },
+      {
+        "start": 50.86,
+        "end": 51.2,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 54.02,
+    "end": 58.3,
+    "text": " Now that Clara's back, will Mom and Dad still love me most?",
+    "words": [
+      {
+        "start": 54.02,
+        "end": 54.58,
+        "word": " Now"
+      },
+      {
+        "start": 54.58,
+        "end": 54.78,
+        "word": " that"
+      },
+      {
+        "start": 54.78,
+        "end": 55.22,
+        "word": " Clara's"
+      },
+      {
+        "start": 55.22,
+        "end": 55.5,
+        "word": " back,"
+      },
+      {
+        "start": 56.26,
+        "end": 56.56,
+        "word": " will"
+      },
+      {
+        "start": 56.56,
+        "end": 56.76,
+        "word": " Mom"
+      },
+      {
+        "start": 56.76,
+        "end": 56.94,
+        "word": " and"
+      },
+      {
+        "start": 56.94,
+        "end": 57.12,
+        "word": " Dad"
+      },
+      {
+        "start": 57.12,
+        "end": 57.5,
+        "word": " still"
+      },
+      {
+        "start": 57.5,
+        "end": 57.74,
+        "word": " love"
+      },
+      {
+        "start": 57.74,
+        "end": 57.94,
+        "word": " me"
+      },
+      {
+        "start": 57.94,
+        "end": 58.3,
+        "word": " most?"
+      }
+    ]
+  },
+  {
+    "start": 63.1,
+    "end": 66.36,
+    "text": " I just don't want Clara to take them from me so quickly.",
+    "words": [
+      {
+        "start": 63.1,
+        "end": 63.58,
+        "word": " I"
+      },
+      {
+        "start": 63.58,
+        "end": 63.74,
+        "word": " just"
+      },
+      {
+        "start": 63.74,
+        "end": 63.98,
+        "word": " don't"
+      },
+      {
+        "start": 63.98,
+        "end": 64.18,
+        "word": " want"
+      },
+      {
+        "start": 64.18,
+        "end": 64.44,
+        "word": " Clara"
+      },
+      {
+        "start": 64.44,
+        "end": 64.96,
+        "word": " to"
+      },
+      {
+        "start": 64.96,
+        "end": 65.14,
+        "word": " take"
+      },
+      {
+        "start": 65.14,
+        "end": 65.32,
+        "word": " them"
+      },
+      {
+        "start": 65.32,
+        "end": 65.48,
+        "word": " from"
+      },
+      {
+        "start": 65.48,
+        "end": 65.7,
+        "word": " me"
+      },
+      {
+        "start": 65.7,
+        "end": 65.88,
+        "word": " so"
+      },
+      {
+        "start": 65.88,
+        "end": 66.36,
+        "word": " quickly."
+      }
+    ]
+  },
+  {
+    "start": 69.18,
+    "end": 71.4,
+    "text": " Clara's cake! Mom, Dad, are you okay?",
+    "words": [
+      {
+        "start": 69.18,
+        "end": 69.66,
+        "word": " Clara's"
+      },
+      {
+        "start": 69.66,
+        "end": 69.92,
+        "word": " cake!"
+      },
+      {
+        "start": 70.22,
+        "end": 70.4,
+        "word": " Mom,"
+      },
+      {
+        "start": 70.58,
+        "end": 70.76,
+        "word": " Dad,"
+      },
+      {
+        "start": 70.84,
+        "end": 70.94,
+        "word": " are"
+      },
+      {
+        "start": 70.94,
+        "end": 71.08,
+        "word": " you"
+      },
+      {
+        "start": 71.08,
+        "end": 71.4,
+        "word": " okay?"
+      }
+    ]
+  },
+  {
+    "start": 73.32,
+    "end": 74.76,
+    "text": " What did you put in it?",
+    "words": [
+      {
+        "start": 73.32,
+        "end": 73.8,
+        "word": " What"
+      },
+      {
+        "start": 73.8,
+        "end": 73.96,
+        "word": " did"
+      },
+      {
+        "start": 73.96,
+        "end": 74.12,
+        "word": " you"
+      },
+      {
+        "start": 74.12,
+        "end": 74.3,
+        "word": " put"
+      },
+      {
+        "start": 74.3,
+        "end": 74.46,
+        "word": " in"
+      },
+      {
+        "start": 74.46,
+        "end": 74.76,
+        "word": " it?"
+      }
+    ]
+  },
+  {
+    "start": 75.22,
+    "end": 77.16,
+    "text": " I didn't put anything in it!",
+    "words": [
+      {
+        "start": 75.22,
+        "end": 75.7,
+        "word": " I"
+      },
+      {
+        "start": 75.7,
+        "end": 75.92,
+        "word": " didn't"
+      },
+      {
+        "start": 75.92,
+        "end": 76.08,
+        "word": " put"
+      },
+      {
+        "start": 76.08,
+        "end": 76.48,
+        "word": " anything"
+      },
+      {
+        "start": 76.48,
+        "end": 76.72,
+        "word": " in"
+      },
+      {
+        "start": 76.72,
+        "end": 77.16,
+        "word": " it!"
+      }
+    ]
+  },
+  {
+    "start": 79.94000000000003,
+    "end": 85.08,
+    "text": " Clara, I know you don't like me. I can leave. Please don't hurt Mom and Dad.",
+    "words": [
+      {
+        "start": 79.94000000000003,
+        "end": 80.42000000000002,
+        "word": " Clara,"
+      },
+      {
+        "start": 80.42000000000002,
+        "end": 80.9,
+        "word": " I"
+      },
+      {
+        "start": 80.9,
+        "end": 81.06,
+        "word": " know"
+      },
+      {
+        "start": 81.06,
+        "end": 81.26,
+        "word": " you"
+      },
+      {
+        "start": 81.26,
+        "end": 81.48,
+        "word": " don't"
+      },
+      {
+        "start": 81.48,
+        "end": 81.72,
+        "word": " like"
+      },
+      {
+        "start": 81.72,
+        "end": 82.04,
+        "word": " me."
+      },
+      {
+        "start": 82.26,
+        "end": 82.4,
+        "word": " I"
+      },
+      {
+        "start": 82.4,
+        "end": 82.6,
+        "word": " can"
+      },
+      {
+        "start": 82.6,
+        "end": 82.94,
+        "word": " leave."
+      },
+      {
+        "start": 83.44,
+        "end": 83.68,
+        "word": " Please"
+      },
+      {
+        "start": 83.68,
+        "end": 83.94,
+        "word": " don't"
+      },
+      {
+        "start": 83.94,
+        "end": 84.24,
+        "word": " hurt"
+      },
+      {
+        "start": 84.24,
+        "end": 84.48,
+        "word": " Mom"
+      },
+      {
+        "start": 84.48,
+        "end": 84.74,
+        "word": " and"
+      },
+      {
+        "start": 84.74,
+        "end": 85.08,
+        "word": " Dad."
+      }
+    ]
+  },
+  {
+    "start": 86.04,
+    "end": 88.2,
+    "text": " I can't believe this is what the orphanage taught you.",
+    "words": [
+      {
+        "start": 86.04,
+        "end": 86.22,
+        "word": " I"
+      },
+      {
+        "start": 86.22,
+        "end": 86.64,
+        "word": " can't"
+      },
+      {
+        "start": 86.64,
+        "end": 86.66,
+        "word": " believe"
+      },
+      {
+        "start": 86.66,
+        "end": 86.86,
+        "word": " this"
+      },
+      {
+        "start": 86.86,
+        "end": 86.98,
+        "word": " is"
+      },
+      {
+        "start": 86.98,
+        "end": 87.14,
+        "word": " what"
+      },
+      {
+        "start": 87.14,
+        "end": 87.26,
+        "word": " the"
+      },
+      {
+        "start": 87.26,
+        "end": 87.72,
+        "word": " orphanage"
+      },
+      {
+        "start": 87.72,
+        "end": 87.94,
+        "word": " taught"
+      },
+      {
+        "start": 87.94,
+        "end": 88.2,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 88.74,
+    "end": 91.3,
+    "text": " This home has no place for a bad speed like you.",
+    "words": [
+      {
+        "start": 88.74,
+        "end": 89.22,
+        "word": " This"
+      },
+      {
+        "start": 89.22,
+        "end": 89.4,
+        "word": " home"
+      },
+      {
+        "start": 89.4,
+        "end": 89.58,
+        "word": " has"
+      },
+      {
+        "start": 89.58,
+        "end": 89.86,
+        "word": " no"
+      },
+      {
+        "start": 89.86,
+        "end": 90.1,
+        "word": " place"
+      },
+      {
+        "start": 90.1,
+        "end": 90.32,
+        "word": " for"
+      },
+      {
+        "start": 90.32,
+        "end": 90.44,
+        "word": " a"
+      },
+      {
+        "start": 90.44,
+        "end": 90.58,
+        "word": " bad"
+      },
+      {
+        "start": 90.58,
+        "end": 90.82,
+        "word": " speed"
+      },
+      {
+        "start": 90.82,
+        "end": 91.02,
+        "word": " like"
+      },
+      {
+        "start": 91.02,
+        "end": 91.3,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 91.6,
+    "end": 92.74,
+    "text": " I didn't do it!",
+    "words": [
+      {
+        "start": 91.6,
+        "end": 91.92,
+        "word": " I"
+      },
+      {
+        "start": 91.92,
+        "end": 92.2,
+        "word": " didn't"
+      },
+      {
+        "start": 92.2,
+        "end": 92.42,
+        "word": " do"
+      },
+      {
+        "start": 92.42,
+        "end": 92.74,
+        "word": " it!"
+      }
+    ]
+  },
+  {
+    "start": 93.02,
+    "end": 96.44,
+    "text": " Enough! Stop lying. Go to your room. You can come out when you know how to apologize.",
+    "words": [
+      {
+        "start": 93.02,
+        "end": 93.12,
+        "word": " Enough!"
+      },
+      {
+        "start": 93.46,
+        "end": 93.74,
+        "word": " Stop"
+      },
+      {
+        "start": 93.74,
+        "end": 94.06,
+        "word": " lying."
+      },
+      {
+        "start": 94.24,
+        "end": 94.34,
+        "word": " Go"
+      },
+      {
+        "start": 94.34,
+        "end": 94.44,
+        "word": " to"
+      },
+      {
+        "start": 94.44,
+        "end": 94.54,
+        "word": " your"
+      },
+      {
+        "start": 94.54,
+        "end": 94.76,
+        "word": " room."
+      },
+      {
+        "start": 94.98,
+        "end": 95.08,
+        "word": " You"
+      },
+      {
+        "start": 95.08,
+        "end": 95.2,
+        "word": " can"
+      },
+      {
+        "start": 95.2,
+        "end": 95.34,
+        "word": " come"
+      },
+      {
+        "start": 95.34,
+        "end": 95.48,
+        "word": " out"
+      },
+      {
+        "start": 95.48,
+        "end": 95.6,
+        "word": " when"
+      },
+      {
+        "start": 95.6,
+        "end": 95.68,
+        "word": " you"
+      },
+      {
+        "start": 95.68,
+        "end": 95.8,
+        "word": " know"
+      },
+      {
+        "start": 95.8,
+        "end": 95.94,
+        "word": " how"
+      },
+      {
+        "start": 95.94,
+        "end": 96.06,
+        "word": " to"
+      },
+      {
+        "start": 96.06,
+        "end": 96.44,
+        "word": " apologize."
+      }
+    ]
+  },
+  {
+    "start": 98.28,
+    "end": 101.02,
+    "text": " I won't apologize for something I didn't do.",
+    "words": [
+      {
+        "start": 98.28,
+        "end": 98.76,
+        "word": " I"
+      },
+      {
+        "start": 98.76,
+        "end": 99.04,
+        "word": " won't"
+      },
+      {
+        "start": 99.04,
+        "end": 99.54,
+        "word": " apologize"
+      },
+      {
+        "start": 99.54,
+        "end": 99.82,
+        "word": " for"
+      },
+      {
+        "start": 99.82,
+        "end": 100.06,
+        "word": " something"
+      },
+      {
+        "start": 100.06,
+        "end": 100.34,
+        "word": " I"
+      },
+      {
+        "start": 100.34,
+        "end": 100.66,
+        "word": " didn't"
+      },
+      {
+        "start": 100.66,
+        "end": 101.02,
+        "word": " do."
+      }
+    ]
+  },
+  {
+    "start": 106.62,
+    "end": 109.8,
+    "text": " I'm their biological daughter, and they still don't believe me.",
+    "words": [
+      {
+        "start": 106.62,
+        "end": 107.1,
+        "word": " I'm"
+      },
+      {
+        "start": 107.1,
+        "end": 107.24,
+        "word": " their"
+      },
+      {
+        "start": 107.24,
+        "end": 107.68,
+        "word": " biological"
+      },
+      {
+        "start": 107.68,
+        "end": 108.18,
+        "word": " daughter,"
+      },
+      {
+        "start": 108.34,
+        "end": 108.66,
+        "word": " and"
+      },
+      {
+        "start": 108.66,
+        "end": 108.78,
+        "word": " they"
+      },
+      {
+        "start": 108.78,
+        "end": 109.02,
+        "word": " still"
+      },
+      {
+        "start": 109.02,
+        "end": 109.26,
+        "word": " don't"
+      },
+      {
+        "start": 109.26,
+        "end": 109.5,
+        "word": " believe"
+      },
+      {
+        "start": 109.5,
+        "end": 109.8,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 119.61999999999999,
+    "end": 124.82,
+    "text": " I'm going to become a real pastry chef. Then they'll know these hands were meant to make good things, not to hurt people.",
+    "words": [
+      {
+        "start": 119.61999999999999,
+        "end": 119.96,
+        "word": " I'm"
+      },
+      {
+        "start": 119.96,
+        "end": 120.06,
+        "word": " going"
+      },
+      {
+        "start": 120.06,
+        "end": 120.18,
+        "word": " to"
+      },
+      {
+        "start": 120.18,
+        "end": 120.36,
+        "word": " become"
+      },
+      {
+        "start": 120.36,
+        "end": 120.48,
+        "word": " a"
+      },
+      {
+        "start": 120.48,
+        "end": 120.66,
+        "word": " real"
+      },
+      {
+        "start": 120.66,
+        "end": 120.92,
+        "word": " pastry"
+      },
+      {
+        "start": 120.92,
+        "end": 121.24,
+        "word": " chef."
+      },
+      {
+        "start": 121.8,
+        "end": 121.92,
+        "word": " Then"
+      },
+      {
+        "start": 121.92,
+        "end": 122.06,
+        "word": " they'll"
+      },
+      {
+        "start": 122.06,
+        "end": 122.22,
+        "word": " know"
+      },
+      {
+        "start": 122.22,
+        "end": 122.38,
+        "word": " these"
+      },
+      {
+        "start": 122.38,
+        "end": 122.62,
+        "word": " hands"
+      },
+      {
+        "start": 122.62,
+        "end": 122.78,
+        "word": " were"
+      },
+      {
+        "start": 122.78,
+        "end": 122.88,
+        "word": " meant"
+      },
+      {
+        "start": 122.88,
+        "end": 123.02,
+        "word": " to"
+      },
+      {
+        "start": 123.02,
+        "end": 123.14,
+        "word": " make"
+      },
+      {
+        "start": 123.14,
+        "end": 123.32,
+        "word": " good"
+      },
+      {
+        "start": 123.32,
+        "end": 123.66,
+        "word": " things,"
+      },
+      {
+        "start": 124.06,
+        "end": 124.28,
+        "word": " not"
+      },
+      {
+        "start": 124.28,
+        "end": 124.42,
+        "word": " to"
+      },
+      {
+        "start": 124.42,
+        "end": 124.54,
+        "word": " hurt"
+      },
+      {
+        "start": 124.54,
+        "end": 124.82,
+        "word": " people."
+      }
+    ]
+  }
+]

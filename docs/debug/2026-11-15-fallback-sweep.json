@@ -1,0 +1,88 @@
+{
+  "as_of": "2026-11-15T14:20:00+05:30",
+  "source": "https://dramacps.com/dashboard",
+  "outcome": "No new uploads or stages. Child PRIVATE queue unchanged. No support outreach.",
+  "candidates": {
+    "833191": {
+      "name": "The Genius Little Baker",
+      "platform": "YourChannel 60%",
+      "free_episodes": 4,
+      "e1": "126.989s. Whole base.en + small.en, 508 quartersecond OCR, 127 1sec caption pixels, 127 combined even/odd action pixels compared. No confirmed spoken-dialogue caption defect. Proper-name/Wait checks resolved with isolated ASR and pixels. Background song lyrics not certified.",
+      "e1_renders": [
+        {
+          "episode": 1,
+          "part": 1,
+          "source_start": 0,
+          "source_end": 43.5,
+          "duration": 43.5,
+          "sha256": "90c9abcbc5db97ea8077a9b1130ca9b4a2fc6efa8f3ae3a8859db5529237c8c7",
+          "bytes": 24127611,
+          "path": "/downloads/baker-e1p1.mp4",
+          "decode_checked": true,
+          "pixels_inspected": true,
+          "caption_gate_pass": true,
+          "whole_part_release_ready": false,
+          "hold": "Exact affiliate unavailable, no upload"
+        },
+        {
+          "episode": 1,
+          "part": 2,
+          "source_start": 43.5,
+          "source_end": 85.5,
+          "duration": 42.0,
+          "sha256": "835d9e19997bae930252233fe9d75ec82a4003902b1e4403071cd18bc7bf61f9",
+          "bytes": 19458179,
+          "path": "/downloads/baker-e1p2.mp4",
+          "decode_checked": true,
+          "pixels_inspected": true,
+          "caption_gate_pass": true,
+          "whole_part_release_ready": false,
+          "hold": "Exact affiliate unavailable, no upload"
+        },
+        {
+          "episode": 1,
+          "part": 3,
+          "source_start": 85.5,
+          "source_end": 126.989,
+          "duration": 41.489000000000004,
+          "sha256": "8e5abdbff824365dd62fce86fcaee432ddfb570e2d11633e2fe37b249432edb9",
+          "bytes": 21372112,
+          "path": "/downloads/baker-e1p3.mp4",
+          "decode_checked": true,
+          "pixels_inspected": true,
+          "caption_gate_pass": true,
+          "whole_part_release_ready": false,
+          "hold": "Exact affiliate unavailable, no upload"
+        }
+      ],
+      "e2_hold": "96.919s. Source caption at 93.5-94.75 says Now let me show you real mille feuille is; both whole and isolated model transcripts omit final is. Also visible Carefuls at 84.75-85, models not unanimous. Held without repair or skip.",
+      "affiliate_block": "Single normal UI Get Link returned Failed to get link / Please contact the administrator to check whether this drama has been removed. Links exact 833191 No matching links found. No repeat attempt, no link invented, no outreach.",
+      "upload": "none",
+      "stage": "none"
+    },
+    "833164": {
+      "name": "Midnight Beasts' Vow",
+      "free_episodes": 4,
+      "review": "E1 45.482s and E2 42.069s full base+small and action pixels reviewed. E2 33-35s partially exposed back of couple in bed, sexual thrusting, Daddy was on top of her moving up and down dialogue. Unqualified low-restriction-risk goal.",
+      "upload": "none"
+    },
+    "833162": {
+      "name": "Queen of the Reborn Nile",
+      "free_episodes": 4,
+      "review": "E1 134.787s/E2 90.483s all2sec action pixels inspected. Child burning ritual threat/mother burning E1; assault/forced drowning/blade threat E2. Unqualified low-restriction-risk goal. No ASR.",
+      "upload": "none"
+    },
+    "833172": {
+      "name": "Christmas Baby at the Manor",
+      "free_episodes": 5,
+      "review": "E1 92.740s/E2 90.743s whole base+small done. E1 370quarter OCR/93caption/47action pixels compared. E1 caption hold 50.7s I am so sorry, whole base and both isolated base+small agree, no source caption 50-52; further Oh/Sorry 55-56 uncaptioned. No repair/skip. E2 not fully QA passed.",
+      "upload": "none"
+    },
+    "833177": {
+      "name": "They Saw Rags. She Rewrote His Fate",
+      "free_episodes": 7,
+      "review": "E1 188.480s/E2 137.878s full base ASR. E1 ~176 I want to sit on it every night sexual dialogue; E2 ~47-56 profane explicit sexual insults. Unqualified low-restriction-risk goal. Action sheets generated but NOT pixel-inspected, no whole-source pass claimed.",
+      "upload": "none"
+    }
+  }
+}

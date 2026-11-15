@@ -1,0 +1,835 @@
+[
+  {
+    "start": 3.399999999999998,
+    "end": 4.64,
+    "text": " I'm going to be late.",
+    "words": [
+      {
+        "start": 3.399999999999998,
+        "end": 3.82,
+        "word": " I'm"
+      },
+      {
+        "start": 3.82,
+        "end": 3.96,
+        "word": " going"
+      },
+      {
+        "start": 3.96,
+        "end": 4.12,
+        "word": " to"
+      },
+      {
+        "start": 4.12,
+        "end": 4.26,
+        "word": " be"
+      },
+      {
+        "start": 4.26,
+        "end": 4.64,
+        "word": " late."
+      }
+    ]
+  },
+  {
+    "start": 24.419999999999998,
+    "end": 25.54,
+    "text": " All of them.",
+    "words": [
+      {
+        "start": 24.419999999999998,
+        "end": 24.84,
+        "word": " All"
+      },
+      {
+        "start": 24.84,
+        "end": 25.26,
+        "word": " of"
+      },
+      {
+        "start": 25.26,
+        "end": 25.54,
+        "word": " them."
+      }
+    ]
+  },
+  {
+    "start": 26.36,
+    "end": 28.02,
+    "text": " Daddy, did you get me in?",
+    "words": [
+      {
+        "start": 26.36,
+        "end": 26.78,
+        "word": " Daddy,"
+      },
+      {
+        "start": 27.24,
+        "end": 27.38,
+        "word": " did"
+      },
+      {
+        "start": 27.38,
+        "end": 27.5,
+        "word": " you"
+      },
+      {
+        "start": 27.5,
+        "end": 27.66,
+        "word": " get"
+      },
+      {
+        "start": 27.66,
+        "end": 27.84,
+        "word": " me"
+      },
+      {
+        "start": 27.84,
+        "end": 28.02,
+        "word": " in?"
+      }
+    ]
+  },
+  {
+    "start": 28.38,
+    "end": 28.98,
+    "text": " I'll bring you cookies.",
+    "words": [
+      {
+        "start": 28.38,
+        "end": 28.44,
+        "word": " I'll"
+      },
+      {
+        "start": 28.44,
+        "end": 28.56,
+        "word": " bring"
+      },
+      {
+        "start": 28.56,
+        "end": 28.74,
+        "word": " you"
+      },
+      {
+        "start": 28.74,
+        "end": 28.98,
+        "word": " cookies."
+      }
+    ]
+  },
+  {
+    "start": 32.080000000000005,
+    "end": 33.34,
+    "text": " I'm not here to clean.",
+    "words": [
+      {
+        "start": 32.080000000000005,
+        "end": 32.52,
+        "word": " I'm"
+      },
+      {
+        "start": 32.52,
+        "end": 32.62,
+        "word": " not"
+      },
+      {
+        "start": 32.62,
+        "end": 32.9,
+        "word": " here"
+      },
+      {
+        "start": 32.9,
+        "end": 33.06,
+        "word": " to"
+      },
+      {
+        "start": 33.06,
+        "end": 33.34,
+        "word": " clean."
+      }
+    ]
+  },
+  {
+    "start": 33.88,
+    "end": 35.28,
+    "text": " I'm here to be the boss.",
+    "words": [
+      {
+        "start": 33.88,
+        "end": 34.3,
+        "word": " I'm"
+      },
+      {
+        "start": 34.3,
+        "end": 34.44,
+        "word": " here"
+      },
+      {
+        "start": 34.44,
+        "end": 34.58,
+        "word": " to"
+      },
+      {
+        "start": 34.58,
+        "end": 34.72,
+        "word": " be"
+      },
+      {
+        "start": 34.72,
+        "end": 34.86,
+        "word": " the"
+      },
+      {
+        "start": 34.86,
+        "end": 35.28,
+        "word": " boss."
+      }
+    ]
+  },
+  {
+    "start": 36.2,
+    "end": 37.36,
+    "text": " Who's house have you worked in?",
+    "words": [
+      {
+        "start": 36.2,
+        "end": 36.64,
+        "word": " Who's"
+      },
+      {
+        "start": 36.64,
+        "end": 36.74,
+        "word": " house"
+      },
+      {
+        "start": 36.74,
+        "end": 36.88,
+        "word": " have"
+      },
+      {
+        "start": 36.88,
+        "end": 36.98,
+        "word": " you"
+      },
+      {
+        "start": 36.98,
+        "end": 37.16,
+        "word": " worked"
+      },
+      {
+        "start": 37.16,
+        "end": 37.36,
+        "word": " in?"
+      }
+    ]
+  },
+  {
+    "start": 37.54,
+    "end": 39.16,
+    "text": " I helped at the mayor's house.",
+    "words": [
+      {
+        "start": 37.54,
+        "end": 37.96,
+        "word": " I"
+      },
+      {
+        "start": 37.96,
+        "end": 38.14,
+        "word": " helped"
+      },
+      {
+        "start": 38.14,
+        "end": 38.36,
+        "word": " at"
+      },
+      {
+        "start": 38.36,
+        "end": 38.48,
+        "word": " the"
+      },
+      {
+        "start": 38.48,
+        "end": 38.9,
+        "word": " mayor's"
+      },
+      {
+        "start": 38.9,
+        "end": 39.16,
+        "word": " house."
+      }
+    ]
+  },
+  {
+    "start": 39.52,
+    "end": 40.8,
+    "text": " My mom works for a billionaire.",
+    "words": [
+      {
+        "start": 39.52,
+        "end": 39.64,
+        "word": " My"
+      },
+      {
+        "start": 39.64,
+        "end": 39.86,
+        "word": " mom"
+      },
+      {
+        "start": 39.86,
+        "end": 40.08,
+        "word": " works"
+      },
+      {
+        "start": 40.08,
+        "end": 40.34,
+        "word": " for"
+      },
+      {
+        "start": 40.34,
+        "end": 40.44,
+        "word": " a"
+      },
+      {
+        "start": 40.44,
+        "end": 40.8,
+        "word": " billionaire."
+      }
+    ]
+  },
+  {
+    "start": 41.22,
+    "end": 41.96,
+    "text": " I go with her.",
+    "words": [
+      {
+        "start": 41.22,
+        "end": 41.36,
+        "word": " I"
+      },
+      {
+        "start": 41.36,
+        "end": 41.52,
+        "word": " go"
+      },
+      {
+        "start": 41.52,
+        "end": 41.76,
+        "word": " with"
+      },
+      {
+        "start": 41.76,
+        "end": 41.96,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 42.26,
+    "end": 43.68,
+    "text": " I've been helping since I was two.",
+    "words": [
+      {
+        "start": 42.26,
+        "end": 42.48,
+        "word": " I've"
+      },
+      {
+        "start": 42.48,
+        "end": 42.58,
+        "word": " been"
+      },
+      {
+        "start": 42.58,
+        "end": 42.78,
+        "word": " helping"
+      },
+      {
+        "start": 42.78,
+        "end": 43.08,
+        "word": " since"
+      },
+      {
+        "start": 43.08,
+        "end": 43.3,
+        "word": " I"
+      },
+      {
+        "start": 43.3,
+        "end": 43.44,
+        "word": " was"
+      },
+      {
+        "start": 43.44,
+        "end": 43.68,
+        "word": " two."
+      }
+    ]
+  },
+  {
+    "start": 44.06,
+    "end": 45.3,
+    "text": " I haven't helped anybody.",
+    "words": [
+      {
+        "start": 44.06,
+        "end": 44.08,
+        "word": " I"
+      },
+      {
+        "start": 44.08,
+        "end": 44.42,
+        "word": " haven't"
+      },
+      {
+        "start": 44.42,
+        "end": 44.62,
+        "word": " helped"
+      },
+      {
+        "start": 44.62,
+        "end": 45.3,
+        "word": " anybody."
+      }
+    ]
+  },
+  {
+    "start": 46.02,
+    "end": 46.6,
+    "text": " And you.",
+    "words": [
+      {
+        "start": 46.02,
+        "end": 46.46,
+        "word": " And"
+      },
+      {
+        "start": 46.46,
+        "end": 46.6,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 47.48,
+    "end": 48.16,
+    "text": " Who did you work for?",
+    "words": [
+      {
+        "start": 47.48,
+        "end": 47.52,
+        "word": " Who"
+      },
+      {
+        "start": 47.52,
+        "end": 47.64,
+        "word": " did"
+      },
+      {
+        "start": 47.64,
+        "end": 47.74,
+        "word": " you"
+      },
+      {
+        "start": 47.74,
+        "end": 47.92,
+        "word": " work"
+      },
+      {
+        "start": 47.92,
+        "end": 48.16,
+        "word": " for?"
+      }
+    ]
+  },
+  {
+    "start": 48.62,
+    "end": 49.38,
+    "text": " Uh, Dick.",
+    "words": [
+      {
+        "start": 48.62,
+        "end": 48.82,
+        "word": " Uh,"
+      },
+      {
+        "start": 49.22,
+        "end": 49.38,
+        "word": " Dick."
+      }
+    ]
+  },
+  {
+    "start": 50.68,
+    "end": 51.58,
+    "text": " I'm so sorry.",
+    "words": [
+      {
+        "start": 50.68,
+        "end": 51.12,
+        "word": " I'm"
+      },
+      {
+        "start": 51.12,
+        "end": 51.28,
+        "word": " so"
+      },
+      {
+        "start": 51.28,
+        "end": 51.58,
+        "word": " sorry."
+      }
+    ]
+  },
+  {
+    "start": 53.480000000000004,
+    "end": 54.08,
+    "text": " Excuse me?",
+    "words": [
+      {
+        "start": 53.480000000000004,
+        "end": 53.92,
+        "word": " Excuse"
+      },
+      {
+        "start": 53.92,
+        "end": 54.08,
+        "word": " me?"
+      }
+    ]
+  },
+  {
+    "start": 54.6,
+    "end": 55.28,
+    "text": " Uh oh.",
+    "words": [
+      {
+        "start": 54.6,
+        "end": 55.04,
+        "word": " Uh"
+      },
+      {
+        "start": 55.04,
+        "end": 55.28,
+        "word": " oh."
+      }
+    ]
+  },
+  {
+    "start": 56.18,
+    "end": 56.38,
+    "text": " Sorry.",
+    "words": [
+      {
+        "start": 56.18,
+        "end": 56.38,
+        "word": " Sorry."
+      }
+    ]
+  },
+  {
+    "start": 56.62,
+    "end": 57.04,
+    "text": " Dick and Mari.",
+    "words": [
+      {
+        "start": 56.62,
+        "end": 56.68,
+        "word": " Dick"
+      },
+      {
+        "start": 56.68,
+        "end": 56.92,
+        "word": " and"
+      },
+      {
+        "start": 56.92,
+        "end": 57.04,
+        "word": " Mari."
+      }
+    ]
+  },
+  {
+    "start": 57.46,
+    "end": 57.68,
+    "text": " Dick Lawson.",
+    "words": [
+      {
+        "start": 57.46,
+        "end": 57.46,
+        "word": " Dick"
+      },
+      {
+        "start": 57.46,
+        "end": 57.68,
+        "word": " Lawson."
+      }
+    ]
+  },
+  {
+    "start": 58.14,
+    "end": 58.7,
+    "text": " Is that who you mean?",
+    "words": [
+      {
+        "start": 58.14,
+        "end": 58.24,
+        "word": " Is"
+      },
+      {
+        "start": 58.24,
+        "end": 58.34,
+        "word": " that"
+      },
+      {
+        "start": 58.34,
+        "end": 58.5,
+        "word": " who"
+      },
+      {
+        "start": 58.5,
+        "end": 58.58,
+        "word": " you"
+      },
+      {
+        "start": 58.58,
+        "end": 58.7,
+        "word": " mean?"
+      }
+    ]
+  },
+  {
+    "start": 60.58,
+    "end": 62.08,
+    "text": " Let me check.",
+    "words": [
+      {
+        "start": 60.58,
+        "end": 61.2,
+        "word": " Let"
+      },
+      {
+        "start": 61.2,
+        "end": 61.74,
+        "word": " me"
+      },
+      {
+        "start": 61.74,
+        "end": 62.08,
+        "word": " check."
+      }
+    ]
+  },
+  {
+    "start": 64.33999999999999,
+    "end": 67.14,
+    "text": " Connor, don't start.",
+    "words": [
+      {
+        "start": 64.33999999999999,
+        "end": 64.96,
+        "word": " Connor,"
+      },
+      {
+        "start": 66.7,
+        "end": 66.92,
+        "word": " don't"
+      },
+      {
+        "start": 66.92,
+        "end": 67.14,
+        "word": " start."
+      }
+    ]
+  },
+  {
+    "start": 68.0,
+    "end": 68.98,
+    "text": " There is no Dick Lawson.",
+    "words": [
+      {
+        "start": 68.0,
+        "end": 68.18,
+        "word": " There"
+      },
+      {
+        "start": 68.18,
+        "end": 68.3,
+        "word": " is"
+      },
+      {
+        "start": 68.3,
+        "end": 68.48,
+        "word": " no"
+      },
+      {
+        "start": 68.48,
+        "end": 68.7,
+        "word": " Dick"
+      },
+      {
+        "start": 68.7,
+        "end": 68.98,
+        "word": " Lawson."
+      }
+    ]
+  },
+  {
+    "start": 72.02,
+    "end": 74.58,
+    "text": " Dick, I'll have the fresh batch sent over.",
+    "words": [
+      {
+        "start": 72.02,
+        "end": 72.64,
+        "word": " Dick,"
+      },
+      {
+        "start": 72.98,
+        "end": 73.5,
+        "word": " I'll"
+      },
+      {
+        "start": 73.5,
+        "end": 73.62,
+        "word": " have"
+      },
+      {
+        "start": 73.62,
+        "end": 73.72,
+        "word": " the"
+      },
+      {
+        "start": 73.72,
+        "end": 73.9,
+        "word": " fresh"
+      },
+      {
+        "start": 73.9,
+        "end": 74.12,
+        "word": " batch"
+      },
+      {
+        "start": 74.12,
+        "end": 74.34,
+        "word": " sent"
+      },
+      {
+        "start": 74.34,
+        "end": 74.58,
+        "word": " over."
+      }
+    ]
+  },
+  {
+    "start": 75.2,
+    "end": 75.36,
+    "text": " Of course.",
+    "words": [
+      {
+        "start": 75.2,
+        "end": 75.24,
+        "word": " Of"
+      },
+      {
+        "start": 75.24,
+        "end": 75.36,
+        "word": " course."
+      }
+    ]
+  },
+  {
+    "start": 76.36,
+    "end": 76.92,
+    "text": " You're Ethan's friend.",
+    "words": [
+      {
+        "start": 76.36,
+        "end": 76.44,
+        "word": " You're"
+      },
+      {
+        "start": 76.44,
+        "end": 76.72,
+        "word": " Ethan's"
+      },
+      {
+        "start": 76.72,
+        "end": 76.92,
+        "word": " friend."
+      }
+    ]
+  },
+  {
+    "start": 78.96,
+    "end": 79.58,
+    "text": " Rejected.",
+    "words": [
+      {
+        "start": 78.96,
+        "end": 79.58,
+        "word": " Rejected."
+      }
+    ]
+  },
+  {
+    "start": 81.22,
+    "end": 81.46,
+    "text": " Accepted.",
+    "words": [
+      {
+        "start": 81.22,
+        "end": 81.46,
+        "word": " Accepted."
+      }
+    ]
+  },
+  {
+    "start": 82.48,
+    "end": 82.74,
+    "text": " Rejected.",
+    "words": [
+      {
+        "start": 82.48,
+        "end": 82.74,
+        "word": " Rejected."
+      }
+    ]
+  },
+  {
+    "start": 83.86,
+    "end": 84.1,
+    "text": " Accepted.",
+    "words": [
+      {
+        "start": 83.86,
+        "end": 84.1,
+        "word": " Accepted."
+      }
+    ]
+  },
+  {
+    "start": 86.62,
+    "end": 86.98,
+    "text": " Rejected.",
+    "words": [
+      {
+        "start": 86.62,
+        "end": 86.98,
+        "word": " Rejected."
+      }
+    ]
+  },
+  {
+    "start": 86.98,
+    "end": 87.28,
+    "text": " Rejected.",
+    "words": [
+      {
+        "start": 86.98,
+        "end": 87.28,
+        "word": " Rejected."
+      }
+    ]
+  }
+]

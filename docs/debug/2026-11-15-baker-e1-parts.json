@@ -1,0 +1,44 @@
+[
+  {
+    "episode": 1,
+    "part": 1,
+    "source_start": 0,
+    "source_end": 43.5,
+    "duration": 43.5,
+    "sha256": "90c9abcbc5db97ea8077a9b1130ca9b4a2fc6efa8f3ae3a8859db5529237c8c7",
+    "bytes": 24127611,
+    "path": "/downloads/baker-e1p1.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  },
+  {
+    "episode": 1,
+    "part": 2,
+    "source_start": 43.5,
+    "source_end": 85.5,
+    "duration": 42.0,
+    "sha256": "835d9e19997bae930252233fe9d75ec82a4003902b1e4403071cd18bc7bf61f9",
+    "bytes": 19458179,
+    "path": "/downloads/baker-e1p2.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  },
+  {
+    "episode": 1,
+    "part": 3,
+    "source_start": 85.5,
+    "source_end": 126.989,
+    "duration": 41.489000000000004,
+    "sha256": "8e5abdbff824365dd62fce86fcaee432ddfb570e2d11633e2fe37b249432edb9",
+    "bytes": 21372112,
+    "path": "/downloads/baker-e1p3.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  }
+]

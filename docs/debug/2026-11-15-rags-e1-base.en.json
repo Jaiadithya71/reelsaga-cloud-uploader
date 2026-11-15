@@ -1,0 +1,2125 @@
+[
+  {
+    "start": 4.84,
+    "end": 6.68,
+    "text": " I'm sure you can cure my cancer.",
+    "words": [
+      {
+        "start": 4.84,
+        "end": 5.28,
+        "word": " I'm"
+      },
+      {
+        "start": 5.28,
+        "end": 5.5,
+        "word": " sure"
+      },
+      {
+        "start": 5.5,
+        "end": 5.72,
+        "word": " you"
+      },
+      {
+        "start": 5.72,
+        "end": 5.88,
+        "word": " can"
+      },
+      {
+        "start": 5.88,
+        "end": 6.12,
+        "word": " cure"
+      },
+      {
+        "start": 6.12,
+        "end": 6.34,
+        "word": " my"
+      },
+      {
+        "start": 6.34,
+        "end": 6.68,
+        "word": " cancer."
+      }
+    ]
+  },
+  {
+    "start": 8.02,
+    "end": 9.46,
+    "text": " You don't even have a scalpel.",
+    "words": [
+      {
+        "start": 8.02,
+        "end": 8.18,
+        "word": " You"
+      },
+      {
+        "start": 8.18,
+        "end": 8.36,
+        "word": " don't"
+      },
+      {
+        "start": 8.36,
+        "end": 8.52,
+        "word": " even"
+      },
+      {
+        "start": 8.52,
+        "end": 8.76,
+        "word": " have"
+      },
+      {
+        "start": 8.76,
+        "end": 8.86,
+        "word": " a"
+      },
+      {
+        "start": 8.86,
+        "end": 9.46,
+        "word": " scalpel."
+      }
+    ]
+  },
+  {
+    "start": 14.98,
+    "end": 17.38,
+    "text": " Mr. President, your good is new.",
+    "words": [
+      {
+        "start": 14.98,
+        "end": 15.42,
+        "word": " Mr."
+      },
+      {
+        "start": 15.54,
+        "end": 15.76,
+        "word": " President,"
+      },
+      {
+        "start": 16.5,
+        "end": 16.86,
+        "word": " your"
+      },
+      {
+        "start": 16.86,
+        "end": 17.02,
+        "word": " good"
+      },
+      {
+        "start": 17.02,
+        "end": 17.16,
+        "word": " is"
+      },
+      {
+        "start": 17.16,
+        "end": 17.38,
+        "word": " new."
+      }
+    ]
+  },
+  {
+    "start": 30.320000000000004,
+    "end": 34.64,
+    "text": " Breaking news, billionaire Edward Black is in a coma from a mysterious illness.",
+    "words": [
+      {
+        "start": 30.320000000000004,
+        "end": 30.76,
+        "word": " Breaking"
+      },
+      {
+        "start": 30.76,
+        "end": 31.02,
+        "word": " news,"
+      },
+      {
+        "start": 31.74,
+        "end": 31.84,
+        "word": " billionaire"
+      },
+      {
+        "start": 31.84,
+        "end": 32.28,
+        "word": " Edward"
+      },
+      {
+        "start": 32.28,
+        "end": 32.62,
+        "word": " Black"
+      },
+      {
+        "start": 32.62,
+        "end": 32.92,
+        "word": " is"
+      },
+      {
+        "start": 32.92,
+        "end": 33.02,
+        "word": " in"
+      },
+      {
+        "start": 33.02,
+        "end": 33.12,
+        "word": " a"
+      },
+      {
+        "start": 33.12,
+        "end": 33.34,
+        "word": " coma"
+      },
+      {
+        "start": 33.34,
+        "end": 33.62,
+        "word": " from"
+      },
+      {
+        "start": 33.62,
+        "end": 33.68,
+        "word": " a"
+      },
+      {
+        "start": 33.68,
+        "end": 34.04,
+        "word": " mysterious"
+      },
+      {
+        "start": 34.04,
+        "end": 34.64,
+        "word": " illness."
+      }
+    ]
+  },
+  {
+    "start": 35.0,
+    "end": 38.26,
+    "text": " His blood is turning blue. Black corporation has issued a global bounty.",
+    "words": [
+      {
+        "start": 35.0,
+        "end": 35.04,
+        "word": " His"
+      },
+      {
+        "start": 35.04,
+        "end": 35.32,
+        "word": " blood"
+      },
+      {
+        "start": 35.32,
+        "end": 35.46,
+        "word": " is"
+      },
+      {
+        "start": 35.46,
+        "end": 35.62,
+        "word": " turning"
+      },
+      {
+        "start": 35.62,
+        "end": 35.96,
+        "word": " blue."
+      },
+      {
+        "start": 36.42,
+        "end": 36.42,
+        "word": " Black"
+      },
+      {
+        "start": 36.42,
+        "end": 36.72,
+        "word": " corporation"
+      },
+      {
+        "start": 36.72,
+        "end": 37.18,
+        "word": " has"
+      },
+      {
+        "start": 37.18,
+        "end": 37.38,
+        "word": " issued"
+      },
+      {
+        "start": 37.38,
+        "end": 37.56,
+        "word": " a"
+      },
+      {
+        "start": 37.56,
+        "end": 37.7,
+        "word": " global"
+      },
+      {
+        "start": 37.7,
+        "end": 38.26,
+        "word": " bounty."
+      }
+    ]
+  },
+  {
+    "start": 38.62,
+    "end": 41.82,
+    "text": " The doctor who cures him inherits his hundred billion dollar fortune.",
+    "words": [
+      {
+        "start": 38.62,
+        "end": 38.74,
+        "word": " The"
+      },
+      {
+        "start": 38.74,
+        "end": 38.96,
+        "word": " doctor"
+      },
+      {
+        "start": 38.96,
+        "end": 39.24,
+        "word": " who"
+      },
+      {
+        "start": 39.24,
+        "end": 39.52,
+        "word": " cures"
+      },
+      {
+        "start": 39.52,
+        "end": 39.74,
+        "word": " him"
+      },
+      {
+        "start": 39.74,
+        "end": 40.26,
+        "word": " inherits"
+      },
+      {
+        "start": 40.26,
+        "end": 40.34,
+        "word": " his"
+      },
+      {
+        "start": 40.34,
+        "end": 40.64,
+        "word": " hundred"
+      },
+      {
+        "start": 40.64,
+        "end": 40.98,
+        "word": " billion"
+      },
+      {
+        "start": 40.98,
+        "end": 41.4,
+        "word": " dollar"
+      },
+      {
+        "start": 41.4,
+        "end": 41.82,
+        "word": " fortune."
+      }
+    ]
+  },
+  {
+    "start": 42.06,
+    "end": 43.66,
+    "text": " Oh my God, that's like hitting the jackpot!",
+    "words": [
+      {
+        "start": 42.06,
+        "end": 42.2,
+        "word": " Oh"
+      },
+      {
+        "start": 42.2,
+        "end": 42.32,
+        "word": " my"
+      },
+      {
+        "start": 42.32,
+        "end": 42.56,
+        "word": " God,"
+      },
+      {
+        "start": 42.68,
+        "end": 42.82,
+        "word": " that's"
+      },
+      {
+        "start": 42.82,
+        "end": 42.88,
+        "word": " like"
+      },
+      {
+        "start": 42.88,
+        "end": 43.08,
+        "word": " hitting"
+      },
+      {
+        "start": 43.08,
+        "end": 43.24,
+        "word": " the"
+      },
+      {
+        "start": 43.24,
+        "end": 43.66,
+        "word": " jackpot!"
+      }
+    ]
+  },
+  {
+    "start": 43.9,
+    "end": 46.94,
+    "text": " Way more than that, Mr. Black is literally my dream man.",
+    "words": [
+      {
+        "start": 43.9,
+        "end": 44.02,
+        "word": " Way"
+      },
+      {
+        "start": 44.02,
+        "end": 44.26,
+        "word": " more"
+      },
+      {
+        "start": 44.26,
+        "end": 44.46,
+        "word": " than"
+      },
+      {
+        "start": 44.46,
+        "end": 44.68,
+        "word": " that,"
+      },
+      {
+        "start": 45.02,
+        "end": 45.1,
+        "word": " Mr."
+      },
+      {
+        "start": 45.32,
+        "end": 45.4,
+        "word": " Black"
+      },
+      {
+        "start": 45.4,
+        "end": 45.6,
+        "word": " is"
+      },
+      {
+        "start": 45.6,
+        "end": 45.94,
+        "word": " literally"
+      },
+      {
+        "start": 45.94,
+        "end": 46.3,
+        "word": " my"
+      },
+      {
+        "start": 46.3,
+        "end": 46.58,
+        "word": " dream"
+      },
+      {
+        "start": 46.58,
+        "end": 46.94,
+        "word": " man."
+      }
+    ]
+  },
+  {
+    "start": 47.34,
+    "end": 49.22,
+    "text": " I'd marry him even if it took 20 years off my life.",
+    "words": [
+      {
+        "start": 47.34,
+        "end": 47.52,
+        "word": " I'd"
+      },
+      {
+        "start": 47.52,
+        "end": 47.62,
+        "word": " marry"
+      },
+      {
+        "start": 47.62,
+        "end": 47.86,
+        "word": " him"
+      },
+      {
+        "start": 47.86,
+        "end": 47.96,
+        "word": " even"
+      },
+      {
+        "start": 47.96,
+        "end": 48.12,
+        "word": " if"
+      },
+      {
+        "start": 48.12,
+        "end": 48.2,
+        "word": " it"
+      },
+      {
+        "start": 48.2,
+        "end": 48.28,
+        "word": " took"
+      },
+      {
+        "start": 48.28,
+        "end": 48.5,
+        "word": " 20"
+      },
+      {
+        "start": 48.5,
+        "end": 48.7,
+        "word": " years"
+      },
+      {
+        "start": 48.7,
+        "end": 48.84,
+        "word": " off"
+      },
+      {
+        "start": 48.84,
+        "end": 49.0,
+        "word": " my"
+      },
+      {
+        "start": 49.0,
+        "end": 49.22,
+        "word": " life."
+      }
+    ]
+  },
+  {
+    "start": 49.54,
+    "end": 50.9,
+    "text": " No, even if it killed me.",
+    "words": [
+      {
+        "start": 49.54,
+        "end": 49.7,
+        "word": " No,"
+      },
+      {
+        "start": 50.0,
+        "end": 50.22,
+        "word": " even"
+      },
+      {
+        "start": 50.22,
+        "end": 50.42,
+        "word": " if"
+      },
+      {
+        "start": 50.42,
+        "end": 50.48,
+        "word": " it"
+      },
+      {
+        "start": 50.48,
+        "end": 50.64,
+        "word": " killed"
+      },
+      {
+        "start": 50.64,
+        "end": 50.9,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 51.5,
+    "end": 54.74,
+    "text": " Forget marriage. You'd be the next richest person alive after get his hundred billion.",
+    "words": [
+      {
+        "start": 51.5,
+        "end": 51.68,
+        "word": " Forget"
+      },
+      {
+        "start": 51.68,
+        "end": 52.16,
+        "word": " marriage."
+      },
+      {
+        "start": 52.56,
+        "end": 52.74,
+        "word": " You'd"
+      },
+      {
+        "start": 52.74,
+        "end": 52.82,
+        "word": " be"
+      },
+      {
+        "start": 52.82,
+        "end": 52.9,
+        "word": " the"
+      },
+      {
+        "start": 52.9,
+        "end": 53.06,
+        "word": " next"
+      },
+      {
+        "start": 53.06,
+        "end": 53.22,
+        "word": " richest"
+      },
+      {
+        "start": 53.22,
+        "end": 53.5,
+        "word": " person"
+      },
+      {
+        "start": 53.5,
+        "end": 53.8,
+        "word": " alive"
+      },
+      {
+        "start": 53.8,
+        "end": 53.98,
+        "word": " after"
+      },
+      {
+        "start": 53.98,
+        "end": 54.18,
+        "word": " get"
+      },
+      {
+        "start": 54.18,
+        "end": 54.26,
+        "word": " his"
+      },
+      {
+        "start": 54.26,
+        "end": 54.48,
+        "word": " hundred"
+      },
+      {
+        "start": 54.48,
+        "end": 54.74,
+        "word": " billion."
+      }
+    ]
+  },
+  {
+    "start": 60.0,
+    "end": 63.64,
+    "text": " Dad, I don't care about your arms empire. I just want to be the best doctor in the world.",
+    "words": [
+      {
+        "start": 60.0,
+        "end": 60.16,
+        "word": " Dad,"
+      },
+      {
+        "start": 60.24,
+        "end": 60.32,
+        "word": " I"
+      },
+      {
+        "start": 60.32,
+        "end": 60.48,
+        "word": " don't"
+      },
+      {
+        "start": 60.48,
+        "end": 60.68,
+        "word": " care"
+      },
+      {
+        "start": 60.68,
+        "end": 60.9,
+        "word": " about"
+      },
+      {
+        "start": 60.9,
+        "end": 61.06,
+        "word": " your"
+      },
+      {
+        "start": 61.06,
+        "end": 61.32,
+        "word": " arms"
+      },
+      {
+        "start": 61.32,
+        "end": 61.48,
+        "word": " empire."
+      },
+      {
+        "start": 62.0,
+        "end": 62.0,
+        "word": " I"
+      },
+      {
+        "start": 62.0,
+        "end": 62.16,
+        "word": " just"
+      },
+      {
+        "start": 62.16,
+        "end": 62.3,
+        "word": " want"
+      },
+      {
+        "start": 62.3,
+        "end": 62.36,
+        "word": " to"
+      },
+      {
+        "start": 62.36,
+        "end": 62.48,
+        "word": " be"
+      },
+      {
+        "start": 62.48,
+        "end": 62.58,
+        "word": " the"
+      },
+      {
+        "start": 62.58,
+        "end": 62.78,
+        "word": " best"
+      },
+      {
+        "start": 62.78,
+        "end": 63.04,
+        "word": " doctor"
+      },
+      {
+        "start": 63.04,
+        "end": 63.3,
+        "word": " in"
+      },
+      {
+        "start": 63.3,
+        "end": 63.38,
+        "word": " the"
+      },
+      {
+        "start": 63.38,
+        "end": 63.64,
+        "word": " world."
+      }
+    ]
+  },
+  {
+    "start": 64.18,
+    "end": 65.2,
+    "text": " And trust me, I will be.",
+    "words": [
+      {
+        "start": 64.18,
+        "end": 64.28,
+        "word": " And"
+      },
+      {
+        "start": 64.28,
+        "end": 64.44,
+        "word": " trust"
+      },
+      {
+        "start": 64.44,
+        "end": 64.68,
+        "word": " me,"
+      },
+      {
+        "start": 64.7,
+        "end": 64.84,
+        "word": " I"
+      },
+      {
+        "start": 64.84,
+        "end": 65.04,
+        "word": " will"
+      },
+      {
+        "start": 65.04,
+        "end": 65.2,
+        "word": " be."
+      }
+    ]
+  },
+  {
+    "start": 69.01999999999998,
+    "end": 72.58,
+    "text": " Keep posting the bounty. I need the best doctor in the world!",
+    "words": [
+      {
+        "start": 69.01999999999998,
+        "end": 69.41999999999999,
+        "word": " Keep"
+      },
+      {
+        "start": 69.41999999999999,
+        "end": 69.82,
+        "word": " posting"
+      },
+      {
+        "start": 69.82,
+        "end": 70.0,
+        "word": " the"
+      },
+      {
+        "start": 70.0,
+        "end": 70.16,
+        "word": " bounty."
+      },
+      {
+        "start": 70.78,
+        "end": 70.84,
+        "word": " I"
+      },
+      {
+        "start": 70.84,
+        "end": 70.92,
+        "word": " need"
+      },
+      {
+        "start": 70.92,
+        "end": 71.06,
+        "word": " the"
+      },
+      {
+        "start": 71.06,
+        "end": 71.34,
+        "word": " best"
+      },
+      {
+        "start": 71.34,
+        "end": 71.68,
+        "word": " doctor"
+      },
+      {
+        "start": 71.68,
+        "end": 72.02,
+        "word": " in"
+      },
+      {
+        "start": 72.02,
+        "end": 72.16,
+        "word": " the"
+      },
+      {
+        "start": 72.16,
+        "end": 72.58,
+        "word": " world!"
+      }
+    ]
+  },
+  {
+    "start": 76.9,
+    "end": 78.68,
+    "text": " Dr. Hayes, how's my son?",
+    "words": [
+      {
+        "start": 76.9,
+        "end": 77.3,
+        "word": " Dr."
+      },
+      {
+        "start": 77.56,
+        "end": 77.62,
+        "word": " Hayes,"
+      },
+      {
+        "start": 78.0,
+        "end": 78.3,
+        "word": " how's"
+      },
+      {
+        "start": 78.3,
+        "end": 78.42,
+        "word": " my"
+      },
+      {
+        "start": 78.42,
+        "end": 78.68,
+        "word": " son?"
+      }
+    ]
+  },
+  {
+    "start": 79.84,
+    "end": 82.86,
+    "text": " Ma'am, I'm sorry. I can't figure out what's wrong with Mr. Black.",
+    "words": [
+      {
+        "start": 79.84,
+        "end": 80.24,
+        "word": " Ma"
+      },
+      {
+        "start": 80.24,
+        "end": 80.36,
+        "word": "'am,"
+      },
+      {
+        "start": 80.54,
+        "end": 80.76,
+        "word": " I'm"
+      },
+      {
+        "start": 80.76,
+        "end": 81.0,
+        "word": " sorry."
+      },
+      {
+        "start": 81.26,
+        "end": 81.32,
+        "word": " I"
+      },
+      {
+        "start": 81.32,
+        "end": 81.58,
+        "word": " can't"
+      },
+      {
+        "start": 81.58,
+        "end": 81.68,
+        "word": " figure"
+      },
+      {
+        "start": 81.68,
+        "end": 81.88,
+        "word": " out"
+      },
+      {
+        "start": 81.88,
+        "end": 82.08,
+        "word": " what's"
+      },
+      {
+        "start": 82.08,
+        "end": 82.22,
+        "word": " wrong"
+      },
+      {
+        "start": 82.22,
+        "end": 82.38,
+        "word": " with"
+      },
+      {
+        "start": 82.38,
+        "end": 82.6,
+        "word": " Mr."
+      },
+      {
+        "start": 82.86,
+        "end": 82.86,
+        "word": " Black."
+      }
+    ]
+  },
+  {
+    "start": 83.3,
+    "end": 86.88,
+    "text": " What? You used to be the Dean of Harvard Medical School",
+    "words": [
+      {
+        "start": 83.3,
+        "end": 83.46,
+        "word": " What?"
+      },
+      {
+        "start": 84.66,
+        "end": 85.06,
+        "word": " You"
+      },
+      {
+        "start": 85.06,
+        "end": 85.24,
+        "word": " used"
+      },
+      {
+        "start": 85.24,
+        "end": 85.38,
+        "word": " to"
+      },
+      {
+        "start": 85.38,
+        "end": 85.46,
+        "word": " be"
+      },
+      {
+        "start": 85.46,
+        "end": 85.58,
+        "word": " the"
+      },
+      {
+        "start": 85.58,
+        "end": 85.82,
+        "word": " Dean"
+      },
+      {
+        "start": 85.82,
+        "end": 86.0,
+        "word": " of"
+      },
+      {
+        "start": 86.0,
+        "end": 86.2,
+        "word": " Harvard"
+      },
+      {
+        "start": 86.2,
+        "end": 86.52,
+        "word": " Medical"
+      },
+      {
+        "start": 86.52,
+        "end": 86.88,
+        "word": " School"
+      }
+    ]
+  },
+  {
+    "start": 86.88,
+    "end": 89.38,
+    "text": " and you've been our family doctor for 10 years.",
+    "words": [
+      {
+        "start": 86.88,
+        "end": 87.52,
+        "word": " and"
+      },
+      {
+        "start": 87.52,
+        "end": 87.74,
+        "word": " you've"
+      },
+      {
+        "start": 87.74,
+        "end": 87.84,
+        "word": " been"
+      },
+      {
+        "start": 87.84,
+        "end": 87.96,
+        "word": " our"
+      },
+      {
+        "start": 87.96,
+        "end": 88.28,
+        "word": " family"
+      },
+      {
+        "start": 88.28,
+        "end": 88.52,
+        "word": " doctor"
+      },
+      {
+        "start": 88.52,
+        "end": 88.82,
+        "word": " for"
+      },
+      {
+        "start": 88.82,
+        "end": 89.08,
+        "word": " 10"
+      },
+      {
+        "start": 89.08,
+        "end": 89.38,
+        "word": " years."
+      }
+    ]
+  },
+  {
+    "start": 90.08,
+    "end": 94.18,
+    "text": " Now you're telling me you can't even figure out what's wrong with my son?",
+    "words": [
+      {
+        "start": 90.08,
+        "end": 90.28,
+        "word": " Now"
+      },
+      {
+        "start": 90.28,
+        "end": 90.44,
+        "word": " you're"
+      },
+      {
+        "start": 90.44,
+        "end": 90.68,
+        "word": " telling"
+      },
+      {
+        "start": 90.68,
+        "end": 90.92,
+        "word": " me"
+      },
+      {
+        "start": 90.92,
+        "end": 91.12,
+        "word": " you"
+      },
+      {
+        "start": 91.12,
+        "end": 91.46,
+        "word": " can't"
+      },
+      {
+        "start": 91.46,
+        "end": 91.64,
+        "word": " even"
+      },
+      {
+        "start": 91.64,
+        "end": 91.96,
+        "word": " figure"
+      },
+      {
+        "start": 91.96,
+        "end": 92.26,
+        "word": " out"
+      },
+      {
+        "start": 92.26,
+        "end": 92.62,
+        "word": " what's"
+      },
+      {
+        "start": 92.62,
+        "end": 92.86,
+        "word": " wrong"
+      },
+      {
+        "start": 92.86,
+        "end": 93.44,
+        "word": " with"
+      },
+      {
+        "start": 93.44,
+        "end": 93.68,
+        "word": " my"
+      },
+      {
+        "start": 93.68,
+        "end": 94.18,
+        "word": " son?"
+      }
+    ]
+  },
+  {
+    "start": 94.78,
+    "end": 100.68,
+    "text": " Mrs. Black, this is the first known case of its kind. His blood has turned blue and complete unconsciousness.",
+    "words": [
+      {
+        "start": 94.78,
+        "end": 95.06,
+        "word": " Mrs."
+      },
+      {
+        "start": 95.1,
+        "end": 95.3,
+        "word": " Black,"
+      },
+      {
+        "start": 95.74,
+        "end": 96.16,
+        "word": " this"
+      },
+      {
+        "start": 96.16,
+        "end": 96.26,
+        "word": " is"
+      },
+      {
+        "start": 96.26,
+        "end": 96.4,
+        "word": " the"
+      },
+      {
+        "start": 96.4,
+        "end": 96.62,
+        "word": " first"
+      },
+      {
+        "start": 96.62,
+        "end": 96.82,
+        "word": " known"
+      },
+      {
+        "start": 96.82,
+        "end": 97.12,
+        "word": " case"
+      },
+      {
+        "start": 97.12,
+        "end": 97.32,
+        "word": " of"
+      },
+      {
+        "start": 97.32,
+        "end": 97.42,
+        "word": " its"
+      },
+      {
+        "start": 97.42,
+        "end": 97.66,
+        "word": " kind."
+      },
+      {
+        "start": 98.16,
+        "end": 98.22,
+        "word": " His"
+      },
+      {
+        "start": 98.22,
+        "end": 98.48,
+        "word": " blood"
+      },
+      {
+        "start": 98.48,
+        "end": 98.68,
+        "word": " has"
+      },
+      {
+        "start": 98.68,
+        "end": 98.92,
+        "word": " turned"
+      },
+      {
+        "start": 98.92,
+        "end": 99.24,
+        "word": " blue"
+      },
+      {
+        "start": 99.24,
+        "end": 99.58,
+        "word": " and"
+      },
+      {
+        "start": 99.58,
+        "end": 99.92,
+        "word": " complete"
+      },
+      {
+        "start": 99.92,
+        "end": 100.68,
+        "word": " unconsciousness."
+      }
+    ]
+  },
+  {
+    "start": 101.08,
+    "end": 103.88,
+    "text": " I'm afraid this is beyond me. You'll have to find someone else.",
+    "words": [
+      {
+        "start": 101.08,
+        "end": 101.12,
+        "word": " I'm"
+      },
+      {
+        "start": 101.12,
+        "end": 101.32,
+        "word": " afraid"
+      },
+      {
+        "start": 101.32,
+        "end": 101.52,
+        "word": " this"
+      },
+      {
+        "start": 101.52,
+        "end": 101.64,
+        "word": " is"
+      },
+      {
+        "start": 101.64,
+        "end": 101.92,
+        "word": " beyond"
+      },
+      {
+        "start": 101.92,
+        "end": 102.12,
+        "word": " me."
+      },
+      {
+        "start": 102.8,
+        "end": 103.08,
+        "word": " You'll"
+      },
+      {
+        "start": 103.08,
+        "end": 103.16,
+        "word": " have"
+      },
+      {
+        "start": 103.16,
+        "end": 103.26,
+        "word": " to"
+      },
+      {
+        "start": 103.26,
+        "end": 103.42,
+        "word": " find"
+      },
+      {
+        "start": 103.42,
+        "end": 103.64,
+        "word": " someone"
+      },
+      {
+        "start": 103.64,
+        "end": 103.88,
+        "word": " else."
+      }
+    ]
+  },
+  {
+    "start": 105.88,
+    "end": 106.36,
+    "text": " Useless.",
+    "words": [
+      {
+        "start": 105.88,
+        "end": 106.36,
+        "word": " Useless."
+      }
+    ]
+  },
+  {
+    "start": 107.9,
+    "end": 110.06,
+    "text": " All of you useless piece of trash.",
+    "words": [
+      {
+        "start": 107.9,
+        "end": 108.38,
+        "word": " All"
+      },
+      {
+        "start": 108.38,
+        "end": 108.58,
+        "word": " of"
+      },
+      {
+        "start": 108.58,
+        "end": 108.7,
+        "word": " you"
+      },
+      {
+        "start": 108.7,
+        "end": 109.22,
+        "word": " useless"
+      },
+      {
+        "start": 109.22,
+        "end": 109.62,
+        "word": " piece"
+      },
+      {
+        "start": 109.62,
+        "end": 109.78,
+        "word": " of"
+      },
+      {
+        "start": 109.78,
+        "end": 110.06,
+        "word": " trash."
+      }
+    ]
+  },
+  {
+    "start": 110.84,
+    "end": 114.8,
+    "text": " Ma'am, priestess Tasha, the Nobel laureate, Dr. Hamilton, and his daughter Vivian are here.",
+    "words": [
+      {
+        "start": 110.84,
+        "end": 111.1,
+        "word": " Ma"
+      },
+      {
+        "start": 111.1,
+        "end": 111.26,
+        "word": "'am,"
+      },
+      {
+        "start": 111.58,
+        "end": 111.94,
+        "word": " priestess"
+      },
+      {
+        "start": 111.94,
+        "end": 112.24,
+        "word": " Tasha,"
+      },
+      {
+        "start": 112.46,
+        "end": 112.5,
+        "word": " the"
+      },
+      {
+        "start": 112.5,
+        "end": 112.62,
+        "word": " Nobel"
+      },
+      {
+        "start": 112.62,
+        "end": 113.04,
+        "word": " laureate,"
+      },
+      {
+        "start": 113.22,
+        "end": 113.34,
+        "word": " Dr."
+      },
+      {
+        "start": 113.6,
+        "end": 113.6,
+        "word": " Hamilton,"
+      },
+      {
+        "start": 113.88,
+        "end": 113.9,
+        "word": " and"
+      },
+      {
+        "start": 113.9,
+        "end": 114.0,
+        "word": " his"
+      },
+      {
+        "start": 114.0,
+        "end": 114.18,
+        "word": " daughter"
+      },
+      {
+        "start": 114.18,
+        "end": 114.54,
+        "word": " Vivian"
+      },
+      {
+        "start": 114.54,
+        "end": 114.64,
+        "word": " are"
+      },
+      {
+        "start": 114.64,
+        "end": 114.8,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 115.36,
+    "end": 117.04,
+    "text": " Send them in. Yes ma'am.",
+    "words": [
+      {
+        "start": 115.36,
+        "end": 115.84,
+        "word": " Send"
+      },
+      {
+        "start": 115.84,
+        "end": 116.0,
+        "word": " them"
+      },
+      {
+        "start": 116.0,
+        "end": 116.2,
+        "word": " in."
+      },
+      {
+        "start": 116.52,
+        "end": 116.76,
+        "word": " Yes"
+      },
+      {
+        "start": 116.76,
+        "end": 116.92,
+        "word": " ma"
+      },
+      {
+        "start": 116.92,
+        "end": 117.04,
+        "word": "'am."
+      }
+    ]
+  },
+  {
+    "start": 124.49999999999999,
+    "end": 126.32,
+    "text": " Thank God you're finally here.",
+    "words": [
+      {
+        "start": 124.49999999999999,
+        "end": 124.97999999999999,
+        "word": " Thank"
+      },
+      {
+        "start": 124.97999999999999,
+        "end": 125.46,
+        "word": " God"
+      },
+      {
+        "start": 125.46,
+        "end": 125.62,
+        "word": " you're"
+      },
+      {
+        "start": 125.62,
+        "end": 125.92,
+        "word": " finally"
+      },
+      {
+        "start": 125.92,
+        "end": 126.32,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 126.72,
+    "end": 128.7,
+    "text": " Priestess Tasha, Dr. Hamilton.",
+    "words": [
+      {
+        "start": 126.72,
+        "end": 127.16,
+        "word": " Priestess"
+      },
+      {
+        "start": 127.16,
+        "end": 127.46,
+        "word": " Tasha,"
+      },
+      {
+        "start": 128.2,
+        "end": 128.32,
+        "word": " Dr."
+      },
+      {
+        "start": 128.56,
+        "end": 128.7,
+        "word": " Hamilton."
+      }
+    ]
+  },
+  {
+    "start": 130.24,
+    "end": 134.64,
+    "text": " Former Dean of Harvard, and this is all you've got. Seems medicine has its limits.",
+    "words": [
+      {
+        "start": 130.24,
+        "end": 130.72,
+        "word": " Former"
+      },
+      {
+        "start": 130.72,
+        "end": 131.0,
+        "word": " Dean"
+      },
+      {
+        "start": 131.0,
+        "end": 131.18,
+        "word": " of"
+      },
+      {
+        "start": 131.18,
+        "end": 131.38,
+        "word": " Harvard,"
+      },
+      {
+        "start": 131.94,
+        "end": 132.26,
+        "word": " and"
+      },
+      {
+        "start": 132.26,
+        "end": 132.4,
+        "word": " this"
+      },
+      {
+        "start": 132.4,
+        "end": 132.5,
+        "word": " is"
+      },
+      {
+        "start": 132.5,
+        "end": 132.68,
+        "word": " all"
+      },
+      {
+        "start": 132.68,
+        "end": 132.88,
+        "word": " you've"
+      },
+      {
+        "start": 132.88,
+        "end": 133.04,
+        "word": " got."
+      },
+      {
+        "start": 133.38,
+        "end": 133.56,
+        "word": " Seems"
+      },
+      {
+        "start": 133.56,
+        "end": 133.84,
+        "word": " medicine"
+      },
+      {
+        "start": 133.84,
+        "end": 134.24,
+        "word": " has"
+      },
+      {
+        "start": 134.24,
+        "end": 134.4,
+        "word": " its"
+      },
+      {
+        "start": 134.4,
+        "end": 134.64,
+        "word": " limits."
+      }
+    ]
+  },
+  {
+    "start": 136.34,
+    "end": 137.6,
+    "text": " Let me take a look at Mr. Black.",
+    "words": [
+      {
+        "start": 136.34,
+        "end": 136.56,
+        "word": " Let"
+      },
+      {
+        "start": 136.56,
+        "end": 136.66,
+        "word": " me"
+      },
+      {
+        "start": 136.66,
+        "end": 136.8,
+        "word": " take"
+      },
+      {
+        "start": 136.8,
+        "end": 136.9,
+        "word": " a"
+      },
+      {
+        "start": 136.9,
+        "end": 137.04,
+        "word": " look"
+      },
+      {
+        "start": 137.04,
+        "end": 137.14,
+        "word": " at"
+      },
+      {
+        "start": 137.14,
+        "end": 137.3,
+        "word": " Mr."
+      },
+      {
+        "start": 137.6,
+        "end": 137.6,
+        "word": " Black."
+      }
+    ]
+  },
+  {
+    "start": 148.34,
+    "end": 149.22,
+    "text": " No, no, no, no.",
+    "words": [
+      {
+        "start": 148.34,
+        "end": 148.82,
+        "word": " No,"
+      },
+      {
+        "start": 148.94,
+        "end": 148.98,
+        "word": " no,"
+      },
+      {
+        "start": 149.0,
+        "end": 149.12,
+        "word": " no,"
+      },
+      {
+        "start": 149.12,
+        "end": 149.22,
+        "word": " no."
+      }
+    ]
+  },
+  {
+    "start": 149.56,
+    "end": 151.66,
+    "text": " Priestess, what exactly is wrong with my son?",
+    "words": [
+      {
+        "start": 149.56,
+        "end": 150.04,
+        "word": " Priestess,"
+      },
+      {
+        "start": 150.24,
+        "end": 150.38,
+        "word": " what"
+      },
+      {
+        "start": 150.38,
+        "end": 150.58,
+        "word": " exactly"
+      },
+      {
+        "start": 150.58,
+        "end": 150.94,
+        "word": " is"
+      },
+      {
+        "start": 150.94,
+        "end": 151.08,
+        "word": " wrong"
+      },
+      {
+        "start": 151.08,
+        "end": 151.24,
+        "word": " with"
+      },
+      {
+        "start": 151.24,
+        "end": 151.4,
+        "word": " my"
+      },
+      {
+        "start": 151.4,
+        "end": 151.66,
+        "word": " son?"
+      }
+    ]
+  },
+  {
+    "start": 152.02,
+    "end": 154.88,
+    "text": " Weird, my crystal shows nothing at all. That's impossible.",
+    "words": [
+      {
+        "start": 152.02,
+        "end": 152.32,
+        "word": " Weird,"
+      },
+      {
+        "start": 152.56,
+        "end": 152.62,
+        "word": " my"
+      },
+      {
+        "start": 152.62,
+        "end": 152.86,
+        "word": " crystal"
+      },
+      {
+        "start": 152.86,
+        "end": 153.12,
+        "word": " shows"
+      },
+      {
+        "start": 153.12,
+        "end": 153.4,
+        "word": " nothing"
+      },
+      {
+        "start": 153.4,
+        "end": 153.66,
+        "word": " at"
+      },
+      {
+        "start": 153.66,
+        "end": 153.82,
+        "word": " all."
+      },
+      {
+        "start": 154.06,
+        "end": 154.22,
+        "word": " That's"
+      },
+      {
+        "start": 154.22,
+        "end": 154.88,
+        "word": " impossible."
+      }
+    ]
+  },
+  {
+    "start": 155.84,
+    "end": 158.56,
+    "text": " Even you can't tell what it is. She can't do it?",
+    "words": [
+      {
+        "start": 155.84,
+        "end": 155.96,
+        "word": " Even"
+      },
+      {
+        "start": 155.96,
+        "end": 156.2,
+        "word": " you"
+      },
+      {
+        "start": 156.2,
+        "end": 156.52,
+        "word": " can't"
+      },
+      {
+        "start": 156.52,
+        "end": 156.68,
+        "word": " tell"
+      },
+      {
+        "start": 156.68,
+        "end": 156.84,
+        "word": " what"
+      },
+      {
+        "start": 156.84,
+        "end": 156.98,
+        "word": " it"
+      },
+      {
+        "start": 156.98,
+        "end": 157.18,
+        "word": " is."
+      },
+      {
+        "start": 157.86,
+        "end": 158.04,
+        "word": " She"
+      },
+      {
+        "start": 158.04,
+        "end": 158.3,
+        "word": " can't"
+      },
+      {
+        "start": 158.3,
+        "end": 158.42,
+        "word": " do"
+      },
+      {
+        "start": 158.42,
+        "end": 158.56,
+        "word": " it?"
+      }
+    ]
+  },
+  {
+    "start": 159.18,
+    "end": 163.18,
+    "text": " Fine. My father has won two Nobel prizes. Let him take over.",
+    "words": [
+      {
+        "start": 159.18,
+        "end": 159.4,
+        "word": " Fine."
+      },
+      {
+        "start": 160.32,
+        "end": 160.34,
+        "word": " My"
+      },
+      {
+        "start": 160.34,
+        "end": 160.58,
+        "word": " father"
+      },
+      {
+        "start": 160.58,
+        "end": 160.74,
+        "word": " has"
+      },
+      {
+        "start": 160.74,
+        "end": 160.9,
+        "word": " won"
+      },
+      {
+        "start": 160.9,
+        "end": 161.14,
+        "word": " two"
+      },
+      {
+        "start": 161.14,
+        "end": 161.32,
+        "word": " Nobel"
+      },
+      {
+        "start": 161.32,
+        "end": 161.82,
+        "word": " prizes."
+      },
+      {
+        "start": 162.48,
+        "end": 162.64,
+        "word": " Let"
+      },
+      {
+        "start": 162.64,
+        "end": 162.76,
+        "word": " him"
+      },
+      {
+        "start": 162.76,
+        "end": 162.96,
+        "word": " take"
+      },
+      {
+        "start": 162.96,
+        "end": 163.18,
+        "word": " over."
+      }
+    ]
+  },
+  {
+    "start": 163.72,
+    "end": 168.88,
+    "text": " The news says whoever cures Mr. Black takes over Black Corporation's fortune. Is that true?",
+    "words": [
+      {
+        "start": 163.72,
+        "end": 163.82,
+        "word": " The"
+      },
+      {
+        "start": 163.82,
+        "end": 163.96,
+        "word": " news"
+      },
+      {
+        "start": 163.96,
+        "end": 164.34,
+        "word": " says"
+      },
+      {
+        "start": 164.34,
+        "end": 164.62,
+        "word": " whoever"
+      },
+      {
+        "start": 164.62,
+        "end": 165.04,
+        "word": " cures"
+      },
+      {
+        "start": 165.04,
+        "end": 165.34,
+        "word": " Mr."
+      },
+      {
+        "start": 165.74,
+        "end": 165.74,
+        "word": " Black"
+      },
+      {
+        "start": 165.74,
+        "end": 166.1,
+        "word": " takes"
+      },
+      {
+        "start": 166.1,
+        "end": 166.44,
+        "word": " over"
+      },
+      {
+        "start": 166.44,
+        "end": 166.76,
+        "word": " Black"
+      },
+      {
+        "start": 166.76,
+        "end": 167.64,
+        "word": " Corporation's"
+      },
+      {
+        "start": 167.64,
+        "end": 167.78,
+        "word": " fortune."
+      },
+      {
+        "start": 168.4,
+        "end": 168.46,
+        "word": " Is"
+      },
+      {
+        "start": 168.46,
+        "end": 168.6,
+        "word": " that"
+      },
+      {
+        "start": 168.6,
+        "end": 168.88,
+        "word": " true?"
+      }
+    ]
+  },
+  {
+    "start": 169.5,
+    "end": 171.7,
+    "text": " I don't want your money.",
+    "words": [
+      {
+        "start": 169.5,
+        "end": 169.86,
+        "word": " I"
+      },
+      {
+        "start": 169.86,
+        "end": 170.06,
+        "word": " don't"
+      },
+      {
+        "start": 170.06,
+        "end": 170.38,
+        "word": " want"
+      },
+      {
+        "start": 170.38,
+        "end": 171.22,
+        "word": " your"
+      },
+      {
+        "start": 171.22,
+        "end": 171.7,
+        "word": " money."
+      }
+    ]
+  },
+  {
+    "start": 172.98,
+    "end": 175.6,
+    "text": " This face is so perfect.",
+    "words": [
+      {
+        "start": 172.98,
+        "end": 173.7,
+        "word": " This"
+      },
+      {
+        "start": 173.7,
+        "end": 173.98,
+        "word": " face"
+      },
+      {
+        "start": 173.98,
+        "end": 174.3,
+        "word": " is"
+      },
+      {
+        "start": 174.3,
+        "end": 174.78,
+        "word": " so"
+      },
+      {
+        "start": 174.78,
+        "end": 175.6,
+        "word": " perfect."
+      }
+    ]
+  },
+  {
+    "start": 176.44,
+    "end": 179.88,
+    "text": " I want to sit on it every night.",
+    "words": [
+      {
+        "start": 176.44,
+        "end": 176.74,
+        "word": " I"
+      },
+      {
+        "start": 176.74,
+        "end": 177.58,
+        "word": " want"
+      },
+      {
+        "start": 177.58,
+        "end": 177.72,
+        "word": " to"
+      },
+      {
+        "start": 177.72,
+        "end": 178.04,
+        "word": " sit"
+      },
+      {
+        "start": 178.04,
+        "end": 178.34,
+        "word": " on"
+      },
+      {
+        "start": 178.34,
+        "end": 178.54,
+        "word": " it"
+      },
+      {
+        "start": 178.54,
+        "end": 178.94,
+        "word": " every"
+      },
+      {
+        "start": 178.94,
+        "end": 179.88,
+        "word": " night."
+      }
+    ]
+  },
+  {
+    "start": 180.82,
+    "end": 183.3,
+    "text": " I want to marry Edward instead.",
+    "words": [
+      {
+        "start": 180.82,
+        "end": 180.92,
+        "word": " I"
+      },
+      {
+        "start": 180.92,
+        "end": 181.12,
+        "word": " want"
+      },
+      {
+        "start": 181.12,
+        "end": 181.2,
+        "word": " to"
+      },
+      {
+        "start": 181.2,
+        "end": 181.5,
+        "word": " marry"
+      },
+      {
+        "start": 181.5,
+        "end": 181.94,
+        "word": " Edward"
+      },
+      {
+        "start": 181.94,
+        "end": 183.3,
+        "word": " instead."
+      }
+    ]
+  }
+]

@@ -1,0 +1,1045 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.12,
+    "text": " Accept it. Here you go, Mopsie.",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.82,
+        "word": " Accept"
+      },
+      {
+        "start": 0.82,
+        "end": 1.04,
+        "word": " it."
+      },
+      {
+        "start": 1.4,
+        "end": 1.56,
+        "word": " Here"
+      },
+      {
+        "start": 1.56,
+        "end": 1.62,
+        "word": " you"
+      },
+      {
+        "start": 1.62,
+        "end": 1.76,
+        "word": " go,"
+      },
+      {
+        "start": 1.76,
+        "end": 2.12,
+        "word": " Mopsie."
+      }
+    ]
+  },
+  {
+    "start": 4.580000000000002,
+    "end": 5.38,
+    "text": " Thank you.",
+    "words": [
+      {
+        "start": 4.580000000000002,
+        "end": 5.02,
+        "word": " Thank"
+      },
+      {
+        "start": 5.02,
+        "end": 5.38,
+        "word": " you."
+      }
+    ]
+  },
+  {
+    "start": 7.240000000000002,
+    "end": 8.9,
+    "text": " Must be nice skipping the line.",
+    "words": [
+      {
+        "start": 7.240000000000002,
+        "end": 7.68,
+        "word": " Must"
+      },
+      {
+        "start": 7.68,
+        "end": 7.86,
+        "word": " be"
+      },
+      {
+        "start": 7.86,
+        "end": 8.02,
+        "word": " nice"
+      },
+      {
+        "start": 8.02,
+        "end": 8.44,
+        "word": " skipping"
+      },
+      {
+        "start": 8.44,
+        "end": 8.68,
+        "word": " the"
+      },
+      {
+        "start": 8.68,
+        "end": 8.9,
+        "word": " line."
+      }
+    ]
+  },
+  {
+    "start": 9.0,
+    "end": 10.6,
+    "text": " Line up, ten rows, ten and each.",
+    "words": [
+      {
+        "start": 9.0,
+        "end": 9.12,
+        "word": " Line"
+      },
+      {
+        "start": 9.12,
+        "end": 9.32,
+        "word": " up,"
+      },
+      {
+        "start": 9.5,
+        "end": 9.7,
+        "word": " ten"
+      },
+      {
+        "start": 9.7,
+        "end": 9.94,
+        "word": " rows,"
+      },
+      {
+        "start": 10.22,
+        "end": 10.32,
+        "word": " ten"
+      },
+      {
+        "start": 10.32,
+        "end": 10.46,
+        "word": " and"
+      },
+      {
+        "start": 10.46,
+        "end": 10.6,
+        "word": " each."
+      }
+    ]
+  },
+  {
+    "start": 12.740000000000002,
+    "end": 14.56,
+    "text": " I want to be on his team.",
+    "words": [
+      {
+        "start": 12.740000000000002,
+        "end": 13.18,
+        "word": " I"
+      },
+      {
+        "start": 13.18,
+        "end": 13.58,
+        "word": " want"
+      },
+      {
+        "start": 13.58,
+        "end": 13.76,
+        "word": " to"
+      },
+      {
+        "start": 13.76,
+        "end": 13.9,
+        "word": " be"
+      },
+      {
+        "start": 13.9,
+        "end": 14.04,
+        "word": " on"
+      },
+      {
+        "start": 14.04,
+        "end": 14.26,
+        "word": " his"
+      },
+      {
+        "start": 14.26,
+        "end": 14.56,
+        "word": " team."
+      }
+    ]
+  },
+  {
+    "start": 15.760000000000002,
+    "end": 19.28,
+    "text": " I've run this house for ten years. I'm Walter. Call me Walter.",
+    "words": [
+      {
+        "start": 15.760000000000002,
+        "end": 16.2,
+        "word": " I've"
+      },
+      {
+        "start": 16.2,
+        "end": 16.28,
+        "word": " run"
+      },
+      {
+        "start": 16.28,
+        "end": 16.44,
+        "word": " this"
+      },
+      {
+        "start": 16.44,
+        "end": 16.64,
+        "word": " house"
+      },
+      {
+        "start": 16.64,
+        "end": 16.84,
+        "word": " for"
+      },
+      {
+        "start": 16.84,
+        "end": 17.06,
+        "word": " ten"
+      },
+      {
+        "start": 17.06,
+        "end": 17.38,
+        "word": " years."
+      },
+      {
+        "start": 17.86,
+        "end": 18.04,
+        "word": " I'm"
+      },
+      {
+        "start": 18.04,
+        "end": 18.18,
+        "word": " Walter."
+      },
+      {
+        "start": 18.86,
+        "end": 18.9,
+        "word": " Call"
+      },
+      {
+        "start": 18.9,
+        "end": 19.08,
+        "word": " me"
+      },
+      {
+        "start": 19.08,
+        "end": 19.28,
+        "word": " Walter."
+      }
+    ]
+  },
+  {
+    "start": 19.94,
+    "end": 21.34,
+    "text": " Hi, I'm Connor.",
+    "words": [
+      {
+        "start": 19.94,
+        "end": 20.38,
+        "word": " Hi,"
+      },
+      {
+        "start": 20.94,
+        "end": 21.22,
+        "word": " I'm"
+      },
+      {
+        "start": 21.22,
+        "end": 21.34,
+        "word": " Connor."
+      }
+    ]
+  },
+  {
+    "start": 21.74,
+    "end": 23.46,
+    "text": " Hi, Walter. We like you, Walter.",
+    "words": [
+      {
+        "start": 21.74,
+        "end": 21.94,
+        "word": " Hi,"
+      },
+      {
+        "start": 22.1,
+        "end": 22.18,
+        "word": " Walter."
+      },
+      {
+        "start": 22.72,
+        "end": 22.74,
+        "word": " We"
+      },
+      {
+        "start": 22.74,
+        "end": 22.94,
+        "word": " like"
+      },
+      {
+        "start": 22.94,
+        "end": 23.18,
+        "word": " you,"
+      },
+      {
+        "start": 23.36,
+        "end": 23.46,
+        "word": " Walter."
+      }
+    ]
+  },
+  {
+    "start": 24.32,
+    "end": 25.6,
+    "text": " I'm Walter, right here.",
+    "words": [
+      {
+        "start": 24.32,
+        "end": 24.68,
+        "word": " I'm"
+      },
+      {
+        "start": 24.68,
+        "end": 24.88,
+        "word": " Walter,"
+      },
+      {
+        "start": 25.28,
+        "end": 25.3,
+        "word": " right"
+      },
+      {
+        "start": 25.3,
+        "end": 25.6,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 26.220000000000002,
+    "end": 28.0,
+    "text": " Shh. Let's listen to Walter.",
+    "words": [
+      {
+        "start": 26.220000000000002,
+        "end": 26.66,
+        "word": " Shh."
+      },
+      {
+        "start": 27.14,
+        "end": 27.46,
+        "word": " Let's"
+      },
+      {
+        "start": 27.46,
+        "end": 27.64,
+        "word": " listen"
+      },
+      {
+        "start": 27.64,
+        "end": 27.82,
+        "word": " to"
+      },
+      {
+        "start": 27.82,
+        "end": 28.0,
+        "word": " Walter."
+      }
+    ]
+  },
+  {
+    "start": 29.0,
+    "end": 30.24,
+    "text": " This is a job interview.",
+    "words": [
+      {
+        "start": 29.0,
+        "end": 29.52,
+        "word": " This"
+      },
+      {
+        "start": 29.52,
+        "end": 29.64,
+        "word": " is"
+      },
+      {
+        "start": 29.64,
+        "end": 29.78,
+        "word": " a"
+      },
+      {
+        "start": 29.78,
+        "end": 29.94,
+        "word": " job"
+      },
+      {
+        "start": 29.94,
+        "end": 30.24,
+        "word": " interview."
+      }
+    ]
+  },
+  {
+    "start": 31.14,
+    "end": 33.46,
+    "text": " Pass, you stay, fail, you go home.",
+    "words": [
+      {
+        "start": 31.14,
+        "end": 31.42,
+        "word": " Pass,"
+      },
+      {
+        "start": 31.62,
+        "end": 31.68,
+        "word": " you"
+      },
+      {
+        "start": 31.68,
+        "end": 31.92,
+        "word": " stay,"
+      },
+      {
+        "start": 32.34,
+        "end": 32.54,
+        "word": " fail,"
+      },
+      {
+        "start": 33.02,
+        "end": 33.1,
+        "word": " you"
+      },
+      {
+        "start": 33.1,
+        "end": 33.22,
+        "word": " go"
+      },
+      {
+        "start": 33.22,
+        "end": 33.46,
+        "word": " home."
+      }
+    ]
+  },
+  {
+    "start": 34.34,
+    "end": 35.42,
+    "text": " You'll sleep here during training.",
+    "words": [
+      {
+        "start": 34.34,
+        "end": 34.44,
+        "word": " You'll"
+      },
+      {
+        "start": 34.44,
+        "end": 34.7,
+        "word": " sleep"
+      },
+      {
+        "start": 34.7,
+        "end": 34.88,
+        "word": " here"
+      },
+      {
+        "start": 34.88,
+        "end": 35.14,
+        "word": " during"
+      },
+      {
+        "start": 35.14,
+        "end": 35.42,
+        "word": " training."
+      }
+    ]
+  },
+  {
+    "start": 36.0,
+    "end": 38.42,
+    "text": " The third floor is off limits. Nobody goes up there.",
+    "words": [
+      {
+        "start": 36.0,
+        "end": 36.08,
+        "word": " The"
+      },
+      {
+        "start": 36.08,
+        "end": 36.28,
+        "word": " third"
+      },
+      {
+        "start": 36.28,
+        "end": 36.58,
+        "word": " floor"
+      },
+      {
+        "start": 36.58,
+        "end": 36.84,
+        "word": " is"
+      },
+      {
+        "start": 36.84,
+        "end": 37.08,
+        "word": " off"
+      },
+      {
+        "start": 37.08,
+        "end": 37.34,
+        "word": " limits."
+      },
+      {
+        "start": 37.68,
+        "end": 37.72,
+        "word": " Nobody"
+      },
+      {
+        "start": 37.72,
+        "end": 37.98,
+        "word": " goes"
+      },
+      {
+        "start": 37.98,
+        "end": 38.2,
+        "word": " up"
+      },
+      {
+        "start": 38.2,
+        "end": 38.42,
+        "word": " there."
+      }
+    ]
+  },
+  {
+    "start": 38.74,
+    "end": 42.34,
+    "text": " The lady upstairs even locked her in for months.",
+    "words": [
+      {
+        "start": 38.74,
+        "end": 39.08,
+        "word": " The"
+      },
+      {
+        "start": 39.08,
+        "end": 39.34,
+        "word": " lady"
+      },
+      {
+        "start": 39.34,
+        "end": 39.66,
+        "word": " upstairs"
+      },
+      {
+        "start": 39.66,
+        "end": 40.52,
+        "word": " even"
+      },
+      {
+        "start": 40.52,
+        "end": 40.94,
+        "word": " locked"
+      },
+      {
+        "start": 40.94,
+        "end": 41.24,
+        "word": " her"
+      },
+      {
+        "start": 41.24,
+        "end": 41.46,
+        "word": " in"
+      },
+      {
+        "start": 41.46,
+        "end": 41.98,
+        "word": " for"
+      },
+      {
+        "start": 41.98,
+        "end": 42.34,
+        "word": " months."
+      }
+    ]
+  },
+  {
+    "start": 42.98,
+    "end": 44.36,
+    "text": " We're supposed to take care of her.",
+    "words": [
+      {
+        "start": 42.98,
+        "end": 43.06,
+        "word": " We're"
+      },
+      {
+        "start": 43.06,
+        "end": 43.18,
+        "word": " supposed"
+      },
+      {
+        "start": 43.18,
+        "end": 43.56,
+        "word": " to"
+      },
+      {
+        "start": 43.56,
+        "end": 43.76,
+        "word": " take"
+      },
+      {
+        "start": 43.76,
+        "end": 43.98,
+        "word": " care"
+      },
+      {
+        "start": 43.98,
+        "end": 44.2,
+        "word": " of"
+      },
+      {
+        "start": 44.2,
+        "end": 44.36,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 44.8,
+    "end": 46.08,
+    "text": " Isn't that against the law?",
+    "words": [
+      {
+        "start": 44.8,
+        "end": 45.04,
+        "word": " Isn't"
+      },
+      {
+        "start": 45.04,
+        "end": 45.22,
+        "word": " that"
+      },
+      {
+        "start": 45.22,
+        "end": 45.62,
+        "word": " against"
+      },
+      {
+        "start": 45.62,
+        "end": 45.88,
+        "word": " the"
+      },
+      {
+        "start": 45.88,
+        "end": 46.08,
+        "word": " law?"
+      }
+    ]
+  },
+  {
+    "start": 46.64,
+    "end": 49.32,
+    "text": " No talking, number 100 and the little girl in lace.",
+    "words": [
+      {
+        "start": 46.64,
+        "end": 46.82,
+        "word": " No"
+      },
+      {
+        "start": 46.82,
+        "end": 47.16,
+        "word": " talking,"
+      },
+      {
+        "start": 47.4,
+        "end": 47.5,
+        "word": " number"
+      },
+      {
+        "start": 47.5,
+        "end": 47.76,
+        "word": " 100"
+      },
+      {
+        "start": 47.76,
+        "end": 48.52,
+        "word": " and"
+      },
+      {
+        "start": 48.52,
+        "end": 48.62,
+        "word": " the"
+      },
+      {
+        "start": 48.62,
+        "end": 48.74,
+        "word": " little"
+      },
+      {
+        "start": 48.74,
+        "end": 48.98,
+        "word": " girl"
+      },
+      {
+        "start": 48.98,
+        "end": 49.16,
+        "word": " in"
+      },
+      {
+        "start": 49.16,
+        "end": 49.32,
+        "word": " lace."
+      }
+    ]
+  },
+  {
+    "start": 49.7,
+    "end": 52.1,
+    "text": " I'm a boy, number 007.",
+    "words": [
+      {
+        "start": 49.7,
+        "end": 49.96,
+        "word": " I'm"
+      },
+      {
+        "start": 49.96,
+        "end": 50.02,
+        "word": " a"
+      },
+      {
+        "start": 50.02,
+        "end": 50.36,
+        "word": " boy,"
+      },
+      {
+        "start": 50.74,
+        "end": 50.94,
+        "word": " number"
+      },
+      {
+        "start": 50.94,
+        "end": 52.1,
+        "word": " 007."
+      }
+    ]
+  },
+  {
+    "start": 52.84,
+    "end": 55.3,
+    "text": " Fine. 007. Quiet.",
+    "words": [
+      {
+        "start": 52.84,
+        "end": 53.36,
+        "word": " Fine."
+      },
+      {
+        "start": 54.2,
+        "end": 54.54,
+        "word": " 007."
+      },
+      {
+        "start": 55.02,
+        "end": 55.3,
+        "word": " Quiet."
+      }
+    ]
+  },
+  {
+    "start": 55.3,
+    "end": 57.18,
+    "text": " Connor and I each lead a team.",
+    "words": [
+      {
+        "start": 55.3,
+        "end": 55.98,
+        "word": " Connor"
+      },
+      {
+        "start": 55.98,
+        "end": 56.2,
+        "word": " and"
+      },
+      {
+        "start": 56.2,
+        "end": 56.32,
+        "word": " I"
+      },
+      {
+        "start": 56.32,
+        "end": 56.54,
+        "word": " each"
+      },
+      {
+        "start": 56.54,
+        "end": 56.74,
+        "word": " lead"
+      },
+      {
+        "start": 56.74,
+        "end": 56.82,
+        "word": " a"
+      },
+      {
+        "start": 56.82,
+        "end": 57.18,
+        "word": " team."
+      }
+    ]
+  },
+  {
+    "start": 57.38,
+    "end": 59.54,
+    "text": " Draw every morning. That's your team for the day.",
+    "words": [
+      {
+        "start": 57.38,
+        "end": 57.66,
+        "word": " Draw"
+      },
+      {
+        "start": 57.66,
+        "end": 57.84,
+        "word": " every"
+      },
+      {
+        "start": 57.84,
+        "end": 58.22,
+        "word": " morning."
+      },
+      {
+        "start": 58.66,
+        "end": 58.84,
+        "word": " That's"
+      },
+      {
+        "start": 58.84,
+        "end": 58.9,
+        "word": " your"
+      },
+      {
+        "start": 58.9,
+        "end": 59.08,
+        "word": " team"
+      },
+      {
+        "start": 59.08,
+        "end": 59.22,
+        "word": " for"
+      },
+      {
+        "start": 59.22,
+        "end": 59.32,
+        "word": " the"
+      },
+      {
+        "start": 59.32,
+        "end": 59.54,
+        "word": " day."
+      }
+    ]
+  },
+  {
+    "start": 60.48,
+    "end": 61.5,
+    "text": " I got Connor.",
+    "words": [
+      {
+        "start": 60.48,
+        "end": 61.04,
+        "word": " I"
+      },
+      {
+        "start": 61.04,
+        "end": 61.18,
+        "word": " got"
+      },
+      {
+        "start": 61.18,
+        "end": 61.5,
+        "word": " Connor."
+      }
+    ]
+  },
+  {
+    "start": 64.68,
+    "end": 67.58,
+    "text": " It's just cleaning. How hard can it be?",
+    "words": [
+      {
+        "start": 64.68,
+        "end": 65.24,
+        "word": " It's"
+      },
+      {
+        "start": 65.24,
+        "end": 65.36,
+        "word": " just"
+      },
+      {
+        "start": 65.36,
+        "end": 65.88,
+        "word": " cleaning."
+      },
+      {
+        "start": 66.54,
+        "end": 66.6,
+        "word": " How"
+      },
+      {
+        "start": 66.6,
+        "end": 66.92,
+        "word": " hard"
+      },
+      {
+        "start": 66.92,
+        "end": 67.14,
+        "word": " can"
+      },
+      {
+        "start": 67.14,
+        "end": 67.32,
+        "word": " it"
+      },
+      {
+        "start": 67.32,
+        "end": 67.58,
+        "word": " be?"
+      }
+    ]
+  },
+  {
+    "start": 75.44,
+    "end": 76.74,
+    "text": " It's just cleaning.",
+    "words": [
+      {
+        "start": 75.44,
+        "end": 76.0,
+        "word": " It's"
+      },
+      {
+        "start": 76.0,
+        "end": 76.14,
+        "word": " just"
+      },
+      {
+        "start": 76.14,
+        "end": 76.74,
+        "word": " cleaning."
+      }
+    ]
+  },
+  {
+    "start": 80.82,
+    "end": 83.14,
+    "text": " Almost 20,000 square feet of rags.",
+    "words": [
+      {
+        "start": 80.82,
+        "end": 81.38,
+        "word": " Almost"
+      },
+      {
+        "start": 81.38,
+        "end": 81.72,
+        "word": " 20"
+      },
+      {
+        "start": 81.72,
+        "end": 82.14,
+        "word": ",000"
+      },
+      {
+        "start": 82.14,
+        "end": 82.34,
+        "word": " square"
+      },
+      {
+        "start": 82.34,
+        "end": 82.62,
+        "word": " feet"
+      },
+      {
+        "start": 82.62,
+        "end": 82.72,
+        "word": " of"
+      },
+      {
+        "start": 82.72,
+        "end": 83.14,
+        "word": " rags."
+      }
+    ]
+  },
+  {
+    "start": 83.14,
+    "end": 84.12,
+    "text": " Washed every week.",
+    "words": [
+      {
+        "start": 83.14,
+        "end": 83.58,
+        "word": " Washed"
+      },
+      {
+        "start": 83.58,
+        "end": 83.78,
+        "word": " every"
+      },
+      {
+        "start": 83.78,
+        "end": 84.12,
+        "word": " week."
+      }
+    ]
+  },
+  {
+    "start": 86.04,
+    "end": 86.3,
+    "text": " Too slow.",
+    "words": [
+      {
+        "start": 86.04,
+        "end": 86.08,
+        "word": " Too"
+      },
+      {
+        "start": 86.08,
+        "end": 86.3,
+        "word": " slow."
+      }
+    ]
+  },
+  {
+    "start": 87.22,
+    "end": 88.66,
+    "text": " Too slow.",
+    "words": [
+      {
+        "start": 87.22,
+        "end": 87.64,
+        "word": " Too"
+      },
+      {
+        "start": 87.64,
+        "end": 88.66,
+        "word": " slow."
+      }
+    ]
+  }
+]

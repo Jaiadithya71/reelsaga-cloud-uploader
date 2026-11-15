@@ -1,0 +1,609 @@
+[
+  {
+    "start": 1.3399999999999987,
+    "end": 2.9,
+    "text": " My pet's told me a secret.",
+    "words": [
+      {
+        "start": 1.3399999999999987,
+        "end": 1.86,
+        "word": " My"
+      },
+      {
+        "start": 1.86,
+        "end": 2.22,
+        "word": " pet's"
+      },
+      {
+        "start": 2.22,
+        "end": 2.36,
+        "word": " told"
+      },
+      {
+        "start": 2.36,
+        "end": 2.52,
+        "word": " me"
+      },
+      {
+        "start": 2.52,
+        "end": 2.62,
+        "word": " a"
+      },
+      {
+        "start": 2.62,
+        "end": 2.9,
+        "word": " secret."
+      }
+    ]
+  },
+  {
+    "start": 4.499999999999998,
+    "end": 8.26,
+    "text": " Bread, my husband of ten years, is having an affair.",
+    "words": [
+      {
+        "start": 4.499999999999998,
+        "end": 5.02,
+        "word": " Bread,"
+      },
+      {
+        "start": 5.68,
+        "end": 5.9,
+        "word": " my"
+      },
+      {
+        "start": 5.9,
+        "end": 6.18,
+        "word": " husband"
+      },
+      {
+        "start": 6.18,
+        "end": 6.36,
+        "word": " of"
+      },
+      {
+        "start": 6.36,
+        "end": 6.56,
+        "word": " ten"
+      },
+      {
+        "start": 6.56,
+        "end": 6.82,
+        "word": " years,"
+      },
+      {
+        "start": 7.34,
+        "end": 7.62,
+        "word": " is"
+      },
+      {
+        "start": 7.62,
+        "end": 7.88,
+        "word": " having"
+      },
+      {
+        "start": 7.88,
+        "end": 8.02,
+        "word": " an"
+      },
+      {
+        "start": 8.02,
+        "end": 8.26,
+        "word": " affair."
+      }
+    ]
+  },
+  {
+    "start": 10.379999999999997,
+    "end": 12.82,
+    "text": " Brad met up with that blonde again yesterday.",
+    "words": [
+      {
+        "start": 10.379999999999997,
+        "end": 10.899999999999999,
+        "word": " Brad"
+      },
+      {
+        "start": 10.899999999999999,
+        "end": 11.42,
+        "word": " met"
+      },
+      {
+        "start": 11.42,
+        "end": 11.54,
+        "word": " up"
+      },
+      {
+        "start": 11.54,
+        "end": 11.68,
+        "word": " with"
+      },
+      {
+        "start": 11.68,
+        "end": 11.8,
+        "word": " that"
+      },
+      {
+        "start": 11.8,
+        "end": 12.04,
+        "word": " blonde"
+      },
+      {
+        "start": 12.04,
+        "end": 12.32,
+        "word": " again"
+      },
+      {
+        "start": 12.32,
+        "end": 12.82,
+        "word": " yesterday."
+      }
+    ]
+  },
+  {
+    "start": 13.42,
+    "end": 14.42,
+    "text": " That shameless creep.",
+    "words": [
+      {
+        "start": 13.42,
+        "end": 13.52,
+        "word": " That"
+      },
+      {
+        "start": 13.52,
+        "end": 13.82,
+        "word": " shameless"
+      },
+      {
+        "start": 13.82,
+        "end": 14.42,
+        "word": " creep."
+      }
+    ]
+  },
+  {
+    "start": 14.9,
+    "end": 16.82,
+    "text": " You came home reeking of her.",
+    "words": [
+      {
+        "start": 14.9,
+        "end": 14.92,
+        "word": " You"
+      },
+      {
+        "start": 14.92,
+        "end": 15.78,
+        "word": " came"
+      },
+      {
+        "start": 15.78,
+        "end": 16.02,
+        "word": " home"
+      },
+      {
+        "start": 16.02,
+        "end": 16.44,
+        "word": " reeking"
+      },
+      {
+        "start": 16.44,
+        "end": 16.68,
+        "word": " of"
+      },
+      {
+        "start": 16.68,
+        "end": 16.82,
+        "word": " her."
+      }
+    ]
+  },
+  {
+    "start": 17.28,
+    "end": 18.2,
+    "text": " I nearly threw up my dinner.",
+    "words": [
+      {
+        "start": 17.28,
+        "end": 17.28,
+        "word": " I"
+      },
+      {
+        "start": 17.28,
+        "end": 17.4,
+        "word": " nearly"
+      },
+      {
+        "start": 17.4,
+        "end": 17.7,
+        "word": " threw"
+      },
+      {
+        "start": 17.7,
+        "end": 17.82,
+        "word": " up"
+      },
+      {
+        "start": 17.82,
+        "end": 17.96,
+        "word": " my"
+      },
+      {
+        "start": 17.96,
+        "end": 18.2,
+        "word": " dinner."
+      }
+    ]
+  },
+  {
+    "start": 19.04,
+    "end": 20.4,
+    "text": " Am I hallucinating?",
+    "words": [
+      {
+        "start": 19.04,
+        "end": 19.04,
+        "word": " Am"
+      },
+      {
+        "start": 19.04,
+        "end": 19.86,
+        "word": " I"
+      },
+      {
+        "start": 19.86,
+        "end": 20.4,
+        "word": " hallucinating?"
+      }
+    ]
+  },
+  {
+    "start": 20.96,
+    "end": 21.88,
+    "text": " My cat and dog are talking.",
+    "words": [
+      {
+        "start": 20.96,
+        "end": 21.02,
+        "word": " My"
+      },
+      {
+        "start": 21.02,
+        "end": 21.24,
+        "word": " cat"
+      },
+      {
+        "start": 21.24,
+        "end": 21.36,
+        "word": " and"
+      },
+      {
+        "start": 21.36,
+        "end": 21.54,
+        "word": " dog"
+      },
+      {
+        "start": 21.54,
+        "end": 21.68,
+        "word": " are"
+      },
+      {
+        "start": 21.68,
+        "end": 21.88,
+        "word": " talking."
+      }
+    ]
+  },
+  {
+    "start": 22.72,
+    "end": 24.36,
+    "text": " That awful woman kicked me too.",
+    "words": [
+      {
+        "start": 22.72,
+        "end": 22.86,
+        "word": " That"
+      },
+      {
+        "start": 22.86,
+        "end": 23.14,
+        "word": " awful"
+      },
+      {
+        "start": 23.14,
+        "end": 23.6,
+        "word": " woman"
+      },
+      {
+        "start": 23.6,
+        "end": 23.84,
+        "word": " kicked"
+      },
+      {
+        "start": 23.84,
+        "end": 24.12,
+        "word": " me"
+      },
+      {
+        "start": 24.12,
+        "end": 24.36,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 24.7,
+    "end": 27.12,
+    "text": " Right in the stomach with her pointy heel!",
+    "words": [
+      {
+        "start": 24.7,
+        "end": 24.98,
+        "word": " Right"
+      },
+      {
+        "start": 24.98,
+        "end": 25.2,
+        "word": " in"
+      },
+      {
+        "start": 25.2,
+        "end": 25.3,
+        "word": " the"
+      },
+      {
+        "start": 25.3,
+        "end": 25.78,
+        "word": " stomach"
+      },
+      {
+        "start": 25.78,
+        "end": 26.04,
+        "word": " with"
+      },
+      {
+        "start": 26.04,
+        "end": 26.18,
+        "word": " her"
+      },
+      {
+        "start": 26.18,
+        "end": 26.86,
+        "word": " pointy"
+      },
+      {
+        "start": 26.86,
+        "end": 27.12,
+        "word": " heel!"
+      }
+    ]
+  },
+  {
+    "start": 27.12,
+    "end": 29.36,
+    "text": " Why did you not tell me sooner?",
+    "words": [
+      {
+        "start": 27.12,
+        "end": 28.04,
+        "word": " Why"
+      },
+      {
+        "start": 28.04,
+        "end": 28.26,
+        "word": " did"
+      },
+      {
+        "start": 28.26,
+        "end": 28.4,
+        "word": " you"
+      },
+      {
+        "start": 28.4,
+        "end": 28.58,
+        "word": " not"
+      },
+      {
+        "start": 28.58,
+        "end": 28.86,
+        "word": " tell"
+      },
+      {
+        "start": 28.86,
+        "end": 29.06,
+        "word": " me"
+      },
+      {
+        "start": 29.06,
+        "end": 29.36,
+        "word": " sooner?"
+      }
+    ]
+  },
+  {
+    "start": 30.4,
+    "end": 32.1,
+    "text": " I will bite her right on the butt!",
+    "words": [
+      {
+        "start": 30.4,
+        "end": 30.42,
+        "word": " I"
+      },
+      {
+        "start": 30.42,
+        "end": 30.58,
+        "word": " will"
+      },
+      {
+        "start": 30.58,
+        "end": 30.92,
+        "word": " bite"
+      },
+      {
+        "start": 30.92,
+        "end": 31.18,
+        "word": " her"
+      },
+      {
+        "start": 31.18,
+        "end": 31.46,
+        "word": " right"
+      },
+      {
+        "start": 31.46,
+        "end": 31.64,
+        "word": " on"
+      },
+      {
+        "start": 31.64,
+        "end": 31.74,
+        "word": " the"
+      },
+      {
+        "start": 31.74,
+        "end": 32.1,
+        "word": " butt!"
+      }
+    ]
+  },
+  {
+    "start": 33.7,
+    "end": 36.36,
+    "text": " And Mummy still irons his suits and makes him pancakes?",
+    "words": [
+      {
+        "start": 33.7,
+        "end": 34.14,
+        "word": " And"
+      },
+      {
+        "start": 34.14,
+        "end": 34.32,
+        "word": " Mummy"
+      },
+      {
+        "start": 34.32,
+        "end": 34.62,
+        "word": " still"
+      },
+      {
+        "start": 34.62,
+        "end": 35.02,
+        "word": " irons"
+      },
+      {
+        "start": 35.02,
+        "end": 35.16,
+        "word": " his"
+      },
+      {
+        "start": 35.16,
+        "end": 35.44,
+        "word": " suits"
+      },
+      {
+        "start": 35.44,
+        "end": 35.64,
+        "word": " and"
+      },
+      {
+        "start": 35.64,
+        "end": 35.78,
+        "word": " makes"
+      },
+      {
+        "start": 35.78,
+        "end": 35.96,
+        "word": " him"
+      },
+      {
+        "start": 35.96,
+        "end": 36.36,
+        "word": " pancakes?"
+      }
+    ]
+  },
+  {
+    "start": 37.02,
+    "end": 38.34,
+    "text": " It is driving me crazy!",
+    "words": [
+      {
+        "start": 37.02,
+        "end": 37.08,
+        "word": " It"
+      },
+      {
+        "start": 37.08,
+        "end": 37.16,
+        "word": " is"
+      },
+      {
+        "start": 37.16,
+        "end": 37.54,
+        "word": " driving"
+      },
+      {
+        "start": 37.54,
+        "end": 37.88,
+        "word": " me"
+      },
+      {
+        "start": 37.88,
+        "end": 38.34,
+        "word": " crazy!"
+      }
+    ]
+  },
+  {
+    "start": 39.62,
+    "end": 41.44,
+    "text": " That man deserves an Oscar.",
+    "words": [
+      {
+        "start": 39.62,
+        "end": 40.08,
+        "word": " That"
+      },
+      {
+        "start": 40.08,
+        "end": 40.38,
+        "word": " man"
+      },
+      {
+        "start": 40.38,
+        "end": 40.78,
+        "word": " deserves"
+      },
+      {
+        "start": 40.78,
+        "end": 41.12,
+        "word": " an"
+      },
+      {
+        "start": 41.12,
+        "end": 41.44,
+        "word": " Oscar."
+      }
+    ]
+  },
+  {
+    "start": 42.54,
+    "end": 43.74,
+    "text": " Clueless Mummy!",
+    "words": [
+      {
+        "start": 42.54,
+        "end": 43.14,
+        "word": " Clueless"
+      },
+      {
+        "start": 43.14,
+        "end": 43.74,
+        "word": " Mummy!"
+      }
+    ]
+  }
+]
