@@ -1,0 +1,58 @@
+[
+  {
+    "episode": 1,
+    "part": 1,
+    "source_start": 0,
+    "source_end": 47.5,
+    "duration": 47.5,
+    "sha256": "cc7da0077a4782f916595dafc2d2456aa39386903a15e4cb6a7f84d62dd881db",
+    "bytes": 36111937,
+    "path": "/downloads/bank-e1p1.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  },
+  {
+    "episode": 1,
+    "part": 2,
+    "source_start": 47.5,
+    "source_end": 89.5,
+    "duration": 42.0,
+    "sha256": "7083e8db0a8918277fec80a858048199f470db7270885b87c2e872d4d21ecf74",
+    "bytes": 26197211,
+    "path": "/downloads/bank-e1p2.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  },
+  {
+    "episode": 1,
+    "part": 3,
+    "source_start": 89.5,
+    "source_end": 136.8,
+    "duration": 47.30000000000001,
+    "sha256": "e4eebe5966aaf665a8f3331f25d4e02117d1beae13b5cd03aac40e24826bcc8d",
+    "bytes": 41750631,
+    "path": "/downloads/bank-e1p3.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  },
+  {
+    "episode": 1,
+    "part": 4,
+    "source_start": 136.8,
+    "source_end": 175.979,
+    "duration": 39.179,
+    "sha256": "60b0f590175e8880db892f943b315c46aa5d68404b9602b3b674b266dfafd4e9",
+    "bytes": 28456432,
+    "path": "/downloads/bank-e1p4.mp4",
+    "decode_checked": true,
+    "pixels_inspected": false,
+    "caption_gate_pass": false,
+    "whole_part_release_ready": false
+  }
+]

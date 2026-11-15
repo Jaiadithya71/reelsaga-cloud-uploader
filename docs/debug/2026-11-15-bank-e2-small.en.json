@@ -1,0 +1,1597 @@
+[
+  {
+    "start": 0.0,
+    "end": 1.84,
+    "text": " What do you need that much cash for?",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.66,
+        "word": " What"
+      },
+      {
+        "start": 0.66,
+        "end": 0.76,
+        "word": " do"
+      },
+      {
+        "start": 0.76,
+        "end": 0.82,
+        "word": " you"
+      },
+      {
+        "start": 0.82,
+        "end": 0.94,
+        "word": " need"
+      },
+      {
+        "start": 0.94,
+        "end": 1.1,
+        "word": " that"
+      },
+      {
+        "start": 1.1,
+        "end": 1.28,
+        "word": " much"
+      },
+      {
+        "start": 1.28,
+        "end": 1.52,
+        "word": " cash"
+      },
+      {
+        "start": 1.52,
+        "end": 1.84,
+        "word": " for?"
+      }
+    ]
+  },
+  {
+    "start": 2.5,
+    "end": 4.54,
+    "text": " To buy a luxury watch for my future son-in-law.",
+    "words": [
+      {
+        "start": 2.5,
+        "end": 2.58,
+        "word": " To"
+      },
+      {
+        "start": 2.58,
+        "end": 2.74,
+        "word": " buy"
+      },
+      {
+        "start": 2.74,
+        "end": 2.86,
+        "word": " a"
+      },
+      {
+        "start": 2.86,
+        "end": 3.1,
+        "word": " luxury"
+      },
+      {
+        "start": 3.1,
+        "end": 3.42,
+        "word": " watch"
+      },
+      {
+        "start": 3.42,
+        "end": 3.62,
+        "word": " for"
+      },
+      {
+        "start": 3.62,
+        "end": 3.76,
+        "word": " my"
+      },
+      {
+        "start": 3.76,
+        "end": 3.94,
+        "word": " future"
+      },
+      {
+        "start": 3.94,
+        "end": 4.22,
+        "word": " son"
+      },
+      {
+        "start": 4.22,
+        "end": 4.34,
+        "word": "-in"
+      },
+      {
+        "start": 4.34,
+        "end": 4.54,
+        "word": "-law."
+      }
+    ]
+  },
+  {
+    "start": 5.820000000000001,
+    "end": 7.48,
+    "text": " How do I know that money is even yours?",
+    "words": [
+      {
+        "start": 5.820000000000001,
+        "end": 6.22,
+        "word": " How"
+      },
+      {
+        "start": 6.22,
+        "end": 6.3,
+        "word": " do"
+      },
+      {
+        "start": 6.3,
+        "end": 6.42,
+        "word": " I"
+      },
+      {
+        "start": 6.42,
+        "end": 6.54,
+        "word": " know"
+      },
+      {
+        "start": 6.54,
+        "end": 6.72,
+        "word": " that"
+      },
+      {
+        "start": 6.72,
+        "end": 6.88,
+        "word": " money"
+      },
+      {
+        "start": 6.88,
+        "end": 7.06,
+        "word": " is"
+      },
+      {
+        "start": 7.06,
+        "end": 7.26,
+        "word": " even"
+      },
+      {
+        "start": 7.26,
+        "end": 7.48,
+        "word": " yours?"
+      }
+    ]
+  },
+  {
+    "start": 10.22,
+    "end": 12.58,
+    "text": " Here's my license. Name and number match.",
+    "words": [
+      {
+        "start": 10.22,
+        "end": 10.62,
+        "word": " Here's"
+      },
+      {
+        "start": 10.62,
+        "end": 10.78,
+        "word": " my"
+      },
+      {
+        "start": 10.78,
+        "end": 11.1,
+        "word": " license."
+      },
+      {
+        "start": 11.94,
+        "end": 11.96,
+        "word": " Name"
+      },
+      {
+        "start": 11.96,
+        "end": 12.1,
+        "word": " and"
+      },
+      {
+        "start": 12.1,
+        "end": 12.28,
+        "word": " number"
+      },
+      {
+        "start": 12.28,
+        "end": 12.58,
+        "word": " match."
+      }
+    ]
+  },
+  {
+    "start": 14.000000000000002,
+    "end": 16.76,
+    "text": " That proves nothing. We just had a fraud case here.",
+    "words": [
+      {
+        "start": 14.000000000000002,
+        "end": 14.4,
+        "word": " That"
+      },
+      {
+        "start": 14.4,
+        "end": 14.6,
+        "word": " proves"
+      },
+      {
+        "start": 14.6,
+        "end": 14.98,
+        "word": " nothing."
+      },
+      {
+        "start": 15.42,
+        "end": 15.66,
+        "word": " We"
+      },
+      {
+        "start": 15.66,
+        "end": 15.78,
+        "word": " just"
+      },
+      {
+        "start": 15.78,
+        "end": 15.94,
+        "word": " had"
+      },
+      {
+        "start": 15.94,
+        "end": 16.02,
+        "word": " a"
+      },
+      {
+        "start": 16.02,
+        "end": 16.24,
+        "word": " fraud"
+      },
+      {
+        "start": 16.24,
+        "end": 16.5,
+        "word": " case"
+      },
+      {
+        "start": 16.5,
+        "end": 16.76,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 17.06,
+    "end": 19.74,
+    "text": " We've been told to watch out for your type. Show me proof of address.",
+    "words": [
+      {
+        "start": 17.06,
+        "end": 17.24,
+        "word": " We've"
+      },
+      {
+        "start": 17.24,
+        "end": 17.32,
+        "word": " been"
+      },
+      {
+        "start": 17.32,
+        "end": 17.46,
+        "word": " told"
+      },
+      {
+        "start": 17.46,
+        "end": 17.62,
+        "word": " to"
+      },
+      {
+        "start": 17.62,
+        "end": 17.74,
+        "word": " watch"
+      },
+      {
+        "start": 17.74,
+        "end": 17.92,
+        "word": " out"
+      },
+      {
+        "start": 17.92,
+        "end": 18.04,
+        "word": " for"
+      },
+      {
+        "start": 18.04,
+        "end": 18.18,
+        "word": " your"
+      },
+      {
+        "start": 18.18,
+        "end": 18.4,
+        "word": " type."
+      },
+      {
+        "start": 18.88,
+        "end": 19.0,
+        "word": " Show"
+      },
+      {
+        "start": 19.0,
+        "end": 19.14,
+        "word": " me"
+      },
+      {
+        "start": 19.14,
+        "end": 19.3,
+        "word": " proof"
+      },
+      {
+        "start": 19.3,
+        "end": 19.44,
+        "word": " of"
+      },
+      {
+        "start": 19.44,
+        "end": 19.74,
+        "word": " address."
+      }
+    ]
+  },
+  {
+    "start": 20.5,
+    "end": 21.68,
+    "text": " No proof, no box.",
+    "words": [
+      {
+        "start": 20.5,
+        "end": 20.7,
+        "word": " No"
+      },
+      {
+        "start": 20.7,
+        "end": 21.0,
+        "word": " proof,"
+      },
+      {
+        "start": 21.26,
+        "end": 21.4,
+        "word": " no"
+      },
+      {
+        "start": 21.4,
+        "end": 21.68,
+        "word": " box."
+      }
+    ]
+  },
+  {
+    "start": 23.9,
+    "end": 26.32,
+    "text": " No point arguing with her. I can't be late tonight.",
+    "words": [
+      {
+        "start": 23.9,
+        "end": 24.1,
+        "word": " No"
+      },
+      {
+        "start": 24.1,
+        "end": 24.3,
+        "word": " point"
+      },
+      {
+        "start": 24.3,
+        "end": 24.62,
+        "word": " arguing"
+      },
+      {
+        "start": 24.62,
+        "end": 24.84,
+        "word": " with"
+      },
+      {
+        "start": 24.84,
+        "end": 25.0,
+        "word": " her."
+      },
+      {
+        "start": 25.46,
+        "end": 25.62,
+        "word": " I"
+      },
+      {
+        "start": 25.62,
+        "end": 25.8,
+        "word": " can't"
+      },
+      {
+        "start": 25.8,
+        "end": 25.88,
+        "word": " be"
+      },
+      {
+        "start": 25.88,
+        "end": 26.06,
+        "word": " late"
+      },
+      {
+        "start": 26.06,
+        "end": 26.32,
+        "word": " tonight."
+      }
+    ]
+  },
+  {
+    "start": 28.56,
+    "end": 30.58,
+    "text": " Fine. I'll go get her the proof.",
+    "words": [
+      {
+        "start": 28.56,
+        "end": 29.08,
+        "word": " Fine."
+      },
+      {
+        "start": 29.56,
+        "end": 29.76,
+        "word": " I'll"
+      },
+      {
+        "start": 29.76,
+        "end": 29.9,
+        "word": " go"
+      },
+      {
+        "start": 29.9,
+        "end": 30.02,
+        "word": " get"
+      },
+      {
+        "start": 30.02,
+        "end": 30.12,
+        "word": " her"
+      },
+      {
+        "start": 30.12,
+        "end": 30.22,
+        "word": " the"
+      },
+      {
+        "start": 30.22,
+        "end": 30.58,
+        "word": " proof."
+      }
+    ]
+  },
+  {
+    "start": 31.12,
+    "end": 33.82,
+    "text": " Hm. Broke loser. Thought you could fool me?",
+    "words": [
+      {
+        "start": 31.12,
+        "end": 31.2,
+        "word": " Hm."
+      },
+      {
+        "start": 31.86,
+        "end": 32.1,
+        "word": " Broke"
+      },
+      {
+        "start": 32.1,
+        "end": 32.36,
+        "word": " loser."
+      },
+      {
+        "start": 32.82,
+        "end": 32.9,
+        "word": " Thought"
+      },
+      {
+        "start": 32.9,
+        "end": 33.04,
+        "word": " you"
+      },
+      {
+        "start": 33.04,
+        "end": 33.18,
+        "word": " could"
+      },
+      {
+        "start": 33.18,
+        "end": 33.36,
+        "word": " fool"
+      },
+      {
+        "start": 33.36,
+        "end": 33.82,
+        "word": " me?"
+      }
+    ]
+  },
+  {
+    "start": 39.2,
+    "end": 40.92,
+    "text": " Here. My utility bill.",
+    "words": [
+      {
+        "start": 39.2,
+        "end": 39.72,
+        "word": " Here."
+      },
+      {
+        "start": 40.14,
+        "end": 40.28,
+        "word": " My"
+      },
+      {
+        "start": 40.28,
+        "end": 40.54,
+        "word": " utility"
+      },
+      {
+        "start": 40.54,
+        "end": 40.92,
+        "word": " bill."
+      }
+    ]
+  },
+  {
+    "start": 43.120000000000005,
+    "end": 46.18,
+    "text": " That just proves the address exists. Doesn't prove the house is yours.",
+    "words": [
+      {
+        "start": 43.120000000000005,
+        "end": 43.64,
+        "word": " That"
+      },
+      {
+        "start": 43.64,
+        "end": 43.78,
+        "word": " just"
+      },
+      {
+        "start": 43.78,
+        "end": 43.98,
+        "word": " proves"
+      },
+      {
+        "start": 43.98,
+        "end": 44.14,
+        "word": " the"
+      },
+      {
+        "start": 44.14,
+        "end": 44.38,
+        "word": " address"
+      },
+      {
+        "start": 44.38,
+        "end": 44.84,
+        "word": " exists."
+      },
+      {
+        "start": 45.24,
+        "end": 45.4,
+        "word": " Doesn't"
+      },
+      {
+        "start": 45.4,
+        "end": 45.54,
+        "word": " prove"
+      },
+      {
+        "start": 45.54,
+        "end": 45.68,
+        "word": " the"
+      },
+      {
+        "start": 45.68,
+        "end": 45.82,
+        "word": " house"
+      },
+      {
+        "start": 45.82,
+        "end": 46.0,
+        "word": " is"
+      },
+      {
+        "start": 46.0,
+        "end": 46.18,
+        "word": " yours."
+      }
+    ]
+  },
+  {
+    "start": 48.900000000000006,
+    "end": 50.32,
+    "text": " My name's on it.",
+    "words": [
+      {
+        "start": 48.900000000000006,
+        "end": 49.42,
+        "word": " My"
+      },
+      {
+        "start": 49.42,
+        "end": 49.78,
+        "word": " name's"
+      },
+      {
+        "start": 49.78,
+        "end": 49.94,
+        "word": " on"
+      },
+      {
+        "start": 49.94,
+        "end": 50.32,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 50.72,
+    "end": 51.54,
+    "text": " Beverly Hills?",
+    "words": [
+      {
+        "start": 50.72,
+        "end": 51.12,
+        "word": " Beverly"
+      },
+      {
+        "start": 51.12,
+        "end": 51.54,
+        "word": " Hills?"
+      }
+    ]
+  },
+  {
+    "start": 53.739999999999995,
+    "end": 58.3,
+    "text": " That's a rich neighborhood. You really think your kind could live there? Bring me the deed.",
+    "words": [
+      {
+        "start": 53.739999999999995,
+        "end": 54.22,
+        "word": " That's"
+      },
+      {
+        "start": 54.22,
+        "end": 54.32,
+        "word": " a"
+      },
+      {
+        "start": 54.32,
+        "end": 54.5,
+        "word": " rich"
+      },
+      {
+        "start": 54.5,
+        "end": 55.02,
+        "word": " neighborhood."
+      },
+      {
+        "start": 55.78,
+        "end": 55.78,
+        "word": " You"
+      },
+      {
+        "start": 55.78,
+        "end": 56.02,
+        "word": " really"
+      },
+      {
+        "start": 56.02,
+        "end": 56.2,
+        "word": " think"
+      },
+      {
+        "start": 56.2,
+        "end": 56.36,
+        "word": " your"
+      },
+      {
+        "start": 56.36,
+        "end": 56.6,
+        "word": " kind"
+      },
+      {
+        "start": 56.6,
+        "end": 56.8,
+        "word": " could"
+      },
+      {
+        "start": 56.8,
+        "end": 56.96,
+        "word": " live"
+      },
+      {
+        "start": 56.96,
+        "end": 57.28,
+        "word": " there?"
+      },
+      {
+        "start": 57.7,
+        "end": 57.78,
+        "word": " Bring"
+      },
+      {
+        "start": 57.78,
+        "end": 57.94,
+        "word": " me"
+      },
+      {
+        "start": 57.94,
+        "end": 58.1,
+        "word": " the"
+      },
+      {
+        "start": 58.1,
+        "end": 58.3,
+        "word": " deed."
+      }
+    ]
+  },
+  {
+    "start": 59.84,
+    "end": 61.88,
+    "text": " Fighting her will only waste me more time.",
+    "words": [
+      {
+        "start": 59.84,
+        "end": 59.9,
+        "word": " Fighting"
+      },
+      {
+        "start": 59.9,
+        "end": 60.2,
+        "word": " her"
+      },
+      {
+        "start": 60.2,
+        "end": 60.38,
+        "word": " will"
+      },
+      {
+        "start": 60.38,
+        "end": 60.58,
+        "word": " only"
+      },
+      {
+        "start": 60.58,
+        "end": 60.82,
+        "word": " waste"
+      },
+      {
+        "start": 60.82,
+        "end": 61.0,
+        "word": " me"
+      },
+      {
+        "start": 61.0,
+        "end": 61.2,
+        "word": " more"
+      },
+      {
+        "start": 61.2,
+        "end": 61.88,
+        "word": " time."
+      }
+    ]
+  },
+  {
+    "start": 63.82,
+    "end": 64.54,
+    "text": " One last run.",
+    "words": [
+      {
+        "start": 63.82,
+        "end": 63.92,
+        "word": " One"
+      },
+      {
+        "start": 63.92,
+        "end": 64.2,
+        "word": " last"
+      },
+      {
+        "start": 64.2,
+        "end": 64.54,
+        "word": " run."
+      }
+    ]
+  },
+  {
+    "start": 68.66,
+    "end": 73.66,
+    "text": " Everything's here. License, utility bill, deed, property tax receipts. We good now?",
+    "words": [
+      {
+        "start": 68.66,
+        "end": 69.12,
+        "word": " Everything's"
+      },
+      {
+        "start": 69.12,
+        "end": 69.36,
+        "word": " here."
+      },
+      {
+        "start": 70.02,
+        "end": 70.02,
+        "word": " License,"
+      },
+      {
+        "start": 70.36,
+        "end": 70.56,
+        "word": " utility"
+      },
+      {
+        "start": 70.56,
+        "end": 70.96,
+        "word": " bill,"
+      },
+      {
+        "start": 71.22,
+        "end": 71.38,
+        "word": " deed,"
+      },
+      {
+        "start": 71.7,
+        "end": 71.88,
+        "word": " property"
+      },
+      {
+        "start": 71.88,
+        "end": 72.18,
+        "word": " tax"
+      },
+      {
+        "start": 72.18,
+        "end": 72.54,
+        "word": " receipts."
+      },
+      {
+        "start": 73.22,
+        "end": 73.3,
+        "word": " We"
+      },
+      {
+        "start": 73.3,
+        "end": 73.44,
+        "word": " good"
+      },
+      {
+        "start": 73.44,
+        "end": 73.66,
+        "word": " now?"
+      }
+    ]
+  },
+  {
+    "start": 75.62,
+    "end": 79.72,
+    "text": " The paperwork checks out, but I still suspect the money came from illegal sources.",
+    "words": [
+      {
+        "start": 75.62,
+        "end": 76.1,
+        "word": " The"
+      },
+      {
+        "start": 76.1,
+        "end": 76.38,
+        "word": " paperwork"
+      },
+      {
+        "start": 76.38,
+        "end": 76.74,
+        "word": " checks"
+      },
+      {
+        "start": 76.74,
+        "end": 77.12,
+        "word": " out,"
+      },
+      {
+        "start": 77.28,
+        "end": 77.4,
+        "word": " but"
+      },
+      {
+        "start": 77.4,
+        "end": 77.52,
+        "word": " I"
+      },
+      {
+        "start": 77.52,
+        "end": 77.74,
+        "word": " still"
+      },
+      {
+        "start": 77.74,
+        "end": 78.1,
+        "word": " suspect"
+      },
+      {
+        "start": 78.1,
+        "end": 78.3,
+        "word": " the"
+      },
+      {
+        "start": 78.3,
+        "end": 78.46,
+        "word": " money"
+      },
+      {
+        "start": 78.46,
+        "end": 78.72,
+        "word": " came"
+      },
+      {
+        "start": 78.72,
+        "end": 78.94,
+        "word": " from"
+      },
+      {
+        "start": 78.94,
+        "end": 79.2,
+        "word": " illegal"
+      },
+      {
+        "start": 79.2,
+        "end": 79.72,
+        "word": " sources."
+      }
+    ]
+  },
+  {
+    "start": 79.72,
+    "end": 81.74,
+    "text": " I can't approve the withdraw.",
+    "words": [
+      {
+        "start": 79.72,
+        "end": 80.2,
+        "word": " I"
+      },
+      {
+        "start": 80.2,
+        "end": 81.08,
+        "word": " can't"
+      },
+      {
+        "start": 81.08,
+        "end": 81.26,
+        "word": " approve"
+      },
+      {
+        "start": 81.26,
+        "end": 81.44,
+        "word": " the"
+      },
+      {
+        "start": 81.44,
+        "end": 81.74,
+        "word": " withdraw."
+      }
+    ]
+  },
+  {
+    "start": 83.82,
+    "end": 86.2,
+    "text": " Fine. Forget the withdraw. Happy now?",
+    "words": [
+      {
+        "start": 83.82,
+        "end": 83.86,
+        "word": " Fine."
+      },
+      {
+        "start": 84.76,
+        "end": 84.76,
+        "word": " Forget"
+      },
+      {
+        "start": 84.76,
+        "end": 84.94,
+        "word": " the"
+      },
+      {
+        "start": 84.94,
+        "end": 85.3,
+        "word": " withdraw."
+      },
+      {
+        "start": 85.8,
+        "end": 85.94,
+        "word": " Happy"
+      },
+      {
+        "start": 85.94,
+        "end": 86.2,
+        "word": " now?"
+      }
+    ]
+  },
+  {
+    "start": 87.42,
+    "end": 89.36,
+    "text": " I'll move every cent in this account to another bank.",
+    "words": [
+      {
+        "start": 87.42,
+        "end": 87.58,
+        "word": " I'll"
+      },
+      {
+        "start": 87.58,
+        "end": 87.7,
+        "word": " move"
+      },
+      {
+        "start": 87.7,
+        "end": 88.0,
+        "word": " every"
+      },
+      {
+        "start": 88.0,
+        "end": 88.2,
+        "word": " cent"
+      },
+      {
+        "start": 88.2,
+        "end": 88.32,
+        "word": " in"
+      },
+      {
+        "start": 88.32,
+        "end": 88.44,
+        "word": " this"
+      },
+      {
+        "start": 88.44,
+        "end": 88.68,
+        "word": " account"
+      },
+      {
+        "start": 88.68,
+        "end": 88.88,
+        "word": " to"
+      },
+      {
+        "start": 88.88,
+        "end": 89.08,
+        "word": " another"
+      },
+      {
+        "start": 89.08,
+        "end": 89.36,
+        "word": " bank."
+      }
+    ]
+  },
+  {
+    "start": 89.84,
+    "end": 93.86,
+    "text": " You? Transfer money? Do you even have ten grand in that account?",
+    "words": [
+      {
+        "start": 89.84,
+        "end": 90.06,
+        "word": " You?"
+      },
+      {
+        "start": 90.82,
+        "end": 91.08,
+        "word": " Transfer"
+      },
+      {
+        "start": 91.08,
+        "end": 91.5,
+        "word": " money?"
+      },
+      {
+        "start": 91.96,
+        "end": 92.18,
+        "word": " Do"
+      },
+      {
+        "start": 92.18,
+        "end": 92.28,
+        "word": " you"
+      },
+      {
+        "start": 92.28,
+        "end": 92.48,
+        "word": " even"
+      },
+      {
+        "start": 92.48,
+        "end": 92.68,
+        "word": " have"
+      },
+      {
+        "start": 92.68,
+        "end": 92.94,
+        "word": " ten"
+      },
+      {
+        "start": 92.94,
+        "end": 93.24,
+        "word": " grand"
+      },
+      {
+        "start": 93.24,
+        "end": 93.42,
+        "word": " in"
+      },
+      {
+        "start": 93.42,
+        "end": 93.56,
+        "word": " that"
+      },
+      {
+        "start": 93.56,
+        "end": 93.86,
+        "word": " account?"
+      }
+    ]
+  },
+  {
+    "start": 94.68,
+    "end": 99.58,
+    "text": " Quit pretending you're rich. Go ahead, make the transfer. If it goes through, I'll lick your shoes.",
+    "words": [
+      {
+        "start": 94.68,
+        "end": 94.78,
+        "word": " Quit"
+      },
+      {
+        "start": 94.78,
+        "end": 95.24,
+        "word": " pretending"
+      },
+      {
+        "start": 95.24,
+        "end": 95.52,
+        "word": " you're"
+      },
+      {
+        "start": 95.52,
+        "end": 95.76,
+        "word": " rich."
+      },
+      {
+        "start": 96.24,
+        "end": 96.36,
+        "word": " Go"
+      },
+      {
+        "start": 96.36,
+        "end": 96.66,
+        "word": " ahead,"
+      },
+      {
+        "start": 96.84,
+        "end": 97.04,
+        "word": " make"
+      },
+      {
+        "start": 97.04,
+        "end": 97.22,
+        "word": " the"
+      },
+      {
+        "start": 97.22,
+        "end": 97.62,
+        "word": " transfer."
+      },
+      {
+        "start": 97.8,
+        "end": 97.9,
+        "word": " If"
+      },
+      {
+        "start": 97.9,
+        "end": 98.02,
+        "word": " it"
+      },
+      {
+        "start": 98.02,
+        "end": 98.18,
+        "word": " goes"
+      },
+      {
+        "start": 98.18,
+        "end": 98.52,
+        "word": " through,"
+      },
+      {
+        "start": 98.76,
+        "end": 98.9,
+        "word": " I'll"
+      },
+      {
+        "start": 98.9,
+        "end": 99.02,
+        "word": " lick"
+      },
+      {
+        "start": 99.02,
+        "end": 99.22,
+        "word": " your"
+      },
+      {
+        "start": 99.22,
+        "end": 99.58,
+        "word": " shoes."
+      }
+    ]
+  },
+  {
+    "start": 105.68,
+    "end": 107.0,
+    "text": " Everybody, come look!",
+    "words": [
+      {
+        "start": 105.68,
+        "end": 106.16,
+        "word": " Everybody,"
+      },
+      {
+        "start": 106.48,
+        "end": 106.62,
+        "word": " come"
+      },
+      {
+        "start": 106.62,
+        "end": 107.0,
+        "word": " look!"
+      }
+    ]
+  },
+  {
+    "start": 108.14,
+    "end": 113.0,
+    "text": " This old bomb says he's going to transfer three million dollars. What a joke.",
+    "words": [
+      {
+        "start": 108.14,
+        "end": 108.66,
+        "word": " This"
+      },
+      {
+        "start": 108.66,
+        "end": 108.98,
+        "word": " old"
+      },
+      {
+        "start": 108.98,
+        "end": 109.3,
+        "word": " bomb"
+      },
+      {
+        "start": 109.3,
+        "end": 109.56,
+        "word": " says"
+      },
+      {
+        "start": 109.56,
+        "end": 109.78,
+        "word": " he's"
+      },
+      {
+        "start": 109.78,
+        "end": 109.84,
+        "word": " going"
+      },
+      {
+        "start": 109.84,
+        "end": 109.96,
+        "word": " to"
+      },
+      {
+        "start": 109.96,
+        "end": 110.34,
+        "word": " transfer"
+      },
+      {
+        "start": 110.34,
+        "end": 110.74,
+        "word": " three"
+      },
+      {
+        "start": 110.74,
+        "end": 111.18,
+        "word": " million"
+      },
+      {
+        "start": 111.18,
+        "end": 111.78,
+        "word": " dollars."
+      },
+      {
+        "start": 112.32,
+        "end": 112.48,
+        "word": " What"
+      },
+      {
+        "start": 112.48,
+        "end": 112.76,
+        "word": " a"
+      },
+      {
+        "start": 112.76,
+        "end": 113.0,
+        "word": " joke."
+      }
+    ]
+  },
+  {
+    "start": 113.42,
+    "end": 119.2,
+    "text": " Three million dollars? Is this guy out of his mind? Dressed like that, there's no way he has three million.",
+    "words": [
+      {
+        "start": 113.42,
+        "end": 113.62,
+        "word": " Three"
+      },
+      {
+        "start": 113.62,
+        "end": 113.92,
+        "word": " million"
+      },
+      {
+        "start": 113.92,
+        "end": 114.44,
+        "word": " dollars?"
+      },
+      {
+        "start": 114.74,
+        "end": 114.94,
+        "word": " Is"
+      },
+      {
+        "start": 114.94,
+        "end": 115.08,
+        "word": " this"
+      },
+      {
+        "start": 115.08,
+        "end": 115.24,
+        "word": " guy"
+      },
+      {
+        "start": 115.24,
+        "end": 115.38,
+        "word": " out"
+      },
+      {
+        "start": 115.38,
+        "end": 115.48,
+        "word": " of"
+      },
+      {
+        "start": 115.48,
+        "end": 115.62,
+        "word": " his"
+      },
+      {
+        "start": 115.62,
+        "end": 115.98,
+        "word": " mind?"
+      },
+      {
+        "start": 116.38,
+        "end": 116.48,
+        "word": " Dressed"
+      },
+      {
+        "start": 116.48,
+        "end": 116.7,
+        "word": " like"
+      },
+      {
+        "start": 116.7,
+        "end": 116.92,
+        "word": " that,"
+      },
+      {
+        "start": 116.94,
+        "end": 117.14,
+        "word": " there's"
+      },
+      {
+        "start": 117.14,
+        "end": 117.38,
+        "word": " no"
+      },
+      {
+        "start": 117.38,
+        "end": 117.58,
+        "word": " way"
+      },
+      {
+        "start": 117.58,
+        "end": 117.72,
+        "word": " he"
+      },
+      {
+        "start": 117.72,
+        "end": 117.96,
+        "word": " has"
+      },
+      {
+        "start": 117.96,
+        "end": 118.72,
+        "word": " three"
+      },
+      {
+        "start": 118.72,
+        "end": 119.2,
+        "word": " million."
+      }
+    ]
+  },
+  {
+    "start": 119.76,
+    "end": 122.62,
+    "text": " Go ahead, make the transfer. What's the holder?",
+    "words": [
+      {
+        "start": 119.76,
+        "end": 120.18,
+        "word": " Go"
+      },
+      {
+        "start": 120.18,
+        "end": 120.54,
+        "word": " ahead,"
+      },
+      {
+        "start": 120.72,
+        "end": 121.02,
+        "word": " make"
+      },
+      {
+        "start": 121.02,
+        "end": 121.2,
+        "word": " the"
+      },
+      {
+        "start": 121.2,
+        "end": 121.66,
+        "word": " transfer."
+      },
+      {
+        "start": 122.06,
+        "end": 122.28,
+        "word": " What's"
+      },
+      {
+        "start": 122.28,
+        "end": 122.4,
+        "word": " the"
+      },
+      {
+        "start": 122.4,
+        "end": 122.62,
+        "word": " holder?"
+      }
+    ]
+  },
+  {
+    "start": 123.4,
+    "end": 126.16,
+    "text": " Did you just find out you don't have enough money in your account?",
+    "words": [
+      {
+        "start": 123.4,
+        "end": 123.58,
+        "word": " Did"
+      },
+      {
+        "start": 123.58,
+        "end": 123.68,
+        "word": " you"
+      },
+      {
+        "start": 123.68,
+        "end": 123.86,
+        "word": " just"
+      },
+      {
+        "start": 123.86,
+        "end": 124.04,
+        "word": " find"
+      },
+      {
+        "start": 124.04,
+        "end": 124.22,
+        "word": " out"
+      },
+      {
+        "start": 124.22,
+        "end": 124.32,
+        "word": " you"
+      },
+      {
+        "start": 124.32,
+        "end": 124.44,
+        "word": " don't"
+      },
+      {
+        "start": 124.44,
+        "end": 124.64,
+        "word": " have"
+      },
+      {
+        "start": 124.64,
+        "end": 124.86,
+        "word": " enough"
+      },
+      {
+        "start": 124.86,
+        "end": 125.18,
+        "word": " money"
+      },
+      {
+        "start": 125.18,
+        "end": 125.6,
+        "word": " in"
+      },
+      {
+        "start": 125.6,
+        "end": 125.76,
+        "word": " your"
+      },
+      {
+        "start": 125.76,
+        "end": 126.16,
+        "word": " account?"
+      }
+    ]
+  },
+  {
+    "start": 132.34,
+    "end": 136.18,
+    "text": " What? You actually have three million?",
+    "words": [
+      {
+        "start": 132.34,
+        "end": 132.86,
+        "word": " What?"
+      },
+      {
+        "start": 134.16,
+        "end": 134.44,
+        "word": " You"
+      },
+      {
+        "start": 134.44,
+        "end": 135.14,
+        "word": " actually"
+      },
+      {
+        "start": 135.14,
+        "end": 135.54,
+        "word": " have"
+      },
+      {
+        "start": 135.54,
+        "end": 135.84,
+        "word": " three"
+      },
+      {
+        "start": 135.84,
+        "end": 136.18,
+        "word": " million?"
+      }
+    ]
+  }
+]
