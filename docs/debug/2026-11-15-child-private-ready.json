@@ -85,7 +85,17 @@
     "actual_spacing": "65m22s",
     "playlist": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/videos",
     "playlist_order": "E1P1PUBLIC/E1P2PUBLIC/E2P1PRIVATE/E2P2PRIVATE verified16:08:37DOM+settledpixels103847",
-    "ledger": "dispatchonce20416:08:41exactefef0958234db894f5abd99864cbd6f5096f7888,pending",
+    "ledger": {
+      "run": 43705077857,
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43705077857",
+      "status": "SUCCESS",
+      "exact_head": "efef0958234db894f5abd99864cbd6f5096f7888",
+      "published_at": "2026-11-15T10:38:12Z",
+      "stopped_readback": "2026-11-15T10:39:11.0437281Z",
+      "item": "yourchannel-child833163-ep1-part2-v1",
+      "video": "daeBcCip6fk",
+      "verified_at": "2026-11-15T16:11:42+05:30"
+    },
     "next": "E2P1u5TEoTDttjs floor17:08:12,wake17:10threshold3,wakeschedule-01M7FCK0X3AVDPC19VGAGT9MGB,4h20:08:12",
     "restrictions": "NoIGFBBufferemailspend,allstages404"
   }
