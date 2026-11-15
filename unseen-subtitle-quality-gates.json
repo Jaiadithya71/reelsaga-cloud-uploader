@@ -4,7 +4,7 @@
   "commission": "YourChannel60%",
   "source": "https://dramacps.com/dashboard",
   "source_record": "/tmp/unseen-sources-clean.json",
-  "status": "E1P1PUBLIC03:18:49,E1P2PRIVATEcleanready;E2twoQArenderspendingprivateupload.",
+  "status": "E1P1PUBLIC03:18:49IST;E1P2/E2P1/P2PRIVATEcleanready,actualorderedplaylistverified03:26:31.",
   "evidence": "E1 102.678/E2 79.295sec. Whole base+small;411/317quarterOCR compared;103/79 integercaptionpixels,52+51/40+39actionpixels even+odd inspected. Allsuspectedbriefomissions resolved byquarterOCR, including cash/blamesme/Richard/No/sons/Now. No confirmed captiondefect. E1 briefstairfall/kneeabrasion,handcuffs,non-graphic hospital/death references. No nudity/sex or graphicblood seen.",
   "renders": [
     {
@@ -214,5 +214,48 @@
       "stopped_readback": "2026-11-15T21:50:23.5007519Z",
       "verified_at": "2026-11-16T03:20:30+05:30"
     }
+  },
+  "e2_private_ready": {
+    "at": "2026-11-16T03:26:31+05:30",
+    "ids": [
+      "sWT_Y7FmX14",
+      "cVNdIjR5p1I"
+    ],
+    "studio_urls": [
+      "https://studio.youtube.com/video/sWT_Y7FmX14/edit",
+      "https://studio.youtube.com/video/cVNdIjR5p1I/edit"
+    ],
+    "probe_urls": [
+      "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43766197970",
+      "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43765890692"
+    ],
+    "exact_commits": [
+      "3051430c8455c40813bbd29b20d2acf5758703f6",
+      "1236b5ed0fc8e6ccb90f1bf299f5310deec75977"
+    ],
+    "stopped_readback": [
+      "2026-11-15T21:54:27.0677104Z",
+      "2026-11-15T21:51:21.3359443Z"
+    ],
+    "claims_none_pixels": [
+      "cloud-browser-20261115-215536.png",
+      "cloud-browser-20261115-215428.png"
+    ],
+    "native_ai_yes_saved_pixels": [
+      "cloud-browser-20261115-215529.png",
+      "cloud-browser-20261115-215501.png"
+    ],
+    "metadata": "FullAd/exactaffiliate/notforkids/noagechecked",
+    "actual_playlist_order": [
+      "Kjgv4AwGUP0",
+      "05njy_brxyo",
+      "sWT_Y7FmX14",
+      "cVNdIjR5p1I"
+    ],
+    "playlist": "https://studio.youtube.com/playlist/PLeNEHClaZ6gU/videos",
+    "playlist_pixels": "cloud-browser-20261115-215631.png",
+    "stage_cleanup": "bothHEAD404/originalsignedGET40403:23:42/03:24:44,cleanupwakesdeleted",
+    "guard": "OriginalP1pendingrun43765882904cancellednojobs/logs,noeffect;oneverifiedreplacementwithknownP2IDexception,fullinventory600nodup. P2inventory598nodup.",
+    "order_fix": "P2temporarilyremovedandreaddedtoappendafterP1;actualorderreadandpixelsverified."
   }
 }
