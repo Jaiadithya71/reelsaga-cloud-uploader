@@ -1,0 +1,830 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.24,
+    "text": " Ellie doesn't like it. You eat it.",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.54,
+        "word": " Ellie"
+      },
+      {
+        "start": 0.54,
+        "end": 0.84,
+        "word": " doesn't"
+      },
+      {
+        "start": 0.84,
+        "end": 0.98,
+        "word": " like"
+      },
+      {
+        "start": 0.98,
+        "end": 1.24,
+        "word": " it."
+      },
+      {
+        "start": 1.56,
+        "end": 1.6,
+        "word": " You"
+      },
+      {
+        "start": 1.6,
+        "end": 1.74,
+        "word": " eat"
+      },
+      {
+        "start": 1.74,
+        "end": 2.24,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 2.62,
+    "end": 4.28,
+    "text": " Mom, that's my favorite turkey leg.",
+    "words": [
+      {
+        "start": 2.62,
+        "end": 2.62,
+        "word": " Mom,"
+      },
+      {
+        "start": 2.86,
+        "end": 3.08,
+        "word": " that's"
+      },
+      {
+        "start": 3.08,
+        "end": 3.26,
+        "word": " my"
+      },
+      {
+        "start": 3.26,
+        "end": 3.58,
+        "word": " favorite"
+      },
+      {
+        "start": 3.58,
+        "end": 3.96,
+        "word": " turkey"
+      },
+      {
+        "start": 3.96,
+        "end": 4.28,
+        "word": " leg."
+      }
+    ]
+  },
+  {
+    "start": 4.56,
+    "end": 5.92,
+    "text": " Don't call me mom. Call me auntie.",
+    "words": [
+      {
+        "start": 4.56,
+        "end": 4.68,
+        "word": " Don't"
+      },
+      {
+        "start": 4.68,
+        "end": 4.8,
+        "word": " call"
+      },
+      {
+        "start": 4.8,
+        "end": 4.94,
+        "word": " me"
+      },
+      {
+        "start": 4.94,
+        "end": 5.12,
+        "word": " mom."
+      },
+      {
+        "start": 5.34,
+        "end": 5.4,
+        "word": " Call"
+      },
+      {
+        "start": 5.4,
+        "end": 5.54,
+        "word": " me"
+      },
+      {
+        "start": 5.54,
+        "end": 5.92,
+        "word": " auntie."
+      }
+    ]
+  },
+  {
+    "start": 6.16,
+    "end": 7.88,
+    "text": " Also, this turkey leg is only for my daughter.",
+    "words": [
+      {
+        "start": 6.16,
+        "end": 6.26,
+        "word": " Also,"
+      },
+      {
+        "start": 6.42,
+        "end": 6.54,
+        "word": " this"
+      },
+      {
+        "start": 6.54,
+        "end": 6.82,
+        "word": " turkey"
+      },
+      {
+        "start": 6.82,
+        "end": 7.02,
+        "word": " leg"
+      },
+      {
+        "start": 7.02,
+        "end": 7.14,
+        "word": " is"
+      },
+      {
+        "start": 7.14,
+        "end": 7.28,
+        "word": " only"
+      },
+      {
+        "start": 7.28,
+        "end": 7.48,
+        "word": " for"
+      },
+      {
+        "start": 7.48,
+        "end": 7.64,
+        "word": " my"
+      },
+      {
+        "start": 7.64,
+        "end": 7.88,
+        "word": " daughter."
+      }
+    ]
+  },
+  {
+    "start": 8.04,
+    "end": 9.12,
+    "text": " Aren't I still your daughter?",
+    "words": [
+      {
+        "start": 8.04,
+        "end": 8.16,
+        "word": " Aren't"
+      },
+      {
+        "start": 8.16,
+        "end": 8.34,
+        "word": " I"
+      },
+      {
+        "start": 8.34,
+        "end": 8.58,
+        "word": " still"
+      },
+      {
+        "start": 8.58,
+        "end": 8.78,
+        "word": " your"
+      },
+      {
+        "start": 8.78,
+        "end": 9.12,
+        "word": " daughter?"
+      }
+    ]
+  },
+  {
+    "start": 9.74,
+    "end": 10.46,
+    "text": " Just one night.",
+    "words": [
+      {
+        "start": 9.74,
+        "end": 9.88,
+        "word": " Just"
+      },
+      {
+        "start": 9.88,
+        "end": 10.12,
+        "word": " one"
+      },
+      {
+        "start": 10.12,
+        "end": 10.46,
+        "word": " night."
+      }
+    ]
+  },
+  {
+    "start": 11.42,
+    "end": 12.8,
+    "text": " Ellie's scared sleeping somewhere new.",
+    "words": [
+      {
+        "start": 11.42,
+        "end": 11.58,
+        "word": " Ellie's"
+      },
+      {
+        "start": 11.58,
+        "end": 11.76,
+        "word": " scared"
+      },
+      {
+        "start": 11.76,
+        "end": 12.14,
+        "word": " sleeping"
+      },
+      {
+        "start": 12.14,
+        "end": 12.48,
+        "word": " somewhere"
+      },
+      {
+        "start": 12.48,
+        "end": 12.8,
+        "word": " new."
+      }
+    ]
+  },
+  {
+    "start": 14.76,
+    "end": 17.22,
+    "text": " Mommy, can I have my own bed back tomorrow?",
+    "words": [
+      {
+        "start": 14.76,
+        "end": 15.14,
+        "word": " Mommy,"
+      },
+      {
+        "start": 15.24,
+        "end": 15.42,
+        "word": " can"
+      },
+      {
+        "start": 15.42,
+        "end": 15.6,
+        "word": " I"
+      },
+      {
+        "start": 15.6,
+        "end": 15.8,
+        "word": " have"
+      },
+      {
+        "start": 15.8,
+        "end": 16.0,
+        "word": " my"
+      },
+      {
+        "start": 16.0,
+        "end": 16.24,
+        "word": " own"
+      },
+      {
+        "start": 16.24,
+        "end": 16.48,
+        "word": " bed"
+      },
+      {
+        "start": 16.48,
+        "end": 16.76,
+        "word": " back"
+      },
+      {
+        "start": 16.76,
+        "end": 17.22,
+        "word": " tomorrow?"
+      }
+    ]
+  },
+  {
+    "start": 18.24,
+    "end": 20.7,
+    "text": " Of course. Everything will be back to normal tomorrow.",
+    "words": [
+      {
+        "start": 18.24,
+        "end": 18.34,
+        "word": " Of"
+      },
+      {
+        "start": 18.34,
+        "end": 18.56,
+        "word": " course."
+      },
+      {
+        "start": 19.32,
+        "end": 19.52,
+        "word": " Everything"
+      },
+      {
+        "start": 19.52,
+        "end": 19.72,
+        "word": " will"
+      },
+      {
+        "start": 19.72,
+        "end": 19.82,
+        "word": " be"
+      },
+      {
+        "start": 19.82,
+        "end": 19.98,
+        "word": " back"
+      },
+      {
+        "start": 19.98,
+        "end": 20.14,
+        "word": " to"
+      },
+      {
+        "start": 20.14,
+        "end": 20.34,
+        "word": " normal"
+      },
+      {
+        "start": 20.34,
+        "end": 20.7,
+        "word": " tomorrow."
+      }
+    ]
+  },
+  {
+    "start": 21.8,
+    "end": 22.92,
+    "text": " Ellie called me mommy today.",
+    "words": [
+      {
+        "start": 21.8,
+        "end": 21.96,
+        "word": " Ellie"
+      },
+      {
+        "start": 21.96,
+        "end": 22.2,
+        "word": " called"
+      },
+      {
+        "start": 22.2,
+        "end": 22.36,
+        "word": " me"
+      },
+      {
+        "start": 22.36,
+        "end": 22.66,
+        "word": " mommy"
+      },
+      {
+        "start": 22.66,
+        "end": 22.92,
+        "word": " today."
+      }
+    ]
+  },
+  {
+    "start": 23.4,
+    "end": 24.38,
+    "text": " Her eyes were all red.",
+    "words": [
+      {
+        "start": 23.4,
+        "end": 23.54,
+        "word": " Her"
+      },
+      {
+        "start": 23.54,
+        "end": 23.76,
+        "word": " eyes"
+      },
+      {
+        "start": 23.76,
+        "end": 23.94,
+        "word": " were"
+      },
+      {
+        "start": 23.94,
+        "end": 24.12,
+        "word": " all"
+      },
+      {
+        "start": 24.12,
+        "end": 24.38,
+        "word": " red."
+      }
+    ]
+  },
+  {
+    "start": 24.78,
+    "end": 27.42,
+    "text": " I felt awful for her, and everyone said I did the right thing.",
+    "words": [
+      {
+        "start": 24.78,
+        "end": 24.94,
+        "word": " I"
+      },
+      {
+        "start": 24.94,
+        "end": 25.1,
+        "word": " felt"
+      },
+      {
+        "start": 25.1,
+        "end": 25.38,
+        "word": " awful"
+      },
+      {
+        "start": 25.38,
+        "end": 25.64,
+        "word": " for"
+      },
+      {
+        "start": 25.64,
+        "end": 25.86,
+        "word": " her,"
+      },
+      {
+        "start": 25.98,
+        "end": 26.12,
+        "word": " and"
+      },
+      {
+        "start": 26.12,
+        "end": 26.3,
+        "word": " everyone"
+      },
+      {
+        "start": 26.3,
+        "end": 26.6,
+        "word": " said"
+      },
+      {
+        "start": 26.6,
+        "end": 26.72,
+        "word": " I"
+      },
+      {
+        "start": 26.72,
+        "end": 26.86,
+        "word": " did"
+      },
+      {
+        "start": 26.86,
+        "end": 26.98,
+        "word": " the"
+      },
+      {
+        "start": 26.98,
+        "end": 27.12,
+        "word": " right"
+      },
+      {
+        "start": 27.12,
+        "end": 27.42,
+        "word": " thing."
+      }
+    ]
+  },
+  {
+    "start": 28.22,
+    "end": 32.94,
+    "text": " Mommy, you spent all day with Ellie. I want you with me too.",
+    "words": [
+      {
+        "start": 28.22,
+        "end": 28.74,
+        "word": " Mommy,"
+      },
+      {
+        "start": 29.08,
+        "end": 29.54,
+        "word": " you"
+      },
+      {
+        "start": 29.54,
+        "end": 29.8,
+        "word": " spent"
+      },
+      {
+        "start": 29.8,
+        "end": 30.1,
+        "word": " all"
+      },
+      {
+        "start": 30.1,
+        "end": 30.32,
+        "word": " day"
+      },
+      {
+        "start": 30.32,
+        "end": 30.56,
+        "word": " with"
+      },
+      {
+        "start": 30.56,
+        "end": 30.9,
+        "word": " Ellie."
+      },
+      {
+        "start": 31.32,
+        "end": 31.52,
+        "word": " I"
+      },
+      {
+        "start": 31.52,
+        "end": 31.72,
+        "word": " want"
+      },
+      {
+        "start": 31.72,
+        "end": 31.92,
+        "word": " you"
+      },
+      {
+        "start": 31.92,
+        "end": 32.1,
+        "word": " with"
+      },
+      {
+        "start": 32.1,
+        "end": 32.38,
+        "word": " me"
+      },
+      {
+        "start": 32.38,
+        "end": 32.94,
+        "word": " too."
+      }
+    ]
+  },
+  {
+    "start": 38.32000000000001,
+    "end": 40.08,
+    "text": " Moopsy Bennett, you're up.",
+    "words": [
+      {
+        "start": 38.32000000000001,
+        "end": 38.84,
+        "word": " Moopsy"
+      },
+      {
+        "start": 38.84,
+        "end": 39.06,
+        "word": " Bennett,"
+      },
+      {
+        "start": 39.48,
+        "end": 39.68,
+        "word": " you're"
+      },
+      {
+        "start": 39.68,
+        "end": 40.08,
+        "word": " up."
+      }
+    ]
+  },
+  {
+    "start": 44.120000000000005,
+    "end": 46.8,
+    "text": " It's okay, Moopsy. Tell us about your mom.",
+    "words": [
+      {
+        "start": 44.120000000000005,
+        "end": 44.64,
+        "word": " It's"
+      },
+      {
+        "start": 44.64,
+        "end": 44.92,
+        "word": " okay,"
+      },
+      {
+        "start": 45.02,
+        "end": 45.26,
+        "word": " Moopsy."
+      },
+      {
+        "start": 45.8,
+        "end": 46.02,
+        "word": " Tell"
+      },
+      {
+        "start": 46.02,
+        "end": 46.16,
+        "word": " us"
+      },
+      {
+        "start": 46.16,
+        "end": 46.36,
+        "word": " about"
+      },
+      {
+        "start": 46.36,
+        "end": 46.52,
+        "word": " your"
+      },
+      {
+        "start": 46.52,
+        "end": 46.8,
+        "word": " mom."
+      }
+    ]
+  },
+  {
+    "start": 50.58,
+    "end": 52.12,
+    "text": " Laura, shopping with the kids?",
+    "words": [
+      {
+        "start": 50.58,
+        "end": 50.82,
+        "word": " Laura,"
+      },
+      {
+        "start": 51.26,
+        "end": 51.62,
+        "word": " shopping"
+      },
+      {
+        "start": 51.62,
+        "end": 51.82,
+        "word": " with"
+      },
+      {
+        "start": 51.82,
+        "end": 51.94,
+        "word": " the"
+      },
+      {
+        "start": 51.94,
+        "end": 52.12,
+        "word": " kids?"
+      }
+    ]
+  },
+  {
+    "start": 52.36,
+    "end": 55.38,
+    "text": " Yeah, I'm out with my daughter and a relative's little girl.",
+    "words": [
+      {
+        "start": 52.36,
+        "end": 52.6,
+        "word": " Yeah,"
+      },
+      {
+        "start": 52.86,
+        "end": 53.26,
+        "word": " I'm"
+      },
+      {
+        "start": 53.26,
+        "end": 53.38,
+        "word": " out"
+      },
+      {
+        "start": 53.38,
+        "end": 53.5,
+        "word": " with"
+      },
+      {
+        "start": 53.5,
+        "end": 53.68,
+        "word": " my"
+      },
+      {
+        "start": 53.68,
+        "end": 53.94,
+        "word": " daughter"
+      },
+      {
+        "start": 53.94,
+        "end": 54.34,
+        "word": " and"
+      },
+      {
+        "start": 54.34,
+        "end": 54.5,
+        "word": " a"
+      },
+      {
+        "start": 54.5,
+        "end": 54.96,
+        "word": " relative's"
+      },
+      {
+        "start": 54.96,
+        "end": 55.1,
+        "word": " little"
+      },
+      {
+        "start": 55.1,
+        "end": 55.38,
+        "word": " girl."
+      }
+    ]
+  },
+  {
+    "start": 58.7,
+    "end": 60.42,
+    "text": " Moopsy, you can start now.",
+    "words": [
+      {
+        "start": 58.7,
+        "end": 59.6,
+        "word": " Moopsy,"
+      },
+      {
+        "start": 59.86,
+        "end": 60.04,
+        "word": " you"
+      },
+      {
+        "start": 60.04,
+        "end": 60.16,
+        "word": " can"
+      },
+      {
+        "start": 60.16,
+        "end": 60.4,
+        "word": " start"
+      },
+      {
+        "start": 60.4,
+        "end": 60.85,
+        "word": " now."
+      }
+    ]
+  },
+  {
+    "start": 63.42,
+    "end": 68.76,
+    "text": " My mommy is the kindest mommy in the whole world.",
+    "words": [
+      {
+        "start": 63.309999999999995,
+        "end": 63.76,
+        "word": " My"
+      },
+      {
+        "start": 63.76,
+        "end": 64.52,
+        "word": " mommy"
+      },
+      {
+        "start": 64.52,
+        "end": 65.82,
+        "word": " is"
+      },
+      {
+        "start": 65.82,
+        "end": 66.1,
+        "word": " the"
+      },
+      {
+        "start": 66.1,
+        "end": 66.72,
+        "word": " kindest"
+      },
+      {
+        "start": 66.72,
+        "end": 67.3,
+        "word": " mommy"
+      },
+      {
+        "start": 67.3,
+        "end": 67.52,
+        "word": " in"
+      },
+      {
+        "start": 67.52,
+        "end": 67.7,
+        "word": " the"
+      },
+      {
+        "start": 67.7,
+        "end": 68.02,
+        "word": " whole"
+      },
+      {
+        "start": 68.02,
+        "end": 68.76,
+        "word": " world."
+      }
+    ]
+  }
+]

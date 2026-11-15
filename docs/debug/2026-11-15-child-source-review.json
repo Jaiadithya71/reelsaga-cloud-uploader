@@ -8,7 +8,7 @@
   "affiliate": "https://r.reelsgo.tv/Yj6GMHSMEX6V",
   "app_home": "https://r.reelsgo.tv/xBO8r5fwB8IM",
   "affiliate_verified": "Nov15 11:55 dialog exact833163/yourchannel and11:56 Links exactID+bothURLs; screenshots062519/062609",
-  "status": "E1 reviewed/rendered ready for PRIVATE claim probes only; E2 still under QA",
+  "status": "E1+E2 reviewed and rendered; E1 private uploads, E2 private probes pending",
   "source_review_ready": true,
   "episode1": {
     "source_duration": 60.895,
@@ -59,6 +59,40 @@
       "measured_duration": 29.7,
       "approved_render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd",
       "render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd"
+    },
+    {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 34,
+      "duration": 34,
+      "sha256": "b0e8b6379c47693df4a86ede03c4b9567cff186f033d437ecd7cc34909bbeb23",
+      "bytes": 40101998,
+      "path": "/downloads/child-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 34.0,
+      "approved_render_sha256": "b0e8b6379c47693df4a86ede03c4b9567cff186f033d437ecd7cc34909bbeb23",
+      "render_sha256": "b0e8b6379c47693df4a86ede03c4b9567cff186f033d437ecd7cc34909bbeb23"
+    },
+    {
+      "episode": 2,
+      "part": 2,
+      "source_start": 34,
+      "source_end": 73.995,
+      "duration": 39.995000000000005,
+      "sha256": "9f54f1f8022ff3c6cc0b9d43902f1089cc2b28d0fced79f2272e58e6d646da58",
+      "bytes": 46904772,
+      "path": "/downloads/child-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 40.0,
+      "approved_render_sha256": "9f54f1f8022ff3c6cc0b9d43902f1089cc2b28d0fced79f2272e58e6d646da58",
+      "render_sha256": "9f54f1f8022ff3c6cc0b9d43902f1089cc2b28d0fced79f2272e58e6d646da58"
     }
   ],
   "part_gates": {
@@ -95,6 +129,54 @@
       "measured_duration": 29.7,
       "approved_render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd",
       "render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd"
+    },
+    "yourchannel-child833163-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 34,
+      "duration": 34,
+      "sha256": "b0e8b6379c47693df4a86ede03c4b9567cff186f033d437ecd7cc34909bbeb23",
+      "bytes": 40101998,
+      "path": "/downloads/child-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 34.0,
+      "approved_render_sha256": "b0e8b6379c47693df4a86ede03c4b9567cff186f033d437ecd7cc34909bbeb23",
+      "render_sha256": "b0e8b6379c47693df4a86ede03c4b9567cff186f033d437ecd7cc34909bbeb23"
+    },
+    "yourchannel-child833163-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 34,
+      "source_end": 73.995,
+      "duration": 39.995000000000005,
+      "sha256": "9f54f1f8022ff3c6cc0b9d43902f1089cc2b28d0fced79f2272e58e6d646da58",
+      "bytes": 46904772,
+      "path": "/downloads/child-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 40.0,
+      "approved_render_sha256": "9f54f1f8022ff3c6cc0b9d43902f1089cc2b28d0fced79f2272e58e6d646da58",
+      "render_sha256": "9f54f1f8022ff3c6cc0b9d43902f1089cc2b28d0fced79f2272e58e6d646da58"
     }
+  },
+  "episode2": {
+    "source_duration": 73.995,
+    "source_sha256": "10ce6ac3b81a0854f98fdeb1d0131e925335c48089d9ef245543c84ac6ee6381",
+    "whole_asr": [
+      "base.en",
+      "small.en"
+    ],
+    "quarter_ocr_frames": 296,
+    "action_pixels": 37,
+    "caption_pixels": 74,
+    "part_pixels": 12,
+    "confirmed_dialogue_defect": null,
+    "notes": "Both wholeASR agree dialogue; Mopsy phonetically Moopsy retained source name, caption OK versus okay equivalent. All spoken clauses found in source captions. Source top The Best Moment retained, original audio and burned captions, crying child/emotional neglect but no explicit nudity sex graphicwound observed; not policy guarantee."
   }
 }
