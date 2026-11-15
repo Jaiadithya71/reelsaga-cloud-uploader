@@ -4,7 +4,7 @@
   "commission": "YourChannel60%",
   "source": "https://dramacps.com/dashboard",
   "source_record": "/tmp/unseen-sources-clean.json",
-  "status": "E1/E2 whole-source QA cleared, four local renders inspected; no affiliate/getlink/no-repeat live check/upload/staging yet",
+  "status": "E1P1PUBLIC03:18:49,E1P2PRIVATEcleanready;E2twoQArenderspendingprivateupload.",
   "evidence": "E1 102.678/E2 79.295sec. Whole base+small;411/317quarterOCR compared;103/79 integercaptionpixels,52+51/40+39actionpixels even+odd inspected. Allsuspectedbriefomissions resolved byquarterOCR, including cash/blamesme/Richard/No/sons/Now. No confirmed captiondefect. E1 briefstairfall/kneeabrasion,handcuffs,non-graphic hospital/death references. No nudity/sex or graphicblood seen.",
   "renders": [
     {
@@ -190,5 +190,21 @@
       "cloud-browser-20261115-151834.png",
       "cloud-browser-20261115-151859.png"
     ]
+  },
+  "e1p1_public_closeout": {
+    "at": "2026-11-16T03:18:49+05:30",
+    "url": "https://www.youtube.com/shorts/Kjgv4AwGUP0",
+    "actual_player_verified": "2026-11-16T03:18:57+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261115-214755.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261115-214817.png",
+    "public_saved_pixels": "cloud-browser-20261115-214851.png",
+    "ordered_playlist_pixels": "cloud-browser-20261115-214909.png",
+    "spacing": "1:10:30",
+    "next_floor": "2026-11-16T04:18:49+05:30",
+    "next_wake": "wakeschedule-01M7GJYTQRTCEWN5FH2TJ9A6JB",
+    "ledger": "workflowcreated,initial404,nodispatchyet;followupwake03:22:34"
   }
 }
