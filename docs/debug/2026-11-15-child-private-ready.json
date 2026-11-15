@@ -73,5 +73,20 @@
   },
   "staging": "All4consumed privateobjects deleted HEAD404+originalsignedGET404; allcleanupwakesdeleted",
   "next": "E1P2wake16:04-16:07IST wakeschedule-01M7F912X7HBN9EMVZ4R88K0SK;floor16:02:50",
-  "index_handoff": "parent15:06:21sent"
+  "index_handoff": "parent15:06:21sent",
+  "e1p2_public": {
+    "actual": "2026-11-15T16:08:12+05:30",
+    "url": "https://www.youtube.com/shorts/daeBcCip6fk",
+    "single_save": "2026-11-15T16:08:11+05:30",
+    "player_verified": "16:08:19IST videoIddaeBcCip6fk/channelUC71kSXnAt6Ipy7KqVVo3mdA/privatefalse/unlistedfalse/OK/publish2026-11-15T02:38:12-08:00",
+    "claims_none": "16:06:52IST screenshot103652",
+    "metadata": "fullAdexactaffiliate/notforkids/noage/nativeAIYesSavedSaveUndoDisabled16:07:00 screenshot103707",
+    "latest_channel": "16:07:57 newestPUBLICChildE1P1,no newer PUBLIC",
+    "actual_spacing": "65m22s",
+    "playlist": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/videos",
+    "playlist_order": "E1P1PUBLIC/E1P2PUBLIC/E2P1PRIVATE/E2P2PRIVATE verified16:08:37DOM+settledpixels103847",
+    "ledger": "dispatchonce20416:08:41exactefef0958234db894f5abd99864cbd6f5096f7888,pending",
+    "next": "E2P1u5TEoTDttjs floor17:08:12,wake17:10threshold3,wakeschedule-01M7FCK0X3AVDPC19VGAGT9MGB,4h20:08:12",
+    "restrictions": "NoIGFBBufferemailspend,allstages404"
+  }
 }
