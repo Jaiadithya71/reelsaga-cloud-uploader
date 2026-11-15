@@ -449,5 +449,21 @@
       "stopped_readback": "2026-11-15T16:07:46.4395635Z",
       "verified_at": "2026-11-15T21:40:52+05:30"
     }
+  },
+  "e2p1_public_closeout": {
+    "at": "2026-11-15T22:44:14+05:30",
+    "url": "https://www.youtube.com/shorts/e5lsrdbBK-w",
+    "actual_player_verified": "2026-11-15T22:44:21+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261115-171323.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261115-171339.png",
+    "public_saved_pixels": "cloud-browser-20261115-171416.png",
+    "ordered_playlist_pixels": "cloud-browser-20261115-171439.png",
+    "spacing": "1:07:23",
+    "next_floor": "2026-11-15T23:44:14+05:30",
+    "next_wake": "wakeschedule-01M7G38D1SX8GAQ562J1F2JKRH",
+    "ledger_sha": "50d2e17f591c5f80f953712d39a9829a8d98b2de"
   }
 }
