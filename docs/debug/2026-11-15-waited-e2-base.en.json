@@ -1,0 +1,1295 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.28,
+    "text": " Piper told me about the kissing.",
+    "words": [
+      {
+        "start": 0.0,
+        "end": 0.84,
+        "word": " Piper"
+      },
+      {
+        "start": 0.84,
+        "end": 1.14,
+        "word": " told"
+      },
+      {
+        "start": 1.14,
+        "end": 1.38,
+        "word": " me"
+      },
+      {
+        "start": 1.38,
+        "end": 1.92,
+        "word": " about"
+      },
+      {
+        "start": 1.92,
+        "end": 2.1,
+        "word": " the"
+      },
+      {
+        "start": 2.1,
+        "end": 2.28,
+        "word": " kissing."
+      }
+    ]
+  },
+  {
+    "start": 4.98,
+    "end": 7.42,
+    "text": " You made me breakfast, about last night.",
+    "words": [
+      {
+        "start": 4.98,
+        "end": 5.18,
+        "word": " You"
+      },
+      {
+        "start": 5.18,
+        "end": 5.34,
+        "word": " made"
+      },
+      {
+        "start": 5.34,
+        "end": 5.46,
+        "word": " me"
+      },
+      {
+        "start": 5.46,
+        "end": 5.72,
+        "word": " breakfast,"
+      },
+      {
+        "start": 5.8,
+        "end": 6.92,
+        "word": " about"
+      },
+      {
+        "start": 6.92,
+        "end": 7.08,
+        "word": " last"
+      },
+      {
+        "start": 7.08,
+        "end": 7.42,
+        "word": " night."
+      }
+    ]
+  },
+  {
+    "start": 8.52,
+    "end": 10.46,
+    "text": " Ben, Ava's guitarist, since when?",
+    "words": [
+      {
+        "start": 8.52,
+        "end": 8.7,
+        "word": " Ben,"
+      },
+      {
+        "start": 9.08,
+        "end": 9.3,
+        "word": " Ava's"
+      },
+      {
+        "start": 9.3,
+        "end": 9.62,
+        "word": " guitarist,"
+      },
+      {
+        "start": 10.14,
+        "end": 10.18,
+        "word": " since"
+      },
+      {
+        "start": 10.18,
+        "end": 10.46,
+        "word": " when?"
+      }
+    ]
+  },
+  {
+    "start": 11.82,
+    "end": 13.94,
+    "text": " We met yesterday. He asked for my number.",
+    "words": [
+      {
+        "start": 11.82,
+        "end": 12.26,
+        "word": " We"
+      },
+      {
+        "start": 12.26,
+        "end": 12.38,
+        "word": " met"
+      },
+      {
+        "start": 12.38,
+        "end": 12.74,
+        "word": " yesterday."
+      },
+      {
+        "start": 13.24,
+        "end": 13.32,
+        "word": " He"
+      },
+      {
+        "start": 13.32,
+        "end": 13.42,
+        "word": " asked"
+      },
+      {
+        "start": 13.42,
+        "end": 13.62,
+        "word": " for"
+      },
+      {
+        "start": 13.62,
+        "end": 13.7,
+        "word": " my"
+      },
+      {
+        "start": 13.7,
+        "end": 13.94,
+        "word": " number."
+      }
+    ]
+  },
+  {
+    "start": 15.42,
+    "end": 16.4,
+    "text": " Are you going out with him?",
+    "words": [
+      {
+        "start": 15.42,
+        "end": 15.6,
+        "word": " Are"
+      },
+      {
+        "start": 15.6,
+        "end": 15.76,
+        "word": " you"
+      },
+      {
+        "start": 15.76,
+        "end": 15.92,
+        "word": " going"
+      },
+      {
+        "start": 15.92,
+        "end": 16.14,
+        "word": " out"
+      },
+      {
+        "start": 16.14,
+        "end": 16.26,
+        "word": " with"
+      },
+      {
+        "start": 16.26,
+        "end": 16.4,
+        "word": " him?"
+      }
+    ]
+  },
+  {
+    "start": 17.84,
+    "end": 18.96,
+    "text": " I don't know. Maybe?",
+    "words": [
+      {
+        "start": 17.84,
+        "end": 18.08,
+        "word": " I"
+      },
+      {
+        "start": 18.08,
+        "end": 18.18,
+        "word": " don't"
+      },
+      {
+        "start": 18.18,
+        "end": 18.38,
+        "word": " know."
+      },
+      {
+        "start": 18.84,
+        "end": 18.96,
+        "word": " Maybe?"
+      }
+    ]
+  },
+  {
+    "start": 21.32,
+    "end": 22.64,
+    "text": " You could take Rowan home on the motorcycle.",
+    "words": [
+      {
+        "start": 21.32,
+        "end": 21.32,
+        "word": " You"
+      },
+      {
+        "start": 21.32,
+        "end": 21.46,
+        "word": " could"
+      },
+      {
+        "start": 21.46,
+        "end": 21.62,
+        "word": " take"
+      },
+      {
+        "start": 21.62,
+        "end": 21.92,
+        "word": " Rowan"
+      },
+      {
+        "start": 21.92,
+        "end": 22.02,
+        "word": " home"
+      },
+      {
+        "start": 22.02,
+        "end": 22.16,
+        "word": " on"
+      },
+      {
+        "start": 22.16,
+        "end": 22.26,
+        "word": " the"
+      },
+      {
+        "start": 22.26,
+        "end": 22.64,
+        "word": " motorcycle."
+      }
+    ]
+  },
+  {
+    "start": 24.34,
+    "end": 24.64,
+    "text": " Needs gas.",
+    "words": [
+      {
+        "start": 24.34,
+        "end": 24.38,
+        "word": " Needs"
+      },
+      {
+        "start": 24.38,
+        "end": 24.64,
+        "word": " gas."
+      }
+    ]
+  },
+  {
+    "start": 26.78,
+    "end": 29.82,
+    "text": " I'll call my grandma.",
+    "words": [
+      {
+        "start": 26.78,
+        "end": 27.2,
+        "word": " I'll"
+      },
+      {
+        "start": 27.2,
+        "end": 27.34,
+        "word": " call"
+      },
+      {
+        "start": 27.34,
+        "end": 29.82,
+        "word": " my"
+      },
+      {
+        "start": 29.82,
+        "end": 29.82,
+        "word": " grandma."
+      }
+    ]
+  },
+  {
+    "start": 32.04,
+    "end": 33.22,
+    "text": " Any luck with the new girl?",
+    "words": [
+      {
+        "start": 32.04,
+        "end": 32.46,
+        "word": " Any"
+      },
+      {
+        "start": 32.46,
+        "end": 32.66,
+        "word": " luck"
+      },
+      {
+        "start": 32.66,
+        "end": 32.82,
+        "word": " with"
+      },
+      {
+        "start": 32.82,
+        "end": 32.88,
+        "word": " the"
+      },
+      {
+        "start": 32.88,
+        "end": 33.0,
+        "word": " new"
+      },
+      {
+        "start": 33.0,
+        "end": 33.22,
+        "word": " girl?"
+      }
+    ]
+  },
+  {
+    "start": 35.32,
+    "end": 38.14,
+    "text": " Nothing planned this weekend. That's what she told me.",
+    "words": [
+      {
+        "start": 35.32,
+        "end": 35.74,
+        "word": " Nothing"
+      },
+      {
+        "start": 35.74,
+        "end": 35.94,
+        "word": " planned"
+      },
+      {
+        "start": 35.94,
+        "end": 36.16,
+        "word": " this"
+      },
+      {
+        "start": 36.16,
+        "end": 36.32,
+        "word": " weekend."
+      },
+      {
+        "start": 37.04,
+        "end": 37.12,
+        "word": " That's"
+      },
+      {
+        "start": 37.12,
+        "end": 37.18,
+        "word": " what"
+      },
+      {
+        "start": 37.18,
+        "end": 37.28,
+        "word": " she"
+      },
+      {
+        "start": 37.28,
+        "end": 37.42,
+        "word": " told"
+      },
+      {
+        "start": 37.42,
+        "end": 38.14,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 39.1,
+    "end": 41.0,
+    "text": " Keep asking. You'll wear her down.",
+    "words": [
+      {
+        "start": 39.1,
+        "end": 39.52,
+        "word": " Keep"
+      },
+      {
+        "start": 39.52,
+        "end": 39.92,
+        "word": " asking."
+      },
+      {
+        "start": 40.44,
+        "end": 40.5,
+        "word": " You'll"
+      },
+      {
+        "start": 40.5,
+        "end": 40.68,
+        "word": " wear"
+      },
+      {
+        "start": 40.68,
+        "end": 40.78,
+        "word": " her"
+      },
+      {
+        "start": 40.78,
+        "end": 41.0,
+        "word": " down."
+      }
+    ]
+  },
+  {
+    "start": 43.54,
+    "end": 46.8,
+    "text": " She's a person, Logan. Not a door you kick until it opens.",
+    "words": [
+      {
+        "start": 43.54,
+        "end": 43.96,
+        "word": " She's"
+      },
+      {
+        "start": 43.96,
+        "end": 44.04,
+        "word": " a"
+      },
+      {
+        "start": 44.04,
+        "end": 44.32,
+        "word": " person,"
+      },
+      {
+        "start": 44.48,
+        "end": 44.58,
+        "word": " Logan."
+      },
+      {
+        "start": 45.3,
+        "end": 45.48,
+        "word": " Not"
+      },
+      {
+        "start": 45.48,
+        "end": 45.58,
+        "word": " a"
+      },
+      {
+        "start": 45.58,
+        "end": 45.76,
+        "word": " door"
+      },
+      {
+        "start": 45.76,
+        "end": 45.98,
+        "word": " you"
+      },
+      {
+        "start": 45.98,
+        "end": 46.18,
+        "word": " kick"
+      },
+      {
+        "start": 46.18,
+        "end": 46.42,
+        "word": " until"
+      },
+      {
+        "start": 46.42,
+        "end": 46.66,
+        "word": " it"
+      },
+      {
+        "start": 46.66,
+        "end": 46.8,
+        "word": " opens."
+      }
+    ]
+  },
+  {
+    "start": 47.82,
+    "end": 49.26,
+    "text": " I thought you'd appreciate a pretty girl.",
+    "words": [
+      {
+        "start": 47.82,
+        "end": 48.0,
+        "word": " I"
+      },
+      {
+        "start": 48.0,
+        "end": 48.16,
+        "word": " thought"
+      },
+      {
+        "start": 48.16,
+        "end": 48.32,
+        "word": " you'd"
+      },
+      {
+        "start": 48.32,
+        "end": 48.7,
+        "word": " appreciate"
+      },
+      {
+        "start": 48.7,
+        "end": 48.82,
+        "word": " a"
+      },
+      {
+        "start": 48.82,
+        "end": 48.96,
+        "word": " pretty"
+      },
+      {
+        "start": 48.96,
+        "end": 49.26,
+        "word": " girl."
+      }
+    ]
+  },
+  {
+    "start": 50.14,
+    "end": 50.74,
+    "text": " I do.",
+    "words": [
+      {
+        "start": 50.14,
+        "end": 50.56,
+        "word": " I"
+      },
+      {
+        "start": 50.56,
+        "end": 50.74,
+        "word": " do."
+      }
+    ]
+  },
+  {
+    "start": 52.42,
+    "end": 54.46,
+    "text": " Try appreciating one without talking like that.",
+    "words": [
+      {
+        "start": 52.42,
+        "end": 52.86,
+        "word": " Try"
+      },
+      {
+        "start": 52.86,
+        "end": 53.3,
+        "word": " appreciating"
+      },
+      {
+        "start": 53.3,
+        "end": 53.42,
+        "word": " one"
+      },
+      {
+        "start": 53.42,
+        "end": 53.64,
+        "word": " without"
+      },
+      {
+        "start": 53.64,
+        "end": 54.04,
+        "word": " talking"
+      },
+      {
+        "start": 54.04,
+        "end": 54.26,
+        "word": " like"
+      },
+      {
+        "start": 54.26,
+        "end": 54.46,
+        "word": " that."
+      }
+    ]
+  },
+  {
+    "start": 60.38,
+    "end": 61.58,
+    "text": " It's about a girl.",
+    "words": [
+      {
+        "start": 60.38,
+        "end": 60.82,
+        "word": " It's"
+      },
+      {
+        "start": 60.82,
+        "end": 61.26,
+        "word": " about"
+      },
+      {
+        "start": 61.26,
+        "end": 61.36,
+        "word": " a"
+      },
+      {
+        "start": 61.36,
+        "end": 61.58,
+        "word": " girl."
+      }
+    ]
+  },
+  {
+    "start": 63.620000000000005,
+    "end": 66.46,
+    "text": " We kissed. Next morning she's texting him.",
+    "words": [
+      {
+        "start": 63.620000000000005,
+        "end": 64.06,
+        "word": " We"
+      },
+      {
+        "start": 64.06,
+        "end": 64.28,
+        "word": " kissed."
+      },
+      {
+        "start": 65.16,
+        "end": 65.34,
+        "word": " Next"
+      },
+      {
+        "start": 65.34,
+        "end": 65.64,
+        "word": " morning"
+      },
+      {
+        "start": 65.64,
+        "end": 65.94,
+        "word": " she's"
+      },
+      {
+        "start": 65.94,
+        "end": 66.1,
+        "word": " texting"
+      },
+      {
+        "start": 66.1,
+        "end": 66.46,
+        "word": " him."
+      }
+    ]
+  },
+  {
+    "start": 67.04,
+    "end": 68.12,
+    "text": " Apparently I was the warm-up act.",
+    "words": [
+      {
+        "start": 67.04,
+        "end": 67.2,
+        "word": " Apparently"
+      },
+      {
+        "start": 67.2,
+        "end": 67.44,
+        "word": " I"
+      },
+      {
+        "start": 67.44,
+        "end": 67.56,
+        "word": " was"
+      },
+      {
+        "start": 67.56,
+        "end": 67.66,
+        "word": " the"
+      },
+      {
+        "start": 67.66,
+        "end": 67.8,
+        "word": " warm"
+      },
+      {
+        "start": 67.8,
+        "end": 67.98,
+        "word": "-up"
+      },
+      {
+        "start": 67.98,
+        "end": 68.12,
+        "word": " act."
+      }
+    ]
+  },
+  {
+    "start": 69.0,
+    "end": 69.94,
+    "text": " She tell you that?",
+    "words": [
+      {
+        "start": 69.0,
+        "end": 69.44,
+        "word": " She"
+      },
+      {
+        "start": 69.44,
+        "end": 69.62,
+        "word": " tell"
+      },
+      {
+        "start": 69.62,
+        "end": 69.76,
+        "word": " you"
+      },
+      {
+        "start": 69.76,
+        "end": 69.94,
+        "word": " that?"
+      }
+    ]
+  },
+  {
+    "start": 70.72,
+    "end": 71.64,
+    "text": " Ben made it pretty clear.",
+    "words": [
+      {
+        "start": 70.72,
+        "end": 70.92,
+        "word": " Ben"
+      },
+      {
+        "start": 70.92,
+        "end": 71.12,
+        "word": " made"
+      },
+      {
+        "start": 71.12,
+        "end": 71.22,
+        "word": " it"
+      },
+      {
+        "start": 71.22,
+        "end": 71.34,
+        "word": " pretty"
+      },
+      {
+        "start": 71.34,
+        "end": 71.64,
+        "word": " clear."
+      }
+    ]
+  },
+  {
+    "start": 72.9,
+    "end": 73.68,
+    "text": " You ask her?",
+    "words": [
+      {
+        "start": 72.9,
+        "end": 73.34,
+        "word": " You"
+      },
+      {
+        "start": 73.34,
+        "end": 73.5,
+        "word": " ask"
+      },
+      {
+        "start": 73.5,
+        "end": 73.68,
+        "word": " her?"
+      }
+    ]
+  },
+  {
+    "start": 83.2,
+    "end": 85.14,
+    "text": " My phone's still in the locker room. Wait here.",
+    "words": [
+      {
+        "start": 83.2,
+        "end": 83.68,
+        "word": " My"
+      },
+      {
+        "start": 83.68,
+        "end": 83.98,
+        "word": " phone's"
+      },
+      {
+        "start": 83.98,
+        "end": 84.1,
+        "word": " still"
+      },
+      {
+        "start": 84.1,
+        "end": 84.22,
+        "word": " in"
+      },
+      {
+        "start": 84.22,
+        "end": 84.24,
+        "word": " the"
+      },
+      {
+        "start": 84.24,
+        "end": 84.4,
+        "word": " locker"
+      },
+      {
+        "start": 84.4,
+        "end": 84.68,
+        "word": " room."
+      },
+      {
+        "start": 84.88,
+        "end": 84.9,
+        "word": " Wait"
+      },
+      {
+        "start": 84.9,
+        "end": 85.14,
+        "word": " here."
+      }
+    ]
+  },
+  {
+    "start": 90.22,
+    "end": 91.9,
+    "text": " Chloe says you don't know why I'm upset.",
+    "words": [
+      {
+        "start": 90.22,
+        "end": 90.7,
+        "word": " Chloe"
+      },
+      {
+        "start": 90.7,
+        "end": 90.96,
+        "word": " says"
+      },
+      {
+        "start": 90.96,
+        "end": 91.1,
+        "word": " you"
+      },
+      {
+        "start": 91.1,
+        "end": 91.24,
+        "word": " don't"
+      },
+      {
+        "start": 91.24,
+        "end": 91.36,
+        "word": " know"
+      },
+      {
+        "start": 91.36,
+        "end": 91.52,
+        "word": " why"
+      },
+      {
+        "start": 91.52,
+        "end": 91.64,
+        "word": " I'm"
+      },
+      {
+        "start": 91.64,
+        "end": 91.9,
+        "word": " upset."
+      }
+    ]
+  },
+  {
+    "start": 94.3,
+    "end": 95.26,
+    "text": " I don't.",
+    "words": [
+      {
+        "start": 94.3,
+        "end": 94.78,
+        "word": " I"
+      },
+      {
+        "start": 94.78,
+        "end": 95.26,
+        "word": " don't."
+      }
+    ]
+  },
+  {
+    "start": 95.72,
+    "end": 97.6,
+    "text": " Ben was bragging at practice this week.",
+    "words": [
+      {
+        "start": 95.72,
+        "end": 96.2,
+        "word": " Ben"
+      },
+      {
+        "start": 96.2,
+        "end": 96.38,
+        "word": " was"
+      },
+      {
+        "start": 96.38,
+        "end": 96.62,
+        "word": " bragging"
+      },
+      {
+        "start": 96.62,
+        "end": 96.86,
+        "word": " at"
+      },
+      {
+        "start": 96.86,
+        "end": 97.02,
+        "word": " practice"
+      },
+      {
+        "start": 97.02,
+        "end": 97.38,
+        "word": " this"
+      },
+      {
+        "start": 97.38,
+        "end": 97.6,
+        "word": " week."
+      }
+    ]
+  },
+  {
+    "start": 98.42,
+    "end": 99.1,
+    "text": " An eventful weekend.",
+    "words": [
+      {
+        "start": 98.42,
+        "end": 98.48,
+        "word": " An"
+      },
+      {
+        "start": 98.48,
+        "end": 98.88,
+        "word": " eventful"
+      },
+      {
+        "start": 98.88,
+        "end": 99.1,
+        "word": " weekend."
+      }
+    ]
+  },
+  {
+    "start": 100.34,
+    "end": 101.7,
+    "text": " You could have picked someone who wasn't my friend.",
+    "words": [
+      {
+        "start": 100.34,
+        "end": 100.34,
+        "word": " You"
+      },
+      {
+        "start": 100.34,
+        "end": 100.46,
+        "word": " could"
+      },
+      {
+        "start": 100.46,
+        "end": 100.54,
+        "word": " have"
+      },
+      {
+        "start": 100.54,
+        "end": 100.66,
+        "word": " picked"
+      },
+      {
+        "start": 100.66,
+        "end": 100.92,
+        "word": " someone"
+      },
+      {
+        "start": 100.92,
+        "end": 101.08,
+        "word": " who"
+      },
+      {
+        "start": 101.08,
+        "end": 101.32,
+        "word": " wasn't"
+      },
+      {
+        "start": 101.32,
+        "end": 101.44,
+        "word": " my"
+      },
+      {
+        "start": 101.44,
+        "end": 101.7,
+        "word": " friend."
+      }
+    ]
+  },
+  {
+    "start": 102.64,
+    "end": 105.04,
+    "text": " Ben, was I supposed to pretend Saturday meant nothing?",
+    "words": [
+      {
+        "start": 102.64,
+        "end": 102.92,
+        "word": " Ben,"
+      },
+      {
+        "start": 103.18,
+        "end": 103.34,
+        "word": " was"
+      },
+      {
+        "start": 103.34,
+        "end": 103.46,
+        "word": " I"
+      },
+      {
+        "start": 103.46,
+        "end": 103.7,
+        "word": " supposed"
+      },
+      {
+        "start": 103.7,
+        "end": 103.88,
+        "word": " to"
+      },
+      {
+        "start": 103.88,
+        "end": 104.04,
+        "word": " pretend"
+      },
+      {
+        "start": 104.04,
+        "end": 104.48,
+        "word": " Saturday"
+      },
+      {
+        "start": 104.48,
+        "end": 104.74,
+        "word": " meant"
+      },
+      {
+        "start": 104.74,
+        "end": 105.04,
+        "word": " nothing?"
+      }
+    ]
+  },
+  {
+    "start": 107.04,
+    "end": 108.7,
+    "text": " You stopped talking to me.",
+    "words": [
+      {
+        "start": 107.04,
+        "end": 107.52,
+        "word": " You"
+      },
+      {
+        "start": 107.52,
+        "end": 107.78,
+        "word": " stopped"
+      },
+      {
+        "start": 107.78,
+        "end": 108.24,
+        "word": " talking"
+      },
+      {
+        "start": 108.24,
+        "end": 108.58,
+        "word": " to"
+      },
+      {
+        "start": 108.58,
+        "end": 108.7,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 108.7,
+    "end": 111.68,
+    "text": " You never called? What was I supposed to think it meant?",
+    "words": [
+      {
+        "start": 108.7,
+        "end": 109.44,
+        "word": " You"
+      },
+      {
+        "start": 109.44,
+        "end": 109.66,
+        "word": " never"
+      },
+      {
+        "start": 109.66,
+        "end": 110.0,
+        "word": " called?"
+      },
+      {
+        "start": 110.46,
+        "end": 110.64,
+        "word": " What"
+      },
+      {
+        "start": 110.64,
+        "end": 110.74,
+        "word": " was"
+      },
+      {
+        "start": 110.74,
+        "end": 110.86,
+        "word": " I"
+      },
+      {
+        "start": 110.86,
+        "end": 111.1,
+        "word": " supposed"
+      },
+      {
+        "start": 111.1,
+        "end": 111.26,
+        "word": " to"
+      },
+      {
+        "start": 111.26,
+        "end": 111.4,
+        "word": " think"
+      },
+      {
+        "start": 111.4,
+        "end": 111.52,
+        "word": " it"
+      },
+      {
+        "start": 111.52,
+        "end": 111.68,
+        "word": " meant?"
+      }
+    ]
+  },
+  {
+    "start": 112.98,
+    "end": 115.06,
+    "text": " Ben made it sound like you chose him instead.",
+    "words": [
+      {
+        "start": 112.98,
+        "end": 113.42,
+        "word": " Ben"
+      },
+      {
+        "start": 113.42,
+        "end": 113.64,
+        "word": " made"
+      },
+      {
+        "start": 113.64,
+        "end": 113.76,
+        "word": " it"
+      },
+      {
+        "start": 113.76,
+        "end": 113.92,
+        "word": " sound"
+      },
+      {
+        "start": 113.92,
+        "end": 114.1,
+        "word": " like"
+      },
+      {
+        "start": 114.1,
+        "end": 114.24,
+        "word": " you"
+      },
+      {
+        "start": 114.24,
+        "end": 114.44,
+        "word": " chose"
+      },
+      {
+        "start": 114.44,
+        "end": 114.74,
+        "word": " him"
+      },
+      {
+        "start": 114.74,
+        "end": 115.06,
+        "word": " instead."
+      }
+    ]
+  },
+  {
+    "start": 116.88,
+    "end": 117.56,
+    "text": " Chose him?",
+    "words": [
+      {
+        "start": 116.88,
+        "end": 117.32,
+        "word": " Chose"
+      },
+      {
+        "start": 117.32,
+        "end": 117.56,
+        "word": " him?"
+      }
+    ]
+  },
+  {
+    "start": 118.54,
+    "end": 120.24,
+    "text": " Ava, I never even went out with Ben.",
+    "words": [
+      {
+        "start": 118.54,
+        "end": 118.9,
+        "word": " Ava,"
+      },
+      {
+        "start": 118.96,
+        "end": 119.04,
+        "word": " I"
+      },
+      {
+        "start": 119.04,
+        "end": 119.2,
+        "word": " never"
+      },
+      {
+        "start": 119.2,
+        "end": 119.48,
+        "word": " even"
+      },
+      {
+        "start": 119.48,
+        "end": 119.64,
+        "word": " went"
+      },
+      {
+        "start": 119.64,
+        "end": 119.86,
+        "word": " out"
+      },
+      {
+        "start": 119.86,
+        "end": 120.02,
+        "word": " with"
+      },
+      {
+        "start": 120.02,
+        "end": 120.24,
+        "word": " Ben."
+      }
+    ]
+  }
+]

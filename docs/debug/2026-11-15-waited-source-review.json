@@ -1,0 +1,103 @@
+{
+  "series": "The Love That Waited",
+  "dramacps_id": 833171,
+  "source": "https://dramacps.com/dashboard",
+  "free_episodes": 6,
+  "platform": "YourChannel",
+  "commission_percent": 60,
+  "affiliate": null,
+  "status": "E1 source QA and render prep complete; unuploaded; E2 held",
+  "source_review_ready": true,
+  "episode1": {
+    "source_duration": 116.907,
+    "source_sha256": "b740ea44c0ff4e3404243448969742997306d3763732b19bfa086ff40ccdd55b",
+    "whole_asr": [
+      "base.en",
+      "small.en"
+    ],
+    "quarter_ocr_frames": 468,
+    "action_pixels": 58,
+    "caption_pixels": 117,
+    "part_pixels": 18,
+    "confirmed_dialogue_defect": null,
+    "notes": "Source dialogue comparison and pixels found no confirmed defect. ASR Roland versus source name Rowan phonetic ambiguity, source retains Rowan. SmallASR adds possible background song words96.48-103.48; base and isolated17s transcript omit them and only return spoken dialogue Youre my sisters friend/I know. Not confirmed missing spoken dialogue; do not claim every background lyric certified. Source original audio/captions unchanged except standard boundary fades. Consensual clothed kiss/movie couch and handholding; no observed explicit nudity,sex,graphicwound, no policy guarantee."
+  },
+  "parts": [
+    {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 39.8,
+      "duration": 39.8,
+      "sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
+      "bytes": 38918656,
+      "path": "/downloads/waited-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": null,
+      "render_sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
+      "blocked_by": "Exact DramaCPS affiliate unavailable: Get Link returned502 twice; do not stage or upload",
+      "measured_duration": 39.8
+    },
+    {
+      "episode": 1,
+      "part": 2,
+      "source_start": 39.8,
+      "source_end": 77.0,
+      "duration": 37.2,
+      "sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
+      "bytes": 33835268,
+      "path": "/downloads/waited-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": null,
+      "render_sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
+      "blocked_by": "Exact DramaCPS affiliate unavailable: Get Link returned502 twice; do not stage or upload",
+      "measured_duration": 37.2
+    },
+    {
+      "episode": 1,
+      "part": 3,
+      "source_start": 77.0,
+      "source_end": 116.907,
+      "duration": 39.907,
+      "sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
+      "bytes": 30008693,
+      "path": "/downloads/waited-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": null,
+      "render_sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
+      "blocked_by": "Exact DramaCPS affiliate unavailable: Get Link returned502 twice; do not stage or upload",
+      "measured_duration": 39.89
+    }
+  ],
+  "episode2": {
+    "source_duration": 122.144,
+    "whole_asr": [
+      "base.en",
+      "small.en"
+    ],
+    "quarter_ocr_frames": 489,
+    "action_pixels": 61,
+    "caption_pixels": 122,
+    "status": "HELD unuploaded no repair/skip",
+    "caption_issue": "~61s source This about a girl? versus base/small/isolated audio transcript Its about a girl. Also combined Chloe says...I dont caption90.5-93.75 while base timestamps answer94.3-95.26; timing concern remains. Both models and isolatedaudio agree I dont, no missingwordsclaim."
+  },
+  "affiliate_problem": {
+    "attempt1": "Nov15 08:43:08 UI GetLink50216.1847s",
+    "attempt2": "Nov15 08:45:30 UI GetLink50216.264s",
+    "stopped_attempts": true,
+    "next_check": "09:47IST once, not in09:31YTrelease",
+    "browser_lease_released": true
+  },
+  "upload": "NONE",
+  "staging": "NONE",
+  "next": "At09:47 retrieve exact affiliate through normalUI once. If recovers, readback correctID then build manifests/privateproof for E1 threeparts. Claims/nativeAIYes/ownorderedplaylist/restrictions/metadata mandatory before public. Never publish placeholders."
+}
