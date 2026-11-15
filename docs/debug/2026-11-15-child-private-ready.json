@@ -135,8 +135,18 @@
     "latest_channel": "18:17:14 newestPUBLICChildE2P1,no newer PUBLIC",
     "actual_spacing": "64m01s",
     "playlist": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/videos",
-    "playlist_order": "E1P1/E1P2/E2P1/E2P2allPUBLIC verified18:18:02DOM screenshot124802",
-    "ledger": "dispatchonce204 afteractualpublic,exactfdfcbc630f2bcdbf6ba6695f19a1c7a653a4122b,pending",
+    "playlist_order": "E1P1/E1P2/E2P1/E2P2allPUBLIC verified18:18:02DOM settledpixels124822",
+    "ledger": {
+      "run": 43715691745,
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43715691745",
+      "status": "SUCCESS",
+      "exact_head": "fdfcbc630f2bcdbf6ba6695f19a1c7a653a4122b",
+      "published_at": "2026-11-15T12:47:36Z",
+      "stopped_readback": "2026-11-15T12:48:42.5704001Z",
+      "item": "yourchannel-child833163-ep2-part2-v1",
+      "video": "CVGGQPx0eN8",
+      "verified_at": "2026-11-15T18:21:01+05:30"
+    },
     "next": "Strikes833198E1P1A_xK7tzyc5Q floor19:17:36,wake19:20threshold3,wakeschedule-01M7FKZYWSVZ3N3XYKZR0FKB15,4h22:17:36",
     "remaining": "E3captionheld,no repair/skip/upload;not series complete",
     "restrictions": "NoIGFBBufferemailspend,allstages404"
