@@ -153,5 +153,42 @@
       "render_sha256": "e0c8ac1105c6fab5a8f8a341f4ea752922a5f1c0ed110b74a491ce3d285f1c03",
       "measured_duration": 36.4
     }
+  },
+  "private_ready_closeout": {
+    "verified_at": "2026-11-15T20:48:59+05:30",
+    "series_id": 833206,
+    "playlist": "https://studio.youtube.com/playlist/PLeNEHClaZ6gU/videos",
+    "playlist_visibility": "public",
+    "playlist_order": "manual",
+    "actual_order": [
+      "Kjgv4AwGUP0",
+      "05njy_brxyo"
+    ],
+    "all_private": true,
+    "native_ai_yes_saved": true,
+    "claims": "no claims on both, fresh check mandatory before release",
+    "affiliate": "https://r.reelsgo.tv/XgXUQQDeZj75",
+    "probes": [
+      {
+        "id": 43728161115,
+        "video": "Kjgv4AwGUP0"
+      },
+      {
+        "id": 43728777530,
+        "video": "05njy_brxyo"
+      }
+    ],
+    "probe_sha": "64e147e39a46c66f8ccddd45588be2f2176ca785",
+    "all_consumed_stages_deleted_head_and_original_signed_get_404": true,
+    "e2": "whole QA and local renders only, not uploaded",
+    "evidence": [
+      "cloud-browser-20261115-151600.png",
+      "cloud-browser-20261115-151721.png",
+      "cloud-browser-20261115-151755.png",
+      "cloud-browser-20261115-151805.png",
+      "cloud-browser-20261115-151830.png",
+      "cloud-browser-20261115-151834.png",
+      "cloud-browser-20261115-151859.png"
+    ]
   }
 }
