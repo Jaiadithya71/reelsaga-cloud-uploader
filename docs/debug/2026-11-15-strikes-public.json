@@ -15,7 +15,18 @@
     "playlist": "https://studio.youtube.com/playlist/PLJJBdGl32g9Q/videos",
     "order": "E1P1PUBLIC/E1P2/P3/E2P1/P2PRIVATEverifiedDOM19:22:22",
     "affiliate": "https://r.reelsgo.tv/W4BhAlv9_emh",
-    "ledger": "dispatchonce204exact10276e227b06800077ecf23aad1cde2132b03043,pending",
-    "next": "E1P2floor20:21:59,wake20:24threshold3,wakeschedule-01M7FQNRJ6GQJMD3F66RQ02QAW,4h23:21:59"
+    "ledger": {
+      "run": 43721280368,
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43721280368",
+      "status": "SUCCESS",
+      "exact_head": "10276e227b06800077ecf23aad1cde2132b03043",
+      "published_at": "2026-11-15T13:51:59Z",
+      "stopped_readback": "2026-11-15T13:52:54.0122880Z",
+      "item": "yourchannel-strikes833198-ep1-part1-v1",
+      "video": "A_xK7tzyc5Q",
+      "verified_at": "2026-11-15T19:25:28+05:30"
+    },
+    "next": "E1P2floor20:21:59,wake20:24threshold3,wakeschedule-01M7FQNRJ6GQJMD3F66RQ02QAW,4h23:21:59",
+    "playlist_order_pixels": "cloud-browser-20261115-135237.png"
   }
 }
