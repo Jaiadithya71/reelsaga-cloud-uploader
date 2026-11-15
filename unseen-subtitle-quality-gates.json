@@ -4,7 +4,7 @@
   "commission": "YourChannel60%",
   "source": "https://dramacps.com/dashboard",
   "source_record": "/tmp/unseen-sources-clean.json",
-  "status": "E1P1PUBLIC03:18:49IST;E1P2/E2P1/P2PRIVATEcleanready,actualorderedplaylistverified03:26:31.",
+  "status": "E1bothPUBLICthrough04:24:50IST;E2bothPRIVATEcleanready.",
   "evidence": "E1 102.678/E2 79.295sec. Whole base+small;411/317quarterOCR compared;103/79 integercaptionpixels,52+51/40+39actionpixels even+odd inspected. Allsuspectedbriefomissions resolved byquarterOCR, including cash/blamesme/Richard/No/sons/Now. No confirmed captiondefect. E1 briefstairfall/kneeabrasion,handcuffs,non-graphic hospital/death references. No nudity/sex or graphicblood seen.",
   "renders": [
     {
@@ -257,5 +257,22 @@
     "stage_cleanup": "bothHEAD404/originalsignedGET40403:23:42/03:24:44,cleanupwakesdeleted",
     "guard": "OriginalP1pendingrun43765882904cancellednojobs/logs,noeffect;oneverifiedreplacementwithknownP2IDexception,fullinventory600nodup. P2inventory598nodup.",
     "order_fix": "P2temporarilyremovedandreaddedtoappendafterP1;actualorderreadandpixelsverified."
+  },
+  "e1p2_public_closeout": {
+    "at": "2026-11-16T04:24:50+05:30",
+    "url": "https://www.youtube.com/shorts/05njy_brxyo",
+    "actual_player_verified": "2026-11-16T04:24:58+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261115-225350.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261115-225412.png",
+    "public_saved_pixels": "cloud-browser-20261115-225452.png",
+    "ordered_playlist_pixels": "cloud-browser-20261115-225518.png",
+    "spacing": "1:06:01",
+    "next_floor": "2026-11-16T05:24:50+05:30",
+    "next_wake": "wakeschedule-01M7GPQXAXGCNXCPQTS20CZSXZ",
+    "ledger_sha": "3b400f991c3ee65e860901129972822ea3720c9f",
+    "ledger": "dispatchedonce204pending"
   }
 }
