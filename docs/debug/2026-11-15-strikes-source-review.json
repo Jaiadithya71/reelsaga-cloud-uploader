@@ -95,7 +95,7 @@
       "all_private": true
     }
   },
-  "status": "First6PUBLIC through E3P1; E3P2PRIVATE cleanready, E4captionhold. Freshgates beforeeachrelease.",
+  "status": "All7PUBLIC throughE3P2;E4captionhold,notseriescomplete. NextUnseenE1P1.",
   "part_gates": {
     "yourchannel-strikes833198-ep1-part1-v1": {
       "episode": 1,
@@ -523,5 +523,23 @@
       "stopped_readback": "2026-11-15T19:32:32.1658218Z",
       "verified_at": "2026-11-16T01:05:39+05:30"
     }
+  },
+  "e3p2_public_closeout": {
+    "at": "2026-11-16T02:08:19+05:30",
+    "url": "https://www.youtube.com/shorts/5CbqsjtxdKE",
+    "actual_player_verified": "2026-11-16T02:08:37+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261115-203719.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261115-203739.png",
+    "public_saved_pixels": "cloud-browser-20261115-203821.png",
+    "ordered_playlist_pixels": "cloud-browser-20261115-203855.png",
+    "spacing": "1:06:32",
+    "next_floor": "2026-11-16T03:08:19+05:30",
+    "next_wake": "wakeschedule-01M7GEYEJ93KHRXRZA3V5MTWBC",
+    "next": "Unseen833206E1P1Kjgv4AwGUP0,StrikesE4captionheld",
+    "ledger_sha": "ebc0748cea5a5a7f7db1d92d3ef795b5ae254c6a",
+    "ledger": "dispatchedonce204pending"
   }
 }
