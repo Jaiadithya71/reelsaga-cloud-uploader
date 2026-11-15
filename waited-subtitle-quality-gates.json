@@ -5,8 +5,8 @@
   "free_episodes": 6,
   "platform": "YourChannel",
   "commission_percent": 60,
-  "affiliate": null,
-  "status": "E1 source QA and render prep complete; unuploaded; E2 held",
+  "affiliate": "https://r.reelsgo.tv/4OJs-CshFtJN",
+  "status": "E1 QA/metadata ready for PRIVATE claims probe only; E2 held",
   "source_review_ready": true,
   "episode1": {
     "source_duration": 116.907,
@@ -35,10 +35,9 @@
       "decode_checked": true,
       "pixels_inspected": true,
       "caption_gate_pass": true,
-      "whole_part_release_ready": false,
-      "approved_render_sha256": null,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
       "render_sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
-      "blocked_by": "Exact DramaCPS affiliate unavailable: Get Link returned502 twice; do not stage or upload",
       "measured_duration": 39.8
     },
     {
@@ -53,10 +52,9 @@
       "decode_checked": true,
       "pixels_inspected": true,
       "caption_gate_pass": true,
-      "whole_part_release_ready": false,
-      "approved_render_sha256": null,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
       "render_sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
-      "blocked_by": "Exact DramaCPS affiliate unavailable: Get Link returned502 twice; do not stage or upload",
       "measured_duration": 37.2
     },
     {
@@ -71,10 +69,9 @@
       "decode_checked": true,
       "pixels_inspected": true,
       "caption_gate_pass": true,
-      "whole_part_release_ready": false,
-      "approved_render_sha256": null,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
       "render_sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
-      "blocked_by": "Exact DramaCPS affiliate unavailable: Get Link returned502 twice; do not stage or upload",
       "measured_duration": 39.89
     }
   ],
@@ -95,9 +92,65 @@
     "attempt2": "Nov15 08:45:30 UI GetLink50216.264s",
     "stopped_attempts": true,
     "next_check": "09:47IST once, not in09:31YTrelease",
-    "browser_lease_released": true
+    "browser_lease_released": true,
+    "resolved": "Nov15 09:48:27UI200/09:49Linksreadback"
   },
   "upload": "NONE",
   "staging": "NONE",
-  "next": "At09:47 retrieve exact affiliate through normalUI once. If recovers, readback correctID then build manifests/privateproof for E1 threeparts. Claims/nativeAIYes/ownorderedplaylist/restrictions/metadata mandatory before public. Never publish placeholders."
+  "next": "PRIVATE E1P1 probe only then Studio checks. No public until claimsnone/restrictions/nativeAIYesSaved/ownorderedplaylist/frompart1/freshspacing. E2held.",
+  "app_home": "https://r.reelsgo.tv/Vm1YANs7MWr7",
+  "affiliate_recovered": "Nov15 09:48:27 normalUIGetLink2003640.5ms exact833171yourchannel; Linksreload833171exacturls09:49",
+  "part_gates": {
+    "yourchannel-waited833171-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 39.8,
+      "duration": 39.8,
+      "sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
+      "bytes": 38918656,
+      "path": "/downloads/waited-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
+      "render_sha256": "764db61b1ffedd1186fe906d6e715a0dc289945738f8dca953855b60dedfb13b",
+      "measured_duration": 39.8
+    },
+    "yourchannel-waited833171-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 39.8,
+      "source_end": 77.0,
+      "duration": 37.2,
+      "sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
+      "bytes": 33835268,
+      "path": "/downloads/waited-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
+      "render_sha256": "ea50eebdd1a5fe69b5b065acdf2f2657d33ac3ec7edbcaa894769ca7e1dd4f1c",
+      "measured_duration": 37.2
+    },
+    "yourchannel-waited833171-ep1-part3-v1": {
+      "episode": 1,
+      "part": 3,
+      "source_start": 77.0,
+      "source_end": 116.907,
+      "duration": 39.907,
+      "sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
+      "bytes": 30008693,
+      "path": "/downloads/waited-e1p3.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
+      "render_sha256": "3ba5d8385d68b8ebac43ec40e7b5770e0ac3f15cd49f09f9af5bff52755d7e6d",
+      "measured_duration": 39.89
+    }
+  }
 }
