@@ -7,15 +7,15 @@
   "source": "https://dramacps.com/dashboard",
   "playlist": "https://www.youtube.com/playlist?list=PLbKtmTxosZnM",
   "playlist_studio": "https://studio.youtube.com/playlist/PLbKtmTxosZnM/videos",
-  "playlist_order": "MANUAL created public; actual E1P1,E1P2,E2P1,E2P2 all private visually verified02:06:38; E2P3 held not added",
+  "playlist_order": "PUBLIC MANUAL E1P1Public/E1P2Private/E2P1Private/E2P2Private exactorder pixels08:28:47; E2P3 held not added. Empty description found08:28:12, standard Ad and exact affiliate saved08:28:34 before launch.",
   "parts": [
     {
       "episode": 1,
       "part": 1,
       "video_id": "Km3C5Y2CVDU",
       "run": 43637473378,
-      "state": "clean02:06",
-      "privacy": "private",
+      "state": "fresh claimsnone nativeAIYesSaved release08:28:35ISTNov15",
+      "privacy": "public",
       "native_ai": "Yes saved verified",
       "url": "https://studio.youtube.com/video/Km3C5Y2CVDU/edit"
     },
@@ -61,7 +61,7 @@
     }
   ],
   "cleanup": "All five consumed private objects HEAD404 original signedGET404; cleanupwake canceled",
-  "public_release": "none; freshclaims required before each release; E2P2/P3 held no appeal/reedit/skip",
+  "public_release": "E1P1 PUBLIC08:28:35IST Nov15 playeractual2026-11-14T18:58:35-08:00 privatefalse unlistedfalse exactchannel OK08:29:08; rest remain private freshclaims mandatory; E2P2/P3 held no appeal/reedit/skip",
   "concurrency": "Initial E2P2 run canceled before any job. Zero jobs verified twice then rerun201, completed success. E2P3 private upload preceded P2 but playlist order E2P1/P2 verified. Never dispatch concurrent pending canary workflows: later pending cancels earlier pending.",
   "pixels": [
     "/downloads/cloud-browser-20261114-202812.png",
