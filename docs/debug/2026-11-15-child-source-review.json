@@ -1,0 +1,100 @@
+{
+  "series": "The Child She Chose to Forget",
+  "dramacps_id": 833163,
+  "source": "https://dramacps.com/dashboard",
+  "free_episodes": 5,
+  "platform": "YourChannel",
+  "commission_percent": 60,
+  "affiliate": "https://r.reelsgo.tv/Yj6GMHSMEX6V",
+  "app_home": "https://r.reelsgo.tv/xBO8r5fwB8IM",
+  "affiliate_verified": "Nov15 11:55 dialog exact833163/yourchannel and11:56 Links exactID+bothURLs; screenshots062519/062609",
+  "status": "E1 reviewed/rendered ready for PRIVATE claim probes only; E2 still under QA",
+  "source_review_ready": true,
+  "episode1": {
+    "source_duration": 60.895,
+    "source_sha256": "c2c2accd23d1a8f450a17eb3565fa3710186c2073550f992e9e31a6bad644446",
+    "whole_asr": [
+      "base.en",
+      "small.en"
+    ],
+    "quarter_ocr_frames": 244,
+    "action_pixels": 30,
+    "caption_pixels": 61,
+    "target_pixels": 12,
+    "part_pixels": 12,
+    "confirmed_dialogue_defect": null,
+    "notes": "Whole spoken-dialogue and caption review found no confirmed defect. First name ASR Lucy/Moosey versus original Mopsy is phonetic; later small ASR and namecard agree Mopsy. Whole base adds No54.7-54.8, whole small omits it; isolated53-end both omit No and give Of course you will only. Whole small adds Thanks for watching58.82-60.32 but base and isolated both omit; pixels source outro To be continued/Watch the follow-up. Do not certify every background lyric. Emotional neglect/crying clothed child, no observed explicitsex/nudity/graphicwound; no policy guarantee. Source audio/captions unchanged except standard boundary fades. Boundary31.2 after complete Why didnt you ask me and before kitchen scene."
+  },
+  "parts": [
+    {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 31.2,
+      "duration": 31.2,
+      "sha256": "11702d76d65481ed51a958dbe201a7c38046190165e98fc6918192faeba38d98",
+      "bytes": 38546898,
+      "path": "/downloads/child-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 31.2,
+      "approved_render_sha256": "11702d76d65481ed51a958dbe201a7c38046190165e98fc6918192faeba38d98",
+      "render_sha256": "11702d76d65481ed51a958dbe201a7c38046190165e98fc6918192faeba38d98"
+    },
+    {
+      "episode": 1,
+      "part": 2,
+      "source_start": 31.2,
+      "source_end": 60.895,
+      "duration": 29.695000000000004,
+      "sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd",
+      "bytes": 31089389,
+      "path": "/downloads/child-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 29.7,
+      "approved_render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd",
+      "render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd"
+    }
+  ],
+  "part_gates": {
+    "yourchannel-child833163-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 31.2,
+      "duration": 31.2,
+      "sha256": "11702d76d65481ed51a958dbe201a7c38046190165e98fc6918192faeba38d98",
+      "bytes": 38546898,
+      "path": "/downloads/child-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 31.2,
+      "approved_render_sha256": "11702d76d65481ed51a958dbe201a7c38046190165e98fc6918192faeba38d98",
+      "render_sha256": "11702d76d65481ed51a958dbe201a7c38046190165e98fc6918192faeba38d98"
+    },
+    "yourchannel-child833163-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 31.2,
+      "source_end": 60.895,
+      "duration": 29.695000000000004,
+      "sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd",
+      "bytes": 31089389,
+      "path": "/downloads/child-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 29.7,
+      "approved_render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd",
+      "render_sha256": "0b9a2558086468305283030b22a7811b444f18b8b27ea188a38970e2c4c51cdd"
+    }
+  }
+}
