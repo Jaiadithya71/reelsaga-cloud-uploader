@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-15T15:29:00+05:30",
+  "as_of": "2026-11-15T15:36:23+05:30",
   "name": "The Heiress Strikes Back",
   "id": 833198,
   "source": "https://dramacps.com/dashboard",
@@ -13,13 +13,50 @@
     "status": "Whole-source QA passed, no confirmed defect",
     "evidence": "Whole base.en and small.en;451quartersecond OCR,113 1sec caption pixels,57even+56odd action pixels inspected. 3contiguous renders full-decode and18renderpixels passed. Original audio and source captions unchanged.",
     "content": "Family body-shaming and adoption/abandonment theme; no observed nudity/sex/graphic violence.",
-    "remaining": "Private claims probes/native AI/own playlist pending."
+    "remaining": "PRIVATE ready; fresh claims/restrictions/metadata/spacing gates required again before public. No public Strikes yet."
   },
   "e2": {
     "duration": 69.566,
-    "status": "Whole base+small/278quarterOCR/70caption/35evenaction reviewed; oddaction/render pending, not uploaded"
+    "status": "Whole source QA passed, 2renders ready. Unuploaded.",
+    "evidence": "Whole base.en+small.en,278quarterOCR,70captionpixels,35even+34odd actionpixels inspected,2renders decodechecked+12renderpixels inspected. No confirmed caption defect.",
+    "renders": [
+      {
+        "episode": 2,
+        "part": 1,
+        "source_start": 0,
+        "source_end": 34,
+        "duration": 34,
+        "sha256": "9892c1d5ff500c0ae7aa1e3b2d65eb6ee4209d304e71c6cce489072ee4d5d667",
+        "bytes": 21114339,
+        "path": "/downloads/strikes-e2p1.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": true,
+        "measured_duration": 34.0,
+        "approved_render_sha256": "9892c1d5ff500c0ae7aa1e3b2d65eb6ee4209d304e71c6cce489072ee4d5d667",
+        "render_sha256": "9892c1d5ff500c0ae7aa1e3b2d65eb6ee4209d304e71c6cce489072ee4d5d667"
+      },
+      {
+        "episode": 2,
+        "part": 2,
+        "source_start": 34,
+        "source_end": 69.566,
+        "duration": 35.566,
+        "sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375",
+        "bytes": 19366900,
+        "path": "/downloads/strikes-e2p2.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": true,
+        "measured_duration": 35.567,
+        "approved_render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375",
+        "render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375"
+      }
+    ]
   },
-  "status": "E1private probes pending",
+  "status": "E1 all3PRIVATE claims clean/nativeAIyes/ownmanualplaylist. E2 prepared unuploaded.",
   "part_gates": {
     "yourchannel-strikes833198-ep1-part1-v1": {
       "episode": 1,
@@ -71,6 +108,40 @@
       "measured_duration": 33.472,
       "approved_render_sha256": "131a6d09450bf996fe90c168d837234ee5d7c1eede95abd5edbcada62214c52b",
       "render_sha256": "131a6d09450bf996fe90c168d837234ee5d7c1eede95abd5edbcada62214c52b"
+    },
+    "yourchannel-strikes833198-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 34,
+      "duration": 34,
+      "sha256": "9892c1d5ff500c0ae7aa1e3b2d65eb6ee4209d304e71c6cce489072ee4d5d667",
+      "bytes": 21114339,
+      "path": "/downloads/strikes-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 34.0,
+      "approved_render_sha256": "9892c1d5ff500c0ae7aa1e3b2d65eb6ee4209d304e71c6cce489072ee4d5d667",
+      "render_sha256": "9892c1d5ff500c0ae7aa1e3b2d65eb6ee4209d304e71c6cce489072ee4d5d667"
+    },
+    "yourchannel-strikes833198-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 34,
+      "source_end": 69.566,
+      "duration": 35.566,
+      "sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375",
+      "bytes": 19366900,
+      "path": "/downloads/strikes-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 35.567,
+      "approved_render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375",
+      "render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375"
     }
   },
   "parts": [
@@ -126,5 +197,40 @@
       "render_sha256": "131a6d09450bf996fe90c168d837234ee5d7c1eede95abd5edbcada62214c52b"
     }
   ],
-  "source_review_ready": true
+  "source_review_ready": true,
+  "private_ready": {
+    "verified_at": "2026-11-15T15:36:23+05:30",
+    "playlist": "https://studio.youtube.com/playlist/PLJJBdGl32g9Q/videos",
+    "playlist_visibility": "Public",
+    "sort": "Manually sorted in YouTube",
+    "actual_order": [
+      "A_xK7tzyc5Q",
+      "xEOiCBcskC4",
+      "ZKDJ0HOFVnA"
+    ],
+    "all_parts_private": true,
+    "native_ai_yes_saved_all": true,
+    "not_for_kids_no_age_restriction": true,
+    "upfront_Ad_exact_affiliate": true,
+    "claims_none_as_of": [
+      "2026-11-15T15:32:46+05:30",
+      "2026-11-15T15:35:14+05:30",
+      "2026-11-15T15:35:46+05:30"
+    ],
+    "pixels": [
+      "cloud-browser-20261115-100246.png",
+      "cloud-browser-20261115-100514.png",
+      "cloud-browser-20261115-100546.png",
+      "cloud-browser-20261115-100607.png"
+    ],
+    "private_probe_commit": "58942d9e80fbd5211547b66689d914585b10a6f0",
+    "probe_run_ids": [
+      43701886019,
+      43702003910,
+      43702132443
+    ],
+    "probe_status": "all success and stopped readback verified",
+    "consumed_stages": "all3 deleted HEAD404 and original signed GET404, cleanup wake deleted",
+    "public_launch": "none, Child clean queue continues"
+  }
 }

@@ -1,0 +1,40 @@
+{
+  "as_of": "2026-11-15T15:37:00+05:30",
+  "source": "https://dramacps.com/dashboard",
+  "status": "All candidates below held, no upload/stage. No user decision needed. Strikes selected separately.",
+  "candidates": [
+    {
+      "id": 833195,
+      "name": "My Dad's Perfect Match",
+      "hold": "E1 caption73.25-74.25 calling broken disfigured vs whole and isolated small ASR calling broke and disfigured",
+      "evidence": [
+        "/downloads/dad-e1-targets.jpg",
+        "/downloads/dad73-isolated.json"
+      ],
+      "qa": "E1 whole caption/action reviewed, E2 not full caption QA",
+      "affiliate": "https://r.reelsgo.tv/zLXOJYNkQbg6"
+    },
+    {
+      "id": 833197,
+      "name": "The Billionaire's Missing Heiress",
+      "hold": "E1 visible debt37-38 and41.5-42.75 vs whole+20s isolated small ASR bread",
+      "evidence": [
+        "/downloads/missing32-isolated.json",
+        "/downloads/missing833197-review/e1-quarter-ocr.json"
+      ],
+      "qa": "498quarterOCR/all124captionpixels+action0 reviewed;action1/2 not reviewed. Earlier suspected extra us79 not confirmed;do not count as defect.",
+      "affiliate": null
+    },
+    {
+      "id": 833201,
+      "name": "The Family the Streets Raised",
+      "hold": "E1 caption16.75-17.25 Burned edible? vs base+small+isolated Barely edible?",
+      "evidence": [
+        "/downloads/streets-e1-targets.jpg",
+        "/downloads/streets14-isolated.json"
+      ],
+      "qa": "168captionpixels reviewed, OCR first240 only, actions not reviewed",
+      "affiliate": null
+    }
+  ]
+}
