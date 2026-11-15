@@ -440,6 +440,14 @@
     "spacing": "1:07:18",
     "next_floor": "2026-11-15T22:36:51+05:30",
     "next_wake": "wakeschedule-01M7FZDBHJE5EFYPC96ZY3XG46",
-    "ledger_sha": "f8ccf143183c09fd6cbe1c530724014edbdef421"
+    "ledger_sha": "f8ccf143183c09fd6cbe1c530724014edbdef421",
+    "ledger": {
+      "run": 43733664426,
+      "status": "success",
+      "sha": "f8ccf143183c09fd6cbe1c530724014edbdef421",
+      "published_at": "2026-11-15T16:06:51Z",
+      "stopped_readback": "2026-11-15T16:07:46.4395635Z",
+      "verified_at": "2026-11-15T21:40:52+05:30"
+    }
   }
 }
