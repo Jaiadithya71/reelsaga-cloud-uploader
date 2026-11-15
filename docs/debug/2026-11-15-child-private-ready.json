@@ -10,7 +10,23 @@
       "claims": "none12:02:23pixels063223",
       "nativeAI": "YesSaveddisabled12:04pixels063400",
       "playlist": "own createdPublicManual selectedSaved12:05:47",
-      "stage": "deletedHEAD404originalsignedGET40411:59:43"
+      "stage": "deletedHEAD404originalsignedGET40411:59:43",
+      "public": {
+        "actual_ist": "2026-11-15T15:02:50+05:30",
+        "url": "https://youtube.com/shorts/gHUOI1Dgjbo",
+        "single_save": "15:02:49",
+        "player_verified": "15:05:36 privatefalse/unlistedfalse/OK/exactchannel",
+        "fresh_claims": "none15:01:46 pixels093146",
+        "nativeAI": "YesSavedSaveUndoDisabledpixels093200",
+        "metadata": "fullAdexactaffiliate/notforkids/noage15:01:52",
+        "latestchannel": "WaitedP3nonewer15:02:19",
+        "ledger_run": 43700000837,
+        "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43700000837",
+        "ledger_sha": "689627ac4e001889e86c237231d3ef8ddac4364f",
+        "ledger_api_published_utc": "2026-11-15T09:32:50Z",
+        "ledger_stopped_utc": "2026-11-15T09:36:09.9044217Z",
+        "recovery": "Oldtab1stuckafterSave;newtab2StudioPublic/newtab3watchplayer verified, no duplicateSave"
+      }
     },
     "e1p2": {
       "id": "daeBcCip6fk",
@@ -46,14 +62,16 @@
     }
   },
   "e3": "captionheldunuploaded",
-  "status": "4 PRIVATE backup parts ready under fresh-release gates, all claimednone, nativeAIYesSaveddisabled, upfrontAd/exactaffiliate/notforkids/ownorderedplaylist. Freshclaims/restrictions/spacing check still mandatory before each public release.",
+  "status": "E1P1PUBLIC; other3PRIVATE fresh gates before each release; E3captionheld",
   "playlist": {
     "url": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/videos",
     "details_url": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/edit",
     "visibility": "PUBLIC",
-    "order": "MANUAL E1P1/E1P2/E2P1/E2P2 allPRIVATE",
+    "order": "MANUAL E1P1PUBLIC/E1P2PRIVATE/E2P1PRIVATE/E2P2PRIVATE pixels093604",
     "order_verified": "12:10:54DOM plus12:10:59pixels064059",
     "description": "Ad/exactaffiliateSaveddisabledpixels12:10:49 064049"
   },
-  "staging": "All4consumed privateobjects deleted HEAD404+originalsignedGET404; allcleanupwakesdeleted"
+  "staging": "All4consumed privateobjects deleted HEAD404+originalsignedGET404; allcleanupwakesdeleted",
+  "next": "E1P2wake16:04-16:07IST wakeschedule-01M7F912X7HBN9EMVZ4R88K0SK;floor16:02:50",
+  "index_handoff": "parent15:06:21sent"
 }
