@@ -489,6 +489,14 @@
     "next_floor": "2026-11-16T00:56:11+05:30",
     "next_wake": "wakeschedule-01M7G7C2QN0405ZTPENVYQQB67",
     "ledger_sha": "8afedc24edd2dad9654cf0114ac4984ba9723f22",
-    "recovery": "blankdeepclaims+freshTabtimeout recovered singlefreshlease+normalStudioRootdashboard route; parent informed recovery"
+    "recovery": "blankdeepclaims+freshTabtimeout recovered singlefreshlease+normalStudioRootdashboard route; parent informed recovery",
+    "ledger": {
+      "run": 43746773609,
+      "status": "success",
+      "sha": "8afedc24edd2dad9654cf0114ac4984ba9723f22",
+      "published_at": "2026-11-15T18:26:11Z",
+      "stopped_readback": "2026-11-15T18:26:54.1503754Z",
+      "verified_at": "2026-11-16T00:00:05+05:30"
+    }
   }
 }
