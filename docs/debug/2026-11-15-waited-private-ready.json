@@ -45,7 +45,7 @@
     "latest_channel": "AnimalE2P1nonewer11:44:47",
     "playlist": "firstPubliclast2Privateorderunchangedpixels11:45:48",
     "index": "mainhandoff11:46no confirmation",
-    "ledger": "dispatchedoncepending"
+    "ledger": "p1closed43684663565success"
   },
   "playlist": {
     "url": "https://studio.youtube.com/playlist/PLQCTsYzbl2U8/videos",
@@ -57,7 +57,7 @@
     "verified": "09:58:38IST"
   },
   "cleanup": "All3consumedstagesdeletedHEAD404originalsignedGET404;allcleanupwakesdeleted",
-  "next": "AfterAnimalE2P1freshgates releaseWaitedE1P1>=60minactualYTspacing;nofreshclaimsguarantee. E2held no skip.",
+  "next": "WaitedE1P3Nov15 13:53-56ISTfloor13:50:46/4h16:50:46; then Child833163E1P1freshallgates.",
   "e1p1_ledger": {
     "run": 43684663565,
     "status": "success",
@@ -66,5 +66,27 @@
     "stopped_readback": "2026-11-15T06:16:36.0038420Z",
     "verified_at": "2026-11-15T11:49:37+05:30",
     "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43684663565"
+  },
+  "public_p2": {
+    "id": "zfNiXgh7k6s",
+    "url": "https://youtube.com/shorts/zfNiXgh7k6s",
+    "actual_ist": "2026-11-15T12:50:46+05:30",
+    "player": "2026-11-14T23:20:46-08:00privatefalseunlistedfalseOKexactchannelverified12:51:08",
+    "singleSave": "12:50:46",
+    "claims": "nonepixels12:50:16 072016",
+    "nativeAI": "YesSaveddisabledpixels12:50:33 072033",
+    "metadata": "fullAdexactaffiliate/notforkids/noageSaveddisabledDOM12:50:27",
+    "latest_channel": "WaitedE1P1nonewerdashboard12:49:53",
+    "playlist": "first2PUBLIC lastPRIVATE orderverifiedDOM12:51:35pixels072131",
+    "ledger": {
+      "run": 43689568399,
+      "sha": "f758a6a5b7aaed7948b42650616f11664bcd9e16",
+      "state": "success",
+      "published_at": "2026-11-15T07:20:46Z",
+      "stopped_readback": "2026-11-15T07:21:44.4817625Z",
+      "verified_at": "2026-11-15T12:53:59+05:30",
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43689568399"
+    },
+    "next": "WaitedE1P3Nov15 13:53-56ISTfloor13:50:46/4h16:50:46wake01M7F1A4BQ5CP4NRP79PYDR2D8"
   }
 }
