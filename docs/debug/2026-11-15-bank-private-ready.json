@@ -1,0 +1,59 @@
+{
+  "series": "They Broke Me. I Own the Bank.",
+  "affiliate": "https://r.reelsgo.tv/iFedGE2tzf5p",
+  "parts": {
+    "e1p1": {
+      "id": "o4p3gG59Osg",
+      "run": 43697422106,
+      "sha": "c4c04c70bda8a575ff363437aa1ce74aef6ffe7d",
+      "claims": "none14:36:05pixels090609",
+      "nativeAI": "YesSaveddisabledpixels090737",
+      "metadata": "fullAdexactaffiliate/notforkids/noagerestrictionDOM14:37:37",
+      "playlist": "owncreatedPublicManual selectedSaved14:37:31, URL not yet captured",
+      "stage": "deletedHEAD404originalsignedGET40414:35:37"
+    },
+    "e1p2": {
+      "id": "GBg86m0vju4",
+      "run": 43697566053,
+      "sha": "c4c04c70bda8a575ff363437aa1ce74aef6ffe7d",
+      "stage": "deletedHEAD404originalsignedGET40414:37:02",
+      "studio": "claimsnone14:38:05; nativeAIYesSaved14:39:08; fullAdexactaffiliate/notforkids/noage verified",
+      "playlist": "own membership saved; ordered four verified14:42:00"
+    },
+    "e1p3": {
+      "id": "VQxq3aVNICU",
+      "run": 43697681687,
+      "sha": "c4c04c70bda8a575ff363437aa1ce74aef6ffe7d",
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43697681687",
+      "stopped_verified_at_utc": "09:08:11.1307985Z",
+      "claims": "none14:39:33 pixels090934",
+      "nativeAI": "YesSaved14:40:11 pixels091014",
+      "metadata": "fullAdexactaffiliate/notforkids/noagerestrictionDOM verified",
+      "playlist": "own membership saved; four ordered1/2/3/4 PRIVATE verified14:42:00",
+      "stage": "deletedHEAD404originalsignedGET40414:38:19"
+    },
+    "e1p4": {
+      "id": "-22_OIXJLDc",
+      "run": 43697781581,
+      "sha": "c4c04c70bda8a575ff363437aa1ce74aef6ffe7d",
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43697781581",
+      "stopped_verified_at_utc": "09:09:36.6866103Z",
+      "claims": "initiallynone14:40:44, lateAudioClaim14:42:27: Deflagration / Dos Brains, no reach or channel impact; HOLD",
+      "nativeAI": "YesSaved14:41:16 pixels091119",
+      "metadata": "fullAdexactaffiliate/notforkids/noagerestrictionDOM verified",
+      "playlist": "own membership saved; four ordered1/2/3/4 PRIVATE verified14:42:00",
+      "stage": "deletedHEAD404originalsignedGET40414:40:21"
+    }
+  },
+  "status": "P1-P3 privately staged, individual checks clean. P4 late no-impact AUDIO CLAIM HOLD, all remain PRIVATE. Not a complete clean four-part backup. Fresh claims before each public release.",
+  "playlist": {
+    "url": "https://studio.youtube.com/playlist/PLEhYlMHqOGw8/videos",
+    "details_url": "https://studio.youtube.com/playlist/PLEhYlMHqOGw8/edit",
+    "visibility": "PUBLIC",
+    "order": "MANUAL1/2/3/4 verified14:42:00; all partsPRIVATE",
+    "description": "Ad + exactaffiliate readback14:42:04"
+  },
+  "temporary_stages": "All four deleted and HEAD404/originalsignedGET404 verified; cleanup wake cancelled14:40:29",
+  "e2": "Unuploaded hold: source caption102-103 does not match dialogue in whole base.en/small.en and prior isolated check. Exact wording unclear, no repair/skip. Target pixels reinspected14:42:50.",
+  "parent_notified": "lateP4claim/no4hrisk14:42:32"
+}

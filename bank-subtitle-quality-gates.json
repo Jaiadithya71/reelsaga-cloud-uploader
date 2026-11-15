@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-15T14:31:00+05:30",
+  "as_of": "2026-11-15T14:43:00+05:30",
   "name": "They Broke Me. I Own the Bank.",
   "id": 833179,
   "source": "https://dramacps.com/dashboard",
@@ -13,7 +13,7 @@
     "status": "Whole spoken-dialogue source QA passed, no confirmed defect. Native thin original captions preserved, no replacement.",
     "evidence": "Whole base.en + small.en beam1; 704 quartersecond OCR; 176 1sec caption pixels and88even+87odd action pixels inspected; 15target caption pixels inspected. Four contiguous renders full decode passed and24render pixels inspected.",
     "resolved": "OCR missed today but pixels show it fully. Source could versus wholemodel can settled by isolated small could; source then versus wholemodel and settled isolated small then. Proper name dorson phonetic rendering not rejected as speech defect. No observed nudity/sex/graphic violence; mild damn and class/racial discrimination theme.",
-    "remaining": "No private upload, no claims test, no nativeAI or own playlist yet. Fresh no-repeat live inventory check before upload.",
+    "remaining": "All4uploadedPRIVATE and ownplaylist1/2/3/4. P1-P3individualclaimsclean, P4lateaudioDeflagrationDosBrains14:42:27HOLD. No appeal/reedit/skip; fresh claims mandatory.",
     "renders": [
       {
         "episode": 1,
@@ -75,13 +75,13 @@
   },
   "e2": {
     "duration": 137.92,
-    "evidence": "Whole base.en/small.en beam1 done,552quarterOCR,69even action pixels inspected. 138captionpixels NOT yet inspected/comparison pending.",
-    "status": "not yet QA passed, unuploaded"
+    "evidence": "Whole base.en/small.en beam1,552quarterOCR,69even action and138captionpixels inspected; target102-103reinspected14:42:50; spoken-dialogue mismatch/unexplained captions hold, no repair.",
+    "status": "HOLD unuploaded"
   },
   "other_candidate": "Country Girl833186 GetLink single normal UI same removed-drama error, no further attempts or downloads.",
-  "no_repeat": "Memory search no title-specific hit, repo published-series-history no833179 or title match. Live inventory remains to check before upload.",
-  "stage": "none",
-  "uploads": "none",
+  "no_repeat": "Fullinventorybeforeprobes577/579/580/581; duplicatepartnone, P1wholetitle none",
+  "stage": "All4consumed temporary stages deletedHEAD404originalsignedGET404",
+  "uploads": "4PRIVATE, P4claimheld",
   "browser": "released14:29:17",
   "notes": "Timed out firstcombinedsmall+OCR at120s, checked output: OCR0..480landed, small none. Completed remaining OCR and one fresh whole small per episode beam1, no external side effect was repeated.",
   "part_gates": {
