@@ -92,5 +92,14 @@
     "latest_channel": "E1P2OwR0vknrHrUnonewer10:38:49",
     "playlist": "own4orderedfirst3PUBLIClast1PRIVATEpixels050938",
     "next": "WaitedE1P1floor11:39:14wake11:42-45wakeschedule-01M7ESS6ABW6K0HZJ8NN17MD7Y;E2P2/P3claimsheld"
+  },
+  "e2p1_ledger": {
+    "run": 43679885111,
+    "status": "success",
+    "sha": "82a19ffe5809b96d12933a2a40f52ba8ae42872c",
+    "published_at": "2026-11-15T05:09:14Z",
+    "stopped_readback": "2026-11-15T05:10:23.7821604Z",
+    "verified_at": "2026-11-15T10:43:26+05:30",
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43679885111"
   }
 }
