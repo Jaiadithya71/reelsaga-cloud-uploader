@@ -1,0 +1,50 @@
+{
+  "series": "The Love That Waited",
+  "affiliate": "https://r.reelsgo.tv/4OJs-CshFtJN",
+  "p1": {
+    "id": "znFEx9_cVo0",
+    "privacy": "private",
+    "run": 43676262355,
+    "sha": "449442ca6e89675d847a4c06422a8640b85dd637",
+    "stopped_readback": "2026-11-15T04:20:29.3210202Z",
+    "claims": "none09:54:35pixels042436",
+    "nativeAI": "YesSavedSaveUndoDisabled09:55:23pixels042523",
+    "playlist": "OwnPUBLICMANUALPLQCTsYzbl2U8 firstpartorderedverified09:58:38",
+    "stage": "deletedHEAD404originalsignedGET40409:53:57"
+  },
+  "p2": {
+    "run": 43676656024,
+    "id": "zfNiXgh7k6s",
+    "status": "success",
+    "sha": "449442ca6e89675d847a4c06422a8640b85dd637",
+    "stopped_readback": "2026-11-15T04:25:52.7218481Z",
+    "claims": "none09:56:26pixels042626",
+    "nativeAI": "YesSavedSaveUndoDisabled09:56:43pixels042643",
+    "metadata": "fullAdexactaffiliate/notforkids/noage/private/ownplaylist verifiedDOM09:56:56",
+    "stage": "deletedHEAD404originalsignedGET40409:56:06"
+  },
+  "p3": {
+    "run": 43676774258,
+    "id": "Uqy_l8AXDBI",
+    "status": "success",
+    "sha": "449442ca6e89675d847a4c06422a8640b85dd637",
+    "stopped_readback": "2026-11-15T04:27:16.8615989Z",
+    "claims": "none09:58:20pixels042820",
+    "nativeAI": "YesSavedSaveUndoDisabled09:58:02pixels042802",
+    "metadata": "fullAdexactaffiliate/notforkids/noage/private/ownplaylist verifiedDOM09:58:12",
+    "stage": "deletedHEAD404originalsignedGET40409:57:35"
+  },
+  "e2": "captionheldunuploaded",
+  "public": "NONE",
+  "playlist": {
+    "url": "https://studio.youtube.com/playlist/PLQCTsYzbl2U8/videos",
+    "details_url": "https://studio.youtube.com/playlist/PLQCTsYzbl2U8/edit",
+    "visibility": "PUBLIC",
+    "order": "MANUAL E1P1/E1P2/E1P3 allPRIVATE",
+    "description": "Ad/exactaffiliate savedverified09:58:35pixels042835",
+    "pixels": "042838",
+    "verified": "09:58:38IST"
+  },
+  "cleanup": "All3consumedstagesdeletedHEAD404originalsignedGET404;allcleanupwakesdeleted",
+  "next": "AfterAnimalE2P1freshgates releaseWaitedE1P1>=60minactualYTspacing;nofreshclaimsguarantee. E2held no skip."
+}
