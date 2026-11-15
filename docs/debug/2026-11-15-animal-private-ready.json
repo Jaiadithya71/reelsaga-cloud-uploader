@@ -71,5 +71,14 @@
     "/downloads/cloud-browser-20261114-203528.png",
     "/downloads/cloud-browser-20261114-203601.png",
     "/downloads/cloud-browser-20261114-203638.png"
-  ]
+  ],
+  "e1p2_ledger": {
+    "run": 43675139264,
+    "status": "success",
+    "sha": "484c748a23647083374df626cfc8468e783c3452",
+    "published_at": "2026-11-15T04:03:41Z",
+    "stopped_readback": "2026-11-15T04:04:58.9969328Z",
+    "verified_at": "2026-11-15T09:38:05+05:30",
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43675139264"
+  }
 }
