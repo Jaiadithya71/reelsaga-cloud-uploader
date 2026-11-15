@@ -134,7 +134,7 @@ def main():
                 for video in data.get('items',[]):
                     snippet=video['snippet']
                     if snippet['channelId']!=CHANNEL:raise RuntimeError('Channel mismatch')
-                    if snippet['title']==item['title'] or (part==1 and 'the heiress strikes back - episode 2 ' in snippet['title'].lower()):raise RuntimeError('Existing episode part, reconcile only')
+                    if snippet['title']==item['title'] or (part==1 and 'the heiress strikes back - episode 3 ' in snippet['title'].lower() and video['id']!='5CbqsjtxdKE'):raise RuntimeError('Existing episode part, reconcile only')
             return len(ids)
         _da=0
         _dup=None
@@ -157,7 +157,7 @@ def main():
             saved,_=backend.get(DurableLedger.key(item['id'],'youtube'))
             if saved and saved.get('external_id') and saved.get('state') in ('private_locked','ready_for_review','published'):
                 print(json.dumps({'already_uploaded':True,'video_id':saved['external_id'],'ledger_state':saved['state'],'playlist_pending':saved['state']=='ready_for_review','duplicate_upload_prevented':True},sort_keys=True))
-                open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Strikes EP2 episode probe: already uploaded (explicit)\n\n```json\n"+json.dumps({'already_uploaded':True,'video_id':saved['external_id'],'ledger_state':saved['state']},indent=2)+"\n```\n")
+                open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Strikes EP3 episode probe: already uploaded (explicit)\n\n```json\n"+json.dumps({'already_uploaded':True,'video_id':saved['external_id'],'ledger_state':saved['state']},indent=2)+"\n```\n")
                 return
             raise RuntimeError('Existing episode part without ledger proof; reconcile only')
         print(json.dumps({'complete_channel_inventory_checked':True,'inventory_video_count':_count,'duplicate_part_found':False}))
@@ -189,7 +189,7 @@ def main():
         if saved.get('external_id')!=result['video_id']:raise RuntimeError('Checkpoint mismatch')
         result.update(checkpoint_video_id_verified=True,stop_control_readback_verified=True,access_enabled=False)
         print(json.dumps(result,sort_keys=True))
-        open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Strikes EP2 episode probe verified\n\n```json\n"+json.dumps(result,indent=2)+"\n```\n")
+        open(os.environ["GITHUB_STEP_SUMMARY"],"a").write("## Private Strikes EP3 episode probe verified\n\n```json\n"+json.dumps(result,indent=2)+"\n```\n")
     except Exception:
         print('Safe failure stage: '+stage)
         print('Real-part upload stopped. Reconcile encrypted ledger and Studio before retry; secrets not shown.')
