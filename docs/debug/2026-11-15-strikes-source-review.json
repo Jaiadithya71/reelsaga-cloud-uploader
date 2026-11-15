@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-15T19:31:00+05:30",
+  "as_of": "2026-11-15T19:44:39+05:30",
   "name": "The Heiress Strikes Back",
   "id": 833198,
   "source": "https://dramacps.com/dashboard",
@@ -13,7 +13,7 @@
     "status": "Whole-source QA passed, no confirmed defect",
     "evidence": "Whole base.en and small.en;451quartersecond OCR,113 1sec caption pixels,57even+56odd action pixels inspected. 3contiguous renders full-decode and18renderpixels passed. Original audio and source captions unchanged.",
     "content": "Family body-shaming and adoption/abandonment theme; no observed nudity/sex/graphic violence.",
-    "remaining": "PRIVATE ready; fresh claims/restrictions/metadata/spacing gates required again before public. No public Strikes yet."
+    "remaining": "E1P1PUBLIC19:21:59IST;E1P2/P3PRIVATEready freshclaimsgatesmandatory"
   },
   "e2": {
     "duration": 69.566,
@@ -95,7 +95,7 @@
       "all_private": true
     }
   },
-  "status": "E1+E2 five PRIVATE parts prepared, clean claims checked as of journal; no public Strikes. Fresh release gates mandatory.",
+  "status": "E1P1PUBLIC19:21:59IST,6PRIVATE clean ready throughE3P2;E4captionhold. Freshgates required before eachrelease.",
   "part_gates": {
     "yourchannel-strikes833198-ep1-part1-v1": {
       "episode": 1,
@@ -308,7 +308,7 @@
   },
   "e3": {
     "duration": 95.48,
-    "status": "Whole-source QA passed;2contiguous renders inspected, unuploaded",
+    "status": "2PRIVATE cleanready/nativeAIYesSaved/ownorderedplaylist",
     "evidence": "Whole base.en+small.en,382quartersecondOCR,95integercaptionpixels plus targets,48even+47oddactionpixels inspected. Suspected short caption omissions resolved by quarter OCR and target pixels. No confirmed defect. Full decode+12renderpixels inspected. Original captions/audio unchanged except standard edge fades.",
     "bounds": [
       0,
@@ -352,7 +352,56 @@
       }
     ],
     "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/55be859e-1a1bfff57e2-0005-9573-534-c9280.mp4",
-    "content": "Bodyshaming, abandonment/family hostility; no observed nudity/sex/graphic violence."
+    "content": "Bodyshaming, abandonment/family hostility; no observed nudity/sex/graphic violence.",
+    "private_ready": {
+      "ids": [
+        "xTYM93GCW1Y",
+        "5CbqsjtxdKE"
+      ],
+      "studio_urls": [
+        "https://studio.youtube.com/video/xTYM93GCW1Y/edit",
+        "https://studio.youtube.com/video/5CbqsjtxdKE/edit"
+      ],
+      "probe_urls": [
+        "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43722597968",
+        "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43722083672"
+      ],
+      "exact_commits": [
+        "7a5eb3a4f31d32e4c40769f8ad6b94516a748277",
+        "612217f2f1920da2a2439f074e81ec39107967f4"
+      ],
+      "stopped_readback_utc": [
+        "2026-11-15T14:08:12.7537338Z",
+        "2026-11-15T14:03:11.1961981Z"
+      ],
+      "claims_none_at": [
+        "2026-11-15T19:44:19+05:30",
+        "2026-11-15T19:44:29+05:30"
+      ],
+      "claims_pixels": [
+        "cloud-browser-20261115-141419.png",
+        "cloud-browser-20261115-141429.png"
+      ],
+      "nativeAIYesSaved_pixels": [
+        "cloud-browser-20261115-141249.png",
+        "cloud-browser-20261115-140825.png"
+      ],
+      "metadata": "FullAd/exactaffiliate/notforkids/noageDOMverified",
+      "playlist": "https://studio.youtube.com/playlist/PLJJBdGl32g9Q/videos",
+      "order": [
+        "A_xK7tzyc5Q",
+        "xEOiCBcskC4",
+        "ZKDJ0HOFVnA",
+        "e5lsrdbBK-w",
+        "kT6Sfvxy-tk",
+        "xTYM93GCW1Y",
+        "5CbqsjtxdKE"
+      ],
+      "playlist_pixels": "cloud-browser-20261115-141439.png",
+      "stages": "BothconsumeddeletedHEAD404/originalsignedGET40419:37:17/19:38:33ISTcleanupwake canceled",
+      "guard_fix": "InitialP1run43722079946failedbeforeupload atitem_claim_read becausecopiedepisode2duplicateguard. Correctedguard toepisode3withknownP2exception5CbqsjtxdKE;freshcompleteinventory594/noduplicate confirmed before P1created. No duplication.",
+      "browser_recovery": "Initialleaseblank afterchannelpicker,reload/freshtabtimeouts. Onefreshlease thenref-basedReelSaga selection recovered;laterbusyP2playlistSave landedverified via ownplaylist, no repeatedSave."
+    }
   },
   "e4": {
     "duration": 64.829,
