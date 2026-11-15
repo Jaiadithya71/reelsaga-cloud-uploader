@@ -1,0 +1,59 @@
+{
+  "series": "The Child She Chose to Forget",
+  "affiliate": "https://r.reelsgo.tv/Yj6GMHSMEX6V",
+  "parts": {
+    "e1p1": {
+      "id": "gHUOI1Dgjbo",
+      "run": 43685589360,
+      "sha": "610d4cfd89b28c98a038f5f1e17e336de1c79a4e",
+      "stopped": "2026-11-15T06:29:18.9198695Z",
+      "claims": "none12:02:23pixels063223",
+      "nativeAI": "YesSaveddisabled12:04pixels063400",
+      "playlist": "own createdPublicManual selectedSaved12:05:47",
+      "stage": "deletedHEAD404originalsignedGET40411:59:43"
+    },
+    "e1p2": {
+      "id": "daeBcCip6fk",
+      "run": 43685771706,
+      "sha": "610d4cfd89b28c98a038f5f1e17e336de1c79a4e",
+      "stopped": "2026-11-15T06:31:47.4954675Z",
+      "claims": "none12:06:42pixels063642",
+      "nativeAI": "YesSaveddisabled12:07:08pixels063708",
+      "playlist": "selectedSaveddisabled12:07:39",
+      "stage": "deletedHEAD404originalsignedGET40412:02:17"
+    },
+    "e2p1": {
+      "id": "u5TEoTDttjs",
+      "run": 43685924523,
+      "sha": "e9bb525394133060a1632ae31ad8b7c7ca810325",
+      "stopped": "2026-11-15T06:33:25.3265129Z",
+      "stage": "deletedHEAD404originalsignedGET40412:04:28",
+      "studio": "pending",
+      "claims": "none12:07:56pixels063756",
+      "nativeAI": "YesSaveddisabled12:08:29pixels063829",
+      "playlist": "ownselectedSaveddisabled12:08:58"
+    },
+    "e2p2": {
+      "id": "CVGGQPx0eN8",
+      "run": 43686084635,
+      "sha": "e9bb525394133060a1632ae31ad8b7c7ca810325",
+      "stopped": "2026-11-15T06:35:52.8820280Z",
+      "stage": "deletedHEAD404originalsignedGET40412:06:16",
+      "studio": "pending",
+      "claims": "none12:09:33pixels063933",
+      "nativeAI": "YesSaveddisabled12:10:03pixels064003",
+      "playlist": "ownselectedSaveddisabled12:10:28"
+    }
+  },
+  "e3": "captionheldunuploaded",
+  "status": "4 PRIVATE backup parts ready under fresh-release gates, all claimednone, nativeAIYesSaveddisabled, upfrontAd/exactaffiliate/notforkids/ownorderedplaylist. Freshclaims/restrictions/spacing check still mandatory before each public release.",
+  "playlist": {
+    "url": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/videos",
+    "details_url": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/edit",
+    "visibility": "PUBLIC",
+    "order": "MANUAL E1P1/E1P2/E2P1/E2P2 allPRIVATE",
+    "order_verified": "12:10:54DOM plus12:10:59pixels064059",
+    "description": "Ad/exactaffiliateSaveddisabledpixels12:10:49 064049"
+  },
+  "staging": "All4consumed privateobjects deleted HEAD404+originalsignedGET404; allcleanupwakesdeleted"
+}

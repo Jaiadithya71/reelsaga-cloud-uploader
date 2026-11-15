@@ -1,0 +1,751 @@
+[
+  {
+    "start": 0.9400000000000026,
+    "end": 4.54,
+    "text": " It's my fault. I messed up. I brought the wrong notebook.",
+    "words": [
+      {
+        "start": 0.9400000000000026,
+        "end": 1.48,
+        "word": " It's"
+      },
+      {
+        "start": 1.48,
+        "end": 1.66,
+        "word": " my"
+      },
+      {
+        "start": 1.66,
+        "end": 2.0,
+        "word": " fault."
+      },
+      {
+        "start": 2.38,
+        "end": 2.44,
+        "word": " I"
+      },
+      {
+        "start": 2.44,
+        "end": 2.64,
+        "word": " messed"
+      },
+      {
+        "start": 2.64,
+        "end": 3.0,
+        "word": " up."
+      },
+      {
+        "start": 3.24,
+        "end": 3.36,
+        "word": " I"
+      },
+      {
+        "start": 3.36,
+        "end": 3.56,
+        "word": " brought"
+      },
+      {
+        "start": 3.56,
+        "end": 3.76,
+        "word": " the"
+      },
+      {
+        "start": 3.76,
+        "end": 3.96,
+        "word": " wrong"
+      },
+      {
+        "start": 3.96,
+        "end": 4.54,
+        "word": " notebook."
+      }
+    ]
+  },
+  {
+    "start": 5.520000000000002,
+    "end": 9.62,
+    "text": " Mopsy, you... I'm sorry, Miss Parker. I can't read it.",
+    "words": [
+      {
+        "start": 5.520000000000002,
+        "end": 6.06,
+        "word": " Mopsy,"
+      },
+      {
+        "start": 6.46,
+        "end": 6.72,
+        "word": " you..."
+      },
+      {
+        "start": 6.72,
+        "end": 7.08,
+        "word": " I'm"
+      },
+      {
+        "start": 7.08,
+        "end": 7.42,
+        "word": " sorry,"
+      },
+      {
+        "start": 7.6,
+        "end": 7.76,
+        "word": " Miss"
+      },
+      {
+        "start": 7.76,
+        "end": 8.08,
+        "word": " Parker."
+      },
+      {
+        "start": 8.64,
+        "end": 8.7,
+        "word": " I"
+      },
+      {
+        "start": 8.7,
+        "end": 9.08,
+        "word": " can't"
+      },
+      {
+        "start": 9.08,
+        "end": 9.28,
+        "word": " read"
+      },
+      {
+        "start": 9.28,
+        "end": 9.62,
+        "word": " it."
+      }
+    ]
+  },
+  {
+    "start": 11.660000000000002,
+    "end": 13.34,
+    "text": " Mopsy, wait for me.",
+    "words": [
+      {
+        "start": 11.660000000000002,
+        "end": 12.2,
+        "word": " Mopsy,"
+      },
+      {
+        "start": 12.66,
+        "end": 12.86,
+        "word": " wait"
+      },
+      {
+        "start": 12.86,
+        "end": 13.14,
+        "word": " for"
+      },
+      {
+        "start": 13.14,
+        "end": 13.34,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 14.28,
+    "end": 15.76,
+    "text": " Was my Mopsy a good girl today?",
+    "words": [
+      {
+        "start": 14.28,
+        "end": 14.64,
+        "word": " Was"
+      },
+      {
+        "start": 14.64,
+        "end": 14.76,
+        "word": " my"
+      },
+      {
+        "start": 14.76,
+        "end": 15.0,
+        "word": " Mopsy"
+      },
+      {
+        "start": 15.0,
+        "end": 15.22,
+        "word": " a"
+      },
+      {
+        "start": 15.22,
+        "end": 15.34,
+        "word": " good"
+      },
+      {
+        "start": 15.34,
+        "end": 15.56,
+        "word": " girl"
+      },
+      {
+        "start": 15.56,
+        "end": 15.76,
+        "word": " today?"
+      }
+    ]
+  },
+  {
+    "start": 18.180000000000007,
+    "end": 21.02,
+    "text": " Daddy. Mommy told me to call her auntie.",
+    "words": [
+      {
+        "start": 18.180000000000007,
+        "end": 18.720000000000006,
+        "word": " Daddy."
+      },
+      {
+        "start": 18.720000000000006,
+        "end": 19.26,
+        "word": " Mommy"
+      },
+      {
+        "start": 19.26,
+        "end": 19.44,
+        "word": " told"
+      },
+      {
+        "start": 19.44,
+        "end": 19.7,
+        "word": " me"
+      },
+      {
+        "start": 19.7,
+        "end": 19.82,
+        "word": " to"
+      },
+      {
+        "start": 19.82,
+        "end": 20.1,
+        "word": " call"
+      },
+      {
+        "start": 20.1,
+        "end": 20.38,
+        "word": " her"
+      },
+      {
+        "start": 20.38,
+        "end": 21.02,
+        "word": " auntie."
+      }
+    ]
+  },
+  {
+    "start": 21.78,
+    "end": 22.64,
+    "text": " What do you mean?",
+    "words": [
+      {
+        "start": 21.78,
+        "end": 22.32,
+        "word": " What"
+      },
+      {
+        "start": 22.32,
+        "end": 22.4,
+        "word": " do"
+      },
+      {
+        "start": 22.4,
+        "end": 22.46,
+        "word": " you"
+      },
+      {
+        "start": 22.46,
+        "end": 22.64,
+        "word": " mean?"
+      }
+    ]
+  },
+  {
+    "start": 23.02,
+    "end": 26.0,
+    "text": " Ellie calls her mommy and I have to call her auntie.",
+    "words": [
+      {
+        "start": 23.02,
+        "end": 23.12,
+        "word": " Ellie"
+      },
+      {
+        "start": 23.12,
+        "end": 23.46,
+        "word": " calls"
+      },
+      {
+        "start": 23.46,
+        "end": 23.68,
+        "word": " her"
+      },
+      {
+        "start": 23.68,
+        "end": 24.14,
+        "word": " mommy"
+      },
+      {
+        "start": 24.14,
+        "end": 24.5,
+        "word": " and"
+      },
+      {
+        "start": 24.5,
+        "end": 24.66,
+        "word": " I"
+      },
+      {
+        "start": 24.66,
+        "end": 24.82,
+        "word": " have"
+      },
+      {
+        "start": 24.82,
+        "end": 24.98,
+        "word": " to"
+      },
+      {
+        "start": 24.98,
+        "end": 25.16,
+        "word": " call"
+      },
+      {
+        "start": 25.16,
+        "end": 25.36,
+        "word": " her"
+      },
+      {
+        "start": 25.36,
+        "end": 26.0,
+        "word": " auntie."
+      }
+    ]
+  },
+  {
+    "start": 26.0,
+    "end": 29.54,
+    "text": " Did I do something bad? Why can she be Ellie's mommy but not mine?",
+    "words": [
+      {
+        "start": 26.0,
+        "end": 26.32,
+        "word": " Did"
+      },
+      {
+        "start": 26.32,
+        "end": 26.46,
+        "word": " I"
+      },
+      {
+        "start": 26.46,
+        "end": 26.64,
+        "word": " do"
+      },
+      {
+        "start": 26.64,
+        "end": 26.88,
+        "word": " something"
+      },
+      {
+        "start": 26.88,
+        "end": 27.34,
+        "word": " bad?"
+      },
+      {
+        "start": 27.6,
+        "end": 27.66,
+        "word": " Why"
+      },
+      {
+        "start": 27.66,
+        "end": 27.84,
+        "word": " can"
+      },
+      {
+        "start": 27.84,
+        "end": 28.0,
+        "word": " she"
+      },
+      {
+        "start": 28.0,
+        "end": 28.16,
+        "word": " be"
+      },
+      {
+        "start": 28.16,
+        "end": 28.56,
+        "word": " Ellie's"
+      },
+      {
+        "start": 28.56,
+        "end": 28.88,
+        "word": " mommy"
+      },
+      {
+        "start": 28.88,
+        "end": 29.04,
+        "word": " but"
+      },
+      {
+        "start": 29.04,
+        "end": 29.3,
+        "word": " not"
+      },
+      {
+        "start": 29.3,
+        "end": 29.54,
+        "word": " mine?"
+      }
+    ]
+  },
+  {
+    "start": 30.32,
+    "end": 32.28,
+    "text": " Wait for Daddy, sweetheart. I'm coming home.",
+    "words": [
+      {
+        "start": 30.32,
+        "end": 30.8,
+        "word": " Wait"
+      },
+      {
+        "start": 30.8,
+        "end": 30.96,
+        "word": " for"
+      },
+      {
+        "start": 30.96,
+        "end": 31.12,
+        "word": " Daddy,"
+      },
+      {
+        "start": 31.26,
+        "end": 31.6,
+        "word": " sweetheart."
+      },
+      {
+        "start": 31.8,
+        "end": 31.86,
+        "word": " I'm"
+      },
+      {
+        "start": 31.86,
+        "end": 32.02,
+        "word": " coming"
+      },
+      {
+        "start": 32.02,
+        "end": 32.28,
+        "word": " home."
+      }
+    ]
+  },
+  {
+    "start": 32.64,
+    "end": 33.38,
+    "text": " Really, Daddy?",
+    "words": [
+      {
+        "start": 32.64,
+        "end": 32.88,
+        "word": " Really,"
+      },
+      {
+        "start": 32.98,
+        "end": 33.38,
+        "word": " Daddy?"
+      }
+    ]
+  },
+  {
+    "start": 34.120000000000005,
+    "end": 35.64,
+    "text": " I won't let you keep getting hurt.",
+    "words": [
+      {
+        "start": 34.120000000000005,
+        "end": 34.6,
+        "word": " I"
+      },
+      {
+        "start": 34.6,
+        "end": 34.78,
+        "word": " won't"
+      },
+      {
+        "start": 34.78,
+        "end": 34.9,
+        "word": " let"
+      },
+      {
+        "start": 34.9,
+        "end": 35.02,
+        "word": " you"
+      },
+      {
+        "start": 35.02,
+        "end": 35.18,
+        "word": " keep"
+      },
+      {
+        "start": 35.18,
+        "end": 35.4,
+        "word": " getting"
+      },
+      {
+        "start": 35.4,
+        "end": 35.64,
+        "word": " hurt."
+      }
+    ]
+  },
+  {
+    "start": 39.52,
+    "end": 40.66,
+    "text": " Who's little girl is this?",
+    "words": [
+      {
+        "start": 39.52,
+        "end": 40.0,
+        "word": " Who's"
+      },
+      {
+        "start": 40.0,
+        "end": 40.1,
+        "word": " little"
+      },
+      {
+        "start": 40.1,
+        "end": 40.32,
+        "word": " girl"
+      },
+      {
+        "start": 40.32,
+        "end": 40.5,
+        "word": " is"
+      },
+      {
+        "start": 40.5,
+        "end": 40.66,
+        "word": " this?"
+      }
+    ]
+  },
+  {
+    "start": 41.22,
+    "end": 43.56,
+    "text": " I belong to my mommy. Her name is Laura Bennett.",
+    "words": [
+      {
+        "start": 41.22,
+        "end": 41.38,
+        "word": " I"
+      },
+      {
+        "start": 41.38,
+        "end": 41.56,
+        "word": " belong"
+      },
+      {
+        "start": 41.56,
+        "end": 41.82,
+        "word": " to"
+      },
+      {
+        "start": 41.82,
+        "end": 41.96,
+        "word": " my"
+      },
+      {
+        "start": 41.96,
+        "end": 42.36,
+        "word": " mommy."
+      },
+      {
+        "start": 42.66,
+        "end": 42.7,
+        "word": " Her"
+      },
+      {
+        "start": 42.7,
+        "end": 42.88,
+        "word": " name"
+      },
+      {
+        "start": 42.88,
+        "end": 43.04,
+        "word": " is"
+      },
+      {
+        "start": 43.04,
+        "end": 43.28,
+        "word": " Laura"
+      },
+      {
+        "start": 43.28,
+        "end": 43.56,
+        "word": " Bennett."
+      }
+    ]
+  },
+  {
+    "start": 44.24,
+    "end": 46.38,
+    "text": " But didn't your mommy say you were a relative's child?",
+    "words": [
+      {
+        "start": 44.24,
+        "end": 44.38,
+        "word": " But"
+      },
+      {
+        "start": 44.38,
+        "end": 44.94,
+        "word": " didn't"
+      },
+      {
+        "start": 44.94,
+        "end": 45.02,
+        "word": " your"
+      },
+      {
+        "start": 45.02,
+        "end": 45.28,
+        "word": " mommy"
+      },
+      {
+        "start": 45.28,
+        "end": 45.44,
+        "word": " say"
+      },
+      {
+        "start": 45.44,
+        "end": 45.58,
+        "word": " you"
+      },
+      {
+        "start": 45.58,
+        "end": 45.7,
+        "word": " were"
+      },
+      {
+        "start": 45.7,
+        "end": 45.74,
+        "word": " a"
+      },
+      {
+        "start": 45.74,
+        "end": 46.18,
+        "word": " relative's"
+      },
+      {
+        "start": 46.18,
+        "end": 46.38,
+        "word": " child?"
+      }
+    ]
+  },
+  {
+    "start": 47.34,
+    "end": 50.34,
+    "text": " No. I'm her daughter. I really am.",
+    "words": [
+      {
+        "start": 47.34,
+        "end": 47.82,
+        "word": " No."
+      },
+      {
+        "start": 48.48,
+        "end": 48.78,
+        "word": " I'm"
+      },
+      {
+        "start": 48.78,
+        "end": 48.9,
+        "word": " her"
+      },
+      {
+        "start": 48.9,
+        "end": 49.24,
+        "word": " daughter."
+      },
+      {
+        "start": 49.56,
+        "end": 49.62,
+        "word": " I"
+      },
+      {
+        "start": 49.62,
+        "end": 49.86,
+        "word": " really"
+      },
+      {
+        "start": 49.86,
+        "end": 50.34,
+        "word": " am."
+      }
+    ]
+  },
+  {
+    "start": 51.16,
+    "end": 54.34,
+    "text": " Mommy, I'm right here. Please don't forget me.",
+    "words": [
+      {
+        "start": 51.16,
+        "end": 51.64,
+        "word": " Mommy,"
+      },
+      {
+        "start": 51.9,
+        "end": 52.22,
+        "word": " I'm"
+      },
+      {
+        "start": 52.22,
+        "end": 52.38,
+        "word": " right"
+      },
+      {
+        "start": 52.38,
+        "end": 52.78,
+        "word": " here."
+      },
+      {
+        "start": 53.14,
+        "end": 53.26,
+        "word": " Please"
+      },
+      {
+        "start": 53.26,
+        "end": 53.66,
+        "word": " don't"
+      },
+      {
+        "start": 53.66,
+        "end": 53.92,
+        "word": " forget"
+      },
+      {
+        "start": 53.92,
+        "end": 54.34,
+        "word": " me."
+      }
+    ]
+  },
+  {
+    "start": 65.75999999999999,
+    "end": 67.16,
+    "text": " Mommy.",
+    "words": [
+      {
+        "start": 65.75999999999999,
+        "end": 67.16,
+        "word": " Mommy."
+      }
+    ]
+  }
+]

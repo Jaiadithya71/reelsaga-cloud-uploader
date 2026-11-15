@@ -8,7 +8,7 @@
   "affiliate": "https://r.reelsgo.tv/Yj6GMHSMEX6V",
   "app_home": "https://r.reelsgo.tv/xBO8r5fwB8IM",
   "affiliate_verified": "Nov15 11:55 dialog exact833163/yourchannel and11:56 Links exactID+bothURLs; screenshots062519/062609",
-  "status": "E1+E2 reviewed and rendered; E1 private uploads, E2 private probes pending",
+  "status": "E1+E2 fourPRIVATE claimsnone/nativeAIYesSaved/ownorderedplaylist ready under fresh gates; E3heldunuploaded",
   "source_review_ready": true,
   "episode1": {
     "source_duration": 60.895,
@@ -178,5 +178,24 @@
     "part_pixels": 12,
     "confirmed_dialogue_defect": null,
     "notes": "Both wholeASR agree dialogue; Mopsy phonetically Moopsy retained source name, caption OK versus okay equivalent. All spoken clauses found in source captions. Source top The Best Moment retained, original audio and burned captions, crying child/emotional neglect but no explicit nudity sex graphicwound observed; not policy guarantee."
+  },
+  "episode3": {
+    "status": "HELD unuploaded",
+    "whole_asr": [
+      "base.en",
+      "small.en"
+    ],
+    "quarter_ocr_frames": 269,
+    "action_pixels": 34,
+    "caption_pixels": 67,
+    "caption_issue": "~28-29 source caption WHY CANT SHE BE ELLIES MOMMY BUT NOT MINE vs wholebase/small AND isolated7s base/small all Why can she be Ellies mommy but not mine. Hold unchanged. Also caption Cant you show a little understanding61-63 omitted both whole ASR; not needed to settle first issue. No repair/skip."
+  },
+  "playlist": {
+    "url": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/videos",
+    "details_url": "https://studio.youtube.com/playlist/PLLXSUDSCbG0I/edit",
+    "visibility": "PUBLIC",
+    "order": "MANUAL E1P1/E1P2/E2P1/E2P2 allPRIVATE",
+    "order_verified": "12:10:54DOM plus12:10:59pixels064059",
+    "description": "Ad/exactaffiliateSaveddisabledpixels12:10:49 064049"
   }
 }
