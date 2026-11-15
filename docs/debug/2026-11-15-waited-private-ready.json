@@ -57,5 +57,14 @@
     "verified": "09:58:38IST"
   },
   "cleanup": "All3consumedstagesdeletedHEAD404originalsignedGET404;allcleanupwakesdeleted",
-  "next": "AfterAnimalE2P1freshgates releaseWaitedE1P1>=60minactualYTspacing;nofreshclaimsguarantee. E2held no skip."
+  "next": "AfterAnimalE2P1freshgates releaseWaitedE1P1>=60minactualYTspacing;nofreshclaimsguarantee. E2held no skip.",
+  "e1p1_ledger": {
+    "run": 43684663565,
+    "status": "success",
+    "sha": "42955091861a98003aea3d8b03a35cc5cf845df9",
+    "published_at": "2026-11-15T06:15:17Z",
+    "stopped_readback": "2026-11-15T06:16:36.0038420Z",
+    "verified_at": "2026-11-15T11:49:37+05:30",
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43684663565"
+  }
 }
