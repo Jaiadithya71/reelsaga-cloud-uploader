@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-15T15:36:23+05:30",
+  "as_of": "2026-11-15T15:48:18+05:30",
   "name": "The Heiress Strikes Back",
   "id": 833198,
   "source": "https://dramacps.com/dashboard",
@@ -17,7 +17,7 @@
   },
   "e2": {
     "duration": 69.566,
-    "status": "Whole source QA passed, 2renders ready. Unuploaded.",
+    "status": "2PRIVATE ready, nativeAIYesSaved/fullAdexactaffiliate/notforkids/noage, own ordered playlist",
     "evidence": "Whole base.en+small.en,278quarterOCR,70captionpixels,35even+34odd actionpixels inspected,2renders decodechecked+12renderpixels inspected. No confirmed caption defect.",
     "renders": [
       {
@@ -54,9 +54,48 @@
         "approved_render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375",
         "render_sha256": "9606b5e0cd1f070b918c24f415432b74dbb8c64c3e7080a0843007fe61f96375"
       }
-    ]
+    ],
+    "private_ready": {
+      "ids": [
+        "e5lsrdbBK-w",
+        "kT6Sfvxy-tk"
+      ],
+      "studio_urls": [
+        "https://studio.youtube.com/video/e5lsrdbBK-w/edit",
+        "https://studio.youtube.com/video/kT6Sfvxy-tk/edit"
+      ],
+      "probe_urls": [
+        "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43703008826",
+        "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43703022294"
+      ],
+      "exact_commit": "63f6398f8ab34f1a30cf71da9e987a08e14a89f7",
+      "probe_status": "bothSUCCESS, stopped readback verified10:14:04.658Z/10:14:45.090Z",
+      "claims_none_at": [
+        "2026-11-15T15:47:15+05:30",
+        "2026-11-15T15:48:04+05:30"
+      ],
+      "native_ai_yes_saved_pixels": [
+        "cloud-browser-20261115-101712.png",
+        "cloud-browser-20261115-101803.png"
+      ],
+      "claims_pixels": [
+        "cloud-browser-20261115-101715.png",
+        "cloud-browser-20261115-101804.png"
+      ],
+      "consumed_stages": "bothdeleted HEAD404/originalsignedGET40415:45:55,cleanupwake deleted",
+      "playlist": "https://studio.youtube.com/playlist/PLJJBdGl32g9Q/videos",
+      "actual_order": [
+        "A_xK7tzyc5Q",
+        "xEOiCBcskC4",
+        "ZKDJ0HOFVnA",
+        "e5lsrdbBK-w",
+        "kT6Sfvxy-tk"
+      ],
+      "playlist_order_pixels": "cloud-browser-20261115-101818.png",
+      "all_private": true
+    }
   },
-  "status": "E1 all3PRIVATE claims clean/nativeAIyes/ownmanualplaylist. E2 prepared unuploaded.",
+  "status": "E1+E2 five PRIVATE parts prepared, clean claims checked as of journal; no public Strikes. Fresh release gates mandatory.",
   "part_gates": {
     "yourchannel-strikes833198-ep1-part1-v1": {
       "episode": 1,
