@@ -57,7 +57,7 @@
     "verified": "09:58:38IST"
   },
   "cleanup": "All3consumedstagesdeletedHEAD404originalsignedGET404;allcleanupwakesdeleted",
-  "next": "WaitedE1P3Nov15 13:53-56ISTfloor13:50:46/4h16:50:46; then Child833163E1P1freshallgates.",
+  "next": "ChildE1P1Nov15 14:59-15:02ISTfloor14:56:51/4h17:56:51wake01M7F52Q0YC29QDK1QK3QY5YMT",
   "e1p1_ledger": {
     "run": 43684663565,
     "status": "success",
@@ -88,5 +88,26 @@
       "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43689568399"
     },
     "next": "WaitedE1P3Nov15 13:53-56ISTfloor13:50:46/4h16:50:46wake01M7F1A4BQ5CP4NRP79PYDR2D8"
+  },
+  "public_p3": {
+    "id": "Uqy_l8AXDBI",
+    "url": "https://youtube.com/shorts/Uqy_l8AXDBI",
+    "actual_ist": "2026-11-15T13:56:51+05:30",
+    "player": "2026-11-15T00:26:51-08:00privatefalseunlistedfalseOKexactchannelverified13:57:00",
+    "singleSave": "13:56:50",
+    "claims": "nonepixels13:55:52 082552",
+    "nativeAI": "YesSaveddisabledpixels13:56:13 082613",
+    "metadata": "fullAdexactaffiliate/notforkids/noageSaveddisabledDOM13:56:05",
+    "latest_channel": "WaitedE1P2nonewerdashboard13:56:27",
+    "playlist": "all3PUBLICorderedverifiedDOM13:57:29pixels082723",
+    "ledger": {
+      "run": 43694566341,
+      "sha": "842e3e1b23de6f648dd8fe3ba465d010204d6827",
+      "state": "success",
+      "published_at": "2026-11-15T08:26:51Z",
+      "stopped_readback": "2026-11-15T08:27:37.3534638Z",
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43694566341"
+    },
+    "next": "ChildE1P1Nov15 14:59-15:02ISTfloor14:56:51/4h17:56:51wake01M7F52Q0YC29QDK1QK3QY5YMT"
   }
 }
