@@ -388,5 +388,54 @@
         "measured_duration": 38.281
       }
     ]
+  },
+  "e4_qa": {
+    "status": "HOLD_SOURCE_CAPTION_MISMATCH",
+    "duration": 79.946,
+    "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1296996b-1a1b9791b47-0005-9573-534-c9280.mp4",
+    "review": "wholebase/smallASR+320quarterOCR+80caption+80actionpixelsinspected. BothwholeASRs and isolatedbeam5ASRs hearBlackroast/Blackrose; independentaudiotranscriptBlackRose. CaptionlockmeinsideBlackridge67.5-68.0. Noediting/skipping/upload. Mildredhandburn+institutionalwheelchairscene,noobservedgraphicinjury/nudity/sex.",
+    "evidence": [
+      "/downloads/unseen833206-review/e4-blackridge-caption.jpg",
+      "/downloads/unseen833206-review/e4-blackridge.wav"
+    ],
+    "rendered": false,
+    "staged": false,
+    "uploaded": false
+  },
+  "e3_private_closeout": {
+    "at": "2026-11-16T05:42:00+05:30",
+    "parts": [
+      {
+        "part": 1,
+        "video_id": "xqXnm6YElOo",
+        "url": "https://youtube.com/shorts/xqXnm6YElOo",
+        "run": 43778456875,
+        "stopped": "2026-11-16T00:08:11.8457374Z"
+      },
+      {
+        "part": 2,
+        "video_id": "HOhofQ_3HvI",
+        "url": "https://youtube.com/shorts/HOhofQ_3HvI",
+        "run": 43778596986,
+        "stopped": "2026-11-16T00:09:24.4821507Z"
+      }
+    ],
+    "sha": "6aaac904dd4912eeeb844d5e73cf7785c7d4e2e4",
+    "claims": "Studiofreshnoneboth",
+    "privacy": "private",
+    "native_ai": "YesSavedBoth",
+    "metadata": "Fulltitle/Ad/exactaffiliate/notforkids/noagechecked",
+    "playlist": "https://studio.youtube.com/playlist/PLeNEHClaZ6gU/videos",
+    "order": [
+      "Kjgv4AwGUP0",
+      "05njy_brxyo",
+      "sWT_Y7FmX14",
+      "cVNdIjR5p1I",
+      "xqXnm6YElOo",
+      "HOhofQ_3HvI"
+    ],
+    "pixels": "/downloads/cloud-browser-20261116-001153.png",
+    "staging": "BothconsumeddeletedHEAD404+originalsignedGET404;cleanupwakescancelled",
+    "fresh_pre_public_gates_required": true
   }
 }
