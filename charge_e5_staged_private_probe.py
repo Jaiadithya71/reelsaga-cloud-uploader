@@ -130,7 +130,15 @@ def main():
             ids=list(dict.fromkeys(ids))
             for n in range(0,len(ids),50):
                 data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data
-                if {v['id'] for v in data.get('items',[])}!=set(ids[n:n+50]):raise RuntimeError('Incomplete channel metadata')
+                returned={v['id'] for v in data.get('items',[])}
+                missing=set(ids[n:n+50])-returned
+                # Sole platform-removed Lion ID verified by Studio and read-only diagnostic43940698982.
+                # Never ignore a new unknown ID or permit any Lion upload.
+                if missing-{'QPmx1eFrJ0A'}:raise RuntimeError('Incomplete channel metadata: '+','.join(sorted(missing)))
+                for absent in missing:
+                    single=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':absent})).data
+                    if single.get('items'):raise RuntimeError('Removed-video exception changed; reconcile only')
+                    print('KNOWN_REMOVED_LION_EXCLUDED '+absent,flush=True)
                 for video in data.get('items',[]):
                     snippet=video['snippet']
                     if snippet['channelId']!=CHANNEL:raise RuntimeError('Channel mismatch')
