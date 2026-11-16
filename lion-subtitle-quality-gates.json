@@ -110,7 +110,7 @@
   ],
   "playlist": "https://studio.youtube.com/playlist/PLKn2GW-t3Wh4/videos",
   "playlist_public_url": "https://www.youtube.com/playlist?list=PLKn2GW-t3Wh4",
-  "playlist_gates": "OwnPUBLICMANUAL4PRIVATEexactE1P1/E1P2/E2P1/E2P2orderverifiedDOM+pixelsNov16 17:10:39;descriptionAd/exactaffiliate. E1P2HDstillprocessingat17:10,recheckbeforepublic.",
+  "playlist_gates": "OwnPUBLICMANUAL4PRIVATEexactE1P1/E1P2/E2P1/E2P2orderverifiedDOM+pixelsNov16 17:10:39;descriptionAd/exactaffiliate. E1P2HDcompletecheckedliveStudioDOMNov16 19:09:28IST.",
   "e1p1_private_probe": {
     "id": "QPmx1eFrJ0A",
     "run": 43858236283,
@@ -139,7 +139,8 @@
     "ai": "YesSaved/SaveUndoDisabledpixelsNov16 17:07:13IST",
     "playlist": "ownPUBLICMANUALordered17:10:39",
     "metadata": "fullAd/exactaffiliate/notforkids/noageverifiedDOM",
-    "visibility": "PRIVATE"
+    "visibility": "PRIVATE",
+    "video_quality": "StandardDefinitioncomplete/HighDefinitioncompletecheckedliveStudioDOMNov16 19:09:28IST"
   },
   "e2p1_private_probe": {
     "id": "Xk4W5ReBbxg",
