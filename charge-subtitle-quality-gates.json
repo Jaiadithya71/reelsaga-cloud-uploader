@@ -17,7 +17,7 @@
     "e3": "80.928s whole base.en+small.en ASR;324quarterOCR,81action+81caption integer pixels inspected. Brief Of course/Boss31.5/31.75 and Yes/Boss/Whats on my schedule targets checked. Watch Grumpys ear/Vincent/Cole correct. Conversation/bodyguards/car, no graphic injury/nudity/sex observed. Unchangedaudio/captions, two continuousrenders0-40.8/40.8-80.928 measured40.8/40.134,decode/cap+6renderpixelsverified11:53.",
     "e4": "108.297s whole base.en+small.en ASR,433quarterOCR,109caption/action integerpixelsinspected12:17. TargetBoss/Frank/Hi/Well/GoHaveFun/PickItUp/MrMoretti/WhatsThatOnYourShoe inspected;independentendingASRvadfalseconfirmedMrMoretti/WhatsThatOnYourShoe. Dialogue/mobthreats/non-graphicconfrontation/profanity;noinjury/nudity/sexobserved. 2continuousunchangedaudio/captionsrenders0-54.5-108.297 measured54.5/53.798;decode/cap/6renderpixelsPASS12:18.",
     "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED",
-    "e5": "46.532s whole base.en+small.en ASR;186quarterOCR noisy/background,47integercaption+47action pixels;openingEww/MrMoretti/WhatsThat and40.25OneSecond/41Sir shortcards targetedpixels+audio independentlyverified. Adults argue about dirtyshoe; childsafeatcake, nochildmistreatment observed. Originalsource720x1280;onecontinuous46.534renderdecode/cap/3pixels PASS. LivefreeE5sourceDr amaCPS00:52Nov17.",
+    "e5": "46.532s whole base.en+small.en ASR;186quarterOCR noisy/background,47integercaption+47action pixels;openingEww/MrMoretti/WhatsThat and40.25OneSecond/41Sir shortcards targetedpixels+audio independentlyverified. Adults argue about dirtyshoe; childsafeatcake, nochildmistreatment observed. Originalsource720x1280;onecontinuous46.534renderdecode/cap/3pixels PASS. LivefreeE5sourceDramaCPS00:52Nov17.",
     "e6_plus": "NOT_REVIEWED"
   },
   "part_gates": {
@@ -470,5 +470,28 @@
     "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43937525525",
     "ledger": "SUCCESSexacta114cc103c2eb137b6a9ea0458911e1ef07f6f80/APIpublishedAt19:15:42Z/stopped19:16:31.4043278Z",
     "next": "E5wholecaption/actionQApending;earliest01:45:42IST/4h04:45:42Nov17"
+  },
+  "e5p1_probe_progress": {
+    "first_run": 43939157855,
+    "first_outcome": "stoppedcomplete_channel_duplicate_read beforeitemclaim/upload;onlymissingremovedLionIDQPmx1eFrJ0A",
+    "diagnostic_run": 43940698982,
+    "diagnostic": "623IDs/622readable/noE5matches;singleLionreadempty;StudioRemoved01:05",
+    "correction": "exactremovedLionexceptiononly;unknownmissingIDsfailclosed;item404bothnamespacestwicebeforecorrecteddispatch",
+    "corrected_sha": "16b5579106d0bfc6adeb34d99573eaceec70cc4b",
+    "stage": "olddeletedHEAD404signedGET404;newrecreated01:05private38.9MBsigned2h"
+  },
+  "e5p1_private_probe": {
+    "id": "zIy9Y_oscMc",
+    "run": 43940892090,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43940892090",
+    "sha": "16b5579106d0bfc6adeb34d99573eaceec70cc4b",
+    "inventory": 623,
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T19:36:24.6025942Z",
+    "stage_cleanup": "HEAD404/originalsignedGET40401:11",
+    "visibility": "PRIVATE",
+    "claims": "NOT_CHECKED",
+    "native_ai": "NOT_SET",
+    "playlist": "NOT_ADDED"
   }
 }
