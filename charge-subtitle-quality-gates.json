@@ -313,10 +313,13 @@
     "stopped": "2026-11-16T06:53:25.1730587Z",
     "state": "ready_for_review",
     "stage_cleanup": "HEAD404/signedGET40412:23:57;cleanupwakedeleted",
-    "studio_claims": "none12:24:36pixels065436BUTEPISODEHOLDP1audioClaimNoSkip",
-    "ai": "NOT_SET",
-    "playlist": "NOT_ADDED",
-    "visibility": "PRIVATE"
+    "studio_claims": "noneNov17 00:35:58IST/pixels190601",
+    "ai": "YesSaved00:36:32/reloadedYesSelectedSaveDisabledDOMandpixels190706",
+    "playlist": "NOT_ADDED pendingrelease",
+    "visibility": "PRIVATE",
+    "action_policy_review": "E4 source54.5-108.297 integeractionpixels36+72 and ending, transcript, renderedP2samples rechecked00:35-37. Child receives cake/walks away, adults confront each other, child atcake thenremarksaboutshoe. Nochildmistreatmentobserved.",
+    "release_floor": "2026-11-17T00:41:42+05:30",
+    "release_workflow": "Prepared2b3fad7 notdispatched"
   },
   "e1p1_public": {
     "id": "Y27vxgvL9j4",
