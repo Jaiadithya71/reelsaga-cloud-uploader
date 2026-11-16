@@ -6,7 +6,7 @@
   "platform": "YourChannel60%",
   "affiliate": "https://r.reelsgo.tv/TaIVvnMY7GnB",
   "app_home": "https://r.reelsgo.tv/kz69ifoK3vSz",
-  "status": "E1_TWO_PUBLIC_FOUR_PRIVATE_E2_E3_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
+  "status": "THREE_PUBLIC_THREE_PRIVATE_THROUGH_E3_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
   "no_repeat_check": "Entire local canonical repo id/title + live index no hit11:32 Nov16; full live channel guard mandatory inside each private probe.",
   "source_qa": {
     "e1": "83.823s whole base.en+small.en ASR;335quarterOCR,84action+84caption integer pixels; targets Nobody picking UP/And the bag verified. School bullying, robbery threat/watch grabbing. No graphic injury/nudity/sex observed.",
@@ -349,5 +349,21 @@
     "ledger": "SUCCESSexact1d8d84e711abc30b8d75dea50bd679344b4467a1/APIpublishedAt10:07:18Z/stoppedcontrolreadbackverified",
     "spacing": "67m38safterChargeE1P1;dashboardlatestconfirmedE1P1beforeflip",
     "next": "ChargeE2P1pRWXSv6Cbq4 floor16:37:18IST/4h19:37:18 wake16:42-45"
+  },
+  "e2p1_public": {
+    "id": "pRWXSv6Cbq4",
+    "url": "https://www.youtube.com/shorts/pRWXSv6Cbq4",
+    "published_at": "2026-11-16T11:16:47Z",
+    "claims": "none16:46:02pixels111602",
+    "native_ai": "YesSaved16:46:34pixels111634",
+    "metadata": "FullAd/exactaffiliate/notforkids/noage/ownplaylistcheckedDOM",
+    "studio": "PublicSavedUndoSaveDisabled16:47:03pixels111703",
+    "player": "PUBLICshortsnewactualpixels111714",
+    "playlist": "3PUBLIC3PRIVATEcorrectorder16:47:34pixels111734",
+    "ledger_run": 43856359619,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43856359619",
+    "ledger": "SUCCESSexact7bbe70e2685510d2919942a733835da3df4e2b29/APIpublishedAt11:16:47Z/stoppedcontrolreadbackverified",
+    "spacing": "69m29safterChargeE1P2;dashboardlatestconfirmedE1P2beforeflip",
+    "next": "ChargeE2P2KlrmFJAaaKs floor17:46:47IST/4h20:46:47 wake17:52-55"
   }
 }
