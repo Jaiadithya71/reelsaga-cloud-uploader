@@ -6,7 +6,7 @@
   "platform": "YourChannel60%",
   "affiliate": "https://r.reelsgo.tv/TaIVvnMY7GnB",
   "app_home": "https://r.reelsgo.tv/kz69ifoK3vSz",
-  "status": "THREE_PUBLIC_THREE_PRIVATE_THROUGH_E3_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
+  "status": "FOUR_PUBLIC_TWO_PRIVATE_THROUGH_E3_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
   "no_repeat_check": "Entire local canonical repo id/title + live index no hit11:32 Nov16; full live channel guard mandatory inside each private probe.",
   "source_qa": {
     "e1": "83.823s whole base.en+small.en ASR;335quarterOCR,84action+84caption integer pixels; targets Nobody picking UP/And the bag verified. School bullying, robbery threat/watch grabbing. No graphic injury/nudity/sex observed.",
@@ -365,5 +365,21 @@
     "ledger": "SUCCESSexact7bbe70e2685510d2919942a733835da3df4e2b29/APIpublishedAt11:16:47Z/stoppedcontrolreadbackverified",
     "spacing": "69m29safterChargeE1P2;dashboardlatestconfirmedE1P2beforeflip",
     "next": "ChargeE2P2KlrmFJAaaKs floor17:46:47IST/4h20:46:47 wake17:52-55"
+  },
+  "e2p2_public": {
+    "id": "KlrmFJAaaKs",
+    "url": "https://www.youtube.com/shorts/KlrmFJAaaKs",
+    "published_at": "2026-11-16T12:24:25Z",
+    "claims": "none17:53:41pixels122341",
+    "native_ai": "YesSaved17:54:02pixels122402",
+    "metadata": "FullAd/exactaffiliate/notforkids/noage/ownplaylistcheckedDOM",
+    "studio": "PublicSavedUndoSaveDisabled17:54:28pixels122428",
+    "player": "PUBLICshortsactualpixels122503/statusOK/exactchannel/privatefalseunlistedfalse",
+    "playlist": "4PUBLIC2PRIVATEcorrectorder17:55:10pixels122510",
+    "ledger_run": 43866323557,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43866323557",
+    "ledger": "SUCCESSexact7d54accb5e083292402d04e30e28a8a2eaf78b24/APIpublishedAt12:24:25Z/stoppedcontrolreadbackverified12:25:19.8451576Z",
+    "spacing": "67m38safterChargeE2P1;dashboardlatestE2P1confirmed17:54:10",
+    "next": "ChargeE3P1eS-Au7p5YSkfloor18:54:25/4h21:54:25wake19:00-03"
   }
 }
