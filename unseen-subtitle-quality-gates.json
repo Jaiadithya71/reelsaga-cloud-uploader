@@ -487,5 +487,30 @@
       "stopped_readback": "2026-11-16T02:16:52.9561656Z",
       "verified_at": "2026-11-16T07:47:00+05:30"
     }
+  },
+  "e3p2_public_closeout": {
+    "at": "2026-11-16T08:52:15+05:30",
+    "url": "https://www.youtube.com/shorts/HOhofQ_3HvI",
+    "actual_player_verified": "2026-11-16T08:52:27+05:30",
+    "private": false,
+    "unlisted": false,
+    "status": "OK",
+    "claims_pixels": "cloud-browser-20261116-032146.png",
+    "ai_yes_saved_pixels": "cloud-browser-20261116-032209.png",
+    "notforkids_noage_pixels": "cloud-browser-20261116-032159.png",
+    "public_saved_pixels": "cloud-browser-20261116-032215.png",
+    "ordered_playlist_pixels": "cloud-browser-20261116-032254.png",
+    "spacing": "1:06:03",
+    "next_floor": "2026-11-16T09:52:15+05:30",
+    "next_wake": "wakeschedule-01M7H61RA6ND8KGN6E4X50SRB5",
+    "ledger": {
+      "run": 43797806332,
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43797806332",
+      "sha": "a877441d6e16c876bf9fb84f62c282c969feea06",
+      "status": "success",
+      "published_at": "2026-11-16T03:22:15Z",
+      "stopped_readback": "2026-11-16T03:23:03.3257893Z",
+      "verified_at": "2026-11-16T08:53:09+05:30"
+    }
   }
 }
