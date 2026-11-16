@@ -112,5 +112,72 @@
       "approved_render_sha256": "bfbbd8556b8085968f0c4ab0ab94fbf968e7708029a1887a9bb81ac7fce02a35"
     }
   },
-  "e2_qa": "Wholebase+smallENASR,330quarterOCR,83caption+83actionpixels,6briefcaptiontargetsinspected. No confirmedcaptiondefect. Threatenedriverexecution,womangrabs/silencesmaid,nographicinjury/sex/nudity. Originalaudio/captionsunchangedexcept0.15edgefades. Split40.2between39.1endsentenceand41.74nextspeech."
+  "e2_qa": "Wholebase+smallENASR,330quarterOCR,83caption+83actionpixels,6briefcaptiontargetsinspected. No confirmedcaptiondefect. Threatenedriverexecution,womangrabs/silencesmaid,nographicinjury/sex/nudity. Originalaudio/captionsunchangedexcept0.15edgefades. Split40.2between39.1endsentenceand41.74nextspeech.",
+  "private_ready_closeout": {
+    "at": "2026-11-16T05:56:00+05:30",
+    "parts": [
+      {
+        "episode": 1,
+        "part": 1,
+        "video_id": "uqeox5-qAzA",
+        "url": "https://youtube.com/shorts/uqeox5-qAzA",
+        "run": 43779609788,
+        "sha": "2022813a79d864d1df6bf3bb705af3814bd4a9c3",
+        "stopped": "2026-11-16T00:19:46.1075536Z"
+      },
+      {
+        "episode": 1,
+        "part": 2,
+        "video_id": "zwwfIRuRHQA",
+        "url": "https://youtube.com/shorts/zwwfIRuRHQA",
+        "run": 43779796111,
+        "sha": "2022813a79d864d1df6bf3bb705af3814bd4a9c3",
+        "stopped": "2026-11-16T00:21:31.1340573Z"
+      },
+      {
+        "episode": 2,
+        "part": 1,
+        "video_id": "AiX-71_QS-Y",
+        "url": "https://studio.youtube.com/video/AiX-71_QS-Y/edit",
+        "run": 43779954942,
+        "sha": "a385d1f5332474550d086db7a066c5848e4455d5",
+        "stopped": "2026-11-16T00:23:18.2899587Z"
+      },
+      {
+        "episode": 2,
+        "part": 2,
+        "video_id": "ULJPshvy23g",
+        "url": "https://studio.youtube.com/video/ULJPshvy23g/edit",
+        "run": 43779999417,
+        "sha": "a385d1f5332474550d086db7a066c5848e4455d5",
+        "stopped": "2026-11-16T00:24:15.5814199Z"
+      }
+    ],
+    "claims": "Studiofreshnoneall4",
+    "privacy": "private",
+    "native_ai": "YesSavedAll4;P1readbackafterreload",
+    "metadata": "Fulltitle/Ad/exactaffiliate/notforkids/noagechecked",
+    "playlist": "https://studio.youtube.com/playlist/PLRliqPNO0id0/videos",
+    "order": [
+      "uqeox5-qAzA",
+      "zwwfIRuRHQA",
+      "AiX-71_QS-Y",
+      "ULJPshvy23g"
+    ],
+    "pixels": "/downloads/cloud-browser-20261116-002544.png",
+    "claims_pixels": [
+      "cloud-browser-20261116-002045.png",
+      "cloud-browser-20261116-002243.png",
+      "cloud-browser-20261116-002405.png",
+      "cloud-browser-20261116-002449.png"
+    ],
+    "native_ai_pixels": [
+      "cloud-browser-20261116-002537.png",
+      "cloud-browser-20261116-002324.png",
+      "cloud-browser-20261116-002435.png",
+      "cloud-browser-20261116-002517.png"
+    ],
+    "staging": "All4consumeddeletedHEAD404+originalsignedGET404;cleanupwakescancelled",
+    "fresh_pre_public_gates_required": true
+  }
 }
