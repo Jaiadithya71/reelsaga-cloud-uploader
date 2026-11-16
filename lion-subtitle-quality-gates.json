@@ -1,0 +1,110 @@
+{
+  "series": "The Lion Child",
+  "id": 833230,
+  "source_page": "https://dramacps.com/dashboard",
+  "free_episodes": 5,
+  "platform": "YourChannel60%",
+  "affiliate": "https://r.reelsgo.tv/s98Lt2cw7mGf",
+  "app_home": "https://r.reelsgo.tv/AX-3SFHiOa0g",
+  "status": "RENDER_QA_PASSED_PRIVATE_CLAIM_PROBE_PENDING",
+  "no_repeat_check": "Repo history/gates + liveindex no title/id hit Nov16 16:49; complete livechannelguard mandatory before first private probe.",
+  "source_qa": {
+    "e1": "78.302s whole base.en+small.en ASR,313quarterOCR,78action+78caption integer pixels inspected16:54. BriefLookAtHer13.25/SheWentMissing24.5/PapaHoldOn39.5/FollowMe69.5-71 targetpixels verified16:56. Infantcliffperil/abandonmentdialogue/lionrescue/healing small bloody lion wound, no graphicgore/nudity/sex observed.",
+    "e2": "92.318s whole base.en+small.en ASR,369quarterOCR,92action+92caption integer pixels inspected16:54; briefNOW42.5/No49.5/AreYouHurt73.5 targetpixels verified16:56. Childroughlypushed/rejected/falls,lionaura-stops-car/peril withoutimpactinjury;no graphicgore/nudity/sex observed.",
+    "ocr_caveat": "OCR highly noisy/background; all integer captions read independently and brief cards visually targeted. ASR omits brief utterances, not a caption defect.",
+    "render": "Four continuous parts 0-39-78.302 and0-45.9-92.318; unchanged source captions/audio except0.15edgefades. Measuredcap/decode+12renderpixels inspected16:58.",
+    "e3_plus": "UNREVIEWED"
+  },
+  "part_gates": {
+    "yourchannel-lion833230-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 39.0,
+      "duration": 39.0,
+      "measured_duration": 39.0,
+      "sha256": "ea5e0df8c674b5e9e88dbe75e28f64b493a3bcd73dfc92dc6a0b3804d49b9ce1",
+      "bytes": 80660138,
+      "path": "/downloads/lion833230-review/lion-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "ea5e0df8c674b5e9e88dbe75e28f64b493a3bcd73dfc92dc6a0b3804d49b9ce1",
+      "render_sha256": "ea5e0df8c674b5e9e88dbe75e28f64b493a3bcd73dfc92dc6a0b3804d49b9ce1"
+    },
+    "yourchannel-lion833230-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 39.0,
+      "source_end": 78.302,
+      "duration": 39.30200000000001,
+      "measured_duration": 39.302,
+      "sha256": "b05bd9b97a495d0ef18c117dad9058546dfa919b5b856d0788b9c309fca4723c",
+      "bytes": 95464311,
+      "path": "/downloads/lion833230-review/lion-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "b05bd9b97a495d0ef18c117dad9058546dfa919b5b856d0788b9c309fca4723c",
+      "render_sha256": "b05bd9b97a495d0ef18c117dad9058546dfa919b5b856d0788b9c309fca4723c"
+    },
+    "yourchannel-lion833230-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 45.9,
+      "duration": 45.9,
+      "measured_duration": 45.9,
+      "sha256": "e5e9103a4e864f0c30ef895fc936ae0764ffc66722f8a918a5bf2a9ee6b458bf",
+      "bytes": 82629312,
+      "path": "/downloads/lion833230-review/lion-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "e5e9103a4e864f0c30ef895fc936ae0764ffc66722f8a918a5bf2a9ee6b458bf",
+      "render_sha256": "e5e9103a4e864f0c30ef895fc936ae0764ffc66722f8a918a5bf2a9ee6b458bf"
+    },
+    "yourchannel-lion833230-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 45.9,
+      "source_end": 92.318,
+      "duration": 46.418,
+      "measured_duration": 46.419,
+      "sha256": "45cde9fb938f60269c822a91664f65feb9cf10b0e1b1ccc71691b0292469d428",
+      "bytes": 102061105,
+      "path": "/downloads/lion833230-review/lion-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "45cde9fb938f60269c822a91664f65feb9cf10b0e1b1ccc71691b0292469d428",
+      "render_sha256": "45cde9fb938f60269c822a91664f65feb9cf10b0e1b1ccc71691b0292469d428"
+    }
+  },
+  "sources": [
+    {
+      "text": "Episode 1 \u00b7 1",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/b7b4c98-1a1af777618-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 2 \u00b7 2",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/8e16c5f-1a1af777618-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 3 \u00b7 3",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2fc34aeb-1a1af777615-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 4 \u00b7 4",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/11d3a853-1a1af777615-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 5 \u00b7 5",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/52bebfd1-1a1af777618-0005-9573-534-c9280.mp4"
+    }
+  ]
+}
