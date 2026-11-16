@@ -6,7 +6,7 @@
   "platform": "YourChannel60%",
   "affiliate": "https://r.reelsgo.tv/TaIVvnMY7GnB",
   "app_home": "https://r.reelsgo.tv/kz69ifoK3vSz",
-  "status": "FOUR_PUBLIC_TWO_PRIVATE_THROUGH_E3_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
+  "status": "FIVE_PUBLIC_ONE_PRIVATE_THROUGH_E3_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
   "no_repeat_check": "Entire local canonical repo id/title + live index no hit11:32 Nov16; full live channel guard mandatory inside each private probe.",
   "source_qa": {
     "e1": "83.823s whole base.en+small.en ASR;335quarterOCR,84action+84caption integer pixels; targets Nobody picking UP/And the bag verified. School bullying, robbery threat/watch grabbing. No graphic injury/nudity/sex observed.",
@@ -381,5 +381,21 @@
     "ledger": "SUCCESSexact7d54accb5e083292402d04e30e28a8a2eaf78b24/APIpublishedAt12:24:25Z/stoppedcontrolreadbackverified12:25:19.8451576Z",
     "spacing": "67m38safterChargeE2P1;dashboardlatestE2P1confirmed17:54:10",
     "next": "ChargeE3P1eS-Au7p5YSkfloor18:54:25/4h21:54:25wake19:00-03"
+  },
+  "e3p1_public": {
+    "id": "eS-Au7p5YSk",
+    "url": "https://www.youtube.com/shorts/eS-Au7p5YSk",
+    "published_at": "2026-11-16T13:38:15Z",
+    "claims": "none19:06:49pixels133649",
+    "native_ai": "YesSaved19:07:25pixels133725/SaveUndoDisabledDOM",
+    "metadata": "FullAd/exactaffiliate/notforkids/noage/ownplaylistcheckedDOM19:07:00",
+    "studio": "PublicSavedUndoSaveDisabled19:08:19pixels133819",
+    "player": "PUBLICshortsactualpixels133904/statusOK/exactchannel/privatefalseunlistedfalse",
+    "playlist": "5PUBLIC1PRIVATEcorrectorder19:09:05pixels133905",
+    "ledger_run": 43877751861,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43877751861",
+    "ledger": "SUCCESSexact9e2c9d111627361a72ab99090fb7455c5ce24ec9/APIpublishedAt13:38:15Z/stoppedcontrolreadbackverified",
+    "spacing": "73m50safterChargeE2P2;dashboardlatestE2P2confirmed19:06:14",
+    "next": "ChargeE3P2vZ0rKbJxIoUfloor20:08:15/4h23:08:15wake20:14-17"
   }
 }
