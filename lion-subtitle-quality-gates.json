@@ -6,7 +6,7 @@
   "platform": "YourChannel60%",
   "affiliate": "https://r.reelsgo.tv/s98Lt2cw7mGf",
   "app_home": "https://r.reelsgo.tv/AX-3SFHiOa0g",
-  "status": "FOUR_PRIVATE_CLAIMS_AI_PLAYLIST_GATED_RESERVE_FRESH_CLAIMS_REQUIRED_E3_CAPTION_HOLD",
+  "status": "ENTIRE_SERIES_HOLD_YOUTUBE_CHILD_SAFETY_REMOVAL_COMMUNITY_GUIDELINES_WARNING_NOV16",
   "no_repeat_check": "Repo history/gates + liveindex no title/id hit Nov16 16:49; complete livechannelguard mandatory before first private probe.",
   "source_qa": {
     "e1": "78.302s whole base.en+small.en ASR,313quarterOCR,78action+78caption integer pixels inspected16:54. BriefLookAtHer13.25/SheWentMissing24.5/PapaHoldOn39.5/FollowMe69.5-71 targetpixels verified16:56. Infantcliffperil/abandonmentdialogue/lionrescue/healing small bloody lion wound, no graphicgore/nudity/sex observed.",
@@ -171,5 +171,20 @@
     "playlist": "ownPUBLICMANUALordered17:10:39",
     "metadata": "fullAd/exactaffiliate/notforkids/noageverifiedDOM",
     "visibility": "PRIVATE"
+  },
+  "e1p1_removed": {
+    "id": "QPmx1eFrJ0A",
+    "studio_url": "https://studio.youtube.com/video/QPmx1eFrJ0A/edit",
+    "public_url": "https://www.youtube.com/shorts/QPmx1eFrJ0A",
+    "published_at": "2026-11-16T15:56:13Z",
+    "spacing": "69m46safterChargeE3P2",
+    "preflight": "freshclaimsnone21:25:08pixels155508/AIYesSaved21:25:41pixels155541/fullAdexactaffiliate/notforkids/noage/ownorderedplaylist/latestdashboardChargeE3P2verified",
+    "initial_public": "StudioPublicSavedUndoSaveDisabledpixels155618/publicplayerOKexactchannelprivatefalseunlistedfalsepublishDate07:56:13-08pixels155656",
+    "removal": "Immediatelyafterpublicplaylistpixels155703redRemoved;StudioRemovedtooltipandrefreshedplayerERROR21:27:55",
+    "policy": "Child safety policy: simulated parental abuse / physical or emotional mistreatment of minors",
+    "impact": "Community Guidelines warning:firstwarningcanstillupload/post/livestream;repeatmaycausestrikeand1weekrestriction",
+    "review_pixels": "155835",
+    "ledger": "NOT_DISPATCHED;do_not_mark_published_as_live;privatecheckpointretained",
+    "action": "AllLioncontinuationheld;allnewYTpublicationpausedpendingpolicyassessment;noappeal/training/edit/reupload/deletion"
   }
 }
