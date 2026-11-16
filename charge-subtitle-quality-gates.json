@@ -315,8 +315,8 @@
     "stage_cleanup": "HEAD404/signedGET40412:23:57;cleanupwakedeleted",
     "studio_claims": "noneNov17 00:35:58IST/pixels190601",
     "ai": "YesSaved00:36:32/reloadedYesSelectedSaveDisabledDOMandpixels190706",
-    "playlist": "NOT_ADDED pendingrelease",
-    "visibility": "PRIVATE",
+    "playlist": "Charge own eightPUBLIC exactepisodeorder00:46:35 DOM/pixels191635",
+    "visibility": "PUBLIC",
     "action_policy_review": "E4 source54.5-108.297 integeractionpixels36+72 and ending, transcript, renderedP2samples rechecked00:35-37. Child receives cake/walks away, adults confront each other, child atcake thenremarksaboutshoe. Nochildmistreatmentobserved.",
     "release_floor": "2026-11-17T00:41:42+05:30",
     "release_workflow": "Prepared2b3fad7 notdispatched"
@@ -434,5 +434,22 @@
     "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43926493150",
     "ledger": "SUCCESSexact45f6a8bf075d2ed9aa2850adf547c7fcb3aa9f2c/APIpublishedAt18:11:42Z/stoppedreadback18:13:39.2285121Z",
     "next": "E4P2earliestNov17 00:41:42IST/prepwake00:32-35 allordinarygates"
+  },
+  "e4p2_public": {
+    "id": "uaZJ-TeTcMg",
+    "url": "https://www.youtube.com/shorts/uaZJ-TeTcMg",
+    "published_at": "2026-11-16T19:15:42Z",
+    "claims": "none00:44:52pixels191453",
+    "native_ai": "YesSaved00:36:32/reloadedselected00:37pixels190706/rechecked00:45:24",
+    "metadata": "FullAd/exactaffiliate/notforkids/noage/ownplaylistonlychecked00:44-45",
+    "action_policy_review": "E4P2 original54.5-108.297 action/caption/ASR re-review00:35-37 no childmistreatment observed",
+    "studio": "PublicSaved00:45:42/SaveUndoDisabled00:45:47",
+    "player": "OK/privatefalse/unlistedfalse/exactchannel/published00:45:42pixels191616",
+    "playlist": "eightPUBLICepisodeorderDOM00:46:35/pixels191635",
+    "spacing": "64m00safterE4P1/latestdashboardE4P1confirmed00:44:41",
+    "ledger_run": 43937525525,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43937525525",
+    "ledger": "SUCCESSexacta114cc103c2eb137b6a9ea0458911e1ef07f6f80/APIpublishedAt19:15:42Z/stopped19:16:31.4043278Z",
+    "next": "E5wholecaption/actionQApending;earliest01:45:42IST/4h04:45:42Nov17"
   }
 }
