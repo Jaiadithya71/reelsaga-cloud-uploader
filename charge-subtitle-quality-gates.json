@@ -18,7 +18,8 @@
     "e4": "108.297s whole base.en+small.en ASR,433quarterOCR,109caption/action integerpixelsinspected12:17. TargetBoss/Frank/Hi/Well/GoHaveFun/PickItUp/MrMoretti/WhatsThatOnYourShoe inspected;independentendingASRvadfalseconfirmedMrMoretti/WhatsThatOnYourShoe. Dialogue/mobthreats/non-graphicconfrontation/profanity;noinjury/nudity/sexobserved. 2continuousunchangedaudio/captionsrenders0-54.5-108.297 measured54.5/53.798;decode/cap/6renderpixelsPASS12:18.",
     "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED",
     "e5": "46.532s whole base.en+small.en ASR;186quarterOCR noisy/background,47integercaption+47action pixels;openingEww/MrMoretti/WhatsThat and40.25OneSecond/41Sir shortcards targetedpixels+audio independentlyverified. Adults argue about dirtyshoe; childsafeatcake, nochildmistreatment observed. Originalsource720x1280;onecontinuous46.534renderdecode/cap/3pixels PASS. LivefreeE5sourceDramaCPS00:52Nov17.",
-    "e6_plus": "NOT_REVIEWED"
+    "e6_plus": "E7plusNOTREVIEWED",
+    "e6": "67.708s entire base.en+small.en ASR,271quarterOCR noisy,68integercaption/actionpixels. TargetedDamnright,YesBoss and34.75Mr card independently audio/pixels. Adults shoe-cover confrontation, discardedbadge rescued bychild, adultonlyangryexit/phone/boxingplan; nochildmistreatment observed. All originalfootage/captions/audio retained;split36.5s clearpauseafterByeMrMoretti,2parts36.5/31.209s decode/cap/6pixels PASS. DramaCPSninefreeverified01:54Nov17."
   },
   "part_gates": {
     "yourchannel-charge833245-ep1-part1-v1": {
@@ -173,6 +174,40 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "c3b5d3fabf52bf32b155232b2c53aed341231600a0c81618ad62313ab6f772a6",
       "render_sha256": "c3b5d3fabf52bf32b155232b2c53aed341231600a0c81618ad62313ab6f772a6"
+    },
+    "yourchannel-charge833245-ep6-part1-v1": {
+      "episode": 6,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 36.5,
+      "duration": 36.5,
+      "measured_duration": 36.5,
+      "sha256": "7a6eb22946a189821860d4461e8b832ae9b89def004b6a2f5ffd44b9b911f52a",
+      "bytes": 31083119,
+      "path": "/downloads/charge833245-review/charge-e6p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "7a6eb22946a189821860d4461e8b832ae9b89def004b6a2f5ffd44b9b911f52a",
+      "render_sha256": "7a6eb22946a189821860d4461e8b832ae9b89def004b6a2f5ffd44b9b911f52a"
+    },
+    "yourchannel-charge833245-ep6-part2-v1": {
+      "episode": 6,
+      "part": 2,
+      "source_start": 36.5,
+      "source_end": 67.708,
+      "duration": 31.208,
+      "measured_duration": 31.209,
+      "sha256": "27f17d6a1c8d929fd6633959f62b03aa72a86c53cae5fdea154fb0f05f767ec3",
+      "bytes": 23969138,
+      "path": "/downloads/charge833245-review/charge-e6p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "27f17d6a1c8d929fd6633959f62b03aa72a86c53cae5fdea154fb0f05f767ec3",
+      "render_sha256": "27f17d6a1c8d929fd6633959f62b03aa72a86c53cae5fdea154fb0f05f767ec3"
     }
   },
   "sources": [
