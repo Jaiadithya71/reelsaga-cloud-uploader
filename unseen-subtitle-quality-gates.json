@@ -453,6 +453,14 @@
     "next_floor": "2026-11-16T07:38:19+05:30",
     "next_wake": "wakeschedule-01M7GYCFBB73AY3QHW20FYKKGX",
     "ledger_sha": "08694c5bf08f659926d08972d61a2aa83c4cf937",
-    "ledger": "single dispatch204 pending verification"
+    "ledger": {
+      "run": 43784483465,
+      "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43784483465",
+      "sha": "08694c5bf08f659926d08972d61a2aa83c4cf937",
+      "status": "success",
+      "published_at": "2026-11-16T01:08:19Z",
+      "stopped_readback": "2026-11-16T01:08:57.3447517Z",
+      "verified_at": "2026-11-16T06:39:05+05:30"
+    }
   }
 }
