@@ -490,8 +490,10 @@
     "stopped": "2026-11-16T19:36:24.6025942Z",
     "stage_cleanup": "HEAD404/originalsignedGET40401:11",
     "visibility": "PRIVATE",
-    "claims": "NOT_CHECKED",
-    "native_ai": "NOT_SET",
-    "playlist": "NOT_ADDED"
+    "claims": "none01:32:29pixels200229",
+    "native_ai": "YesSaved01:32:46/reloadedselectedSaveUndoDisabled01:33:10pixels200310",
+    "playlist": "NOT_ADDED;addwithpubliconly",
+    "metadata": "FullAd/exactaffiliate/notforkids/noagechecked01:32-33",
+    "release_floor": "2026-11-17T01:45:42+05:30"
   }
 }
