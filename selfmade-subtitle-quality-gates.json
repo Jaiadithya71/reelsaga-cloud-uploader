@@ -4,7 +4,7 @@
   "title": "The Rise of a Self-Made King",
   "catalog": "https://dramacps.com/dashboard",
   "free_episodes": 7,
-  "status": "E1/E2 source QA passed, affiliate generated. Private claim-test preparation only; no new playlist or public release before Jai chooses.",
+  "status": "E1P1 PRIVATE uploaded only. Claims/native AI unavailable because Studio blank04:04; other3notstarted. No public or playlist.",
   "scope": "Whole source E1 and E2, not the remaining five episodes. Claim outcome and link availability remain unchecked.",
   "review": {
     "action_frames": 150,
@@ -180,6 +180,22 @@
       "approved_render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
       "render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
       "private_probe_ready": true
+    }
+  },
+  "private_probes": {
+    "e1p1": {
+      "video_id": "kcbRgt35-kE",
+      "run_id": 43970491543,
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43970491543",
+      "conclusion": "success",
+      "head_sha": "48af7f2869bde1928dedd719ead9927a29107e14",
+      "privacy": "private",
+      "full_channel_inventory": 625,
+      "stop_control_readback_verified": true,
+      "stage_deleted": "HEAD404/originalsignedGET40404:00:34",
+      "claims": "UNVERIFIED Studio blank after bounded recovery04:04",
+      "nativeAI": "UNVERIFIED",
+      "playlist": "none/no newplaylist permitted"
     }
   }
 }
