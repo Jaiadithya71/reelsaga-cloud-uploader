@@ -1,11 +1,11 @@
 {
-  "as_of": "2026-11-17T03:40:00+05:30",
+  "as_of": "2026-11-17T05:10:00+05:30",
   "series_id": "833227",
   "title": "The Rise of a Self-Made King",
   "catalog": "https://dramacps.com/dashboard",
   "free_episodes": 7,
-  "status": "E1/E2 source QA passes for PRIVATE claim-test preparation only. New series choice not made; no public release, new playlist, affiliate or probe upload yet.",
-  "scope": "Whole source E1 and E2, not the remaining five episodes. Claim outcome and link availability remain unchecked.",
+  "status": "E1P1 PRIVATE, no claims found05:08. NativeAI Yes and paid promotionYes saved/readback. Other3PRIVATE probes in progress; no public/newplaylist.",
+  "scope": "E1/E2 whole-source QA passed. E3/E4 source action/caption review passed04:14; later E6 held for burned-in name/word defects. E5 literal-audio ambiguity and adult-abuse caveat; E7 captions not reviewed. Not a seven-episode clean fallback.",
   "review": {
     "action_frames": 150,
     "ocr_quarter_frames": 601,
@@ -101,5 +101,146 @@
       "private_probe_ready": true
     }
   },
-  "next": "After Charge E6P2 release, verify first-series affiliate still available if within scope, then privateclaimprobes only, fresh nativeAI/claims. Keep private until Jai chooses. No newplaylist/publiccommitment."
+  "next": "Reconcile private runs43981246088/43981257744/43981266245 and cleanup own staging immediately; hardcleanup06:10. Claims/nativeAI each. No public/newplaylist until Jai chooses. E6held. LastChargepublic03:55:09/4h07:55:09.",
+  "affiliate": {
+    "drama_url": "https://r.reelsgo.tv/XcE4nrkaawSl",
+    "app_home": "https://r.reelsgo.tv/8LHJPmk5Wx7t",
+    "generated_at": "2026-11-17T03:58:11+05:30",
+    "source": "https://dramacps.com/dashboard"
+  },
+  "part_gates": {
+    "yourchannel-selfmade833227-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 35.4,
+      "duration": 35.4,
+      "measured_duration": 35.4,
+      "sha256": "dbf5ff1cb9b7617cd85a467c572ac62c6433442b95d57a3e4e034953c2b6daf0",
+      "bytes": 36270917,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "dbf5ff1cb9b7617cd85a467c572ac62c6433442b95d57a3e4e034953c2b6daf0",
+      "render_sha256": "dbf5ff1cb9b7617cd85a467c572ac62c6433442b95d57a3e4e034953c2b6daf0",
+      "private_probe_ready": true
+    },
+    "yourchannel-selfmade833227-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 35.4,
+      "source_end": 71.141,
+      "duration": 35.74100000000001,
+      "measured_duration": 35.741,
+      "sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
+      "bytes": 37905311,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
+      "render_sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
+      "private_probe_ready": true
+    },
+    "yourchannel-selfmade833227-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 40.0,
+      "duration": 40.0,
+      "measured_duration": 40.0,
+      "sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
+      "bytes": 40050459,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
+      "render_sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
+      "private_probe_ready": true
+    },
+    "yourchannel-selfmade833227-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 40.0,
+      "source_end": 79.175,
+      "duration": 39.175,
+      "measured_duration": 39.176,
+      "sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
+      "bytes": 42518137,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
+      "render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
+      "private_probe_ready": true
+    }
+  },
+  "private_probes": {
+    "e1p1": {
+      "video_id": "kcbRgt35-kE",
+      "run_id": 43970491543,
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43970491543",
+      "conclusion": "success",
+      "head_sha": "48af7f2869bde1928dedd719ead9927a29107e14",
+      "privacy": "private",
+      "full_channel_inventory": 625,
+      "stop_control_readback_verified": true,
+      "stage_deleted": "HEAD404/originalsignedGET40404:00:34",
+      "claims": "No claims found, no channel or reach impact, Studio05:08:02+05:30",
+      "nativeAI": "Yes saved/readback05:08:28",
+      "playlist": "none/no newplaylist permitted",
+      "paid_promotion": "Yes saved/readback05:08:28",
+      "processing": "SD+HD complete05:08",
+      "claims_url": "https://studio.youtube.com/video/kcbRgt35-kE/claims",
+      "detail_url": "https://studio.youtube.com/video/kcbRgt35-kE/edit"
+    }
+  },
+  "later_episode_qa": {
+    "e3": {
+      "source_status": "PASS",
+      "content": "Adult apparent medical collapse later revealed as test; no child-mistreatment/graphic injury observed.",
+      "render_status": "Draft split/coverage unapproved; no probe. Local drafts lost after run."
+    },
+    "e4": {
+      "source_status": "PASS",
+      "content": "Adult party/billing/ring conflict.",
+      "render_status": "Draft split/coverage unapproved; no probe. Local drafts lost after run."
+    },
+    "e5": {
+      "source_status": "CONDITIONAL - DO NOT PROBE",
+      "caption_status": "Burned-in account61.25 vs bothASR accountant remains literal-audio ambiguity, not confirmed defect. Whole caption samples+short targets reviewed04:19.",
+      "content": "Adultwoman slaps/forces adultmaidfloor47-49, kneelingthreat55, intervention. Adult-abuse caveat; no child-mistreatment/graphicinjury observed.",
+      "render_status": "Premature local drafts removed before staging/upload."
+    },
+    "e6": {
+      "source_status": "HOLD",
+      "full_caption_review": false,
+      "defects": [
+        {
+          "time": 18.5,
+          "burned_in": "Mr whitwheel's second",
+          "expected": "Whitmore"
+        },
+        {
+          "time": 70.5,
+          "burned_in": "fleet and the manner are mine",
+          "expected": "manor"
+        }
+      ],
+      "effect": "No edit/skip/probe; orderedcontinuation stops."
+    },
+    "e7": {
+      "source_status": "PARTIAL NOT APPROVED",
+      "content": "Adult investigation/insurancefraud/safe, no child-mistreatment/graphicinjury observed in wholeaction screen+bothASR",
+      "full_caption_review": false
+    }
+  },
+  "recovery": "05:09 sources redownloaded and exact source hashes matched; E1P2/E2P1/E2P2 identical approved render SHA256 and byte sizes reproduced. Later-episode visual evidence was attached to parent04:14/04:19, original local files no longer present."
 }
