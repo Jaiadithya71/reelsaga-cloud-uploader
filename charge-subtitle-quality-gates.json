@@ -489,11 +489,28 @@
     "state": "ready_for_review",
     "stopped": "2026-11-16T19:36:24.6025942Z",
     "stage_cleanup": "HEAD404/originalsignedGET40401:11",
-    "visibility": "PRIVATE",
+    "visibility": "PUBLIC",
     "claims": "none01:32:29pixels200229",
     "native_ai": "YesSaved01:32:46/reloadedselectedSaveUndoDisabled01:33:10pixels200310",
-    "playlist": "NOT_ADDED;addwithpubliconly",
+    "playlist": "ChargeownninePUBLICorderedDOM01:49:06",
     "metadata": "FullAd/exactaffiliate/notforkids/noagechecked01:32-33",
     "release_floor": "2026-11-17T01:45:42+05:30"
+  },
+  "e5p1_public": {
+    "id": "zIy9Y_oscMc",
+    "url": "https://www.youtube.com/shorts/zIy9Y_oscMc",
+    "published_at": "2026-11-16T20:18:25Z",
+    "claims": "none01:47:35pixels201736",
+    "native_ai": "YesSaved01:32:46/reloadpixels200310/rechecked01:47:47",
+    "metadata": "FullAd/exactaffiliate/notforkids/noage/ownplaylistonlychecked01:47-48",
+    "action_policy_review": "wholeE5reviewpassed/nochildmistreatment",
+    "studio": "PublicSaved01:48:25/SaveUndoDisabled01:48:47",
+    "player": "OK/privatefalse/unlistedfalse/exactchannel/published01:48:25pixels201847",
+    "playlist": "ninePUBLICepisodeorderDOM01:49:06",
+    "spacing": "62m43safterE4P2/latestdashboardE4P2confirmed01:47:30",
+    "ledger_run": 43948494527,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43948494527",
+    "ledger": "PENDINGreadback",
+    "next": "E6wholecaption/actionQApending;earliest02:48:25IST/4h05:48:25Nov17"
   }
 }
