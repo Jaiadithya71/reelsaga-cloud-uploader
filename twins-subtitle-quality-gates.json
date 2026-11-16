@@ -12,7 +12,7 @@
     "e2": "63.018s; wholebase.en+small.en ASR,252quarterOCR,63caption+63actionpixels,briefLuna29.75verified. Briefdruggedflashbackfullyclothed/noactualsexualactshown;medicalbed,non-graphic. Noobservedcaptiondefect.",
     "ocr_caveat": "InitialOCRregioncontainedbackgroundnoise; allintegercaptionpixelsreadindependentlyandbriefASRlinescheckedtargeted.",
     "render": "Originalaudio/captions unchanged except0.15edgefades. 4continuousparts49/49.035/29.118/33.919measured,fulldecode/cap/12renderpixelsinspected.",
-    "e3_plus": "Notreviewed"
+    "e3_plus": "E3base+smallASR,78action+78captionpixels+Richard31/Deal46.75targetsinspected;311quarterOCRdone09:08noisy. NOTcleared/no render or upload."
   },
   "part_gates": {
     "yourchannel-twins833244-ep1-part1-v1": {
@@ -84,5 +84,77 @@
       "render_sha256": "e2de42d09064cb6a5d9b881f76d8fd1195df2dce7a98fb120cce72ca0b23f2dc"
     }
   },
-  "status": "SourceQAcleared; privateclaims/nativeAI/ownplaylist gates pending; notpublic"
+  "status": "Four PRIVATE clean reserve parts ready09:18;freshclaimsrequired beforeeverypublicrelease",
+  "e1p1_private_probe": {
+    "id": "G2s8jRw4UgA",
+    "run": 43798975993,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43798975993",
+    "sha": "c0a400d4ec1dd63121c69400ac3525be134c1425",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T03:35:29.9006559Z",
+    "inventory": 602,
+    "stage_cleanup": "HEAD404/originalsignedGET40409:06",
+    "studio_claims": "none09:07",
+    "ai": "YesSavedverifiedDOM",
+    "playlist": "ownPUBLICMANUALorderedverified09:18",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
+    "privacy": "private"
+  },
+  "e1p2_private_probe": {
+    "id": "OFL7fA-nWD8",
+    "run": 43799311628,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43799311628",
+    "sha": "c0a400d4ec1dd63121c69400ac3525be134c1425",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T03:38:26.5161433Z",
+    "stage_cleanup": "HEAD404/originalsignedGET40409:11-09:12",
+    "studio_claims": "none09:13",
+    "ai": "YesSavedverifiedDOM",
+    "playlist": "ownPUBLICMANUALorderedverified09:18",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
+    "privacy": "private"
+  },
+  "e2p1_private_probe": {
+    "id": "XP7iHzdFpME",
+    "run": 43799314972,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43799314972",
+    "sha": "c0a400d4ec1dd63121c69400ac3525be134c1425",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T03:39:28.4120273Z",
+    "stage_cleanup": "HEAD404/originalsignedGET40409:11-09:12",
+    "studio_claims": "none09:14",
+    "ai": "YesSavedverifiedDOM",
+    "playlist": "ownPUBLICMANUALorderedverified09:18",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
+    "privacy": "private"
+  },
+  "e2p2_private_probe": {
+    "id": "daqONaOoavA",
+    "run": 43799570145,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43799570145",
+    "sha": "c0a400d4ec1dd63121c69400ac3525be134c1425",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T03:41:16.9692187Z",
+    "stage_cleanup": "HEAD404/originalsignedGET40409:11-09:12",
+    "studio_claims": "none09:15",
+    "ai": "YesSavedverifiedDOM",
+    "playlist": "ownPUBLICMANUALorderedverified09:18",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
+    "privacy": "private"
+  },
+  "playlist": {
+    "id": "PLf7NXqVY2bCs",
+    "url": "https://studio.youtube.com/playlist/PLf7NXqVY2bCs/videos",
+    "visibility": "PUBLIC",
+    "sort": "MANUAL",
+    "order": [
+      "G2s8jRw4UgA",
+      "OFL7fA-nWD8",
+      "XP7iHzdFpME",
+      "daqONaOoavA"
+    ],
+    "pixels": "/downloads/cloud-browser-20261116-034813.png",
+    "verified_at": "2026-11-16T09:18:13+05:30"
+  },
+  "browser_recovery": "Frozen tabs after saves;readbackconfirmedpersisted,closedstucktabs;onefreshlease normalrootrecovered09:18;no duplicate writes/public flips."
 }
