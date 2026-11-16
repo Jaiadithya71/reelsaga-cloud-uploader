@@ -84,7 +84,7 @@
       "render_sha256": "e2de42d09064cb6a5d9b881f76d8fd1195df2dce7a98fb120cce72ca0b23f2dc"
     }
   },
-  "status": "Four PRIVATE clean reserve parts ready09:18;freshclaimsrequired beforeeverypublicrelease",
+  "status": "HOLD_ENTIRE_SERIES_LATE_GLOBAL_VISUAL_BLOCKS_2026-11-16T11:28+05:30",
   "e1p1_private_probe": {
     "id": "G2s8jRw4UgA",
     "run": 43798975993,
@@ -98,7 +98,8 @@
     "ai": "YesSavedverifiedDOM",
     "playlist": "ownPUBLICMANUALorderedverified09:18",
     "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
-    "privacy": "private"
+    "privacy": "private",
+    "release_hold": "entireserieslatevisualclaimhold"
   },
   "e1p2_private_probe": {
     "id": "OFL7fA-nWD8",
@@ -112,7 +113,8 @@
     "ai": "YesSavedverifiedDOM",
     "playlist": "ownPUBLICMANUALorderedverified09:18",
     "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
-    "privacy": "private"
+    "privacy": "private",
+    "release_hold": "entireserieslatevisualclaimhold"
   },
   "e2p1_private_probe": {
     "id": "XP7iHzdFpME",
@@ -126,7 +128,8 @@
     "ai": "YesSavedverifiedDOM",
     "playlist": "ownPUBLICMANUALorderedverified09:18",
     "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
-    "privacy": "private"
+    "privacy": "private",
+    "release_hold": "entireserieslatevisualclaimhold"
   },
   "e2p2_private_probe": {
     "id": "daqONaOoavA",
@@ -140,7 +143,8 @@
     "ai": "YesSavedverifiedDOM",
     "playlist": "ownPUBLICMANUALorderedverified09:18",
     "metadata": "fullAd/exactaffiliate/notforkids/noageDOMverified",
-    "privacy": "private"
+    "privacy": "private",
+    "release_hold": "entireserieslatevisualclaimhold"
   },
   "playlist": {
     "id": "PLf7NXqVY2bCs",
@@ -156,5 +160,24 @@
     "pixels": "/downloads/cloud-browser-20261116-034813.png",
     "verified_at": "2026-11-16T09:18:13+05:30"
   },
-  "browser_recovery": "Frozen tabs after saves;readbackconfirmedpersisted,closedstucktabs;onefreshlease normalrootrecovered09:18;no duplicate writes/public flips."
+  "browser_recovery": "Frozen tabs after saves;readbackconfirmedpersisted,closedstucktabs;onefreshlease normalrootrecovered09:18;no duplicate writes/public flips.",
+  "late_claim_hold": {
+    "notices": [
+      "1a1e2ee323799b54",
+      "1a1e2ee4f565dc39",
+      "1a1e2ee4bde31c58"
+    ],
+    "received_ist": "2026-11-16 11:27:03-11:27:10",
+    "content": "The Superpowered Twins",
+    "owner_from_notices": "DramaBox",
+    "impact": "globally blocked;notstrike/nochannelimpact",
+    "blocked_ids": [
+      "G2s8jRw4UgA",
+      "OFL7fA-nWD8",
+      "daqONaOoavA"
+    ],
+    "studio_e1p1": "globalvisualblockverified11:28pixels055822",
+    "studio_e2p1": "XP7iHzdFpMEclaimsnone11:28;heldwithentireseries",
+    "effect": "No public release,no dispute/edit/reupload/skip;allprivate;replace reserve"
+  }
 }
