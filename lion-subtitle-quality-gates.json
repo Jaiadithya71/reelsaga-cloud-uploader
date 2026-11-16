@@ -6,14 +6,15 @@
   "platform": "YourChannel60%",
   "affiliate": "https://r.reelsgo.tv/s98Lt2cw7mGf",
   "app_home": "https://r.reelsgo.tv/AX-3SFHiOa0g",
-  "status": "RENDER_QA_PASSED_PRIVATE_CLAIM_PROBE_PENDING",
+  "status": "FOUR_PRIVATE_CLAIMS_AI_PLAYLIST_GATED_RESERVE_FRESH_CLAIMS_REQUIRED_E3_CAPTION_HOLD",
   "no_repeat_check": "Repo history/gates + liveindex no title/id hit Nov16 16:49; complete livechannelguard mandatory before first private probe.",
   "source_qa": {
     "e1": "78.302s whole base.en+small.en ASR,313quarterOCR,78action+78caption integer pixels inspected16:54. BriefLookAtHer13.25/SheWentMissing24.5/PapaHoldOn39.5/FollowMe69.5-71 targetpixels verified16:56. Infantcliffperil/abandonmentdialogue/lionrescue/healing small bloody lion wound, no graphicgore/nudity/sex observed.",
     "e2": "92.318s whole base.en+small.en ASR,369quarterOCR,92action+92caption integer pixels inspected16:54; briefNOW42.5/No49.5/AreYouHurt73.5 targetpixels verified16:56. Childroughlypushed/rejected/falls,lionaura-stops-car/peril withoutimpactinjury;no graphicgore/nudity/sex observed.",
     "ocr_caveat": "OCR highly noisy/background; all integer captions read independently and brief cards visually targeted. ASR omits brief utterances, not a caption defect.",
     "render": "Four continuous parts 0-39-78.302 and0-45.9-92.318; unchanged source captions/audio except0.15edgefades. Measuredcap/decode+12renderpixels inspected16:58.",
-    "e3_plus": "UNREVIEWED"
+    "e3_plus": "E3HOLD_SOURCE_CAPTION_NAME_MOPPY_VS_MOPSY;E4+UNREVIEWED",
+    "e3": "76.595s wholebase+smallASR,306quarterOCR,77action+77caption integerpixelsinspected17:03. Hospital/cardiacepisode/fantasyhealing,no graphicgore/nudity/sexobserved. BriefHisNumbers49.5verified;THIS IS MOPPY60-60.5clearlydiffersfromMopsyopeningcardandASRMopsy/Mopsey. HOLDno render/repair/stage/upload/skip. Targetpixels /downloads/lion833230-review/e3-target.jpg inspected17:08."
   },
   "part_gates": {
     "yourchannel-lion833230-ep1-part1-v1": {
@@ -106,5 +107,68 @@
       "text": "Episode 5 \u00b7 5",
       "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/52bebfd1-1a1af777618-0005-9573-534-c9280.mp4"
     }
-  ]
+  ],
+  "playlist": "https://studio.youtube.com/playlist/PLKn2GW-t3Wh4/videos",
+  "playlist_public_url": "https://www.youtube.com/playlist?list=PLKn2GW-t3Wh4",
+  "playlist_gates": "OwnPUBLICMANUAL4PRIVATEexactE1P1/E1P2/E2P1/E2P2orderverifiedDOM+pixelsNov16 17:10:39;descriptionAd/exactaffiliate. E1P2HDstillprocessingat17:10,recheckbeforepublic.",
+  "e1p1_private_probe": {
+    "id": "QPmx1eFrJ0A",
+    "run": 43858236283,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43858236283",
+    "sha": "85746ddcd4fe0f416a4d4b52813b0506f1e5933e",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T11:30:42.1550263Z",
+    "inventory": 619,
+    "stage_cleanup": "HEAD404/originalsignedGET404allfour;cleanupwakedeleted17:09:47",
+    "studio_claims": "noneNov16 17:03:41IST",
+    "ai": "YesSaved/SaveUndoDisabledpixelsNov16 17:05:09IST",
+    "playlist": "ownPUBLICMANUALordered17:10:39",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageverifiedDOM",
+    "visibility": "PRIVATE"
+  },
+  "e1p2_private_probe": {
+    "id": "-4rfAs0Aehg",
+    "run": 43858814696,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43858814696",
+    "sha": "85746ddcd4fe0f416a4d4b52813b0506f1e5933e",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T11:34:56.6538744Z",
+    "inventory": 620,
+    "stage_cleanup": "HEAD404/originalsignedGET404allfour;cleanupwakedeleted17:09:47",
+    "studio_claims": "noneNov16 17:05:58IST",
+    "ai": "YesSaved/SaveUndoDisabledpixelsNov16 17:07:13IST",
+    "playlist": "ownPUBLICMANUALordered17:10:39",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageverifiedDOM",
+    "visibility": "PRIVATE"
+  },
+  "e2p1_private_probe": {
+    "id": "Xk4W5ReBbxg",
+    "run": 43859076933,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43859076933",
+    "sha": "85746ddcd4fe0f416a4d4b52813b0506f1e5933e",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T11:36:33.1455725Z",
+    "inventory": 622,
+    "stage_cleanup": "HEAD404/originalsignedGET404allfour;cleanupwakedeleted17:09:47",
+    "studio_claims": "noneNov16 17:07:42IST",
+    "ai": "YesSaved/SaveUndoDisabledpixelsNov16 17:08:28IST",
+    "playlist": "ownPUBLICMANUALordered17:10:39",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageverifiedDOM",
+    "visibility": "PRIVATE"
+  },
+  "e2p2_private_probe": {
+    "id": "uz0BLr9dczQ",
+    "run": 43859331668,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43859331668",
+    "sha": "85746ddcd4fe0f416a4d4b52813b0506f1e5933e",
+    "state": "ready_for_review",
+    "stopped": "2026-11-16T11:38:07.4609185Z",
+    "inventory": 622,
+    "stage_cleanup": "HEAD404/originalsignedGET404allfour;cleanupwakedeleted17:09:47",
+    "studio_claims": "noneNov16 17:09:20IST",
+    "ai": "YesSaved/SaveUndoDisabledpixelsNov16 17:09:55IST",
+    "playlist": "ownPUBLICMANUALordered17:10:39",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageverifiedDOM",
+    "visibility": "PRIVATE"
+  }
 }
