@@ -1,10 +1,10 @@
 {
-  "as_of": "2026-11-17T05:10:00+05:30",
+  "as_of": "2026-11-17T05:18:00+05:30",
   "series_id": "833227",
   "title": "The Rise of a Self-Made King",
   "catalog": "https://dramacps.com/dashboard",
   "free_episodes": 7,
-  "status": "E1P1 PRIVATE, no claims found05:08. NativeAI Yes and paid promotionYes saved/readback. Other3PRIVATE probes in progress; no public/newplaylist.",
+  "status": "E1/E2 four original parts PRIVATE, claimsnone and nativeAI+paidpromotionYes saved, SD/HDcomplete. No public/newplaylist/seriescommitment.",
   "scope": "E1/E2 whole-source QA passed. E3/E4 source action/caption review passed04:14; later E6 held for burned-in name/word defects. E5 literal-audio ambiguity and adult-abuse caveat; E7 captions not reviewed. Not a seven-episode clean fallback.",
   "review": {
     "action_frames": 150,
@@ -101,7 +101,7 @@
       "private_probe_ready": true
     }
   },
-  "next": "Reconcile private runs43981246088/43981257744/43981266245 and cleanup own staging immediately; hardcleanup06:10. Claims/nativeAI each. No public/newplaylist until Jai chooses. E6held. LastChargepublic03:55:09/4h07:55:09.",
+  "next": "Await Jai newserieschoice07:30. Prepare only E1/E2 qualifiedoption; laterE6HOLD means no sevenepisodecleanclaim. Freshclaims required immediatelybeforeany eventualpublicflip, ownorderedplaylist then. ChargeE7wholeHOLD/lastpublic03:55:09/4h07:55:09.",
   "affiliate": {
     "drama_url": "https://r.reelsgo.tv/XcE4nrkaawSl",
     "app_home": "https://r.reelsgo.tv/8LHJPmk5Wx7t",
@@ -143,7 +143,8 @@
       "whole_part_release_ready": false,
       "approved_render_sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
       "render_sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
-      "private_probe_ready": true
+      "private_probe_ready": true,
+      "public_choice_gate": "Waiting Jai choice, fresh claims/playlist/release closeout still required"
     },
     "yourchannel-selfmade833227-ep2-part1-v1": {
       "episode": 2,
@@ -161,7 +162,8 @@
       "whole_part_release_ready": false,
       "approved_render_sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
       "render_sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
-      "private_probe_ready": true
+      "private_probe_ready": true,
+      "public_choice_gate": "Waiting Jai choice, fresh claims/playlist/release closeout still required"
     },
     "yourchannel-selfmade833227-ep2-part2-v1": {
       "episode": 2,
@@ -179,7 +181,8 @@
       "whole_part_release_ready": false,
       "approved_render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
       "render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
-      "private_probe_ready": true
+      "private_probe_ready": true,
+      "public_choice_gate": "Waiting Jai choice, fresh claims/playlist/release closeout still required"
     }
   },
   "private_probes": {
@@ -200,6 +203,64 @@
       "processing": "SD+HD complete05:08",
       "claims_url": "https://studio.youtube.com/video/kcbRgt35-kE/claims",
       "detail_url": "https://studio.youtube.com/video/kcbRgt35-kE/edit"
+    },
+    "e1p2": {
+      "video_id": "SHESHvaifa8",
+      "run_id": 43981246088,
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43981246088",
+      "head_sha": "38c393abd018640ecf44c34c100b374d312f2f55",
+      "conclusion": "success",
+      "privacy": "private",
+      "claims": "No claims were found, no reach/channel impact at05:16:37IST Nov17",
+      "claims_url": "https://studio.youtube.com/video/SHESHvaifa8/claims",
+      "detail_url": "https://studio.youtube.com/video/SHESHvaifa8/edit",
+      "nativeAI": "Yes saved/readback",
+      "paid_promotion": "Yes saved/readback",
+      "processing": "SD/HD complete",
+      "stop_control_readback_verified": true,
+      "checkpoint_video_id_verified": true,
+      "inventory_count": 625,
+      "playlist": "none/no newplaylist permitted",
+      "stage_deleted": "HEAD404+originalsignedGET40405:17:20"
+    },
+    "e2p1": {
+      "video_id": "F0jyYZ3v7BI",
+      "run_id": 43981257744,
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43981257744",
+      "head_sha": "38c393abd018640ecf44c34c100b374d312f2f55",
+      "conclusion": "success",
+      "privacy": "private",
+      "claims": "No claims were found, no reach/channel impact at05:17:37IST Nov17",
+      "claims_url": "https://studio.youtube.com/video/F0jyYZ3v7BI/claims",
+      "detail_url": "https://studio.youtube.com/video/F0jyYZ3v7BI/edit",
+      "nativeAI": "Yes saved/readback",
+      "paid_promotion": "Yes saved/readback",
+      "processing": "SD/HD complete",
+      "stop_control_readback_verified": true,
+      "checkpoint_video_id_verified": true,
+      "inventory_count": 628,
+      "playlist": "none/no newplaylist permitted",
+      "stage_deleted": "HEAD404+originalsignedGET40405:17:20",
+      "rerun": "Attempt1cancelled sharedconcurrency before jobs; jobsAPIemptyverified05:15. Attempt2success, no duplicate."
+    },
+    "e2p2": {
+      "video_id": "b88TFbEDFOY",
+      "run_id": 43981266245,
+      "run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43981266245",
+      "head_sha": "38c393abd018640ecf44c34c100b374d312f2f55",
+      "conclusion": "success",
+      "privacy": "private",
+      "claims": "No claims were found, no reach/channel impact at05:17:05IST Nov17",
+      "claims_url": "https://studio.youtube.com/video/b88TFbEDFOY/claims",
+      "detail_url": "https://studio.youtube.com/video/b88TFbEDFOY/edit",
+      "nativeAI": "Yes saved/readback",
+      "paid_promotion": "Yes saved/readback",
+      "processing": "SD/HD complete",
+      "stop_control_readback_verified": true,
+      "checkpoint_video_id_verified": true,
+      "inventory_count": 627,
+      "playlist": "none/no newplaylist permitted",
+      "stage_deleted": "HEAD404+originalsignedGET40405:17:20"
     }
   },
   "later_episode_qa": {
@@ -242,5 +303,6 @@
       "full_caption_review": false
     }
   },
-  "recovery": "05:09 sources redownloaded and exact source hashes matched; E1P2/E2P1/E2P2 identical approved render SHA256 and byte sizes reproduced. Later-episode visual evidence was attached to parent04:14/04:19, original local files no longer present."
+  "recovery": "05:09 sources redownloaded and exact source hashes matched; E1P2/E2P1/E2P2 identical approved render SHA256 and byte sizes reproduced. Later-episode visual evidence was attached to parent04:14/04:19, original local files no longer present.",
+  "staging_closeout": "All3 ownobjectsdeleted HEAD404+originalsignedGET40405:17:20, hardcleanupwake canceled. PriorE1P1stage alreadydeleted04:00. Unrelated objects untouched."
 }
