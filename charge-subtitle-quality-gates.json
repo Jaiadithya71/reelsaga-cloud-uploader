@@ -6,14 +6,14 @@
   "platform": "YourChannel60%",
   "affiliate": "https://r.reelsgo.tv/TaIVvnMY7GnB",
   "app_home": "https://r.reelsgo.tv/kz69ifoK3vSz",
-  "status": "FOUR_PRIVATE_RENDER_QA_CLAIMS_AI_PLAYLIST_GATED_RESERVE_RECHECK_CLAIMS_BEFORE_EACH_PUBLIC",
+  "status": "SIX_PRIVATE_CLEAN_E1_E2_E3_RESERVE_FRESH_CLAIMS_REQUIRED_E4_HOLD_AUDIO_CLAIM",
   "no_repeat_check": "Entire local canonical repo id/title + live index no hit11:32 Nov16; full live channel guard mandatory inside each private probe.",
   "source_qa": {
     "e1": "83.823s whole base.en+small.en ASR;335quarterOCR,84action+84caption integer pixels; targets Nobody picking UP/And the bag verified. School bullying, robbery threat/watch grabbing. No graphic injury/nudity/sex observed.",
     "e2": "85.658s whole base.en+small.en ASR;343quarterOCR,86action+86caption integer pixels; targets Hey Leave her alone/My RIDE coming/Where are you/Im fine/Frank/coming right now verified. Non-graphic fighting/punches/stomps and profanity. No graphic injury/nudity/sex observed.",
     "ocr_caveat": "OCR noisy/background; all integer-caption pixels independently read, short cards checked at quarter targets/full source frame.",
     "render": "4continuousparts, originalaudio/captions unchanged except0.15edgefades; full decode, measuredcap and 12renderpixels verified11:41.",
-    "e3_plus": "E3QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E4+NOT_REVIEWED",
+    "e3_plus": "E3PRIVATE_CLEAN_GATES_PASSED;E4HOLD_AUDIOCLAIM;E5+UNREVIEWED",
     "e3": "80.928s whole base.en+small.en ASR;324quarterOCR,81action+81caption integer pixels inspected. Brief Of course/Boss31.5/31.75 and Yes/Boss/Whats on my schedule targets checked. Watch Grumpys ear/Vincent/Cole correct. Conversation/bodyguards/car, no graphic injury/nudity/sex observed. Unchangedaudio/captions, two continuousrenders0-40.8/40.8-80.928 measured40.8/40.134,decode/cap+6renderpixelsverified11:53.",
     "e4": "108.297s whole base.en+small.en ASR,433quarterOCR,109caption/action integerpixelsinspected12:17. TargetBoss/Frank/Hi/Well/GoHaveFun/PickItUp/MrMoretti/WhatsThatOnYourShoe inspected;independentendingASRvadfalseconfirmedMrMoretti/WhatsThatOnYourShoe. Dialogue/mobthreats/non-graphicconfrontation/profanity;noinjury/nudity/sexobserved. 2continuousunchangedaudio/captionsrenders0-54.5-108.297 measured54.5/53.798;decode/cap/6renderpixelsPASS12:18.",
     "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED"
@@ -258,5 +258,50 @@
     "visibility": "PRIVATE"
   },
   "dispatch_note": "InitialE2P1run43815309537cancelledinpendingconcurrencyqueue,bothlivejobreads0jobs;noexecution/noexternalclaim. Reissuedonce43815610937SUCCESS. Futureprobesdispatchserially,onependingmaximum.",
-  "e3_private_attempt": "43818892859FAILEDstate_initializebeforeGoogle/ledgerclaim/upload. Causebroadepisode-stringreplacementaccidentallychangedembeddedfrozenhash/inventory;failclosedverificationcaughtit. BothE3workflowsrebuiltfromknownE2withONLYexacthumanlabel/commandchanges;embeddedquarantineprefixbyte-equivalentassertionpassed. No externaluploadfromfailedrun;verifyledgerabsencebeforeretry."
+  "e3_private_attempt": "43818892859FAILEDstate_initializebeforeGoogle/ledgerclaim/upload. Causebroadepisode-stringreplacementaccidentallychangedembeddedfrozenhash/inventory;failclosedverificationcaughtit. BothE3workflowsrebuiltfromknownE2withONLYexacthumanlabel/commandchanges;embeddedquarantineprefixbyte-equivalentassertionpassed. No externaluploadfromfailedrun;verifyledgerabsencebeforeretry.",
+  "e3p1_private_probe": {
+    "id": "eS-Au7p5YSk",
+    "run": 43819227705,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43819227705",
+    "sha": "4a09051c5b23186106d1a6dcef004057e0542c60",
+    "inventory": 614,
+    "stopped": "2026-11-16T06:48:47.4982104Z",
+    "state": "ready_for_review",
+    "stage_cleanup": "HEAD404/signedGET40412:19",
+    "studio_claims": "none12:19:49pixels064949",
+    "ai": "YesSavedreloadedpixels06530212:23:02",
+    "playlist": "ownPUBLICMANUALorder6verified12:22:53",
+    "visibility": "PRIVATE",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageverified"
+  },
+  "e3p2_private_probe": {
+    "id": "vZ0rKbJxIoU",
+    "run": 43819404111,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43819404111",
+    "sha": "902e03be83787835b0a6528b749e1ac16df17332",
+    "inventory": 615,
+    "stopped": "2026-11-16T06:50:09.4267089Z",
+    "state": "ready_for_review",
+    "stage_cleanup": "HEAD404/signedGET40412:20",
+    "studio_claims": "none12:21:19pixels065119",
+    "ai": "YesSavedpixels06521512:22:15",
+    "playlist": "ownPUBLICMANUALorder6verified12:22:53",
+    "visibility": "PRIVATE",
+    "metadata": "fullAd/exactaffiliate/notforkids/noageverified"
+  },
+  "e4p1_private_probe": {
+    "id": "T6sgbfrjoUM",
+    "run": 43819656830,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43819656830",
+    "sha": "902e03be83787835b0a6528b749e1ac16df17332",
+    "inventory": 615,
+    "stopped": "2026-11-16T06:52:19.9359297Z",
+    "state": "ready_for_review",
+    "stage_cleanup": "HEAD404/signedGET40412:22",
+    "studio_claims": "HOLD_AUDIOCLAIMComedyBgm/BirthdayPAPA/EliteAllianceMusic0:06-0:41,NOREACHIMPACT/notstrike12:23:23pixels065323;details12:23:36",
+    "ai": "NOT_SET",
+    "playlist": "NOT_ADDED",
+    "visibility": "PRIVATE"
+  },
+  "e4_hold": "E4P1audioCLAIM;bothE4partsheld,no public/reupload/edit/dispute/skip. E4P2alreadyinflightbeforeclaimresult,cleanup+inspectonly. E1-E3sixcleanreservekept,freshclaimsmandatory."
 }
