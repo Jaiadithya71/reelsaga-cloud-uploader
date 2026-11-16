@@ -179,5 +179,17 @@
     ],
     "staging": "All4consumeddeletedHEAD404+originalsignedGET404;cleanupwakescancelled",
     "fresh_pre_public_gates_required": true
+  },
+  "e3_qa": {
+    "status": "HOLD_SOURCE_CAPTION_TRUNCATION",
+    "duration": 83.08,
+    "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/b18c8ae-1a1befa4f3b-0005-9573-534-c9280.mp4",
+    "review": "Wholebase+smallASR+332quarterOCR+83caption+83actionpixelsinspected. SourcecaptionWhydoesthesnomoveforher10.25-11.75,missingwcomparedtosnowinbothASRs. Fullresolutionpixelsconfirmed. Barechestedfantasymen,ordinarycleavage,fire/snow/nographicinjury/sex/nudity. Norender/repair/skip/stage/upload.",
+    "evidence": [
+      "/downloads/winter833200-review/e3-sno-caption.jpg"
+    ],
+    "rendered": false,
+    "staged": false,
+    "uploaded": false
   }
 }

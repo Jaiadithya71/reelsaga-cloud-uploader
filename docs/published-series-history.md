@@ -1237,3 +1237,5 @@ Nov16 05:42IST Unseen833206 E3whole-sourceQAcleared79.481s/2ASR/318quarterOCR/al
 
 ## Winter833200 private reserve - 2026-11-16 05:56 IST
 The Winter Maiden and the Ice Prince, YourChannel60%,9free. Whole-sourceE1/E2ASR+quarterOCR+integercaption/actionpixels+briefcaptiontargets passed. Fourprivatecleanparts,originalaudio/captions,Ad/exactaffiliate/nativeAIYes,ownPUBLICMANUALplaylist https://studio.youtube.com/playlist/PLRliqPNO0id0/videos in E1P1,E1P2,E2P1,E2P2order. IDs uqeox5-qAzA,zwwfIRuRHQA,AiX-71_QS-Y,ULJPshvy23g. FourprobesSUCCESS,stopreadbacksverified,allstagesdeletedHEAD404/originalsignedGET404. Notpublic,noseriescompleteclaim. BehindUnseenremainingorderedqueue. Freshclaims/metadata/channel/spacinggatesbeforeeachpublicflip.
+
+WinterE3HOLD05:58IST:sourcecaption"sno"vs"snow"10.25-11.75,fullresolutionpixels+bothASRsconfirmed. E3notrendered/staged/uploaded/notskipped. E1/E2fourpartprivatereserveunaffected;seriesnotcomplete. Newfreefallbackrotationneededaftercurrentcleanqueue.
