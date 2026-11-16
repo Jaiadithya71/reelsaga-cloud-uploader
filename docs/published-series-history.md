@@ -1265,3 +1265,6 @@ WinterE1P2ledger43811349821SUCCESSexact0f8f108c50898fa736823ee91beb385a4256ed35/
 
 
 Nov16 11:28IST Twins833244 ENTIRE SERIES HOLD: late DramaBox/The Superpowered Twins global VIDEO/visual blocks after09:18cleanreserve. Notices11:27:03-10 IDs1a1e2ee323799b54/1a1e2ee4f565dc39/1a1e2ee4bde31c58 identifyE1P1G2s8jRw4UgA/E1P2OFL7fA-nWD8/E2P2daqONaOoavA. Studio https://studio.youtube.com/video/G2s8jRw4UgA/claims globalvisualblock/notstrike/nochannelimpactverified11:28pixels055822;E2P1XP7iHzdFpMEclaimspagenone11:28butheldwithseries. AllPRIVATE,no publicrelease/dispute/edit/reupload/skip. Earliercleanstatussuperseded. WinterE2P1/E2P2pendingfreshreleasegatesunaffected;WinterE3captionhold. Freshfreefallbackneeded. Parentnotified11:27:46.
+
+
+Nov16 11:42 replacement candidate833245 The Girl Who Became My Mafia Charge,9freeYourChannel60%; exactgeneratedaffiliate https://r.reelsgo.tv/TaIVvnMY7GnB source https://dramacps.com/dashboard . Repo+liveindex no repeats11:32; fullchannelguardmandatory. WholeE1/E2 ASR/OCR/action/caption/render gates completed; four PRIVATEONLY claim probes prepared, NOT dispatched. No publicclaim clearance yet. E3+unreviewed. Twins833244ENTIREHOLD unchanged.
