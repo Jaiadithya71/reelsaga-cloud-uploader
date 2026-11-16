@@ -303,5 +303,19 @@
     "playlist": "NOT_ADDED",
     "visibility": "PRIVATE"
   },
-  "e4_hold": "E4P1audioCLAIM;bothE4partsheld,no public/reupload/edit/dispute/skip. E4P2alreadyinflightbeforeclaimresult,cleanup+inspectonly. E1-E3sixcleanreservekept,freshclaimsmandatory."
+  "e4_hold": "E4P1audioCLAIM;bothE4partsheld,no public/reupload/edit/dispute/skip. E4P2alreadyinflightbeforeclaimresult,cleanup+inspectonly. E1-E3sixcleanreservekept,freshclaimsmandatory.",
+  "e4p2_private_probe": {
+    "id": "uaZJ-TeTcMg",
+    "run": 43819795308,
+    "url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43819795308",
+    "sha": "902e03be83787835b0a6528b749e1ac16df17332",
+    "inventory": 616,
+    "stopped": "2026-11-16T06:53:25.1730587Z",
+    "state": "ready_for_review",
+    "stage_cleanup": "HEAD404/signedGET40412:23:57;cleanupwakedeleted",
+    "studio_claims": "none12:24:36pixels065436BUTEPISODEHOLDP1audioClaimNoSkip",
+    "ai": "NOT_SET",
+    "playlist": "NOT_ADDED",
+    "visibility": "PRIVATE"
+  }
 }
