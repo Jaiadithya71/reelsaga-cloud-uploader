@@ -134,7 +134,7 @@ def main():
                 for video in data.get('items',[]):
                     snippet=video['snippet']
                     if snippet['channelId']!=CHANNEL:raise RuntimeError('Channel mismatch')
-                    if snippet['title']==item['title'] or (part==1 and 'the twins maiden and the ice prince - episode 2 ' in snippet['title'].lower()):raise RuntimeError('Existing episode part, reconcile only')
+                    if snippet['title']==item['title'] or (part==1 and 'the twins who broke reality - episode 2 ' in snippet['title'].lower()):raise RuntimeError('Existing episode part, reconcile only')
             return len(ids)
         _da=0
         _dup=None
