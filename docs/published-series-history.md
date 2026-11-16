@@ -1241,3 +1241,5 @@ The Winter Maiden and the Ice Prince, YourChannel60%,9free. Whole-sourceE1/E2ASR
 WinterE3HOLD05:58IST:sourcecaption"sno"vs"snow"10.25-11.75,fullresolutionpixels+bothASRsconfirmed. E3notrendered/staged/uploaded/notskipped. E1/E2fourpartprivatereserveunaffected;seriesnotcomplete. Newfreefallbackrotationneededaftercurrentcleanqueue.
 
 UnseenE2P2 cVNdIjR5p1I PUBLIC Nov16 06:38:19IST/01:08:19Z;actualplayerprivatefalse/unlistedfalse/OK/exactchannel06:38:29. Freshclaimsnone/AIYes/fullAdaffiliate/notforkids/noage/ownmanual6partorderfirst4publiclast2private. Spacing1h05m56. NextE3P1wake07:40-43,floor07:38:19/4h10:38:19. Ledgerdispatchonce08694c5bf,pendingreadback.
+
+UnseenE3P1 xqXnm6YElOo PUBLICNov16 07:46:12IST/02:16:12Z,playerprivatefalse/unlistedfalse/OK/exactchannel07:46:18. Freshclaimsnone/AIYes/fullAdaffiliate/notforkids/noage/ownmanual6partorderfirst5publiclast1private. Spacing1h07m53. NextE3P2wake08:50-53,floor08:46:12/4h11:46:12. Ledgerdispatchonce5ad18de43,pendingreadback. Localworkingfilesexpired,recoveredcanonicalrepoandQAevidencebeforerelease,noreupload.
