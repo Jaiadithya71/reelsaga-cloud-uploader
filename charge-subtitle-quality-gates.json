@@ -16,7 +16,9 @@
     "e3_plus": "E3PRIVATE_CLEAN_GATES_PASSED;E4HOLD_AUDIOCLAIM;E5+UNREVIEWED",
     "e3": "80.928s whole base.en+small.en ASR;324quarterOCR,81action+81caption integer pixels inspected. Brief Of course/Boss31.5/31.75 and Yes/Boss/Whats on my schedule targets checked. Watch Grumpys ear/Vincent/Cole correct. Conversation/bodyguards/car, no graphic injury/nudity/sex observed. Unchangedaudio/captions, two continuousrenders0-40.8/40.8-80.928 measured40.8/40.134,decode/cap+6renderpixelsverified11:53.",
     "e4": "108.297s whole base.en+small.en ASR,433quarterOCR,109caption/action integerpixelsinspected12:17. TargetBoss/Frank/Hi/Well/GoHaveFun/PickItUp/MrMoretti/WhatsThatOnYourShoe inspected;independentendingASRvadfalseconfirmedMrMoretti/WhatsThatOnYourShoe. Dialogue/mobthreats/non-graphicconfrontation/profanity;noinjury/nudity/sexobserved. 2continuousunchangedaudio/captionsrenders0-54.5-108.297 measured54.5/53.798;decode/cap/6renderpixelsPASS12:18.",
-    "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED"
+    "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED",
+    "e5": "46.532s whole base.en+small.en ASR;186quarterOCR noisy/background,47integercaption+47action pixels;openingEww/MrMoretti/WhatsThat and40.25OneSecond/41Sir shortcards targetedpixels+audio independentlyverified. Adults argue about dirtyshoe; childsafeatcake, nochildmistreatment observed. Originalsource720x1280;onecontinuous46.534renderdecode/cap/3pixels PASS. LivefreeE5sourceDr amaCPS00:52Nov17.",
+    "e6_plus": "NOT_REVIEWED"
   },
   "part_gates": {
     "yourchannel-charge833245-ep1-part1-v1": {
@@ -154,6 +156,23 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "467a0ffccc13565045a872870494c5352363c1413b90b85fdc5493412bfd2e25",
       "render_sha256": "467a0ffccc13565045a872870494c5352363c1413b90b85fdc5493412bfd2e25"
+    },
+    "yourchannel-charge833245-ep5-part1-v1": {
+      "episode": 5,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 46.532,
+      "duration": 46.532,
+      "measured_duration": 46.534,
+      "sha256": "c3b5d3fabf52bf32b155232b2c53aed341231600a0c81618ad62313ab6f772a6",
+      "bytes": 38901210,
+      "path": "/downloads/charge833245-review/charge-e5p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "c3b5d3fabf52bf32b155232b2c53aed341231600a0c81618ad62313ab6f772a6",
+      "render_sha256": "c3b5d3fabf52bf32b155232b2c53aed341231600a0c81618ad62313ab6f772a6"
     }
   },
   "sources": [
