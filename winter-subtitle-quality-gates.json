@@ -191,5 +191,19 @@
     "rendered": false,
     "staged": false,
     "uploaded": false
+  },
+  "e2p1_public": {
+    "id": "AiX-71_QS-Y",
+    "url": "https://www.youtube.com/shorts/AiX-71_QS-Y",
+    "published_at": "2026-11-16T06:43:43Z",
+    "claims": "none12:12:28pixels064228",
+    "native_ai": "YesSaved12:13:19pixels064319",
+    "metadata": "FullAd/exactaffiliate/notforkids/noage/ownplaylistchecked",
+    "studio": "PublicSavedUndoSaveDisabled12:13:56pixels064356",
+    "player": "PUBLICshortsnewactualpixels064422",
+    "ledger_run": 43818771767,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/43818771767",
+    "ledger": "SUCCESSexact16fc1d230648a8ef38236698fda7a9ba422e3152/APIpublishedAt06:43:43Z",
+    "next": "E2P2ULJPshvy23g floor13:13:43IST/4h16:13:43 wake13:18-21"
   }
 }
