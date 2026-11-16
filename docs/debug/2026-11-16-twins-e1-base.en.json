@@ -1,0 +1,810 @@
+[
+  {
+    "start": 7.2599999999999945,
+    "end": 14.28,
+    "text": " All of them. A board seat in my inheritance. And this is what you stoop to? Fine. A man",
+    "words": [
+      {
+        "start": 7.2599999999999945,
+        "end": 7.719999999999997,
+        "word": " All"
+      },
+      {
+        "start": 7.719999999999997,
+        "end": 8.18,
+        "word": " of"
+      },
+      {
+        "start": 8.18,
+        "end": 8.28,
+        "word": " them."
+      },
+      {
+        "start": 8.9,
+        "end": 9.08,
+        "word": " A"
+      },
+      {
+        "start": 9.08,
+        "end": 9.28,
+        "word": " board"
+      },
+      {
+        "start": 9.28,
+        "end": 9.58,
+        "word": " seat"
+      },
+      {
+        "start": 9.58,
+        "end": 9.76,
+        "word": " in"
+      },
+      {
+        "start": 9.76,
+        "end": 9.92,
+        "word": " my"
+      },
+      {
+        "start": 9.92,
+        "end": 10.22,
+        "word": " inheritance."
+      },
+      {
+        "start": 11.08,
+        "end": 11.12,
+        "word": " And"
+      },
+      {
+        "start": 11.12,
+        "end": 11.24,
+        "word": " this"
+      },
+      {
+        "start": 11.24,
+        "end": 11.34,
+        "word": " is"
+      },
+      {
+        "start": 11.34,
+        "end": 11.5,
+        "word": " what"
+      },
+      {
+        "start": 11.5,
+        "end": 11.66,
+        "word": " you"
+      },
+      {
+        "start": 11.66,
+        "end": 11.92,
+        "word": " stoop"
+      },
+      {
+        "start": 11.92,
+        "end": 12.1,
+        "word": " to?"
+      },
+      {
+        "start": 12.92,
+        "end": 12.98,
+        "word": " Fine."
+      },
+      {
+        "start": 13.9,
+        "end": 14.08,
+        "word": " A"
+      },
+      {
+        "start": 14.08,
+        "end": 14.28,
+        "word": " man"
+      }
+    ]
+  },
+  {
+    "start": 14.28,
+    "end": 16.3,
+    "text": " who can't even walk has nothing left to live for.",
+    "words": [
+      {
+        "start": 14.28,
+        "end": 14.42,
+        "word": " who"
+      },
+      {
+        "start": 14.42,
+        "end": 14.76,
+        "word": " can't"
+      },
+      {
+        "start": 14.76,
+        "end": 14.84,
+        "word": " even"
+      },
+      {
+        "start": 14.84,
+        "end": 15.14,
+        "word": " walk"
+      },
+      {
+        "start": 15.14,
+        "end": 15.42,
+        "word": " has"
+      },
+      {
+        "start": 15.42,
+        "end": 15.64,
+        "word": " nothing"
+      },
+      {
+        "start": 15.64,
+        "end": 15.94,
+        "word": " left"
+      },
+      {
+        "start": 15.94,
+        "end": 16.08,
+        "word": " to"
+      },
+      {
+        "start": 16.08,
+        "end": 16.16,
+        "word": " live"
+      },
+      {
+        "start": 16.16,
+        "end": 16.3,
+        "word": " for."
+      }
+    ]
+  },
+  {
+    "start": 20.8,
+    "end": 22.46,
+    "text": " Don't you dare hit him!",
+    "words": [
+      {
+        "start": 20.8,
+        "end": 21.26,
+        "word": " Don't"
+      },
+      {
+        "start": 21.26,
+        "end": 21.4,
+        "word": " you"
+      },
+      {
+        "start": 21.4,
+        "end": 21.84,
+        "word": " dare"
+      },
+      {
+        "start": 21.84,
+        "end": 22.22,
+        "word": " hit"
+      },
+      {
+        "start": 22.22,
+        "end": 22.46,
+        "word": " him!"
+      }
+    ]
+  },
+  {
+    "start": 23.06,
+    "end": 24.62,
+    "text": " What the hell? Run him over!",
+    "words": [
+      {
+        "start": 23.06,
+        "end": 23.3,
+        "word": " What"
+      },
+      {
+        "start": 23.3,
+        "end": 23.48,
+        "word": " the"
+      },
+      {
+        "start": 23.48,
+        "end": 23.74,
+        "word": " hell?"
+      },
+      {
+        "start": 24.14,
+        "end": 24.22,
+        "word": " Run"
+      },
+      {
+        "start": 24.22,
+        "end": 24.36,
+        "word": " him"
+      },
+      {
+        "start": 24.36,
+        "end": 24.62,
+        "word": " over!"
+      }
+    ]
+  },
+  {
+    "start": 29.259999999999998,
+    "end": 30.52,
+    "text": " Too loud!",
+    "words": [
+      {
+        "start": 29.259999999999998,
+        "end": 30.08,
+        "word": " Too"
+      },
+      {
+        "start": 30.08,
+        "end": 30.52,
+        "word": " loud!"
+      }
+    ]
+  },
+  {
+    "start": 32.06,
+    "end": 34.22,
+    "text": " What kind of monster are you?",
+    "words": [
+      {
+        "start": 32.06,
+        "end": 32.88,
+        "word": " What"
+      },
+      {
+        "start": 32.88,
+        "end": 33.1,
+        "word": " kind"
+      },
+      {
+        "start": 33.1,
+        "end": 33.26,
+        "word": " of"
+      },
+      {
+        "start": 33.26,
+        "end": 33.54,
+        "word": " monster"
+      },
+      {
+        "start": 33.54,
+        "end": 34.0,
+        "word": " are"
+      },
+      {
+        "start": 34.0,
+        "end": 34.22,
+        "word": " you?"
+      }
+    ]
+  },
+  {
+    "start": 37.68,
+    "end": 39.1,
+    "text": " What the fuck?",
+    "words": [
+      {
+        "start": 37.68,
+        "end": 38.5,
+        "word": " What"
+      },
+      {
+        "start": 38.5,
+        "end": 38.72,
+        "word": " the"
+      },
+      {
+        "start": 38.72,
+        "end": 39.1,
+        "word": " fuck?"
+      }
+    ]
+  },
+  {
+    "start": 39.88,
+    "end": 41.8,
+    "text": " I'm a kid, not a monster.",
+    "words": [
+      {
+        "start": 39.88,
+        "end": 40.38,
+        "word": " I'm"
+      },
+      {
+        "start": 40.38,
+        "end": 40.44,
+        "word": " a"
+      },
+      {
+        "start": 40.44,
+        "end": 40.74,
+        "word": " kid,"
+      },
+      {
+        "start": 41.3,
+        "end": 41.42,
+        "word": " not"
+      },
+      {
+        "start": 41.42,
+        "end": 41.54,
+        "word": " a"
+      },
+      {
+        "start": 41.54,
+        "end": 41.8,
+        "word": " monster."
+      }
+    ]
+  },
+  {
+    "start": 49.540000000000006,
+    "end": 55.12,
+    "text": " Whoever you are, this game is over.",
+    "words": [
+      {
+        "start": 49.540000000000006,
+        "end": 50.02,
+        "word": " Whoever"
+      },
+      {
+        "start": 50.02,
+        "end": 50.3,
+        "word": " you"
+      },
+      {
+        "start": 50.3,
+        "end": 50.52,
+        "word": " are,"
+      },
+      {
+        "start": 50.84,
+        "end": 51.42,
+        "word": " this"
+      },
+      {
+        "start": 51.42,
+        "end": 51.66,
+        "word": " game"
+      },
+      {
+        "start": 51.66,
+        "end": 55.12,
+        "word": " is"
+      },
+      {
+        "start": 55.12,
+        "end": 55.12,
+        "word": " over."
+      }
+    ]
+  },
+  {
+    "start": 55.12,
+    "end": 58.92,
+    "text": " This isn't a nice toy.",
+    "words": [
+      {
+        "start": 55.12,
+        "end": 55.12,
+        "word": " This"
+      },
+      {
+        "start": 55.12,
+        "end": 58.18,
+        "word": " isn't"
+      },
+      {
+        "start": 58.18,
+        "end": 58.32,
+        "word": " a"
+      },
+      {
+        "start": 58.32,
+        "end": 58.54,
+        "word": " nice"
+      },
+      {
+        "start": 58.54,
+        "end": 58.92,
+        "word": " toy."
+      }
+    ]
+  },
+  {
+    "start": 59.68,
+    "end": 60.68,
+    "text": " How did you get in here?",
+    "words": [
+      {
+        "start": 59.68,
+        "end": 59.88,
+        "word": " How"
+      },
+      {
+        "start": 59.88,
+        "end": 60.0,
+        "word": " did"
+      },
+      {
+        "start": 60.0,
+        "end": 60.12,
+        "word": " you"
+      },
+      {
+        "start": 60.12,
+        "end": 60.3,
+        "word": " get"
+      },
+      {
+        "start": 60.3,
+        "end": 60.48,
+        "word": " in"
+      },
+      {
+        "start": 60.48,
+        "end": 60.68,
+        "word": " here?"
+      }
+    ]
+  },
+  {
+    "start": 67.1,
+    "end": 69.48,
+    "text": " Looks like the trash can likes him.",
+    "words": [
+      {
+        "start": 67.1,
+        "end": 67.6,
+        "word": " Looks"
+      },
+      {
+        "start": 67.6,
+        "end": 68.1,
+        "word": " like"
+      },
+      {
+        "start": 68.1,
+        "end": 68.26,
+        "word": " the"
+      },
+      {
+        "start": 68.26,
+        "end": 68.48,
+        "word": " trash"
+      },
+      {
+        "start": 68.48,
+        "end": 68.84,
+        "word": " can"
+      },
+      {
+        "start": 68.84,
+        "end": 69.14,
+        "word": " likes"
+      },
+      {
+        "start": 69.14,
+        "end": 69.48,
+        "word": " him."
+      }
+    ]
+  },
+  {
+    "start": 71.44,
+    "end": 72.44,
+    "text": " Who are you two?",
+    "words": [
+      {
+        "start": 71.44,
+        "end": 71.94,
+        "word": " Who"
+      },
+      {
+        "start": 71.94,
+        "end": 72.04,
+        "word": " are"
+      },
+      {
+        "start": 72.04,
+        "end": 72.2,
+        "word": " you"
+      },
+      {
+        "start": 72.2,
+        "end": 72.44,
+        "word": " two?"
+      }
+    ]
+  },
+  {
+    "start": 74.42,
+    "end": 78.0,
+    "text": " Top-tier bodyguard service, one million dollars. Pay up.",
+    "words": [
+      {
+        "start": 74.42,
+        "end": 74.92,
+        "word": " Top"
+      },
+      {
+        "start": 74.92,
+        "end": 75.2,
+        "word": "-tier"
+      },
+      {
+        "start": 75.2,
+        "end": 75.74,
+        "word": " bodyguard"
+      },
+      {
+        "start": 75.74,
+        "end": 76.08,
+        "word": " service,"
+      },
+      {
+        "start": 76.56,
+        "end": 76.62,
+        "word": " one"
+      },
+      {
+        "start": 76.62,
+        "end": 76.88,
+        "word": " million"
+      },
+      {
+        "start": 76.88,
+        "end": 77.36,
+        "word": " dollars."
+      },
+      {
+        "start": 77.74,
+        "end": 77.78,
+        "word": " Pay"
+      },
+      {
+        "start": 77.78,
+        "end": 78.0,
+        "word": " up."
+      }
+    ]
+  },
+  {
+    "start": 79.26,
+    "end": 80.46,
+    "text": " What do you need that much money for?",
+    "words": [
+      {
+        "start": 79.26,
+        "end": 79.48,
+        "word": " What"
+      },
+      {
+        "start": 79.48,
+        "end": 79.54,
+        "word": " do"
+      },
+      {
+        "start": 79.54,
+        "end": 79.58,
+        "word": " you"
+      },
+      {
+        "start": 79.58,
+        "end": 79.7,
+        "word": " need"
+      },
+      {
+        "start": 79.7,
+        "end": 79.84,
+        "word": " that"
+      },
+      {
+        "start": 79.84,
+        "end": 79.98,
+        "word": " much"
+      },
+      {
+        "start": 79.98,
+        "end": 80.22,
+        "word": " money"
+      },
+      {
+        "start": 80.22,
+        "end": 80.46,
+        "word": " for?"
+      }
+    ]
+  },
+  {
+    "start": 81.96,
+    "end": 83.56,
+    "text": " Quit talking! Pay us!",
+    "words": [
+      {
+        "start": 81.96,
+        "end": 82.46,
+        "word": " Quit"
+      },
+      {
+        "start": 82.46,
+        "end": 82.78,
+        "word": " talking!"
+      },
+      {
+        "start": 83.26,
+        "end": 83.36,
+        "word": " Pay"
+      },
+      {
+        "start": 83.36,
+        "end": 83.56,
+        "word": " us!"
+      }
+    ]
+  },
+  {
+    "start": 85.7,
+    "end": 87.98,
+    "text": " Take it. There's a million on this card.",
+    "words": [
+      {
+        "start": 85.7,
+        "end": 86.2,
+        "word": " Take"
+      },
+      {
+        "start": 86.2,
+        "end": 86.34,
+        "word": " it."
+      },
+      {
+        "start": 87.02,
+        "end": 87.2,
+        "word": " There's"
+      },
+      {
+        "start": 87.2,
+        "end": 87.26,
+        "word": " a"
+      },
+      {
+        "start": 87.26,
+        "end": 87.38,
+        "word": " million"
+      },
+      {
+        "start": 87.38,
+        "end": 87.62,
+        "word": " on"
+      },
+      {
+        "start": 87.62,
+        "end": 87.76,
+        "word": " this"
+      },
+      {
+        "start": 87.76,
+        "end": 87.98,
+        "word": " card."
+      }
+    ]
+  },
+  {
+    "start": 89.64,
+    "end": 94.54,
+    "text": " Luna, the surgery bill has to be paid now. Wait any longer and your mother will go permanently lined.",
+    "words": [
+      {
+        "start": 89.64,
+        "end": 90.08,
+        "word": " Luna,"
+      },
+      {
+        "start": 90.44,
+        "end": 90.56,
+        "word": " the"
+      },
+      {
+        "start": 90.56,
+        "end": 90.76,
+        "word": " surgery"
+      },
+      {
+        "start": 90.76,
+        "end": 91.08,
+        "word": " bill"
+      },
+      {
+        "start": 91.08,
+        "end": 91.26,
+        "word": " has"
+      },
+      {
+        "start": 91.26,
+        "end": 91.4,
+        "word": " to"
+      },
+      {
+        "start": 91.4,
+        "end": 91.5,
+        "word": " be"
+      },
+      {
+        "start": 91.5,
+        "end": 91.68,
+        "word": " paid"
+      },
+      {
+        "start": 91.68,
+        "end": 91.96,
+        "word": " now."
+      },
+      {
+        "start": 92.36,
+        "end": 92.36,
+        "word": " Wait"
+      },
+      {
+        "start": 92.36,
+        "end": 92.54,
+        "word": " any"
+      },
+      {
+        "start": 92.54,
+        "end": 92.86,
+        "word": " longer"
+      },
+      {
+        "start": 92.86,
+        "end": 93.06,
+        "word": " and"
+      },
+      {
+        "start": 93.06,
+        "end": 93.16,
+        "word": " your"
+      },
+      {
+        "start": 93.16,
+        "end": 93.38,
+        "word": " mother"
+      },
+      {
+        "start": 93.38,
+        "end": 93.54,
+        "word": " will"
+      },
+      {
+        "start": 93.54,
+        "end": 93.66,
+        "word": " go"
+      },
+      {
+        "start": 93.66,
+        "end": 94.06,
+        "word": " permanently"
+      },
+      {
+        "start": 94.06,
+        "end": 94.54,
+        "word": " lined."
+      }
+    ]
+  },
+  {
+    "start": 95.08,
+    "end": 95.52,
+    "text": " Mommy!",
+    "words": [
+      {
+        "start": 95.08,
+        "end": 95.52,
+        "word": " Mommy!"
+      }
+    ]
+  }
+]
