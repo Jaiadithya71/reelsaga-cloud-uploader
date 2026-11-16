@@ -14,7 +14,9 @@
     "ocr_caveat": "OCR noisy/background; all integer-caption pixels independently read, short cards checked at quarter targets/full source frame.",
     "render": "4continuousparts, originalaudio/captions unchanged except0.15edgefades; full decode, measuredcap and 12renderpixels verified11:41.",
     "e3_plus": "E3QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E4+NOT_REVIEWED",
-    "e3": "80.928s whole base.en+small.en ASR;324quarterOCR,81action+81caption integer pixels inspected. Brief Of course/Boss31.5/31.75 and Yes/Boss/Whats on my schedule targets checked. Watch Grumpys ear/Vincent/Cole correct. Conversation/bodyguards/car, no graphic injury/nudity/sex observed. Unchangedaudio/captions, two continuousrenders0-40.8/40.8-80.928 measured40.8/40.134,decode/cap+6renderpixelsverified11:53."
+    "e3": "80.928s whole base.en+small.en ASR;324quarterOCR,81action+81caption integer pixels inspected. Brief Of course/Boss31.5/31.75 and Yes/Boss/Whats on my schedule targets checked. Watch Grumpys ear/Vincent/Cole correct. Conversation/bodyguards/car, no graphic injury/nudity/sex observed. Unchangedaudio/captions, two continuousrenders0-40.8/40.8-80.928 measured40.8/40.134,decode/cap+6renderpixelsverified11:53.",
+    "e4": "108.297s whole base.en+small.en ASR,433quarterOCR,109caption/action integerpixelsinspected12:17. TargetBoss/Frank/Hi/Well/GoHaveFun/PickItUp/MrMoretti/WhatsThatOnYourShoe inspected;independentendingASRvadfalseconfirmedMrMoretti/WhatsThatOnYourShoe. Dialogue/mobthreats/non-graphicconfrontation/profanity;noinjury/nudity/sexobserved. 2continuousunchangedaudio/captionsrenders0-54.5-108.297 measured54.5/53.798;decode/cap/6renderpixelsPASS12:18.",
+    "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED"
   },
   "part_gates": {
     "yourchannel-charge833245-ep1-part1-v1": {
@@ -118,6 +120,40 @@
       "whole_part_release_ready": true,
       "approved_render_sha256": "954e1a50341b77fde317ea7410013f6c66f00ccbfb597021af1c57fa570afcb0",
       "render_sha256": "954e1a50341b77fde317ea7410013f6c66f00ccbfb597021af1c57fa570afcb0"
+    },
+    "yourchannel-charge833245-ep4-part1-v1": {
+      "episode": 4,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 54.5,
+      "duration": 54.5,
+      "measured_duration": 54.5,
+      "sha256": "f482cdeccadcfe4351c212c92bddcb400fb84ecbc72f067fc7443321163cc054",
+      "bytes": 42109656,
+      "path": "/downloads/charge833245-review/charge-e4p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "f482cdeccadcfe4351c212c92bddcb400fb84ecbc72f067fc7443321163cc054",
+      "render_sha256": "f482cdeccadcfe4351c212c92bddcb400fb84ecbc72f067fc7443321163cc054"
+    },
+    "yourchannel-charge833245-ep4-part2-v1": {
+      "episode": 4,
+      "part": 2,
+      "source_start": 54.5,
+      "source_end": 108.297,
+      "duration": 53.797,
+      "measured_duration": 53.798,
+      "sha256": "467a0ffccc13565045a872870494c5352363c1413b90b85fdc5493412bfd2e25",
+      "bytes": 42554154,
+      "path": "/downloads/charge833245-review/charge-e4p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "467a0ffccc13565045a872870494c5352363c1413b90b85fdc5493412bfd2e25",
+      "render_sha256": "467a0ffccc13565045a872870494c5352363c1413b90b85fdc5493412bfd2e25"
     }
   },
   "sources": [
