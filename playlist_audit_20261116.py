@@ -33,4 +33,7 @@ for p in ps:
  assert p['snippet']['channelId']==CHANNEL
  items=pages('playlistItems',part='snippet,contentDetails,status',playlistId=p['id'])
  print('AUDIT_PLAYLIST '+json.dumps({'id':p['id'],'title':p['snippet']['title'],'privacy':p['status']['privacyStatus'],'count':p['contentDetails']['itemCount'],'items':[{'item':i['id'],'id':i['contentDetails'].get('videoId'),'title':i['snippet']['title'],'position':i['snippet']['position'],'privacy':i.get('status',{}).get('privacyStatus')}for i in items]},ensure_ascii=True))
+extra_ids=['m2V6n1FVU-U','c-g4_KnhUEc']
+for v in get('videos',part='snippet,status',id=','.join(extra_ids)).get('items',[]):
+ print('AUDIT_EXTRA '+json.dumps({'id':v['id'],'title':v['snippet']['title'],'privacy':v['status']['privacyStatus'],'upload':v['status'].get('uploadStatus'),'channel':v['snippet']['channelId']}))
 print('AUDIT_COMPLETE '+json.dumps({'channel':CHANNEL,'videos':len(vs),'playlists':len(ps)}))
