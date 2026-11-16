@@ -1,0 +1,83 @@
+{
+  "series_id": 833200,
+  "title": "The Winter Maiden and the Ice Prince",
+  "platform": "YourChannel",
+  "commission": "60%",
+  "free_episodes": 9,
+  "affiliate": "https://r.reelsgo.tv/vwwUfTE8imE7",
+  "app_home": "https://r.reelsgo.tv/A_HgV-8pGSUg",
+  "sources": [
+    {
+      "text": "Episode 1 \u00b7 1",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/13e09191-1a1befa4e69-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 2 \u00b7 2",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2890351b-1a1befa4f71-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 3 \u00b7 3",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/b18c8ae-1a1befa4f3b-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 4 \u00b7 4",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2ca13e24-1a1befa4f38-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 5 \u00b7 5",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1c4ef864-1a1befa4f37-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 6 \u00b7 6",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/451c2c7b-1a1befa4f36-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 7 \u00b7 7",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/16b25e53-1a1befa4f35-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 8 \u00b7 8",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/20ae1034-1a1befa4f53-0005-9573-534-c9280.mp4"
+    },
+    {
+      "text": "Episode 9 \u00b7 9",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1fa0b92f-1a1befa4e5d-0005-9573-534-c9280.mp4"
+    }
+  ],
+  "no_repeat": "LiveindexGET05:44IST+fullpublishedhistorysearch,noWinter833200",
+  "e1_qa": "Wholebase+smallENASR,351quarterOCR,88caption+88actionpixels,13targetsinspected. No confirmedcaptiondefect. Fires/burningcoat/confinement/shoving/snowdistress,nographicinjury/sex/nudity. Barechestedfantasymen,ordinarycleavage. Originalaudio/captionsunchangedexcept0.15edgefades.",
+  "part_gates": {
+    "yourchannel-winter833200-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 43.8,
+      "duration": 43.8,
+      "sha256": "087ebaed855f2bf7f07e43dfc2218bc2f49a4b90ef2dff7a567cdecb4267a955",
+      "bytes": 41443443,
+      "path": "/downloads/winter-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 43.8,
+      "approved_render_sha256": "087ebaed855f2bf7f07e43dfc2218bc2f49a4b90ef2dff7a567cdecb4267a955"
+    },
+    "yourchannel-winter833200-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 43.8,
+      "source_end": 87.724,
+      "duration": 43.924,
+      "sha256": "aa5497babe0e40a29df83cedf9fc15dc389da40296358b0e0a5b96b0cb87aa66",
+      "bytes": 34861511,
+      "path": "/downloads/winter-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "measured_duration": 43.924,
+      "approved_render_sha256": "aa5497babe0e40a29df83cedf9fc15dc389da40296358b0e0a5b96b0cb87aa66"
+    }
+  }
+}
