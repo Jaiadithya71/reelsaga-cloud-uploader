@@ -18,8 +18,9 @@
     "e4": "108.297s whole base.en+small.en ASR,433quarterOCR,109caption/action integerpixelsinspected12:17. TargetBoss/Frank/Hi/Well/GoHaveFun/PickItUp/MrMoretti/WhatsThatOnYourShoe inspected;independentendingASRvadfalseconfirmedMrMoretti/WhatsThatOnYourShoe. Dialogue/mobthreats/non-graphicconfrontation/profanity;noinjury/nudity/sexobserved. 2continuousunchangedaudio/captionsrenders0-54.5-108.297 measured54.5/53.798;decode/cap/6renderpixelsPASS12:18.",
     "e4_plus": "E4QA_RENDER_PASSED_NOT_STAGED_NOT_UPLOADED;E5+NOT_REVIEWED",
     "e5": "46.532s whole base.en+small.en ASR;186quarterOCR noisy/background,47integercaption+47action pixels;openingEww/MrMoretti/WhatsThat and40.25OneSecond/41Sir shortcards targetedpixels+audio independentlyverified. Adults argue about dirtyshoe; childsafeatcake, nochildmistreatment observed. Originalsource720x1280;onecontinuous46.534renderdecode/cap/3pixels PASS. LivefreeE5sourceDramaCPS00:52Nov17.",
-    "e6_plus": "E7plusNOTREVIEWED",
-    "e6": "67.708s entire base.en+small.en ASR,271quarterOCR noisy,68integercaption/actionpixels. TargetedDamnright,YesBoss and34.75Mr card independently audio/pixels. Adults shoe-cover confrontation, discardedbadge rescued bychild, adultonlyangryexit/phone/boxingplan; nochildmistreatment observed. All originalfootage/captions/audio retained;split36.5s clearpauseafterByeMrMoretti,2parts36.5/31.209s decode/cap/6pixels PASS. DramaCPSninefreeverified01:54Nov17."
+    "e6_plus": "E7HOLD;E8plusNOTREVIEWED;ChargeorderedcontinuationstopsafterE6P2",
+    "e6": "67.708s entire base.en+small.en ASR,271quarterOCR noisy,68integercaption/actionpixels. TargetedDamnright,YesBoss and34.75Mr card independently audio/pixels. Adults shoe-cover confrontation, discardedbadge rescued bychild, adultonlyangryexit/phone/boxingplan; nochildmistreatment observed. All originalfootage/captions/audio retained;split36.5s clearpauseafterByeMrMoretti,2parts36.5/31.209s decode/cap/6pixels PASS. DramaCPSninefreeverified01:54Nov17.",
+    "e7": "HOLD/nochildmistreatmentgate:81.431s bothASR326quarterOCR81integeraction+captionpixels. Adultlaughssecondgrader16-18s,pointsyellsSheseight/Whatdoessheknow27-29s,childsaysalreadyyellingatme37s. No render/upload/skip/edit. AlsogarbledAI-generatedmathworksheetvisible64-73s,notarepairedsource."
   },
   "part_gates": {
     "yourchannel-charge833245-ep1-part1-v1": {

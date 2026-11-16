@@ -1,0 +1,76 @@
+{
+  "as_of": "2026-11-17T03:40:00+05:30",
+  "source": "https://dramacps.com/dashboard",
+  "authority": "Parent requires options only pending Jai choice. No new public series, new playlist, sign-ups, spend or Facebook. Private probes only after QA.",
+  "status": "One source-QA-passing lead (SelfMadeKing), no claim-qualified newfallback yet; no uploads or newplaylist.",
+  "candidates": {
+    "833159": {
+      "title": "Hired by the Dragon Mob",
+      "free": 7,
+      "status": "Not a clean low-risk option",
+      "review": "E1 all104 integer action frames; sustained sexualized framing, lingerie/elevator intimacy near90-103s. No caption clearance."
+    },
+    "833168": {
+      "title": "The Maid in Charge",
+      "free": 6,
+      "status": "HOLD child mistreatment",
+      "review": "E1all140 integer action frames;child fall49-50, distressedchild/family confrontation; adult grips child chin130-132. No upload."
+    },
+    "833167": {
+      "title": "The Billionaire's Blind Bargain",
+      "free": 8,
+      "status": "Unqualified risk",
+      "review": "E1action0-179, baseASRE1/E2. Opens oxygen tube removal/self-endangerment as coercion, later disability mocking. No full caption pass."
+    },
+    "833161": {
+      "title": "I Called the Abyss Lord a Puppy",
+      "free": 6,
+      "status": "Unqualified graphic treatment",
+      "review": "All151+146 integer action frames E1/E2 andbaseASRs. E2 graphic diseased/bleeding ear closeup at3-8/20s with treatment and parasite specimen. No privateprobe."
+    },
+    "833154": {
+      "title": "The Outcasts of Sunset Island",
+      "free": 5,
+      "status": "Unqualified pending source caption defects/risk",
+      "review": "WholeE1/E2 base+smallASRs,536+404quarterOCR,235 integer action/caption frames. Adult slapping/shoving, swimwear, gendered conflict. E1 garbled holographicUI111-113; questionable overlapping speech/caption115-117, finalcaptiontail133.5 needscheck. Not clean, no probe."
+    },
+    "833171": {
+      "title": "The Love That Waited",
+      "free": 6,
+      "status": "Excluded duplicate known public series",
+      "review": "Canonical grep identified prior publicstartNov15 andE2captionhold. Repeated local review only, no upload."
+    },
+    "833214": {
+      "title": "The Wrong Sister Won the Don",
+      "free": 8,
+      "status": "Not a clean low-risk option",
+      "review": "E1first180integer actionframes reviewed. Forcedmarriage/disabledadult abuse/familialslap/shame, gunpressedtoadultforeheadflashback. E1total278.059s, E2207.723s downloaded unreviewed. No caption/ASR pass."
+    },
+    "833218": {
+      "title": "ontainer Vision (as catalog spells it)",
+      "free": 8,
+      "status": "Not clean low-risk",
+      "review": "All81E1integeractionpixels inspected; boundadultkickedoverboard8-11 withsharks,gunpoint23-25,knifeatthroat31-32,sexualizedmermaidframing/kissing43-61;noQAclearance. E271.429downloadednotreviewed."
+    },
+    "833217": {
+      "title": "His Last Hope Wore Rags",
+      "free": 7,
+      "status": "HOLD missingdialoguecaptions",
+      "review": "All188E1integeractionpixels reviewed andE2first36. No burned-dialoguecaptions atall, onlyoccasionalcharacternames. Apparentadultcharacters,somedubbedtalk,garbledAInews/holograms37-38/56-58. Neednotprobe. SourcesE1188.480,E2137.878."
+    },
+    "833210": {
+      "title": "Three Hours to Ruin My Sister",
+      "free": 8,
+      "status": "HOLD child-mistreatment",
+      "review": "All206E1integeractionpixels inspected. Age17explicit157-159s, fatherthrowsheavytrophyatdaughter132-137,bleedingforehead138-140,death171-183. No probe/upload. E2174.849downloadedunreviewed."
+    },
+    "833227": {
+      "title": "The Rise of a Self-Made King",
+      "free": 7,
+      "status": "E1/E2QA pass, fourcontinuousrenders35.4/35.741/40/39.176; PRIVATEprobes/affiliateavailabilitynotyetchecked; notfinalcleanoption",
+      "details": "docs/debug/2026-11-17-selfmade-source-qa.json"
+    }
+  },
+  "next": "Check unused titles against docs/published-series-history.md and ALL docs/debug first before more QA. Catalog page7 has unused833218 ContainerVision and833217 HisLastHopeWoreRags (age unresolved). Existing holds833213Cooking,833239Chairman,833220Willow are recorded in docs/debug/2026-11-15-evening-backup-research.json. Do not redo.",
+  "checkpoint": "06:25-06:30 parentalertifno cleanoption;07:30Jaidecision;E6P2release03:50:30first."
+}

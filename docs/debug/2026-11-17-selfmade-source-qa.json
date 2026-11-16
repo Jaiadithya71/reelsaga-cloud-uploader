@@ -1,0 +1,105 @@
+{
+  "as_of": "2026-11-17T03:40:00+05:30",
+  "series_id": "833227",
+  "title": "The Rise of a Self-Made King",
+  "catalog": "https://dramacps.com/dashboard",
+  "free_episodes": 7,
+  "status": "E1/E2 source QA passes for PRIVATE claim-test preparation only. New series choice not made; no public release, new playlist, affiliate or probe upload yet.",
+  "scope": "Whole source E1 and E2, not the remaining five episodes. Claim outcome and link availability remain unchecked.",
+  "review": {
+    "action_frames": 150,
+    "ocr_quarter_frames": 601,
+    "ASR": "base.en and small.en whole both, small.en word timestamps for boundaries",
+    "visual": "All150integer action/caption samples, targeted E1 25.5-29.0 quarter contacts, fullresolution10.8/44.2, 12 renderedframe pixels",
+    "content": "Adult hotel/inheritance conflict and class insults, wrist/collar grabs. No child-mistreatment or graphic injury observed in E1/E2. One verbal reference sleptwithamover,damn/hell. Not a guarantee of platform safety.",
+    "captions": "All spoken lines accounted across bothepisodes. PropernamesWhitmore/Parker/Rachel match. E1 sourcepromo overlay10-14 and66-71 retained as source, no text deletion/replacement. E1 present-tensecaptionearn vs audioearned nonmaterial. No observed garbled dialogue captions or names.",
+    "coverage": "continuous original all source included, only0.15s edge audiovisual fades, no skips/repair"
+  },
+  "sources": [
+    {
+      "episode": 1,
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/462f7d97-1a1af840955-0005-9573-534-c9280.mp4",
+      "sha256": "28eeb79bc184c18ea00f1f5d2de9d5cb5b6874549caffdbd1288c8957cb240c8"
+    },
+    {
+      "episode": 2,
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/12342be1-1a1af84091f-0005-9573-534-c9280.mp4",
+      "sha256": "b106e670cc014e99c9cca042e322d8b3817d0d5524fbdb9e281ad89aa5b97ef0"
+    }
+  ],
+  "renders": {
+    "yourchannel-selfmade833227-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 35.4,
+      "duration": 35.4,
+      "measured_duration": 35.4,
+      "sha256": "dbf5ff1cb9b7617cd85a467c572ac62c6433442b95d57a3e4e034953c2b6daf0",
+      "bytes": 36270917,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e1p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "dbf5ff1cb9b7617cd85a467c572ac62c6433442b95d57a3e4e034953c2b6daf0",
+      "render_sha256": "dbf5ff1cb9b7617cd85a467c572ac62c6433442b95d57a3e4e034953c2b6daf0",
+      "private_probe_ready": true
+    },
+    "yourchannel-selfmade833227-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 35.4,
+      "source_end": 71.141,
+      "duration": 35.74100000000001,
+      "measured_duration": 35.741,
+      "sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
+      "bytes": 37905311,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e1p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
+      "render_sha256": "a0e68e070c66945dc258bde0e4b9f6ea7ec968c920a49ef3c6a873d717c27574",
+      "private_probe_ready": true
+    },
+    "yourchannel-selfmade833227-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 40.0,
+      "duration": 40.0,
+      "measured_duration": 40.0,
+      "sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
+      "bytes": 40050459,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e2p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
+      "render_sha256": "58ee524c4554a68e3eb22a4d24ba902deb43dac5604f5f5da0b13157f51e46e1",
+      "private_probe_ready": true
+    },
+    "yourchannel-selfmade833227-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 40.0,
+      "source_end": 79.175,
+      "duration": 39.175,
+      "measured_duration": 39.176,
+      "sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
+      "bytes": 42518137,
+      "path": "/downloads/fallback-20261117/selfmade/selfmade-e2p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": false,
+      "approved_render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
+      "render_sha256": "b49e7f182cf06c44e019f5f4a6e9f0c824626b4943c23f021af7b4cdd70be397",
+      "private_probe_ready": true
+    }
+  },
+  "next": "After Charge E6P2 release, verify first-series affiliate still available if within scope, then privateclaimprobes only, fresh nativeAI/claims. Keep private until Jai chooses. No newplaylist/publiccommitment."
+}
