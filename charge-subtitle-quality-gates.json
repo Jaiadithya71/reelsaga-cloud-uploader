@@ -553,7 +553,7 @@
     "run": 43949609667,
     "sha": "905b359a401acb0aec02113184de988ffc44b0eb",
     "conclusion": "SUCCESS",
-    "visibility": "PRIVATE",
+    "visibility": "PUBLIC",
     "stopped_access_disabled_verified": true,
     "stage_deleted_HEAD404_signedGET404": true,
     "studio_claims": "none01:59/02:00Nov17",
@@ -573,5 +573,17 @@
     "native_ai": "Yes saved/reloadselected+SaveUndoDisabledverified02:00Nov17",
     "playlist": "OWN_CHARGE_PENDINGatpublicflip",
     "public_floor": "02:48:25ISTP1/P2actualP1+60min"
+  },
+  "e6p1_public": {
+    "id": "uRTm0BmQPGM",
+    "published_at": "2026-11-16T21:20:23Z",
+    "claims": "nonefresh02:49pixels211934",
+    "gates": "fullAd/exactaffiliate/nativeAIYes/notforkids/noage/ownChargeplaylistonlyfresh02:49-50",
+    "actual_player": "OK/privatefalse/unlistedfalse/exactReelSaga/publish21:20:23Zpixels212043",
+    "spacing": "61m58safterE5/dashboardlatestE5first1h1m02:49:59",
+    "playlist": "10PUBLICexactepisodeorderDOM02:50:59",
+    "ledger_run": 43959150701,
+    "ledger": "SUCCESS exact869671a/APIpublished21:20:23Z",
+    "next": "P2floor03:50:23/4h06:50:23ISTNov17"
   }
 }
