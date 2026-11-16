@@ -152,6 +152,40 @@
       "approved_render_sha256": "e0c8ac1105c6fab5a8f8a341f4ea752922a5f1c0ed110b74a491ce3d285f1c03",
       "render_sha256": "e0c8ac1105c6fab5a8f8a341f4ea752922a5f1c0ed110b74a491ce3d285f1c03",
       "measured_duration": 36.4
+    },
+    "yourchannel-unseen833206-ep3-part1-v1": {
+      "episode": 3,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 41.2,
+      "duration": 41.216,
+      "sha256": "38585d75d338718a5ab86644e870f0b2b532e86a16703c4cbfe439fdfa90968d",
+      "bytes": 18632824,
+      "path": "/downloads/unseen-e3p1.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "38585d75d338718a5ab86644e870f0b2b532e86a16703c4cbfe439fdfa90968d",
+      "render_sha256": "38585d75d338718a5ab86644e870f0b2b532e86a16703c4cbfe439fdfa90968d",
+      "measured_duration": 41.216
+    },
+    "yourchannel-unseen833206-ep3-part2-v1": {
+      "episode": 3,
+      "part": 2,
+      "source_start": 41.2,
+      "source_end": 79.481,
+      "duration": 38.281,
+      "sha256": "567e9f79345f2cdefba873e2cff0655ebae08a6c85ab893d17ab60a2f3af597e",
+      "bytes": 18776056,
+      "path": "/downloads/unseen-e3p2.mp4",
+      "decode_checked": true,
+      "pixels_inspected": true,
+      "caption_gate_pass": true,
+      "whole_part_release_ready": true,
+      "approved_render_sha256": "567e9f79345f2cdefba873e2cff0655ebae08a6c85ab893d17ab60a2f3af597e",
+      "render_sha256": "567e9f79345f2cdefba873e2cff0655ebae08a6c85ab893d17ab60a2f3af597e",
+      "measured_duration": 38.281
     }
   },
   "private_ready_closeout": {
@@ -307,5 +341,52 @@
       "stopped_readback": "2026-11-16T00:03:58.0969788Z",
       "verified_at": "2026-11-16T05:35:58+05:30"
     }
+  },
+  "e3_qa": {
+    "duration": 79.481,
+    "source": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/437019a0-1a1b9791b45-0005-9573-534-c9280.mp4",
+    "evidence": "Wholebase+small,318quarterOCR,79integercaption+79actionpixels plus14targets inspected. Incoming/Shewantsthat/soup/ThenRichard/andEvelyn/himfirst/Youmustbe/starving/Avery briefcaptionsverified. No confirmeddefect. Soupburnthreat/deflection,noobservedblood/injury/nudity/sex. Full2renderdecode/cap+12pixelsinspected,originalaudio/captionsunchangedexcept0.15edgefades.",
+    "bounds": [
+      0,
+      41.2,
+      79.481
+    ],
+    "status": "LocalQAcleared,privategatespending",
+    "renders": [
+      {
+        "episode": 3,
+        "part": 1,
+        "source_start": 0,
+        "source_end": 41.2,
+        "duration": 41.216,
+        "sha256": "38585d75d338718a5ab86644e870f0b2b532e86a16703c4cbfe439fdfa90968d",
+        "bytes": 18632824,
+        "path": "/downloads/unseen-e3p1.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": true,
+        "approved_render_sha256": "38585d75d338718a5ab86644e870f0b2b532e86a16703c4cbfe439fdfa90968d",
+        "render_sha256": "38585d75d338718a5ab86644e870f0b2b532e86a16703c4cbfe439fdfa90968d",
+        "measured_duration": 41.216
+      },
+      {
+        "episode": 3,
+        "part": 2,
+        "source_start": 41.2,
+        "source_end": 79.481,
+        "duration": 38.281,
+        "sha256": "567e9f79345f2cdefba873e2cff0655ebae08a6c85ab893d17ab60a2f3af597e",
+        "bytes": 18776056,
+        "path": "/downloads/unseen-e3p2.mp4",
+        "decode_checked": true,
+        "pixels_inspected": true,
+        "caption_gate_pass": true,
+        "whole_part_release_ready": true,
+        "approved_render_sha256": "567e9f79345f2cdefba873e2cff0655ebae08a6c85ab893d17ab60a2f3af597e",
+        "render_sha256": "567e9f79345f2cdefba873e2cff0655ebae08a6c85ab893d17ab60a2f3af597e",
+        "measured_duration": 38.281
+      }
+    ]
   }
 }
