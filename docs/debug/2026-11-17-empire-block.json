@@ -114,6 +114,15 @@
       "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
       "observed_url": "https://studio.youtube.com/video/hbLeGGQBhCc/edit?d=vc",
       "parent_reported": true
+    },
+    {
+      "message_id": "1a1e862c1d823230",
+      "received_at": "2026-11-17T12:52:28+05:30",
+      "episode_part": "E9P1",
+      "video_id": "i-QIF8mJD50",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/i-QIF8mJD50/edit?d=vc",
+      "parent_reported": true
     }
   ]
 }
