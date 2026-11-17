@@ -65,5 +65,51 @@
   },
   "public_approved": false,
   "playlist_created": false,
-  "private_probe_status": "not_dispatched"
+  "private_probe_status": "both_success_stopped_readback_verified",
+  "studio_review": {
+    "checked_at_ist": "2026-11-17T17:43:11+05:30",
+    "claims": "No claims were found on both",
+    "hd_complete": true,
+    "native_ai_yes": true,
+    "native_paid_promotion_yes": true,
+    "privacy": "private",
+    "full_metadata_verified": true,
+    "playlist_pending_user_choice": true,
+    "affiliate_desktop": "App Store error; episode playback not verified",
+    "staging_cleanup": "both HEAD404 and original signed GET404 at17:39",
+    "results": {
+      "e1p1": {
+        "access_enabled": false,
+        "channel_id": "UC71kSXnAt6Ipy7KqVVo3mdA",
+        "checkpoint_video_id_verified": true,
+        "claims_verified": false,
+        "item_id": "drambox-golddigger833372-ep1-part1-v1",
+        "playlist_pending": "NO_PLAYLIST_UNTIL_JAI_CHOOSES",
+        "playlist_via": "studio_flip_closeout_oauth_scope_gap",
+        "privacy": "private",
+        "processing_status": "processing",
+        "public_publishing_enabled": false,
+        "stop_control_readback_verified": true,
+        "studio_review_required": true,
+        "upload": "success",
+        "video_id": "uG1m8KzmRC4"
+      },
+      "e1p2": {
+        "access_enabled": false,
+        "channel_id": "UC71kSXnAt6Ipy7KqVVo3mdA",
+        "checkpoint_video_id_verified": true,
+        "claims_verified": false,
+        "item_id": "drambox-golddigger833372-ep1-part2-v1",
+        "playlist_pending": "NO_PLAYLIST_UNTIL_JAI_CHOOSES",
+        "playlist_via": "studio_flip_closeout_oauth_scope_gap",
+        "privacy": "private",
+        "processing_status": "processing",
+        "public_publishing_enabled": false,
+        "stop_control_readback_verified": true,
+        "studio_review_required": true,
+        "upload": "success",
+        "video_id": "GyM3S4_ACY0"
+      }
+    }
+  }
 }
