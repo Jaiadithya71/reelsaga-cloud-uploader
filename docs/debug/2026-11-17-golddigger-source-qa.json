@@ -1,0 +1,69 @@
+{
+  "series": "They Called Me a Gold Digger, But I Saved His Empire",
+  "dramacps_id": 833372,
+  "source": "https://dramacps.com/dashboard",
+  "supplied_zip": [
+    {
+      "text": "Episode 1 \u00b7 ZIP \u7d20\u6750\u5305\u4e0b\u8f7d",
+      "url": "https://cps-distr.ikyuedu.com/distribution/7/DramaBox%E8%B5%84%E6%BA%90%E5%8C%85-42000031556-5effa5f349b153fc586cd5652e45ad08.zip"
+    }
+  ],
+  "affiliate": "https://r.reelsgo.tv/XPfOv-adxls-",
+  "free_supplied_episodes": 7,
+  "reviewed_e1": {
+    "duration": 104.516,
+    "sha256": "699c56a5981e6186c8d068453b40873262d80f7a5f7de29830878a86edee3299",
+    "full_action_1fps_inspected": true,
+    "full_base_small_asr_reviewed": true,
+    "quarter_ocr_rows": 418,
+    "caption_pixels_inspected": true,
+    "opening_ending_music_asr_hallucinations": "isolated freshtranscription no speech",
+    "caption_defects_found": false,
+    "boundary": 54,
+    "content": "Adults shopping and financial crisis. Sugar-daddy insult. No children, sexual activity, physical violence or graphic injury seen E1. Source captions unchanged."
+  },
+  "e2": "Preliminary action/ASR/OCR only, not finalcleared",
+  "renders": {
+    "drambox-golddigger833372-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 54.0,
+      "duration": 54.0,
+      "measured_duration": 54.0,
+      "sha256": "5cb1981dbe53f48d3878f7098498aae005d226d912c4944165d3d624d19d7915",
+      "bytes": 65705718,
+      "file": "golddigger-e1p1.mp4",
+      "private_probe_ready": true,
+      "pixels_inspected": true,
+      "decode_checked": true,
+      "caption_gate_pass": true,
+      "boundary_gate_pass": true,
+      "source_coverage_gate_pass": true,
+      "approved_render_sha256": "5cb1981dbe53f48d3878f7098498aae005d226d912c4944165d3d624d19d7915",
+      "render_sha256": "5cb1981dbe53f48d3878f7098498aae005d226d912c4944165d3d624d19d7915"
+    },
+    "drambox-golddigger833372-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 54.0,
+      "source_end": 104.516,
+      "duration": 50.516000000000005,
+      "measured_duration": 50.49,
+      "sha256": "6a9915893eb19749a5f127072dad864e068b737315233cb4a1a2aca18dfd40b3",
+      "bytes": 70402043,
+      "file": "golddigger-e1p2.mp4",
+      "private_probe_ready": true,
+      "pixels_inspected": true,
+      "decode_checked": true,
+      "caption_gate_pass": true,
+      "boundary_gate_pass": true,
+      "source_coverage_gate_pass": true,
+      "approved_render_sha256": "6a9915893eb19749a5f127072dad864e068b737315233cb4a1a2aca18dfd40b3",
+      "render_sha256": "6a9915893eb19749a5f127072dad864e068b737315233cb4a1a2aca18dfd40b3"
+    }
+  },
+  "public_approved": false,
+  "playlist_created": false,
+  "private_probe_status": "not_dispatched"
+}
