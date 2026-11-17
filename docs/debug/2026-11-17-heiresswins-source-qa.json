@@ -61,5 +61,30 @@
   },
   "public_approved": false,
   "playlist_created": false,
-  "private_probe_status": "not_dispatched"
+  "private_probe_status": "Both E1 parts successful, Studio reviewed private",
+  "uploads": {
+    "e1p1": {
+      "run_id": 44043515870,
+      "status": "success",
+      "video_id": "t9azS6WooQw",
+      "native_ai_yes_saved_reload_verified": true,
+      "paid_yes_saved_reload_verified": true,
+      "full_metadata_verified": true,
+      "hd_complete": true,
+      "visibility": "private",
+      "claims_none_at": "2026-11-17T13:37:01+05:30"
+    },
+    "e1p2": {
+      "run_id": 44043875923,
+      "status": "success",
+      "video_id": "YJMiySPa7KQ",
+      "native_ai_yes_saved_reload_verified": true,
+      "paid_yes_saved_reload_verified": true,
+      "full_metadata_verified": true,
+      "hd_complete": true,
+      "visibility": "private",
+      "claims_none_at": "2026-11-17T13:37:57+05:30"
+    }
+  },
+  "private_staging": "Both deleted13:37:39IST, HEAD404 and original signedGET404 verified"
 }
