@@ -22,7 +22,20 @@
     "boundary": 54,
     "content": "Adults shopping and financial crisis. Sugar-daddy insult. No children, sexual activity, physical violence or graphic injury seen E1. Source captions unchanged."
   },
-  "e2": "Preliminary action/ASR/OCR only, not finalcleared",
+  "e2": {
+    "duration": 70.895,
+    "sha256": "fbaefba054455b85b5834041cf8f76cf8f934130f81548d07008298f7d332958",
+    "action_full_1fps": true,
+    "base_small_asr": true,
+    "quarter_ocr": true,
+    "all_caption_lines_pixels_checked": true,
+    "caption_defects_found": false,
+    "content": "Adult family financial crisis, arguments over shopping, bank card, company bankruptcy, escape passport. No child mistreatment/sexual activity/physical violence seen.",
+    "boundary": 46.7,
+    "renders_pixels_decode_checked": true,
+    "private_probes": "not_dispatched",
+    "public_approved": false
+  },
   "renders": {
     "drambox-golddigger833372-ep1-part1-v1": {
       "episode": 1,
@@ -128,6 +141,16 @@
       "playlist": "PLMZrrscW5lnk",
       "ledger_run": 44084148550,
       "ledger_status": "SUCCESS stopped readback12:33:19.2233178Z"
+    },
+    "2": {
+      "video_id": "GyM3S4_ACY0",
+      "published_at": "2026-11-17T13:33:09Z",
+      "claims_checked_ist": "19:02:18",
+      "metadata_ai_paid_hd_verified": true,
+      "public_player_exact_channel_verified": true,
+      "playlist": "PLMZrrscW5lnk",
+      "ledger_run": 44093940960,
+      "ledger_status": "SUCCESS stopped readback13:34:10.2868221Z"
     }
   }
 }

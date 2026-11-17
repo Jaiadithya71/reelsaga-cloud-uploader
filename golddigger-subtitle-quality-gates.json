@@ -41,6 +41,44 @@
       "source_coverage_gate_pass": true,
       "approved_render_sha256": "6a9915893eb19749a5f127072dad864e068b737315233cb4a1a2aca18dfd40b3",
       "render_sha256": "6a9915893eb19749a5f127072dad864e068b737315233cb4a1a2aca18dfd40b3"
+    },
+    "drambox-golddigger833372-ep2-part1-v1": {
+      "episode": 2,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 46.7,
+      "duration": 46.7,
+      "measured_duration": 46.72,
+      "sha256": "8f61c75ff1ac075a54d243b78446c6fa8966af1b5c2ab38ac2d031a93a1e7596",
+      "bytes": 56652215,
+      "file": "golddigger-e2p1.mp4",
+      "private_probe_ready": true,
+      "pixels_inspected": true,
+      "decode_checked": true,
+      "caption_gate_pass": true,
+      "boundary_gate_pass": true,
+      "source_coverage_gate_pass": true,
+      "approved_render_sha256": "8f61c75ff1ac075a54d243b78446c6fa8966af1b5c2ab38ac2d031a93a1e7596",
+      "render_sha256": "8f61c75ff1ac075a54d243b78446c6fa8966af1b5c2ab38ac2d031a93a1e7596"
+    },
+    "drambox-golddigger833372-ep2-part2-v1": {
+      "episode": 2,
+      "part": 2,
+      "source_start": 46.7,
+      "source_end": 70.895,
+      "duration": 24.194999999999993,
+      "measured_duration": 24.168,
+      "sha256": "1e2fb655546a980737c6af1ea23b1a8f7a1bb094d2ca04fa599cdefdb8698fd8",
+      "bytes": 24118410,
+      "file": "golddigger-e2p2.mp4",
+      "private_probe_ready": true,
+      "pixels_inspected": true,
+      "decode_checked": true,
+      "caption_gate_pass": true,
+      "boundary_gate_pass": true,
+      "source_coverage_gate_pass": true,
+      "approved_render_sha256": "1e2fb655546a980737c6af1ea23b1a8f7a1bb094d2ca04fa599cdefdb8698fd8",
+      "render_sha256": "1e2fb655546a980737c6af1ea23b1a8f7a1bb094d2ca04fa599cdefdb8698fd8"
     }
   }
 }
