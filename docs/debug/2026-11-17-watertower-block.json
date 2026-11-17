@@ -1,0 +1,20 @@
+{
+  "series": "My Water Tower Took Flight",
+  "claimant": "Kuaikan International",
+  "asset": "Fortress Royale Infinite Shelter Upgrades-01-MYDJ1113.mp4",
+  "type": "Video",
+  "impact": "Blocked globally",
+  "not_strike": true,
+  "no_channel_impact_explicit": true,
+  "notices": [
+    {
+      "message_id": "1a1e86bd98b8b521",
+      "received_at": "2026-11-17T13:02:24+05:30",
+      "episode_part": "E1P1",
+      "video_id": "SE2DNXW9Q0U",
+      "observed_url": "https://studio.youtube.com/video/SE2DNXW9Q0U/edit?d=vc",
+      "parent_reported": true
+    }
+  ],
+  "action": "No dispute/edit/reupload. Rights watch retained."
+}

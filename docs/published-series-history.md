@@ -1394,3 +1394,5 @@ Nov17 12:52:28IST Empire E9P1 i-QIF8mJD50 newKuaikanVIDEOglobalblock notice1a1e8
 Nov17 12:55:38IST Empire E10P1 LAdFnlSZnYs newKuaikanVIDEOglobalblock notice1a1e865a917fae9c live71Gmailread/notstrike/nochannelimpactexplicit. HistoricalWMGEagleEyeOct7audioisnotnewglobalcause. Parentnotified;noaction. https://studio.youtube.com/video/LAdFnlSZnYs/edit?d=vc
 
 Nov17 12:56:36IST Empire E4P1 fFi6Cr2Rd-Q newKuaikanVIDEOglobalblock notice1a1e86688f29cded live71Gmailread/notstrike/nochannelimpactexplicit. Parentnotified;noaction. https://studio.youtube.com/video/fFi6Cr2Rd-Q/edit?d=vc
+
+Nov17 13:02:24IST WaterTower E1P1 SE2DNXW9Q0U newKuaikanVIDEOglobalblock notice1a1e86bd98b8b521 live71Gmailread/notstrike/nochannelimpactexplicit. AssetFortressRoyaleInfiniteShelterUpgrades-01-MYDJ1113.mp4. Parentnotified;noaction. https://studio.youtube.com/video/SE2DNXW9Q0U/edit?d=vc
