@@ -1,0 +1,46 @@
+{
+  "series": "The Heiress Always Wins",
+  "dramacps_id": 833398,
+  "platform": "DramaBox",
+  "approval": "NOT_APPROVED_FOR_PUBLIC",
+  "part_gates": {
+    "dramabox-heiresswins833398-ep1-part1-v1": {
+      "episode": 1,
+      "part": 1,
+      "source_start": 0,
+      "source_end": 44.2,
+      "duration": 44.2,
+      "measured_duration": 44.2,
+      "sha256": "7adb53064e2e69773fa0655e051b3fb73ce2d230e3930867f3898aad27de9461",
+      "bytes": 61490000,
+      "file": "heiresswins-e1p1.mp4",
+      "private_probe_ready": true,
+      "pixels_inspected": true,
+      "decode_checked": true,
+      "caption_gate_pass": true,
+      "boundary_gate_pass": true,
+      "source_coverage_gate_pass": true,
+      "approved_render_sha256": "7adb53064e2e69773fa0655e051b3fb73ce2d230e3930867f3898aad27de9461",
+      "render_sha256": "7adb53064e2e69773fa0655e051b3fb73ce2d230e3930867f3898aad27de9461"
+    },
+    "dramabox-heiresswins833398-ep1-part2-v1": {
+      "episode": 1,
+      "part": 2,
+      "source_start": 44.2,
+      "source_end": 82.031,
+      "duration": 37.831,
+      "measured_duration": 37.79,
+      "sha256": "0cf58c1790e697e5caa4c268ce9d140337f255651f8c92039c2f0b7849f056b7",
+      "bytes": 55289394,
+      "file": "heiresswins-e1p2.mp4",
+      "private_probe_ready": true,
+      "pixels_inspected": true,
+      "decode_checked": true,
+      "caption_gate_pass": true,
+      "boundary_gate_pass": true,
+      "source_coverage_gate_pass": true,
+      "approved_render_sha256": "0cf58c1790e697e5caa4c268ce9d140337f255651f8c92039c2f0b7849f056b7",
+      "render_sha256": "0cf58c1790e697e5caa4c268ce9d140337f255651f8c92039c2f0b7849f056b7"
+    }
+  }
+}
