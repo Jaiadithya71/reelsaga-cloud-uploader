@@ -1414,3 +1414,10 @@ Nov17 HeiressAlwaysWins833398 E1P2 YJMiySPa7KQ PUBLIC actual16:49:26IST/11:19:26
 Nov17 GoldDigger833372 E1P1 uG1m8KzmRC4 PUBLIC actual18:02:38IST/12:32:38Z; user17:59:50Yes original recovered18:00:02 to17:43ask E1twopartsonly/hourly/freshclaims/ownplaylist. Freshclaims18:00:30/latestYTHeiressE1P2/fullmetadataAd+affiliate/nativeAIpaidYes/notkids/noage/HD. Exactchannel/public/notunlisted/playable verified18:04. OwnPublicplaylistPLMZrrscW5lnk DateAddedOldest soleP1 pixels18:03:55. Gap73m12s. Ledger44084148550SUCCESS/API12:32:38Z/stoppedreadback12:33:19.2233178Z. P2wake19:03:30/earliest19:02:38;laternotapproved. https://www.youtube.com/shorts/uG1m8KzmRC4 https://www.youtube.com/playlist?list=PLMZrrscW5lnk https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44084148550
 
 Nov17 GoldDigger833372 E1P2 GyM3S4_ACY0 PUBLIC actual19:03:09IST/13:33:09Z; freshclaims19:02:18/latestYTchannelP1/fullmetadataAd+affiliate/nativeAIpaidYes/notkids/noage/HD. Exactchannel/public/notunlisted/playable verified19:03:17. OwnPublicplaylistPLMZrrscW5lnk P1thenP2 pixels19:03:59. Gap60m31s. Ledger44093940960SUCCESS/API13:33:09Z/stoppedreadback13:34:10.2868221Z. BothE1approvedpartscomplete, noapprovedqueuedpartsremain. https://www.youtube.com/shorts/GyM3S4_ACY0 https://www.youtube.com/playlist?list=PLMZrrscW5lnk https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44093940960
+
+
+## Gold Digger E2 and late-block hold - 2026-11-17 22:56 IST
+- E2P1 vJptPFIdKN4 PUBLIC22:51:41IST (17:21:41Z), exact channel/public/playable verified; claims clean22:50:50, full metadata/nativeAI+paidYes/HD checked. https://youtube.com/shorts/vJptPFIdKN4
+- Reconcile44136398391 success, control stopped readback17:23:39Z.
+-22:52 E1P1 uG1m8KzmRC4 discovered globally VISUAL blocked by DramaBox, match0:00-0:54; no channel impact/not strike. Separate audio claim has no reach impact.
+- E2P2 Mykc2ZL7qbc remains PRIVATE, publication wake canceled, whole series HELD. No deletion/privating authorized as of parent22:53:58. E1P2 clean22:55:56; E2P2 clean22:53:53. Public playlist currently hides blocked E1P1 and shows E1P2 then E2P1.

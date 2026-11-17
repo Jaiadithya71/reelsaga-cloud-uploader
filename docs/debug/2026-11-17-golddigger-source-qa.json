@@ -207,5 +207,37 @@
       "ledger_run": 44093940960,
       "ledger_status": "SUCCESS stopped readback13:34:10.2868221Z"
     }
+  },
+  "public_e2p1": {
+    "video_id": "vJptPFIdKN4",
+    "url": "https://youtube.com/shorts/vJptPFIdKN4",
+    "actual_public_ist": "2026-11-17T22:51:41+05:30",
+    "actual_public_utc": "2026-11-17T17:21:41Z",
+    "fresh_claims_none": "2026-11-17T22:50:50+05:30",
+    "full_metadata_native_AI_paid_yes_notkids_noage_HD_verified": true,
+    "public_player": "exactchannel/privatefalse/unlistedfalse/playableOK",
+    "approval": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNDQzQ2Mjg4OTFCMjY5NjVGQTQxOTlFRTNFOUExMEUA",
+    "reply_to": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSQTJCNkNDMEU5OTlBNDI4NkM4AA==",
+    "ledger_run": 44136398391,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44136398391",
+    "ledger_result": "success",
+    "stopped_readback_at": "2026-11-17T17:23:39.5424082Z",
+    "playlist_added": "PLMZrrscW5lnk",
+    "playlist_warning": "Public playlist22:52 hid E1P1 as unavailable; E1P2 then E2P1 visible"
+  },
+  "series_hold": {
+    "observed_at": "2026-11-17T22:52:39+05:30",
+    "video_id": "uG1m8KzmRC4",
+    "claims_url": "https://studio.youtube.com/video/uG1m8KzmRC4/claims",
+    "claimant": "DramaBox",
+    "type": "Visual",
+    "match": "0:00-0:54",
+    "effect": "Blocked globally/ineligible to earn",
+    "channel": "No impact/not strike",
+    "other_claim": "Lets Go Wild audio claim no reach impact",
+    "action": "P2 publication wake canceled. No deletion or privating; parent22:53:58 instructed no cleanup pending Jai. Whole series held.",
+    "e1p2_claims": "clean22:55:56",
+    "e2p2_claims": "clean22:53:53/private",
+    "e2p1_at_publish": "freshclean22:50:50; wentpublic22:51:41 before discovery"
   }
 }
