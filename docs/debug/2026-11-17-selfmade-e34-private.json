@@ -400,5 +400,23 @@
     "ledger_api_published_at": "2026-11-17T07:15:29Z",
     "stopped_control_verified_at": "2026-11-17T07:16:33.0318227Z",
     "ledger_run_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44037368278"
+  },
+  "e4p1_public": {
+    "video_id": "JczUs8z9Y8Y",
+    "actual_public_at": "2026-11-17T13:46:09+05:30",
+    "url": "https://www.youtube.com/shorts/JczUs8z9Y8Y",
+    "claims_clean_at": "2026-11-17T13:46:07+05:30",
+    "latest_channel_prior": "qIymlKTb_vU",
+    "gap_seconds": 3640,
+    "metadata": "Full Ad, exact affiliate, nativeAI Yes, paid promotion Yes, not kids/no age restriction/SDHD complete verified",
+    "playlist": "https://www.youtube.com/playlist?list=PLSefJep3OjEQ",
+    "playlist_state": "7 Public in E1P1 through E4P1 episode order; pixels inspected 13:47",
+    "ledger_run": 44045392660,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44045392660",
+    "ledger_result": "success",
+    "ledger_api_published_at": "2026-11-17T08:16:09Z",
+    "control_stopped_verified_at": "2026-11-17T08:17:17.6459340Z",
+    "next_earliest": "2026-11-17T14:46:09+05:30",
+    "prep_wake": "wakeschedule-01M7M9854Q22Y25V67QJJ6YW80"
   }
 }
