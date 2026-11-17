@@ -111,5 +111,23 @@
         "video_id": "GyM3S4_ACY0"
       }
     }
+  },
+  "public_approval": {
+    "user_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNCMkRBRUYwM0Y3MkE1Nzk4NTA4RUUwMERBRTlGOUQA",
+    "ask_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSMkMzQkQ1RTRFNzFEQkE5NkE1AA==",
+    "scope": "E1 two parts only, hourly fresh claims own playlist",
+    "verified_originals": "2026-11-17T18:00:02+05:30"
+  },
+  "public_parts": {
+    "1": {
+      "video_id": "uG1m8KzmRC4",
+      "published_at": "2026-11-17T12:32:38Z",
+      "claims_checked_ist": "18:00:30",
+      "metadata_ai_paid_hd_verified": true,
+      "public_player_exact_channel_verified": true,
+      "playlist": "PLMZrrscW5lnk",
+      "ledger_run": 44084148550,
+      "ledger_status": "SUCCESS stopped readback12:33:19.2233178Z"
+    }
   }
 }
