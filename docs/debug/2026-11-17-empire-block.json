@@ -123,6 +123,16 @@
       "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
       "observed_url": "https://studio.youtube.com/video/i-QIF8mJD50/edit?d=vc",
       "parent_reported": true
+    },
+    {
+      "message_id": "1a1e865a917fae9c",
+      "received_at": "2026-11-17T12:55:38+05:30",
+      "episode_part": "E10P1",
+      "video_id": "LAdFnlSZnYs",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "historical_other_claim": "WMG Eagle Eye Oct7 no impact until monetising",
+      "observed_url": "https://studio.youtube.com/video/LAdFnlSZnYs/edit?d=vc",
+      "parent_reported": true
     }
   ]
 }
