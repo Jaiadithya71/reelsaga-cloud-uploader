@@ -12,5 +12,16 @@
   "strike": "Notice explicitly not a copyright strike; no channel impact",
   "observed_url": "https://studio.youtube.com/video/RD363vfACkw/edit?d=vc",
   "effects": "No dispute/edit/re-upload/action",
-  "parent_reported_at": "2026-11-17T11:24:40+05:30"
+  "parent_reported_at": "2026-11-17T11:24:40+05:30",
+  "additional_notices": [
+    {
+      "message_id": "1a1e8135c98f0aeb",
+      "received_at": "2026-11-17T11:25:45+05:30",
+      "episode_part": "E1P2",
+      "video_id": "AnQdQn08Qio",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/AnQdQn08Qio/edit?d=vc",
+      "parent_reported_at": "2026-11-17T11:26:02+05:30"
+    }
+  ]
 }
