@@ -86,6 +86,16 @@
       "historical_other_claim": "Oct7 audio \u5fc3\u9b54 - \u5f20\u9552\u9e9f, Merlin EWway/Tencent, no impact until monetising",
       "observed_url": "https://studio.youtube.com/video/WMYwEEQmdcw/edit?d=vc",
       "parent_reported_at": "2026-11-17T12:39:38+05:30"
+    },
+    {
+      "message_id": "1a1e8586c11984d7",
+      "received_at": "2026-11-17T12:41:11+05:30",
+      "episode_part": "E11P1",
+      "video_id": "qHIF7D0J8tY",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "historical_other_claim": "YG PLUS Oct8 audio no impact until monetising",
+      "observed_url": "https://studio.youtube.com/video/qHIF7D0J8tY/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:41:44+05:30"
     }
   ]
 }

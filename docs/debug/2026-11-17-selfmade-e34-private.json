@@ -383,5 +383,19 @@
       "hd_complete": true
     }
   },
-  "remaining": "ParentdecisionforE3/E4continuation. Freshclaims/currentmetadata/actualYT>=60min guard required at each approvedflip."
+  "remaining": "E4P1/E4P2 approved. E4P1 hardfloor13:45:29IST, prepwake13:40:29. E5-E7 unapproved. No qualified fallback.",
+  "public_e3p2": {
+    "video_id": "qIymlKTb_vU",
+    "actual_public_ist": "2026-11-17T12:45:29+05:30",
+    "actual_public_utc": "2026-11-17T07:15:29Z",
+    "fresh_claims_none_ist": "2026-11-17T12:45:24+05:30",
+    "previous_public_ist": "2026-11-17T11:44:35+05:30",
+    "gap_seconds": 3654,
+    "verified_player_public": true,
+    "verified_channel": "UC71kSXnAt6Ipy7KqVVo3mdA",
+    "url": "https://www.youtube.com/shorts/qIymlKTb_vU",
+    "playlist_ordered_six_public_pixels": true,
+    "ledger_run_id": 44037368278,
+    "ledger_status": "in_progress"
+  }
 }
