@@ -86,5 +86,25 @@
       "claims_none_at": "2026-11-17T13:37:57+05:30"
     }
   },
-  "private_staging": "Both deleted13:37:39IST, HEAD404 and original signedGET404 verified"
+  "private_staging": "Both deleted13:37:39IST, HEAD404 and original signedGET404 verified",
+  "public_e1p1": {
+    "video_id": "t9azS6WooQw",
+    "actual_public_at": "2026-11-17T15:48:34+05:30",
+    "url": "https://www.youtube.com/shorts/t9azS6WooQw",
+    "claims_clean_at": "2026-11-17T15:48:23+05:30",
+    "previous_public": "2026-11-17T14:47:13+05:30",
+    "gap_seconds": 3681,
+    "gates": "fullmetadataAd/exactaffiliate/nativeAIpaidYes/notkids/noage/SDHDcomplete; exactReelSaga/public/playable/notunlisted verified",
+    "playlist": "https://www.youtube.com/playlist?list=PLarVX6Bd56TY",
+    "playlist_order": "DateAddedOldest;P1solePublic item; pixels inspected15:49:26",
+    "approval_user_message": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUMxMjM0OTYxMjM0N0IwNzU1QzA5RjYxOUZEN0MxQTUA",
+    "approval_reply_to": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSNkFEMkM3MTI5MDMzRENCRjJDAA==",
+    "ledger_run": 44063662809,
+    "ledger_result": "success",
+    "ledger_api_published_at": "2026-11-17T10:18:34Z",
+    "control_stopped_verified_at": "2026-11-17T10:19:23.2723257Z",
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44063662809",
+    "p2_earliest": "2026-11-17T16:48:34+05:30",
+    "p2_prep_wake": "wakeschedule-01M7MG8PC1DS58JWM0VY4379Y6"
+  }
 }
