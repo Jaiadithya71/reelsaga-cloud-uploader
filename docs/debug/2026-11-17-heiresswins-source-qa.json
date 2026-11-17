@@ -106,5 +106,22 @@
     "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44063662809",
     "p2_earliest": "2026-11-17T16:48:34+05:30",
     "p2_prep_wake": "wakeschedule-01M7MG8PC1DS58JWM0VY4379Y6"
-  }
+  },
+  "public_e1p2": {
+    "video_id": "YJMiySPa7KQ",
+    "actual_public_at": "2026-11-17T16:49:26+05:30",
+    "url": "https://www.youtube.com/shorts/YJMiySPa7KQ",
+    "claims_clean_at": "2026-11-17T16:49:20+05:30",
+    "previous_public": "2026-11-17T15:48:34+05:30",
+    "gap_seconds": 3652,
+    "gates": "fullmetadataAd/exactaffiliate/nativeAIpaidYes/notkids/noage/HD; exactchannel/public/notunlisted/playable verified",
+    "playlist": "https://www.youtube.com/playlist?list=PLarVX6Bd56TY",
+    "playlist_order": "E1P1 then E1P2 verified AX+pixels16:49:48",
+    "ledger_run": 44073072756,
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44073072756",
+    "ledger_result": "success",
+    "ledger_api_published_at": "2026-11-17T11:19:26Z",
+    "control_stopped_verified_at": "2026-11-17T11:20:36.9496964Z"
+  },
+  "remaining_public": "Both approved E1parts PUBLIC. E2andbeyond not approved; no remaining cleared/approved publication."
 }
