@@ -1,0 +1,68 @@
+{
+  "as_of": "2026-11-17T11:00:00+05:30",
+  "source": "https://dramacps.com/dashboard",
+  "id": 833234,
+  "title": "Fallen Gods, Broken Oaths",
+  "platform": "YourChannel 60%",
+  "free_episodes": 6,
+  "status": "UNQUALIFIED audio/caption literal ambiguity, no confirmed defect",
+  "sources": {
+    "content": "[{\"episode\":\"Episode 1 \u00b7 1\",\"url\":\"https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/45371977-1a1af65af7d-0005-9573-534-c9280.mp4\"},{\"episode\":\"Episode 2 \u00b7 2\",\"url\":\"https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/87922ff-1a1af65af89-0005-9573-534-c9280.mp4\"},{\"episode\":\"Episode 3 \u00b7 3\",\"url\":\"https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5d50f199-1a1af65afe1-0005-9573-534-c9280.mp4\"},{\"episode\":\"Episode 4 \u00b7 4\",\"url\":\"https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/30aa3e61-1a1af65afe8-0005-9573-534-c9280.mp4\"},{\"episode\":\"Episode 5 \u00b7 5\",\"url\":\"https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/21c947de-1a1af65af87-0005-9573-534-c9280.mp4\"},{\"episode\":\"Episode 6 \u00b7 6\",\"url\":\"https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5d66427d-1a1af65af84-0005-9573-534-c9280.mp4\"}]",
+    "name": "cloud_browser_execute_js",
+    "structured": [
+      {
+        "episode": "Episode 1 \u00b7 1",
+        "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/45371977-1a1af65af7d-0005-9573-534-c9280.mp4"
+      },
+      {
+        "episode": "Episode 2 \u00b7 2",
+        "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/87922ff-1a1af65af89-0005-9573-534-c9280.mp4"
+      },
+      {
+        "episode": "Episode 3 \u00b7 3",
+        "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5d50f199-1a1af65afe1-0005-9573-534-c9280.mp4"
+      },
+      {
+        "episode": "Episode 4 \u00b7 4",
+        "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/30aa3e61-1a1af65afe8-0005-9573-534-c9280.mp4"
+      },
+      {
+        "episode": "Episode 5 \u00b7 5",
+        "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/21c947de-1a1af65af87-0005-9573-534-c9280.mp4"
+      },
+      {
+        "episode": "Episode 6 \u00b7 6",
+        "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5d66427d-1a1af65af84-0005-9573-534-c9280.mp4"
+      }
+    ]
+  },
+  "episodes": {
+    "1": {
+      "seconds": 214.109,
+      "bytes": 15646890,
+      "whole_base_small_asr": true,
+      "quarter_ocr_rows": 856,
+      "caption_pixels": "All 214 integer times plus short quarter-OCR lines compared to ASR",
+      "action_pixels": "All 214 integer frames even+odd inspected",
+      "unresolved": "~74.9 caption Lowly human; whole base/small Lonely human; isolated base Slowly human, isolated small Lonely human. No actual-audio resolution; do not certify source."
+    },
+    "2": {
+      "seconds": 141.899,
+      "bytes": 10459095,
+      "whole_base_small_asr": true,
+      "quarter_ocr_rows": 567,
+      "caption_pixels": "All142 integer times plus short quarter-OCR lines compared",
+      "action_pixels": "All142 integer frames even+odd inspected",
+      "ending": "Whole small extra No not confirmed: isolated base Punishment and isolated small find punishment; no No pixels. Not a confirmed missing caption."
+    }
+  },
+  "content": "Adult fantasy demons, gunfire and demon dissolving/internal purple damage, adult marriage dispute. No child mistreatment/nudity/graphic blood seen in sampled source frames. Not a policy guarantee.",
+  "gates_remaining": [
+    "Resolve literal audio ambiguity",
+    "Affiliate availability",
+    "Live full-channel no-repeat",
+    "Continuous <=55s rendered parts and boundary/decode/pixel QA",
+    "Private probe fresh claims/native AI+paid/HD"
+  ],
+  "effects": "NO stage, upload, affiliate, playlist or public post"
+}

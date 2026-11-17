@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-11-17T11:11:30+05:30",
+  "id": 833231,
+  "title": "Divorce Her, Regret Forever",
+  "source": "https://dramacps.com/dashboard",
+  "platform": "YourChannel 60%",
+  "free_episodes": 6,
+  "episodes": {
+    "1": {
+      "seconds": 225.401,
+      "bytes": 19226995,
+      "whole_base_small_asr": true,
+      "caption_pixels": "All226 integer frames reviewed against whole dual ASR",
+      "action_pixels": "All2-second samples reviewed; odd second action not yet reviewed"
+    },
+    "2": {
+      "seconds": 129.967,
+      "bytes": 13085216,
+      "whole_base_small_asr": true,
+      "caption_pixels": "All130 integer frames reviewed against whole dual ASR",
+      "action_pixels": "All2-second samples reviewed; odd second not reviewed"
+    }
+  },
+  "status": "UNQUALIFIED caption/audio literal mismatch pending, no pass",
+  "issues": [
+    {
+      "episode": 1,
+      "time": 143.0,
+      "visible": "But",
+      "audio": "Whole base/small and isolated139-147 base/small do not transcribe But between with us and Enough. Possible overlapping speech, unresolved. Do not certify as defect or pass."
+    },
+    {
+      "episode": 2,
+      "time": 93.0,
+      "visible": "This is the satellite phone I use to",
+      "audio": "Whole and isolated90-99 base/small all used to. Use/used acoustic ambiguity, do not overclaim confirmed defect."
+    }
+  ],
+  "content": "Adult family insults and abandonment of adult on island in storm. No child mistreatment/nudity/graphic violence seen in sampled2s action frames; no policy guarantee.",
+  "effects": "NO affiliate, stage, upload, playlist or public post",
+  "sources": [
+    {
+      "title": "Episode 1 \u00b7 1",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/673eacea-1a1af722b83-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 2 \u00b7 2",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5c8f08ec-1a1af722b86-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 3 \u00b7 3",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5bc7104e-1a1af722b0e-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 4 \u00b7 4",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2a6b3dfb-1a1af722ba8-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 5 \u00b7 5",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/6060630d-1a1af722b77-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 6 \u00b7 6",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/48026887-1a1af722b73-0005-9573-534-c9280.mp4"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-11-17T11:02:20+05:30",
+  "id": 833240,
+  "title": "Scrap by Scrap, I Took the Sky",
+  "source": "https://dramacps.com/dashboard",
+  "platform": "YourChannel 60%",
+  "free_episodes": 10,
+  "episodes": {
+    "1": 186.518,
+    "2": 205.099
+  },
+  "review": "All 2-second action frames inspected E1/E2. Adult apocalypse/romance. E2 holographic UI 170-176 seconds is visibly mirrored backwards/garbled; E1 low quality system text. Not clean low-risk unmodified source. No ASR/full caption pass.",
+  "status": "UNQUALIFIED visible source UI text quality",
+  "effects": "No affiliate, stage, upload or playlist",
+  "sources": [
+    {
+      "title": "Episode 1 \u00b7 Scrap by Scrap, I Took the Sky - EP001",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2cb53d6d-1a1aea85775-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 2 \u00b7 Scrap by Scrap, I Took the Sky - EP002",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/56957415-1a1aea85772-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 3 \u00b7 Scrap by Scrap, I Took the Sky - EP003",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/5a3e6673-1a1aea85775-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 4 \u00b7 Scrap by Scrap, I Took the Sky - EP004",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/21284c01-1a1aea85770-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 5 \u00b7 Scrap by Scrap, I Took the Sky - EP005",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/592aed28-1a1aea857de-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 6 \u00b7 Scrap by Scrap, I Took the Sky - EP006",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/3c127f0f-1a1aea857e2-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 7 \u00b7 Scrap by Scrap, I Took the Sky - EP007",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/21360d27-1a1aea857f6-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 8 \u00b7 Scrap by Scrap, I Took the Sky - EP008",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/14b79ce4-1a1aea85775-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 9 \u00b7 Scrap by Scrap, I Took the Sky - EP009",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/304019ae-1a1aea85779-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 10 \u00b7 Scrap by Scrap, I Took the Sky - EP010",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/646f4d14-1a1aea857dd-0005-9573-534-c9280.mp4"
+    }
+  ]
+}

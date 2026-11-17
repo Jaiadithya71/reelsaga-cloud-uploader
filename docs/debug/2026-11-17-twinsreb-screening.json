@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-11-17T11:20:00+05:30",
+  "id": 833232,
+  "title": "The Twins' Rebellion",
+  "source": "https://dramacps.com/dashboard",
+  "free_episodes": 8,
+  "review": "All E1/E2 two-second action frames and two whole ASRs inspected. No full caption/integer action QA or clearance. E2 ~33.7-41.6s both ASRs carry direct suicide encouragement with gas-stove/high-rise methods directed as an insult at another adult, and corresponding two-second caption pixels corroborate. Not a low-restriction-risk backup. Adult apple-on-head knife stunt E1 ~107-114s.",
+  "status": "HELD private research only; no stage/link/upload/playlist",
+  "sources": [
+    {
+      "title": "Episode 1 \u00b7 1",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/12f189ff-1a1af6e86d2-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 2 \u00b7 2",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/679c4af7-1a1af6e8751-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 3 \u00b7 3",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/6317019b-1a1af6e86d2-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 4 \u00b7 4",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/3d3c8b95-1a1af6e86d2-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 5 \u00b7 5",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1f91231b-1a1af6e874b-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 6 \u00b7 6",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/68f8943c-1a1af6e8738-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 7 \u00b7 7",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1d51f5e7-1a1af6e8754-0005-9573-534-c9280.mp4"
+    },
+    {
+      "title": "Episode 8 \u00b7 8",
+      "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/19822f65-1a1af6e8750-0005-9573-534-c9280.mp4"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "as_of": "2026-11-17T11:23:00+05:30",
+  "source": "https://dramacps.com/dashboard",
+  "candidates": {
+    "833226": {
+      "title": "The Don's Rejected Omega",
+      "status": "Source-only unqualified, no upload",
+      "coverage": "E1/E2 all two-second action frames; not full caption/ASR",
+      "findings": "E1 coerced adult kiss/harassment and expulsion; E2 repeats substantial E1 footage, no no-repeat pass",
+      "sources": [
+        {
+          "title": "Episode 1 \u00b7 1",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/291004d4-1a1af88b97c-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 2 \u00b7 2",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/50e0d939-1a1af88b977-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 3 \u00b7 3",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/2409c927-1a1af88b979-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 4 \u00b7 4",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1d0bf6a9-1a1af88b97d-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 5 \u00b7 5",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/b8fe04f-1a1af88b97c-0005-9573-534-c9280.mp4"
+        }
+      ]
+    },
+    "833215": {
+      "title": "My Dreams Chose His Brother",
+      "status": "Unqualified sexualized material, no upload",
+      "coverage": "E1/E2 all two-second action frames inspected",
+      "findings": "E1 prolonged sexualized water embracing/foreplay and lingerie closeup at134s; E2 prolonged sexualized dream scene ~82-142s. School/college setting, ages unresolved. No caption QA.",
+      "sources": [
+        {
+          "title": "Episode 1 \u00b7 My Dreams Chose His Brother - EP001",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/658062a8-1a1b4875fa2-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 2 \u00b7 My Dreams Chose His Brother - EP002",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/21786575-1a1b4875fb0-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 3 \u00b7 My Dreams Chose His Brother - EP003",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/1352749f-1a1b487606b-0005-9573-534-c9280.mp4"
+        },
+        {
+          "title": "Episode 4 \u00b7 My Dreams Chose His Brother - EP004",
+          "url": "https://outin-c6b1636ee48611f0bf9400163e01d238.oss-us-west-1.aliyuncs.com/original/workflow/11eb6ca6-1a1b4875f9e-0005-9573-534-c9280.mp4"
+        }
+      ]
+    }
+  },
+  "catalog_only_not_reviewed": {
+    "833233": "Dangerous Embrace, murder/coercion premise; not selected, no source downloaded",
+    "833225": "Fear the Mafia Queen, abuse/daughter/granddaughter premise; not selected, no source downloaded",
+    "833224": "ontainer Vision, duplicates title and plot of held833218",
+    "833223": "Dads New Matchmaker, six-year-old in snow premise, not selected",
+    "833221": "Dads New Matchmaker same plot as833223",
+    "833222": "Animal Whisperer Willow Cottage, duplicates held833220",
+    "833216": "My Escape Plan Has No Pulse, lethal game/asylum premise, not selected"
+  }
+}
