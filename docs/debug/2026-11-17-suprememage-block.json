@@ -1,0 +1,20 @@
+{
+  "series": "The Supreme Mage: This Time, I Choose My Family",
+  "claimant": "Kuaikan International",
+  "asset": "The Supreme Mage This Time, I Choose My Family-01-MYDJ1113.mp4",
+  "type": "Video",
+  "impact": "Blocked globally",
+  "not_strike": true,
+  "no_channel_impact_explicit": true,
+  "notices": [
+    {
+      "message_id": "1a1e86f2665d7b3c",
+      "received_at": "2026-11-17T13:06:00+05:30",
+      "episode_part": "E3P1",
+      "video_id": "46etbmcCJP8",
+      "observed_url": "https://studio.youtube.com/video/46etbmcCJP8/edit?d=vc",
+      "parent_reported": true
+    }
+  ],
+  "action": "No dispute/edit/reupload. Rights watch retained."
+}
