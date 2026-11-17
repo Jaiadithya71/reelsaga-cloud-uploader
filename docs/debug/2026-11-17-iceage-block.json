@@ -22,6 +22,70 @@
       "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
       "observed_url": "https://studio.youtube.com/video/AnQdQn08Qio/edit?d=vc",
       "parent_reported_at": "2026-11-17T11:26:02+05:30"
+    },
+    {
+      "message_id": "1a1e844a155d7dad",
+      "received_at": "2026-11-17T12:19:33+05:30",
+      "episode_part": "E2P2",
+      "video_id": "EK2RrDBHXWc",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "historical_other_claim": "WMG audio mo modoritakunai anonatsunohi - Kuniyuki Takahashi one territory updated Oct4",
+      "observed_url": "https://studio.youtube.com/video/EK2RrDBHXWc/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:19:54+05:30"
+    },
+    {
+      "message_id": "1a1e844de9cf3b6b",
+      "received_at": "2026-11-17T12:19:49+05:30",
+      "episode_part": "E5P1",
+      "video_id": "SBrFGe6H1Nc",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/SBrFGe6H1Nc/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:20:12+05:30"
+    },
+    {
+      "message_id": "1a1e849958b1bb25",
+      "received_at": "2026-11-17T12:24:58+05:30",
+      "subject": "Video is blocked: The Ice Age Whisperer - Episode 1 Part 1/2 | NetShort",
+      "video_id": "AveYaFiYN5g",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/AveYaFiYN5g/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:25:20+05:30"
+    },
+    {
+      "message_id": "1a1e84983c117b29",
+      "received_at": "2026-11-17T12:24:53+05:30",
+      "subject": "Video is blocked: The Ice Age Whisperer - Episode 4 Part 2/2 | NetShort",
+      "video_id": "66BTi9P48w4",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/66BTi9P48w4/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:25:20+05:30"
+    },
+    {
+      "message_id": "1a1e84c0c4471881",
+      "received_at": "2026-11-17T12:27:40+05:30",
+      "episode_part": "E4P1",
+      "video_id": "DL17XibTF2w",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/DL17XibTF2w/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:27:59+05:30"
+    },
+    {
+      "message_id": "1a1e84cb2da1f1ef",
+      "received_at": "2026-11-17T12:28:22+05:30",
+      "subject": "Video is blocked: The Ice Age Whisperer - Episode 3 Part 1/2 | NetShort",
+      "video_id": "umSvJF3q4UE",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/umSvJF3q4UE/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:28:39+05:30"
+    },
+    {
+      "message_id": "1a1e84ca5589374b",
+      "received_at": "2026-11-17T12:28:19+05:30",
+      "subject": "Video is blocked: The Ice Age Whisperer - Episode 5 Part 2/2 | NetShort",
+      "video_id": "EzpvnBRgqbo",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/EzpvnBRgqbo/edit?d=vc",
+      "parent_reported_at": "2026-11-17T12:28:39+05:30"
     }
   ]
 }
