@@ -16,7 +16,7 @@ from adapters import YouTube,checked
 from actions_state_probe import probe
 
 import requests,subprocess
-episode=int(os.environ['SELFMADE_EP']);assert episode in (1,2)
+episode=int(os.environ['SELFMADE_EP']);assert episode in (1,2,3,4)
 part=int(os.environ['UNSEEN_PART']);assert 1<=part<=2
 assert os.environ['SOLDIER_EP']=='selfmade'+str(episode)+'p'+str(part)
 stage_url=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())['inputs']['stage_url'];stage_url=json.loads(stage_url)[str(part)]
@@ -30,7 +30,7 @@ gate=json.loads(Path('selfmade-subtitle-quality-gates.json').read_text())['part_
 assert gate['private_probe_ready'] and gate['approved_render_sha256']==item['sha256']
 assert len(r.content)==item['bytes'] and hashlib.sha256(r.content).hexdigest()==item['sha256']
 from scripts.part_cap import compute_parts,gate_measured
-assert len(compute_parts({1:71.141,2:79.175}[episode]))==2
+assert len(compute_parts({1:71.141,2:79.175,3:79.848,4:73.346}[episode]))==2
 gate_measured(gate['measured_duration'],gate['duration'])
 
 def validate(item,path):
@@ -133,7 +133,7 @@ def main():
                 data=checked(api('GET','https://www.googleapis.com/youtube/v3/videos',params={'part':'snippet,status','id':','.join(ids[n:n+50])})).data
                 returned={v['id'] for v in data.get('items',[])}
                 missing=set(ids[n:n+50])-returned
-                # Sole platform-removed Lion ID verified by Studio and read-only diagnostic43940698982.
+                # Sole platform-removed Lion ID currently shown Removed in Studio latest-content read Nov17 07:39:38; policy hold remains.
                 # Never ignore a new unknown ID or permit any Lion upload.
                 if missing-{'QPmx1eFrJ0A'}:raise RuntimeError('Incomplete channel metadata: '+','.join(sorted(missing)))
                 for absent in missing:
