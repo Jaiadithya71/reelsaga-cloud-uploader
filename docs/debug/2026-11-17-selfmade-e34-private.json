@@ -383,7 +383,7 @@
       "hd_complete": true
     }
   },
-  "remaining": "E4P2 approved; hardfloor14:46:09IST Nov17, prepwake14:41:09. E5-E7 unapproved. HeiressAlwaysWins833398 E1two parts qualified/private, ready decision reported parent13:38:48; publicchoice pending.",
+  "remaining": "All eight approved SelfMade E1-E4 parts PUBLIC. E5-E7 unapproved/held. HeiressAlwaysWins833398 E1two parts qualified/private, parent public-choice pending. No remaining approved publication.",
   "public_e3p2": {
     "video_id": "qIymlKTb_vU",
     "actual_public_ist": "2026-11-17T12:45:29+05:30",
@@ -418,5 +418,22 @@
     "control_stopped_verified_at": "2026-11-17T08:17:17.6459340Z",
     "next_earliest": "2026-11-17T14:46:09+05:30",
     "prep_wake": "wakeschedule-01M7M9854Q22Y25V67QJJ6YW80"
+  },
+  "public_e4p2": {
+    "video_id": "GqFvzHTQSFM",
+    "actual_public_ist": "2026-11-17T14:47:13+05:30",
+    "actual_public_utc": "2026-11-17T09:17:13Z",
+    "claims_none_at": "2026-11-17T14:47:09+05:30",
+    "prior_public": "2026-11-17T13:46:09+05:30",
+    "gap_seconds": 3664,
+    "metadata": "FullAd/exactaffiliate/nativeAI+paidYes/notkids/noage/HD verified",
+    "player": "exactReelSaga/isPrivate=false/isUnlisted=false/playableOK14:47:39",
+    "playlist": "8Public episodeorder E1P1 through E4P2 checked AX+pixels top and bottom14:48:03",
+    "url": "https://www.youtube.com/shorts/GqFvzHTQSFM",
+    "ledger_run_id": 44054282408,
+    "ledger_status": "success",
+    "ledger_api_published_at": "2026-11-17T09:17:13Z",
+    "control_stopped_verified_at": "2026-11-17T09:18:22.5308616Z",
+    "ledger_url": "https://github.com/Jaiadithya71/reelsaga-cloud-uploader/actions/runs/44054282408"
   }
 }
