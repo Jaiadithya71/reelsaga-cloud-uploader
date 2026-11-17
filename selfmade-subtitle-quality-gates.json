@@ -347,12 +347,12 @@
     "e3": {
       "source_status": "PASS",
       "content": "Adult apparent medical collapse later revealed as test; no child-mistreatment/graphic injury observed.",
-      "render_status": "Draft split/coverage unapproved; no probe. Local drafts lost after run."
+      "render_status": "PASS: Nov17 continuous source/render/boundary/caption/decode/pixels; PRIVATEclaimsnone/nativeAI+paidYes/SDHDcomplete08:37:25. See docs/debug/2026-11-17-selfmade-e34-private.json."
     },
     "e4": {
       "source_status": "PASS",
       "content": "Adult party/billing/ring conflict.",
-      "render_status": "Draft split/coverage unapproved; no probe. Local drafts lost after run."
+      "render_status": "PASS: Nov17 continuous source/render/boundary/caption/decode/pixels; PRIVATEclaimsnone/nativeAI+paidYes/SDHDcomplete08:37:25. See docs/debug/2026-11-17-selfmade-e34-private.json."
     },
     "e5": {
       "source_status": "CONDITIONAL - DO NOT PROBE",
@@ -384,5 +384,13 @@
     }
   },
   "recovery": "05:09 sources redownloaded and exact source hashes matched; E1P2/E2P1/E2P2 identical approved render SHA256 and byte sizes reproduced. Later-episode visual evidence was attached to parent04:14/04:19, original local files no longer present.",
-  "staging_closeout": "All3 ownobjectsdeleted HEAD404+originalsignedGET40405:17:20, hardcleanupwake canceled. PriorE1P1stage alreadydeleted04:00. Unrelated objects untouched."
+  "staging_closeout": "All3 ownobjectsdeleted HEAD404+originalsignedGET40405:17:20, hardcleanupwake canceled. PriorE1P1stage alreadydeleted04:00. Unrelated objects untouched.",
+  "continuation_authority_20261117": {
+    "approved_at": "2026-11-17T10:36:32+05:30",
+    "user_message_id": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAEhggQUNDOUU5NTFFNENDOTQ0MDQ4RUE1N0Q4NkUwRDBGMDcA",
+    "reply_to": "wamid.HBgMOTE3MzU4MjU4MjE2FQIAERgSNjExQTQyQzRDNzhGMkVCQzBFAA==",
+    "reply": "S",
+    "scope": "E3/E4fourparts in order after first4,onehouractualspacing;freshgatesperflip.E5-E7excluded",
+    "evidence_recovered_live_observations_at": "2026-11-17T10:36:45+05:30"
+  }
 }
