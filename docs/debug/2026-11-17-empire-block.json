@@ -96,6 +96,24 @@
       "historical_other_claim": "YG PLUS Oct8 audio no impact until monetising",
       "observed_url": "https://studio.youtube.com/video/qHIF7D0J8tY/edit?d=vc",
       "parent_reported_at": "2026-11-17T12:41:44+05:30"
+    },
+    {
+      "message_id": "1a1e85fbfd401aaf",
+      "received_at": "2026-11-17T12:49:11+05:30",
+      "episode_part": "E8P1",
+      "video_id": "Z1ksEABr4Ec",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/Z1ksEABr4Ec/edit?d=vc",
+      "parent_reported": true
+    },
+    {
+      "message_id": "1a1e85fce654c46b",
+      "received_at": "2026-11-17T12:49:14+05:30",
+      "episode_part": "E2P2",
+      "video_id": "hbLeGGQBhCc",
+      "impact": "Same Kuaikan VIDEO global block/not strike/no channel impact",
+      "observed_url": "https://studio.youtube.com/video/hbLeGGQBhCc/edit?d=vc",
+      "parent_reported": true
     }
   ]
 }
