@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-11-17T08:09:49+05:30",
-  "scope": "E3/E4privatepreponly,no public approval. E3HDcomplete,E4HDprocessing. Allclaimsnone/nativeAI+paidYesSaved/notkids/noage/fullmetadata/private. AllownstageHEAD404+originalsignedGET404.",
+  "as_of": "2026-11-17T08:37:25+05:30",
+  "scope": "E3/E4fourpartsPRIVATEonly,claimsnone/nativeAI+paidYesSaved/notkids/noage/fullmetadata. AllSDHDcomplete verifiedliveStudio, E4last08:37:25. AllownstageHEAD404+originalsignedGET404. NoE3/E4publicapproval;E5conditional/E6HOLD/E7partial.",
   "sources": [
     {
       "episode": 3,
@@ -367,7 +367,7 @@
       "claims_none_at": "2026-11-17T08:07:52+05:30",
       "native_ai_yes_saved": true,
       "paid_promotion_yes_saved": true,
-      "hd_complete": false
+      "hd_complete": true
     },
     "e4p2": {
       "episode": 4,
@@ -380,8 +380,8 @@
       "claims_none_at": "2026-11-17T08:09:15+05:30",
       "native_ai_yes_saved": true,
       "paid_promotion_yes_saved": true,
-      "hd_complete": false
+      "hd_complete": true
     }
   },
-  "remaining": "RecheckE4HD at08:35priorityE1P2prepwake; reportqualifiedcontinuationtoParentbefore10:00. E5conditional/E6HOLD/E7partial."
+  "remaining": "ParentdecisionforE3/E4continuation. Freshclaims/currentmetadata/actualYT>=60min guard required at each approvedflip."
 }
